@@ -601,7 +601,7 @@ First install Postgres MacApp or Postgres manually. Then run the following code 
 ``` bash
 # Enter postgres command line interface
 $ psql
-# Create your database which I will my_app_db in this example, but you can change accordingly
+# Create your database which I will call my_app_db in this example, but you can change accordingly
 CREATE DATABASE my_app_db;
 # Quit out
 \q
