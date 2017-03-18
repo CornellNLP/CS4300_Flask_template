@@ -566,11 +566,11 @@ You can read more about this type of deployment [here](http://docs.aws.amazon.co
 ## Step-By-Step Guide
 ### 1. Cloning the repository from Git
 ```bash
-cd ~
 git clone https://github.com/CornellNLP/CS4300_Flask_template.git
 cd CS4300_Flask_template
 ```
 ### 2. Setting up your virtual environment
+To install, go [here](https://virtualenv.pypa.io/en/stable/installation/) or for dead-simgle usage go [here](https://virtualenv.pypa.io/en/stable/installation/)
 ```bash
 # My virtual environment here will be called: venv
 virtualenv venv
@@ -597,7 +597,7 @@ ECHO $APP_SETTINGS
 source venv/bin/activate
 ```
 ### 4. Setting up Postgres Backend
-First install Postgres MacApp or Postgres manually. Then run the following code after Postgres server is up:
+First, install Postgres MacApp [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) manually. Then run the following code after Postgres server is up:
 ``` bash
 # Enter postgres command line interface
 $ psql
