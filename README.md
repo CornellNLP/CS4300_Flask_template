@@ -647,9 +647,14 @@ You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your
 
 ## Getting Started
 After cloning the repo make sure to name your repo cs4300sp2017-##### with your netids substituting the #####.
+
 Add cristiandnm (Prof. DNM's account name) as a member with admin rights on the git repo.
+
 To being interacting with the service, modify the app/irsystem/controllers/search_controller.py file where you can see the params we are passing into the rendered view.
+
 The view is seen in app/irsystem/templates/search.html and the data is hardcoded to be range(0,5) right now, but that is what you will modify for your system.
-Ensure that you swap out my dubby Project Name and NetID field for your group. 
+
+Ensure that you swap out my dummy Project Name and NetID field for your group. 
+
 You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
 
