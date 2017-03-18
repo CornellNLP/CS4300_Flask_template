@@ -532,7 +532,7 @@ The normal TCP socket based connection will be available by calling:
 ``` python
 rDB = rConn.redisDb
 ```
-And if you want to leverage connection pools to manage connections to the redis server with finer grain control an client side sharding you can use this by calling:
+And if you want to leverage connection pools to manage connections to the redis server with finer grain control and client side sharding you can use this by calling:
 ``` python
 rPool = rConn.rPool
 ```
