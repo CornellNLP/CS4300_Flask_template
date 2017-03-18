@@ -5,6 +5,7 @@ Because this class heavily relies on python libraries it was decided to write th
 ## Table of Contents
 ### [Overview](#overview-of-the-project-and-introduction-to-flask)
 ### [Step-By-Step](#step-by-step-guide)
+### [Post-Setup-Getting-Starte](#getting-started)
 ## Overview of the project and Introduction to Flask
 This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern.
 
@@ -586,15 +587,17 @@ pip freeze > requirements.txt
 ```
 ### 3. Ensuring environment variables are present
 ``` bash
-# Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), I'll use bash in this example:
-echo "source `which activate`" >> ~/.bashrc
+# Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), 
+# according to your current CLI. I'll use bash in this example:
+$ echo "source `which activate`" >> ~/.bashrc
 # Reload your shell
-source ~/.bashrc
-# You should have a .env file, if not touch .env 
-# After running this you should get the APP_SETTINGS
-ECHO $APP_SETTINGS
+$ source ~/.bashrc
+# You should have a .env file, if not touch .env and add the 
+# approriate APP_SETTINGS And DATABASE_URL linking you to your local postgresDB
+# After running this you should get the APP_SETTINGS by running echo
+$ echo $APP_SETTINGS
 # Reactivate the environment because you just reloaded the shell
-source venv/bin/activate
+$ source venv/bin/activate
 ```
 ### 4. Setting up Postgres Backend
 First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up:
@@ -640,4 +643,10 @@ You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your
 ### 8. Setting up App in Amazon Elastic Computing Cloud (EC2) /Elastic Beanstalk (EB) with Redis
 **TODO**
 
+## Getting Started
+After cloning the repo make sure to name your repo cs4300sp2017-##### with your netids substituting the #####.
+Add cristiandnm (Prof. DNM's account name) as a member with admin rights on the git repo.
+To being interacting with the service, modify the app/irsystem/controllers/search_controller.py file where you can see the params we are passing into the rendered view.
+The view is seen in app/irsystem/templates/search.html and the data is hardcoded to be range(0,5) right now, but that is what you will modify for your system.
+Ensure that you swap out my dubby Project Name and NetID field for your group. 
 
