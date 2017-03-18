@@ -528,7 +528,7 @@ To create a Redis connection to the redis cluster you will execute the following
 ``` python
 rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_execs=3,timeout=10,block_size=256)
 ```    
-The normal TCP socket based connection will be avaible by calling: 
+The normal TCP socket based connection will be available by calling: 
 ``` python
 rDB = rConn.redisDb
 ```
