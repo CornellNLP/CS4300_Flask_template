@@ -586,6 +586,8 @@ pip install <MODULE_NAME>
 pip freeze > requirements.txt
 ```
 ### 3. Ensuring environment variables are present
+You will now be setting up autoenv so that everytime you enter the directory all enviromental variables are set immeditaly. 
+As such you must have autoenv installed which means that you must be inside of the virtualenv environment we created above. 
 ``` bash
 # Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), 
 # according to your current CLI. I'll use bash in this example:
