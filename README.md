@@ -5,7 +5,7 @@ Because this class heavily relies on python libraries it was decided to write th
 ## Table of Contents
 ### [Overview](#overview-of-the-project-and-introduction-to-flask)
 ### [Step-By-Step](#step-by-step-guide)
-### [Post-Setup-Getting-Starte](#getting-started)
+### [Post-Setup-Getting-Started](#getting-started)
 ## Overview of the project and Introduction to Flask
 This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern.
 
