@@ -559,7 +559,7 @@ if (rDB.exists('my_numpy_array_data')):
 		NUMPY_ARRAY = Matrix('my_numpy_array',d_b_v_shape[0],d_b_v_shape[1],rDB).get_numpy_matrix()
 ```
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys. The specifics of how we build the numpy_matrix are wrapped and hidden from site, but in essence you are creating multiple data blocks that contain portions of the numpy array, and as such the array isnt stored at the key: `my_numpy_array` but instead spread across multiple keys and aggregated at run-time by calling `.get_numpy_matrix()`. You may modify the encoding and decoding if you want to improve the implementation. 
-What needs to be noted is that this Redis cluster is only localhost at this point time and will require some DevOps work to get it setup in production. 
+What needs to be noted is that this Redis cluster is only on localhost at this point in time and will require some DevOps work to get setup in production. 
 I will need to elaborate this README a bit to include how to setup Redis using Amazon ElastiCache for that is a dev ops deployment method for EC2 and EB applications.
 You can read more about this type of deployment [here](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.ElastiCache.html). 
 
