@@ -544,6 +544,9 @@ After having the Redis connection established via `rConn.redisDb` you can simply
 rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_execs=3,timeout=10,block_size=256)
 # Grab TCP Connection
 rDB = rConn.redisDb
+# Store key information that we will be using to define the shape of the numpy array
+key = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
+rDB.set('my_numpy_array_data',key)
 # Store numpy array and return the original numpy array
 mat = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
 rDB.set('my_numpy_array_data',NUMPY_ARRAY.shape)
@@ -556,8 +559,8 @@ if (rDB.exists('my_numpy_array_data')):
 		[pipe.get(k) for k in keys]
 		result = pipe.execute()
 		data = {k:result[i] for i,k in enumerate(keys)}
-		d_b_v_shape = [int(i)for i in data['my_numpy_array_data'][1:-2].split(',')]
-		NUMPY_ARRAY = Matrix('my_numpy_array',d_b_v_shape[0],d_b_v_shape[1],rDB).get_numpy_matrix()
+		key = data['doc_by_vocab_data']
+    NUMPY_ARRAY = rConn.get_numpy('my_numpy_array',key)
 ```
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys. The specifics of how we build the numpy_matrix are wrapped and hidden from site, but in essence you are creating multiple data blocks that contain portions of the numpy array, and as such the array isnt stored at the key: `my_numpy_array` but instead spread across multiple keys and aggregated at run-time by calling `.get_numpy_matrix()`. You may modify the encoding and decoding if you want to improve the implementation. 
 What needs to be noted is that this Redis cluster is only on localhost at this point in time and will require some DevOps work to get setup in production. 
