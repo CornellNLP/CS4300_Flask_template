@@ -546,10 +546,8 @@ rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_exec
 rDB = rConn.redisDb
 # Store key information that we will be using to define the shape of the numpy array
 key = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
+# Store numpy array in redis
 rDB.set('my_numpy_array_data',key)
-# Store numpy array and return the original numpy array
-mat = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
-rDB.set('my_numpy_array_data',NUMPY_ARRAY.shape)
 ```
 These functions will be used for pre-processing. It is necessary to know the shape of the NUMPY array as it is required for the decoding portion of the Matrix class, so you will store the shape of your input numpy array in Redis as well. As such, at run-time you will run the following to grab the 2D numpy array from Redis:
 ``` python
