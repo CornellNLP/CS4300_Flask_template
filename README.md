@@ -573,6 +573,9 @@ cd CS4300_Flask_template
 ### 2. Setting up your virtual environment
 To install, go [here](https://virtualenv.pypa.io/en/stable/installation/) or for dead-simple usage go [here](https://virtualenv.pypa.io/en/stable/installation/)
 ```bash
+# I would recommend to install virtualenv with Mac's built-in version of python because 
+# Anaconda is causing problems
+/usr/local/bin/pip2.7 install virtualenv
 # My virtual environment here will be called: venv
 virtualenv venv
 # Activate the environment
