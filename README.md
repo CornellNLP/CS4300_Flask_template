@@ -537,8 +537,8 @@ And if you want to leverage connection pools to manage connections to the redis 
 ``` python
 rPool = rConn.rPool
 ```
-For the sake of my Matrix class, I simplified the system by using only the TCP connection (you may modify the classes as you wish).
-After having the Redis connection established via `rConn.redisDb` you can simply run the following commands to store a numpy 2D array into Redis (the array must be 2D by design of my encoding):
+I simplified the system by using only the TCP connection (you may modify the classes as you wish).
+After having the Redis connection established via `rConn.redisDb` you can simply run the following commands to store a numpy array into Redis:
 ``` python
 # Create RedisConn Class
 rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_execs=3,timeout=10,block_size=256)
@@ -549,7 +549,7 @@ key = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
 # Store numpy array in redis
 rDB.set('my_numpy_array_data',key)
 ```
-These functions will be used for pre-processing. It is necessary to know the shape of the NUMPY array as it is required for the decoding portion of the Matrix class, so you will store the shape of your input numpy array in Redis as well. As such, at run-time you will run the following to grab the 2D numpy array from Redis:
+These functions will be used for pre-processing. It is necessary to know the shape of the NUMPY array as it is required for the decoding portion, so you will store the shape of your input numpy array in Redis as well. As such, at run-time you will run the following to grab the numpy array from Redis:
 ``` python
 if (rDB.exists('my_numpy_array_data')):
 		pipe = rDB.pipeline()
