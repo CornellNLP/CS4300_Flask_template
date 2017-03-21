@@ -553,11 +553,11 @@ These functions will be used for pre-processing. It is necessary to know the sha
 ``` python
 if (rDB.exists('my_numpy_array_data')):
   pipe = rDB.pipeline()
-	keys = ['my_numpy_array_data']
-	[pipe.get(k) for k in keys]
-	result = pipe.execute()
-	data = {k:result[i] for i,k in enumerate(keys)}
-	key = data['doc_by_vocab_data']
+  keys = ['my_numpy_array_data']
+  [pipe.get(k) for k in keys]
+  result = pipe.execute()
+  data = {k:result[i] for i,k in enumerate(keys)}
+  key = data['doc_by_vocab_data']
   numpy_array = rConn.get_numpy('my_numpy_array',key)
 ```
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys. The specifics of how we build the numpy_matrix are wrapped and hidden from site, but in essence you are creating multiple data blocks that contain portions of the numpy array, and as such the array isnt stored at the key: `my_numpy_array` but instead spread across multiple keys and aggregated at run-time by calling `.get_numpy_matrix()`. You may modify the encoding and decoding if you want to improve the implementation. 
