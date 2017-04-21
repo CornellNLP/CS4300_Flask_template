@@ -1,0 +1,81 @@
+# This is a simple example Ansible playbook
+---
+- name: Starting a Simple Flask App
+  hosts: all
+  remote_user: root
+  become: true
+  become_method: sudo
+  environment: 
+    LC_ALL: en_US.UTF-8
+    LANG: en_US.UTF-8
+    LANGUAGE: en_US.UTF-8
+  vars:
+      repository_url: https://github.com/CornellNLP/CS4300_Flask_template.git
+      repository_path: /home/vagrant/CS4300_Flask_template
+      dbname: mydb
+      dbuser: myapp
+      dbpassword: password
+  tasks:
+    - name: Install necessary packages
+      apt: update_cache=yes name={{ item }} state=present
+      with_items:
+        - libatlas-base-dev 
+        - gfortran 
+        - g++
+        - build-essential
+        - libssl-dev 
+        - libffi-dev 
+        - python-dev
+        - postgresql
+        - libpq-dev
+        - git
+        - python-pip
+        - nginx
+        - python-numpy
+        - python-scipy
+    - name: Run echo
+      command: locale -a
+    - name: Check if directory exists
+      stat: path='{{ repository_path }}'
+      register: cloned
+    - name: Pull application repo
+      command: chdir='{{ repository_path }}' git pull origin master
+      when: cloned.stat.exists
+    - name: Clone application repo
+      git: repo='{{ repository_url }}' dest='{{ repository_path }}'
+      when: cloned.stat.exists == false
+    - name: Install pip requirements
+      pip: requirements='{{ repository_path }}/requirements.txt'
+    - name: Copy Upstart configuration
+      template: src=upstart.conf.j2 dest=/etc/init/upstart.conf
+    - name: ensure database is created
+      become_user: postgres
+      become: yes
+      postgresql_db: name={{dbname}} login_user=postgres
+    - name: ensure user has access to database
+      become_user: postgres
+      become: yes
+      postgresql_user: db={{dbname}} name={{dbuser}} password={{dbpassword}} priv=ALL login_user=postgres
+    - name: ensure user does not have unnecessary privilege
+      become_user: postgres
+      become: yes
+      postgresql_user: name={{dbuser}} role_attr_flags=NOSUPERUSER,NOCREATEDB login_user=postgres
+    - name: ensure no other user can access the database
+      become_user: postgres
+      become: yes
+      postgresql_privs: db={{dbname}} role=PUBLIC type=database priv=ALL state=absent login_user=postgres
+    - name: Make sure our server is running
+      service: name=upstart state=started
+    - name: Copy Nginx site values
+      template: src=cs.nginx.j2 dest=/etc/nginx/sites-enabled/cs
+      notify:
+        - restart nginx
+    - name: Remove any default sites
+      file: path=/etc/nginx/sites-enabled/default state=absent
+      notify:
+        - restart nginx
+    - name: Make sure nginx is running
+      service: name=nginx state=started
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted

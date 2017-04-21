@@ -1,4 +1,5 @@
 venv
 *.pyc
 migrations 
-vagrant
+vagrant/.vagrant
+vagrant/a4keypair.pem
