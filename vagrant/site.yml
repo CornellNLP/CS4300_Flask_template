@@ -9,9 +9,12 @@
     LC_ALL: en_US.UTF-8
     LANG: en_US.UTF-8
     LANGUAGE: en_US.UTF-8
+    APP_SETTINGS: config.ProductionConfig
+    DATABASE_URL: postgresql://localhost/flaskplate_db
   vars:
       repository_url: https://github.com/CornellNLP/CS4300_Flask_template.git
       repository_path: /home/vagrant/CS4300_Flask_template
+      virtualenv_path: /home/vagrant/CS4300_Flask_template/venv
       dbname: mydb
       dbuser: myapp
       dbpassword: password
@@ -34,7 +37,7 @@
         - python-numpy
         - python-scipy
     - name: Run echo
-      command: locale -a
+      command: echo $APP_SETTINGS; echo $DATABASE_URL
     - name: Check if directory exists
       stat: path='{{ repository_path }}'
       register: cloned

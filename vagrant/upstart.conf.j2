@@ -8,6 +8,5 @@ setuid root
 setgid nogroup
 chdir {{ repository_path }}
 
-exec export DATABASE_URL=postgresql://localhost/mydb
-exec export APP_SETTINGS=config.ProductionConfig
-exec gunicorn app:app --bind=unix:/tmp/cs.sock --workers 3 --user=root --log-level=debug
+
+exec gunicorn app:app --bind=unix:/tmp/cs.sock --workers 3 --user=root --log-level=debug -e DATABASE_URL=postgresql://localhost/my_app_db -e APP_SETTINGS=config.ProductionConfig
