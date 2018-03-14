@@ -1,7 +1,7 @@
 # CS4300 - Flask Template
 ## Notes
 Are you one who enjoys Ruby on Rails or the MVC structure for backend-design, well this template-based Flask app is just for you :)
-Because this class heavily relies on python libraries it was decided to write the app in Python for your convinence. If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with EC2/EB coming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis: **SHAMELESS PLUG:** If this type of work interests you, make sure to check out the course, **Principles of Backend Engineering**, which will be co-taught by Ilan and Joe next semester under CS 1998, covering backend engineering, database design, dev ops, and scalable system architecture.
+Because this class heavily relies on python libraries it was decided to write the app in Python for your convinence. If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with EC2/EB coming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
 ## Table of Contents
 ### [Overview](#overview-of-the-project-and-introduction-to-flask)
 ### [Step-By-Step](#step-by-step-guide)
