@@ -501,15 +501,8 @@ NUMPY_ARRAY_NAME = json.load(FILE_NAME, object_hook=json_numpy_obj_hook, encodin
 ```
 ##### Redis
 Redis is an in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster. In this application I will be leveraging the python bindings provided by [redis-py](https://github.com/andymccurdy/redis-py) which allow for me to interact with the available redis cluster using python. You can read more about Redis and its useful for ML applications via its in-memory nature [here](https://redis.io/documentation). 
-You can install redis by clicking [here](http://download.redis.io/redis-stable.tar.gz) or running `wget http://download.redis.io/redis-stable.tar.gz`
-After cd-ing into the directory with the tar file, run the following:
-``` bash
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make
-make test
-redis-server
-```
+You can setup your redis cluster using either the Ansible script provided [here](https://github.com/cuappdev/devOps/tree/master/redis/vm) or the Kubernetes Helm chart provided [here](https://github.com/cuappdev/devOps/tree/master/redis/kubernetes). The importance of using the above setup logic is to include the redis-ml support for matrix manipulation. 
+After deploying your cluster to your appropriate port (i.e. 127.0.0.1:6379). 
 Check if redis-server is up by running and getting PONG as a result, **hehe :)**
 ``` bash
 $ redis-cli ping
@@ -525,48 +518,38 @@ OK
 redis 127.0.0.1:6379> get mykey
 "somevalue"
 ```
-At this point in time you are able to use the RedisConn class that I defined and the Matrix operation.
-To create a Redis connection to the redis cluster you will execute the following:
+At this point in time you are able to use the RedisConnector provided by CuAppDev. To create a Redis connection to the redis cluster you will execute the following:
 ``` python
-rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_execs=3,timeout=10,block_size=256)
+from appdev.connectors import MySQLConnector, RedisConnector
+redis = RedisConnector('entry_checkpoint')
 ```    
 The normal TCP socket based connection will be available by calling: 
 ``` python
-rDB = rConn.redisDb
+connection = redis._single_connect()
 ```
 And if you want to leverage connection pools to manage connections to the redis server with finer grain control and client side sharding you can use this by calling:
 ``` python
-rPool = rConn.rPool
+pool = redis._connect_pool(5) # for max 5 connections
 ```
-I simplified the system by using only the TCP connection (you may modify the classes as you wish).
-After having the Redis connection established via `rConn.redisDb` you can simply run the following commands to store a numpy array into Redis:
+You can now run the following cmomands to store a numpy matrix into Redis
 ``` python
 # Create RedisConn Class
-rConn = RConn(name='YOUR_SERVER_NAME',host='localhost', port=6379, db=0,max_execs=3,timeout=10,block_size=256)
+redis = RedisConnector('entry_checkpoint')
 # Grab TCP Connection
-rDB = rConn.redisDb
+connection = redis._single_connect()
 # Store key information that we will be using to define the shape of the numpy array
-key = rConn.store_numpy('my_numpy_array',NUMPY_ARRAY)
-# Store numpy array in redis
-rDB.set('my_numpy_array_data',key)
-```
-These functions will be used for pre-processing. It is necessary to know the shape of the NUMPY array as it is required for the decoding portion, so you will store the shape of your input numpy array in Redis as well. As such, at run-time you will run the following to grab the numpy array from Redis:
-``` python
-if (rDB.exists('my_numpy_array_data')):
-  pipe = rDB.pipeline()
-  keys = ['my_numpy_array_data']
-  [pipe.get(k) for k in keys]
-  result = pipe.execute()
-  data = {k:result[i] for i,k in enumerate(keys)}
-  key = data['doc_by_vocab_data']
-  numpy_array = rConn.get_numpy('my_numpy_array',key)
+redis.dump_matrix(connection,"example_numpy",input_numpy_array)
+# Or store a dictionary
+entry_redis_key = 'training_entries'
+redis.dump_dictionary(connection, {entry_redis_key: entries})
+# Now you can get the matrix or dictionary by running the following
+entries = redis.get_matrix(get_matrix,"example_numpy")
+entries_dict = redis.get_dictionary(connection, entry_redis_key)
 ```
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys. 
+##### MySQL
+(TBD) But you may use MySQL for the cool connector available [here](https://github.com/cuappdev/appdev.py/blob/master/appdev/connectors/mysql_connector.py)
 
-The specifics of how we build the numpy_matrix are wrapped and hidden from site, but in essence one way is to create multiple data blocks that contain portions of the numpy array, and as such the array isnt stored at the key: `my_numpy_array` but instead spread across multiple keys and aggregated at run-time by calling `.get_numpy_matrix()`. You may modify the encoding and decoding if you want to improve the implementation. But the other way, is the encode it as a dtype string which is how it is currently implemented.
-What needs to be noted is that this Redis cluster is only on localhost at this point in time and will require some DevOps work to get setup in production. 
-I will need to elaborate this README a bit to include how to setup Redis using Amazon ElastiCache for that is a dev ops deployment method for EC2 and EB applications.
-You can read more about this type of deployment [here](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.ElastiCache.html). 
 
 ## Step-By-Step Guide
 ### 1. Cloning the repository from Git
@@ -584,6 +567,8 @@ To install, go [here](https://virtualenv.pypa.io/en/stable/installation/) or for
 virtualenv venv
 # Activate the environment
 source venv/bin/activate
+# Pip install AppDev specific dependencies for Redis / MySQL connectors
+pip install git+https://github.com/cuappdev/appdev.py.git --upgrade
 # Install all dependencies into the virtual environment, this will be done by Heroku and AWS as well
 pip install -r requirements.txt
 ```
@@ -608,7 +593,7 @@ $ echo $APP_SETTINGS
 # Reactivate the environment because you just reloaded the shell
 $ source venv/bin/activate
 ```
-### 4. Setting up Postgres Backend
+### 4. Setting up Postgres Backend (if interested in Postgres)
 First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up:
 ``` bash
 # Enter postgres command line interface
