@@ -638,9 +638,7 @@ You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your
 **TODO**
 
 ## Getting Started
-After cloning the repo make sure to name your repo cs4300sp2017-##### with your netids substituting the #####.
-
-Add cristiandnm (Prof. DNM's account name) as a member with admin rights on the git repo.
+After forking the repo make sure to name your repo cs4300sp2018-##### with your netids substituting the #####.
 
 To being interacting with the service, modify the app/irsystem/controllers/search_controller.py file where you can see the params we are passing into the rendered view.
 
