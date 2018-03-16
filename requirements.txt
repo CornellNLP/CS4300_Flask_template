@@ -1,5 +1,6 @@
 alembic==0.8.6
 aniso8601==1.1.0
+appdev.py==0.0.1
 appdirs==1.4.3
 autoenv==1.0.0
 bcrypt==2.0.0
@@ -26,7 +27,9 @@ Mako==1.0.4
 MarkupSafe==0.23
 marshmallow==2.7.3
 marshmallow-sqlalchemy==0.8.1
+mysql-connector==2.1.4
 nltk==3.2.2
+numpy==1.14.2
 packaging==16.8
 psycopg2==2.6.1
 pycparser==2.14
