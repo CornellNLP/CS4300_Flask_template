@@ -4,7 +4,7 @@ from . import *
 # from app.irsystem.models.helpers import *
 # from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
-project_name = "Snack Finder"
+project_name = "Spotifynd"
 net_id = "Monica Ong (myo), Eric Feng (evf23), Michelle Ip (mvi4), Zachary Brody (ztb5), Jill Wu (jw975)"
 
 @irsystem.route('/', methods=['GET'])
