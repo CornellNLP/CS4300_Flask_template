@@ -31,7 +31,7 @@ mysql-connector==2.1.4
 nltk==3.2.2
 numpy==1.14.2
 packaging==16.8
-psycopg2==2.6.1
+psycopg2==2.7.4
 pycparser==2.14
 PyJWT==1.4.0
 pyparsing==2.2.0
