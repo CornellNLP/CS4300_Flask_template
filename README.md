@@ -632,6 +632,9 @@ You lastly will run:
 heroku ps:scale web=1
 ```
 You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. 
+
+**Next steps are optional***
+
 ### 7. Setting up Redis on localhost for you to interact with for pre-processing
 **TODO**
 ### 8. Setting up App in Amazon Elastic Computing Cloud (EC2) with Redis (USING Amazon ElastiCache)
