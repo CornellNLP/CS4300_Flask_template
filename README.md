@@ -615,7 +615,7 @@ First you must install the heroku-cli; the installation instructions can be foun
 After, with your github located at the remote origin you will run the following commands to push to your heroku app.
 ``` bash
 # Login with your heroku credentials
-$ heroku login
+$ heroku auth:login
 Enter your Heroku credentials:
 Email: <YOUR EMAIL>
 Password: <YOUR PASSWORD>
