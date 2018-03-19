@@ -581,7 +581,7 @@ As such you must have autoenv installed which means that you must be inside of t
 ``` bash
 # Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), 
 # according to your current CLI. I'll use bash in this example:
-$ echo "source `which activate`" >> ~/.bashrc
+$ echo "source `which activate.sh`" >> ~/.bashrc
 # Reload your shell
 $ source ~/.bashrc
 # You should have a .env file, if not touch .env and add the 
