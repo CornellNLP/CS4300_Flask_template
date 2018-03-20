@@ -3,7 +3,7 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
 project_name = "Invisible Women"
-net_id = "May Zhou, Amanda Chen, Pegah Moradi, Jerica Huang, Nina Ray"
+net_id = "Amanda Chen (aec255), Pegah Moradi (pm443), Nina Ray (nr327), Jerica Huang (jh2263), May Zhou (mz278)"
 
 @irsystem.route('/', methods=['GET'])
 def search():
