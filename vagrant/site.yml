@@ -44,6 +44,8 @@
     - name: Clone application repo
       git: repo='{{ repository_url }}' dest='{{ repository_path }}'
       when: cloned.stat.exists == false
+    - name: Install appdev
+      command: pip install git+https://github.com/cuappdev/appdev.py.git --upgrade
     - name: Install pip requirements
       pip: requirements='{{ repository_path }}/requirements.txt'
     - name: Copy Upstart configuration

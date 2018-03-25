@@ -1,7 +1,6 @@
 # CS4300 - Flask Template
 ## Notes
-Are you one who enjoys Ruby on Rails or the MVC structure for backend-design, well this template-based Flask app is just for you :)
-Because this class heavily relies on python libraries it was decided to write the app in Python for your convinence. If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with EC2/EB coming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
+This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience).  If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons addcoming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
 ## Table of Contents
 ### [Overview](#overview-of-the-project-and-introduction-to-flask)
 ### [Step-By-Step](#step-by-step-guide)
@@ -582,7 +581,7 @@ As such you must have autoenv installed which means that you must be inside of t
 ``` bash
 # Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), 
 # according to your current CLI. I'll use bash in this example:
-$ echo "source `which activate`" >> ~/.bashrc
+$ echo "source `which activate.sh`" >> ~/.bashrc
 # Reload your shell
 $ source ~/.bashrc
 # You should have a .env file, if not touch .env and add the 
@@ -616,10 +615,12 @@ First you must install the heroku-cli; the installation instructions can be foun
 After, with your github located at the remote origin you will run the following commands to push to your heroku app.
 ``` bash
 # Login with your heroku credentials
-$ heroku login
+$ heroku auth:login
 Enter your Heroku credentials:
 Email: <YOUR EMAIL>
 Password: <YOUR PASSWORD>
+# This create logic might be deprecated so 
+# navigate to Heroku Dashboard and create app manually
 $ heroku create <YOUR_WEBSITE_NAME>
 $ git push heroku master
 ```
@@ -633,11 +634,12 @@ You lastly will run:
 heroku ps:scale web=1
 ```
 You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. 
-### 7. Setting up Redis on localhost for you to interact with for pre-processing
-**TODO**
-### 8. Setting up App in Amazon Elastic Computing Cloud (EC2) with Redis (USING Amazon ElastiCache)
-**TODO**
-### 9. Docker + Kubernetes
+
+**Next steps are optional***
+
+### 7. Setting up RedisML on localhost for you to interact with for pre-processing
+Build using a Ansible Build or a Kubernetes Helm Chart both of which available [here](https://github.com/cuappdev/devOps/tree/master/redis)
+### 8. Docker + Kubernetes
 **TODO**
 
 ## Getting Started
