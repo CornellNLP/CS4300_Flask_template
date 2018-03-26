@@ -11,17 +11,12 @@ net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isa
 @irsystem.route('/', methods=['GET'])
 def search():
 	query = request.args.get('search')
-	if not query:
-		data = []
-		output_message = ''
-	else:
-		data = []
-		output_message = "Your search: " + query
-		docs = testReturnAllDocuments()
-		for doc in docs:
-			docString = "Politician: " + doc["politician"] + ",\tTweets: "
-			for tweet in doc["tweets"]:
-				docString += "\"" + tweet + "\", "
-			data.append(docString)
-		print(data)
+	data = []
+	output_message = "Your search: " + query
+	docs = testReturnAllDocuments()
+	for doc in docs:
+		docString = "Politician: " + doc["politician"] + ",\tTweets: "
+		for tweet in doc["tweets"]:
+			docString += "\"" + tweet + "\", "
+		data.append(docString)
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
