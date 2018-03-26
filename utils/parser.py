@@ -1,8 +1,8 @@
 import json
 
 rel_comments = []
-subreddits = ["iwanttolearn"]
-# subreddits = ["iwanttolearn", "explainlikeimfive", "socialskills", "lifeprotips", "improvementhub", "getdisciplined", "selfimprovement", "decidingtobebetter", "stopdrinking", "learnprogramming", "languagelearning", "confidence", "getmotivated", "everymanshouldknow", "youshouldknow", "askscience", "askhistorians", "coolguides"]
+# subreddits = ["iwanttolearn"]
+subreddits = ["iwanttolearn", "explainlikeimfive", "socialskills", "lifeprotips", "improvementhub", "getdisciplined", "selfimprovement", "decidingtobebetter", "stopdrinking", "learnprogramming", "languagelearning", "confidence", "getmotivated", "everymanshouldknow", "youshouldknow", "askscience", "askhistorians", "coolguides"]
 
 print "starting parser"
 with open("RC_2017-02", "r") as file:
