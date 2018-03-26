@@ -17,9 +17,9 @@
                 <font color=#34A853>0</font>
                 <font color=#EA4335>0</font>
             </h1>
-            
+
             <br><br>
-            
+
             <div class="form-group">
                 <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
             </div>
@@ -28,7 +28,7 @@
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
-            {% for d in data %}  
+            {% for d in data %}
                 <br>
                 <p>{{d}}</p>
             {% endfor %}
