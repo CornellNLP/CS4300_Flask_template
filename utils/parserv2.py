@@ -31,6 +31,6 @@ with open(filename, "r") as file:
         rel_comments+=1
         outfile.write(json.dumps(obj))
 
-end_time = epoch_time = int(time.time())
+end_time = int(time.time())
 print "Took", (end_time - start_time), "seconds to parse", counter, "comments."
 print "Resulting list has", len(rel_comments), "comments"
