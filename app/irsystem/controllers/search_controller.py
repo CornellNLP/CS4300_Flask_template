@@ -1,8 +1,6 @@
-from . import * 
-# from app.irsystem.models.matrix import Matrix
-# from app.irsystem.models.redisconn import RedisConn as RedisConn
-# from app.irsystem.models.helpers import *
-# from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+from . import *
+from app.irsystem.models.helpers import *
+from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
 project_name = "learnddit"
 net_id = "Monica Ong (myo), Eric Feng (evf23), Michelle Ip (mvi4), Zachary Brody (ztb5), Jill Wu (jw975)"
@@ -17,6 +15,3 @@ def search():
 		output_message = "Your search: " + query
 		data = range(5)
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-
-
-

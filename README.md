@@ -1,7 +1,6 @@
 # CS4300 - Flask Template
 ## Notes
-Are you one who enjoys Ruby on Rails or the MVC structure for backend-design, well this template-based Flask app is just for you :)
-Because this class heavily relies on python libraries it was decided to write the app in Python for your convinence. If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with EC2/EB coming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
+This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience).  If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons addcoming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
 ## Table of Contents
 ### [Overview](#overview-of-the-project-and-introduction-to-flask)
 ### [Step-By-Step](#step-by-step-guide)
@@ -69,7 +68,7 @@ The utility scripts at the top level include the following:
 ```bash
 config.py # describes different environments that app runs in
 manage.py # holds functionality for migrating your database (changing its schema)
-run.py    # runs the app on a port
+app.py    # runs the app on a port
 ```
 
 The entire functional backend of a `Flask` app is housed in a parent module called `app`.  You can create this by creating a directory `app` and populating it with an `__init__.py` file.  Then, inside that `app` directory, you can create modules that describe the resources of your app.  These modules should be as de-coupled and reusable as possible.  For example, let's say I need a bunch of user authentication logic described by a couple of endpoints and helper functions.  These might be useful in another `Flask` app and can be comfortably separated from other functionality.  As a result, I would make a module called `accounts` inside my app directory.  Each module (including `app`) should also have a `templates` directory if you plan on adding any `HTML` views to your app.   
@@ -240,7 +239,7 @@ Let's unpack this file piece by piece.  The top initializes `Gevent`, [a corouti
 
 Since we have involved `Socket.IO` and `Gevent`, you wil see it in requirements.txt
 
-Finally, in order to actually start our server, you will run the  `run.py` script.  This script can be placed at the root of our project:
+Finally, in order to actually start our server, you will run the  `app.py` script.  This script can be placed at the root of our project:
 
 ``` python
 from app import app, socketio
@@ -255,7 +254,7 @@ if __name__ == "__main__":
 Now, at the root of your application, you can run:
 
 ``` bash
-python run.py
+python app.py
 ```
 
 Your server is now running!
@@ -548,8 +547,7 @@ entries_dict = redis.get_dictionary(connection, entry_redis_key)
 ```
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys. 
 ##### MySQL
-(TBD) But you may use MySQL for the cool connector available [here](https://github.com/cuappdev/appdev.py/blob/master/appdev/connectors/mysql_connector.py)
-
+(IN PROGRESS) But you may use MySQL for the cool connector available [here](https://github.com/cuappdev/appdev.py/blob/master/appdev/connectors/mysql_connector.py)
 
 ## Step-By-Step Guide
 ### 1. Cloning the repository from Git
@@ -564,7 +562,7 @@ To install, go [here](https://virtualenv.pypa.io/en/stable/installation/) or for
 # Anaconda is causing problems
 /usr/local/bin/pip2.7 install virtualenv
 # My virtual environment here will be called: venv
-virtualenv venv
+virtualenv venv. The python version is 2.7
 # Activate the environment
 source venv/bin/activate
 # Pip install AppDev specific dependencies for Redis / MySQL connectors
@@ -605,20 +603,24 @@ CREATE DATABASE my_app_db;
 ```
 ### 5. Check to see if app runs fine by running in localhost:
 ``` bash
-python run.py
+python app.py
 ```
 At this point the app should be running on [http://localhost:5000/](http://localhost:5000/). Navigate to that URL in your browser.
 ### 6. Push to heroku
-I have included the Procile which leverages gunicorn which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn) for deployment. 
+I have included the Procile which leverages gunicorn which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn) for deployment.
+If you get errors finding modules on Heroku this is because you have not defined a `runtime.txt` file that specifies `python2.7`. It seems that Heroku defaults to 3.6 now.
+
 To setup heroku and push this app to there you will run the following:
 First you must install the heroku-cli; the installation instructions can be found [here](https://devcenter.heroku.com/articles/heroku-cli)
 After, with your github located at the remote origin you will run the following commands to push to your heroku app.
 ``` bash
 # Login with your heroku credentials
-$ heroku login
+$ heroku auth:login
 Enter your Heroku credentials:
 Email: <YOUR EMAIL>
 Password: <YOUR PASSWORD>
+# This create logic might be deprecated so 
+# navigate to Heroku Dashboard and create app manually
 $ heroku create <YOUR_WEBSITE_NAME>
 $ git push heroku master
 ```
@@ -632,9 +634,12 @@ You lastly will run:
 heroku ps:scale web=1
 ```
 You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. 
-### 7. Setting up Redis on localhost for you to interact with for pre-processing
-**TODO**
-### 8. Setting up App in Amazon Elastic Computing Cloud (EC2) /Elastic Beanstalk (EB) with Redis
+
+**Next steps are optional***
+
+### 7. Setting up RedisML on localhost for you to interact with for pre-processing
+Build using a Ansible Build or a Kubernetes Helm Chart both of which available [here](https://github.com/cuappdev/devOps/tree/master/redis)
+### 8. Docker + Kubernetes
 **TODO**
 
 ## Getting Started
