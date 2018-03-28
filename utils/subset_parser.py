@@ -21,6 +21,7 @@ with open(filename, "r") as file:
       objs = json.loads(line)
 
       for obj in objs:
+        obj = json.loads(obj)
         # eliminates short replies
         short_reply = "t1" in obj["parent_id"] and len(obj["body"]) < 30
 
