@@ -1,6 +1,9 @@
-from . import *  
+from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+import os
+from app.irsystem.models.database_helpers import testReturnAllDocuments
+from app.irsystem.models.database_helpers import testInsert
 
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
@@ -12,9 +15,13 @@ def search():
 		data = []
 		output_message = ''
 	else:
+		data = []
 		output_message = "Your search: " + query
-		data = range(5)
+		docs = testReturnAllDocuments()
+		for doc in docs:
+			docString = "Politician: " + doc["politician"] + ",\tTweets: "
+			for tweet in doc["tweets"]:
+				docString += "\"" + tweet + "\", "
+			data.append(docString)
+		print(data)
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-
-
-
