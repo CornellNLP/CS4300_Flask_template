@@ -39,7 +39,11 @@ with open(filename, "r") as file:
 
       # eliminates most useless ELI5 comments
       bad_eli5 = obj["score"] <= 1 and obj["subreddit"].lower() == "explainlikeimfive"
-      bad_comment = short_reply or is_deleted or downvoted
+
+      # eliminates automoderator comments
+      is_automod = obj["author"].lower() == "automoderator"
+
+      bad_comment = short_reply or is_deleted or downvoted or bad_eli5 or is_automod
       if bad_comment:
         continue
       rel_comments.append(obj)

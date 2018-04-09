@@ -10,6 +10,10 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import TreebankWordTokenizer
 
+'''
+This file will parse the entire dataset into a single pkl file
+'''
+
 path = sys.argv[1]
 
 print "starting vectorization of words..."
@@ -33,9 +37,6 @@ for filename in os.listdir(os.getcwd() + "/" + path):
 
       # iterate through all the comments of this
       for obj in objs:
-        # remove automoderator comments
-        if obj["author"].encode("utf-8").lower() is "automoderator":
-          continue
         comment_id = obj["id"]
         body = obj["body"].encode("utf-8")
 
