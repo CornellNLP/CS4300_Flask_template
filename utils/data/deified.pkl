@@ -1,0 +1,12 @@
+(dp0
+Vdd920hs
+p1
+I1
+s.(dp0
+Vdigbtif
+p1
+I1
+sVdd920hs
+p2
+I1
+s.
