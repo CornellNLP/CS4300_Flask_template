@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <!-- <link rel="stylesheet" href="/static/awesomplete.css"> -->
+        <!-- <script src="awesomplete.js" async></script> -->
     </head>
     <body>
         <div class="topcorner">
@@ -17,9 +19,7 @@
                 <font color=#34A853>0</font>
                 <font color=#EA4335>0</font>
             </h1>
-
             <br><br>
-
             <div class="form-group">
                 <input id="input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name">
                 <input id="input" type="text" name="free_form" class="form-control" placeholder="Free Form Input">
@@ -40,6 +40,12 @@
           {% if tweet_data %}
             <h4>Sample Tweet Data</h4>
             <p>{{tweet_data}}</p>
+          {% endif %}
+        </div>
+        <div>
+          {% if vote_data %}
+            <h4>Sample Vote Data</h4>
+            <p>{{vote_data}}</p>
           {% endif %}
         </div>
         </form>
