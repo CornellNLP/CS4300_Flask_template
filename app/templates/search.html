@@ -21,18 +21,27 @@
             <br><br>
 
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name">
+                <input id="input" type="text" name="free_form" class="form-control" placeholder="Free Form Input">
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
         <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
+        <div>
+          <h1>{{output_message}}</h1>
+        </div>
+        <div>
+          {% if donation_data %}
+            <h4>Example Donation Data</h4>
+            <p>{{donation_data}}</p>
+          {% endif %}
+        </div>
+        <div>
+          {% if tweet_data %}
+            <h4>Sample Tweet Data</h4>
+            <p>{{tweet_data}}</p>
+          {% endif %}
+        </div>
         </form>
     </body>
 
