@@ -3,6 +3,8 @@
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="/static/awesomplete.css"> -->
+        <!-- <script src="awesomplete.js" async></script> -->
     </head>
     <body>
         <div class="topcorner">
@@ -31,6 +33,12 @@
               {% if tweet_data %}
                 <h4>Sample Tweet Data</h4>
                 <p>{{tweet_data}}</p>
+              {% endif %}
+            </div>
+            <div>
+              {% if vote_data %}
+                <h4>Sample Vote Data</h4>
+                <p>{{vote_data}}</p>
               {% endif %}
             </div>
         </form>
