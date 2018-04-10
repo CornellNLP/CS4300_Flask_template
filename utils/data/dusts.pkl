@@ -1,0 +1,12 @@
+(dp0
+Vddbus77
+p1
+I1
+s.(dp0
+Vddek56z
+p1
+I1
+sVddbus77
+p2
+I1
+s.
