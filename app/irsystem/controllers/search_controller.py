@@ -16,9 +16,16 @@ def search():
 	tweet_data = []
 	if not politician_query and not free_form_query: # no input
 		output_message = 'Please provide an input'
-		return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data, donation_data=donation_data, tweet_data=tweet_data)
+		return render_template('search.html', 
+				name=project_name, 
+				netid=net_id, 
+				output_message=output_message, 
+				data=data, 
+				donation_data=donation_data, 
+				tweet_data=tweet_data
+		)
 	else:
-		output_message = "Poltician Name: " + politician_query
+		output_message = "Politician Name: " + politician_query
 		if politician_query:
 			raw_donation_data = get_donations(politician_query)
 			if(raw_donation_data.count() > 0):
@@ -28,4 +35,11 @@ def search():
 				tweet_data.append(raw_tweet_data.next()["tweet_text"])
 		if free_form_query:
 			print("Need to implement this")
-		return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data, donation_data=donation_data, tweet_data=tweet_data)
+		return render_template('search.html', 
+				name=project_name, 
+				netid=net_id, 
+				output_message=output_message, 
+				data=data, 
+				donation_data=donation_data, 
+				tweet_data=tweet_data
+		)

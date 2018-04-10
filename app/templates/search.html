@@ -2,47 +2,59 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     </head>
     <body>
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
         </div>
+        <h1>FUNDY</h1>
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-
-            <br><br>
-
             <div class="form-group">
                 <input id="input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name">
                 <input id="input" type="text" name="free_form" class="form-control" placeholder="Free Form Input">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <button type="submit" class="btn btn-secondary"> Go! </button>
         </form>
         <form class="form-inline global-search">
-        <div>
-          <h1>{{output_message}}</h1>
-        </div>
-        <div>
-          {% if donation_data %}
-            <h4>Example Donation Data</h4>
-            <p>{{donation_data}}</p>
-          {% endif %}
-        </div>
-        <div>
-          {% if tweet_data %}
-            <h4>Sample Tweet Data</h4>
-            <p>{{tweet_data}}</p>
-          {% endif %}
-        </div>
+            <div>
+              <h2>{{output_message}}</h2>
+            </div>
+            <div>
+              {% if donation_data %}
+                <h4>Example Donation Data</h4>
+                <p>{{donation_data}}</p>
+              {% endif %}
+            </div>
+            <div>
+              {% if tweet_data %}
+                <h4>Sample Tweet Data</h4>
+                <p>{{tweet_data}}</p>
+              {% endif %}
+            </div>
         </form>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="metric-box">
+                    Tweets
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <div class="metric-box">
+                    Votes
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <div class="metric-box">
+                    Donations
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </body>
 
 </html>
