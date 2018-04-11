@@ -34,7 +34,6 @@ def search():
 		for movie in movies_json:
 			movie_dict[movie['id']] = movie
 			score_dict[movie['id']] = 0.0
-		print(score_dict)
 
 		for movie in score_dict:
 			if duration and movie_dict[movie]['runtime'] == int(duration):

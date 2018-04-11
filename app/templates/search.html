@@ -98,7 +98,10 @@
                 <br>
                 <p>Cast: TBD</p>
                 <br>
-                <p>Homepage: <a href ={{d['homepage']}}>Link</a></p>
+                <p>{% if d['homepage']: %}
+                        Homepage: <a href ={{d['homepage']}}>Link</a>
+                    {% endif %}
+                </p>
             {% endfor %}
         {% endif %}
         </form>
