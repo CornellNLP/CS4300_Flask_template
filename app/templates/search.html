@@ -23,24 +23,20 @@
             <div>
               <h2>{{output_message}}</h2>
             </div>
-            <div>
-              {% if donation_data %}
-                <h4>Example Donation Data</h4>
-                <p>{{donation_data}}</p>
-              {% endif %}
-            </div>
-            <div>
-              {% if tweet_data %}
-                <h4>Sample Tweet Data</h4>
-                <p>{{tweet_data}}</p>
-              {% endif %}
-            </div>
-            <div>
-              {% if vote_data %}
-                <h4>Sample Vote Data</h4>
-                <p>{{vote_data}}</p>
-              {% endif %}
-            </div>
+            {% if data %}
+                <div>
+                    <h4>Example Donation Data</h4>
+                    <p>{{ data["donations"] }}</p>
+                </div>
+                <div>
+                    <h4>Sample Tweet Data</h4>
+                    <p>{{ data["tweets"] }}</p>
+                </div>
+                <div>
+                    <h4>Sample Vote Data</h4>
+                    <p>{{ data["votes" ]}}</p>
+                </div>
+            {% endif %}
         </form>
         <div class="row">
             <div class="col-md-2"></div>
