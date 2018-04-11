@@ -27,18 +27,45 @@ def search():
 		data = []
 		output_message = ''
 	else:
+		data = []
+		movie_dict = dict()
+		score_dict = dict()
+
+		for movie in movies_json:
+			movie_dict[movie['id']] = movie
+			score_dict[movie['id']] = 0.0
+		print(score_dict)
+
+		for movie in score_dict:
+			if duration and movie_dict[movie]['runtime'] == int(duration):
+				score_dict[movie] += 10.0
+			if genres and genres in set(movie_dict[movie]['genres']):
+				score_dict[movie] += 20.0
+			if acclaim == "yes":
+				if movie_dict[movie]['vote_average'] > 7.0:
+					score_dict[movie] += movie_dict[movie]['vote_average'] + 10.0
+				if movie_dict[movie]['vote_average'] < 7.0:
+					score_dict[movie] -= 100.0
+
+		sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:20]
+
+		for movie_tuple in sorted_score_dict:
+			movie_id, movie_score = movie_tuple
+			movie_dict[movie_id]['similarity'] = movie_score
+			movie_dict[movie_id]['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+			data.append(movie_dict[movie_id])
 
 		output_message = "Your search has been processed."
-		rec0 = movies_json[randint(0, len(movie_list) - 1)]
-		rec0['similarity'] = 95.6
-		rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
-		rec1 = movies_json[randint(0, len(movie_list) - 1)]
-		rec1['similarity'] = 87.2
-		rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
-		rec2 = movies_json[randint(0, len(movie_list) - 1)]
-		rec2['similarity'] = 75.6
-		rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
+		# rec0 = movies_json[randint(0, len(movie_list) - 1)]
+		# rec0['similarity'] = 95.6
+		# rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+		# rec1 = movies_json[randint(0, len(movie_list) - 1)]
+		# rec1['similarity'] = 87.2
+		# rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
+		# rec2 = movies_json[randint(0, len(movie_list) - 1)]
+		# rec2['similarity'] = 75.6
+		# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
 
-		data = [rec0, rec1, rec2]
+		# data = [rec0, rec1, rec2]
 	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list)
 
