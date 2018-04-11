@@ -6,31 +6,82 @@
     <body>
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+            <p>Student Names: ({{ netids }})</p>
         </div>
         <form class="form-inline global-search">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
+                Cinema<font color=#EA4335>Pop</font>
             </h1>
             
             <br><br>
             
+            Similar Movies:
+            <br>
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="similar" class="form-control" placeholder="Your Input">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <br><br>
+            Genres:
+            <br>
+            <div class="form-group">
+                <input id="input" type="text" name="genres" class="form-control" placeholder="Your Input">
+            </div>
+            <br><br>
+            Duration (in minutes; range separated by dash):
+            <br>
+            <div class="form-group">
+                <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200">
+            </div>
+            <br><br>
+            Release Years (range separated by dash):
+            <br>
+            <div class="form-group">
+                <input id="input" type="text" name="release" class="form-control" placeholder="e.g. 1996 - 2004">
+            </div>
+            <br><br>
+            Acclaim:
+            <br>
+            <div class="form-group">
+                <input type="radio" name="acclaim" value="yes" checked> Yes<br>
+                <input type="radio" name="acclaim" value="no"> No<br>
+            </div>
+            <br><br>
+            Cast/Crew (separated by commas):
+            <br>
+            <div class="form-group">
+                <input id="input" type="text" name="castCrew" class="form-control" placeholder="Your Input">
+            </div>
+            <br><br>
+            Keywords (separated by commas):
+            <br>
+            <div class="form-group">
+                <input id="input" type="text" name="keywords" class="form-control" placeholder="Your Input">
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-info"> Get Recommendations </button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}  
+                <br><br>
+                <p>Title: {{d['title']}}</p>
                 <br>
-                <p>{{d}}</p>
+                <p>Similarity: {{d['similarity']}}%</p>
+                <br>
+                <img src={{d['poster']}} alt={{d['title']}} style="height:200px;">
+                <br>
+                <p>Synopsis: {{d['synopsis']}}</p>
+                <br>
+                <p>Genres: {{d['genres']}}</p>
+                <br>
+                <p>Duration: {{d['duration']}} min</p>
+                <br>
+                <p>User Score: {{d['user_score']}}%</p>
+                <br>
+                <p>Cast: {{d['cast']}}</p>
+                <br>
+                <p>Homepage: <a href ={{d['homepage']}}>{{d['homepage']}}</a></p>
             {% endfor %}
         {% endif %}
         </form>
