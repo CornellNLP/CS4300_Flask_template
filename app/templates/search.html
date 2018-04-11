@@ -18,13 +18,27 @@
             Similar Movies:
             <br>
             <div class="form-group">
-                <input id="input" type="text" name="similar" class="form-control" placeholder="Your Input">
+                <input id="input" list="movie_list" type="text" name="similar" class="form-control" placeholder="Your Input">
+                <datalist id="movie_list">
+                    {% if movie_list %}
+                        {% for m in movie_list %}  
+                            <option value='{{m}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
             </div>
             <br><br>
             Genres:
             <br>
             <div class="form-group">
-                <input id="input" type="text" name="genres" class="form-control" placeholder="Your Input">
+                <input id="input" list="genre_list" name="genres" class="form-control" placeholder="Your Input">
+                <datalist id="genre_list">
+                    {% if genre_list %}
+                        {% for g in genre_list %}  
+                            <option value='{{g}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
             </div>
             <br><br>
             Duration (in minutes; range separated by dash):
@@ -37,6 +51,7 @@
             <br>
             <div class="form-group">
                 <input id="input" type="text" name="release" class="form-control" placeholder="e.g. 1996 - 2004">
+                <br>
             </div>
             <br><br>
             Acclaim:
@@ -71,15 +86,17 @@
                 <br>
                 <img src={{d['poster']}} alt={{d['title']}} style="height:200px;">
                 <br>
-                <p>Synopsis: {{d['synopsis']}}</p>
+                <p>Synopsis: {{d['overview']}}</p>
                 <br>
                 <p>Genres: {{d['genres']}}</p>
                 <br>
-                <p>Duration: {{d['duration']}} min</p>
+                <p>Duration: {{d['runtime']}} min</p>
                 <br>
-                <p>User Score: {{d['user_score']}}%</p>
+                <p>Release Date: {{d['release_date']}}</p>
                 <br>
-                <p>Cast: {{d['cast']}}</p>
+                <p>User Score: {{d['vote_average']}}/10.0</p>
+                <br>
+                <p>Cast: TBD</p>
                 <br>
                 <p>Homepage: <a href ={{d['homepage']}}>{{d['homepage']}}</a></p>
             {% endfor %}
