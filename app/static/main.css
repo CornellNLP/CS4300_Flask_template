@@ -38,10 +38,15 @@
 	font-size: 30px;
 	border: 1px solid black;
 	border-radius: 10px;
+	cursor: pointer;
 	background: #9ec69e;
 }
 h1 {
 	font-size: 150px;
 	font-family: 'Black Han Sans', sans-serif;
 	text-align: center;
+}
+
+.info-popup {
+	display: none;
 }

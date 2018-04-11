@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+        <script src="/static/main.js"></script>
         <!-- <link rel="stylesheet" href="/static/awesomplete.css"> -->
         <!-- <script src="awesomplete.js" async></script> -->
     </head>
@@ -23,42 +24,42 @@
             <div>
               <h2>{{output_message}}</h2>
             </div>
-            {% if data %}
-                <div>
-                    <h4>Example Donation Data</h4>
-                    <p>{{ data["donations"] }}</p>
-                </div>
-                <div>
-                    <h4>Sample Tweet Data</h4>
-                    <p>{{ data["tweets"] }}</p>
-                </div>
-                <div>
-                    <h4>Sample Vote Data</h4>
-                    <p>{{ data["votes" ]}}</p>
-                </div>
-            {% endif %}
         </form>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-2">
-                <div class="metric-box">
-                    Tweets
+        {% if data %}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('tweets')">
+                        Tweets
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <div class="metric-box">
-                    Votes
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('votes')">
+                        Votes
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <div class="metric-box">
-                    Donations
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('donations')">
+                        Donations
+                    </div>
                 </div>
+                <div class="col-md-2"></div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
+            <div class="info-popup" id="donations">
+                <h4>Example Donation Data</h4>
+                <p>{{ data["donations"] }}</p>
+            </div>
+            <div class="info-popup" id="tweets">
+                <h4>Sample Tweet Data</h4>
+                <p>{{ data["tweets"] }}</p>
+            </div>
+            <div class="info-popup" id="votes">
+                <h4>Sample Vote Data</h4>
+                <p>{{ data["votes" ]}}</p>
+            </div>
+        {% endif %}
     </body>
 
 </html>
