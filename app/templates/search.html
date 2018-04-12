@@ -3,14 +3,23 @@
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
     </head>
+
+    <style>
+    @font-face {
+      font-family: BeautySchool;
+      src: url('static/beautyschooldropout.ttf');
+    }
+
+    .
+    </style>
+
     <body>
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Names: ({{ netids }})</p>
         </div>
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                <!-- <font color=#EA4335>Pop</font> -->
+            <h1 style="font-size: 55px; font-family:BeautySchool;">
                 <img style="margin-left: -7%; max-width: 200%" src= "/static/logo.JPG" alt="CinemaPop">
             </h1>
             
@@ -48,12 +57,15 @@
                 <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200">
             </div>
             <br><br>
-            Release Years (range separated by dash):
+            Release Years:
             <br>
-            <div class="form-group">
-                <input id="input" type="text" name="release" class="form-control" placeholder="e.g. 1996 - 2004">
-                <br>
-            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <input id="input" type="text" name="release" class="form-control" placeholder="min: 1994" size="35" maxlength="4">
+                    <input id="input" type="text" name="release" class="form-control" placeholder="max: 2018" maxlength="4">
+                    <br>
+                </div>
+            </form>
             <br><br>
             Acclaim:
             <br>
