@@ -2,11 +2,12 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
-import gaussian
+import user_duration
+import user_release
 from random import *
 
 project_name = "CinemaPop"
-net_ids = "Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz293"
+net_ids = ["Angela Zhang: az337", "Chris Fifty: cjf92", "Newton Ni: cn279", "Erik Chan: ejc233", "Xinyu Zhao: xz293"]
 
 year_lst = []
 for x in range(1900,2019):
@@ -41,7 +42,15 @@ def search():
 				names = similar.split(";")
 			for n in names:
 				selected_movies.append(n.lower());
-				
+
+		selected_genres = []
+		if genres:
+			g_list = []
+			if ';' in genres:
+				g_list = genres.split(";")
+			for g in g_list:
+				selected_genres.append(g.lower());
+
 		data = []
 		movie_dict = dict()
 		score_dict = dict()
@@ -51,11 +60,12 @@ def search():
 			score_dict[movie['id']] = 0.0
 
 
-		# modify movie_dict and score_dict to account for the "duration" user input 
+		# modify movie_dict and score_dict to account for the "duration" user input
 		# assuming duration is in the form "90-180" rather than "180 - 90"
-		movie_dict,score_dict = gaussian.main(movie_dict,score_dict,duration,10,0)
-
-
+		if duration:
+			movie_dict,score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
+		if release:
+			movie_dict,score_dict = user_release.main(movie_dict,score_dict,release,4,0)
 
 		for movie in score_dict:
 

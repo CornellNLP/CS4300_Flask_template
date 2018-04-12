@@ -41,4 +41,3 @@ def main(movie_dict,score_dict, inp, high_val,low_val):
 	if len(vals) == 2:
 		return filter_hard(movie_dict,score_dict,vals[0],vals[1])
 	return movie_dict,gaussian_score(movie_dict,score_dict,vals[0],high_val,low_val)
-
