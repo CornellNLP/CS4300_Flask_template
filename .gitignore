@@ -9,3 +9,4 @@ vagrant/a4keypair.pem
 .env
 inv_index.pkl
 node_modules/
+dist/
