@@ -118,9 +118,9 @@
                 <br>
                 <p>Similarity: {{d['similarity']}}%</p>
                 <br>
-                <img src={{d['poster']}} alt={{d['title']}} style="height:200px;">
+                <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>
-                <p>Synopsis: {{d['overview']}}</p>
+                <p>Synopsis: {{d['summary']}}</p>
                 <br>
                 <p>Genres: {{d['genres']}}</p>
                 <br>
@@ -130,7 +130,9 @@
                 <br>
                 <p>User Score: {{d['vote_average']}}/10.0</p>
                 <br>
-                <p>Cast: TBD</p>
+                <p>Cast: {{d['cast']}}</p>
+                <br>
+                <p>Crew: {{d['crew']}}</p>
                 <br>
                 <p>{% if d['homepage']: %}
                         Homepage: <a href ={{d['homepage']}}>Link</a>
