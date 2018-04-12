@@ -753,10 +753,10 @@ p2
 I1
 s.(dp0
 Vdd(dp0
-Vcylsus3
+Vdou40pu
 p1
 I1
-sVdkfeyda
+sVcylsus3
 p2
 I1
 s.

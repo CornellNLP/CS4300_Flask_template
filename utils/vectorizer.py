@@ -26,7 +26,8 @@ d = enchant.Dict("en_US")
 
 numbers = re.compile("^[0-9]{1,45}$")
 
-inv_index = {}
+f = open("inv_index.pkl","rb")
+inv_index = pickle.load(f)
 
 f = open("filenames_v1.pkl","rb")
 filenames = set(pickle.load(f))
@@ -49,12 +50,10 @@ for filename in os.listdir(os.getcwd() + "/" + path):
     for line in file:
       objs = json.loads(line)
       count = len(objs)
-
       # iterate through all the comments of this
       for obj in objs:
         comment_id = obj["id"]
         body = obj["body"].encode("utf-8")
-
         # bye bye punctuation
         body = body.lower().translate(None, string.punctuation)
 

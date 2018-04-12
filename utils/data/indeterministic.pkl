@@ -2,4 +2,11 @@
 Vd55xl81
 p1
 I1
+s.(dp0
+Vdottdjy
+p1
+I1
+sVd55xl81
+p2
+I1
 s.
