@@ -1,27 +1,35 @@
 <html>
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
         <link rel="stylesheet" href="/static/main.css">
     </head>
     <body>
+
         <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Names: ({{ netids }})</p>
+            <h1>Project Name: {{ name }}</h1>
+            {% if netids %}
+                {% for nid in netids %}
+                    <h3>{{ nid }}</h3>
+                {% endfor %}
+            {% endif %}
+
         </div>
-        <form class="form-inline global-search">
+        <form class="form-inline global-search" method="GET">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                Cinema<font color=#EA4335>Pop</font>
+                <!-- <font color=#EA4335>Pop</font> -->
+                <img style="margin-left: -7%; max-width: 200%" src= "/static/logo.JPG" alt="CinemaPop">
             </h1>
-            
+
             <br><br>
-            
+
             Similar Movies:
             <br>
-            <div class="form-group">
-                <input id="input" list="movie_list" type="text" name="similar" class="form-control" placeholder="Your Input">
+            <div class="form-group" id="movie_selector">
+                <input id="similar_movies" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie name">
                 <datalist id="movie_list">
                     {% if movie_list %}
-                        {% for m in movie_list %}  
+                        {% for m in movie_list %}
                             <option value='{{m}}'>
                         {% endfor %}
                     {% endif %}
@@ -30,11 +38,11 @@
             <br><br>
             Genres:
             <br>
-            <div class="form-group">
-                <input id="input" list="genre_list" name="genres" class="form-control" placeholder="Your Input">
+            <div class="form-group" style="padding-left: 80px;">
+                <input id="select_genres" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action, History, etc.">
                 <datalist id="genre_list">
                     {% if genre_list %}
-                        {% for g in genre_list %}  
+                        {% for g in genre_list %}
                             <option value='{{g}}'>
                         {% endfor %}
                     {% endif %}
@@ -78,7 +86,7 @@
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
-            {% for d in data %}  
+            {% for d in data %}
                 <br><br>
                 <p>Title: {{d['title']}}</p>
                 <br>

@@ -1,17 +1,20 @@
-from . import *  
+from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
+import user_duration
+import user_release
 from random import *
 
 project_name = "CinemaPop"
-net_ids = "Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz293"
+net_ids = ["Angela Zhang: az337", "Chris Fifty: cjf92", "Newton Ni: cn279", "Erik Chan: ejc233", "Xinyu Zhao: xz293"]
 
 @irsystem.route('/', methods=['GET'])
 def search():
+	output_message = ""
+	data = []
 	movies_json = json.load(open('movies.json'))
 	genres_json = json.load(open('genres.json'))
-
 	movie_list = [movie['title'] for movie in movies_json]
 	genre_list = [genre['name'] for genre in genres_json['genres']]
 
@@ -27,6 +30,22 @@ def search():
 		data = []
 		output_message = ''
 	else:
+		selected_movies = []
+		if similar:
+			names = []
+			if ';' in similar:
+				names = similar.split(";")
+			for n in names:
+				selected_movies.append(n.lower());
+
+		selected_genres = []
+		if genres:
+			g_list = []
+			if ';' in genres:
+				g_list = genres.split(";")
+			for g in g_list:
+				selected_genres.append(g.lower());
+
 		data = []
 		movie_dict = dict()
 		score_dict = dict()
@@ -35,9 +54,20 @@ def search():
 			movie_dict[movie['id']] = movie
 			score_dict[movie['id']] = 0.0
 
+
+		# modify movie_dict and score_dict to account for the "duration" user input
+		# assuming duration is in the form "90-180" rather than "180 - 90"
+		if duration:
+			movie_dict,score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
+		if release:
+			movie_dict,score_dict = user_release.main(movie_dict,score_dict,release,4,0)
+
 		for movie in score_dict:
-			if duration and movie_dict[movie]['runtime'] == int(duration):
-				score_dict[movie] += 10.0
+
+
+			#if duration and movie_dict[movie]['runtime'] == int(duration):
+				#score_dict[movie] += 10.0
+
 			if genres and genres in set(movie_dict[movie]['genres']):
 				score_dict[movie] += 20.0
 			if acclaim == "yes":
@@ -55,16 +85,16 @@ def search():
 			data.append(movie_dict[movie_id])
 
 		output_message = "Your search has been processed."
-		# rec0 = movies_json[randint(0, len(movie_list) - 1)]
-		# rec0['similarity'] = 95.6
-		# rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
-		# rec1 = movies_json[randint(0, len(movie_list) - 1)]
-		# rec1['similarity'] = 87.2
-		# rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
-		# rec2 = movies_json[randint(0, len(movie_list) - 1)]
-		# rec2['similarity'] = 75.6
-		# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
+			# rec0 = movies_json[randint(0, len(movie_list) - 1)]
+			# rec0['similarity'] = 95.6
+			# rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+			# rec1 = movies_json[randint(0, len(movie_list) - 1)]
+			# rec1['similarity'] = 87.2
+			# rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
+			# rec2 = movies_json[randint(0, len(movie_list) - 1)]
+			# rec2['similarity'] = 75.6
+			# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
 
-		# data = [rec0, rec1, rec2]
+			# data = [rec0, rec1, rec2]
+
 	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list)
-
