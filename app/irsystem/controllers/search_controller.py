@@ -9,6 +9,10 @@ from random import *
 project_name = "CinemaPop"
 net_ids = ["Angela Zhang: az337", "Chris Fifty: cjf92", "Newton Ni: cn279", "Erik Chan: ejc233", "Xinyu Zhao: xz293"]
 
+year_lst = []
+for x in range(1900,2019):
+	year_lst.append(x)
+
 @irsystem.route('/', methods=['GET'])
 def search():
 	output_message = ""
@@ -25,6 +29,7 @@ def search():
 	acclaim = request.args.get('acclaim')
 	castCrew = request.args.get('castCrew')
 	keywords = request.args.get('keywords')
+	year_range = [request.args.get('year_start'), request.args.get('year_end')]
 	query = [similar, genres, duration, release, acclaim, castCrew, keywords]
 	if not query[0] and not query[1] and not query[2] and not query[3] and not query[4] and not query[5] and not query[6]:
 		data = []
@@ -96,5 +101,4 @@ def search():
 			# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
 
 			# data = [rec0, rec1, rec2]
-
-	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list)
+	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, year_list= year_lst)
