@@ -2,7 +2,8 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
-import gaussian
+import user_duration
+import user_release
 from random import *
 
 project_name = "CinemaPop"
@@ -56,9 +57,10 @@ def search():
 
 		# modify movie_dict and score_dict to account for the "duration" user input
 		# assuming duration is in the form "90-180" rather than "180 - 90"
-		movie_dict,score_dict = gaussian.main(movie_dict,score_dict,duration,10,0)
-
-
+		if duration:
+			movie_dict,score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
+		if release:
+			movie_dict,score_dict = user_release.main(movie_dict,score_dict,release,4,0)
 
 		for movie in score_dict:
 
@@ -94,4 +96,5 @@ def search():
 			# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
 
 			# data = [rec0, rec1, rec2]
+
 	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list)
