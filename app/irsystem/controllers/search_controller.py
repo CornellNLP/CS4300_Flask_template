@@ -36,7 +36,15 @@ def search():
 				names = similar.split(";")
 			for n in names:
 				selected_movies.append(n.lower());
-				
+
+		selected_genres = []
+		if genres:
+			g_list = []
+			if ';' in genres:
+				g_list = genres.split(";")
+			for g in g_list:
+				selected_genres.append(g.lower());
+
 		data = []
 		movie_dict = dict()
 		score_dict = dict()
@@ -46,7 +54,7 @@ def search():
 			score_dict[movie['id']] = 0.0
 
 
-		# modify movie_dict and score_dict to account for the "duration" user input 
+		# modify movie_dict and score_dict to account for the "duration" user input
 		# assuming duration is in the form "90-180" rather than "180 - 90"
 		movie_dict,score_dict = gaussian.main(movie_dict,score_dict,duration,10,0)
 
