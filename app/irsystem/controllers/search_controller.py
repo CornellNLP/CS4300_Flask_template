@@ -2,6 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
+import gaussian
 from random import *
 
 project_name = "CinemaPop"
@@ -44,9 +45,19 @@ def search():
 			movie_dict[movie['id']] = movie
 			score_dict[movie['id']] = 0.0
 
+
+		# modify movie_dict and score_dict to account for the "duration" user input 
+		# assuming duration is in the form "90-180" rather than "180 - 90"
+		movie_dict,score_dict = gaussian.main(movie_dict,score_dict,duration,10,0)
+
+
+
 		for movie in score_dict:
-			if duration and movie_dict[movie]['runtime'] == int(duration):
-				score_dict[movie] += 10.0
+
+
+			#if duration and movie_dict[movie]['runtime'] == int(duration):
+				#score_dict[movie] += 10.0
+
 			if genres and genres in set(movie_dict[movie]['genres']):
 				score_dict[movie] += 20.0
 			if acclaim == "yes":
