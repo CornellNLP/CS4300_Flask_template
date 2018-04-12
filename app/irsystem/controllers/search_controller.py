@@ -2,7 +2,8 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
-import gaussian
+import user_duration
+import user_release
 from random import *
 
 project_name = "CinemaPop"
