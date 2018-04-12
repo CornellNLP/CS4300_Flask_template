@@ -10,7 +10,7 @@ import os
 import csv
 
 project_name = "BookRec"
-net_id = "Ilan Filonenko: if56"
+net_id = "Hyun Kyo Jung: hj283"
 
 
 @irsystem.route('/', methods=['GET'])
@@ -38,17 +38,19 @@ def search():
 	# db.session.commit()
 	#############################################################################################
 
-	user_input = request.args.get('search')
+	title_input = request.args.get('title_search')
+	keyword_input = request.args.get('keyword_search')
 
 	#user has not inputted anything yet. 
-	if user_input in ["", None]:	 
-		print("hey")
+	if title_input in ["", None]:	 
+		book_list = [b.name for b in Book.query.all()]
+		print(book_list)
 
 	#we got user input. Now, we can find similar books.
 	else : 
-		print("user input is %s" % (user_input)) 
+		print("user input is %s" % (title_input)) 
 
-		usr_bk = Book.query.filter_by(name = user_input).first()
+		usr_bk = Book.query.filter_by(name = title_input).first()
 		usr_bk_idx = usr_bk.index
 		usr_bk_name = usr_bk.name
 
@@ -67,11 +69,11 @@ def search():
 			ith_sim_bk = Book.query.filter_by(index = i).first()
 			topten_bk.append((ith_sim_bk.name, cos_sim_list[i]))
 
-	if not user_input:
+	if not title_input:
 		data = []
 		output_message = ''
 	else:
-		output_message = "Top ten similar books to : " + user_input
+		output_message = "Top ten similar books to : " + title_input
 		data = topten_bk
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
