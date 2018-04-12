@@ -42,7 +42,7 @@ h1 {font-family: 'Rubik Mono One', sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 100px;
-    color: gray;
+    color: black;
 }
 
 h2 {font-family: 'Rajdhani', sans-serif;
@@ -50,14 +50,14 @@ h2 {font-family: 'Rajdhani', sans-serif;
     font-weight: 80;
     line-height: 18px;
     text-align: right;
-    color: #gray;
+    color: black;
 }
 
 h3 {font-family: 'Rajdhani', sans-serif;
     font-size: 14px;
     font-weight: 80;
     text-align: right;
-    color: gray;
+    color: black;
 }
 
 #movie_selector {
