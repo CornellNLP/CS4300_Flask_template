@@ -28,6 +28,12 @@ tokenizer = TreebankWordTokenizer()
 stop_words = set(stopwords.words('english'))
 d = enchant.Dict("en_US")
 
+# f = open("words_v2.pkl","rb")
+# words = pickle.load(f);
+
+# f = open("filenames_v2.pkl","rb")
+# files = pickle.load(f)
+
 words = set([])
 files = set([])
 
@@ -36,6 +42,11 @@ numbers = re.compile("^[0-9]{1,45}$")
 for filename in os.listdir(os.getcwd() + "/" + path):
   if "json" not in filename:
     continue
+
+  if filename in files:
+    print filename, "already processed!"
+    continue
+
   files.add(filename)
   filename = path + "/" + filename
   with open(filename, "r") as file:

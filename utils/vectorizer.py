@@ -29,7 +29,9 @@ numbers = re.compile("^[0-9]{1,45}$")
 inv_index = {}
 
 f = open("filenames_v1.pkl","rb")
-filenames = pickle.load(f)
+filenames = set(pickle.load(f))
+
+# filenames = set([])
 
 for filename in os.listdir(os.getcwd() + "/" + path):
   if "json" not in filename:
@@ -84,6 +86,7 @@ f = open("inv_index.pkl","wb")
 pickle.dump(inv_index,f)
 f.close()
 
+
 f = open("filenames_v1.pkl","wb")
-pickle.dump(filenames,f)
+pickle.dump(list(filenames),f)
 f.close()
