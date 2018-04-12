@@ -16,10 +16,10 @@ e.g. python utils/populate_db.py utils/Parsed\ JSONs/
 
 path = sys.argv[1]
 
-# f = open("utils/filenames_v2.pkl","rb")
-# files = pickle.load(f)
+f = open("utils/filenames_db.pkl","rb")
+files = pickle.load(f)
 
-files = set([])
+# files = set([])
 
 print "starting population of db..."
 start_time = int(time.time())
