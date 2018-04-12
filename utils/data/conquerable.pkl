@@ -2,4 +2,11 @@
 Vd40ebiq
 p1
 I1
+s.(dp0
+Vdomddy0
+p1
+I1
+sVd40ebiq
+p2
+I1
 s.

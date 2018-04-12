@@ -28,14 +28,14 @@ tokenizer = TreebankWordTokenizer()
 stop_words = set(stopwords.words('english'))
 d = enchant.Dict("en_US")
 
-# f = open("words_v2.pkl","rb")
-# words = pickle.load(f);
+f = open("words_v2.pkl","rb")
+words = pickle.load(f);
 
-# f = open("filenames_v2.pkl","rb")
-# files = pickle.load(f)
+f = open("filenames_v2.pkl","rb")
+files = pickle.load(f)
 
-words = set([])
-files = set([])
+# words = set([])
+# files = set([])
 
 numbers = re.compile("^[0-9]{1,45}$")
 

@@ -16,12 +16,23 @@ e.g. python utils/populate_db.py utils/Parsed\ JSONs/
 
 path = sys.argv[1]
 
+# f = open("utils/filenames_v2.pkl","rb")
+# files = pickle.load(f)
+
+files = set([])
+
 print "starting population of db..."
 start_time = int(time.time())
 
 for filename in os.listdir(os.getcwd() + "/" + path):
   if "json" not in filename:
     continue
+
+ if filename in files:
+    print filename, "already processed!"
+    continue
+
+  files.add(filename)
 
   filename = path + "/" + filename
   with open(filename, "r") as file:
@@ -44,3 +55,7 @@ for filename in os.listdir(os.getcwd() + "/" + path):
   print "completed", filename
 end_time = int(time.time())
 print "finished in", (end_time-start_time)
+
+f = open("filenames_db.pkl","wb")
+pickle.dump(files,f)
+f.close()

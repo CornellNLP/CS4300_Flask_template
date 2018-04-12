@@ -10,4 +10,11 @@ s.(dp0
 Vdi104uo
 p1
 I2
+s.(dp0
+Vdi104uo
+p1
+I1
+sVdnelwsi
+p2
+I1
 s.

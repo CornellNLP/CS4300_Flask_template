@@ -2,4 +2,11 @@
 Vdd2tenc
 p1
 I1
+s.(dp0
+Vdozhuxi
+p1
+I1
+sVdd2tenc
+p2
+I1
 s.
