@@ -56,18 +56,26 @@
             Duration (in minutes; range separated by dash):
             <br>
             <div class="form-group">
-                <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200">
+                <!-- <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200"> -->
+                <input name= "duration_start" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="Start" style="width:25%" maxlength="3">
+                <input name= "duration_end" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="End" style="width:25%" maxlength="3">
             </div>
             <br><br>
-            Release Years:
+            Range of Release Years:
             <br>
-            <form class="form-inline">
-                <div class="form-group">
-                    <input id="input" type="text" name="release" class="form-control" placeholder="min: 1994" size="35" maxlength="4">
-                    <input id="input" type="text" name="release" class="form-control" placeholder="max: 2018" maxlength="4">
-                    <br>
-                </div>
-            </form>
+            <div class="form-group form-inline">
+                <input name= "year_start" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="Start" style="width:25%" maxlength="4">
+                <input name= "year_end" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="End" style="width:25%" maxlength="4">
+                <datalist id="year_list">
+                    {% if year_list %}
+                        {% for m in year_list %}
+                            <option value='{{m}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
+                <br>
+            </div>
+            </div>
             <br><br>
             Acclaim:
             <br>
