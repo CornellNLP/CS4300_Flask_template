@@ -1,5 +1,0 @@
-(dp0
-Vdc40ppm
-p1
-I1
-s.
