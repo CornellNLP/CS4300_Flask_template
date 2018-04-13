@@ -22,7 +22,6 @@
     <body>
 
         <div class="topcorner">
-            <h1>Project Name: {{ name }}</h1>
             {% if netids %}
                 {% for nid in netids %}
                     <h3>{{ nid }}</h3>
@@ -133,7 +132,7 @@
                 <br>
                 <p>Release Date: {{d['release_date']}}</p>
                 <br>
-                <p>User Score: {{d['vote_average']}}/10.0</p>
+                <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
                 <br>
                 <p>Cast:
                 <br>
