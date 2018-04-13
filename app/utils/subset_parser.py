@@ -2,6 +2,7 @@ import json
 import time
 import sys
 import os
+import pickle
 
 '''
 this will now parse ALL jsons and overwrite them
@@ -73,5 +74,8 @@ for filename in os.listdir(os.getcwd() + "/" + path):
       with open(filename, 'w') as outfile:
         counter+= len(filtered_comments)
         json.dump(filtered_comments, outfile)
-print counter
+
+f = open("n_docs.pkl","wb")
+pickle.dump(counter,f)
+f.close()
 
