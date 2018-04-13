@@ -7,6 +7,38 @@ from app.irsystem.models.database_helpers import get_donations, get_tweets_by_po
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
 
+def filter_donations(donations, politician, issue):
+	issue = issue.lower()
+	relevant_fields = [
+		"DonorCommitteeNameNormalized",
+		"DonorOccupationNormalized",
+		"DonorEmployerNormalized",
+		"DonorNameNormalized",
+		"DonorCandidateOffice",
+		"DonorOrganization",
+	]
+
+	filtered = []
+	for don in donations:
+		is_relevant = False
+		for field in relevant_fields:
+			if issue in don[field].lower():
+				is_relevant = True
+		if is_relevant:
+			filtered.append(don)
+
+	return filtered
+
+def process_donations(donations):
+	total = 0
+	for don in donations:
+		total += float(don["TransactionAmount"])
+
+	return {
+		"total": total,
+		"sample": sorted(donations, key=lambda d:d["TransactionAmount"], reverse=True)[:10]
+	}
+
 @irsystem.route('/', methods=['GET'])
 def search():
 	politician_query = request.args.get('politician_name')
@@ -23,6 +55,8 @@ def search():
 	else:
 		output_message = "Politician Name: " + politician_query
 		data = {
+			"politician": politician_query,
+			"issue": free_form_query,
 			"donations": [],
 			"tweets": [],
 			"votes": [],
@@ -30,7 +64,13 @@ def search():
 		if politician_query:
 			raw_donation_data = get_donations(politician_query)
 			if(raw_donation_data.count() > 0):
-				data["donations"].append(raw_donation_data.next())
+				filtered_donations = filter_donations(raw_donation_data, politician_query, free_form_query)
+				don_data = process_donations(filtered_donations)
+				# don_data = {
+				# 	"total": 10,
+				# 	"sample": [],
+				# }
+				data["donations"] = don_data
 			raw_tweet_data = get_tweets_by_politician(politician_query)
 			if(raw_tweet_data.count() > 0):
 				data["tweets"].append(raw_tweet_data.next()["tweet_text"])

@@ -47,9 +47,12 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
+            <br>
             <div class="info-popup" id="donations">
-                <h4>Example Donation Data</h4>
-                <p>{{ data["donations"] }}</p>
+                <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
+                {% for don in data["donations"]["sample"] %}
+                    <p><b>{{ don["DonorOrganization"] }}:</b> ${{ don["TransactionAmount"] }}</p>
+                {% endfor %}
             </div>
             <div class="info-popup" id="tweets">
                 <h4>Sample Tweet Data</h4>
