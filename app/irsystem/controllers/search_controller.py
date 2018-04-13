@@ -64,12 +64,12 @@ def search():
 		if politician_query:
 			raw_donation_data = get_donations(politician_query)
 			if(raw_donation_data.count() > 0):
-				filtered_donations = filter_donations(raw_donation_data, politician_query, free_form_query)
-				don_data = process_donations(filtered_donations)
-				# don_data = {
-				# 	"total": 10,
-				# 	"sample": [],
-				# }
+				# filtered_donations = filter_donations(raw_donation_data, politician_query, free_form_query)
+				# don_data = process_donations(filtered_donations)
+				don_data = {
+					"total": 10,
+					"sample": [],
+				}
 				data["donations"] = don_data
 			raw_tweet_data = get_tweets_by_politician(politician_query)
 			if(raw_tweet_data.count() > 0):
