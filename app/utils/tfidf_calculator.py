@@ -20,7 +20,25 @@ def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.95):
    :param inv_idx: Not actually needed, just read the files from app/utils/data
    :param n_docs: Not actually needed, just read the n_docs file from app/utils/data
    '''
-  None
+   result = {}
+   num_docs_doc = open(os.getcwd() + "/n_docs.pkl","rb")
+   num_docs = pickle.load(num_docs_doc)
+   print("Num Docs: ", num_docs)
+   for filename in os.listdir(os.getcwd() + "/data"):
+   		#print filename
+   		f = open(os.getcwd() + "/data/" + filename,"rb")
+  		d = pickle.load(f)
+  		word_id = list(d)[0]
+  		tf = list(d.values())[0]
+  		print("Word_id: ", word_id)
+  		print("Tf: ", tf)
+  		print(d)
+  		print("\n\n\n\n\n\n")
+  		result[word_id] = num_docs / tf
+
+   result_file = open("idf.pkl","wb")
+   pickle.dump(result, result_file)
+
 
 def compute_doc_norms():
   '''
@@ -119,6 +137,6 @@ def compute_doc_norms():
   pickle.dump(files,f)
   f.close()
 
-compute_idf()
+compute_idf([], 0)
 compute_doc_norms()
 
