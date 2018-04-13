@@ -669,6 +669,7 @@ $ git clone https://github.com/CornellNLP/CS4300_Flask_template.git
 $ cd CS4300_Flask_template
 $ cd vagrant
 $ vagrant up
+$ vagrant provision
 ...
 TASK [Make sure nginx is running] **********************************************
 ok: [default] => {"changed": false, "name": "nginx", "state": "started"}
