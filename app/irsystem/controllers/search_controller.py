@@ -9,6 +9,12 @@ from random import *
 project_name = "CinemaPop"
 net_ids = ["Angela Zhang: az337", "Chris Fifty: cjf92", "Newton Ni: cn279", "Erik Chan: ejc233", "Xinyu Zhao: xz293"]
 
+
+movies_json = json.load(open('app/static/data/movies.json'))
+genres_json = json.load(open('genres.json'))
+movie_list = [movie['title'] for movie in movies_json]
+genre_list = [genre['name'] for genre in genres_json['genres']]
+
 year_lst = []
 for x in range(1900,2019):
 	year_lst.append(x)
@@ -17,10 +23,6 @@ for x in range(1900,2019):
 def search():
 	output_message = ""
 	data = []
-	movies_json = json.load(open('movies.json'))
-	genres_json = json.load(open('genres.json'))
-	movie_list = [movie['title'] for movie in movies_json]
-	genre_list = [genre['name'] for genre in genres_json['genres']]
 
 	similar = request.args.get('similar')
 	genres = request.args.get('genres')
@@ -56,7 +58,7 @@ def search():
 		score_dict = dict()
 
 		for movie in movies_json:
-			movie_dict[movie['id']] = movie
+			movie_dict[movie['id']] = json.load(open('app/static/data/movies/' + movie['id'] + '.json'))
 			score_dict[movie['id']] = 0.0
 
 

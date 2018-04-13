@@ -64,7 +64,7 @@
                 </datalist>
             </div>
             <br><br>
-            Duration (in minutes; range separated by dash):
+            Duration (in minutes):
             <br>
             <div class="form-group">
                 <!-- <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200"> -->
@@ -118,11 +118,16 @@
                 <br>
                 <p>Similarity: {{d['similarity']}}%</p>
                 <br>
-                <img src={{d['poster']}} alt={{d['title']}} style="height:200px;">
+                <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>
-                <p>Synopsis: {{d['overview']}}</p>
+                <p>Synopsis: {{d['summary']}}</p>
                 <br>
-                <p>Genres: {{d['genres']}}</p>
+                <p>Genres:
+                {% for g in d['genres'][:-1] %}
+                    {{g}}, 
+                {% endfor %}
+                {{d['genres'][-1]}}
+                </p>
                 <br>
                 <p>Duration: {{d['runtime']}} min</p>
                 <br>
@@ -130,11 +135,30 @@
                 <br>
                 <p>User Score: {{d['vote_average']}}/10.0</p>
                 <br>
-                <p>Cast: TBD</p>
+                <p>Cast:
                 <br>
-                <p>{% if d['homepage']: %}
-                        Homepage: <a href ={{d['homepage']}}>Link</a>
-                    {% endif %}
+                <small>
+                {% for c in d['cast'] %}
+                    {{c['name']}} as {{c['character']}}
+                    <br>
+                {% endfor %}
+                </small>
+                </p>
+                <br>
+                <p>Crew:
+                <br>
+                <small>
+                {% for c in d['crew'] %}
+                    {{c['job']}}: {{c['name']}}
+                    <br>
+                {% endfor %}
+                </small>
+                </p>
+                <br>
+                <p>
+                {% if d['homepage']: %}
+                    Homepage: <a href ={{d['homepage']}}>Link</a>
+                {% endif %}
                 </p>
             {% endfor %}
         {% endif %}
