@@ -87,15 +87,15 @@ def search():
 				for category in vote_categories:
 					if vote_categories[category] > 0 and issues_categories[category] > 0:
 						intersect = True
-				#If query and vote have similar topics, add the vote to vote data
-				if intersect:
-					description = vote["vote"]["description"]
-					politician_vote = "Unknown"
-					for position in vote["vote"]["positions"]:
-						if position["PoliticianName"] == politician_query:
-							politician_vote = position["vote_position"]
-							break
-					data["votes"].append({"description":description, "vote_position":politician_vote})
+					#If query and vote have similar topics, add the vote to vote data
+					if intersect:
+						description = vote["vote"]["description"]
+						politician_vote = "Unknown"
+						for position in vote["vote"]["positions"]:
+							if position["PoliticianName"] == politician_query:
+								politician_vote = position["vote_position"]
+								break
+						data["votes"].append({"description":description, "vote_position":politician_vote})
 		if free_form_query:
 			print("Need to implement this")
 		return render_template('search.html', 
