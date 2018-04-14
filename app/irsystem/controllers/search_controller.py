@@ -95,7 +95,8 @@ def search():
 						if position["PoliticianName"] == politician_query:
 							politician_vote = position["vote_position"]
 							break
-					data["votes"].append({"description":description, "vote_position":politician_vote})
+					if position["vote_position"] != "Not Voting":
+						data["votes"].append({"description":description, "vote_position":politician_vote})
 		if free_form_query:
 			print("Need to implement this")
 		return render_template('search.html', 
