@@ -62,6 +62,7 @@ def search():
 			"donations": [],
 			"tweets": [],
 			"votes": [],
+			"vote_score": 0.0
 		}
 		if politician_query:
 			#Get empath categories for free form query
@@ -112,6 +113,7 @@ def search():
 				vote_score = -2.0*total_no/(total_yes+total_no)
 			else:
 				vote_score = 0.0
+			data["vote_score"] = vote_score
 		if free_form_query:
 			print("Need to implement this")
 		return render_template('search.html', 
