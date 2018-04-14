@@ -95,8 +95,23 @@ def search():
 						if position["PoliticianName"] == politician_query:
 							politician_vote = position["vote_position"]
 							break
-					if position["vote_position"] != "Not Voting":
+					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
 						data["votes"].append({"description":description, "vote_position":politician_vote})
+			#Do basic scoring system where score is > 0 if votes yes more often and < 0 if votes no more often
+			total_yes = 0
+			total_no = 0
+			if len(data["votes"]) > 0:
+				for vote in data["votes"]:
+					if vote["vote_position"] == "Yes":
+						total_yes += 1
+					elif vote["vote_position"] == "No":
+						total_no += 1
+			if total_yes > total_no:
+				vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
+			elif total_no > total_yes:
+				vote_score = -2.0*total_no/(total_yes+total_no)
+			else:
+				vote_score = 0.0
 		if free_form_query:
 			print("Need to implement this")
 		return render_template('search.html', 
