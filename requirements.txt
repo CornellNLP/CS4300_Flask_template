@@ -6,6 +6,7 @@ autoenv==1.0.0
 bcrypt==2.0.0
 cffi==1.6.0
 click==6.7
+empath==0.89
 Flask==0.10.1
 Flask-Bcrypt==0.7.1
 Flask-HTTPAuth==3.1.2
