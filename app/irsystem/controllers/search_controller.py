@@ -110,9 +110,10 @@ def search():
 			if total_yes > total_no:
 				vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
 			elif total_no > total_yes:
-				vote_score = -2.0*total_no/(total_yes+total_no)
+				vote_score = 2.0*total_no/(total_yes+total_no) - 1.0
 			else:
 				vote_score = 0.0
+			vote_score = round(vote_score, 2)
 			data["vote_score"] = vote_score
 		if free_form_query:
 			print("Need to implement this")
