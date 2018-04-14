@@ -24,9 +24,9 @@ display:inline-block;
 margin-bottom:0;
 }
 }
-.topcorner{
+#bottomcorner{
 position:absolute;
-top:2%;
+float:right;
 right:2%;
 }
 .btn{
