@@ -14,7 +14,18 @@ for x in range(1900,2019):
 	year_lst.append(x)
 
 @irsystem.route('/', methods=['GET'])
+
 def search():
+	def parse_lst_str(lst_str):
+		parsed = []
+		if lst_str:
+			lst_str = lst_str.encode('ascii','ignore')
+			if ';' in lst_str:
+				parsed = lst_str.split(";")
+			for ind in range(0, len(parsed)):
+				parsed[ind] = parsed[ind].lower().strip()
+		return parsed
+
 	output_message = ""
 	data = []
 	movies_json = json.load(open('movies.json'))
@@ -23,6 +34,7 @@ def search():
 	genre_list = [genre['name'] for genre in genres_json['genres']]
 
 	similar = request.args.get('similar')
+
 	genres = request.args.get('genres')
 	duration = request.args.get('duration')
 	release = request.args.get('release')
@@ -35,21 +47,13 @@ def search():
 		data = []
 		output_message = ''
 	else:
-		selected_movies = []
-		if similar:
-			names = []
-			if ';' in similar:
-				names = similar.split(";")
-			for n in names:
-				selected_movies.append(n.lower());
+		selected_movies = parse_lst_str(similar)
 
-		selected_genres = []
-		if genres:
-			g_list = []
-			if ';' in genres:
-				g_list = genres.split(";")
-			for g in g_list:
-				selected_genres.append(g.lower());
+		selected_genres = parse_lst_str(similar)
+
+		selected_crew = parse_lst_str(castCrew)
+
+		selected_keywords = parse_lst_str(keywords)
 
 		data = []
 		movie_dict = dict()
