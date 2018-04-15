@@ -3,7 +3,7 @@ from app.irsystem.models.helpers import *
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter
 from app import app
-import flask
+import flask, os, pickle
 
 @app.route('/', methods=['GET'])
 def render_homepage():
@@ -17,7 +17,26 @@ def search2():
 	# print(app.config['tf_idfs'])
 	query = str(request.args.get('query'))
 	print(query)
-	return str(app.config['tf_idfs'][query.split(' ')[0]])
+	index = build_index(query)
+	results = index_search(query, index, app.config['idfs'], app.config['doc_norms'])
+	print(results)
+	return str(app.config['index'])
+
+def build_index(input_string):
+	tokenizer = TreebankWordTokenizer()
+	tokens = tokenizer.tokenize(input_string.lower())
+	index = dict()
+	for token in tokens:
+		if token in app.config["valid_words"]:
+			# print(filename)
+				#print filename
+			f = open(os.getcwd() + "/app/utils/data/" + token + ".pkl","rb")
+			# print(f)
+			d = pickle.load(f)
+			# print(d)
+			# print(word_id)
+			index[token] = d
+	return index
 
 
 def index_search(query, index, idf, doc_norms):
