@@ -55,6 +55,10 @@ def compute_doc_norms():
   idf = pickle.load(f)
   f.close()
 
+  f = open("inv_index.pkl","rb")
+  inv_index = pickle.load(f)
+  f.close()
+
   print "starting to calculate doc norms of words..."
   start_time = int(time.time())
 
@@ -115,9 +119,9 @@ def compute_doc_norms():
             elif len(word) > 255:
               continue
             # load word pkl file
-            f = open(saved_path + word + ".pkl","r+b")
-            word_dict = pickle.load(f)
-            f.close()
+            # f = open(saved_path + word + ".pkl","r+b")
+            word_dict = inv_index[word]
+            # f.close()
             # calculate tf-idf
             doc_tf = word_dict[comment_id]
             doc_idf = idf[word]

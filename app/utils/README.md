@@ -8,8 +8,10 @@
 
 * ```vectorizer.py``` parses all file of a given directory into one large inverted index file and saves the entire dictionary as a pkl file.
 
-* ```vectorizerv2.py``` parses all files of a given directory into separate pkl files, one per word in the directory ```data/```
+* ```vectorizerv2.py``` parses all files of a given directory into separate pkl files, one per word in the directory ```data/``` DONT USE THIS UNLESS YOU WANT TO FUCK UP YOUR HARD DRIVE
 
 * ```populate_db.py``` parses all files of a given directory into the comments DB, parsing the comments of JSON format and ```INSERT``` it in the DB
+
+* ```tfidf_calculator.py``` calculates tf/idf values. **REQUIRES ```inv_index.pkl```, run ```vectorizer.py``` first** as the pkl file is gitignored!
 
 Generally, the order would be to parse all raw files first using ```parserv2.py``` >> run ```subset_parser.py``` on directory with all parsed files, then a ```vectorizer``` script on the same directory, and also to run ```populate_db.py```
