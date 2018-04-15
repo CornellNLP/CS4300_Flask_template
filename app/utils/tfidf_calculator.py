@@ -23,17 +23,17 @@ def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.95):
    result = {}
    num_docs_doc = open(os.getcwd() + "/n_docs.pkl","rb")
    num_docs = pickle.load(num_docs_doc)
-   print("Num Docs: ", num_docs)
+   #print("Num Docs: ", num_docs)
    for filename in os.listdir(os.getcwd() + "/data"):
    		#print filename
    		f = open(os.getcwd() + "/data/" + filename,"rb")
   		d = pickle.load(f)
   		word_id = list(d)[0]
   		tf = list(d.values())[0]
-  		print("Word_id: ", word_id)
-  		print("Tf: ", tf)
-  		print(d)
-  		print("\n\n\n\n\n\n")
+  		#print("Word_id: ", word_id)
+  		#print("Tf: ", tf)
+  		#print(d)
+  		#print("\n\n\n\n\n\n")
   		result[word_id] = num_docs / tf
 
    result_file = open("idf.pkl","wb")
