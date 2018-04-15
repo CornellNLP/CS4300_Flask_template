@@ -1,38 +1,109 @@
 @media (min-width: 1200px) {
-.container {
-    max-width: 970px;
+    .container {
+        max-width: 970px;
+    }
 }
+
+@media (min-width:400px) {
+    .global-search {
+        padding: 20px 0;
+        text-align: center;
+    }
+    body {
+        padding-top: 15%;
+        padding-bottom: 15px;
+    }
+    .global-search {
+        text-align: center;
+        padding: 10px;
+    }
+    .global-search .form-control {
+        width: 500px;
+    }
+    .global-search * {
+        display: inline-block;
+        margin-bottom: 0;
+    }
 }
-@media (min-width:400px){
-.global-search {
-padding: 20px 0;
-text-align:center;
+
+#bottomcorner {
+    position: absolute;
+    float: right;
+    right: 2%;
 }
-body {
-padding-top: 15%;
-padding-bottom: 15px;
+
+.btn {
+    background-color: #4285F4;
+    border: none
 }
-.global-search {
-text-align:center;
-padding:10px;
+
+.step-links a {
+    color: #4285F4;
 }
-.global-search .form-control {
-width:500px;
+
+#contact-form {
+    max-width: 90%;
+    margin: 0 auto;
 }
-.global-search * {
-display:inline-block;
-margin-bottom:0;
+
+textarea,
+input {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    font-weight: 700;
+    font-family: 'Lato', georgia;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 1);
+    max-width: 90%;
+    padding: 1rem;
+    border: 2px dashed rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    cursor: text;
 }
+
+textarea {
+    text-align: left;
+    /* overflow:hidden; */
+    resize: none;
+    width: 90%;
+    border-color: rgba(255, 255, 255, 0)
 }
-#bottomcorner{
-position:absolute;
-float:right;
-right:2%;
+
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 1);
 }
-.btn{
-background-color: #4285F4;
-border: none
+
+textarea:focus:required:valid {
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
-.step-links a{
-color: #4285F4;
+
+textarea:required:valid {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input {
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:required,
+textarea:required {
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+    border-bottom: 2px dashed rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:required:valid {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input:required:invalid {
+    color: rgba(255, 255, 255, 0.5);
 }
