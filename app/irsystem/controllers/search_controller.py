@@ -4,13 +4,14 @@ from app import reddit
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter, defaultdict
 from app import app
-import flask, os, pickle, json
+from flask import jsonify
+import flask, os, pickle
 
 @app.route('/', methods=['GET'])
 def render_homepage():
 	print("loading homepage")
 	return render_template('search.html')
-
+ 
 
 @app.route('/search', methods=['GET'])
 def search2():
@@ -24,7 +25,7 @@ def search2():
 	# print(test)
 	# print(results)
 	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
-	return str(jsons)
+	return jsonify(jsons)
 
 def build_index(input_string):
 	tokenizer = TreebankWordTokenizer()
