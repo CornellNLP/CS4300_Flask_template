@@ -1,39 +1,74 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="/static/main.css">
+      <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+      <link rel="stylesheet" href="/static/awesomplete.css">
+      <script src="/static/awesomplete.js" async></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+  </head>
     <body>
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
         </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-            
-            <br><br>
-            
+        <h1>FUNDY</h1>
+        <form onsubmit="return validateForm()" class="form-inline global-search">
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <!-- <input id="input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name"> -->
+                <input id="politician_input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name"/>
+                <input id="free_form_input" type="text" name="free_form" class="form-control" placeholder="Free Form Input">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <button type="submit" class="btn btn-secondary"> Go! </button>
         </form>
         <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
+            <div>
+              <h2>{{output_message}}</h2>
+            </div>
         </form>
+        {% if data %}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('tweets')">
+                        Tweets
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('votes')">
+                        Votes
+                    </div>
+                    <h2>{{ data["vote_score" ]}}</h2>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="metric-box" onclick="showPopup('donations')">
+                        Donations
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <br>
+            <div class="info-popup" id="donations">
+                <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
+                {% for don in data["donations"]["sample"] %}
+                    <p><b>{{ don["DonorOrganization"] }}:</b> ${{ don["TransactionAmount"] }}</p>
+                {% endfor %}
+            </div>
+            <div class="info-popup" id="tweets">
+                <h4>Sample Tweet Data</h4>
+                <p>{{ data["tweets"] }}</p>
+            </div>
+            <div class="info-popup" id="votes">
+                <h4>Sample Vote Data</h4>
+                <p>{{ data["votes" ]}}</p>
+            </div>
+        {% endif %}
+        <script src="/static/main.js"></script>
+        <!-- needs to be at the end so everything has loaded -->
     </body>
 
 </html>
