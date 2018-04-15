@@ -1,7 +1,7 @@
 import os
 from pymongo import MongoClient
 
-uri = os.environ['DATABASE_URL']
+uri = 'mongodb://fundyAdmin:Fundy4300@18.221.254.87/admin'
 client = MongoClient(uri)
 db = client.fundy
 
@@ -13,6 +13,9 @@ def get_tweets_by_politician(politician_name):
 
 def get_votes_by_politician(politician_name):
     return db.votes.find({"vote.positions.PoliticianName":politician_name})
+
+def get_co_occurrence(word):
+	return db.co_occurrence.find_one({"word":word})
 
 # Run once to optimize querying by politician name (turns key into index)
 def create_indexes():
