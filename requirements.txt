@@ -45,6 +45,7 @@ pytz==2016.4
 redis==2.10.5
 requests==2.13.0
 scikit-learn==0.18.1
+scipy==1.0.1
 six==1.10.0
 SQLAlchemy==1.0.13
 virtualenv==15.1.0
