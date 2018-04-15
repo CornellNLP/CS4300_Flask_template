@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import os, json
-from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician
+from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician, get_co_occurrence
 from empath import Empath
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.tokenize import TweetTokenizer
@@ -66,10 +66,10 @@ def tokenizer_custom(tweet):
 
     return tokens
 
-#return (top tweet indices, top tweet scores)
-def process_tweets(politician, query):
+#return (top n tweet indices, n top tweet scores)
+def process_tweets(politician, query, n):
 	tweets = get_tweets_by_politician(politician)
-	vocab = json.load((open("vocab.json", 'r')))
+	vocab = json.load((open("app/irsystem/models/vocab.json", 'r')))
 	query_tokens = tokenizer_custom(query)
     
     #check query validity before proceeding
@@ -88,7 +88,9 @@ def process_tweets(politician, query):
     	#build vector from postings
 		postings = get_co_occurrence(token)
 		vectorized = np.zeros(len(vocab))
-		for idx, score in postings:
+		for post_obj in postings['postings']:
+			idx = post_obj['index']
+			score = post_obj['score']
 			vectorized[idx] = score
 		vec_norm = normalize(vectorized, 'l1')
 		acc = acc * vec_norm
@@ -101,8 +103,8 @@ def process_tweets(politician, query):
 
     #determine top matches
 	doc_scores = np.matmul(word_counts, arr).T
-	top_docs = list(np.argsort(-1*doc_scores))
-	top_scores = list(-1*np.sort(-1*doc_scores))
+	top_docs = list(np.asarray(np.argsort(-1*doc_scores)))[0][:n]
+	top_scores = list(np.asarray(-1*np.sort(-1*doc_scores)))[0][:n]
 
     #turn tweet indices into actual tweets
 	tweet_lst = []
@@ -149,9 +151,8 @@ def search():
 				}
 				data["donations"] = don_data
 
-			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query)
+			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
 			#return top 5 for now
-			top_tweets = top_tweets[:min(5, len(top_tweets))]
 			if len(top_tweets) != 0:
 				for tweet in top_tweets:
 					data["tweets"].append(tweet)
