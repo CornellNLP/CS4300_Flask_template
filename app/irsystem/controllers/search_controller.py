@@ -1,9 +1,10 @@
 from . import *
 from app.irsystem.models.helpers import *
+from app import reddit
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter
 from app import app
-import flask, os, pickle
+import flask, os, pickle, json
 
 @app.route('/', methods=['GET'])
 def render_homepage():
@@ -38,6 +39,24 @@ def build_index(input_string):
 			index[token] = d
 	return index
 
+def get_reddit_comment_as_json(id):
+  """
+  Given a comment id, queries reddit API for the info and
+  returns a json comment containing the body, author,
+  score, upvotes/downvotes, subreddit, its permalink and
+  the number of gilds it has
+  """
+  comment = reddit.comment(id=id)
+  comment_json = {}
+  comment_json["body"] = comment.body
+  comment_json["author"] = comment.author
+  comment_json["score"] = comment.score
+  comment_json["ups"] = comment.ups
+  comment_json["downs"] = comment.downs
+  comment_json["subreddit"] = comment.subreddit_name_prefixed
+  comment_json["permalink"] = comment.permalink
+  comment_json["gilded"] = comment.gilded
+  return json.dumps(comment_json)
 
 def index_search(query, index, idf, doc_norms):
     """ Search the collection of documents for the given query

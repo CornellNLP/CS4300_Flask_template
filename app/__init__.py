@@ -1,3 +1,4 @@
+import praw
 # Gevent needed for sockets
 from gevent import monkey
 monkey.patch_all()
@@ -16,6 +17,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # DB
 db = SQLAlchemy(app)
+
+#reddit obj
+reddit = praw.Reddit(user_agent='comment_query', client_id='WsGOFsPaaGtYVQ', client_secret="qPogCXpTh1wZylbQqES6JY04PVw")
 
 # Import + Register Blueprints
 from app.irsystem import irsystem as irsystem
