@@ -122,10 +122,10 @@ def search():
 	data = None
 	if not politician_query or not free_form_query: # no input
 		output_message = 'Please provide an input'
-		return render_template('search.html', 
-				name=project_name, 
-				netid=net_id, 
-				output_message=output_message, 
+		return render_template('search.html',
+				name=project_name,
+				netid=net_id,
+				output_message=output_message,
 				data=data,
 		)
 	else:
@@ -136,6 +136,7 @@ def search():
 			"donations": [],
 			"tweets": [],
 			"votes": [],
+			"vote_score": 0.0
 		}
 		if politician_query:
 			#Get empath categories for free form query
@@ -162,9 +163,10 @@ def search():
 				vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
 				intersect = False
 				#Determine if query and vote have similar topics
-				for category in vote_categories:
-					if vote_categories[category] > 0 and issues_categories[category] > 0:
-						intersect = True
+				if vote_categories:
+					for category in vote_categories:
+						if vote_categories[category] > 0 and issues_categories[category] > 0:
+							intersect = True
 				#If query and vote have similar topics, add the vote to vote data
 				if intersect:
 					description = vote["vote"]["description"]
@@ -173,12 +175,30 @@ def search():
 						if position["PoliticianName"] == politician_query:
 							politician_vote = position["vote_position"]
 							break
-					data["votes"].append({"description":description, "vote_position":politician_vote})
+					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
+						data["votes"].append({"description":description, "vote_position":politician_vote})
+			#Do basic scoring system where score is > 0 if votes yes more often and < 0 if votes no more often
+			total_yes = 0
+			total_no = 0
+			if len(data["votes"]) > 0:
+				for vote in data["votes"]:
+					if vote["vote_position"] == "Yes":
+						total_yes += 1
+					elif vote["vote_position"] == "No":
+						total_no += 1
+			if total_yes > total_no:
+				vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
+			elif total_no > total_yes:
+				vote_score = 2.0*total_no/(total_yes+total_no) - 1.0
+			else:
+				vote_score = 0.0
+			vote_score = round(vote_score, 2)
+			data["vote_score"] = vote_score
 		if free_form_query:
 			print("Need to implement this")
-		return render_template('search.html', 
-				name=project_name, 
-				netid=net_id, 
-				output_message=output_message, 
+		return render_template('search.html',
+				name=project_name,
+				netid=net_id,
+				output_message=output_message,
 				data=data,
 		)
