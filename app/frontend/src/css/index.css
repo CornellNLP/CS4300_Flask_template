@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 body {
   margin: 0;
   padding: 0;
@@ -18,11 +20,25 @@ input[type=submit]{
 	border: solid 1px;
 	background-color: #f1f1f1;
 	border-radius: 2px;
+	font-family: Roboto;
+}
+
+input[type=submit]:hover{
+	background-color: #e4e4e4;
 }
 
 label{
 	display: block;
-	padding-top: 20%;
+	padding-top: 5%;
 	margin: 0 auto;
 	width: 50%;
+}
+
+.title{
+	font-size: 100px;
+	text-align: center;
+	padding-right: 10%;
+	font-family: Roboto;
+	font-weight: bold;
+	color: #5f99cf;
 }

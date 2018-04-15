@@ -15,7 +15,11 @@ class Home extends Component {
 
 	handleSubmit(event){
 		//putting an alert for now, should instead send api request on submit
-		alert('Your search was: ' + this.state.value);
+		if (this.state.value == ""){
+			alert('Empty Search Query');
+		}else{
+			alert('Your search was: ' + this.state.value);
+		}
 		event.preventDefault();
 	}
 
@@ -25,6 +29,7 @@ class Home extends Component {
 	    return (
 	      <form onSubmit = {this.handleSubmit}>
 	      	<label>
+	      		<p class = "title">LEARNDDIT</p>
 	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
 	      		<input type="submit" value="Search"/>
 	      	</label>
