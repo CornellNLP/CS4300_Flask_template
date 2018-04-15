@@ -40,7 +40,8 @@
                     {% if genre_list %}
                         {% for g in genre_list %}
                             <option value='{{g}}'>
-                        {% endfor %
+                        {% endfor %}
+                    {% endif %}
               </div>
             </div>
             <div class="form-row">
@@ -95,7 +96,7 @@
           </form>
         </div>
         <form class="form-inline global-search">
-        {% if data %}
+                {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}
                 <br><br>
@@ -103,23 +104,47 @@
                 <br>
                 <p>Similarity: {{d['similarity']}}%</p>
                 <br>
-                <img src={{d['poster']}} alt={{d['title']}} style="height:200px;">
+                <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>
-                <p>Synopsis: {{d['overview']}}</p>
+                <p>Synopsis: {{d['summary']}}</p>
                 <br>
-                <p>Genres: {{d['genres']}}</p>
+                <p>Genres:
+                {% for g in d['genres'][:-1] %}
+                    {{g}}, 
+                {% endfor %}
+                {{d['genres'][-1]}}
+                </p>
                 <br>
                 <p>Duration: {{d['runtime']}} min</p>
                 <br>
                 <p>Release Date: {{d['release_date']}}</p>
                 <br>
-                <p>User Score: {{d['vote_average']}}/10.0</p>
+                <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
                 <br>
-                <p>Cast: TBD</p>
+                <p>Cast:
                 <br>
-                <p>{% if d['homepage']: %}
-                        Homepage: <a href ={{d['homepage']}}>Link</a>
-                    {% endif %}
+                <small>
+                {% for c in d['cast'] %}
+                    {{c['name']}} as {{c['character']}}
+                    <br>
+                {% endfor %}
+                </small>
+                </p>
+                <br>
+                <p>Crew:
+                <br>
+                <small>
+                {% for c in d['crew'] %}
+                    {{c['job']}}: {{c['name']}}
+                    <br>
+                {% endfor %}
+                </small>
+                </p>
+                <br>
+                <p>
+                {% if d['homepage']: %}
+                    Homepage: <a href ={{d['homepage']}}>Link</a>
+                {% endif %}
                 </p>
             {% endfor %}
         {% endif %}

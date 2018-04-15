@@ -21,93 +21,93 @@ for x in range(1900,2019):
 @irsystem.route('/', methods=['GET'])
 
 def search():
-	def parse_lst_str(lst_str):
-		parsed = []
-		if lst_str:
-			lst_str = lst_str.encode('ascii','ignore')
-			if ';' in lst_str:
-				parsed = lst_str.split(";")
-			for ind in range(0, len(parsed)):
-				parsed[ind] = parsed[ind].lower().strip()
-		return parsed
+    def parse_lst_str(lst_str):
+        parsed = []
+        if lst_str:
+            lst_str = lst_str.encode('ascii','ignore')
+            if ';' in lst_str:
+                parsed = lst_str.split(";")
+            for ind in range(0, len(parsed)):
+                parsed[ind] = parsed[ind].lower().strip()
+        return parsed
 
-	output_message = ""
-	data = []
-	movies_json = json.load(open('movies.json'))
-	genres_json = json.load(open('genres.json'))
-	movie_list = [movie['title'] for movie in movies_json]
-	genre_list = [genre['name'] for genre in genres_json['genres']]
+    output_message = ""
+    data = []
+    movies_json = json.load(open('app/static/data/movies.json'))
+    genres_json = json.load(open('genres.json'))
+    movie_list = [movie['title'] for movie in movies_json]
+    genre_list = [genre['name'] for genre in genres_json['genres']]
 
-	similar = request.args.get('similar')
+    similar = request.args.get('similar')
 
-	genres = request.args.get('genres')
-	release = request.args.get('release')
-	acclaim = request.args.get('acclaim')
-	castCrew = request.args.get('castCrew')
-	keywords = request.args.get('keywords')
-	duration = request.args.get('duration')
-	year_range = [request.args.get('year_start'), request.args.get('year_end')]
-	query = [similar, genres, duration, release, acclaim, castCrew, keywords]
-	if not query[0] and not query[1] and not query[2] and not query[3] and not query[4] and not query[5] and not query[6]:
-		data = []
-		output_message = ''
-	else:
-		selected_movies = parse_lst_str(similar)
+    genres = request.args.get('genres')
+    release = request.args.get('release')
+    acclaim = request.args.get('acclaim')
+    castCrew = request.args.get('castCrew')
+    keywords = request.args.get('keywords')
+    duration = request.args.get('duration')
+    year_range = [request.args.get('year_start'), request.args.get('year_end')]
+    query = [similar, genres, duration, release, acclaim, castCrew, keywords]
+    if not query[0] and not query[1] and not query[2] and not query[3] and not query[4] and not query[5] and not query[6]:
+        data = []
+        output_message = ''
+    else:
+        selected_movies = parse_lst_str(similar)
 
-		selected_genres = parse_lst_str(similar)
+        selected_genres = parse_lst_str(similar)
 
-		selected_crew = parse_lst_str(castCrew)
+        selected_crew = parse_lst_str(castCrew)
 
-		selected_keywords = parse_lst_str(keywords)
+        selected_keywords = parse_lst_str(keywords)
 
-		data = []
-		movie_dict = dict()
-		score_dict = dict()
+        data = []
+        movie_dict = dict()
+        score_dict = dict()
 
-		for movie in movies_json:
-			movie_dict[movie['id']] = movie
-			score_dict[movie['id']] = 0.0
-
-
-		# modify movie_dict and score_dict to account for the "duration" user input
-		# assuming duration is in the form "90-180" rather than "180 - 90"
-		if duration:
-			movie_dict,score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
-		if release:
-			movie_dict,score_dict = user_release.main(movie_dict,score_dict,release,4,0)
-
-		for movie in score_dict:
+        for movie in movies_json:
+            movie_dict[movie['id']] = json.load(open('app/static/data/movies/' + movie['id'] + '.json'))
+            score_dict[movie['id']] = 0.0
 
 
-			#if duration and movie_dict[movie]['runtime'] == int(duration):
-				#score_dict[movie] += 10.0
+        # modify movie_dict and score_dict to account for the "duration" user input
+        # assuming duration is in the form "90-180" rather than "180 - 90"
+        if duration:
+            movie_dict,score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
+        if release:
+            movie_dict,score_dict = user_release.main(movie_dict,score_dict,release,4,0)
 
-			if genres and genres in set(movie_dict[movie]['genres']):
-				score_dict[movie] += 20.0
-			if acclaim == "yes":
-				if movie_dict[movie]['vote_average'] > 7.0:
-					score_dict[movie] += movie_dict[movie]['vote_average'] + 10.0
-				if movie_dict[movie]['vote_average'] < 7.0:
-					score_dict[movie] -= 100.0
+        for movie in score_dict:
 
-		sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:20]
 
-		for movie_tuple in sorted_score_dict:
-			movie_id, movie_score = movie_tuple
-			movie_dict[movie_id]['similarity'] = movie_score
-			movie_dict[movie_id]['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
-			data.append(movie_dict[movie_id])
+            #if duration and movie_dict[movie]['runtime'] == int(duration):
+                #score_dict[movie] += 10.0
 
-		output_message = "Your search has been processed."
-			# rec0 = movies_json[randint(0, len(movie_list) - 1)]
-			# rec0['similarity'] = 95.6
-			# rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
-			# rec1 = movies_json[randint(0, len(movie_list) - 1)]
-			# rec1['similarity'] = 87.2
-			# rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
-			# rec2 = movies_json[randint(0, len(movie_list) - 1)]
-			# rec2['similarity'] = 75.6
-			# rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
+            if genres and genres in set(movie_dict[movie]['genres']):
+                score_dict[movie] += 20.0
+            if acclaim == "yes":
+                if movie_dict[movie]['tmdb_score_value'] > 7.0:
+                    score_dict[movie] += movie_dict[movie]['tmdb_score_value'] + 10.0
+                if movie_dict[movie]['tmdb_score_value'] < 7.0:
+                    score_dict[movie] -= 100.0
 
-			# data = [rec0, rec1, rec2]
-	return render_template('search.html', name=project_name, netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, year_list= year_lst)
+        sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:20]
+
+        for movie_tuple in sorted_score_dict:
+            movie_id, movie_score = movie_tuple
+            movie_dict[movie_id]['similarity'] = movie_score
+            movie_dict[movie_id]['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+            data.append(movie_dict[movie_id])
+
+        output_message = "Your search has been processed."
+            # rec0 = movies_json[randint(0, len(movie_list) - 1)]
+            # rec0['similarity'] = 95.6
+            # rec0['poster'] = 'https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg'
+            # rec1 = movies_json[randint(0, len(movie_list) - 1)]
+            # rec1['similarity'] = 87.2
+            # rec1['poster'] = 'https://image.tmdb.org/t/p/w1280/ylXCdC106IKiarftHkcacasaAcb.jpg'
+            # rec2 = movies_json[randint(0, len(movie_list) - 1)]
+            # rec2['similarity'] = 75.6
+            # rec2['poster'] = 'https://image.tmdb.org/t/p/w1280/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg'
+
+            # data = [rec0, rec1, rec2]
+    return render_template('search.html', netids=net_ids, output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, year_list= year_lst)
