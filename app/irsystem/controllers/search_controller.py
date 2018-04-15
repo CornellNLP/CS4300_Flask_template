@@ -36,11 +36,11 @@ def search():
 	similar = request.args.get('similar')
 
 	genres = request.args.get('genres')
-	duration = request.args.get('duration')
 	release = request.args.get('release')
 	acclaim = request.args.get('acclaim')
 	castCrew = request.args.get('castCrew')
 	keywords = request.args.get('keywords')
+	duration = request.args.get('duration')
 	year_range = [request.args.get('year_start'), request.args.get('year_end')]
 	query = [similar, genres, duration, release, acclaim, castCrew, keywords]
 	if not query[0] and not query[1] and not query[2] and not query[3] and not query[4] and not query[5] and not query[6]:

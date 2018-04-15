@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/static/main.css">
         <style>
           body {
-            background-color: gray;
+            background-color: #f9dbe7;
           }
           </style>
     </head>
@@ -15,33 +15,16 @@
       font-family: BeautySchool;
       src: url('static/beautyschooldropout.ttf');
     }
-
-    .
     </style>
 
     <body>
-
-        <div class="topcorner">
-            <h1>Project Name: {{ name }}</h1>
-            {% if netids %}
-                {% for nid in netids %}
-                    <h3>{{ nid }}</h3>
-                {% endfor %}
-            {% endif %}
-
-        </div>
-
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:BeautySchool;">
-                <img style="margin-left: -7%; max-width: 200%" src= "/static/logo.png" alt="CinemaPop">
-            </h1>
-
-            <br><br>
-
-            Similar Movies:
-            <br>
-            <div class="form-group" id="movie_selector">
-                <input id="similar_movies" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie name">
+        <div class="logo_band">
+          <img class="logo" src= "/static/logo_white.png" alt="CinemaPop"></img>
+          <form class="global-search" style="width: 100%">
+            <div class="form-row ">
+              <div class="form-group col-md-6">
+                <label class="tags center">Similar Movies (separated by semicolons)</label>
+                <input id="similar_movies" class="form-control center" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
                 <datalist id="movie_list">
                     {% if movie_list %}
                         {% for m in movie_list %}
@@ -49,12 +32,10 @@
                         {% endfor %}
                     {% endif %}
                 </datalist>
-            </div>
-            <br><br>
-            Genres:
-            <br>
-            <div class="form-group" style="padding-left: 80px;">
-                <input id="select_genres" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action, History, etc.">
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Genres (separated by semicolons)</label>
+                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
                 <datalist id="genre_list">
                     {% if genre_list %}
                         {% for g in genre_list %}
@@ -62,53 +43,59 @@
                         {% endfor %}
                     {% endif %}
                 </datalist>
+              </div>
             </div>
-            <br><br>
-            Duration (in minutes; range separated by dash):
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="tags center">Cast/Crew (separated by semicolons): </label>
+                <input id="input" type="text" class="form-control center" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Keywords (separated by semicolons)</label>
+                <input id="input" type="text" class="form-control center" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Duration (in minutes):</label>
+                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)">
+                  <!-- <input name= "duration_start" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="Start" style="width:25%" maxlength="3">
+                  <input name= "duration_end" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="End" style="width:25%" maxlength="3"> -->
+              </div>
+              <div class="form-group col-md-6 center">
+                <div class="form-row">
+                  <label class="tags">Range of Release Years:</label>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input name="year_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input name= "year_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4">
+                  </div>
+                </div>
+              </div>
+              <datalist id="year_list">
+                  {% if year_list %}
+                      {% for m in year_list %}
+                          <option value='{{m}}'>
+                      {% endfor %}
+                  {% endif %}
+              </datalist>
+            </div>
+            <label class="tags center">Acclaim:</label>
+            <div class="form-check center">
+                <input class="form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+            </div>
+            <div class="form-check center">
+              <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+            </div>
             <br>
-            <div class="form-group">
-                <!-- <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200"> -->
-                <input name= "duration_start" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="Start" style="width:25%" maxlength="3">
-                <input name= "duration_end" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="End" style="width:25%" maxlength="3">
+            <div class="form-group center">
+              <button type="submit" class="btn btn-info"> Get Recommendations </button>
             </div>
-            <br><br>
-            Range of Release Years:
-            <br>
-            <div class="form-group form-inline">
-                <input name= "year_start" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="Start" style="width:25%" maxlength="4">
-                <input name= "year_end" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="End" style="width:25%" maxlength="4">
-                <datalist id="year_list">
-                    {% if year_list %}
-                        {% for m in year_list %}
-                            <option value='{{m}}'>
-                        {% endfor %}
-                    {% endif %}
-                </datalist>
-                <br>
-            </div>
-            </div>
-            <br><br>
-            Acclaim:
-            <br>
-            <div class="form-group">
-                <input type="radio" name="acclaim" value="yes" checked> Yes<br>
-                <input type="radio" name="acclaim" value="no"> No<br>
-            </div>
-            <br><br>
-            Cast/Crew (separated by commas):
-            <br>
-            <div class="form-group">
-                <input id="input" type="text" name="castCrew" class="form-control" placeholder="Your Input">
-            </div>
-            <br><br>
-            Keywords (separated by commas):
-            <br>
-            <div class="form-group">
-                <input id="input" type="text" name="keywords" class="form-control" placeholder="Your Input">
-            </div>
-            <br><br>
-            <button type="submit" class="btn btn-info"> Get Recommendations </button>
-        </form>
+          </form>
+        </div>
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
