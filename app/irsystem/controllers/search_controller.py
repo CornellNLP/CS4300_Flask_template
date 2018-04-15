@@ -4,7 +4,8 @@ from app import reddit
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter
 from app import app
-import flask, os, pickle, json
+from flask import jsonify
+import flask, os, pickle
 
 @app.route('/', methods=['GET'])
 def render_homepage():
@@ -14,14 +15,15 @@ def render_homepage():
 
 @app.route('/search', methods=['GET'])
 def search2():
-	print('searching:')
-	# print(app.config['tf_idfs'])
-	query = str(request.args.get('query'))
-	print(query)
-	index = build_index(query)
-	results = index_search(query, index, app.config['idfs'], app.config['doc_norms'])
-	print(results)
-	return str(app.config['index'])
+  print('searching:')
+  # print(app.config['tf_idfs'])
+  query = str(request.args.get('query'))
+  print(query)
+  index = build_index(query)
+  results = index_search(query, index, app.config['idfs'], app.config['doc_norms'])
+  print(results)
+  comments = [get_reddit_comment(result) for result in results]
+  return jsonify(comments)
 
 def build_index(input_string):
 	tokenizer = TreebankWordTokenizer()
@@ -39,10 +41,10 @@ def build_index(input_string):
 			index[token] = d
 	return index
 
-def get_reddit_comment_as_json(id):
+def get_reddit_comment(id):
   """
   Given a comment id, queries reddit API for the info and
-  returns a json comment containing the body, author,
+  returns a dictionary comment containing the body, author,
   score, upvotes/downvotes, subreddit, its permalink and
   the number of gilds it has
   """
@@ -56,7 +58,7 @@ def get_reddit_comment_as_json(id):
   comment_json["subreddit"] = comment.subreddit_name_prefixed
   comment_json["permalink"] = comment.permalink
   comment_json["gilded"] = comment.gilded
-  return json.dumps(comment_json)
+  return comment_json
 
 def index_search(query, index, idf, doc_norms):
     """ Search the collection of documents for the given query
