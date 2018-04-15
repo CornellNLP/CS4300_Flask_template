@@ -2,19 +2,22 @@ from . import *
 from app.irsystem.models.helpers import *
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter
+from app import app
+import flask
+
+@app.route('/', methods=['GET'])
+def render_homepage():
+	print("loading homepage")
+	return render_template('search.html')
 
 
-@irsystem.route('/', methods=['GET'])
-def search():
-    query = request.args.get('search')
-    if not query:
-        data = []
-        output_message = ''
-    else:
-        output_message = "Your search: " + query
-        data = range(5)
-    # return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-    return "hello"
+@app.route('/search', methods=['GET'])
+def search2():
+	print('searching:')
+	# print(app.config['tf_idfs'])
+	query = str(request.args.get('query'))
+	print(query)
+	return app.config['tf_idfs'][query.split(' ')[0]]
 
 
 def index_search(query, index, idf, doc_norms):
