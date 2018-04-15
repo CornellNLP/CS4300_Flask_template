@@ -10,6 +10,7 @@ from nltk.stem import PorterStemmer
 import re
 import numpy as np
 from sklearn.preprocessing import normalize
+from scipy.sparse import *
 
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
@@ -83,7 +84,7 @@ def process_tweets(politician, query, n):
 		return ([],[])
 
     #dot query arrays
-	acc = np.ones(len(vocab))
+	acc = csr_matrix(np.ones(len(vocab)))
 	for token in query_tokens:
     	#build vector from postings
 		postings = get_co_occurrence(token)
@@ -92,17 +93,19 @@ def process_tweets(politician, query, n):
 			idx = post_obj['index']
 			score = post_obj['score']
 			vectorized[idx] = score
+		vectorized = csr_matrix(vectorized)
 		vec_norm = normalize(vectorized, 'l1')
-		acc = acc * vec_norm
-	arr = acc.T
+		acc = acc.multiply(vec_norm)
+	arr = acc.transpose()
 
     #vectorize politician tweets
 	just_tweets = [tweet['tweet_text'] for tweet in tweets]
 	vectorizer = CountVectorizer(vocabulary = vocab, tokenizer = tokenizer_custom)
-	word_counts = vectorizer.fit_transform(just_tweets).todense()
+	word_counts = vectorizer.fit_transform(just_tweets)
 
     #determine top matches
-	doc_scores = np.matmul(word_counts, arr).T
+	doc_scores = (word_counts*arr).transpose()
+	doc_scores = doc_scores.todense()
 	top_docs = list(np.asarray(np.argsort(-1*doc_scores)))[0][:n]
 	top_scores = list(np.asarray(-1*np.sort(-1*doc_scores)))[0][:n]
 
