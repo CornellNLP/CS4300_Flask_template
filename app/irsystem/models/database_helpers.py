@@ -16,6 +16,7 @@ def get_votes_by_politician(politician_name):
 
 # Run once to optimize querying by politician name (turns key into index)
 def create_indexes():
-    db.donations.create_index("PoliticianName")
-    db.tweets.create_index("PoliticianName")
-    print(db.votes.create_index("vote.positions.PoliticianName"))
+    db.co_occurence.create_index("word")
+    # db.donation.create_index("PoliticianName")
+    # db.tweets.create_index("PoliticianName")
+    # print(db.votes.create_index("vote.positions.PoliticianName"))

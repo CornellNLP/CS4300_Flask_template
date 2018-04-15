@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import os, json
-from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician
+from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician, create_indexes
 from empath import Empath
 
 project_name = "Fundy"
@@ -48,10 +48,10 @@ def search():
 	data = None
 	if not politician_query or not free_form_query: # no input
 		output_message = 'Please provide an input'
-		return render_template('search.html', 
-				name=project_name, 
-				netid=net_id, 
-				output_message=output_message, 
+		return render_template('search.html',
+				name=project_name,
+				netid=net_id,
+				output_message=output_message,
 				data=data,
 		)
 	else:
@@ -85,9 +85,10 @@ def search():
 				vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
 				intersect = False
 				#Determine if query and vote have similar topics
-				for category in vote_categories:
-					if vote_categories[category] > 0 and issues_categories[category] > 0:
-						intersect = True
+				if vote_categories:
+					for category in vote_categories:
+						if vote_categories[category] > 0 and issues_categories[category] > 0:
+							intersect = True
 				#If query and vote have similar topics, add the vote to vote data
 				if intersect:
 					description = vote["vote"]["description"]
@@ -117,9 +118,9 @@ def search():
 			data["vote_score"] = vote_score
 		if free_form_query:
 			print("Need to implement this")
-		return render_template('search.html', 
-				name=project_name, 
-				netid=net_id, 
-				output_message=output_message, 
+		return render_template('search.html',
+				name=project_name,
+				netid=net_id,
+				output_message=output_message,
 				data=data,
 		)
