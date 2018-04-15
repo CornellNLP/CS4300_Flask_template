@@ -2,10 +2,6 @@
 Vd600zar
 p1
 I1
-s.(dp0
-Vd600zar
-p1
-I1
 sVdna64oh
 p2
 I1

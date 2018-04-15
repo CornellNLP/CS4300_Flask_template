@@ -2,10 +2,6 @@
 Vde8tx9v
 p1
 I1
-s.(dp0
-Vde8tx9v
-p1
-I1
 sVdolssux
 p2
 I1

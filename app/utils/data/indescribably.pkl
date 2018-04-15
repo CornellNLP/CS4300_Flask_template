@@ -2,10 +2,6 @@
 Vdb4s4ap
 p1
 I1
-s.(dp0
-Vdb4s4ap
-p1
-I1
 sVdtigxy6
 p2
 I1

@@ -2,10 +2,6 @@
 Vd80u5ou
 p1
 I1
-s.(dp0
-Vd80u5ou
-p1
-I1
 sVdercnt2
 p2
 I1

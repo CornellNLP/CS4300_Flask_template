@@ -1,8 +1,4 @@
 (dp0
-Vdb80qat
-p1
-I1
-s.(dp0
 Vdnsnwrl
 p1
 I1

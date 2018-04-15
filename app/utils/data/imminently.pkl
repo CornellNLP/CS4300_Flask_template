@@ -2,10 +2,6 @@
 Vd90q32j
 p1
 I1
-s.(dp0
-Vd90q32j
-p1
-I1
 sVddtfzip
 p2
 I1

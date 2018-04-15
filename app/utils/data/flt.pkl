@@ -1,16 +1,8 @@
 (dp0
-Vd5f12nc
-p1
-I1
-s.(dp0
-Vd5f12nc
-p1
-I2
-s.(dp0
 Vd78ggyi
 p1
 I1
 sVd5f12nc
 p2
-I1
+I2
 s.

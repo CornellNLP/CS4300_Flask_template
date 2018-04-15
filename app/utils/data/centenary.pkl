@@ -2,10 +2,6 @@
 Vddcp9bk
 p1
 I1
-s.(dp0
-Vddcp9bk
-p1
-I1
 sVdesglal
 p2
 I1

@@ -2,10 +2,6 @@
 Vczm9gtk
 p1
 I1
-s.(dp0
-Vczm9gtk
-p1
-I1
 sVdj0s96t
 p2
 I1

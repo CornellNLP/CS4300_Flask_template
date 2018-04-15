@@ -2,10 +2,6 @@
 Vd0ipcaf
 p1
 I1
-s.(dp0
-Vd0ipcaf
-p1
-I1
 sVd1wdkka
 p2
 I1

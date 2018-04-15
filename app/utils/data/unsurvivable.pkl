@@ -2,10 +2,6 @@
 Vd25wc5a
 p1
 I1
-s.(dp0
-Vd25wc5a
-p1
-I1
 sVd686m91
 p2
 I1

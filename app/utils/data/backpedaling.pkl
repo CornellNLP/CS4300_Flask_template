@@ -2,10 +2,6 @@
 Vd4m10u5
 p1
 I1
-s.(dp0
-Vd4m10u5
-p1
-I1
 sVd5qv225
 p2
 I1

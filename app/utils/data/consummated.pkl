@@ -2,10 +2,6 @@
 Vd20i8vm
 p1
 I1
-s.(dp0
-Vd20i8vm
-p1
-I1
 sVdirs3sx
 p2
 I1

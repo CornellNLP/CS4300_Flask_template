@@ -1,8 +1,4 @@
 (dp0
-Vd30v5go
-p1
-I1
-s.(dp0
 Vdtb482x
 p1
 I1

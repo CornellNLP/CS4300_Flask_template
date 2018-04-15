@@ -1,15 +1,7 @@
 (dp0
 Vdd728cw
 p1
-I1
-s.(dp0
-Vdd728cw
-p1
 I2
-s.(dp0
-Vdd728cw
-p1
-I1
 sVdihs6ma
 p2
 I1

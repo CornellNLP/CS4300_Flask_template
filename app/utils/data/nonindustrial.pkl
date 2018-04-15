@@ -2,10 +2,6 @@
 Vczrltbl
 p1
 I1
-s.(dp0
-Vczrltbl
-p1
-I1
 sVd59ab06
 p2
 I1

@@ -2,10 +2,6 @@
 Vdficm05
 p1
 I1
-s.(dp0
-Vdficm05
-p1
-I1
 sVdp7obpi
 p2
 I1

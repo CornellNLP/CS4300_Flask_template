@@ -2,10 +2,6 @@
 Vd315iq2
 p1
 I1
-s.(dp0
-Vd315iq2
-p1
-I1
 sVdghe13e
 p2
 I1

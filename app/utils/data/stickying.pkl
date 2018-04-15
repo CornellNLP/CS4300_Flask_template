@@ -2,10 +2,6 @@
 Vd485jer
 p1
 I1
-s.(dp0
-Vd485jer
-p1
-I1
 sVd4970z6
 p2
 I1

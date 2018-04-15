@@ -2,10 +2,6 @@
 Vd14pl28
 p1
 I1
-s.(dp0
-Vd14pl28
-p1
-I1
 sVd6nqk9r
 p2
 I1

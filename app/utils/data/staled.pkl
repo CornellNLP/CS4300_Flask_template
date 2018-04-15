@@ -2,10 +2,6 @@
 Vdb9qle8
 p1
 I1
-s.(dp0
-Vdb9qle8
-p1
-I1
 sVdc8wk81
 p2
 I1

@@ -2,10 +2,6 @@
 Vdc40ppm
 p1
 I1
-s.(dp0
-Vdc40ppm
-p1
-I1
 sVdpzzr6a
 p2
 I1

@@ -2,10 +2,6 @@
 Vd2aobgr
 p1
 I1
-s.(dp0
-Vd2aobgr
-p1
-I1
 sVdhedes9
 p2
 I1

@@ -1,15 +1,7 @@
 (dp0
 Vd19xpot
 p1
-I1
-s.(dp0
-Vd19xpot
-p1
 I2
-s.(dp0
-Vd19xpot
-p1
-I1
 sVdkqk0rf
 p2
 I1

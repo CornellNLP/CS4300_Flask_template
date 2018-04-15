@@ -1,8 +1,4 @@
 (dp0
-Vdbyi1bc
-p1
-I1
-s.(dp0
 Vdnv55oh
 p1
 I1

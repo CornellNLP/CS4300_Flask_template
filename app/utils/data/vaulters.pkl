@@ -2,10 +2,6 @@
 Vdc2038s
 p1
 I1
-s.(dp0
-Vdc2038s
-p1
-I1
 sVdhbjmcm
 p2
 I1

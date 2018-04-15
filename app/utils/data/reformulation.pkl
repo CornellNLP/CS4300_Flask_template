@@ -2,10 +2,6 @@
 Vdcct7rx
 p1
 I1
-s.(dp0
-Vdcct7rx
-p1
-I1
 sVdgerapr
 p2
 I1

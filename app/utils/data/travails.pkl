@@ -2,10 +2,6 @@
 Vd489vc1
 p1
 I1
-s.(dp0
-Vd489vc1
-p1
-I1
 sVdronmzq
 p2
 I1

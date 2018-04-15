@@ -1,8 +1,4 @@
 (dp0
-Vdi83isn
-p1
-I1
-s.(dp0
 Vdmimxcu
 p1
 I1

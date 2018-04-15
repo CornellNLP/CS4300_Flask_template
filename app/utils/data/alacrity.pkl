@@ -2,10 +2,6 @@
 Vde40970
 p1
 I1
-s.(dp0
-Vde40970
-p1
-I1
 sVdizf10z
 p2
 I1

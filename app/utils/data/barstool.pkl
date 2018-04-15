@@ -2,10 +2,6 @@
 Vd1023zw
 p1
 I1
-s.(dp0
-Vd1023zw
-p1
-I1
 sVd75inwc
 p2
 I1

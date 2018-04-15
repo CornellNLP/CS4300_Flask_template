@@ -2,10 +2,6 @@
 Vdc101mp
 p1
 I1
-s.(dp0
-Vdc101mp
-p1
-I1
 sVds9m28k
 p2
 I1

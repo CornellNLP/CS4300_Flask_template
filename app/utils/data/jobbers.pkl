@@ -1,15 +1,7 @@
 (dp0
 Vd6s9pki
 p1
-I1
-s.(dp0
-Vd6s9pki
-p1
 I2
-s.(dp0
-Vd6s9pki
-p1
-I1
 sVdk68jw4
 p2
 I1
