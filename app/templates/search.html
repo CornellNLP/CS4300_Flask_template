@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>Fundy</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +22,16 @@
     <!-- Custom styles for this template -->
     <link href="../static/css/landing-page.min.css" rel="stylesheet">
 
+    <!-- Fundy Stuff -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/static/awesomplete.css">
+    <script src="/static/awesomplete.js" async></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+
   </head>
 
   <body>
@@ -28,7 +39,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Fundy</a>
         <a class="btn btn-primary" href="#">Sign In</a>
       </div>
     </nav>
@@ -36,16 +47,20 @@
     <!-- Masthead -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
+
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
+            <form onsubmit="return validateForm()" class="form-inline global-search">
+
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                  <input id="politician_input" type="text" name="politician_name" class="form-control form-control-lg" placeholder="A Politician's Name"/>
+                  <input id="free_form_input" type="text" name="free_form" class="form-control form-control-lg" placeholder="Free Form Input">
+                  <!-- <input type="email" class="form-control form-control-lg" placeholder="Enter your email..."> -->
                 </div>
                 <div class="col-12 col-md-3">
                   <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
@@ -97,7 +112,7 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../static/img/bg-showcase-1.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url('https://get.pxhere.com/photo/architecture-white-house-hill-building-palace-monument-downtown-symbol-flag-plaza-usa-america-landmark-facade-cathedral-exterior-attraction-historic-tourism-place-of-worship-washington-dc-patriotism-capital-national-politics-synagogue-state-town-square-mall-government-united-political-law-us-senate-basilica-dome-federal-capitol-congress-democracy-tours-legislation-united-states-capitol-classical-architecture-489513.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Fully Responsive Design</h2>
             <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
@@ -224,6 +239,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="../static/vendor/jquery/jquery.min.js"></script>
     <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load custom js  -->
+    <script src="/static/main.js"></script>
 
   </body>
 
