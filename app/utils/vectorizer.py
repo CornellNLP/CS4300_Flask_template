@@ -25,16 +25,18 @@ tokenizer = TreebankWordTokenizer()
 stop_words = set(stopwords.words('english'))
 d = enchant.Dict("en_US")
 
-numbers = re.compile("^[0-9]{1,45}$")
+numbers = re.compile("\d+")
 
-f = open("inv_index.pkl","rb")
-inv_index = pickle.load(f)
+# f = open("inv_index.pkl","rb")
+# inv_index = pickle.load(f)
 
-f = open("filenames_v1.pkl","rb")
-filenames = set(pickle.load(f))
+# f = open("filenames_v1.pkl","rb")
+# filenames = set(pickle.load(f))
 
-# inv_index = {}
-# filenames = set([])
+inv_index = {}
+filenames = set([])
+
+words = set([])
 
 for filename in os.listdir(os.getcwd() + "/" + path):
   if "json" not in filename:
@@ -64,7 +66,9 @@ for filename in os.listdir(os.getcwd() + "/" + path):
           # remove stop words and links
           if word in stop_words or "http" in word or "www" in word or not word:
             continue
-          if numbers.match(word):
+          if numbers.match(word) or (not word.isalpha()):
+            continue
+          elif len(word) > 255:
             continue
           # place into inverted index
           if word in inv_index:
@@ -72,8 +76,9 @@ for filename in os.listdir(os.getcwd() + "/" + path):
               inv_index[word][comment_id]+=1
             else:
               inv_index[word][comment_id]=1
-          elif d.check(word):
+          else:
             inv_index[word]={comment_id:1}
+          words.add(word)
         counter+=1
 
         # print counter
@@ -93,7 +98,10 @@ f = open("inv_index.pkl","wb")
 pickle.dump(inv_index,f)
 f.close()
 
-
 f = open("filenames_v1.pkl","wb")
 pickle.dump(list(filenames),f)
+f.close()
+
+f = open("words.pkl","wb")
+pickle.dump(words,f)
 f.close()

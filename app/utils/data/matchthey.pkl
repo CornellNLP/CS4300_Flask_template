@@ -1,0 +1,5 @@
+(dp0
+Vdics1x8
+p1
+I1
+s.
