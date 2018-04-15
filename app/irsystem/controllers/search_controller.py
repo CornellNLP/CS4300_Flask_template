@@ -4,6 +4,12 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import os, json
 from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician
 from empath import Empath
+from sklearn.feature_extraction.text import CountVectorizer
+from nltk.tokenize import TweetTokenizer
+from nltk.stem import PorterStemmer
+import re
+import numpy as np
+from sklearn.preprocessing import normalize
 
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
@@ -39,6 +45,72 @@ def process_donations(donations):
 		"total": total,
 		"sample": sorted(donations, key=lambda d:d["TransactionAmount"], reverse=True)[:10]
 	}
+
+def tokenizer_custom(tweet):
+    token = TweetTokenizer()
+    stemmer = PorterStemmer()
+    #remove links 
+    tweet = re.sub(r"http\S+", "", tweet)
+    #remove user references
+    tweet = re.sub(r"@\S+", "", tweet)
+    #remove phone numbers
+    tweet = re.sub(r'((1-\d{3}-\d{3}-\d{4})|(\(\d{3}\) \d{3}-\d{4})|(\d{3}-\d{3}-\d{4})|(\(\d{3}\)\d{3}-\d{4}))', '', tweet)
+    #remove punctuation
+    tweet = re.sub(r'[^\w\s]','',tweet)
+    #remove numbers
+    tweet = re.sub(r"\d+", " ", tweet)
+    #tokenize
+    tokens = token.tokenize(tweet)
+    #stem
+    tokens = [stemmer.stem(token) for token in tokens]
+
+    return tokens
+
+#return (top tweet indices, top tweet scores)
+def process_tweets(politician, query):
+	tweets = get_tweets_by_politician(politician)
+	vocab = json.load((open("vocab.json", 'r')))
+	query_tokens = tokenizer_custom(query)
+    
+    #check query validity before proceeding
+	valid_query = False
+	for token in query_tokens:
+		if token in vocab:
+			valid_query = True
+		else:
+			query_tokens.remove(token)
+	if valid_query == False:
+		return ([],[])
+
+    #dot query arrays
+	acc = np.ones(len(vocab))
+	for token in query_tokens:
+    	#build vector from postings
+		postings = get_co_occurrence(token)
+		vectorized = np.zeros(len(vocab))
+		for idx, score in postings:
+			vectorized[idx] = score
+		vec_norm = normalize(vectorized, 'l1')
+		acc = acc * vec_norm
+	arr = acc.T
+
+    #vectorize politician tweets
+	just_tweets = [tweet['tweet_text'] for tweet in tweets]
+	vectorizer = CountVectorizer(vocabulary = vocab, tokenizer = tokenizer_custom)
+	word_counts = vectorizer.fit_transform(just_tweets).todense()
+
+    #determine top matches
+	doc_scores = np.matmul(word_counts, arr).T
+	top_docs = list(np.argsort(-1*doc_scores))
+	top_scores = list(-1*np.sort(-1*doc_scores))
+
+    #turn tweet indices into actual tweets
+	tweet_lst = []
+	for tweet_idx in top_docs:
+		tweet_lst.append(just_tweets[tweet_idx])
+
+	return (tweet_lst, top_scores)
+
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -76,9 +148,14 @@ def search():
 					"sample": [],
 				}
 				data["donations"] = don_data
-			raw_tweet_data = get_tweets_by_politician(politician_query)
-			if(raw_tweet_data.count() > 0):
-				data["tweets"].append(raw_tweet_data.next()["tweet_text"])
+
+			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query)
+			#return top 5 for now
+			top_tweets = top_tweets[:min(5, len(top_tweets))]
+			if len(top_tweets) != 0:
+				for tweet in top_tweets:
+					data["tweets"].append(tweet)
+
 			raw_vote_data = get_votes_by_politician(politician_query)
 			for vote in raw_vote_data:
 				vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
