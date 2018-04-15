@@ -11,33 +11,37 @@ import re
 from nltk.corpus import stopwords
 from nltk.tokenize import TreebankWordTokenizer
 
-def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.95):
-   '''
-   Computes the idfs of all the terms
+saved_path = "data/"
+path = sys.argv[1]
 
-    pls return a dict and save it in a pkl file
+def compute_idf(min_df=10, max_df_ratio=0.95):
+  '''
+  Computes the idfs of all the terms
 
-   :param inv_idx: Not actually needed, just read the files from app/utils/data
-   :param n_docs: Not actually needed, just read the n_docs file from app/utils/data
-   '''
-   result = {}
-   num_docs_doc = open(os.getcwd() + "/n_docs.pkl","rb")
-   num_docs = pickle.load(num_docs_doc)
-   #print("Num Docs: ", num_docs)
-   for filename in os.listdir(os.getcwd() + "/data"):
-   		#print filename
-   		f = open(os.getcwd() + "/data/" + filename,"rb")
-  		d = pickle.load(f)
-  		word_id = list(d)[0]
-  		tf = list(d.values())[0]
-  		#print("Word_id: ", word_id)
-  		#print("Tf: ", tf)
-  		#print(d)
-  		#print("\n\n\n\n\n\n")
-  		result[word_id] = num_docs / tf
+  pls return a dict and save it in a pkl file
 
-   result_file = open("idf.pkl","wb")
-   pickle.dump(result, result_file)
+  :param inv_idx: Not actually needed, just read the files from app/utils/data
+  :param n_docs: Not actually needed, just read the n_docs file from app/utils/data
+  '''
+
+
+  print "beginning calculation of idfs..."
+  result = {}
+  num_docs_doc = open(os.getcwd() + "/n_docs.pkl","rb")
+  num_docs = pickle.load(num_docs_doc)
+  num_docs_doc.close()
+  #print("Num Docs: ", num_docs)
+  for filename in os.listdir(os.getcwd() + "/" + saved_path):
+    #print filename
+    f = open(os.getcwd() + "/" + saved_path + filename,"rb")
+    d = pickle.load(f)
+    f.close()
+    word_id = list(d)[0]
+    tf = len(d)
+    result[filename[:filename.index(".")]] = math.log((num_docs / tf), 2)
+  print 'completed'
+  result_file = open("idf.pkl","wb")
+  pickle.dump(result, result_file)
 
 
 def compute_doc_norms():
@@ -49,8 +53,7 @@ def compute_doc_norms():
 
   f = open("idf.pkl","rb")
   idf = pickle.load(f)
-
-  path = sys.argv[1]
+  f.close()
 
   print "starting to calculate doc norms of words..."
   start_time = int(time.time())
@@ -70,7 +73,7 @@ def compute_doc_norms():
 
   doc_norms = {}
 
-  numbers = re.compile("^[0-9]{1,45}$")
+  numbers = re.compile("^[0-9]*$")
 
   for filename in os.listdir(os.getcwd() + "/" + path):
     if "json" not in filename:
@@ -92,7 +95,7 @@ def compute_doc_norms():
         # iterate through all the comments of this
         for obj in objs:
           # remove automoderator comments
-          if obj["author"].ncode("utf-8").lower() is "automoderator":
+          if obj["author"].encode("utf-8").lower() is "automoderator":
             continue
 
           comment_id = obj["id"]
@@ -107,18 +110,18 @@ def compute_doc_norms():
             # remove stop words and links
             if word in stop_words or "http" in word or "www" in word or not word:
               continue
-            if numbers.match(word):
+            if numbers.match(word) or (not word.isalpha()):
+                continue
+            elif len(word) > 255:
               continue
-            # place into inverted index
-            if word in words:
-              # load word pkl file
-              f = open(saved_path + word + ".pkl","r+b")
-              word_dict = pickle.load(f)
-
-              # calculate tf-idf
-              doc_tf = word_dict[comment_id]
-              doc_idf = idf[comment_id]
-              norm_sum += (doc_tf * doc_idf)**2
+            # load word pkl file
+            f = open(saved_path + word + ".pkl","r+b")
+            word_dict = pickle.load(f)
+            f.close()
+            # calculate tf-idf
+            doc_tf = word_dict[comment_id]
+            doc_idf = idf[word]
+            norm_sum += (doc_tf * doc_idf)**2
           doc_norms[comment_id] = math.sqrt(norm_sum)
           counter+=1
 
@@ -137,6 +140,6 @@ def compute_doc_norms():
   pickle.dump(files,f)
   f.close()
 
-compute_idf([], 0)
+compute_idf()
 compute_doc_norms()
 
