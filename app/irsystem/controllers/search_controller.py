@@ -6,12 +6,17 @@ import user_duration
 import user_release
 from random import *
 
-project_name = "CinemaPop"
 net_ids = ["Angela Zhang: az337", "Chris Fifty: cjf92", "Newton Ni: cn279", "Erik Chan: ejc233", "Xinyu Zhao: xz293"]
+
+
+movies_json = json.load(open('app/static/data/movies.json'))
+genres_json = json.load(open('genres.json'))
+movie_list = [movie['title'] for movie in movies_json]
+genre_list = [genre['name'] for genre in genres_json['genres']]
 
 year_lst = []
 for x in range(1900,2019):
-	year_lst.append(x)
+    year_lst.append(x)
 
 @irsystem.route('/', methods=['GET'])
 
