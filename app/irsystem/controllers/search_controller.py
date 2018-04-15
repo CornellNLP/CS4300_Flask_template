@@ -25,7 +25,7 @@ def search2():
 	# print(test)
 	# print(results)
 	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
-	return jsonify(jsons)
+	return str(jsons)
 
 def build_index(input_string):
 	tokenizer = TreebankWordTokenizer()
@@ -53,7 +53,7 @@ def get_reddit_comment_as_json(id):
 	"""
 	comment = reddit.comment(id=id)
 	comment_json = {}
-	comment_json["body"] = str(comment.body)
+	comment_json["body"] = str(comment.body.encode('utf-8'))
 	# comment_json["author"] = comment.author
 	# comment_json["score"] = comment.score
 	# comment_json["ups"] = comment.ups
@@ -103,7 +103,6 @@ def index_search(query, index, idf, doc_norms):
 					(idf[token] ** 2) * query_count / \
 					(doc_norms[doc_id] * query_norm + 1)
 
-    indexed_list = [(val, i) for i, val in enumerate(scores)]
-    output = sorted(indexed_list, key=lambda x: x[1], reverse=True)
-
+	output = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+	print(output)
     return [str(comment[0]) for comment in output]
