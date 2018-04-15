@@ -17,7 +17,7 @@ def search2():
 	# print(app.config['tf_idfs'])
 	query = str(request.args.get('query'))
 	print(query)
-	return app.config['tf_idfs'][query.split(' ')[0]]
+	return str(app.config['tf_idfs'][query.split(' ')[0]])
 
 
 def index_search(query, index, idf, doc_norms):
