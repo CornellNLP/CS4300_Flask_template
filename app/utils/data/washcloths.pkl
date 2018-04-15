@@ -2,10 +2,6 @@
 Vd8zv6v7
 p1
 I1
-s.(dp0
-Vd8zv6v7
-p1
-I1
 sVdst678s
 p2
 I1

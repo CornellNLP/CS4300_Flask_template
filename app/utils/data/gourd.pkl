@@ -2,10 +2,6 @@
 Vd77dw2i
 p1
 I1
-s.(dp0
-Vd77dw2i
-p1
-I1
 sVdd8rc9h
 p2
 I1

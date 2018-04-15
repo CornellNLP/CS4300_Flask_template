@@ -1,9 +1,5 @@
 (dp0
 Vdike6h9
 p1
-I1
-s.(dp0
-Vdike6h9
-p1
 I2
 s.

@@ -2,10 +2,6 @@
 Vd08nocs
 p1
 I1
-s.(dp0
-Vd08nocs
-p1
-I1
 sVdkdno1j
 p2
 I1

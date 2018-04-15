@@ -2,10 +2,6 @@
 Vdd59sr4
 p1
 I1
-s.(dp0
-Vdd59sr4
-p1
-I1
 sVdev0os3
 p2
 I1

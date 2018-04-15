@@ -1,8 +1,4 @@
 (dp0
-Vdc20ch9
-p1
-I1
-s.(dp0
 Vdk0cadv
 p1
 I1

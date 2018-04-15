@@ -1,8 +1,4 @@
 (dp0
-Vd8ltok4
-p1
-I1
-s.(dp0
 Vd8lvpdr
 p1
 I1

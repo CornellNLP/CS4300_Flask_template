@@ -1,8 +1,4 @@
 (dp0
-Vd36svon
-p1
-I1
-s.(dp0
 Vdhz38tp
 p1
 I1

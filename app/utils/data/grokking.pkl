@@ -2,10 +2,6 @@
 Vdbsof5l
 p1
 I1
-s.(dp0
-Vdbsof5l
-p1
-I1
 sVddnfrrl
 p2
 I1

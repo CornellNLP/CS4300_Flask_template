@@ -1,8 +1,4 @@
 (dp0
-Vd0526gz
-p1
-I1
-s.(dp0
 Vd60bhuc
 p1
 I1

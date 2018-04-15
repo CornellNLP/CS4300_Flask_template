@@ -2,10 +2,6 @@
 Vdc7wmdd
 p1
 I1
-s.(dp0
-Vdc7wmdd
-p1
-I1
 sVdf7y8re
 p2
 I1

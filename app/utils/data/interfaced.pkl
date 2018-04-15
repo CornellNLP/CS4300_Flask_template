@@ -2,10 +2,6 @@
 Vd2d23q7
 p1
 I1
-s.(dp0
-Vd2d23q7
-p1
-I1
 sVdficlj3
 p2
 I1

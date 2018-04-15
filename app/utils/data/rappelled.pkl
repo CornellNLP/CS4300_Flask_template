@@ -2,10 +2,6 @@
 Vd01py03
 p1
 I1
-s.(dp0
-Vd01py03
-p1
-I1
 sVdbulvup
 p2
 I1

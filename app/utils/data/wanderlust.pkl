@@ -2,10 +2,6 @@
 Vd20r31c
 p1
 I1
-s.(dp0
-Vd20r31c
-p1
-I1
 sVdpy5cs7
 p2
 I1

@@ -2,10 +2,6 @@
 Vddezx02
 p1
 I1
-s.(dp0
-Vddezx02
-p1
-I1
 sVdh3k5mr
 p2
 I1

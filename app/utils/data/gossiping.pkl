@@ -2,10 +2,6 @@
 Vddc817t
 p1
 I1
-s.(dp0
-Vddc817t
-p1
-I1
 sVdg7x0zf
 p2
 I1

@@ -15,11 +15,9 @@ from nltk.tokenize import TreebankWordTokenizer
 This file will parse each word into its individual vocabulary while keeping track of words that are used, in order to minimize memory being used at any given time
 '''
 
-path = sys.argv[1]
-
-# is_init = sys.argv[2]
-
 saved_path = "data/"
+
+path = sys.argv[1]
 
 print "starting vectorization of words..."
 start_time = int(time.time())
@@ -34,8 +32,8 @@ words = pickle.load(f);
 f = open("filenames_v2.pkl","rb")
 files = pickle.load(f)
 
-# words = set([])
-# files = set([])
+words = set([])
+files = set([])
 
 numbers = re.compile("^[0-9]{1,45}$")
 
@@ -77,12 +75,14 @@ for filename in os.listdir(os.getcwd() + "/" + path):
           # place into inverted index
           if word in words:
             # load word pkl file
-            f = open(saved_path + word + ".pkl","r+b")
+            f = open(saved_path + word + ".pkl","rb")
             word_dict = pickle.load(f)
+            f.close()
             if comment_id in word_dict:
               word_dict[comment_id]+=1
             else:
               word_dict[comment_id]=1
+            f = open(saved_path + word + ".pkl","wb")
             pickle.dump(word_dict,f)
             f.close()
           elif d.check(word):

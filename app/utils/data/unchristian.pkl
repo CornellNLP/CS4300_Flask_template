@@ -2,10 +2,6 @@
 Vdcungem
 p1
 I1
-s.(dp0
-Vdcungem
-p1
-I1
 sVdg196w9
 p2
 I1

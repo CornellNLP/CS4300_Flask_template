@@ -1,9 +1,5 @@
 (dp0
 Vdbnn8py
 p1
-I1
-s.(dp0
-Vdbnn8py
-p1
 I2
 s.

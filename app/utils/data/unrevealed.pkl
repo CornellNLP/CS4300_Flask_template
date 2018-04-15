@@ -1,8 +1,4 @@
 (dp0
-Vd0rozaj
-p1
-I1
-s.(dp0
 Vd75mbms
 p1
 I1

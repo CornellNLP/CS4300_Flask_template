@@ -1,8 +1,4 @@
 (dp0
-Vd45u32w
-p1
-I1
-s.(dp0
 Vdd28aji
 p1
 I1

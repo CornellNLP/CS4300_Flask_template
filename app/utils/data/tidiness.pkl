@@ -2,10 +2,6 @@
 Vddhmuxf
 p1
 I1
-s.(dp0
-Vddhmuxf
-p1
-I1
 sVdsxmm8z
 p2
 I1

@@ -2,10 +2,6 @@
 Vd3i3u2c
 p1
 I1
-s.(dp0
-Vd3i3u2c
-p1
-I1
 sVdawcyw5
 p2
 I1

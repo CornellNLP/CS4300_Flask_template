@@ -2,10 +2,6 @@
 Vdcpuls8
 p1
 I1
-s.(dp0
-Vdcpuls8
-p1
-I1
 sVde0eyqx
 p2
 I1

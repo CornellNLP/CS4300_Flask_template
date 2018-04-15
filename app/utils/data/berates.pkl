@@ -2,10 +2,6 @@
 Vdabskis
 p1
 I1
-s.(dp0
-Vdabskis
-p1
-I1
 sVdim18uu
 p2
 I1

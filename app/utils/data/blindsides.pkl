@@ -1,9 +1,5 @@
 (dp0
 Vdn13544
 p1
-I1
-s.(dp0
-Vdn13544
-p1
 I2
 s.

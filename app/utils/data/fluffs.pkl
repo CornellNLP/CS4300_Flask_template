@@ -2,10 +2,6 @@
 Vddlkllb
 p1
 I1
-s.(dp0
-Vddlkllb
-p1
-I1
 sVdfpyjyj
 p2
 I1

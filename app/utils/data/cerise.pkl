@@ -1,9 +1,5 @@
 (dp0
 Vdcbkttd
 p1
-I1
-s.(dp0
-Vdcbkttd
-p1
 I2
 s.

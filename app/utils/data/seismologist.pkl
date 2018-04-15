@@ -1,8 +1,4 @@
 (dp0
-Vd177xni
-p1
-I1
-s.(dp0
 Vdnhrku3
 p1
 I1

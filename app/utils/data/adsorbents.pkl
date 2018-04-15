@@ -2,10 +2,6 @@
 Vddcmxul
 p1
 I1
-s.(dp0
-Vddcmxul
-p1
-I1
 sVdi3a9xy
 p2
 I1

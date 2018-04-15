@@ -1,13 +1,5 @@
 (dp0
 Vdeq0ky9
 p1
-I1
-s.(dp0
-Vdeq0ky9
-p1
-I2
-s.(dp0
-Vdeq0ky9
-p1
-I2
+I3
 s.

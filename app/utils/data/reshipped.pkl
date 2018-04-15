@@ -2,10 +2,6 @@
 Vddolpsd
 p1
 I1
-s.(dp0
-Vddolpsd
-p1
-I1
 sVdek4mki
 p2
 I1

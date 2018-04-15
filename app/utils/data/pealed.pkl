@@ -2,10 +2,6 @@
 Vdp2ddx0
 p1
 I1
-s.(dp0
-Vdp2ddx0
-p1
-I1
 sVdrxd98n
 p2
 I1

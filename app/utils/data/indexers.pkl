@@ -2,10 +2,6 @@
 Vcyo2e79
 p1
 I1
-s.(dp0
-Vcyo2e79
-p1
-I1
 sVdf64dd5
 p2
 I1

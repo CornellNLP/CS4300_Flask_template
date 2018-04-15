@@ -2,10 +2,6 @@
 Vd7r8z4c
 p1
 I1
-s.(dp0
-Vd7r8z4c
-p1
-I1
 sVdda9x5h
 p2
 I1

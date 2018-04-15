@@ -2,10 +2,6 @@
 Vd08ssy7
 p1
 I1
-s.(dp0
-Vd08ssy7
-p1
-I1
 sVd0x1p3b
 p2
 I1
