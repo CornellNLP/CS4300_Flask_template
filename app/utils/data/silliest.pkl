@@ -1,8 +1,4 @@
 (dp0
-Vd3stylo
-p1
-I1
-s.(dp0
 Vder3yny
 p1
 I1

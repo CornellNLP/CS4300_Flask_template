@@ -2,10 +2,6 @@
 Vdgcxx30
 p1
 I1
-s.(dp0
-Vdgcxx30
-p1
-I1
 sVdnxzyty
 p2
 I1

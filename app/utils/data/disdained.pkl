@@ -2,10 +2,6 @@
 Vczowe21
 p1
 I1
-s.(dp0
-Vczowe21
-p1
-I1
 sVdewnrm8
 p2
 I1

@@ -2,10 +2,6 @@
 Vdfibrp9
 p1
 I1
-s.(dp0
-Vdfibrp9
-p1
-I1
 sVdmh27t1
 p2
 I1

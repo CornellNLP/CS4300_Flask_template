@@ -1,9 +1,5 @@
 (dp0
 Vdry6x0a
 p1
-I1
-s.(dp0
-Vdry6x0a
-p1
 I2
 s.

@@ -1,8 +1,4 @@
 (dp0
-Vdd2tenc
-p1
-I1
-s.(dp0
 Vdozhuxi
 p1
 I1

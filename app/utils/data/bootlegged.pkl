@@ -1,9 +1,5 @@
 (dp0
 Vdk9wt45
 p1
-I1
-s.(dp0
-Vdk9wt45
-p1
 I2
 s.

@@ -2,10 +2,6 @@
 Vdd21301
 p1
 I1
-s.(dp0
-Vdd21301
-p1
-I1
 sVdd2h2fo
 p2
 I1

@@ -1,15 +1,7 @@
 (dp0
 Vd4i8lvl
 p1
-I1
-s.(dp0
-Vd4i8lvl
-p1
 I2
-s.(dp0
-Vd4i8lvl
-p1
-I1
 sVd8ce9os
 p2
 I1

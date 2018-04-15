@@ -1,16 +1,8 @@
 (dp0
-Vdetlx2m
-p1
-I1
-s.(dp0
-Vdetlx2m
-p1
-I2
-s.(dp0
 Vdgyaudv
 p1
 I1
 sVdetlx2m
 p2
-I1
+I2
 s.

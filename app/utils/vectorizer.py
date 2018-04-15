@@ -16,6 +16,7 @@ This file will parse the entire dataset into a single pkl file
 '''
 
 path = sys.argv[1]
+saved_path = "data/"
 
 print "starting vectorization of words..."
 start_time = int(time.time())
@@ -32,6 +33,7 @@ inv_index = pickle.load(f)
 f = open("filenames_v1.pkl","rb")
 filenames = set(pickle.load(f))
 
+# inv_index = {}
 # filenames = set([])
 
 for filename in os.listdir(os.getcwd() + "/" + path):
@@ -78,6 +80,12 @@ for filename in os.listdir(os.getcwd() + "/" + path):
         if counter % 3000 == 0:
           print "", float(counter)/count, "%\r"
   print "completed", filename
+print "saving all words to separate pkl files..."
+for word in inv_index:
+  f = open(saved_path + word + ".pkl","wb")
+  pickle.dump(inv_index[word], f)
+  f.close()
+
 end_time = int(time.time())
 print "finished in", (end_time-start_time)
 

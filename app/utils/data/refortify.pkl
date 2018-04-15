@@ -1,13 +1,5 @@
 (dp0
 Vd1h992u
 p1
-I1
-s.(dp0
-Vd1h992u
-p1
-I2
-s.(dp0
-Vd1h992u
-p1
-I2
+I3
 s.

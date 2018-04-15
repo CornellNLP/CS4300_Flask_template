@@ -1,8 +1,4 @@
 (dp0
-Vd2be89t
-p1
-I1
-s.(dp0
 Vdd6xojm
 p1
 I1

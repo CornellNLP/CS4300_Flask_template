@@ -2,10 +2,6 @@
 Vdhi6adu
 p1
 I1
-s.(dp0
-Vdhi6adu
-p1
-I1
 sVdhic0s4
 p2
 I1

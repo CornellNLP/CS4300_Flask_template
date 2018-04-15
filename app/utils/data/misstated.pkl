@@ -2,10 +2,6 @@
 Vd45luck
 p1
 I1
-s.(dp0
-Vd45luck
-p1
-I1
 sVd4atirq
 p2
 I1

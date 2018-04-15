@@ -1,8 +1,4 @@
 (dp0
-Vd4l2dsk
-p1
-I1
-s.(dp0
 Vddyfmhw
 p1
 I1

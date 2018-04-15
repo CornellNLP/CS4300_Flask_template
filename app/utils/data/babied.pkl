@@ -2,10 +2,6 @@
 Vdka0cxa
 p1
 I1
-s.(dp0
-Vdka0cxa
-p1
-I1
 sVdkinzi6
 p2
 I1

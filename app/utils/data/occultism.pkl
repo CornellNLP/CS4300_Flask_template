@@ -2,10 +2,6 @@
 Vd472ecu
 p1
 I1
-s.(dp0
-Vd472ecu
-p1
-I1
 sVdhdbslm
 p2
 I1

@@ -2,10 +2,6 @@
 Vd8es573
 p1
 I1
-s.(dp0
-Vd8es573
-p1
-I1
 sVdi2w5et
 p2
 I1

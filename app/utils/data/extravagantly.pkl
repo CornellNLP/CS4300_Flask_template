@@ -2,10 +2,6 @@
 Vd7hpcpf
 p1
 I1
-s.(dp0
-Vd7hpcpf
-p1
-I1
 sVdt9colb
 p2
 I1

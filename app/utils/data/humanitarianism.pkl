@@ -2,10 +2,6 @@
 Vdc435ak
 p1
 I1
-s.(dp0
-Vdc435ak
-p1
-I1
 sVdilqqxy
 p2
 I1

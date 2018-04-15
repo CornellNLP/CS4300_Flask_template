@@ -2,10 +2,6 @@
 Vdc1ddaz
 p1
 I1
-s.(dp0
-Vdc1ddaz
-p1
-I1
 sVdenq1ex
 p2
 I1

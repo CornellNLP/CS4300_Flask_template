@@ -1,8 +1,4 @@
 (dp0
-Vdd6ylib
-p1
-I1
-s.(dp0
 Vds3hl16
 p1
 I1

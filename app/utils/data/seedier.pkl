@@ -2,10 +2,6 @@
 Vcyi990h
 p1
 I1
-s.(dp0
-Vcyi990h
-p1
-I1
 sVdd1bm03
 p2
 I1

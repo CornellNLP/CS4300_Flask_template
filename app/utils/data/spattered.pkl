@@ -2,10 +2,6 @@
 Vd01pkl7
 p1
 I1
-s.(dp0
-Vd01pkl7
-p1
-I1
 sVddscibm
 p2
 I1

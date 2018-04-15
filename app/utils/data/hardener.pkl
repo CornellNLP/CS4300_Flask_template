@@ -2,10 +2,6 @@
 Vdppfa2k
 p1
 I1
-s.(dp0
-Vdppfa2k
-p1
-I1
 sVdstm4wb
 p2
 I1

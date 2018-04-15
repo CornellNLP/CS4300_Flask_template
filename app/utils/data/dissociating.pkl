@@ -2,10 +2,6 @@
 Vd7mix1s
 p1
 I1
-s.(dp0
-Vd7mix1s
-p1
-I1
 sVdcis14u
 p2
 I1

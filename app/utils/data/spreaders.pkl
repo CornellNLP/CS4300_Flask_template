@@ -1,16 +1,8 @@
 (dp0
-Vd2z2kd8
-p1
-I1
-s.(dp0
-Vd2z2kd8
-p1
-I2
-s.(dp0
 Vdcyrtdc
 p1
 I1
 sVd2z2kd8
 p2
-I1
+I2
 s.

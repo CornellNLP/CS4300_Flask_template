@@ -1,15 +1,7 @@
 (dp0
 Vd67q6ko
 p1
-I1
-s.(dp0
-Vd67q6ko
-p1
 I2
-s.(dp0
-Vd67q6ko
-p1
-I1
 sVdf6al0k
 p2
 I1

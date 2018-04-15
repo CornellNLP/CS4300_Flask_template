@@ -2,10 +2,6 @@
 Vdf92gpl
 p1
 I1
-s.(dp0
-Vdf92gpl
-p1
-I1
 sVdsyumxs
 p2
 I1

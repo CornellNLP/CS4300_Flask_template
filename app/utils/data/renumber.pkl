@@ -2,10 +2,6 @@
 Vdexrf3e
 p1
 I1
-s.(dp0
-Vdexrf3e
-p1
-I1
 sVdnyy598
 p2
 I1

@@ -2,10 +2,6 @@
 Vdi5722o
 p1
 I1
-s.(dp0
-Vdi5722o
-p1
-I1
 sVdp94r6q
 p2
 I1

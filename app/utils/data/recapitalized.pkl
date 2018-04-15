@@ -2,10 +2,6 @@
 Vd83r5m9
 p1
 I1
-s.(dp0
-Vd83r5m9
-p1
-I1
 sVdai3qge
 p2
 I1

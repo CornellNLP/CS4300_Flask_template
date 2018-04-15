@@ -1,13 +1,5 @@
 (dp0
 Vdir9t3x
 p1
-I1
-s.(dp0
-Vdir9t3x
-p1
-I2
-s.(dp0
-Vdir9t3x
-p1
-I2
+I3
 s.

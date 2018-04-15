@@ -2,10 +2,6 @@
 Vd8wcp40
 p1
 I1
-s.(dp0
-Vd8wcp40
-p1
-I1
 sVdj79ncd
 p2
 I1

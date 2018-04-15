@@ -1,9 +1,5 @@
 (dp0
 Vcz1jw3g
 p1
-I1
-s.(dp0
-Vcz1jw3g
-p1
 I2
 s.

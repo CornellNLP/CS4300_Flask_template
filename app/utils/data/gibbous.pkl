@@ -1,16 +1,8 @@
 (dp0
-Vcyxhalu
-p1
-I1
-s.(dp0
-Vcyxhalu
-p1
-I2
-s.(dp0
 Vdmet4ru
 p1
 I1
 sVcyxhalu
 p2
-I1
+I2
 s.

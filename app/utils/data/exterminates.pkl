@@ -2,10 +2,6 @@
 Vd0taxsw
 p1
 I1
-s.(dp0
-Vd0taxsw
-p1
-I1
 sVd7v83rr
 p2
 I1

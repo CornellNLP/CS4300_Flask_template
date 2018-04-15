@@ -2,10 +2,6 @@
 Vd24yb2t
 p1
 I1
-s.(dp0
-Vd24yb2t
-p1
-I1
 sVdag33c4
 p2
 I1

@@ -2,10 +2,6 @@
 Vd0s7psw
 p1
 I1
-s.(dp0
-Vd0s7psw
-p1
-I1
 sVdp71myj
 p2
 I1

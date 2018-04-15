@@ -2,10 +2,6 @@
 Vdef2j14
 p1
 I1
-s.(dp0
-Vdef2j14
-p1
-I1
 sVdj8buyw
 p2
 I1

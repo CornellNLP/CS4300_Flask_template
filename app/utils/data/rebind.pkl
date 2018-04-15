@@ -2,10 +2,6 @@
 Vdft142i
 p1
 I1
-s.(dp0
-Vdft142i
-p1
-I1
 sVdpqzjkv
 p2
 I1

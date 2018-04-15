@@ -1,8 +1,4 @@
 (dp0
-Vczxqctx
-p1
-I1
-s.(dp0
 Vd28u500
 p1
 I1

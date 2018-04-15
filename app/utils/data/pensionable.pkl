@@ -2,10 +2,6 @@
 Vda5iso1
 p1
 I1
-s.(dp0
-Vda5iso1
-p1
-I1
 sVdbil1cm
 p2
 I1

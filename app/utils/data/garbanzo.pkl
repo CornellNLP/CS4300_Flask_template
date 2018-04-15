@@ -2,10 +2,6 @@
 Vd2949th
 p1
 I1
-s.(dp0
-Vd2949th
-p1
-I1
 sVdf907lu
 p2
 I1

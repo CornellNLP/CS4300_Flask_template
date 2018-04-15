@@ -2,10 +2,6 @@
 Vddkvo6n
 p1
 I1
-s.(dp0
-Vddkvo6n
-p1
-I1
 sVdgmon14
 p2
 I1

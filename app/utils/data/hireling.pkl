@@ -1,8 +1,4 @@
 (dp0
-Vd732ths
-p1
-I1
-s.(dp0
 Vd732znh
 p1
 I1
