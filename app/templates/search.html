@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
         <link rel="stylesheet" href="/static/main.css">
+        <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
         <style>
           body {
             background-color: #f9dbe7;
@@ -23,7 +24,7 @@
           <form class="global-search" style="width: 100%">
             <div class="form-row ">
               <div class="form-group col-md-6">
-                <label class="tags center">Similar Movies (separated by semicolons)</label>
+                <label class="tags center">Similar Movies (separated by semicolons):</label>
                 <input id="similar_movies" class="form-control center" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
                 <datalist id="movie_list">
                     {% if movie_list %}
@@ -34,7 +35,7 @@
                 </datalist>
               </div>
               <div class="form-group col-md-6">
-                <label class="tags center">Genres (separated by semicolons)</label>
+                <label class="tags center">Genres (separated by semicolons):</label>
                 <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
                 <datalist id="genre_list">
                     {% if genre_list %}
@@ -46,11 +47,11 @@
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label class="tags center">Cast/Crew (separated by semicolons): </label>
+                <label class="tags center">Cast/Crew (separated by semicolons):</label>
                 <input id="input" type="text" class="form-control center" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
               </div>
               <div class="form-group col-md-6">
-                <label class="tags center">Keywords (separated by semicolons)</label>
+                <label class="tags center">Keywords (separated by semicolons):</label>
                 <input id="input" type="text" class="form-control center" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
               </div>
             </div>
@@ -149,6 +150,10 @@
             {% endfor %}
         {% endif %}
         </form>
+
+        <div class="footer">
+            <p>&copy; 2018 | Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz29</p>
+        </div>
     </body>
 
 </html>
