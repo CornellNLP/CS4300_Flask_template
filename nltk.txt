@@ -12,7 +12,6 @@ conll2007
 crubadan
 dependency_treebank
 floresta
-framenet15
 framenet
 gazetteers
 genesis
