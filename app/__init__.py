@@ -7,11 +7,13 @@ monkey.patch_all()
 import os
 from flask import Flask, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 # Configure app
 app = Flask(__name__, static_folder='frontend/dist', template_folder='frontend/')
 app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+CORS(app)
 
 # DB
 db = SQLAlchemy(app)

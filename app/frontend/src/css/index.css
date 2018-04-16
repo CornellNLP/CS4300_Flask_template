@@ -14,7 +14,7 @@ input[type=text]{
 	border-radius: 2px;
 }
 
-input[type=submit]{
+#submit_button{
 	padding: 12px 20px;
 	margin: 8px 2px;
 	border: solid 1px;
@@ -23,7 +23,7 @@ input[type=submit]{
 	font-family: Roboto;
 }
 
-input[type=submit]:hover{
+#submit_button:hover{
 	background-color: #e4e4e4;
 }
 

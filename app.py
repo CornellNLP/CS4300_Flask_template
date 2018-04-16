@@ -1,8 +1,5 @@
-from app import app, socketio
-import pickle
-import os
-import flask
-from collections import defaultdict
+from app import app
+import os, pickle
 
 if __name__ == "__main__":
   # load_index()  
@@ -16,4 +13,4 @@ if __name__ == "__main__":
   app.config['doc_norms'] = pickle.load(doc_norms_file)
 
   print "Flask app running at http://0.0.0.0:5000"
-  socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+  app.run(host="0.0.0.0", port=5000, debug=True)

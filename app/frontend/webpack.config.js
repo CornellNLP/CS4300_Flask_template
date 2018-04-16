@@ -24,6 +24,7 @@ const config = {
           loaders: ['style-loader', 'css-loader'],
         }
       ]
-    }
+    },
+    devtool: '#eval-source-map'
 };
 module.exports = config;

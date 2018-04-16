@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import getRelatedComments from '../ReceiveAPI.js'
 
 class Home extends Component {
 	constructor(props){
@@ -15,23 +16,24 @@ class Home extends Component {
 
 	handleSubmit(event){
 		//putting an alert for now, should instead send api request on submit
-		if (this.state.value == ""){
-			alert('Empty Search Query');
-		}else{
-			alert('Your search was: ' + this.state.value);
-		}
+		// if (this.state.value == ""){
+		// 	alert('Empty Search Query');
+		// }else{
+		// 	alert('Your search was: ' + this.state.value);
+		// }
 		event.preventDefault();
+		getRelatedComments(this.state.value)
 	}
 
 
 
 	render() {
 	    return (
-	      <form onSubmit = {this.handleSubmit}>
+	      <form>
 	      	<label>
 	      		<p class = "title">LEARNDDIT</p>
 	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
-	      		<input type="submit" value="Search"/>
+	      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
 	      	</label>
 	      	
 	      </form>
