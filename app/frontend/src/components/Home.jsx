@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { getRelatedComments, results } from '../ReceiveAPI.js'
 import $ from 'jquery'
+import autobind from 'autobind-decorator';
+import Result from './Result.jsx'
 
 class Home extends Component {
 	constructor(props){
@@ -9,6 +11,10 @@ class Home extends Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleUpdateResults(results_JSON) {
+		this.setState({results: results_JSON});
 	}
 
 	handleChange(event){
@@ -23,7 +29,7 @@ class Home extends Component {
 		// 	alert('Your search was: ' + this.state.value);
 		// }
 		event.preventDefault();
-		getRelatedComments(this);
+		getRelatedComments(this.state.value, this.handleUpdateResults.bind(this));
 	}
 
 
@@ -40,11 +46,12 @@ class Home extends Component {
 			
 				</form>
 				<div id = "results_section">
-					{
+					{/* {
 						this.state.results.map(result => {
-							<Result body={result.body} />
+							<Result />
 						})
-					}
+					} */}
+					<Result body={"test"}/>
 				</div>
 			</div>
 	    );
