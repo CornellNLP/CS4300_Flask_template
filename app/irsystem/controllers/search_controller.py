@@ -52,9 +52,9 @@ def search():
 	else : 
 		print("user input is %s" % (title_input)) 
 
-		usr_bk = Book.query.filter_by(name = title_input).first()
-		usr_bk_idx = usr_bk.index
-		usr_bk_name = usr_bk.name
+		# usr_bk = Book.query.filter_by(name = title_input).first()
+		# usr_bk_idx = usr_bk.index
+		# usr_bk_name = usr_bk.name
 
 		# all_bks = TFIDF.query.filter_by(RowNo = usr_bk_idx).all()
 
@@ -79,8 +79,6 @@ def search():
 	else:
 		output_message = "Top ten similar books to : " + title_input
 		data = topten_bk
-	db.reflect()
-	db.drop_all()
 	
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
