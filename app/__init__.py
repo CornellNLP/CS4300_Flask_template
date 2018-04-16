@@ -33,3 +33,13 @@ def index():
 @app.route('/static/<path:path>', methods=['GET'])
 def serve_static(path):
     return send_from_directory('frontend/build/static', path)
+
+# load_index()  
+valid_words_file = open(os.getcwd() + "/app/utils/words.pkl","rb")
+app.config['valid_words'] = pickle.load(valid_words_file)
+
+idf_file = open(os.getcwd() + "/app/utils/idf.pkl", "rb")
+app.config['idfs'] = pickle.load(idf_file)
+
+doc_norms_file = open(os.getcwd() + "/app/utils/doc_norms.pkl", "rb")
+app.config['doc_norms'] = pickle.load(doc_norms_file)
