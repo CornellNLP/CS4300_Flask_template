@@ -47,8 +47,10 @@ def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_com
             sims += docs_compressed.dot(words_compressed[int(word_to_index[w]),:])
     if count == 0 : return "None of the words are in our vocab"
     sims=sims/count
-    asort = np.argsort(-sims)[:k+1]
-    return msg,[(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
+    asort = np.argsort(-sims)[:k+1] 
+    lst = [(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
+    lst.append(msg)
+    return lst
 
 
 # TODO : need to normalize the docs_compressed 
