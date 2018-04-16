@@ -39,11 +39,13 @@ def search():
 	try:
 		words_compressed = pickle.load(open("words_compressed_no_stemming.pkl", "rb"))
 		docs_compressed = pickle.load(open("docs_compressed_no_stemming.pkl", "rb"))
-
+	except:
+		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
+	try:
 		index_to_word = json.load(open("index_to_word.json"))
 		index_to_book = json.load(open("index_to_book.json"))
 	except:
-		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='opening files crashed', word_cloud=[], top_books = [])
+		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
 
 	word_to_index = {value : key for key , value in index_to_word.items()}
 	book_to_index = {value : key for key , value in index_to_book.items()}
