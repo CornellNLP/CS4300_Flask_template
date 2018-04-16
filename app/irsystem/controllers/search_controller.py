@@ -38,12 +38,11 @@ def search():
         for movie in movies_json:
             movie_dict[movie['id']] = json.load(open('app/static/data/movies/' + movie['id'] + '.json'))
             score_dict[movie['id']] = 0.0
+        reverse_dict = {y['title'].lower():x for x,y in movie_dict.iteritems()}
 
         selected_movies = parse_lst_str(similar)
         selected_genres = parse_lst_str(genres)
-        print castCrew
         selected_crew = parse_lst_str(castCrew)
-        print selected_crew
         selected_keywords = parse_lst_str(keywords)
 
         if similar:
@@ -77,7 +76,24 @@ def search():
 
         for movie in score_dict:
             if similar:
-                x = "hi"
+                # if the movie is already in the selected_titles
+                if movie_dict[movie]['title'].lower() in set(selected_movies):
+                    score_dict[movie] -= max_score
+                else:
+                    cumulative_score = 0.0
+                    for selected in selected_movies:
+                        sim_movie = reverse_dict[selected]
+                        genres_sim = get_set_overlap(movie_dict[sim_movie]['genres'], movie_dict[movie]['genres'])
+                        sim_cast = [member['name'] for member in movie_dict[sim_movie]['cast']]
+                        sim_crew = [member['name'] for member in movie_dict[sim_movie]['crew']]
+                        cast = [member['name'] for member in movie_dict[movie]['cast']]
+                        crew = [member['name'] for member in movie_dict[movie]['crew']]
+                        crew_sim = get_set_overlap(sim_cast + sim_crew, cast + crew)
+                        keywords_sim = get_set_overlap(movie_dict[sim_movie]['keywords'], movie_dict[movie]['keywords'])
+                        cumulative_score += (genres_sim + crew_sim + keywords_sim) / (3 * len(selected_movies))
+                    score_dict[movie] += cumulative_score * similar_score
+
+
             if genres:
                 jaccard_sim = get_set_overlap(selected_genres, movie_dict[movie]['genres'])
                 score_dict[movie] += jaccard_sim * genres_score
@@ -86,7 +102,7 @@ def search():
                 if tmdb_score >= 7.0:
                     score_dict[movie] += tmdb_score / 10.0 * acclaim_score
                 else:
-                    score_dict[movie] -= 100.0
+                    score_dict[movie] -= max_score
             if castCrew:
                 cast = [member['name'] for member in movie_dict[movie]['cast']]
                 crew = [member['name'] for member in movie_dict[movie]['crew']]
