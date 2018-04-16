@@ -15,16 +15,15 @@ net_id = "Hyun Kyo Jung: hj283"
 
 @irsystem.route('/', methods=['GET'])
 def search():
-	
 	#############inserting into the database#####################################################
-	db.create_all()
-	print(os.getcwd())
-	with open('book_to_index.json') as book_to_index_dict:
-		d = json.load(book_to_index_dict)
-		for book in d.keys():
-			b = Book(name = book, index = d[book])
-			db.session.add(b)
-		db.session.commit()
+	# db.create_all()
+	# print(os.getcwd())
+	# with open('book_to_index.json') as book_to_index_dict:
+	# 	d = json.load(book_to_index_dict)
+	# 	for book in d.keys():
+	# 		b = Book(name = book, index = d[book])
+	# 		db.session.add(b)
+	# 	db.session.commit()
 
 	# with open('description_cosine_small.csv') as cosine_similarity_matrix_csv:
 	# 	matrix_reader = csv.reader(cosine_similarity_matrix_csv, delimiter = ' ', quotechar='|')
@@ -81,6 +80,16 @@ def search():
 		output_message = "Top ten similar books to : " + title_input
 		data = topten_bk
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+
+@irsystem.route('/delete', methods=['GET'])
+def search():
+	db.reflect()
+	db.drop_all()
+
+@irsystem.route('/add', methods=['GET'])
+def search():
+	db.reflect()
+	db.drop_all()
 
 
 ###todo1. change tfidf model to cosine sim model.
