@@ -4,14 +4,13 @@ from app import reddit
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter, defaultdict
 from app import app
-from flask import jsonify
-import flask, os, pickle
+import flask, os, pickle, json
 
 @app.route('/', methods=['GET'])
 def render_homepage():
 	print("loading homepage")
 	return render_template('search.html')
- 
+
 
 @app.route('/search', methods=['GET'])
 def search2():
@@ -25,7 +24,7 @@ def search2():
 	# print(test)
 	# print(results)
 	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
-	return str(jsons)
+	return json.dumps(jsons)
 
 def build_index(input_string):
 	tokenizer = TreebankWordTokenizer()
@@ -54,13 +53,13 @@ def get_reddit_comment_as_json(id):
 	comment = reddit.comment(id=id)
 	comment_json = {}
 	comment_json["body"] = str(comment.body.encode('utf-8'))
-	# comment_json["author"] = comment.author
-	# comment_json["score"] = comment.score
-	# comment_json["ups"] = comment.ups
-	# comment_json["downs"] = comment.downs
-	# comment_json["subreddit"] = comment.subreddit_name_prefixed
-	# comment_json["permalink"] = comment.permalink
-	# comment_json["gilded"] = comment.gilded
+	comment_json["author"] = str(comment.author)
+	comment_json["score"] = comment.score
+	comment_json["ups"] = comment.ups
+	comment_json["downs"] = comment.downs
+	comment_json["subreddit"] = comment.subreddit_name_prefixed
+	comment_json["permalink"] = comment.permalink
+	comment_json["gilded"] = comment.gilded
 	return comment_json
 
 def index_search(query, index, idf, doc_norms):
