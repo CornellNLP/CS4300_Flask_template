@@ -25,33 +25,34 @@ def closest_books_to_word(word_in, word_to_index, index_to_book, words_compresse
     return [(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
 
 def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed, k = 5):
-    if title_in not in book_to_index: return "Not in vocab."
+    if str(title_in) not in book_to_index: return "Not in vocab."
     
     sims = words_compressed.dot(docs_compressed[int(book_to_index[title_in]),:])
     asort = np.argsort(-sims)[:k+1]
     print(asort)
-    return [(index_to_word[i],sims[i]/sims[asort[0]])for i in asort[1:]]
+    return [(index_to_word[str(i)],sims[i]/sims[asort[0]])for i in asort[1:]]
 
 # TODO : need to normalize the docs_compressed 
 @irsystem.route('/', methods=['GET'])
 def search():
 	###open the files
-	try:
-		index_to_word = json.load(open("index_to_word.json"))
-		index_to_book = json.load(open("index_to_book.json"))
-	except:
-		print("failed to do json")
-		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
-	try:
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-	except:
-		print("failed to do pkl")
-		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
+	#try:
+	#	index_to_word = json.load(open("index_to_word.json"))
+	#	index_to_book = json.load(open("index_to_book.json"))
+	#except:
+#		print("failed to do json")#
+	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
+	#try:
+	#	words_compressed = pickle.load(open("words.pkl", "rb"))
+	#	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+	#except:
+	#	print("failed to do pkl")
+	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
 
-	word_to_index = {value : key for key , value in index_to_word.items()}
-	book_to_index = {value : key for key , value in index_to_book.items()}
-
+	#word_to_index = {value : key for key , value in index_to_word.items()}
+	#book_to_index = {value : key for key , value in index_to_book.items()}
+	index_to_book = json.load(open("index_to_book.json"))
+	index_to_word = json.load(open("index_to_word.json"))	
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
@@ -68,8 +69,14 @@ def search():
 		word_cloud = []
 		top_books = []
 
-	#user clicked on keyword button. 
-	elif keyword_input is not None:
+	#user clicked on keyword button.  
+	# need for closest_books_to_words 
+	elif keyword_input is not None: 
+		words_compressed = pickle.load(open("words.pkl", "rb"))
+		docs_compressed = pickle.load(open("docs.pkl", "rb"))
+
+		word_to_index = {value : key for key , value in index_to_word.items()}	
+
 		word_cloud_message = ''
 		top_books_message = "Top ten books for the keyword are:"
 		word_cloud = []
@@ -77,18 +84,21 @@ def search():
 
 	#user cliked on title button.
 	else:
+		words_compressed = pickle.load(open("words.pkl", "rb"))
+		docs_compressed = pickle.load(open("docs.pkl", "rb"))
+		#index_to_book = json.load(open("index_to_book.json"))
+		#index_to_word = json.load(open("index_to_word.json"))	
+		book_to_index = {value : key for key , value in index_to_book.items()}
+
+
 		word_cloud_message = 'Word cloud is: '
 		top_books_message = ""
-		word_cloud = create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed)
+		word_cloud = create_books_to_wordcloud(title_input, index_to_word, book_to_index, words_compressed , docs_compressed)
 		top_books = []
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-
-
-
-
-
+  
 	#############inserting into the database#####################################################
 	# db.create_all()
 	# print(os.getcwd())
