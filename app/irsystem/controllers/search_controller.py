@@ -20,13 +20,14 @@ def search():
     # user inputs
     similar = request.args.get('similar')
     genres = request.args.get('genres')
-    release = request.args.get('release')
     acclaim = request.args.get('acclaim')
     castCrew = request.args.get('castCrew')
     keywords = request.args.get('keywords')
     duration = request.args.get('duration')
+    release_start = request.args.get('release_start')
+    release_end = request.args.get('release_end')
 
-    if not similar and not genres and not duration and not release and not acclaim and not castCrew and not keywords:
+    if not similar and not genres and not duration and not acclaim and not castCrew and not keywords and not release_start and not release_end:
         data = []
         output_message = ''
     else:
@@ -51,7 +52,7 @@ def search():
         if genres:
             genres_score = 10.0
             max_score += genres_score
-        if release:
+        if release_start and release_end:
             release_score = 10.0
             max_score += release_score
         if acclaim == "yes":
@@ -69,10 +70,10 @@ def search():
 
         # modify movie_dict and score_dict to account for the "duration" user input
         # assuming duration is in the form "90-180" rather than "180 - 90"
-        if release:
-            movie_dict, score_dict = user_release.main(movie_dict,score_dict,release,4,0)
         if duration:
-            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,10,0)
+            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
+        if release_start and release_end:
+            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score,0)
 
         for movie in score_dict:
             if similar:
@@ -102,7 +103,7 @@ def search():
                 if tmdb_score >= 7.0:
                     score_dict[movie] += tmdb_score / 10.0 * acclaim_score
                 else:
-                    score_dict[movie] -= max_score
+                    score_dict[movie] += tmdb_score / 20.0 * acclaim_score
             if castCrew:
                 cast = [member['name'] for member in movie_dict[movie]['cast']]
                 crew = [member['name'] for member in movie_dict[movie]['crew']]

@@ -1,11 +1,10 @@
 import scipy.stats
 
 def parse(inp):
-	if "-" in inp:
-		s = inp.split("-")
-		lst = [int(entry[:4].strip()) for entry in s]
+	if inp[0] != inp[1]:
+		lst = [int(entry[:4].strip()) for entry in inp]
 		return lst
-	return [int(inp[:4].strip())]
+	return [int(inp[0][:4].strip())]
 
 def filter_hard(movie_dict,score_dict,low_bound, high_bound):
 	rtn_movie = {}
@@ -44,4 +43,4 @@ def main(movie_dict,score_dict, inp, high_val,low_val):
 	vals = parse(inp)
 	if len(vals) == 2:
 		return filter_hard(movie_dict,score_dict,vals[0],vals[1])
-	return movie_dict,gaussian_score(movie_dict,score_dict,vals[0],high_val,low_val)
+	return movie_dict, gaussian_score(movie_dict,score_dict,vals[0],high_val,low_val)
