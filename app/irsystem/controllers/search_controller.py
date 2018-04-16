@@ -32,7 +32,7 @@ def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_comp
     print(asort)
     return [(index_to_word[i],sims[i]/sims[asort[0]])for i in asort[1:]]
 
-
+# TODO : need to normalize the docs_compressed 
 @irsystem.route('/', methods=['GET'])
 def search():
 	###open the files
@@ -43,8 +43,8 @@ def search():
 		print("failed to do json")
 		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
 	try:
-		words_compressed = pickle.load(open("words_compressed_no_stemming.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs_compressed_no_stemming.pkl", "rb"))
+		words_compressed = pickle.load(open("words.pkl", "rb"))
+		docs_compressed = pickle.load(open("docs.pkl", "rb"))
 	except:
 		print("failed to do pkl")
 		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
