@@ -126,10 +126,16 @@ def search():
 
         sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:20]
 
-        for movie_tuple in sorted_score_dict:
-            movie_id, movie_score = movie_tuple
-            movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
-            data.append(movie_dict[movie_id])
+        if max_score == 0:
+            for movie_tuple in sorted_score_dict:
+                movie_id, movie_score = movie_tuple
+                movie_dict[movie_id]['similarity'] = 0.0
+                data.append(movie_dict[movie_id])
+        else:
+            for movie_tuple in sorted_score_dict:
+                movie_id, movie_score = movie_tuple
+                movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
+                data.append(movie_dict[movie_id])
 
         output_message = "Your search has been processed."
 
