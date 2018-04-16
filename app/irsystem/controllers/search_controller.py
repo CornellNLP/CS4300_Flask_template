@@ -26,35 +26,47 @@ def closest_books_to_word(word_in, word_to_index, index_to_book, words_compresse
     return [(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
 
 def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed, k = 5):
-    if title_in not in book_to_index: return "Not in vocab."
+    if str(title_in) not in book_to_index: return "Not in vocab."
     
     sims = words_compressed.dot(docs_compressed[int(book_to_index[title_in]),:])
     asort = np.argsort(-sims)[:k+1]
     print(asort)
-    return [(index_to_word[i],sims[i]/sims[asort[0]])for i in asort[1:]]
+    return [(index_to_word[str(i)],sims[i]/sims[asort[0]])for i in asort[1:]]
+
+
+# Ability to add multiple words 
+
+def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_compressed , docs_compressed, k = 15):
+    msg = ""
+    sims = np.zeros(docs_compressed.shape[0])
+    count = 0
+    for w in word_in:
+        if w not in word_to_index: 
+        	msg = w + "is not in the vocab"
+        else:
+            count += 1
+            sims += docs_compressed.dot(words_compressed[int(word_to_index[w]),:])
+    if count == 0 : return "None of the words are in our vocab"
+    sims=sims/count
+    asort = np.argsort(-sims)[:k+1] 
+    lst = [(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
+    lst.append(msg)
+    return lst
+
 
 # TODO : need to normalize the docs_compressed 
 @irsystem.route('/', methods=['GET'])
 def search():
 	###open the files
-	# with zipfile.ZipFile('svd.zip', 'w') as svdzip : 
-	# 	ZipFile.open("index_to_word.json")
 
-	#try:
-	#	index_to_word = json.load(open("index_to_word.json"))
-	#	index_to_book = json.load(open("index_to_book.json"))
-	#except:
-	##	print("failed to do json")
-	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
-#	try:
-	#	words_compressed = pickle.load(open("words.pkl", "rb"))
-	#	docs_compressed = pickle.load(open("docs.pkl", "rb"))
-#	except:
-	#	print("failed to do pkl")
-	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
-	index_to_word = json.load(open("index_to_word.json"))
+	index_to_book = json.load(open("index_to_book.json"))
+	index_to_word = json.load(open("index_to_word.json"))	
+
 	word_to_index = {value : key for key , value in index_to_word.items()}
 	book_to_index = {value : key for key , value in index_to_book.items()}
+	words_compressed = pickle.load(open("words.pkl", "rb"))
+	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
@@ -72,33 +84,24 @@ def search():
 		word_cloud = []
 		top_books = []
 
-	#user clicked on keyword button. 
-	elif keyword_input is not None:
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-		
-		word_cloud_message = ''
-		top_books_message = "Top ten books for the keyword are:"
-		word_cloud = []
-		top_books = closest_books_to_word(keyword_input, word_to_index, index_to_book,words_compressed, docs_compressed)
 
-	#user cliked on title button.
+	elif keyword_input is not None: 
+		word_cloud_message = ''
+		top_books_message = "Top 15 books for the keyword are:"
+		word_cloud = []
+		lst = keyword_input.split(" ")
+
+		top_books = closest_books_to_many_words(lst, word_to_index, index_to_book,words_compressed, docs_compressed)
+
 	else:
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-		
 		word_cloud_message = 'Word cloud is: '
 		top_books_message = ""
-		word_cloud = create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed)
+		word_cloud = create_books_to_wordcloud(title_input, index_to_word, book_to_index, words_compressed , docs_compressed)
 		top_books = []
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-
-
-
-
-
+  
 	#############inserting into the database#####################################################
 	# db.create_all()
 	# print(os.getcwd())
