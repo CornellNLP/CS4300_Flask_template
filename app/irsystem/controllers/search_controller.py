@@ -84,7 +84,7 @@ def search():
         if duration:
             movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
         if release_start and release_end:
-            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score,0)
+            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
 
         for movie in score_dict:
             if similar:

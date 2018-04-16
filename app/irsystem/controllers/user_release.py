@@ -6,13 +6,13 @@ def parse(inp):
 		return lst
 	return [int(inp[0][:4].strip())]
 
-def filter_hard(movie_dict,score_dict,low_bound, high_bound):
+def filter_hard(movie_dict,score_dict,low_bound, high_bound, high_val):
 	rtn_movie = {}
 	rtn_score = {}
 	for movie in movie_dict:
 		if int(movie_dict[movie]['release_date'][:4]) >= low_bound and int(movie_dict[movie]['release_date'][:4]) <= high_bound:
 			rtn_movie[movie] = movie_dict[movie]
-			rtn_score[movie] = score_dict[movie]
+			rtn_score[movie] = score_dict[movie] + high_val
 	return rtn_movie,rtn_score
 
 # gaussian weighted appropriately: update the score_dict
@@ -42,5 +42,5 @@ def gaussian_score(movie_dict,score_dict,mean,high_val,low_val):
 def main(movie_dict,score_dict, inp, high_val,low_val):
 	vals = parse(inp)
 	if len(vals) == 2:
-		return filter_hard(movie_dict,score_dict,vals[0],vals[1])
+		return filter_hard(movie_dict,score_dict,vals[0],vals[1], high_val)
 	return movie_dict, gaussian_score(movie_dict,score_dict,vals[0],high_val,low_val)
