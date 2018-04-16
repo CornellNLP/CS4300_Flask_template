@@ -22,6 +22,7 @@ class Home extends Component {
 
 	handleSubmit(event){
 		this.getRelatedComments(this.state.value)
+		event.preventDefault();
 	}
 
 	getRelatedComments(input_query) {
