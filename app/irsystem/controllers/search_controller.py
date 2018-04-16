@@ -79,22 +79,9 @@ def search():
 	else:
 		output_message = "Top ten similar books to : " + title_input
 		data = topten_bk
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-
-@irsystem.route('/delete', methods=['GET'])
-def search():
 	db.reflect()
 	db.drop_all()
-	output_message = 'emptied out the database!'
-	data = ['really?', 'did you really though?']
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-
-@irsystem.route('/add', methods=['GET'])
-def search():
-	db.reflect()
-	db.drop_all()
-	output_message = 'emptied out the database!'
-	data = ['really?', 'did you really though?']
+	
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
 
