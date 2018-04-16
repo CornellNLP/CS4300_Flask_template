@@ -11,7 +11,7 @@ def render_homepage():
 	print("loading homepage")
 	# print(url_for('/'))
 	return render_template('index.html')
- 
+
 
 @app.route('/search', methods=['GET'])
 def search2():
@@ -61,6 +61,7 @@ def get_reddit_comment_as_json(id):
 	"""
 	comment = reddit.comment(id=id)
 	comment_json = {}
+	comment_json["id"] = id
 	comment_json["body"] = str(comment.body.encode('utf-8'))
 	comment_json["author"] = str(comment.author)
 	comment_json["score"] = comment.score

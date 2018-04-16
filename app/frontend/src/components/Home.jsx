@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import { getRelatedComments } from '../ReceiveAPI.js'
+import { Redirect } from 'react-router-dom'
+import axios from 'axios'
+
+import Result from './Result'
 
 class Home extends Component {
 	constructor(props){
 		super(props);
-		this.state = {value: ''};
+		this.state = {
+			value: '',
+			data : []
+		};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.getRelatedComments = this.getRelatedComments.bind(this)
 	}
 
 	handleChange(event){
@@ -15,28 +22,45 @@ class Home extends Component {
 	}
 
 	handleSubmit(event){
-		//putting an alert for now, should instead send api request on submit
-		// if (this.state.value == ""){
-		// 	alert('Empty Search Query');
-		// }else{
-		// 	alert('Your search was: ' + this.state.value);
-		// }
+		console.log(this.state.value)
 		event.preventDefault();
-		getRelatedComments(this.state.value)
+		this.getRelatedComments(this.state.value)
+	}
+
+	getRelatedComments(input_query) {
+		var arr = input_query.split(" ")
+		var qParams = arr.map(key =>key).join('&');
+		console.log('running related comments fetch')
+		axios.get('http://0.0.0.0:5000/search', {
+				params: { query: qParams }
+			})
+		.then(response => {
+			console.log(response)
+			this.setState({ data: response.data })
+		})
 	}
 
 
-
 	render() {
-	    return (
+		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
+    return (
+    	<div>
 	      <form>
 	      	<label>
 	      		<p className = "title">LEARNDDIT</p>
+	      		<span>
+	      		I want to learn...
 	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
+	      		</span>
 	      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
 	      	</label>
-	      	
 	      </form>
+	      {
+	      	data.map((comment, i) => {
+	      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
+	      	})
+	      }
+      </div>
 	    );
 	}
 }

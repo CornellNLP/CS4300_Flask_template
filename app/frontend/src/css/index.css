@@ -42,3 +42,40 @@ label{
 	font-weight: bold;
 	color: #5f99cf;
 }
+
+.comment {
+	margin: auto;
+	display: block;
+	width: 65%;
+	font-family: "Verdana";
+	border: 1px #ccc solid;
+	padding: 10px 30px;
+	/*margin: 10px 10px;*/
+}
+
+.comment-header {
+	font-size: 1px;
+}
+
+.author {
+	color: steelblue;
+}
+
+.score {
+	color: black;
+	font-weight: bold;
+}
+
+.votes {
+	color: darkgray;
+}
+
+a {
+	font-weight: bold;
+	color: gray;
+}
+
+a:hover {
+	font-weight: bold;
+	color: gray;
+}
