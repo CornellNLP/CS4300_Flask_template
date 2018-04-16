@@ -1,0 +1,7 @@
+wordnet
+pros_cons
+reuters
+maxent_treebank_pos_tagger
+universal_tagset
+punkt
+averaged_perceptron_tagger_ru
