@@ -49,11 +49,25 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+                <datalist id="castCrew_list">
+                    {% if castCrew_list %}
+                        {% for c in castCrew_list %}
+                            <option value='{{c}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <input id="input" type="text" class="form-control center" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <datalist id="keywords_list">
+                    {% if keywords_list %}
+                        {% for k in keywords_list %}
+                            <option value='{{k}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
               </div>
             </div>
             <div class="form-row">
@@ -100,7 +114,7 @@
             <h1>{{output_message}}</h1>
             {% for d in data %}
                 <br><br>
-                <p>Title: {{d['title']}}</p>
+                <p>Title: <strong>{{d['title']}}</strong></p>
                 <p>Similarity: {{d['similarity']}}%</p>
                 <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>

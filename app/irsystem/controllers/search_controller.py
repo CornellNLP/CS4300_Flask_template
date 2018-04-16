@@ -7,10 +7,21 @@ import user_release
 from random import *
 
 movies_json = json.load(open('app/static/data/movies.json'))
+movie_dict = dict()
+for movie in movies_json:
+    movie_dict[movie['id']] = json.load(open('app/static/data/movies/' + movie['id'] + '.json'))
 genres_json = json.load(open('genres.json'))
 movie_list = [movie['title'] for movie in movies_json]
 genre_list = [genre['name'] for genre in genres_json['genres']]
-year_lst = range(1900, 2019)
+castCrew_list = []
+for movie in movie_dict:
+    castCrew_list += ([member['name'] for member in movie_dict[movie]['cast']] + [member['name'] for member in movie_dict[movie]['crew']])
+castCrew_list = list(set(castCrew_list))
+keywords_list = []
+for movie in movie_dict:
+    keywords_list += movie_dict[movie]['keywords']
+keywords_list = list(set(keywords_list))
+year_list = range(1900, 2019)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -122,7 +133,7 @@ def search():
 
         output_message = "Your search has been processed."
 
-    return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, year_list= year_lst)
+    return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
 
 def parse_lst_str(lst_str):
     parsed = []
