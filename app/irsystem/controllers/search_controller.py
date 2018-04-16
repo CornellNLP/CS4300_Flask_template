@@ -18,18 +18,26 @@ def search2():
 	print('searching:')
 	# print(app.config['tf_idfs'])
 	query = str(request.args.get('query'))
-	print(query)
-	index = build_index(query)
-	results = index_search(query, index, app.config['idfs'], app.config['doc_norms'])
-	test = get_reddit_comment_as_json(results[0])
+	# print(query)
+
+
+	irrelevant_tokens = ['i','want','to','lean','how']
+	tokenizer = TreebankWordTokenizer()
+	tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
+	# print(query)
+	# print(tokens)
+
+	index = build_index(tokens)
+	results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
+	# test = get_reddit_comment_as_json(results[0])
 	# print(test)
 	# print(results)
 	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
 	return str(jsons)
 
-def build_index(input_string):
-	tokenizer = TreebankWordTokenizer()
-	tokens = tokenizer.tokenize(input_string.lower())
+def build_index(query_tokens):
+	tokens = query_tokens
+	print("got index tokens:" + str(tokens))
 	index = dict()
 	for token in tokens:
 		if token in app.config["valid_words"]:
@@ -53,51 +61,50 @@ def get_reddit_comment_as_json(id):
 	"""
 	comment = reddit.comment(id=id)
 	comment_json = {}
-	comment_json["body"] = str(comment.body.encode('utf-8'))
+	comment_json["body"] = str(comment.body.encode('ascii', 'replace'))
 	# comment_json["author"] = comment.author
-	# comment_json["score"] = comment.score
-	# comment_json["ups"] = comment.ups
-	# comment_json["downs"] = comment.downs
+	comment_json["score"] = comment.score
+	comment_json["ups"] = comment.ups
+	comment_json["downs"] = comment.downs
 	# comment_json["subreddit"] = comment.subreddit_name_prefixed
 	# comment_json["permalink"] = comment.permalink
-	# comment_json["gilded"] = comment.gilded
+	comment_json["gilded"] = comment.gilded
 	return comment_json
 
-def index_search(query, index, idf, doc_norms):
-    """ Search the collection of documents for the given query
+def index_search(query_tokens, index, idf, doc_norms):
+	""" Search the collection of documents for the given query
 
-      Arguments
-      =========
+		Arguments
+		=========
 
-      query: string,
-          The query we are looking for.
+		query: string,
+			The query we are looking for.
 
-      index: an inverted index as above
+		index: an inverted index as above
 
-      idf: idf values precomputed as above
+		idf: idf values precomputed as above
 
-      doc_norms: document norms as computed above
+		doc_norms: document norms as computed above
 
-      Returns
-      =======
+		Returns
+		=======
 
-      results, list of tuples (score, doc_id)
-          Sorted list of results such that the first element has
-          the highest score, and `doc_id` points to the document
-          with the highest score.
+		results, list of tuples (score, doc_id)
+			Sorted list of results such that the first element has
+			the highest score, and `doc_id` points to the document
+			with the highest score.
 
-      """
+		"""
+	tokens = query_tokens
+	print("Got tokens: " + str(tokens))
 
-    tokenizer = TreebankWordTokenizer()
-    tokens = tokenizer.tokenize(query.lower())
-    scores = defaultdict(int)
-    counts = Counter(tokens)
-    query_norm = np.linalg.norm(
+	scores = defaultdict(int)
+	counts = Counter(tokens)
+	query_norm = np.linalg.norm(
 		[val * idf[token] for (token, val) in counts.items() if token in idf])
 
-    for (token, query_count) in counts.items():
-        if token in idf:
-			print(list(index[token])[0])
+	for (token, query_count) in counts.items():
+		if token in idf and token in index:
 			for (doc_id, doc_count) in index[token].items():
 				scores[doc_id] += doc_count * \
 					(idf[token] ** 2) * query_count / \
@@ -105,4 +112,4 @@ def index_search(query, index, idf, doc_norms):
 
 	output = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 	print(output)
-    return [str(comment[0]) for comment in output]
+	return [str(comment[0]) for comment in output]
