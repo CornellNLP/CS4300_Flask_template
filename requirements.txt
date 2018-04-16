@@ -8,6 +8,7 @@ Flask-SocketIO==2.9.6
 Flask-SQLAlchemy==2.3.2
 gevent==1.2.2
 greenlet==0.4.13
+gunicorn
 itsdangerous==0.24
 Jinja2==2.10
 Mako==1.0.7
