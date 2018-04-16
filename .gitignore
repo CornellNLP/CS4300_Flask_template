@@ -4,3 +4,5 @@ migrations
 vagrant/.vagrant
 vagrant/site.retry
 vagrant/a4keypair.pem
+.DS_Store
+app/.DS_Sto

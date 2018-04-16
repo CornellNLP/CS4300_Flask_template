@@ -5,30 +5,37 @@
     </head>
     <body>
         <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+            <p>Project Name: BookRec </p>
+            <p>Student Name: <br>
+              Hannah Lee <br>
+              Linda Lu <br>
+              Hyun Kyo Jung  <br>
+              Seyun Kim </p>
         </div>
         <form class="form-inline global-search">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
+                B
+                <font color=#EA4335>OO</font>
+                <font color=#FBBC05>K</font>
+                R
+                <font color=#34A853>E</font>
+                <font color=#EA4335>C</font>
             </h1>
-            
+
             <br><br>
-            
+
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="title_search" class="form-control" placeholder="Input Book Title">
+            </div>
+            <div class="form-group">
+                <input id="input" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
-            {% for d in data %}  
+            {% for d in data %}
                 <br>
                 <p>{{d}}</p>
             {% endfor %}
