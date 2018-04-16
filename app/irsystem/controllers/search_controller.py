@@ -32,6 +32,25 @@ def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_comp
     print(asort)
     return [(index_to_word[str(i)],sims[i]/sims[asort[0]])for i in asort[1:]]
 
+
+# Ability to add multiple words 
+
+def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_compressed , docs_compressed, k = 15):
+    msg = ""
+    sims = np.zeros(docs_compressed.shape[0])
+    count = 0
+    for w in word_in:
+        if w not in word_to_index: 
+        	msg = w + "is not in the vocab"
+        else:
+            count += 1
+            sims += docs_compressed.dot(words_compressed[int(word_to_index[w]),:])
+    if count == 0 : return "None of the words are in our vocab"
+    sims=sims/count
+    asort = np.argsort(-sims)[:k+1]
+    return msg,[(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
+
+
 # TODO : need to normalize the docs_compressed 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -78,9 +97,11 @@ def search():
 		word_to_index = {value : key for key , value in index_to_word.items()}	
 
 		word_cloud_message = ''
-		top_books_message = "Top ten books for the keyword are:"
+		top_books_message = "Top 15 books for the keyword are:"
 		word_cloud = []
-		top_books = closest_books_to_word(keyword_input, word_to_index, index_to_book,words_compressed, docs_compressed)
+		lst = keyword_input.split(" ")
+		print(lst)
+		top_books = closest_books_to_many_words(lst, word_to_index, index_to_book,words_compressed, docs_compressed)
 
 	#user cliked on title button.
 	else:
@@ -89,7 +110,6 @@ def search():
 		#index_to_book = json.load(open("index_to_book.json"))
 		#index_to_word = json.load(open("index_to_word.json"))	
 		book_to_index = {value : key for key , value in index_to_book.items()}
-
 
 		word_cloud_message = 'Word cloud is: '
 		top_books_message = ""
