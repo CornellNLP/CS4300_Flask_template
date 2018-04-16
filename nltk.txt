@@ -5,7 +5,7 @@ cess_cat
 cess_esp
 cmudict
 comtrans
-comparative_senteces
+comparative_sentences
 conll2000
 conll2002
 conll2007
