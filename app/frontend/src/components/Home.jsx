@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getRelatedComments from '../ReceiveAPI.js'
+import { getRelatedComments } from '../ReceiveAPI.js'
 
 class Home extends Component {
 	constructor(props){
@@ -31,7 +31,7 @@ class Home extends Component {
 	    return (
 	      <form>
 	      	<label>
-	      		<p class = "title">LEARNDDIT</p>
+	      		<p className = "title">LEARNDDIT</p>
 	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
 	      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
 	      	</label>
