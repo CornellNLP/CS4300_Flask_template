@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>CinemaPop</title>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
         <link rel="stylesheet" href="/static/main.css">
@@ -142,11 +143,7 @@
                 </small>
                 </p>
                 <br>
-                <p>
-                {% if d['homepage']: %}
-                    Homepage: <a href ={{d['homepage']}}>Link</a>
-                {% endif %}
-                </p>
+                <p>IMDb Page: <a href ="http://www.imdb.com/title/{{d['id']}}">Link</a></p>
             {% endfor %}
         {% endif %}
         </form>
