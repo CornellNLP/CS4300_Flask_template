@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 import Result from './Result'
@@ -22,8 +21,6 @@ class Home extends Component {
 	}
 
 	handleSubmit(event){
-		console.log(this.state.value)
-		event.preventDefault();
 		this.getRelatedComments(this.state.value)
 	}
 
