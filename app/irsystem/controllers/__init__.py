@@ -14,9 +14,6 @@ from app import db
 # Marshmallow
 from marshmallow import ValidationError
 
-# Import socketio for socket creation in this module
-from app import socketio
-
 # Import module models
 from app.irsystem.models.comment import Comment
 

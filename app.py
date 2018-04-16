@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from app import app, socketio
 import pickle
 import os
@@ -20,6 +21,9 @@ from collections import defaultdict
 
 # def load_idfs():
 
+=======
+from app import app
+>>>>>>> frontend2
 
 if __name__ == "__main__":
   # load_index()  
@@ -33,4 +37,8 @@ if __name__ == "__main__":
   app.config['doc_norms'] = pickle.load(doc_norms_file)
 
   print "Flask app running at http://0.0.0.0:5000"
+<<<<<<< HEAD
   socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+=======
+  app.run(host="0.0.0.0", port=5000, debug=True)
+>>>>>>> frontend2
