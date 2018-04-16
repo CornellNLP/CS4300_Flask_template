@@ -44,7 +44,7 @@ def search():
 	#user has not inputted anything yet. 
 	if title_input in ["", None]:	 
 		book_list = [b.name for b in Book.query.all()]
-		print(book_list)
+		print(len(book_list))
 
 	#we got user input. Now, we can find similar books.
 	else : 
