@@ -23,6 +23,7 @@ class Home extends Component {
 		if (query) {
 			let parsed = queryString.parse(query)
 			this.getRelatedComments(parsed.query)
+			this.setState({value: parsed.query})
 		}
 	}
 
