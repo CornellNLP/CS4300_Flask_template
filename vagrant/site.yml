@@ -5,12 +5,12 @@
   remote_user: root
   become: true
   become_method: sudo
-  environment: 
+  environment:
     LC_ALL: en_US.UTF-8
     LANG: en_US.UTF-8
     LANGUAGE: en_US.UTF-8
   vars:
-      repository_url: https://github.com/CornellNLP/CS4300_Flask_template.git
+      repository_url: https://github.com/myo3/cs4300sp2018-myo3-evf23-mvi4-ztb5-jw975.git
       repository_path: /home/vagrant/CS4300_Flask_template
       dbname: mydb
       dbuser: myapp
@@ -19,12 +19,12 @@
     - name: Install necessary packages
       apt: update_cache=yes name={{ item }} state=present
       with_items:
-        - libatlas-base-dev 
-        - gfortran 
+        - libatlas-base-dev
+        - gfortran
         - g++
         - build-essential
-        - libssl-dev 
-        - libffi-dev 
+        - libssl-dev
+        - libffi-dev
         - python-dev
         - postgresql
         - libpq-dev

@@ -4,23 +4,6 @@ import os
 import flask
 from collections import defaultdict
 
-# def load_index():
-#   print("Loading Inverted Index")
-#   app.config['index'] = defaultdict(dict)
-#   for filename in os.listdir(os.getcwd() + "/app/utils/data"):
-#     # print(filename)
-#    		#print filename
-#     f = open(os.getcwd() + "/app/utils/data/" + filename,"rb")
-#     # print(f)
-#     d = pickle.load(f)
-#     # print(d)
-#     word_id = filename.split('.')[0]
-#     # print(word_id)
-#     app.config['index'][word_id] = d
-
-# def load_idfs():
-
-
 if __name__ == "__main__":
   # load_index()  
   valid_words_file = open(os.getcwd() + "/app/utils/words.pkl","rb")

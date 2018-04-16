@@ -1,5 +1,6 @@
 from . import *
 from app.irsystem.models.helpers import *
+<<<<<<< HEAD
 from app import reddit
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter, defaultdict
@@ -17,18 +18,26 @@ def search2():
 	print('searching:')
 	# print(app.config['tf_idfs'])
 	query = str(request.args.get('query'))
-	print(query)
-	index = build_index(query)
-	results = index_search(query, index, app.config['idfs'], app.config['doc_norms'])
-	test = get_reddit_comment_as_json(results[0])
+	# print(query)
+
+
+	irrelevant_tokens = ['i','want','to','lean','how']
+	tokenizer = TreebankWordTokenizer()
+	tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
+	# print(query)
+	# print(tokens)
+
+	index = build_index(tokens)
+	results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
+	# test = get_reddit_comment_as_json(results[0])
 	# print(test)
 	# print(results)
 	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
 	return json.dumps(jsons)
 
-def build_index(input_string):
-	tokenizer = TreebankWordTokenizer()
-	tokens = tokenizer.tokenize(input_string.lower())
+def build_index(query_tokens):
+	tokens = query_tokens
+	print("got index tokens:" + str(tokens))
 	index = dict()
 	for token in tokens:
 		if token in app.config["valid_words"]:
@@ -62,41 +71,40 @@ def get_reddit_comment_as_json(id):
 	comment_json["gilded"] = comment.gilded
 	return comment_json
 
-def index_search(query, index, idf, doc_norms):
-    """ Search the collection of documents for the given query
+def index_search(query_tokens, index, idf, doc_norms):
+	""" Search the collection of documents for the given query
 
-      Arguments
-      =========
+		Arguments
+		=========
 
-      query: string,
-          The query we are looking for.
+		query: string,
+			The query we are looking for.
 
-      index: an inverted index as above
+		index: an inverted index as above
 
-      idf: idf values precomputed as above
+		idf: idf values precomputed as above
 
-      doc_norms: document norms as computed above
+		doc_norms: document norms as computed above
 
-      Returns
-      =======
+		Returns
+		=======
 
-      results, list of tuples (score, doc_id)
-          Sorted list of results such that the first element has
-          the highest score, and `doc_id` points to the document
-          with the highest score.
+		results, list of tuples (score, doc_id)
+			Sorted list of results such that the first element has
+			the highest score, and `doc_id` points to the document
+			with the highest score.
 
-      """
+		"""
+	tokens = query_tokens
+	print("Got tokens: " + str(tokens))
 
-    tokenizer = TreebankWordTokenizer()
-    tokens = tokenizer.tokenize(query.lower())
-    scores = defaultdict(int)
-    counts = Counter(tokens)
-    query_norm = np.linalg.norm(
+	scores = defaultdict(int)
+	counts = Counter(tokens)
+	query_norm = np.linalg.norm(
 		[val * idf[token] for (token, val) in counts.items() if token in idf])
 
-    for (token, query_count) in counts.items():
-        if token in idf:
-			print(list(index[token])[0])
+	for (token, query_count) in counts.items():
+		if token in idf and token in index:
 			for (doc_id, doc_count) in index[token].items():
 				scores[doc_id] += doc_count * \
 					(idf[token] ** 2) * query_count / \
@@ -104,4 +112,21 @@ def index_search(query, index, idf, doc_norms):
 
 	output = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 	print(output)
-    return [str(comment[0]) for comment in output]
+	return [str(comment[0]) for comment in output]
+=======
+from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+
+project_name = "learnddit"
+net_id = "Monica Ong (myo), Eric Feng (evf23), Michelle Ip (mvi4), Zachary Brody (ztb5), Jill Wu (jw975)"
+
+@irsystem.route('/search', methods=['GET'])
+def search():
+	query = request.args.get('search')
+	if not query:
+		data = []
+		output_message = ''
+	else:
+		output_message = "Your search: " + query
+		data = range(5)
+	# return render_template('index.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+>>>>>>> frontend2
