@@ -8,7 +8,8 @@ class Home extends Component {
 		super(props);
 		this.state = {
 			value: '',
-			data : []
+			data : [],
+			loading : false
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -26,6 +27,7 @@ class Home extends Component {
 	}
 
 	getRelatedComments(input_query) {
+		this.setState({loading: true})
 		var arr = input_query.split(" ")
 		var qParams = arr.map(key =>key).join('&');
 		console.log('running related comments fetch')
@@ -34,7 +36,10 @@ class Home extends Component {
 			})
 		.then(response => {
 			console.log(response)
-			this.setState({ data: response.data })
+			this.setState({
+				data: response.data,
+				loading: false
+			})
 		})
 	}
 
@@ -54,9 +59,10 @@ class Home extends Component {
 	      	</label>
 	      </form>
 	      {
-	      	data.map((comment, i) => {
+	      	this.state.loading ? (<div class="loader"></div>) :
+	      	(data.map((comment, i) => {
 	      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
-	      	})
+	      	}))
 	      }
       </div>
 	    );
