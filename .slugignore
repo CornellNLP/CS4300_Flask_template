@@ -1,0 +1,14 @@
+app/
+vagrant/
+runtime.txt
+Procfile
+.gitignore
+app.py
+.env
+nltk.txt
+manage.py
+config.py
+requirements.txt
+Vagrantfile
+README.md
+
