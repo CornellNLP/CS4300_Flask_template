@@ -3,6 +3,7 @@ import numpy as np
 import pickle 
 import numpy as np 
 import json
+#import zipfile
 #import Collections 
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
@@ -36,19 +37,22 @@ def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_comp
 @irsystem.route('/', methods=['GET'])
 def search():
 	###open the files
-	try:
-		index_to_word = json.load(open("index_to_word.json"))
-		index_to_book = json.load(open("index_to_book.json"))
-	except:
-		print("failed to do json")
-		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
-	try:
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-	except:
-		print("failed to do pkl")
-		return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
+	# with zipfile.ZipFile('svd.zip', 'w') as svdzip : 
+	# 	ZipFile.open("index_to_word.json")
 
+	#try:
+	#	index_to_word = json.load(open("index_to_word.json"))
+	#	index_to_book = json.load(open("index_to_book.json"))
+	#except:
+	##	print("failed to do json")
+	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
+#	try:
+	#	words_compressed = pickle.load(open("words.pkl", "rb"))
+	#	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+#	except:
+	#	print("failed to do pkl")
+	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
+	index_to_word = json.load(open("index_to_word.json"))
 	word_to_index = {value : key for key , value in index_to_word.items()}
 	book_to_index = {value : key for key , value in index_to_book.items()}
 
@@ -70,6 +74,9 @@ def search():
 
 	#user clicked on keyword button. 
 	elif keyword_input is not None:
+		words_compressed = pickle.load(open("words.pkl", "rb"))
+		docs_compressed = pickle.load(open("docs.pkl", "rb"))
+		
 		word_cloud_message = ''
 		top_books_message = "Top ten books for the keyword are:"
 		word_cloud = []
@@ -77,6 +84,9 @@ def search():
 
 	#user cliked on title button.
 	else:
+		words_compressed = pickle.load(open("words.pkl", "rb"))
+		docs_compressed = pickle.load(open("docs.pkl", "rb"))
+		
 		word_cloud_message = 'Word cloud is: '
 		top_books_message = ""
 		word_cloud = create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed)
