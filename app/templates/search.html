@@ -98,31 +98,24 @@
           </form>
         </div>
         <form class="form-inline global-search">
-                {% if data %}
+        {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}
                 <br><br>
                 <p>Title: {{d['title']}}</p>
-                <br>
                 <p>Similarity: {{d['similarity']}}%</p>
-                <br>
                 <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>
                 <p>Synopsis: {{d['summary']}}</p>
-                <br>
                 <p>Genres:
                 {% for g in d['genres'][:-1] %}
                     {{g}},
                 {% endfor %}
                 {{d['genres'][-1]}}
                 </p>
-                <br>
                 <p>Duration: {{d['runtime']}} min</p>
-                <br>
                 <p>Release Date: {{d['release_date']}}</p>
-                <br>
                 <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
-                <br>
                 <p>Cast:
                 <br>
                 <small>
@@ -132,7 +125,6 @@
                 {% endfor %}
                 </small>
                 </p>
-                <br>
                 <p>Crew:
                 <br>
                 <small>
@@ -142,7 +134,6 @@
                 {% endfor %}
                 </small>
                 </p>
-                <br>
                 <p>IMDb Page: <a href ="http://www.imdb.com/title/{{d['id']}}">Link</a></p>
             {% endfor %}
         {% endif %}
