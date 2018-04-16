@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import queryString from 'query-string'
 
 import Result from './Result'
 
@@ -15,6 +16,14 @@ class Home extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getRelatedComments = this.getRelatedComments.bind(this)
+	}
+
+	componentWillMount(){
+		let query = this.props.location.search
+		if (query) {
+			let parsed = queryString.parse(query)
+			this.getRelatedComments(parsed.query)
+		}
 	}
 
 	handleChange(event){
@@ -59,7 +68,7 @@ class Home extends Component {
 	      	</label>
 	      </form>
 	      {
-	      	this.state.loading ? (<div class="loader"></div>) :
+	      	this.state.loading ? (<div className="loader"></div>) :
 	      	(data.map((comment, i) => {
 	      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
 	      	}))
