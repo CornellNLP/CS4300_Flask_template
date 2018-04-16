@@ -54,7 +54,8 @@ label{
 }
 
 .comment-header {
-	font-size: 1px;
+	font-size: 13px;
+	margin-bottom: 5px;
 }
 
 .author {
@@ -71,6 +72,7 @@ label{
 }
 
 a {
+	font-size: 13px;
 	font-weight: bold;
 	color: gray;
 }

@@ -19,6 +19,7 @@ class Home extends Component {
 	}
 
 	componentWillMount(){
+		console.log(this.props)
 		let query = this.props.location.search
 		if (query) {
 			let parsed = queryString.parse(query)
@@ -32,8 +33,13 @@ class Home extends Component {
 	}
 
 	handleSubmit(event){
-		this.getRelatedComments(this.state.value)
+		let query = '?query=' + this.state.value
 		event.preventDefault();
+		this.props.history.push({
+		  pathname: '/',
+		  search: query
+		})
+		this.getRelatedComments(this.state.value)
 	}
 
 	getRelatedComments(input_query) {
