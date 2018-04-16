@@ -3,6 +3,7 @@ import numpy as np
 import pickle 
 import numpy as np 
 import json
+#import zipfile
 #import Collections 
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
@@ -57,23 +58,16 @@ def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_com
 @irsystem.route('/', methods=['GET'])
 def search():
 	###open the files
-	#try:
-	#	index_to_word = json.load(open("index_to_word.json"))
-	#	index_to_book = json.load(open("index_to_book.json"))
-	#except:
-#		print("failed to do json")#
-	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud json', top_books_message='opening json files crashed', word_cloud=[], top_books = [])
-	#try:
-	#	words_compressed = pickle.load(open("words.pkl", "rb"))
-	#	docs_compressed = pickle.load(open("docs.pkl", "rb"))
-	#except:
-	#	print("failed to do pkl")
-	#	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='cloud pkl', top_books_message='opening pkl files crashed', word_cloud=[], top_books = [])
 
-	#word_to_index = {value : key for key , value in index_to_word.items()}
-	#book_to_index = {value : key for key , value in index_to_book.items()}
 	index_to_book = json.load(open("index_to_book.json"))
 	index_to_word = json.load(open("index_to_word.json"))	
+
+	word_to_index = {value : key for key , value in index_to_word.items()}
+	book_to_index = {value : key for key , value in index_to_book.items()}
+	words_compressed = pickle.load(open("words.pkl", "rb"))
+	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+
+
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
@@ -90,29 +84,16 @@ def search():
 		word_cloud = []
 		top_books = []
 
-	#user clicked on keyword button.  
-	# need for closest_books_to_words 
+
 	elif keyword_input is not None: 
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-
-		word_to_index = {value : key for key , value in index_to_word.items()}	
-
 		word_cloud_message = ''
 		top_books_message = "Top 15 books for the keyword are:"
 		word_cloud = []
 		lst = keyword_input.split(" ")
-		print(lst)
+
 		top_books = closest_books_to_many_words(lst, word_to_index, index_to_book,words_compressed, docs_compressed)
 
-	#user cliked on title button.
 	else:
-		words_compressed = pickle.load(open("words.pkl", "rb"))
-		docs_compressed = pickle.load(open("docs.pkl", "rb"))
-		#index_to_book = json.load(open("index_to_book.json"))
-		#index_to_word = json.load(open("index_to_word.json"))	
-		book_to_index = {value : key for key , value in index_to_book.items()}
-
 		word_cloud_message = 'Word cloud is: '
 		top_books_message = ""
 		word_cloud = create_books_to_wordcloud(title_input, index_to_word, book_to_index, words_compressed , docs_compressed)
