@@ -57,23 +57,25 @@ def search():
 		usr_bk_idx = usr_bk.index
 		usr_bk_name = usr_bk.name
 
-		all_bks = TFIDF.query.filter_by(RowNo = usr_bk_idx).all()
+		# all_bks = TFIDF.query.filter_by(RowNo = usr_bk_idx).all()
 
-		cos_sim_list = []
-		for bk in all_bks:
-			cos_sim_list.append(bk.CellValue)
+		# cos_sim_list = []
+		# for bk in all_bks:
+		# 	cos_sim_list.append(bk.CellValue)
 
-		nparray = np.asarray(cos_sim_list)
-		sortedarray = np.argsort(nparray)[::-1]
-		topten = sortedarray[:10]  
+		# nparray = np.asarray(cos_sim_list)
+		# sortedarray = np.argsort(nparray)[::-1]
+		# topten = sortedarray[:10]  
 
-		topten_bk = []
-		for i in topten : 
-			ith_sim_bk = Book.query.filter_by(index = i).first()
-			topten_bk.append((ith_sim_bk.name, cos_sim_list[i]))
+		# topten_bk = []
+		# for i in topten : 
+		# 	ith_sim_bk = Book.query.filter_by(index = i).first()
+		# 	topten_bk.append((ith_sim_bk.name, cos_sim_list[i]))
+
+		topten_bk = [1,2,3,4,5]
 
 	if title_input not in book_list:
-		data = []
+		data = [1,2,3]
 		output_message = 'the book not in the database'
 	else:
 		output_message = "Top ten similar books to : " + title_input
