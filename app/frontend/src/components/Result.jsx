@@ -7,6 +7,10 @@ class Result extends Component {
   }
 
   render() {
-    return (<div><p>{this.props.body}</p></div>);
+    return (
+      <div><p>{this.props.body}</p></div>
+    );
   }
 }
+
+export default Result;

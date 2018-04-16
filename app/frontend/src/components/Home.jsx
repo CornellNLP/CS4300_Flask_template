@@ -15,6 +15,8 @@ class Home extends Component {
 
 	handleUpdateResults(results_JSON) {
 		this.setState({results: results_JSON});
+		console.log('updating results')
+		console.dir(this.state.results)
 	}
 
 	handleChange(event){
@@ -46,12 +48,13 @@ class Home extends Component {
 			
 				</form>
 				<div id = "results_section">
-					{/* {
+					{
 						this.state.results.map(result => {
-							<Result />
+							console.log('happening');
+							return <Result body={result.body} key={result.permalink}/>
 						})
-					} */}
-					<Result body={"test"}/>
+					}
+					{/* <Result body={"}/> */}
 				</div>
 			</div>
 	    );
