@@ -56,7 +56,6 @@ h3 {font-family: 'Rajdhani', sans-serif;
 .logo_band {
   width: 100%;
   background-image: url("/static/film_background_3.png");
-  height: 100%;
 }
 
 .logo {
@@ -72,7 +71,6 @@ h3 {font-family: 'Rajdhani', sans-serif;
 
 
 .center {
-  color: white;
   text-align: center;
   margin-left:auto;
   margin-right:auto;
