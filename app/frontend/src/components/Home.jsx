@@ -29,7 +29,11 @@ class Home extends Component {
 		var arr = input_query.split(" ")
 		var qParams = arr.map(key =>key).join('&');
 		console.log('running related comments fetch')
+<<<<<<< HEAD
 		axios.get('http://0.0.0.0/search', {
+=======
+		axios.get('https://0.0.0.0:5000/search', {
+>>>>>>> parent of c8c9186b5f... temporarily revert back to http
 				params: { query: qParams }
 			})
 		.then(response => {
