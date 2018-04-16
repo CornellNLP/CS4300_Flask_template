@@ -1,4 +1,4 @@
-import praw
+import praw, pickle
 # Gevent needed for sockets
 from gevent import monkey
 monkey.patch_all()
