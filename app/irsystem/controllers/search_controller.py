@@ -1,5 +1,10 @@
 from . import *  
 import numpy as np 
+import pickle 
+import numpy as np 
+import json
+#import Collections 
+from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 ####
@@ -13,8 +18,71 @@ project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
 
+def closest_books_to_word(word_in, word_to_index, index_to_book, words_compressed, docs_compressed, k = 15):
+    if word_in not in word_to_index: return "Not in vocab." 
+    sims = docs_compressed.dot(words_compressed[int(word_to_index[word_in]),:])
+    asort = np.argsort(-sims)[:k+1]
+    return [(index_to_book[str(i)],sims[i]/sims[asort[0]]) for i in asort[1:]]
+
+def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed, k = 5):
+    if title_in not in book_to_index: return "Not in vocab."
+    
+    sims = words_compressed.dot(docs_compressed[int(book_to_index[title_in]),:])
+    asort = np.argsort(-sims)[:k+1]
+    print(asort)
+    return [(index_to_word[i],sims[i]/sims[asort[0]])for i in asort[1:]]
+
+
 @irsystem.route('/', methods=['GET'])
 def search():
+	###open the files
+
+	words_compressed = pickle.load(open("words_compressed_no_stemming.pkl", "rb"))
+	docs_compressed = pickle.load(open("docs_compressed_no_stemming.pkl", "rb"))
+
+	index_to_word = json.load(open("index_to_word.json"))
+	index_to_book = json.load(open("index_to_book.json"))
+
+	word_to_index = {value : key for key , value in index_to_word.items()}
+	book_to_index = {value : key for key , value in index_to_book.items()}
+
+	title_input = request.args.get('title_search')
+	keyword_input = request.args.get('keyword_search')
+
+	#ALWAYS NEED THESE
+	#word_cloud_message =
+	#top_books_message = 
+	#word_cloud =
+	#top_books = 
+
+	#initial
+	if title_input == None and keyword_input == None:
+		word_cloud_message = ''
+		top_books_message =  ''
+		word_cloud = []
+		top_books = []
+
+	#user clicked on keyword button. 
+	elif keyword_input is not None:
+		word_cloud_message = ''
+		top_books_message = "Top ten books for the keyword are:"
+		word_cloud = []
+		top_books = closest_books_to_word(keyword_input, word_to_index, index_to_book,words_compressed, docs_compressed)
+
+	#user cliked on title button.
+	else:
+		word_cloud_message = 'Word cloud is: '
+		top_books_message = ""
+		word_cloud = create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_compressed , docs_compressed)
+		top_books = []
+
+	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+
+
+
+
+
+
 	#############inserting into the database#####################################################
 	# db.create_all()
 	# print(os.getcwd())
@@ -37,54 +105,6 @@ def search():
 	# 		r += 1
 	# db.session.commit()
 	#############################################################################################
-
-	book_list = [book.name for book in Book.query.all()]
-	print(len(book_list))
-
-	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search')
-
-	#user has not inputted anything yet. 
-	if title_input not in book_list:	 
-		output_message = 'the book not in the database'
-
-	#we got user input. Now, we can find similar books.
-	else : 
-		print("user input is %s" % (title_input)) 
-
-		# usr_bk = Book.query.filter_by(name = title_input).first()
-		# usr_bk_idx = usr_bk.index
-		# usr_bk_name = usr_bk.name
-
-		# all_bks = TFIDF.query.filter_by(RowNo = usr_bk_idx).all()
-
-		# cos_sim_list = []
-		# for bk in all_bks:
-		# 	cos_sim_list.append(bk.CellValue)
-
-		# nparray = np.asarray(cos_sim_list)
-		# sortedarray = np.argsort(nparray)[::-1]
-		# topten = sortedarray[:10]  
-
-		# topten_bk = []
-		# for i in topten : 
-		# 	ith_sim_bk = Book.query.filter_by(index = i).first()
-		# 	topten_bk.append((ith_sim_bk.name, cos_sim_list[i]))
-
-		topten_bk = [1,2,3,4,5]
-
-	if title_input not in book_list:
-		data = [1,2,3]
-		output_message = 'the book not in the database'
-	else:
-		output_message = "Top ten similar books to : " + title_input
-		data = topten_bk
-	
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
-
-
-
-###todo1. change tfidf model to cosine sim model.
 
 
 
