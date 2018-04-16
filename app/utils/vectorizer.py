@@ -4,7 +4,6 @@ import string
 import time
 import os
 import sys
-import enchant
 import pickle
 import nltk
 import re
@@ -23,7 +22,6 @@ start_time = int(time.time())
 
 tokenizer = TreebankWordTokenizer()
 stop_words = set(stopwords.words('english'))
-d = enchant.Dict("en_US")
 
 numbers = re.compile("\d+")
 

@@ -48,7 +48,6 @@ prawcore==0.14.0
 psycopg2==2.7.4
 pycodestyle==2.4.0
 pycparser==2.14
-pyenchant==2.0.0
 PyJWT==1.4.0
 pylint==1.8.4
 pyparsing==2.2.0
