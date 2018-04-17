@@ -40,7 +40,7 @@
             Similar Movies:
             <br>
             <div class="form-group" id="movie_selector">
-                <input id="similar_movies" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie name">
+                <input id="similar_movies" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie name" data-role="tagsinput">
                 <datalist id="movie_list">
                     {% if movie_list %}
                         {% for m in movie_list %}
