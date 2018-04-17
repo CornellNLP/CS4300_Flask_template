@@ -66,7 +66,7 @@ class Home extends Component {
     	<div>
 	      <form>
 	      	<label>
-	      		<p className = "title">LEARNDDIT</p>
+	      		<p className = "title">learnddit</p>
 	      		<span>
 	      		I want to learn...
 	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
