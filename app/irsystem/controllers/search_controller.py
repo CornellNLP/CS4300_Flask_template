@@ -84,7 +84,6 @@ def vote_score_agree_with_party(votes):
 		#If independent, simply return 0?
 	return round((total_agree-len(votes))/(total_party_votes-len(votes)), 2)
 	
-
 def tokenizer_custom(tweet):
     token = TweetTokenizer()
     stemmer = PorterStemmer()
