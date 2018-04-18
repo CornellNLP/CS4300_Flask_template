@@ -4,7 +4,11 @@
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
         <link rel="stylesheet" href="/static/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/static/custom.js"></script>
         <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
         <style>
           body {
             background-color: #f9dbe7;
@@ -22,10 +26,10 @@
     <body>
         <div class="logo_band">
           <img class="logo" src= "/static/logo_white.png" alt="CinemaPop"></img>
-          <form class="global-search" style="width: 100%">
+          <form class="global-search custom-form" style="width: 100%">
             <div class="form-row ">
               <div class="form-group col-md-6">
-                <label class="tags center">Similar Movies (separated by semicolons):</label>
+                <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
                 <input id="similar_movies" class="form-control center" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
                 <datalist id="movie_list">
                     {% if movie_list %}
@@ -45,7 +49,7 @@
                         {% endfor %}
                     {% endif %}
               </div>
-            </div>
+            </div><br>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
@@ -60,7 +64,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <span></span>
                 <datalist id="keywords_list">
                     {% if keywords_list %}
                         {% for k in keywords_list %}
@@ -70,14 +75,15 @@
                 </datalist>
               </div>
             </div>
+            <br>
             <div class="form-row">
               <div class="form-group col-md-6">
                   <label class="tags center">Duration (in minutes):</label>
                   <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)">
               </div>
-              <div class="form-group col-md-6 center">
+              <div class="form-group col-md-6 center tags">
                 <div class="form-row">
-                  <label class="tags">Range of Release Years:</label>
+                  <label >Range of Release Years:</label>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -104,7 +110,7 @@
               <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
             </div>
             <br>
-            <div class="form-group center">
+            <div class="form-group tags center">
               <button type="submit" class="btn btn-info"> Get Recommendations </button>
             </div>
           </form>

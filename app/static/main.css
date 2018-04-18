@@ -30,6 +30,24 @@ border: none
 color: #4285F4;
 }
 
+.form-control {
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-radius: 0;
+  -webkit-transition: border-color 0.5s fast; /* Safari */
+  transition: all 450ms cubic-beziar(0.23, 1, 0.32, 1) 0ms;
+}
+
+.form-control:focus {
+
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 h1 {font-family: 'Rubik Mono One', sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -67,18 +85,22 @@ h3 {font-family: 'Rajdhani', sans-serif;
 
 .tags{
   color: white;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.9;
 }
 
 
 .center {
-  text-align: center;
   margin-left:auto;
   margin-right:auto;
   display:block;
+  color: white;
 }
-/* .form-row {
-  margin-bottom: 8%;
-} */
 
 /* footer */
 .footer {
