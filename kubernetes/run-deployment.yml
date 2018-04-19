@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask
+  labels:
+    name: flask
+spec:
+  containers:
+  - name: flask
+    image: ifilonenko/flask-template:v3
+    env:
+    - name: APP_SETTINGS
+      value: config.ProductionConfig
+    - name: DATABASE_URL
+      value: postgresql://localhost/my_app_db
+    ports:
+    - containerPort: 5000
