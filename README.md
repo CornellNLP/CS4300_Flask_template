@@ -6,6 +6,7 @@ This Flask app template is intended to get you started with your project and lau
 ### [Step-By-Step](#step-by-step-guide)
 ### [Post-Setup-Getting-Started](#getting-started)
 ### [AWS Deployment](#deploy-to-ec2-quick)
+### [KUBERNETES Deployment](#google-cloud-db-docker-kubernetes)
 ## Overview of the project and Introduction to Flask
 This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern.
 
