@@ -91,14 +91,14 @@ h3 {font-family: 'Rajdhani', sans-serif;
 
 input::placeholder {
   color: white;
-  opacity: 0.9;
+  opacity: 1.0;
 }
 
 .center {
   margin-left:auto !important;
   margin-right:auto !important;
   display:block !important;
-  color: white;
+  color: white !important;
 }
 
 /* footer */

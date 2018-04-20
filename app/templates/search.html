@@ -11,8 +11,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
-        <link rel="stylesheet" href="/static/main.css">
         <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/main.css">
+
         <style>
           body {
           }
@@ -118,7 +119,7 @@
             </div>
           </form>
         </div>
-        {% if data %}
+        <!-- {% if data %}
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-keyboard="true">
         <div class="carousel-inner" style="height: 500px;">
           <div class="carousel-item active">
@@ -139,7 +140,48 @@
     <span class="sr-only">Next</span>
   </a>
     </div>
+    {% endif %} -->
+    <form class="form-inline global-search">
+    {% if data %}
+        <h1>{{output_message}}</h1>
+        {% for d in data %}
+            <br><br>
+            <p>Title: <strong>{{d['title']}}</strong></p>
+            <p>Similarity: {{d['similarity']}}%</p>
+            <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
+            <br>
+            <p>Synopsis: {{d['summary']}}</p>
+            <p>Genres:
+            {% for g in d['genres'][:-1] %}
+                {{g}},
+            {% endfor %}
+            {{d['genres'][-1]}}
+            </p>
+            <p>Duration: {{d['runtime']}} min</p>
+            <p>Release Date: {{d['release_date']}}</p>
+            <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
+            <p>Cast:
+            <br>
+            <small>
+            {% for c in d['cast'] %}
+                {{c['name']}} as {{c['character']}}
+                <br>
+            {% endfor %}
+            </small>
+            </p>
+            <p>Crew:
+            <br>
+            <small>
+            {% for c in d['crew'] %}
+                {{c['job']}}: {{c['name']}}
+                <br>
+            {% endfor %}
+            </small>
+            </p>
+            <p>IMDb Page: <a href ="http://www.imdb.com/title/{{d['id']}}">Link</a></p>
+        {% endfor %}
     {% endif %}
+    </form>
 
 
         <div class="footer">
