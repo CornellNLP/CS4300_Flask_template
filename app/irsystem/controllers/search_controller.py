@@ -32,7 +32,7 @@ def search2():
 	# test = get_reddit_comment_as_dict(results[0])
 	# print(test)
 	# print(results)
-	# jsons = [get_reddit_comment_as_dict(result) for result in results[:10]]
+
 	return json.dumps(results)
 
 def build_index(query_tokens):
@@ -62,18 +62,21 @@ def get_reddit_comment_as_dict(id):
 	comment = Comment.query.filter_by(comment_id=id).first()
 	if comment is None:
 		return None
-	comment_json = {}
-	comment_json["id"] = id
-	comment_json["body"] = comment.body
-	comment_json["author"] = comment.author
-	comment_json["score"] = comment.score
-	comment_json["ups"] = comment.upvotes
-	comment_json["downs"] = comment.downvotes
-	comment_json["subreddit"] = comment.subreddit
-	comment_json["permalink"] = "t1_" + comment.comment_id
-	comment_json["gilded"] = comment.gilded
-	comment_json["link_id"] = comment.link_id
-	return comment
+	return cvt_Comment_to_dict(comment)
+
+def cvt_Comment_to_dict(comment):
+	comment_dict = {}
+	comment_dict["id"] = comment.comment_id
+	comment_dict["body"] = comment.body
+	comment_dict["author"] = comment.author
+	comment_dict["score"] = comment.score
+	comment_dict["ups"] = comment.upvotes
+	comment_dict["downs"] = comment.downvotes
+	comment_dict["subreddit"] = comment.subreddit
+	comment_dict["permalink"] = "t1_" + comment.comment_id
+	comment_dict["gilded"] = comment.gilded
+	comment_dict["link_id"] = comment.link_id
+	return comment_dict
 
 def index_search(query_tokens, index, idf, doc_norms):
 	""" Search the collection of documents for the given query
@@ -99,10 +102,11 @@ def index_search(query_tokens, index, idf, doc_norms):
 			with the highest score.
 
 		"""
-	score_norm = { "iwanttolearn" : 2, "explainlikeimfive" : 0.5 }
+	score_norm = { "iwanttolearn" : 75, "explainlikeimfive" : 0.25 } # arbitrary score
 	tokens = query_tokens
 	print("Got tokens: " + str(tokens))
 
+	# regular cos-sim without doc_normalization
 	scores = defaultdict(int)
 	counts = Counter(tokens)
 	query_norm = np.linalg.norm(
@@ -115,8 +119,37 @@ def index_search(query_tokens, index, idf, doc_norms):
 					(idf[token] ** 2) * query_count / \
 					(query_norm + 1)
 
-	# scores now contains the initial tf-idf values
+	# will map comment ids to the comment dicts
+	id_to_comment = {}
 
-	output = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-	print(output)
-	return [str(comment[0]) for comment in output]
+	# get all comments from DB from a list of keys
+	comment_objs = Comment.query.filter(Comment.comment_id.in_(scores.keys())).all()
+
+	# create the mapping
+	for comment_obj in comment_objs:
+		comment_obj = cvt_Comment_to_dict(comment_obj)
+		id_to_comment[comment_obj["id"]] = comment_obj
+
+	# factor in comment scores in the scoring
+	for doc_id in scores:
+		# if comment_id is not in DB for some reason, get rid of it
+		if doc_id not in id_to_comment:
+			scores[doc_id] = -1
+			continue
+
+		comment = id_to_comment[doc_id]
+
+		subreddit = comment["subreddit"].lower()
+		scores[doc_id] *= comment["score"] * score_norm[subreddit]
+		scores[doc_id] += comment["ups"] * score_norm[subreddit]
+		scores[doc_id] -= comment["downs"] * score_norm[subreddit]
+
+	# get rid of all doc ids not in the DB
+	filtered_scores = {}
+	for doc_id in scores:
+		if (scores[doc_id] > 0):
+			filtered_scores[doc_id] = scores[doc_id]
+
+	output = sorted(filtered_scores.items(), key=lambda x: x[1], reverse=True)[:20]
+
+	return [id_to_comment[str(comment[0])] for comment in output]
