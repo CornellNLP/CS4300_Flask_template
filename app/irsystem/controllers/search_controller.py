@@ -1,6 +1,6 @@
 from . import *
 from app.irsystem.models.helpers import *
-from app import reddit
+from app.irsystem.models.comment import Comment
 from nltk.tokenize import TreebankWordTokenizer
 from collections import Counter, defaultdict
 from app import app
@@ -29,11 +29,11 @@ def search2():
 
 	index = build_index(tokens)
 	results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
-	# test = get_reddit_comment_as_json(results[0])
+	# test = get_reddit_comment_as_dict(results[0])
 	# print(test)
 	# print(results)
-	jsons = [get_reddit_comment_as_json(result) for result in results[:10]]
-	return json.dumps(jsons)
+	# jsons = [get_reddit_comment_as_dict(result) for result in results[:10]]
+	return json.dumps(results)
 
 def build_index(query_tokens):
 	tokens = query_tokens
@@ -51,7 +51,7 @@ def build_index(query_tokens):
 			index[token] = d
 	return index
 
-def get_reddit_comment_as_json(id):
+def get_reddit_comment_as_dict(id):
 	print("ID: " + str(id))
 	"""
 	Given a comment id, queries reddit API for the info and
@@ -59,18 +59,21 @@ def get_reddit_comment_as_json(id):
 	score, upvotes/downvotes, subreddit, its permalink and
 	the number of gilds it has
 	"""
-	comment = reddit.comment(id=id)
+	comment = Comment.query.filter_by(comment_id=id).first()
+	if comment is None:
+		return None
 	comment_json = {}
 	comment_json["id"] = id
-	comment_json["body"] = str(comment.body.encode('utf-8'))
-	comment_json["author"] = str(comment.author)
+	comment_json["body"] = comment.body
+	comment_json["author"] = comment.author
 	comment_json["score"] = comment.score
-	comment_json["ups"] = comment.ups
-	comment_json["downs"] = comment.downs
-	comment_json["subreddit"] = comment.subreddit_name_prefixed
-	comment_json["permalink"] = comment.permalink
+	comment_json["ups"] = comment.upvotes
+	comment_json["downs"] = comment.downvotes
+	comment_json["subreddit"] = comment.subreddit
+	comment_json["permalink"] = "t1_" + comment.comment_id
 	comment_json["gilded"] = comment.gilded
-	return comment_json
+	comment_json["link_id"] = comment.link_id
+	return comment
 
 def index_search(query_tokens, index, idf, doc_norms):
 	""" Search the collection of documents for the given query
@@ -96,6 +99,7 @@ def index_search(query_tokens, index, idf, doc_norms):
 			with the highest score.
 
 		"""
+	score_norm = { "iwanttolearn" : 2, "explainlikeimfive" : 0.5 }
 	tokens = query_tokens
 	print("Got tokens: " + str(tokens))
 
@@ -109,7 +113,9 @@ def index_search(query_tokens, index, idf, doc_norms):
 			for (doc_id, doc_count) in index[token].items():
 				scores[doc_id] += doc_count * \
 					(idf[token] ** 2) * query_count / \
-					(doc_norms[doc_id] * query_norm + 1)
+					(query_norm + 1)
+
+	# scores now contains the initial tf-idf values
 
 	output = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 	print(output)
