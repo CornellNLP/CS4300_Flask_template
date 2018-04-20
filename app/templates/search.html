@@ -12,8 +12,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
+        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script type="text/javascript" src="static/typeahead.bundle.js"></script>
         <link rel="stylesheet" href="/static/main.css">
-
         <style>
           body {
           }
@@ -34,14 +36,31 @@
             <div class="form-row ">
               <div class="form-group col-md-6">
                 <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
-                <input id="similar_movies" class="form-control center" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
-                <datalist id="movie_list">
-                    {% if movie_list %}
-                        {% for m in movie_list %}
-                            <option value='{{m}}'>
-                        {% endfor %}
-                    {% endif %}
-                </datalist>
+                <input id="similar_movies" data-role="tagsinput" class="form-control" type="text" name="similar" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
+                <script>
+                    var movies = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      prefetch: {
+                        url: 'static/data/movies.json'
+                      }
+                    });
+                    movies.initialize();
+                    $('input').tagsinput({
+                      typeaheadjs: {
+                        name: 'movies',
+                        displayKey: 'title',
+                        valueKey: 'title',
+                        source: movies.ttAdapter()
+                      }
+                      // {
+                      //   hint: true,
+                        // highlight: true,  Enable substring highlighting
+                      //   minLength: 1 /* Specify minimum characters required for showing suggestions */
+                      //   }
+                      // freeInput: false;
+                    });
+                </script>
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Genres (separated by semicolons):</label>

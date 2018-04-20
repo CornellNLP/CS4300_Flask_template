@@ -109,3 +109,9 @@ input::placeholder {
   font-size: 20px;
   color: #ffffff;
 }
+
+.tt-menu {
+  background-color: white !important;
+  width: 100%;
+  padding-left: 5%;
+}
