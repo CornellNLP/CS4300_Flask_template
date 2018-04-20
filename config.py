@@ -8,7 +8,7 @@ class Config(object):
   CSRF_ENABLED = True
   CSRF_SESSION_KEY = "secret"
   SECRET_KEY = "not_this"
-  SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+  SQLALCHEMY_DATABASE_URI = "postgresql://postgres:alpine@35.188.248.54:5432/learnddit"
 
 class ProductionConfig(Config):
   DEBUG = False

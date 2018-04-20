@@ -16,10 +16,12 @@ e.g. python utils/populate_db.py utils/Parsed\ JSONs/
 
 path = sys.argv[1]
 
-f = open("utils/filenames_db.pkl","rb")
-files = pickle.load(f)
+filepath =  os.path.dirname(os.path.abspath(__file__))
 
-# files = set([])
+# f = open(filepath + "/filenames_db.pkl","rb")
+# files = pickle.load(f)
+
+files = set([])
 
 print "starting population of db..."
 start_time = int(time.time())
@@ -28,7 +30,7 @@ for filename in os.listdir(os.getcwd() + "/" + path):
   if "json" not in filename:
     continue
 
- if filename in files:
+  if filename in files:
     print filename, "already processed!"
     continue
 
@@ -43,7 +45,7 @@ for filename in os.listdir(os.getcwd() + "/" + path):
       count = len(objs)
       # iterate through all the comments of this
       for obj in objs:
-        upvotes = if "ups" in obj then obj["ups"] else 0
+        upvotes = obj["ups"] if "ups" in obj else 0
         comment = Comment(obj["id"], obj["author"], obj["subreddit"], obj["link_id"], obj["body"], obj["score"], obj["gilded"], upvotes, obj["controversiality"])
         db.session.add(comment)
         db.session.commit()
