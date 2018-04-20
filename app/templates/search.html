@@ -1,11 +1,24 @@
 <html>
     <head>
+        <title>CinemaPop</title>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"> -->
+        
+        
         <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
         <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
+        <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script  type="text/javascript" src="static/typeahead.bundle.js"></script>
         <link rel="stylesheet" href="/static/main.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js">
+        <link rel="stylesheet" href="/static/Bootstrap-3-Typeahead-master/bootstrap3-typeahead.js"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+        <script src="/static/Bootstrap-3-Typeahead-master/bootstrap3-typeahead.min.js"></script> -->
         <style>
           body {
-            background-color: gray;
+            background-color: #f9dbe7;
           }
           </style>
     </head>
@@ -15,125 +28,135 @@
       font-family: BeautySchool;
       src: url('static/beautyschooldropout.ttf');
     }
-
-    .
     </style>
 
     <body>
+        <div class="logo_band">
+          <img class="logo" src= "/static/logo_white.png" alt="CinemaPop"></img>
+          <form class="global-search" style="width: 100%">
+            <div class="form-row ">
+              <div class="form-group col-md-6">
+                <label class="tags center">Similar Movies (separated by semicolons):</label>
+                <input id="similar_movies" data-role="tagsinput" class="form-control" type="text" name="similar" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
+                <script>
+                    var movies = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      prefetch: {
+                        url: 'static/data/movies.json'
+                      }
+                    });
+                    movies.initialize();
 
-        <div class="topcorner">
-            {% if netids %}
-                {% for nid in netids %}
-                    <h3>{{ nid }}</h3>
-                {% endfor %}
-            {% endif %}
-
-        </div>
-
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:BeautySchool;">
-                <img style="margin-left: -7%; max-width: 200%" src= "/static/logo.png" alt="CinemaPop">
-            </h1>
-
-            <br><br>
-
-            Similar Movies:
-            <br>
-            <div class="form-group" id="movie_selector">
-                <input id="similar_movies" list="movie_list" type="text" name="similar" class="form-control" placeholder="Movie name" data-role="tagsinput">
-                <datalist id="movie_list">
-                    {% if movie_list %}
-                        {% for m in movie_list %}
-                            <option value='{{m}}'>
-                        {% endfor %}
-                    {% endif %}
-                </datalist>
-            </div>
-            <br><br>
-            Genres:
-            <br>
-            <div class="form-group" style="padding-left: 80px;">
-                <input id="select_genres" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action, History, etc.">
+                    $('input').tagsinput({
+                      typeaheadjs: {
+                        name: 'movies',
+                        displayKey: 'title',
+                        valueKey: 'title',
+                        source: movies.ttAdapter()
+                      }
+                      // {
+                      //   hint: true,
+                        // highlight: true,  Enable substring highlighting 
+                      //   minLength: 1 /* Specify minimum characters required for showing suggestions */
+                      //   }
+                      // freeInput: false;
+                    });
+                </script>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Genres (separated by semicolons):</label>
+                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
                 <datalist id="genre_list">
                     {% if genre_list %}
                         {% for g in genre_list %}
                             <option value='{{g}}'>
                         {% endfor %}
                     {% endif %}
-                </datalist>
+              </div>
             </div>
-            <br><br>
-            Duration (in minutes):
-            <br>
-            <div class="form-group">
-                <!-- <input id="input" type="text" name="duration" class="form-control" placeholder="e.g. 90 - 200"> -->
-                <input name= "duration_start" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="Start" style="width:25%" maxlength="3">
-                <input name= "duration_end" id="input" type="text" name="duration" list= "duration_list" class="form-control" placeholder="End" style="width:25%" maxlength="3">
-            </div>
-            <br><br>
-            Range of Release Years:
-            <br>
-            <div class="form-group form-inline">
-                <input name= "year_start" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="Start" style="width:25%" maxlength="4">
-                <input name= "year_end" id="input" type="text" name="release" list= "year_list" class="form-control" placeholder="End" style="width:25%" maxlength="4">
-                <datalist id="year_list">
-                    {% if year_list %}
-                        {% for m in year_list %}
-                            <option value='{{m}}'>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="tags center">Cast/Crew (separated by semicolons):</label>
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+                <datalist id="castCrew_list">
+                    {% if castCrew_list %}
+                        {% for c in castCrew_list %}
+                            <option value='{{c}}'>
                         {% endfor %}
                     {% endif %}
                 </datalist>
-                <br>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Keywords (separated by semicolons):</label>
+                <input id="input" type="text" class="form-control center" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <datalist id="keywords_list">
+                    {% if keywords_list %}
+                        {% for k in keywords_list %}
+                            <option value='{{k}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
+              </div>
             </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Duration (in minutes):</label>
+                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)">
+              </div>
+              <div class="form-group col-md-6 center">
+                <div class="form-row">
+                  <label class="tags">Range of Release Years:</label>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4">
+                  </div>
+                </div>
+              </div>
+              <datalist id="year_list">
+                  {% if year_list %}
+                      {% for m in year_list %}
+                          <option value='{{m}}'>
+                      {% endfor %}
+                  {% endif %}
+              </datalist>
             </div>
-            <br><br>
-            Acclaim:
+            <label class="tags center">Do user scores matter to you?</label>
+            <div class="form-check tags center">
+                <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+            </div>
+            <div class="form-check tags center">
+              <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+            </div>
             <br>
-            <div class="form-group">
-                <input type="radio" name="acclaim" value="yes" checked> Yes<br>
-                <input type="radio" name="acclaim" value="no"> No<br>
+            <div class="form-group center">
+              <button type="submit" class="btn btn-info"> Get Recommendations </button>
             </div>
-            <br><br>
-            Cast/Crew (separated by commas):
-            <br>
-            <div class="form-group">
-                <input id="input" type="text" name="castCrew" class="form-control" placeholder="Your Input">
-            </div>
-            <br><br>
-            Keywords (separated by commas):
-            <br>
-            <div class="form-group">
-                <input id="input" type="text" name="keywords" class="form-control" placeholder="Your Input">
-            </div>
-            <br><br>
-            <button type="submit" class="btn btn-info"> Get Recommendations </button>
-        </form>
+          </form>
+        </div>
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}
                 <br><br>
-                <p>Title: {{d['title']}}</p>
-                <br>
+                <p>Title: <strong>{{d['title']}}</strong></p>
                 <p>Similarity: {{d['similarity']}}%</p>
-                <br>
                 <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
                 <br>
                 <p>Synopsis: {{d['summary']}}</p>
-                <br>
                 <p>Genres:
                 {% for g in d['genres'][:-1] %}
-                    {{g}}, 
+                    {{g}},
                 {% endfor %}
                 {{d['genres'][-1]}}
                 </p>
-                <br>
                 <p>Duration: {{d['runtime']}} min</p>
-                <br>
                 <p>Release Date: {{d['release_date']}}</p>
-                <br>
                 <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
-                <br>
                 <p>Cast:
                 <br>
                 <small>
@@ -143,7 +166,6 @@
                 {% endfor %}
                 </small>
                 </p>
-                <br>
                 <p>Crew:
                 <br>
                 <small>
@@ -153,15 +175,14 @@
                 {% endfor %}
                 </small>
                 </p>
-                <br>
-                <p>
-                {% if d['homepage']: %}
-                    Homepage: <a href ={{d['homepage']}}>Link</a>
-                {% endif %}
-                </p>
+                <p>IMDb Page: <a href ="http://www.imdb.com/title/{{d['id']}}">Link</a></p>
             {% endfor %}
         {% endif %}
         </form>
+
+        <div class="footer">
+            <p>&copy; 2018 | Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz29</p>
+        </div>
     </body>
 
 </html>

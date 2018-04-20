@@ -6,22 +6,15 @@
 @media (min-width:400px){
 .global-search {
 padding: 20px 0;
-text-align:center;
 }
 body {
-padding-top: 15%;
 padding-bottom: 15px;
 }
 .global-search {
-text-align:center;
 padding:10px;
 }
 .global-search .form-control {
 width:500px;
-}
-.global-search * {
-display:inline-block;
-margin-bottom:0;
 }
 }
 .topcorner{
@@ -60,6 +53,44 @@ h3 {font-family: 'Rajdhani', sans-serif;
     color: black;
 }
 
-#movie_selector {
-  margin-bottom: -8%;
+.logo_band {
+  width: 100%;
+  background-image: url("/static/film_background_3.png");
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.tags{
+  color: white;
+}
+
+
+.center {
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+/* .form-row {
+  margin-bottom: 8%;
+} */
+
+/* footer */
+.footer {
+  height: 30px;
+  background-color: #000000;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.tt-menu {
+  background-color: white !important;
+  width: 100%;
+  padding-left: 5%;
 }
