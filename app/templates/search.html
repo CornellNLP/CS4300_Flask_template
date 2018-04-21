@@ -1,21 +1,25 @@
 <html>
+  
+
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: BookRec </p>
-            <p>Student Name: <br>
-              Hannah Lee <br>
-              Linda Lu <br>
-              Hyun Kyo Jung  <br>
-              Seyun Kim <br>
-              Jason Cho </p>
+        
+        <link href = "/static/bootstrap-tokenfield.css" rel= "stylesheet" >
+        <link href = "/static/bootstrap-typeahead.css" rel = "stylesheet" > 
+        <link href = "/static/jquery-ui.theme.css" rel = "stylesheet" > 
+        <link href = "/static/jquery-ui.css" rel = "stylesheet" > 
+        <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 
-        </div>
+
+
+    </head>
+    
+    <body class = "bg" >
+     
 
         <form class="form-inline global-search">
+
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
             B
             <font color=#EA4335>OO</font>
@@ -28,37 +32,91 @@
             <br><br>
 
             <div class="form-group">
-                <input id="input" type="text" name="title_search" class="form-control" placeholder="Input Book Title">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title">
             </div>
             <button type="submit" class="btn btn-info"> title </button>
         </form>
         <form class="form-inline global-search">
+        
         {% if word_cloud %}
             <h1>{{word_cloud_message}}</h1>
             {% for d in word_cloud %}
-                <br>
-                <p>{{d}}</p>
+                
+                <p>  {{d}}  </p>
+                
+
             {% endfor %}
         {% endif %}
+        
         </form>
-
 
         <form class="form-inline global-search">
             <div class="form-group">
-                <input id="input" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
             </div>
             <button type="submit" class="btn btn-info"> keyword </button>
         </form>
         <form class="form-inline global-search">
+
         {% if top_books %}
             <h1>{{top_books_message}}</h1>
             {% for d in top_books %}
                 <br>
-                <p>{{d}}</p>
+                <div id = "wordcloud">{{d}}</div>
             {% endfor %}
         {% endif %}
         </form>
 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="/static/bootstrap-typeahead.js" > </script>
+        <script src ="/static/bootstrap-tokenfield.js" > </script> 
+        <script src = "/static/jquery-ui.js"> </script>
+        <script type="text/javascript" src="/static/jqcloud.js"></script> 
+
+        <script > 
+            
+            $("#wordcloud").jQCloud({ words, {
+             width: 500,
+            height: 1000
+            });
+
+
+        </script>
+
+       
+        <!--script for title field added for autocomplete--> 
+        
+        <script>
+        $("#tagcloud a").tagcloud({
+                size: {start: 12, end: 36, unit: "px"},
+                color: {start: '#3498DB', end: '#46CFB0'}
+                });
+        </script>  
+
+
+        <script>  
+
+     
+
+        $('#keyfield').tokenfield({
+            autocomplete: {
+                source: ['romantic','horror','language', 'computer', 'definitive']
+              
+            }, 
+           
+            noDuplicate: true ,
+            lookupLimit: 5
+
+
+        }); 
+
+        </script>
+    
     </body>
+
+
 
 </html>

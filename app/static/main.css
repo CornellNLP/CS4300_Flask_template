@@ -35,4 +35,20 @@ border: none
 }
 .step-links a{
 color: #4285F4;
+} 
+.bg {
+ /* The image used */
+    background-image: url("image/flowerbook.jpg");
+    /* Full height */
+   	height: 100%; 
+   	overflow: hidden; 
+   	padding-top: 0%;
+
+    background-size: cover;
+	 /* Center and scale the image nicely */
+
+    /*background-position: center; */
+    /*background-repeat: no-repeat; */
+   
+
 }

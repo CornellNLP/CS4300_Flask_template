@@ -19,7 +19,7 @@ project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
 
-def closest_books_to_word(word_in, word_to_index, index_to_book, words_compressed, docs_compressed, k = 15):
+def closest_books_to_word(word_in, word_to_index, index_to_book, words_compressed, docs_compressed, k = 10):
     if word_in not in word_to_index: return "Not in vocab." 
     sims = docs_compressed.dot(words_compressed[int(word_to_index[word_in]),:])
     asort = np.argsort(-sims)[:k+1]
@@ -31,12 +31,12 @@ def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_comp
     sims = words_compressed.dot(docs_compressed[int(book_to_index[title_in]),:])
     asort = np.argsort(-sims)[:k+1]
     print(asort)
-    return [(index_to_word[str(i)],sims[i]/sims[asort[0]])for i in asort[1:]]
+    return [(index_to_word[str(i)])for i in asort[1:]]
 
 
 # Ability to add multiple words 
 
-def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_compressed , docs_compressed, k = 15):
+def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_compressed , docs_compressed, k = 10):
     msg = ""
     sims = np.zeros(docs_compressed.shape[0])
     count = 0
@@ -70,7 +70,7 @@ def search():
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
-
+	
 	#ALWAYS NEED THESE
 	#word_cloud_message =
 	#top_books_message = 
@@ -87,9 +87,9 @@ def search():
 
 	elif keyword_input is not None: 
 		word_cloud_message = ''
-		top_books_message = "Top 15 books for the keyword are:"
+		top_books_message = "Top 10 books for the keyword are:"
 		word_cloud = []
-		lst = keyword_input.split(" ")
+		lst = keyword_input.split(", ")
 
 		top_books = closest_books_to_many_words(lst, word_to_index, index_to_book,words_compressed, docs_compressed)
 
