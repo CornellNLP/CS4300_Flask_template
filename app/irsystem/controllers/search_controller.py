@@ -50,12 +50,16 @@ def closest_books_to_many_words(word_in, word_to_index, index_to_book, words_com
 
 def db_word_to_closest_books(word, k = 15):
 	np_word = np.fromstring(word.vector, sep= ', ')
+	print('before query')
 	query_result = Book.query.all()
+	print('after query')
 	dot_products = np.zeros(len(query_result))
+	print('before processing')
 	for book in query_result:
 		np_book = np.fromstring(book.vector, sep = ', ')
 		dot_prod = np_word.dot(np_book)
 		dot_products[book.index] = dot_prod
+	print('after processing')
 	asort = np.argsort(-dot_products)[:k+1]
 	return [(Book.query.filter_by(index = i).first().name, dot_products[i]/dot_products[asort[0]]) for i in asort[1:]]
 
