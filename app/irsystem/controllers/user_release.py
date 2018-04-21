@@ -1,8 +1,16 @@
 import scipy.stats
 
 def parse(inp):
-	if inp[0] != inp[1]:
+	if not inp[0]:
+		inp[0] = '1900'
+	if not inp[1]:
+		inp[1] = '2018'
+	if inp[0] < inp[1]:
 		lst = [int(entry[:4].strip()) for entry in inp]
+		return lst
+	else:
+		lst = [int(entry[:4].strip()) for entry in inp]
+		lst.reverse()
 		return lst
 	return [int(inp[0][:4].strip())]
 

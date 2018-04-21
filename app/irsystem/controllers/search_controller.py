@@ -7,19 +7,38 @@ import user_release
 from random import *
 
 movies_json = json.load(open('app/static/data/movies.json'))
+genres_json = json.load(open('genres.json'))
+
+# map each movie id to the movie's information
 movie_dict = dict()
 for movie in movies_json:
     movie_dict[movie['id']] = json.load(open('app/static/data/movies/' + movie['id'] + '.json'))
-genres_json = json.load(open('genres.json'))
+
+# get list of movie titles
 movie_list = [movie['title'] for movie in movies_json]
+movie_list.sort()
+
+# get list of genres
 genre_list = [genre['name'] for genre in genres_json['genres']]
+
+# build other lists from movie_dict
 castCrew_list = []
 keywords_list = []
+ratings_list = ['G', 'UNRATED', 'NC-17', 'PG-13', 'R', 'NOT RATED', 'PG', 'TV-MA', 'TV-G', 'APPROVED']
+languages_list = []
 for movie in movie_dict:
     castCrew_list += ([member['name'] for member in movie_dict[movie]['cast']] + [member['name'] for member in movie_dict[movie]['crew']])
     keywords_list += movie_dict[movie]['keywords']
+    ratings_list.append(movie_dict[movie]['rating'])
+    languages_list.append(movie_dict[movie]['original_language'])
 castCrew_list = list(set(castCrew_list))
+castCrew_list.sort()
 keywords_list = list(set(keywords_list))
+keywords_list.sort()
+ratings_list = list(set(ratings_list))
+languages_list = list(set(languages_list))
+
+# get list of years
 year_list = range(1900, 2019)
 
 @irsystem.route('/', methods=['GET'])
@@ -54,24 +73,25 @@ def search():
             score_dict[movie['id']] = 0.0
         reverse_dict = {y['title'].lower():x for x,y in movie_dict.iteritems()}
 
-        selected_movies = parse_lst_str(similar)
-        selected_genres = parse_lst_str(genres)
-        selected_crew = parse_lst_str(castCrew)
-        selected_keywords = parse_lst_str(keywords)
 
+        ########### MESSAGE UPDATE, SCORE ASSIGNMENT ###########
         if similar:
+            selected_movies = parse_lst_str(similar)
             output_message += "Similar: " + similar + "\n"
             similar_score = 10.0
             max_score += similar_score
         if genres:
+            selected_genres = parse_lst_str(genres)
             output_message += "Genres: " + genres + "\n"
             genres_score = 10.0
             max_score += genres_score
         if castCrew:
+            selected_crew = parse_lst_str(castCrew)
             output_message += "Cast and Crew: " + castCrew + "\n"
             castCrew_score = 10.0
             max_score += castCrew_score
         if keywords:
+            selected_keywords = parse_lst_str(keywords)
             output_message += "Keywords: " + keywords + "\n"
             keywords_score = 10.0
             max_score += keywords_score
@@ -79,14 +99,23 @@ def search():
             output_message += "Duration: " + duration + "\n"
             duration_score = 10.0
             max_score += duration_score
-        if release_start and release_end:
-            output_message += "Release: " + release_start + "-" + release_end + "\n"
+        if release_start or release_end:
+            if release_start and release_end:
+                output_message += "Release: " + release_start + "-" + release_end + "\n"
+            elif release_start:
+                output_message += "Release: " + release_start + "-2018\n"
+            else:
+                output_message += "Release: 1900-" + release_end + "\n"
             release_score = 10.0
             max_score += release_score
         # if ratings:
         #     output_message += "Ratings: " + ratings + "\n"
+        #     ratings_score = 10.0
+        #     max_score += ratings_score
         # if languages:
-        #     output_message += "Lagnguages: " + languages + "\n"
+        #     output_message += "Languages: " + languages + "\n"
+        #     languages_score = 10.0
+        #     max_score += languages_score
         if acclaim == "yes":
             output_message += "Acclaim: Yes\n"
             acclaim_score = 10.0
@@ -100,17 +129,19 @@ def search():
         # else:
         #     output_message += "Popularity: No\n"
 
-        # modify movie_dict and score_dict to account for the "duration" user input
-        # assuming duration is in the form "90-180" rather than "180 - 90"
+        ########### FILTERING OF DICTIONARIES ###########
+        # updates dicts with hard filters
+        # for duration and release, also computes scores
         if duration:
             movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
-        if release_start and release_end:
+        if release_start or release_end:
             movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
         # if ratings:
-        #     print "MPAA rating filter"
+        # movie_dict, score_dict = user_ratings.main(movie_dict, score_dict, ratings, ratings_score)
         # if languages:
-        #     print "language filter"
+        # movie_dict, score_dict = user_languages.main(movie_dict, score_dict, languages, languages_score)
 
+        ########### CONSTRUCTION OF SCORE DICTIONARY ###########
         for movie in score_dict:
             if similar:
                 # if the movie is already in the selected_titles
@@ -157,6 +188,7 @@ def search():
             #     meta_count = movie_dict[movie]['meta_score_count']
             #     score_dict[movie] += popularity_score
 
+        ########### SORT SCORES, RETURN TOP MATCHES ###########
         sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:24]
 
         if max_score == 0:
