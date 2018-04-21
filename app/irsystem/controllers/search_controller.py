@@ -14,12 +14,11 @@ genres_json = json.load(open('genres.json'))
 movie_list = [movie['title'] for movie in movies_json]
 genre_list = [genre['name'] for genre in genres_json['genres']]
 castCrew_list = []
-for movie in movie_dict:
-    castCrew_list += ([member['name'] for member in movie_dict[movie]['cast']] + [member['name'] for member in movie_dict[movie]['crew']])
-castCrew_list = list(set(castCrew_list))
 keywords_list = []
 for movie in movie_dict:
+    castCrew_list += ([member['name'] for member in movie_dict[movie]['cast']] + [member['name'] for member in movie_dict[movie]['crew']])
     keywords_list += movie_dict[movie]['keywords']
+castCrew_list = list(set(castCrew_list))
 keywords_list = list(set(keywords_list))
 year_list = range(1900, 2019)
 
@@ -137,6 +136,7 @@ def search():
                 movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
                 data.append(movie_dict[movie_id])
 
+        data = [data[i:i + 5] for i in xrange(0, len(data), 5)]
         output_message = "Your search has been processed."
 
     return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
