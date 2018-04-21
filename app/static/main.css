@@ -111,7 +111,7 @@ input::placeholder,
 .bootstrap-tagsinput.form-control input:-ms-input-placeholder
 {
   color: white;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .bootstrap-tagsinput {
