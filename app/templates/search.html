@@ -1,39 +1,45 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
+
+<head>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="background:url('https://img00.deviantart.net/da64/i/2008/306/e/b/starry_sky_stock_by_budgie.jpg')">
+    <form class="form-inline global-search">
+        <h1 style="font-size: 55px; font-family:Futura; color: #fff">
+              Find a woman who...
             </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
+        <br>
+        <br>
+        <div class="form-group">
+            <!--<input id="input" type="text" name="search" class="form-control" placeholder="e.g. worked at NASA">-->
+            <input id="input" type="text" name="search" minlength="5" placeholder="e.g. worked at NASA">
+        </div>
+        <button type="submit" class="btn btn-info"> Go! </button>
+    </form>
+
+    <form class="form-inline global-search">
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-    </body>
+        <h1 style="font-size: 28px; font-family:Futura; color: #fff">{{output_message}}</h1> {% for d in data %}
+        <br>
+        <br>
+        <p style="font-size: 20px; font-family:Futura; color: #fff">{{d}}</p>
+        {% endfor %} {% endif %}
+    </form>
+
+    <div id="bottomcorner">
+        <img src="/static/telescope.png" height=200>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button").click(function () {
+            $("#bottomcorner").fadeOut();
+        });
+    });
+</script>
 
 </html>
