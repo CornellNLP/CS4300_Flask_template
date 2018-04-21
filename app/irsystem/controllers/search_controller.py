@@ -30,12 +30,15 @@ def search():
     # user inputs
     similar = request.args.get('similar')
     genres = request.args.get('genres')
-    acclaim = request.args.get('acclaim')
     castCrew = request.args.get('castCrew')
     keywords = request.args.get('keywords')
     duration = request.args.get('duration')
     release_start = request.args.get('release_start')
     release_end = request.args.get('release_end')
+    # ratings = request.args.get('ratings')
+    # languages = request.args.get('languages')
+    acclaim = request.args.get('acclaim')
+    # popularity = request.args.get('popularity')
 
     if not similar and not genres and not duration and not acclaim and not castCrew and not keywords and not release_start and not release_end:
         data = []
@@ -57,26 +60,45 @@ def search():
         selected_keywords = parse_lst_str(keywords)
 
         if similar:
+            output_message += "Similar: " + similar + "\n"
             similar_score = 10.0
             max_score += similar_score
         if genres:
+            output_message += "Genres: " + genres + "\n"
             genres_score = 10.0
             max_score += genres_score
-        if release_start and release_end:
-            release_score = 10.0
-            max_score += release_score
-        if acclaim == "yes":
-            acclaim_score = 10.0
-            max_score += acclaim_score
         if castCrew:
+            output_message += "Cast and Crew: " + castCrew + "\n"
             castCrew_score = 10.0
             max_score += castCrew_score
         if keywords:
+            output_message += "Keywords: " + keywords + "\n"
             keywords_score = 10.0
             max_score += keywords_score
         if duration:
+            output_message += "Duration: " + duration + "\n"
             duration_score = 10.0
             max_score += duration_score
+        if release_start and release_end:
+            output_message += "Release: " + release_start + "-" + release_end + "\n"
+            release_score = 10.0
+            max_score += release_score
+        # if ratings:
+        #     output_message += "Ratings: " + ratings + "\n"
+        # if languages:
+        #     output_message += "Lagnguages: " + languages + "\n"
+        if acclaim == "yes":
+            output_message += "Acclaim: Yes\n"
+            acclaim_score = 10.0
+            max_score += acclaim_score
+        else:
+            output_message += "Acclaim: No\n"
+        # if popularity == "yes":
+        #     output_message += "Popularity: Yes\n"
+        #     popularity_score = 10.0
+        #     max_score += popularity_score
+        # else:
+        #     output_message += "Popularity: No\n"
 
         # modify movie_dict and score_dict to account for the "duration" user input
         # assuming duration is in the form "90-180" rather than "180 - 90"
@@ -84,6 +106,10 @@ def search():
             movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
         if release_start and release_end:
             movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
+        # if ratings:
+        #     print "MPAA rating filter"
+        # if languages:
+        #     print "language filter"
 
         for movie in score_dict:
             if similar:
@@ -104,24 +130,32 @@ def search():
                         cumulative_score += (genres_sim + crew_sim + keywords_sim) / (3 * len(selected_movies))
                     score_dict[movie] += cumulative_score * similar_score
 
-
             if genres:
                 jaccard_sim = get_set_overlap(selected_genres, movie_dict[movie]['genres'])
                 score_dict[movie] += jaccard_sim * genres_score
+
+            if castCrew:
+                cast = [member['name'] for member in movie_dict[movie]['cast']]
+                crew = [member['name'] for member in movie_dict[movie]['crew']]
+                jaccard_sim = get_set_overlap(selected_crew, cast + crew)
+                score_dict[movie] += jaccard_sim * castCrew_score
+
+            if keywords:
+                jaccard_sim = get_set_overlap(selected_keywords, movie_dict[movie]['keywords'])
+                score_dict[movie] += jaccard_sim * keywords_score
+
             if acclaim == "yes":
                 tmdb_score = movie_dict[movie]['tmdb_score_value']
                 if tmdb_score >= 7.0:
                     score_dict[movie] += tmdb_score / 10.0 * acclaim_score
                 else:
                     score_dict[movie] += tmdb_score / 20.0 * acclaim_score
-            if castCrew:
-                cast = [member['name'] for member in movie_dict[movie]['cast']]
-                crew = [member['name'] for member in movie_dict[movie]['crew']]
-                jaccard_sim = get_set_overlap(selected_crew, cast + crew)
-                score_dict[movie] += jaccard_sim * castCrew_score
-            if keywords:
-                jaccard_sim = get_set_overlap(selected_keywords, movie_dict[movie]['keywords'])
-                score_dict[movie] += jaccard_sim * keywords_score
+
+            # if popularity == "yes":
+            #     tmdb_count = movie_dict[movie]['tmdb_score_count']
+            #     imdb_count = movie_dict[movie]['imdb_score_count']
+            #     meta_count = movie_dict[movie]['meta_score_count']
+            #     score_dict[movie] += popularity_score
 
         sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:20]
 
@@ -137,7 +171,6 @@ def search():
                 data.append(movie_dict[movie_id])
 
         data = [data[i:i + 5] for i in xrange(0, len(data), 5)]
-        output_message = "Your search has been processed."
 
     return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
 
