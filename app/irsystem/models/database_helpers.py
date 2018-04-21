@@ -8,6 +8,15 @@ db = client.fundy
 def get_donations(politician_name):
     return db.donations.find({"PoliticianName":politician_name})
 
+def get_relevant_donations(politician_name, issue_list):
+	print(issue_list)
+	regex_issue_list = ["/" + val + "/i" for val in issue_list]
+
+	return db.donations.find({
+		"PoliticianName": politician_name,
+		"DonorCommitteeNameNormalized": { "$in": regex_issue_list },
+	})
+
 def get_tweets_by_politician(politician_name):
     return db.tweets.find({"PoliticianName":politician_name})
 
