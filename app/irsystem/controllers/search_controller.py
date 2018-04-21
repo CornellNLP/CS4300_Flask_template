@@ -133,7 +133,9 @@ def search():
 		top_books = []
 
 	elif keyword_input is not None: 
+		print('before query')
 		w = Word.query.filter_by(name = keyword_input).first()
+		print('after query')
 		word_cloud_message = ''
 		word_cloud = []
 		if w is None: 
@@ -142,7 +144,9 @@ def search():
 			top_books = ["The keyword is not in our database."]
 		else:
 			top_books_message = "Top 15 books for the keyword are:"
+			print('before function call')
 			top_books = db_word_to_closest_books(w)
+			print('after function call')
 
 	else:
 		b = Book.query.filter_by(name = title_input).first()
