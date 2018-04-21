@@ -5,6 +5,10 @@ class Book(Base):
 
   index = db.Column(db.Integer, nullable=False)
   name = db.Column(db.String, nullable=False)
+  vector = db.Column(db.Text, nullable=False)
+
+
+
 
   def __repr__(self):
     return '<Name: %r, Index: %r>' % (self.name, self.index)
