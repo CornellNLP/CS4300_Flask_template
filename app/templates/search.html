@@ -2,20 +2,17 @@
     <head>
         <title>CinemaPop</title>
         <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="/static/custom.js"></script>
         <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
-        <link rel="stylesheet" href="/static/main.css">
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
         <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
         <script type="text/javascript" src="static/typeahead.bundle.js"></script>
+        <link rel="stylesheet" href="/static/main.css">
+        <script src="/static/js/custom.js"></script>
         <style>
           body {
           }
@@ -36,7 +33,7 @@
             <div class="form-row ">
               <div class="form-group col-md-6">
                 <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
-                <input id="similar_movies" data-role="tagsinput" class="form-control" type="text" name="similar" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
+                <input id="similar_movies" data-role="tagsinput" class="form-control" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%">
                 <script>
                     var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
@@ -72,11 +69,11 @@
                         {% endfor %}
                     {% endif %}
               </div>
-            </div><br>
+            </div><br><br><br><br><br><br>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc.">
                 <datalist id="castCrew_list">
                     {% if castCrew_list %}
                         {% for c in castCrew_list %}
@@ -87,7 +84,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc.">
                 <span></span>
                 <datalist id="keywords_list">
                     {% if keywords_list %}
@@ -126,7 +123,7 @@
               </datalist>
             </div>
             <label class="tags center">Do user scores matter to you?</label>
-            <div class="form-check tags center">
+            <div class="form-check tags center" style="height: 10px;">
                 <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
             </div>
             <div class="form-check tags center">
