@@ -1,21 +1,21 @@
 @media (min-width: 1200px) {
-.container {
-    max-width: 970px;
-}
+  .container {
+      max-width: 970px;
+  }
 }
 @media (min-width:400px){
-.global-search {
-padding: 20px 0;
-}
-body {
-padding-bottom: 15px;
-}
-.global-search {
-padding:10px;
-}
-.global-search .form-control {
-width:500px;
-}
+  .global-search {
+  padding: 20px 0;
+  }
+  body {
+  padding-bottom: 15px;
+  }
+  .global-search {
+  padding:10px;
+  }
+  .global-search .form-control {
+  width:500px;
+  }
 }
 .topcorner{
 position:absolute;
@@ -28,24 +28,6 @@ border: none
 }
 .step-links a{
 color: #4285F4;
-}
-
-.form-control {
-  color: white;
-  background-color: rgba(0,0,0,0) !important;
-  border-style: none !important;
-  border-bottom-style: solid !important;
-  border-bottom-width: 2px !important;
-  border-radius: 0 !important;
-  -webkit-transition: border-color 0.5s fast !important; /* Safari */
-  transition: all 450ms cubic-beziar(0.23, 1, 0.32, 1) 0ms !important;
-}
-
-.form-control:focus {
-
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 h1 {font-family: 'Rubik Mono One', sans-serif;
@@ -89,11 +71,6 @@ h3 {font-family: 'Rajdhani', sans-serif;
   font-family: 'Play', sans-serif;
 }
 
-input::placeholder {
-  color: white;
-  opacity: 1.0;
-}
-
 .center {
   margin-left:auto !important;
   margin-right:auto !important;
@@ -110,8 +87,99 @@ input::placeholder {
   color: #ffffff;
 }
 
-.tt-menu {
-  background-color: white !important;
-  width: 100%;
-  padding-left: 5%;
+/* form control + bootstrap-tagsinput CSS */
+.form-control, .bootstrap-tagsinput {
+  color: white;
+  background-color: rgba(0,0,0,0) !important;
+  border-style: none !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 2px !important;
+  border-radius: 0 !important;
+  -webkit-transition: border-color 0.5s fast !important; /* Safari */
+  transition: all 450ms cubic-beziar(0.23, 1, 0.32, 1) 0ms !important;
 }
+
+.form-control:focus{
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  /*border-color: #FF0000;*/ //if you want to change the color, but the transition seems to not work
+  /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);*/
+}
+
+input::placeholder,
+.bootstrap-tagsinput.form-control input:-ms-input-placeholder
+{
+  color: white;
+  opacity: 1;
+}
+
+.bootstrap-tagsinput {
+  width: 500px;
+  border: 1px solid #ccc;
+  display: block;
+  margin: auto;
+  min-width: 400px;   
+  padding: 6px 12px;
+  -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.bootstrap-tagsinput input {
+  width: 500px;
+}
+/*trying to fix line hightlight animation*/
+/*.bootstrap-tagsinput input:focus{
+  border-bottom-color:#66afe9;
+  outline:0;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  /*box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}*/
+
+/*.bootstrap-tagsinput .focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px rgba(102,175,233,.6);
+}*/
+/* Tag color customization */
+.bootstrap-tagsinput .tag {
+  background-color: rgb(0,0,0,0.7);/*#871818; placeholder in case we want to customize tag colors*/
+  border: 1px solid white;
+  font-size: 13px;
+}
+.bootstrap-tagsinput .label {
+  line-height: 2.5;
+}
+
+/* typeahead css, drop-down menu */
+.tt-menu {
+  background-color: rgb(0,0,0,0.95) !important;
+  width: 98%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 1.75%;
+  margin-left: -1%;
+  color: rgba(255,255,255,0.8);;
+}
+.tt-input {
+  background-color: transparent !important;
+  width: 100%;
+}
+/* Hover over suggestion in drop-down menu */
+span.twitter-typeahead .tt-suggestion.tt-cursor,
+span.twitter-typeahead .tt-suggestion:hover,
+span.twitter-typeahead .tt-suggestion:focus {
+  /*color: #000000; left to micro-control colors of hovering action*/
+  /*background-color: #871818;*/
+  color: white;
+  width: 105%;
+  margin-left: 3%;
+  font-weight: 700;
+}
+/* Hint color */
+.twitter-typeahead .tt-hint {
+  color: rgba(255,255,255,0.65);
+
+
+/*Known issues: tags overlap, focus*/
