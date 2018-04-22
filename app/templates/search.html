@@ -56,6 +56,7 @@
                         confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
                         maxTags: 5, //limit the number of tags
                         freeInput: false, //don't allow the user to submit free text
+                        // itemValue: 'title',
                         // tagClass: 'label label-primary' //tag colors
                      // focusClass: 'bootstrap-tagsinput:focus',
                     });
@@ -65,6 +66,7 @@
                     // $('.bootstrap-tagsinput').focusout(function() {
                     //     $(this).removeClass('focus');
                     // });
+                    var movies_list = $("#similar_movies").tagsinput('items'); //for Erik
                 </script>
               </div>
               <div class="form-group col-md-6">
