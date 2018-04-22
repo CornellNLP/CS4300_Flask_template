@@ -139,7 +139,7 @@ def search():
 
         output_message = "Your search has been processed."
 
-    return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
+    return render_template('search.html', output_message=output_message, data=data[:10], movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
 
 def parse_lst_str(lst_str):
     parsed = []

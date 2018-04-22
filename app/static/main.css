@@ -38,7 +38,6 @@ color: #4285F4;
   border-bottom-width: 2px !important;
   border-radius: 0 !important;
   -webkit-transition: border-color 0.5s fast !important; /* Safari */
-  transition: all 450ms cubic-beziar(0.23, 1, 0.32, 1) 0ms !important;
 }
 
 .form-control:focus {
@@ -89,16 +88,11 @@ h3 {font-family: 'Rajdhani', sans-serif;
   font-family: 'Play', sans-serif;
 }
 
-input::placeholder {
-  color: white;
-  opacity: 1.0;
-}
-
 .center {
   margin-left:auto !important;
   margin-right:auto !important;
   display:block !important;
-  color: white !important;
+  color: white;
 }
 
 /* footer */
@@ -114,4 +108,66 @@ input::placeholder {
   background-color: white !important;
   width: 100%;
   padding-left: 5%;
+}
+
+.poster {
+  padding: 30px;
+  -webkit-transition: padding 0.75; /* Safari */
+  transition: padding 0.25s;
+}
+
+.poster:hover {
+  padding: 15px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.post_title {
+    position: absolute;
+    top: 75%;
+    left: 15px;
+    text-align: left;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7));
+    width: 100%;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 100%;
 }
