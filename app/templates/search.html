@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
-        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
         <script type="text/javascript" src="static/typeahead.bundle.js"></script>
         <link rel="stylesheet" href="/static/main.css">
         <script src="/static/js/custom.js"></script>
@@ -33,8 +33,8 @@
           <form class="global-search custom-form" style="width: 100%">
             <div class="form-row ">
               <div class="form-group col-md-6">
-                <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
-                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%">
+                <label class="tags animated-label center">Similar Movies:</label>
+                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%" value="{{old_similar}}">
                 <script>
                     var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
@@ -57,8 +57,10 @@
                         confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
                         maxTags: 5, //limit the number of tags
                         freeInput: false, //don't allow the user to submit free text
+                        // itemValue: 'title',
                         // tagClass: 'label label-primary' //tag colors
-                     // focusClass: 'bootstrap-tagsinput:focus',
+                        // focusClass: 'bootstrap-tagsinput:focus',
+                        delimiter: ';'
                     });
                     // $('.bootstrap-tagsinput').focusin(function() {
                     //     $(this).addClass('focus');
@@ -70,7 +72,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Genres (separated by semicolons):</label>
-                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
+                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc." value="{{old_genres}}">
                 <datalist id="genre_list">
                     {% if genre_list %}
                         {% for g in genre_list %}
@@ -83,7 +85,7 @@
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
                 <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc.">
-                <datalist id="castCrew_list">
+                <datalist id="castCrew_list" value="{{old_castCrew}}">
                     {% if castCrew_list %}
                         {% for c in castCrew_list %}
                             <option value='{{c}}'>
@@ -93,7 +95,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc.">
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc." value="{{old_keywords}}">
                 <span></span>
                 <datalist id="keywords_list">
                     {% if keywords_list %}
@@ -108,7 +110,7 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                   <label class="tags center">Duration (in minutes):</label>
-                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)">
+                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)" value="{{old_duration}}">
               </div>
               <div class="form-group col-md-6 center tags">
                 <div class="form-row">
@@ -116,10 +118,10 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4">
+                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4" value="{{old_release_start}}">
                   </div>
                   <div class="form-group col-md-6">
-                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4">
+                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4" value="{{old_release_end}}">
                   </div>
                 </div>
               </div>
@@ -131,12 +133,33 @@
                   {% endif %}
               </datalist>
             </div>
-            <label class="tags center">Do user scores matter to you?</label>
-            <div class="form-check tags center" style="height: 10px;">
-                <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Ratings (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="ratings" class="form-control" placeholder="PG-13; PG; etc." value="{{old_ratings}}">
+              </div>
+              <div class="form-group col-md-6">
+                  <label class="tags center">Languages (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="languages" class="form-control" placeholder="en; etc." value="{{old_languages}}">
+              </div>
             </div>
-            <div class="form-check tags center">
-              <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+            <div class="form-row">
+              <label class="tags center">Do user scores matter to you?</label>
+              <div class="form-check tags center" style="height: 10px;">
+                  <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+              </div>
+              <div class="form-check tags center">
+                <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="tags center">Does the popularity of the movie matter to you?</label>
+              <div class="form-check tags center" style="height: 10px;">
+                  <input class="tags form-check-input" type="radio" name="popularity" value="yes" checked> Yes<br>
+              </div>
+              <div class="form-check tags center">
+                <input class="form-check-input" type="radio" name="popularity" value="no"> No<br>
+              </div>
             </div>
             <br>
             <div class="form-group tags center">

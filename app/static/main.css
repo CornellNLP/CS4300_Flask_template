@@ -107,7 +107,7 @@ h3 {font-family: 'Rajdhani', sans-serif;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
-  /*border-color: #FF0000;*/ //if you want to change the color, but the transition seems to not work
+  /*border-color: #FF0000; //if you want to change the color, but the transition seems to not work*/
   /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);*/
 }
 
