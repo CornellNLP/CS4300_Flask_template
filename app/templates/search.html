@@ -1,5 +1,5 @@
 <html>
-  
+<body >
 
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
@@ -7,6 +7,9 @@
         
         <link href = "/static/bootstrap-tokenfield.css" rel= "stylesheet" >
         <link href = "/static/bootstrap-typeahead.css" rel = "stylesheet" > 
+       
+         <link href = "/static/bootstrap-grid.css" rel = "stylesheet" > 
+       
         <link href = "/static/jquery-ui.theme.css" rel = "stylesheet" > 
         <link href = "/static/jquery-ui.css" rel = "stylesheet" > 
         <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
@@ -14,9 +17,7 @@
 
 
     </head>
-    
-    <body class = "bg" >
-     
+ 
 
         <form class="form-inline global-search">
 
@@ -57,27 +58,42 @@
             </div>
             <button type="submit" class="btn btn-info"> keyword </button>
         </form>
+
         <form class="form-inline global-search">
 
         {% if top_books %}
             <h1>{{top_books_message}}</h1>
-            {% for d in top_books %}             
-                {{d}}
+            {% for d in top_books %}    
+                 <div class = "mb-3" > 
+                    <div class="card mt-2">
+            <div class="row align-items-center">
+                <div class="col-md-3 pl-4">
+                    <img class="card-img-top d-flex align-items-center bg-light" src="https://media.steepster.com/api/file/Lad9fQV1QQuO5mYLodjw/convert?fit=crop&amp;h=190&amp;w=190" alt="Fragrant Golden Branch Oolong" onError="this.onerror=null;this.src='https://media.steepster.com/api/file/anN07UThRu6hWl3o9Dvt/convert?fit=crop&h=190&w=190';">
+                </div>
+                <div class="col-md-9 pl-0">
+                    <div class="card-body">
+                        <h5 class="card-title">{{d}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">by Zen Tea</h6>
+                        <p class="card-text mb-2">Creamy, Floral, Orchid, Sweet, Vegetal, Flowers, Nutty, Perfume, Smooth</p>
+                        <p class="card-text mb-2">Tea Type: Oolong Tea | Steepster: 83.0 | Want It: 5.0 | Own It: 3.0 
+                        </p>
+                        <a href="https://steepster.com/teas/zen-tea/42311-fragrant-golden-branch-oolong" class="card-link">View on Steepser</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
             {% endfor %}
         {% endif %} 
-
-
-    <div class="card w-50">
-    <div class="card-img-top d-flex align-items-center bg-light">
-        <div>
-            <img class="img-fluid" src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image" alt="Card image cap">
-        </div>
-        <p class="col p-2 m-0">Text next to the right of the image</p>
-    </div>
-</div>
-
-
+ 
+              
         </form>
+
+
+     
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -151,6 +167,7 @@
 
 
         </script>
+
     
     </body>
 

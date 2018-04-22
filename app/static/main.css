@@ -36,12 +36,22 @@ border: none
 .step-links a{
 color: #4285F4;
 } 
+h5.card-title {
+    color: #4285F4;
+    margin-bottom: 8px;
+}
+h6.card-subtitle {
+    font-size: 14px;
+}
+p.card-text {
+    font-size: 12px;
+}
+
 .bg {
  /* The image used */
     background-image: url("image/flowerbook.jpg");
     /* Full height */
-   	height: 100%; 
-   	overflow: hidden; 
+      
    	padding-top: 0%;
 
     background-size: cover;
@@ -49,6 +59,23 @@ color: #4285F4;
 
     /*background-position: center; */
     /*background-repeat: no-repeat; */
-   
-
+  
 }
+
+#dialog-window {
+  height: 200px;
+  border: 1px black solid;
+}
+
+#scrollable-content {
+  height: 180px;
+  overflow: auto;
+  background-color: blue;
+}
+
+#footer {
+  height: 20px;
+  background-color: green;
+}
+
+
