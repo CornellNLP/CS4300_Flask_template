@@ -5,11 +5,10 @@ import json
 import math
 import user_duration
 import user_release
-import user_filters
+import utilities
 from random import *
 
 movies_json = json.load(open('app/static/data/movies.json'))
-genres_json = json.load(open('app/static/data/genres.json'))
 
 # map each movie id to the movie's information
 movie_dict = dict()
@@ -19,9 +18,6 @@ for movie in movies_json:
 # get list of movie titles
 movie_list = [movie['title'] for movie in movies_json]
 movie_list.sort()
-
-# get list of genres
-genre_list = [genre['name'] for genre in genres_json['genres']]
 
 # build other lists from movie_dict
 castCrew_list = []
@@ -172,9 +168,9 @@ def search():
         if release_start or release_end:
             movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
         if ratings:
-            movie_dict, score_dict = user_filters.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
+            movie_dict, score_dict = utilities.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
         if languages:
-            movie_dict, score_dict = user_filters.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
+            movie_dict, score_dict = utilities.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
 
         ########### CONSTRUCTION OF SCORE DICTIONARY ###########
         for movie in score_dict:

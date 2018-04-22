@@ -1,0 +1,32 @@
+[  
+    {  
+        "name":"APPROVED"
+    },
+    {  
+        "name":"G"
+    },
+    {  
+        "name":"NC-17"
+    },
+    {  
+        "name":"NOT RATED"
+    },
+    {  
+        "name":"PG"
+    },
+    {  
+        "name":"PG-13"
+    },
+    {  
+        "name":"R"
+    },
+    {  
+        "name":"TV-G"
+    },
+    {  
+        "name":"TV-MA"
+    },
+    {  
+        "name":"UNRATED"
+    }
+]
