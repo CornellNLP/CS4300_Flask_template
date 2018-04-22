@@ -1,5 +1,5 @@
 <html>
-<body >
+<body class = "bg" >
 
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
@@ -43,7 +43,10 @@
             <h1>{{word_cloud_message}}</h1>
             {% for d in word_cloud %}  
              <div id = "donewordcloud" > </div>
-              <div class  = "wordcloud" >  {{d}}  </div>
+              
+            <div style = {color :transparent}> 
+                <div class  = "wordcloud" >  {{d}}  </div>
+            </div>
             
             {% endfor %}
         {% endif %} 
@@ -59,6 +62,7 @@
             <button type="submit" class="btn btn-info"> keyword </button>
         </form>
 
+        <div> 
         <form class="form-inline global-search">
 
         {% if top_books %}
@@ -68,16 +72,16 @@
                     <div class="card mt-2">
             <div class="row align-items-center">
                 <div class="col-md-3 pl-4">
-                    <img class="card-img-top d-flex align-items-center bg-light" src="https://media.steepster.com/api/file/Lad9fQV1QQuO5mYLodjw/convert?fit=crop&amp;h=190&amp;w=190" alt="Fragrant Golden Branch Oolong" onError="this.onerror=null;this.src='https://media.steepster.com/api/file/anN07UThRu6hWl3o9Dvt/convert?fit=crop&h=190&w=190';">
+                    <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
+                    onError="this.onerror=null;this.src='https://media.steepster.com/api/file/anN07UThRu6hWl3o9Dvt/convert?fit=crop&h=190&w=190';">
                 </div>
                 <div class="col-md-9 pl-0">
                     <div class="card-body">
                         <h5 class="card-title">{{d}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">by Zen Tea</h6>
-                        <p class="card-text mb-2">Creamy, Floral, Orchid, Sweet, Vegetal, Flowers, Nutty, Perfume, Smooth</p>
-                        <p class="card-text mb-2">Tea Type: Oolong Tea | Steepster: 83.0 | Want It: 5.0 | Own It: 3.0 
-                        </p>
-                        <a href="https://steepster.com/teas/zen-tea/42311-fragrant-golden-branch-oolong" class="card-link">View on Steepser</a>
+                        <h6 class="card-subtitle mb-2 text-muted">by Good Reads</h6>
+                        <p class="card-text mb-2"> Random Text</p>
+                        <p class="card-text mb-2"> Random Text </p>
+                   
                     </div>
                 </div>
             </div>
@@ -91,7 +95,7 @@
               
         </form>
 
-
+        </div>
      
 
 

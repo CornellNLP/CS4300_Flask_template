@@ -11,6 +11,12 @@ text-align:center;
 body {
 padding-top: 15%;
 padding-bottom: 15px;
+
+}
+
+#wordcloud{
+    color: rgba(0, 0, 0, 0);
+
 }
 .global-search {
 text-align:center;
@@ -49,14 +55,18 @@ p.card-text {
 
 .bg {
  /* The image used */
-    background-image: url("image/flowerbook.jpg");
+    background: url("image/flowerbook.jpg") no-repeat center cover;
     /* Full height */
-      
-   	padding-top: 0%;
+   
+    padding-top:0;
 
-    background-size: cover;
+
+    background-size: contain; 
 	 /* Center and scale the image nicely */
+    background-attachment:fixed;
+    overflow: hidden;
 
+    /*background-image: no-repeat; */
     /*background-position: center; */
     /*background-repeat: no-repeat; */
   
