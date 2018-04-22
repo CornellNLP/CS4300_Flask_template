@@ -12,11 +12,11 @@ body {
 }
 
 input[type=text]{
-	width: 75%;
+	width: 60%;
+  border: none;
+  border-bottom: 1px solid black;
 	padding: 12px 20px;
 	margin: 8px 2px;
-	border: solid 1px;
-	border-radius: 2px;
 }
 
 #submit_button{
@@ -87,6 +87,10 @@ a:hover {
 	color: gray;
 }
 
+form {
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 /** from w3 schools */
 .loader {
@@ -103,4 +107,13 @@ a:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
 }

@@ -12,6 +12,8 @@ class Home extends Component {
 			data : [],
 			loading : false
 		};
+		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "draw", "be better at math"]
+    this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,6 +35,7 @@ class Home extends Component {
 	}
 
 	handleSubmit(event){
+		let submission = this.state.value === "" ? this.suggestion : this.state.value
 		let query = '?query=' + this.state.value
 		event.preventDefault();
 		this.props.history.push({
@@ -59,27 +62,32 @@ class Home extends Component {
 		})
 	}
 
-
 	render() {
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
     return (
     	<div>
-	      <form>
-	      	<label>
-	      		<p className = "title">learnddit</p>
-	      		<span>
-	      		I want to learn...
-	      		<input className = "searchBar" type="text" value={this.state.value} onChange={this.handleChange} />
-	      		</span>
-	      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
-	      	</label>
-	      </form>
-	      {
-	      	this.state.loading ? (<div className="loader"></div>) :
-	      	(data.map((comment, i) => {
-	      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
-	      	}))
-	      }
+    		<div>
+		      <form>
+		      	<label>
+		      		<p className = "title">learnddit</p>
+		      		<span>
+		      		I want to learn how to...
+		      		<input className="searchBar" id="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder={this.suggestion}/>
+		      		</span>
+		      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
+		      	</label>
+		      </form>
+		      {
+		      	this.state.loading ? (<div className="loader"></div>) :
+		      	(data.map((comment, i) => {
+		      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
+		      	}))
+		      }
+	      </div>
+	    	<div className="footer">
+	    		<p>Zack Brody (ztb5), Eric Feng (evf23), Michelle Ip (mvi4), Monica Ong (myo3), Jill Wu (jw975)</p>
+	    		<p>A project for Cornell's <a href="http://www.cs.cornell.edu/courses/cs4300/2018sp/" target="_blank"> CS 4300</a></p>
+	    	</div>
       </div>
 	    );
 	}

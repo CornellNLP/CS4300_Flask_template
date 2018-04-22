@@ -102,7 +102,7 @@ def index_search(query_tokens, index, idf, doc_norms):
 			with the highest score.
 
 		"""
-	score_norm = { "iwanttolearn" : 75, "explainlikeimfive" : 0.25 } # arbitrary score
+	score_norm = { "iwanttolearn" : 1, "explainlikeimfive" : 0 } # dont consider ELI5 anymore
 	tokens = query_tokens
 	print("Got tokens: " + str(tokens))
 
