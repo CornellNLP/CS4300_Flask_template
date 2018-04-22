@@ -108,8 +108,8 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc.">
-                <datalist id="castCrew_list" value="{{old_castCrew}}">
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc." value="{{old_castCrew}}">
+                <datalist id="castCrew_list"">
                     {% if castCrew_list %}
                         {% for c in castCrew_list %}
                             <option value='{{c}}'>
