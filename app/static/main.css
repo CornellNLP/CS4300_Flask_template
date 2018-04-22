@@ -243,4 +243,8 @@ span.twitter-typeahead .tt-suggestion:focus {
     font-weight: 900;
   }
 
+  .form-check {
+    margin-bottom: 10px;
+  }
+
 /*Known issues: tags overlap, focus*/
