@@ -145,21 +145,39 @@
             </div>
             <div class="form-row">
               <label class="tags center">Do user scores matter to you?</label>
-              <div class="form-check tags center" style="height: 10px;">
+              {% if old_acclaim == 'no': %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="acclaim" value="yes"> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="acclaim" value="no" checked> No<br>
+                </div>
+              {% else: %}
+                <div class="form-check tags center" style="height: 10px;">
                   <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
-              </div>
-              <div class="form-check tags center">
-                <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
-              </div>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+                </div>
+              {% endif %}
             </div>
             <div class="form-row">
               <label class="tags center">Does the popularity of the movie matter to you?</label>
-              <div class="form-check tags center" style="height: 10px;">
-                  <input class="tags form-check-input" type="radio" name="popularity" value="yes" checked> Yes<br>
-              </div>
-              <div class="form-check tags center">
-                <input class="form-check-input" type="radio" name="popularity" value="no"> No<br>
-              </div>
+              {% if old_popularity == 'no': %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="popularity" value="yes"> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="popularity" value="no" checked> No<br>
+                </div>
+              {% else: %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="popularity" value="yes" checked> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="popularity" value="no"> No<br>
+                </div>
+              {% endif %}
             </div>
             <br>
             <div class="form-group tags center">
