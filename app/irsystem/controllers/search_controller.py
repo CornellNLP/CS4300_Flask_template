@@ -143,21 +143,10 @@ def search():
         else:
             output_message += "Popularity: No\n"
 
-        ########### FILTERING OF DICTIONARIES ###########
-        # updates dicts with hard filters
-        # for duration and release, also computes scores
-        if duration:
-            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
-        if release_start or release_end:
-            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
-        if ratings:
-            movie_dict, score_dict = user_filters.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
-        if languages:
-            movie_dict, score_dict = user_filters.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
-
-        ########### CONSTRUCTION OF SCORE DICTIONARY ###########
-        for movie in score_dict:
-            if similar:
+        ########### CALCULATE SIMILAR SCORE ###########
+        # must do before filtering because similar movies might be filtered out
+        if similar:
+            for movie in score_dict:
                 # if the movie is already in the selected_titles
                 if movie_dict[movie]['title'].lower() in set(selected_movies):
                     score_dict[movie] -= max_score
@@ -175,6 +164,20 @@ def search():
                         cumulative_score += (genres_sim + crew_sim + keywords_sim) / (3 * len(selected_movies))
                     score_dict[movie] += cumulative_score * similar_score
 
+        ########### FILTERING OF DICTIONARIES ###########
+        # updates dicts with hard filters
+        # for duration and release, also computes scores
+        if duration:
+            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
+        if release_start or release_end:
+            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
+        if ratings:
+            movie_dict, score_dict = user_filters.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
+        if languages:
+            movie_dict, score_dict = user_filters.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
+
+        ########### CONSTRUCTION OF SCORE DICTIONARY ###########
+        for movie in score_dict:
             if genres:
                 jaccard_sim = get_set_overlap(selected_genres, movie_dict[movie]['genres'])
                 score_dict[movie] += jaccard_sim * genres_score
@@ -232,7 +235,25 @@ def search():
 
         # data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
 
-    return render_template('search.html', output_message=output_message, data=data[:10], movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
+    return render_template('search.html',
+        old_similar = xstr(similar),
+        old_genres = xstr(genres),
+        old_castCrew = xstr(castCrew),
+        old_keywords = xstr(keywords),
+        old_duration = xstr(duration),
+        old_release_start = xstr(release_start),
+        old_release_end = xstr(release_end),
+        old_ratings = xstr(ratings),
+        old_languages = xstr(languages),
+        old_acclaim = xstr(acclaim),
+        old_popularity = xstr(popularity),
+        output_message= output_message,
+        data=data[:10],
+        movie_list=movie_list,
+        genre_list=genre_list,
+        castCrew_list=castCrew_list,
+        keywords_list = keywords_list,
+        year_list = year_list)
 
 def parse_lst_str(lst_str):
     parsed = []
@@ -253,3 +274,6 @@ def get_set_overlap(list1, list2):
     num = float(len(set1.intersection(set2)))
     den = len(set1)
     return num / den
+
+def xstr(s):
+    return '' if s is None else str(s)

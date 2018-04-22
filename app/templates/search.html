@@ -32,13 +32,8 @@
           <form class="global-search custom-form" style="width: 100%">
             <div class="form-row ">
               <div class="form-group col-md-6">
-                <!-- <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" maxlength="12" />
-                <script>
-                  console.log($("input").val());
-                  console.log($("input").tagsinput('items'));
-                </script> -->
-                <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
-                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%">
+                <label class="tags animated-label center">Similar Movies:</label>
+                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%" value="{{old_similar}}">
                 <script>
                     var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
@@ -76,7 +71,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Genres (separated by semicolons):</label>
-                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
+                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc." value="{{old_genres}}">
                 <datalist id="genre_list">
                     {% if genre_list %}
                         {% for g in genre_list %}
@@ -89,7 +84,7 @@
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
                 <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc.">
-                <datalist id="castCrew_list">
+                <datalist id="castCrew_list" value="{{old_castCrew}}">
                     {% if castCrew_list %}
                         {% for c in castCrew_list %}
                             <option value='{{c}}'>
@@ -99,7 +94,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc.">
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc." value="{{old_keywords}}">
                 <span></span>
                 <datalist id="keywords_list">
                     {% if keywords_list %}
@@ -114,7 +109,7 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                   <label class="tags center">Duration (in minutes):</label>
-                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)">
+                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)" value="{{old_duration}}">
               </div>
               <div class="form-group col-md-6 center tags">
                 <div class="form-row">
@@ -122,10 +117,10 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4">
+                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4" value="{{old_release_start}}">
                   </div>
                   <div class="form-group col-md-6">
-                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4">
+                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4" value="{{old_release_end}}">
                   </div>
                 </div>
               </div>
@@ -140,11 +135,11 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                   <label class="tags center">Ratings (separated by semicolons):</label>
-                  <input id="input" type="text" class="form-control center" name="ratings" class="form-control" placeholder="PG-13; PG; etc.">
+                  <input id="input" type="text" class="form-control center" name="ratings" class="form-control" placeholder="PG-13; PG; etc." value="{{old_ratings}}">
               </div>
               <div class="form-group col-md-6">
                   <label class="tags center">Languages (separated by semicolons):</label>
-                  <input id="input" type="text" class="form-control center" name="languages" class="form-control" placeholder="en; etc.">
+                  <input id="input" type="text" class="form-control center" name="languages" class="form-control" placeholder="en; etc." value="{{old_languages}}">
               </div>
             </div>
             <div class="form-row">
