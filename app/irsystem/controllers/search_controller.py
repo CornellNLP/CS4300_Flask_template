@@ -237,7 +237,7 @@ def search():
                 movie_dict[movie_id]['release_date'] = dt
                 data.append(movie_dict[movie_id])
 
-        data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
+        data = [data[i:i + 4] for i in xrange(0, len(data), 4)]
 
     return render_template('search.html',
         old_similar = xstr(similar),
