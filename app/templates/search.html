@@ -15,6 +15,7 @@
         <script src="/static/js/custom.js"></script>
         <style>
           body {
+            background-image: url("/static/film_background_3.png");
           }
           </style>
     </head>
@@ -167,42 +168,35 @@
           </form>
         </div>
         {% if data %}
-        <div id="myCarousel" class="carousel slide" wrap=false interval=false data-ride="carousel" style="background-color: gray;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            {% for d in data %}
-              <li data-target="#myCarousel" data-slide-to="{{ loop.index-1 }}"
-                  {% if loop.index == 0 %}
-                      class="active"
-                  {% endif %}>
-                  </li>
+
+            {% for lst in data %}
+              <li data-target="#myCarousel" data-slide-to="{{ loop.index0}}"
+              {% if loop.index0 == 0 %}
+              class="active"
+              {% endif %}></li>
             {% endfor %}
           </ol>
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-            <div class="item active">
-              <img src="static/logo.png" style="display: inline-block" alt="Los Angeles">
-            </div>
-            {% for d in data %}
-            <div class="item">
+            {% for lst in data %}
+            <div class="item {{'active' if loop.index0 == 0}}">
               <div class="row">
-                <div class="col-md-4 container">
-                  <img class="center poster" src="static/data/posters/{{d['id']}}.jpg" style="height:500px;" alt="">
-                  <div class="post_title">
-                    <p><strong>{{d['title']}}</strong></p>
+              {% for d in lst %}
+                <div class="col-md-3 container">
+                  <img class="center poster" src="static/data/posters/{{d['id']}}.jpg" style="height:400px;" alt="">
+                  <div class="post_title" display="none">
+                    <p><strong style="font-size: 20px;">{{d['title']}}</strong></p>
                     <p>{{d['release_date']}} </p>
                     <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <img class="center poster" src="static/data/posters/{{d['id']}}.jpg" style="height:500px;" alt="">
-                </div>
-                <div class="col-md-4">
-                  <img  class="center poster"src="static/data/posters/{{d['id']}}.jpg" style="height:500px;" alt="">
-                </div>
-              </div>
+              {% endfor %}
             </div>
+          </div>
             {% endfor %}
           </div>
 
@@ -217,48 +211,6 @@
           </a>
         </div>
       {% endif %}
-    <!-- <form class="form-inline global-search">
-    {% if data %}
-        <h1>{{output_message}}</h1>
-        {% for d in data %}
-            <br><br>
-            <p>Title: <strong>{{d['title']}}</strong></p>
-            <p>Similarity: {{d['similarity']}}%</p>
-            <img src="static/data/posters/{{d['id']}}.jpg" alt={{d['id']}} style="height:200px;">
-            <br>
-            <p>Synopsis: {{d['summary']}}</p>
-            <p>Genres:
-            {% for g in d['genres'][:-1] %}
-                {{g}},
-            {% endfor %}
-            {{d['genres'][-1]}}
-            </p>
-            <p>Duration: {{d['runtime']}} min</p>
-            <p>Release Date: {{d['release_date']}}</p>
-            <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
-            <p>Cast:
-            <br>
-            <small>
-            {% for c in d['cast'] %}
-                {{c['name']}} as {{c['character']}}
-                <br>
-            {% endfor %}
-            </small>
-            </p>
-            <p>Crew:
-            <br>
-            <small>
-            {% for c in d['crew'] %}
-                {{c['job']}}: {{c['name']}}
-                <br>
-            {% endfor %}
-            </small>
-            </p>
-            <p>IMDb Page: <a href ="http://www.imdb.com/title/{{d['id']}}">Link</a></p>
-        {% endfor %}
-    {% endif %}
-    </form> -->
-
 
         <div class="footer">
             <p>&copy; 2018 | Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz29</p>
