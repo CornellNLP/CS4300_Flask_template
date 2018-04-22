@@ -43,14 +43,13 @@
                       }
                     });
                     movies.initialize();
-                    $('input').tagsinput({
+                    $('#similar_movies').tagsinput({
                         typeaheadjs: {
                             name: 'movies',
                             displayKey: 'title',
                             valueKey: 'title',
                             source: movies.ttAdapter(),
                             hint: true,
-                            higlight: true,
                             minLength: 1
                         },
                         confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
@@ -71,13 +70,43 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Genres (separated by semicolons):</label>
-                <input id="select_genres" class="form-control center" list="genre_list" name="genres" class="form-control" placeholder="e.g. Action; History; etc.">
-                <datalist id="genre_list">
+                <input id="select_genres" data-role="tagsinput" type="text" name="genres" placeholder="e.g. Action; History; etc.">
+                <!-- <datalist id="genre_list">
                     {% if genre_list %}
                         {% for g in genre_list %}
                             <option value='{{g}}'>
                         {% endfor %}
-                    {% endif %}
+                    {% endif %} -->
+                <script>
+                    var genres_lst = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      prefetch: {
+                        url: 'static/data/genres.json',
+                        transform: function (response) {
+                            return response.genres;
+                        }
+                      }
+                    });
+                    genres_lst.initialize();
+                    $('#select_genres').tagsinput({
+                        typeaheadjs: {
+                            name: 'genres_lst',
+                            displayKey: 'name',
+                            valueKey: 'name',
+                            source: genres_lst.ttAdapter(),
+                            hint: true,
+                            highlight: true,
+                            minLength: 1
+                        },
+                        confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
+                        maxTags: 5, //limit the number of tags
+                        freeInput: false, //don't allow the user to submit free text
+                        // itemValue: 'title',
+                        // tagClass: 'label label-primary' //tag colors
+                     // focusClass: 'bootstrap-tagsinput:focus',
+                    });
+                </script>
               </div>
             </div><br><br><br><br><br><br>
             <div class="form-row">

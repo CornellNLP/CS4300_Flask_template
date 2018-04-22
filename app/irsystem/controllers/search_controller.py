@@ -9,7 +9,7 @@ import user_filters
 from random import *
 
 movies_json = json.load(open('app/static/data/movies.json'))
-genres_json = json.load(open('genres.json'))
+genres_json = json.load(open('app/static/data/genres.json'))
 
 # map each movie id to the movie's information
 movie_dict = dict()
