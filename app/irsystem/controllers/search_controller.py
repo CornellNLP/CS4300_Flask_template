@@ -114,52 +114,56 @@ def put_books_in_db():
 
 
 
-# @irsystem.route('/', methods=['GET'])
-# def search():
-# 	create_tables()
-# 	put_books_in_db()
-
-
 @irsystem.route('/', methods=['GET'])
 def search():
-	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search')
-
-	if title_input == None and keyword_input == None:
-		print('hey')
-		word_cloud_message = ''
-		top_books_message =  ''
-		word_cloud = []
-		top_books = []
-
-	elif keyword_input is not None: 
-		print('before query')
-		w = Word.query.filter_by(name = keyword_input).first()
-		print('after query')
-		word_cloud_message = ''
-		word_cloud = []
-		if w is None: 
-			print('hey?')
-			top_books_message = ''
-			top_books = ["The keyword is not in our database."]
-		else:
-			top_books_message = "Top 15 books for the keyword are:"
-			print('before function call')
-			top_books = db_word_to_closest_books(w)
-			print('after function call')
-
-	else:
-		b = Book.query.filter_by(name = title_input).first()
-		top_books_message = ""
-		top_books = []
-		if b is None:
-			word_cloud_message = ''
-			word_cloud = ['The book is not in our database.']
-		else:
-			word_cloud_message = 'Word cloud is: '	
-			word_cloud = db_book_to_closest_words(b)
-
+	create_tables()
+	put_books_in_db()
+	word_cloud_message = ''
+	top_books_message = ''
+	word_cloud = ['successfully added']
+	top_books = ['successfully added']
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+
+# @irsystem.route('/', methods=['GET'])
+# def search():
+# 	title_input = request.args.get('title_search')
+# 	keyword_input = request.args.get('keyword_search')
+
+# 	if title_input == None and keyword_input == None:
+# 		print('hey')
+# 		word_cloud_message = ''
+# 		top_books_message =  ''
+# 		word_cloud = []
+# 		top_books = []
+
+# 	elif keyword_input is not None: 
+# 		print('before query')
+# 		w = Word.query.filter_by(name = keyword_input).first()
+# 		print('after query')
+# 		word_cloud_message = ''
+# 		word_cloud = []
+# 		if w is None: 
+# 			print('hey?')
+# 			top_books_message = ''
+# 			top_books = ["The keyword is not in our database."]
+# 		else:
+# 			top_books_message = "Top 15 books for the keyword are:"
+# 			print('before function call')
+# 			top_books = db_word_to_closest_books(w)
+# 			print('after function call')
+
+# 	else:
+# 		b = Book.query.filter_by(name = title_input).first()
+# 		top_books_message = ""
+# 		top_books = []
+# 		if b is None:
+# 			word_cloud_message = ''
+# 			word_cloud = ['The book is not in our database.']
+# 		else:
+# 			word_cloud_message = 'Word cloud is: '	
+# 			word_cloud = db_book_to_closest_words(b)
+
+# 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
 
 
