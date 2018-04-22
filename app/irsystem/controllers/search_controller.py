@@ -226,14 +226,18 @@ def search():
             for movie_tuple in sorted_score_dict:
                 movie_id, movie_score = movie_tuple
                 movie_dict[movie_id]['similarity'] = 0.0
+                dt = datetime.datetime.strptime(movie_dict[movie_id]['release_date'], '%Y-%m-%d').strftime('%m-%d-%Y')
+                movie_dict[movie_id]['release_date'] = dt
                 data.append(movie_dict[movie_id])
         else:
             for movie_tuple in sorted_score_dict:
                 movie_id, movie_score = movie_tuple
                 movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
+                dt = datetime.datetime.strptime(movie_dict[movie_id]['release_date'], '%Y-%m-%d').strftime('%m-%d-%Y')
+                movie_dict[movie_id]['release_date'] = dt
                 data.append(movie_dict[movie_id])
 
-        # data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
+        data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
 
     return render_template('search.html',
         old_similar = xstr(similar),
