@@ -230,7 +230,8 @@ def search():
                 movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
                 data.append(movie_dict[movie_id])
 
-        # data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
+    data = [data[i:i + 4] for i in xrange(0, len(data), 4)]
+    print(data)
 
     return render_template('search.html', output_message=output_message, data=data[:10], movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
 
