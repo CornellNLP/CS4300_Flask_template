@@ -33,8 +33,8 @@
             <div class="form-row ">
               <div class="form-group col-md-6">
                 <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
-                <input id="similar_movies" data-role="tagsinput" class="form-control" type="text" name="similar" placeholder="Movie names (e.g. Black Panther; Jumanji; etc...)">
-                <!-- <script>
+                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%">
+                <script>
                     var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
                       queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -44,20 +44,28 @@
                     });
                     movies.initialize();
                     $('input').tagsinput({
-                      typeaheadjs: {
-                        name: 'movies',
-                        displayKey: 'title',
-                        valueKey: 'title',
-                        source: movies.ttAdapter()
-                      }
-                      // {
-                      //   hint: true,
-                        // highlight: true,  Enable substring highlighting
-                      //   minLength: 1 /* Specify minimum characters required for showing suggestions */
-                      //   }
-                      // freeInput: false;
+                        typeaheadjs: {
+                            name: 'movies',
+                            displayKey: 'title',
+                            valueKey: 'title',
+                            source: movies.ttAdapter(),
+                            hint: true,
+                            higlight: true,
+                            minLength: 1
+                        },
+                        confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
+                        maxTags: 5, //limit the number of tags
+                        freeInput: false, //don't allow the user to submit free text
+                        // tagClass: 'label label-primary' //tag colors
+                     // focusClass: 'bootstrap-tagsinput:focus',
                     });
-                </script> -->
+                    // $('.bootstrap-tagsinput').focusin(function() {
+                    //     $(this).addClass('focus');
+                    // });
+                    // $('.bootstrap-tagsinput').focusout(function() {
+                    //     $(this).removeClass('focus');
+                    // });
+                </script>
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Genres (separated by semicolons):</label>
@@ -69,11 +77,11 @@
                         {% endfor %}
                     {% endif %}
               </div>
-            </div><br>
+            </div><br><br><br><br><br><br>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="tags center">Cast/Crew (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc...">
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc.">
                 <datalist id="castCrew_list">
                     {% if castCrew_list %}
                         {% for c in castCrew_list %}
@@ -84,7 +92,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label class="tags center">Keywords (separated by semicolons):</label>
-                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc...">
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc.">
                 <span></span>
                 <datalist id="keywords_list">
                     {% if keywords_list %}
@@ -123,7 +131,7 @@
               </datalist>
             </div>
             <label class="tags center">Do user scores matter to you?</label>
-            <div class="form-check tags center">
+            <div class="form-check tags center" style="height: 10px;">
                 <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
             </div>
             <div class="form-check tags center">
