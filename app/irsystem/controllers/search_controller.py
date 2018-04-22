@@ -2,8 +2,10 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
+import math
 import user_duration
 import user_release
+import user_filters
 from random import *
 
 movies_json = json.load(open('app/static/data/movies.json'))
@@ -24,13 +26,23 @@ genre_list = [genre['name'] for genre in genres_json['genres']]
 # build other lists from movie_dict
 castCrew_list = []
 keywords_list = []
-ratings_list = ['G', 'UNRATED', 'NC-17', 'PG-13', 'R', 'NOT RATED', 'PG', 'TV-MA', 'TV-G', 'APPROVED']
+ratings_list = []
 languages_list = []
+max_tmdb_count = 0.0
+max_imdb_count = 0.0
+max_meta_count = 0.0
+
 for movie in movie_dict:
     castCrew_list += ([member['name'] for member in movie_dict[movie]['cast']] + [member['name'] for member in movie_dict[movie]['crew']])
     keywords_list += movie_dict[movie]['keywords']
     ratings_list.append(movie_dict[movie]['rating'])
     languages_list.append(movie_dict[movie]['original_language'])
+    if movie_dict[movie]['tmdb_score_count'] > max_tmdb_count:
+        max_tmdb_count = movie_dict[movie]['tmdb_score_count']
+    if movie_dict[movie]['imdb_score_count'] > max_imdb_count:
+        max_imdb_count = movie_dict[movie]['imdb_score_count']
+    if movie_dict[movie]['meta_score_count'] > max_meta_count:
+        max_meta_count = movie_dict[movie]['meta_score_count']
 castCrew_list = list(set(castCrew_list))
 castCrew_list.sort()
 keywords_list = list(set(keywords_list))
@@ -54,10 +66,10 @@ def search():
     duration = request.args.get('duration')
     release_start = request.args.get('release_start')
     release_end = request.args.get('release_end')
-    # ratings = request.args.get('ratings')
-    # languages = request.args.get('languages')
+    ratings = request.args.get('ratings')
+    languages = request.args.get('languages')
     acclaim = request.args.get('acclaim')
-    # popularity = request.args.get('popularity')
+    popularity = request.args.get('popularity')
 
     if not similar and not genres and not duration and not acclaim and not castCrew and not keywords and not release_start and not release_end:
         data = []
@@ -108,26 +120,28 @@ def search():
                 output_message += "Release: 1900-" + release_end + "\n"
             release_score = 10.0
             max_score += release_score
-        # if ratings:
-        #     output_message += "Ratings: " + ratings + "\n"
-        #     ratings_score = 10.0
-        #     max_score += ratings_score
-        # if languages:
-        #     output_message += "Languages: " + languages + "\n"
-        #     languages_score = 10.0
-        #     max_score += languages_score
+        if ratings:
+            selected_ratings = parse_lst_str(ratings)
+            output_message += "Ratings: " + ratings + "\n"
+            ratings_score = 10.0
+            max_score += ratings_score
+        if languages:
+            selected_languages = parse_lst_str(languages)
+            output_message += "Languages: " + languages + "\n"
+            languages_score = 10.0
+            max_score += languages_score
         if acclaim == "yes":
             output_message += "Acclaim: Yes\n"
             acclaim_score = 10.0
             max_score += acclaim_score
         else:
             output_message += "Acclaim: No\n"
-        # if popularity == "yes":
-        #     output_message += "Popularity: Yes\n"
-        #     popularity_score = 10.0
-        #     max_score += popularity_score
-        # else:
-        #     output_message += "Popularity: No\n"
+        if popularity == "yes":
+            output_message += "Popularity: Yes\n"
+            popularity_score = 10.0
+            max_score += popularity_score
+        else:
+            output_message += "Popularity: No\n"
 
         ########### FILTERING OF DICTIONARIES ###########
         # updates dicts with hard filters
@@ -136,10 +150,10 @@ def search():
             movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
         if release_start or release_end:
             movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
-        # if ratings:
-        # movie_dict, score_dict = user_ratings.main(movie_dict, score_dict, ratings, ratings_score)
-        # if languages:
-        # movie_dict, score_dict = user_languages.main(movie_dict, score_dict, languages, languages_score)
+        if ratings:
+            movie_dict, score_dict = user_filters.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
+        if languages:
+            movie_dict, score_dict = user_filters.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
 
         ########### CONSTRUCTION OF SCORE DICTIONARY ###########
         for movie in score_dict:
@@ -182,11 +196,25 @@ def search():
                 else:
                     score_dict[movie] += tmdb_score / 20.0 * acclaim_score
 
-            # if popularity == "yes":
-            #     tmdb_count = movie_dict[movie]['tmdb_score_count']
-            #     imdb_count = movie_dict[movie]['imdb_score_count']
-            #     meta_count = movie_dict[movie]['meta_score_count']
-            #     score_dict[movie] += popularity_score
+            if popularity == "yes":
+                tmdb_count = movie_dict[movie]['tmdb_score_count']
+                if tmdb_count == 0:
+                    tmdb_average = 0
+                else:
+                    tmdb_average = math.log(tmdb_count) / math.log(max_tmdb_count)
+                imdb_count = movie_dict[movie]['imdb_score_count']
+                if imdb_count == 0:
+                    imdb_average = 0
+                else:
+                    imdb_average = math.log(imdb_count) / math.log(max_imdb_count)
+                meta_count = movie_dict[movie]['meta_score_count']
+                if meta_count == 0:
+                    meta_average = 0
+                else:
+                    meta_average = math.log(meta_count) / math.log(max_meta_count)
+                average_score = (tmdb_average + imdb_average + meta_average) / 3.0
+                score_dict[movie] += average_score * popularity_score
+
 
         ########### SORT SCORES, RETURN TOP MATCHES ###########
         sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:24]
@@ -202,7 +230,7 @@ def search():
                 movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
                 data.append(movie_dict[movie_id])
 
-        data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
+        # data = [data[i:i + 6] for i in xrange(0, len(data), 6)]
 
     return render_template('search.html', output_message=output_message, data=data, movie_list=movie_list, genre_list=genre_list, castCrew_list= castCrew_list, keywords_list = keywords_list, year_list = year_list)
 
