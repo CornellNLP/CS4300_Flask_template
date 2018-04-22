@@ -64,7 +64,19 @@
             {% for d in top_books %}             
                 {{d}}
             {% endfor %}
-        {% endif %}
+        {% endif %} 
+
+
+    <div class="card w-50">
+    <div class="card-img-top d-flex align-items-center bg-light">
+        <div>
+            <img class="img-fluid" src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image" alt="Card image cap">
+        </div>
+        <p class="col p-2 m-0">Text next to the right of the image</p>
+    </div>
+</div>
+
+
         </form>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -83,17 +95,22 @@
                 console.log("document ready")  
                     var newlist = [] 
                     lst = document.getElementsByClassName("wordcloud")
+                    console.log(lst.length)
+                    if (lst.length = 13) {
+                        console.log(" Word not in index display create a prettier output") 
+                    }
+
+
                     for (var i = 0; i < lst.length ; i++) {
                         newlist.push(lst[i].innerText) 
 
                     }    
                     var weightlist =[] 
                     for (var i = 0 ; i < newlist.length ; i++) {
-                        weightlist.push({text : newlist[i], weight : 12}) 
+                        weightlist.push({text : newlist[i], weight : 11}) 
 
                     }
                     console.log(weightlist)
-
 
             $("#donewordcloud").jQCloud(weightlist, {
              width: 400,
@@ -101,24 +118,12 @@
             });
 
                     }); 
-        console.log("jqclooud rendering?")
-
-
-
+        
         </script>
-
-
-
-
-       
         <!--script for title field added for autocomplete--> 
-        
-        
-
         <script>  
 
-     
-
+    
         $('#keyfield').tokenfield({
             autocomplete: {
                 source: ['romantic','horror','language', 'computer', 'definitive']
@@ -130,6 +135,20 @@
 
 
         }); 
+
+
+        $('#field').tokenfield({
+            autocomplete: {
+                source: ['romantic','horror','language', 'computer', 'definitive']
+              
+            }, 
+           
+            noDuplicate: true ,
+            lookupLimit: 1
+
+
+        }); 
+
 
         </script>
     
