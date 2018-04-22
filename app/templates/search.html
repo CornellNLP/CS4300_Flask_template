@@ -37,18 +37,19 @@
             <button type="submit" class="btn btn-info"> title </button>
         </form>
         <form class="form-inline global-search">
-        
+         
         {% if word_cloud %}
             <h1>{{word_cloud_message}}</h1>
-            {% for d in word_cloud %}
-                
-                <p>  {{d}}  </p>
-                
-
+            {% for d in word_cloud %}  
+             <div id = "donewordcloud" > </div>
+              <div class  = "wordcloud" >  {{d}}  </div>
+            
             {% endfor %}
-        {% endif %}
+        {% endif %} 
+
         
         </form>
+        
 
         <form class="form-inline global-search">
             <div class="form-group">
@@ -60,9 +61,8 @@
 
         {% if top_books %}
             <h1>{{top_books_message}}</h1>
-            {% for d in top_books %}
-                <br>
-                <div id = "wordcloud">{{d}}</div>
+            {% for d in top_books %}             
+                {{d}}
             {% endfor %}
         {% endif %}
         </form>
@@ -76,26 +76,44 @@
         <script src = "/static/jquery-ui.js"> </script>
         <script type="text/javascript" src="/static/jqcloud.js"></script> 
 
-        <script > 
-            
-            $("#wordcloud").jQCloud({ words, {
-             width: 500,
-            height: 1000
+        <script> 
+
+        $( document ).ready(function() {
+                console.log( "document loaded try to get the data load" );  
+                console.log("document ready")  
+                    var newlist = [] 
+                    lst = document.getElementsByClassName("wordcloud")
+                    for (var i = 0; i < lst.length ; i++) {
+                        newlist.push(lst[i].innerText) 
+
+                    }    
+                    var weightlist =[] 
+                    for (var i = 0 ; i < newlist.length ; i++) {
+                        weightlist.push({text : newlist[i], weight : 12}) 
+
+                    }
+                    console.log(weightlist)
+
+
+            $("#donewordcloud").jQCloud(weightlist, {
+             width: 400,
+            height: 300
             });
+
+                    }); 
+        console.log("jqclooud rendering?")
+
 
 
         </script>
 
+
+
+
        
         <!--script for title field added for autocomplete--> 
         
-        <script>
-        $("#tagcloud a").tagcloud({
-                size: {start: 12, end: 36, unit: "px"},
-                color: {start: '#3498DB', end: '#46CFB0'}
-                });
-        </script>  
-
+        
 
         <script>  
 
