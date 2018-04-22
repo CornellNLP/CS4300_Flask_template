@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
-        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
         <script type="text/javascript" src="static/typeahead.bundle.js"></script>
         <link rel="stylesheet" href="/static/main.css">
         <script src="/static/js/custom.js"></script>
@@ -32,6 +32,11 @@
           <form class="global-search custom-form" style="width: 100%">
             <div class="form-row ">
               <div class="form-group col-md-6">
+                <!-- <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" maxlength="12" />
+                <script>
+                  console.log($("input").val());
+                  console.log($("input").tagsinput('items'));
+                </script> -->
                 <label class="tags animated-label center">Similar Movies (separated by semicolons):</label>
                 <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%">
                 <script>
@@ -58,7 +63,8 @@
                         freeInput: false, //don't allow the user to submit free text
                         // itemValue: 'title',
                         // tagClass: 'label label-primary' //tag colors
-                     // focusClass: 'bootstrap-tagsinput:focus',
+                        // focusClass: 'bootstrap-tagsinput:focus',
+                        delimiter: ';'
                     });
                     // $('.bootstrap-tagsinput').focusin(function() {
                     //     $(this).addClass('focus');
@@ -66,7 +72,6 @@
                     // $('.bootstrap-tagsinput').focusout(function() {
                     //     $(this).removeClass('focus');
                     // });
-                    var movies_list = $("#similar_movies").tagsinput('items'); //for Erik
                 </script>
               </div>
               <div class="form-group col-md-6">
@@ -132,12 +137,33 @@
                   {% endif %}
               </datalist>
             </div>
-            <label class="tags center">Do user scores matter to you?</label>
-            <div class="form-check tags center" style="height: 10px;">
-                <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Ratings (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="ratings" class="form-control" placeholder="PG-13; PG; etc.">
+              </div>
+              <div class="form-group col-md-6">
+                  <label class="tags center">Languages (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="languages" class="form-control" placeholder="en; etc.">
+              </div>
             </div>
-            <div class="form-check tags center">
-              <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+            <div class="form-row">
+              <label class="tags center">Do user scores matter to you?</label>
+              <div class="form-check tags center" style="height: 10px;">
+                  <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+              </div>
+              <div class="form-check tags center">
+                <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="tags center">Does the popularity of the movie matter to you?</label>
+              <div class="form-check tags center" style="height: 10px;">
+                  <input class="tags form-check-input" type="radio" name="popularity" value="yes" checked> Yes<br>
+              </div>
+              <div class="form-check tags center">
+                <input class="form-check-input" type="radio" name="popularity" value="no"> No<br>
+              </div>
             </div>
             <br>
             <div class="form-group tags center">
