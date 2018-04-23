@@ -31,23 +31,22 @@ def db_word_to_closest_books(word, ith, k = 15):
 	print('after query')
 	dot_products = np.zeros(len(query_result*100))
 	print('before processing')
-	count = 0
 	for book in query_result:
 		np_book = np.fromstring(book.vectors, sep = ', ')
 		num_books = len(np_book) / 200
 		td_np_book = np.reshape(np_book, (num_books, 200))
 		dot_prod = np.dot(td_np_book, avg_word)
-		print(count)
-		count+=1
 		for i in range(num_books):
 			dot_products[book.start_index + i] = dot_prod[i]
 	print('after processing')
+
+	dot_products = np.absolute(dot_products)
 	asort = np.argsort(-dot_products)[:k+1]
 
 	top_k_books = []
 	for i in asort[1:]:
 		near_names = Books.query.filter_by(start_index = i/100*100).first().names
-		name = near_names.split('***')[i % 100]
+		name = 	near_names.split('***')[i % 100]
 		top_k_books.append((name, dot_products[i]/dot_products[asort[0]]))
 	return top_k_books
 
@@ -144,7 +143,7 @@ def put_books_in_db(hash_factor = 100):
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
 # @irsystem.route('/', methods=['GET'])
-# def search():
+# def delandadd():
 # 	empty_db()
 # 	create_tables()
 # 	put_books_in_db()
@@ -154,7 +153,7 @@ def put_books_in_db(hash_factor = 100):
 # 	top_books = ['successfully added']
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-@irsystem.route('/', methods=['GET'])
+@irsystem.route('', methods=['GET'])
 def search():
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
@@ -206,5 +205,4 @@ def search():
 			b = Books.query.filter_by(start_index = int(i)/100*100).first()
 			word_cloud_message = 'Word cloud is: '	
 			word_cloud = db_book_to_closest_words(b, int(i) % 100)
-
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
