@@ -8,10 +8,12 @@ class SVD:
         vectorizer = TfidfVectorizer(stop_words='english', max_df=.7,
                                      min_df=75)
 
+        stop_words = vectorizer.get_stop_words()
+
         jsonFileName = "Parsed JSONs/RC_2016-01.json"
         with open(jsonFileName, 'r') as f:
             rawJsons = json.load(f)
-            td_matrix = vectorizer.fit_transform([c["body"] for c in rawJsons if c["subreddit"] == "iwanttolearn"]).transpose()
+            td_matrix = vectorizer.fit_transform([c["body"] for c in rawJsons if c["subreddit"] == "IWantToLearn"]).transpose()
             return td_matrix
 
 
