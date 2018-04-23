@@ -137,8 +137,13 @@
                 </table>
            </div>
            <div style="display:none" class="info-popup" id="tweets">
-               <h4>Sample Tweet Data</h4>
-               <p>{{ data["tweets"] }}</p>
+               <h3 align="center">Top 10 Tweet Matches</h3>
+               <h5>{{data["politician"]}} tweets an average sentiment of {{data["tweets"]["avg_sentiment"]}} for "{{data["issue"]}}" </h5>
+               {% for tweet in data["tweets"]["tweet_dict"] %}
+                  <p>{{tweet["tweet"]}}<br>
+                  <b>Compound Sentiment:</b> {{'%0.2f' | format(tweet["sentiment"]["compound"])}}<br>
+                  <b>Similarity Score:</b> {{'%0.2f' | format(tweet["score"])}}</p>
+                {% endfor %}
            </div>
            <div style="display:none" class="info-popup" id="votes">
                <h4>Sample Vote Data</h4>

@@ -129,11 +129,10 @@ def tokenizer_custom(tweet):
 #return (top n tweet indices, n top tweet scores)
 def process_tweets(politician, query, n):
 	tweets = get_tweets_by_politician(politician)
-	vocab = json.load((open("app/irsystem/models/vocab.json", 'r')))
+	vocab = json.load((open("app/irsystem/models/vocab.json", 'r')))['vocab']
 	query_tokens = tokenizer_custom(query)
 
     #check query validity before proceeding
-	valid_query = False
 	for token in query_tokens:
 		if token in vocab:
 			valid_query = True
@@ -142,39 +141,46 @@ def process_tweets(politician, query, n):
 	if valid_query == False:
 		return ([],[])
 
-    #dot query arrays
-	acc = csr_matrix(np.ones(len(vocab)))
+	#dot query arrays
+	query_dict = {}
 	for token in query_tokens:
-    	#build vector from postings
-		postings = get_co_occurrence(token)
-		vectorized = np.zeros(len(vocab))
-		for post_obj in postings['postings']:
-			idx = post_obj['index']
-			score = post_obj['score']
-			vectorized[idx] = score
-		vectorized = csr_matrix(vectorized)
-		vec_norm = normalize(vectorized, 'l1')
-		acc = acc.multiply(vec_norm)
-	arr = acc.transpose()
+		postings = get_co_occurrence(token)['postings']
+		for posting in postings:
+			idx = posting['index']
+			score = posting['score']
+			word = vocab[idx]
+			if word in query_dict:
+				query_dict[word] *= score
+			else:
+				query_dict[word] = score
 
-    #vectorize politician tweets
-	just_tweets = [tweet['tweet_text'] for tweet in tweets]
-	vectorizer = CountVectorizer(vocabulary = vocab, tokenizer = tokenizer_custom)
-	word_counts = vectorizer.fit_transform(just_tweets)
+	#get similarity for each tweet
+	sim_scores = []
+	just_tweets = []
+	for tweet in tweets:
+		text = tweet['tweet_text']
+		sentiment = tweet['sentiment']
+		just_tweets.append((text, sentiment))
+		tokens = tokenizer_custom(text)
+		sim_score = 0.0
+		for token in tokens:
+			if token in query_dict:
+				sim_score += query_dict[token]
+		sim_scores.append(sim_score)
 
-    #determine top matches
-	doc_scores = (word_counts*arr).transpose()
-	doc_scores = doc_scores.todense()
-	top_docs = list(np.asarray(np.argsort(-1*doc_scores)))[0][:n]
-	top_scores = list(np.asarray(-1*np.sort(-1*doc_scores)))[0][:n]
+	sim_scores = np.array(sim_scores)
 
-    #turn tweet indices into actual tweets
-	tweet_lst = []
-	for tweet_idx in top_docs:
-		tweet_lst.append(just_tweets[tweet_idx])
+	top_scores = -1*np.sort(-1*sim_scores)[:n]
+	top_docs = np.argsort(-1*sim_scores)[:n]
 
-	return (tweet_lst, top_scores)
+	final_lst = []
+	total_sentiment = 0.0
+	for i in range(len(top_docs)):
+		idx = top_docs[i]
+		final_lst.append({"tweet": just_tweets[idx][0], "sentiment": just_tweets[idx][1], "score": top_scores[i]})
+		total_sentiment += just_tweets[idx][1]["compound"]
 
+	return (final_lst, total_sentiment)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -199,50 +205,47 @@ def search():
 			"votes": [],
 			"vote_score": 0.0
 		}
-		if politician_query:
-			#Get empath categories for free form query
-			t = time.time()
-			
+		if politician_query:	
 			donation_data = get_relevant_donations(politician_query, get_issue_list(free_form_query))
 
 			don_data = process_donations(donation_data)
 			data["donations"] = don_data
 
-			# top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
-			# #return top 5 for now
-			# if len(top_tweets) != 0:
-			# 	for tweet in top_tweets:
-			# 		data["tweets"].append(tweet)
+			tweet_dict, total_sentiment = process_tweets(politician_query, free_form_query, 10)
+			avg_sentiment = round(total_sentiment/10,2)
+			#return top 5 for now
+			if len(tweet_dict) != 0:
+				data["tweets"] = {'tweet_dict': tweet_dict, 'avg_sentiment': avg_sentiment}
 
-			# raw_vote_data = get_votes_by_politician(politician_query)
-			# # Find all votes that have a subject that contains the issue typed in
-			# query_lower = free_form_query.lower()
-			# for vote in raw_vote_data:
-			# 	issue_in_topics = False
-			# 	relevant_topic = ""
-			# 	if "subjects" in vote["vote"].keys():
-			# 		for topic in vote["vote"]["subjects"]:
-			# 			if query_lower in topic["name"].lower():
-			# 				issue_in_topics = True
-			# 				relevant_topic = topic["name"]
-			# 				break
-			# 	#If query and vote have similar topics or if query in bill description, add the vote to vote data
-			# 	if issue_in_topics or free_form_query.lower() in vote["vote"]["description"].lower():
-			# 		description = vote["vote"]["description"]
-			# 		politician_vote = "Unknown"
-			# 		for position in vote["vote"]["positions"]:
-			# 			if position["PoliticianName"] == politician_query:
-			# 				politician_vote = position["vote_position"]
-			# 				politician_party = position["party"]
-			# 				democratic_votes = vote["vote"]["democratic"]
-			# 				republican_votes = vote["vote"]["republican"]
-			# 				independent_votes = vote["vote"]["independent"]
-			# 				break
-			# 		if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
-			# 			data["votes"].append({"relevant_topic":relevant_topic, "description":description, "vote_position":politician_vote, "independent":independent_votes, "democratic":democratic_votes, "republican":republican_votes, "party":politician_party})
-			# #Do basic scoring system where score is % of time vote with party
-			# vote_score = vote_score_agree_with_party(data["votes"])
-			# data["vote_score"] = vote_score
+			raw_vote_data = get_votes_by_politician(politician_query)
+			# Find all votes that have a subject that contains the issue typed in
+			query_lower = free_form_query.lower()
+			for vote in raw_vote_data:
+				issue_in_topics = False
+				relevant_topic = ""
+				if "subjects" in vote["vote"].keys():
+					for topic in vote["vote"]["subjects"]:
+						if query_lower in topic["name"].lower():
+							issue_in_topics = True
+							relevant_topic = topic["name"]
+							break
+				#If query and vote have similar topics or if query in bill description, add the vote to vote data
+				if issue_in_topics or free_form_query.lower() in vote["vote"]["description"].lower():
+					description = vote["vote"]["description"]
+					politician_vote = "Unknown"
+					for position in vote["vote"]["positions"]:
+						if position["PoliticianName"] == politician_query:
+							politician_vote = position["vote_position"]
+							politician_party = position["party"]
+							democratic_votes = vote["vote"]["democratic"]
+							republican_votes = vote["vote"]["republican"]
+							independent_votes = vote["vote"]["independent"]
+							break
+					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
+						data["votes"].append({"relevant_topic":relevant_topic, "description":description, "vote_position":politician_vote, "independent":independent_votes, "democratic":democratic_votes, "republican":republican_votes, "party":politician_party})
+			#Do basic scoring system where score is % of time vote with party
+			vote_score = vote_score_agree_with_party(data["votes"])
+			data["vote_score"] = vote_score
 		if free_form_query:
 			pass
 			#print("Need to implement this")
