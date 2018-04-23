@@ -1,4 +1,5 @@
-import praw, pickle
+import pickle
+import os
 # Gevent needed for sockets
 from gevent import monkey
 monkey.patch_all()
@@ -18,9 +19,6 @@ CORS(app)
 # DB
 db = SQLAlchemy(app)
 
-#reddit obj
-reddit = praw.Reddit(user_agent='comment_query', client_id='WsGOFsPaaGtYVQ', client_secret="qPogCXpTh1wZylbQqES6JY04PVw")
-
 # Import + Register Blueprints
 from app.irsystem import irsystem as irsystem
 app.register_blueprint(irsystem)
@@ -30,11 +28,14 @@ app.register_blueprint(irsystem)
 def index():
   return render_template('index.html')
 
-@app.route('/static/<path:path>', methods=['GET'])
+@app.route('/<path:path>', methods=['GET'])
 def serve_static(path):
-    return send_from_directory('frontend/build/static', path)
+	root_dir = os.path.dirname(os.getcwd())
+	print app.static_folder
+	# print send_from_directory(app.static_folder, path)
+	return send_from_directory(app.static_folder, path, mimetype='application/font-sfnt')
 
-# load_index()  
+# load_index()
 valid_words_file = open(os.getcwd() + "/app/utils/words.pkl","rb")
 app.config['valid_words'] = pickle.load(valid_words_file)
 
