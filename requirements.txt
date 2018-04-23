@@ -19,7 +19,6 @@ Flask-SocketIO==2.3
 Flask-SQLAlchemy==2.1
 Flask-WTF==0.12
 gevent==1.1.1
-git-lfs==1.5
 greenlet==0.4.9
 gunicorn==19.7.0
 hiredis==0.2.0
