@@ -200,13 +200,12 @@ def search():
 				}
 				data["donations"] = don_data
 
-#FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS
-#			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
-#			#return top 5 for now
-#			if len(top_tweets) != 0:
-#				for tweet in top_tweets:
-#					data["tweets"].append(tweet)
-#
+			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
+			#return top 5 for now
+			if len(top_tweets) != 0:
+				for tweet in top_tweets:
+					data["tweets"].append(tweet)
+
 			raw_vote_data = get_votes_by_politician(politician_query)
 			# Find all votes that have a subject that contains the issue typed in
 			query_lower = free_form_query.lower()
