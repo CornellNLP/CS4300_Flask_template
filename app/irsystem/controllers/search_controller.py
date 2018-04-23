@@ -153,7 +153,6 @@ def put_books_in_db(hash_factor = 100):
 # 	top_books = ['successfully added']
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-@irsystem.route('', methods=['GET'])
 def search():
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
