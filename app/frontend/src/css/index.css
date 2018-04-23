@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
+@font-face {
+  font-family: 'VAG Rounded';
+  src: url("../fonts/VAGRoundedStd-Light.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,24 +12,17 @@ body {
 }
 
 input[type=text]{
-	width: 75%;
+  background: #d2e3f6;
+	width: 60%;
+  border: none;
+  border-bottom: 1px solid black;
 	padding: 12px 20px;
 	margin: 8px 2px;
-	border: solid 1px;
-	border-radius: 2px;
 }
 
 #submit_button{
-	padding: 12px 20px;
-	margin: 8px 2px;
-	border: solid 1px;
-	background-color: #f1f1f1;
-	border-radius: 2px;
-	font-family: Roboto;
-}
-
-#submit_button:hover{
-	background-color: #e4e4e4;
+	background-color: #d2e3f6;;
+  border: none;
 }
 
 label{
@@ -34,13 +32,16 @@ label{
 	width: 50%;
 }
 
+.header {
+  background: #d2e3f6;
+}
+
 .title{
 	font-size: 100px;
 	text-align: center;
 	padding-right: 10%;
-	font-family: Roboto;
+	font-family: 'VAG Rounded';
 	font-weight: bold;
-	color: #5f99cf;
 }
 
 .comment {
@@ -59,7 +60,8 @@ label{
 }
 
 .author {
-	color: steelblue;
+  color: #3e6695;
+  font-weight: bold;
 }
 
 .score {
@@ -71,17 +73,21 @@ label{
 	color: darkgray;
 }
 
-a {
+a.permalink {
 	font-size: 13px;
 	font-weight: bold;
 	color: gray;
 }
 
-a:hover {
+a:hover.permalink {
 	font-weight: bold;
 	color: gray;
 }
 
+form {
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 /** from w3 schools */
 .loader {
@@ -98,4 +104,13 @@ a:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.footer {
+  top: 100vh;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
 }
