@@ -12,6 +12,7 @@ import re
 import numpy as np
 from sklearn.preprocessing import normalize
 from scipy.sparse import *
+import time
 
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
@@ -19,9 +20,14 @@ net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isa
 def process_donations(donations):
 	total = 0
 	donations_list = []
+	print("start")
+	s = time.time()
+	donations = list(donations)
+	print("time", str(time.time() - s))
 	for don in donations:
 		donations_list.append(don)
 		total += float(don["TransactionAmount"])
+	print("Time elapsed: ", str(time.time() - s))
 
 	return {
 		"total": total,
@@ -141,55 +147,62 @@ def search():
 			#Get empath categories for free form query
 			if free_form_query:
 				issues_categories = lexicon.analyze(free_form_query, normalize=True)
+
+			t = time.time()
 			
 			donation_data = get_relevant_donations(politician_query, get_issue_list(free_form_query))
-			print(donation_data.count())
+			print("Donations returned:", donation_data.count())
+
+			print(time.time() - t)
+			t = time.time()
 
 			don_data = process_donations(donation_data)
 			data["donations"] = don_data
 
-			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
-			#return top 5 for now
-			if len(top_tweets) != 0:
-				for tweet in top_tweets:
-					data["tweets"].append(tweet)
+			print(time.time() - t)
 
-			raw_vote_data = get_votes_by_politician(politician_query)
-			for vote in raw_vote_data:
-				vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
-				intersect = False
-				#Determine if query and vote have similar topics
-				if vote_categories:
-					for category in vote_categories:
-						if vote_categories[category] > 0 and issues_categories[category] > 0:
-							intersect = True
-				#If query and vote have similar topics, add the vote to vote data
-				if intersect:
-					description = vote["vote"]["description"]
-					politician_vote = "Unknown"
-					for position in vote["vote"]["positions"]:
-						if position["PoliticianName"] == politician_query:
-							politician_vote = position["vote_position"]
-							break
-					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
-						data["votes"].append({"description":description, "vote_position":politician_vote})
-			#Do basic scoring system where score is > 0 if votes yes more often and < 0 if votes no more often
-			total_yes = 0
-			total_no = 0
-			if len(data["votes"]) > 0:
-				for vote in data["votes"]:
-					if vote["vote_position"] == "Yes":
-						total_yes += 1
-					elif vote["vote_position"] == "No":
-						total_no += 1
-			if total_yes > total_no:
-				vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
-			elif total_no > total_yes:
-				vote_score = 2.0*total_no/(total_yes+total_no) - 1.0
-			else:
-				vote_score = 0.0
-			vote_score = round(vote_score, 2)
-			data["vote_score"] = vote_score
+			# top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
+			# #return top 5 for now
+			# if len(top_tweets) != 0:
+			# 	for tweet in top_tweets:
+			# 		data["tweets"].append(tweet)
+
+			# raw_vote_data = get_votes_by_politician(politician_query)
+			# for vote in raw_vote_data:
+			# 	vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
+			# 	intersect = False
+			# 	#Determine if query and vote have similar topics
+			# 	if vote_categories:
+			# 		for category in vote_categories:
+			# 			if vote_categories[category] > 0 and issues_categories[category] > 0:
+			# 				intersect = True
+			# 	#If query and vote have similar topics, add the vote to vote data
+			# 	if intersect:
+			# 		description = vote["vote"]["description"]
+			# 		politician_vote = "Unknown"
+			# 		for position in vote["vote"]["positions"]:
+			# 			if position["PoliticianName"] == politician_query:
+			# 				politician_vote = position["vote_position"]
+			# 				break
+			# 		if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
+			# 			data["votes"].append({"description":description, "vote_position":politician_vote})
+			# #Do basic scoring system where score is > 0 if votes yes more often and < 0 if votes no more often
+			# total_yes = 0
+			# total_no = 0
+			# if len(data["votes"]) > 0:
+			# 	for vote in data["votes"]:
+			# 		if vote["vote_position"] == "Yes":
+			# 			total_yes += 1
+			# 		elif vote["vote_position"] == "No":
+			# 			total_no += 1
+			# if total_yes > total_no:
+			# 	vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
+			# elif total_no > total_yes:
+			# 	vote_score = 2.0*total_no/(total_yes+total_no) - 1.0
+			# else:
+			# 	vote_score = 0.0
+			# vote_score = round(vote_score, 2)
+			# data["vote_score"] = vote_score
 		if free_form_query:
 			pass
 			#print("Need to implement this")

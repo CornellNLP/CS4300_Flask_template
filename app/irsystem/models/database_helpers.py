@@ -1,5 +1,6 @@
 import os
 from pymongo import MongoClient
+import re
 
 uri = 'mongodb://fundyAdmin:Fundy4300@18.221.254.87/admin'
 client = MongoClient(uri)
@@ -9,8 +10,7 @@ def get_donations(politician_name):
     return db.donations.find({"PoliticianName":politician_name})
 
 def get_relevant_donations(politician_name, issue_list):
-	print(issue_list)
-	regex_issue_list = ["/" + val + "/i" for val in issue_list]
+	regex_issue_list = [re.compile(val, re.IGNORECASE) for val in issue_list]
 
 	return db.donations.find({
 		"PoliticianName": politician_name,
