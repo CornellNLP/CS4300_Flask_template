@@ -163,11 +163,13 @@ def process_tweets(politician, query, n):
 	top_docs = np.argsort(-1*sim_scores)[:n]
 
 	final_lst = []
+	total_sentiment = 0.0
 	for i in range(len(top_docs)):
 		idx = top_docs[i]
 		final_lst.append({"tweet": just_tweets[idx][0], "sentiment": just_tweets[idx][1], "score": top_scores[i]})
+		total_sentiment += just_tweets[idx][1]["compound"]
 
-	return final_lst
+	return (final_lst, total_sentiment)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -204,10 +206,11 @@ def search():
 				}
 				data["donations"] = don_data
 
-			tweet_dict = process_tweets(politician_query, free_form_query, 10)
+			tweet_dict, total_sentiment = process_tweets(politician_query, free_form_query, 10)
+			avg_sentiment = round(total_sentiment/10,2)
 			#return top 5 for now
 			if len(tweet_dict) != 0:
-				data["tweets"] = tweet_dict
+				data["tweets"] = {'tweet_dict': tweet_dict, 'avg_sentiment': avg_sentiment}
 
 			raw_vote_data = get_votes_by_politician(politician_query)
 			# Find all votes that have a subject that contains the issue typed in
