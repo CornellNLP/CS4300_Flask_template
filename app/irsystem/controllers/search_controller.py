@@ -3,7 +3,6 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import os, json
 from app.irsystem.models.database_helpers import get_donations, get_tweets_by_politician, get_votes_by_politician, get_co_occurrence
-from empath import Empath
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.tokenize import TweetTokenizer
 from nltk.stem import PorterStemmer
@@ -11,7 +10,6 @@ import re
 import numpy as np
 from sklearn.preprocessing import normalize
 from scipy.sparse import *
-import wikipedia
 
 project_name = "Fundy"
 net_id = "Samantha Dimmer: sed87; James Cramer: jcc393; Dan Stoyell: dms524; Isabel Siergiej: is278; Joe McAllister: jlm493"
@@ -84,6 +82,12 @@ def vote_score_agree_with_party(votes):
 					total_party_votes += vote["republican"][key]
 					if key == vote["vote_position"].lower():
 						total_agree += vote["republican"][key]
+		elif vote["party"] == "I":
+			for key in vote["independent"]:
+				if key != "majority_position" and key != "not_voting":
+					total_party_votes += vote["independent"][key]
+					if key == vote["vote_position"].lower():
+						total_agree += vote["independent"][key]
 		#If independent, simply return 0?
 	if len(votes) == 0 or len(votes) == total_party_votes:
 		score = 0
@@ -165,15 +169,6 @@ def process_tweets(politician, query, n):
 def search():
 	politician_query = request.args.get('politician_name')
 	free_form_query = request.args.get('free_form')
-	lexicon = Empath()
-	#lexicon.delete_category("money")
-	#lexicon.delete_category("internet")
-	#lexicon.delete_category("power")
-	#lexicon.delete_category("strength")
-	#lexicon.delete_category("law")
-	lexicon.create_category("immigration", ["immigration", "deport", "naturalization"], model="nytimes", size=500)
-	lexicon.create_category("abortion", ["abortion", "pro-life", "pro-choice"], model="nytimes", size=500)
-	lexicon.create_category("climate_change", ["climate_change", "global_warming"], model="nytimes", size=500)
 	data = None
 	if not politician_query or not free_form_query: # no input
 		output_message = 'Please provide an input'
@@ -195,14 +190,6 @@ def search():
 		}
 		if politician_query:
 			#Get empath categories for free form query
-			if free_form_query:
-				#If free form query is its own wikipedia page, use the summary of that page to get more information about query
-				try:
-					summary = wikipedia.summary(free_form_query)
-					issues_categories = lexicon.analyze(summary, normalize=True)
-				except:
-					issues_categories = lexicon.analyze(free_form_query, normalize=True)
-					print("NO WE HAD TO USE THE QUERY")
 			raw_donation_data = get_donations(politician_query)
 			if(raw_donation_data.count() > 0):
 				# filtered_donations = filter_donations(raw_donation_data, politician_query, free_form_query)
@@ -213,24 +200,27 @@ def search():
 				}
 				data["donations"] = don_data
 
-			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
-			#return top 5 for now
-			if len(top_tweets) != 0:
-				for tweet in top_tweets:
-					data["tweets"].append(tweet)
-
+#FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS
+#			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
+#			#return top 5 for now
+#			if len(top_tweets) != 0:
+#				for tweet in top_tweets:
+#					data["tweets"].append(tweet)
+#
 			raw_vote_data = get_votes_by_politician(politician_query)
+			# Find all votes that have a subject that contains the issue typed in
+			query_lower = free_form_query.lower()
 			for vote in raw_vote_data:
-				vote_categories = lexicon.analyze(vote["vote"]["description"].replace(' bill',''), normalize=True)
-				intersect = False
-				#Determine if query and vote have similar topics
-				if vote_categories:
-					for category in vote_categories:
-						if vote_categories[category] > 0.01 and issues_categories[category] > 0.01:
-							intersect = True
+				issue_in_topics = False
+				relevant_topic = ""
+				if "subjects" in vote["vote"].keys():
+					for topic in vote["vote"]["subjects"]:
+						if query_lower in topic["name"].lower():
+							issue_in_topics = True
+							relevant_topic = topic["name"]
 							break
 				#If query and vote have similar topics or if query in bill description, add the vote to vote data
-				if intersect or free_form_query.lower() in vote["vote"]["description"].lower():
+				if issue_in_topics or free_form_query.lower() in vote["vote"]["description"].lower():
 					description = vote["vote"]["description"]
 					politician_vote = "Unknown"
 					for position in vote["vote"]["positions"]:
@@ -239,9 +229,10 @@ def search():
 							politician_party = position["party"]
 							democratic_votes = vote["vote"]["democratic"]
 							republican_votes = vote["vote"]["republican"]
+							independent_votes = vote["vote"]["independent"]
 							break
 					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
-						data["votes"].append({"description":description, "vote_position":politician_vote, "democratic":democratic_votes, "republican":republican_votes, "party":politician_party})
+						data["votes"].append({"relevant_topic":relevant_topic, "description":description, "vote_position":politician_vote, "independent":independent_votes, "democratic":democratic_votes, "republican":republican_votes, "party":politician_party})
 			#Do basic scoring system where score is % of time vote with party
 			vote_score = vote_score_agree_with_party(data["votes"])
 			data["vote_score"] = vote_score
