@@ -28,38 +28,48 @@ def search2():
 
 	tokenizer = TreebankWordTokenizer()
 	tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
-	tokens = stem_tokens(tokens)
+	tokens = expand_query(tokens)
 
-	index = build_index(tokens)
+	index, tokens = build_index(tokens)
 	results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
 
 	return json.dumps(results)
 
 def get_wordnet_pos(treebank_tag):
-
     if treebank_tag.startswith('J'):
-        return wordnet.ADJ
+			return wordnet.ADJ
     elif treebank_tag.startswith('V'):
-        return wordnet.VERB
+			return wordnet.VERB
     elif treebank_tag.startswith('N'):
-        return wordnet.NOUN
+			return wordnet.NOUN
     elif treebank_tag.startswith('R'):
-        return wordnet.ADV
+			return wordnet.ADV
     else:
-        return ''
+			return ''
 
-def stem_tokens(query_tokens):
+def get_synonyms(token, treebank_tag):
+  synonyms = set([])
+  for syn in wordnet.synsets(token):
+    for lem in syn.lemmas():
+      synonyms.add(lem.name())
+  return list(synonyms)
+
+def expand_query(query_tokens):
 	# builds a list of tokens that are the stemmed versions of the word
 	# see marcobonzanini.com/2015/01/26/stemming-lemmatisation-and-pos-tagging-with-python-and-nltk/
 	tokens_pos = pos_tag(query_tokens)
-	addtl_tokens = []
-	for (token, pos) in tokens_pos:
-		pos = get_wordnet_pos(pos)
+	addtl_tokens = set([])
+	for (token, pos_treebank) in tokens_pos:
+		pos = get_wordnet_pos(pos_treebank)
 		if pos == '':
 			continue
-		addtl_tokens.append(lemmatiser.lemmatize(token, pos=pos))
+		addtl_tokens.add(lemmatiser.lemmatize(token, pos=pos))
+
+		# expand query with synonym
+		addtl_tokens.union(get_synonyms(token, pos_treebank))
 	print addtl_tokens
-	return query_tokens + addtl_tokens
+	# LMFAO need to do this to ensure no overlap between addtl_tokens and query_tokens
+	return list(set(query_tokens).union(addtl_tokens))
 
 def build_index(query_tokens):
 	# builds a query-specfic inverted index by loading the words
@@ -69,11 +79,14 @@ def build_index(query_tokens):
 	print("got index tokens:" + str(tokens))
 	index = dict()
 	for token in tokens:
+		# for word in list(filter(lambda x: x.startswith(token), app.config["valid_words"])):
 		if token in app.config["valid_words"]:
 			f = open(os.getcwd() + "/app/utils/data/" + token + ".pkl","rb")
 			d = pickle.load(f)
 			index[token] = d
-	return index
+			# if word not in tokens:
+			# 	tokens.append(word)
+	return index, tokens
 
 def index_search(query_tokens, index, idf, doc_norms):
 	""" Search the collection of documents for the given query

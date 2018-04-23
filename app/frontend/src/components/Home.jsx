@@ -12,7 +12,7 @@ class Home extends Component {
 			data : [],
 			loading : false
 		};
-		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "draw", "be better at math"]
+		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
     this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
 
 		this.handleChange = this.handleChange.bind(this);
