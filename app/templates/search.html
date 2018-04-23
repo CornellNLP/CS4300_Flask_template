@@ -1,39 +1,210 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fundy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/landing-page.min.css" rel="stylesheet">
+    <link href="../static/main.css" rel="stylesheet">
+
+    <!-- Fundy Stuff -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/static/awesomplete.css">
+    <script src="/static/awesomplete.js" async></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+    <!-- Load custom js  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/static/main.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Fundy</a>
+        <!-- <a class="btn btn-primary" href="#">Sign In</a> -->
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Putting the fun-ds back in politics</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form onsubmit="return validateForm()" class="col-12 form-inline global-search">
+              <div>
+                <div class="container">
+                  <div class="col-12 col-md-12 mb-2 mb-md-0">
+                    <input id="politician_input" type="text" name="politician_name" class="form-control form-control-lg" placeholder="A Politician's Name"/>
+                    <input id="free_form_input" type="text" name="free_form" class="form-control form-control-lg" placeholder="Free Form Input">
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
+      </div>
+    </header>
+
+    <section style="margin-top:25px" class="results">
+    <div class="container">
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-    </body>
+         <div class="row">
+             <div class="col-md-2"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('tweets')">
+                     Tweets
+                 </div>
+             </div>
+             <div class="col-md-1"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('votes')">
+                     Votes
+                 </div>
+             </div>
+             <div class="col-md-1"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('donations')">
+                     Donations
+                 </div>
+             </div>
+             <div class="col-md-2"></div>
+         </div>
+         <br>
+         <div class="col-12 col-md-0">
+           <div style="display:none" class="info-popup" id="donations">
+                <h4>Based on donations, we estimate {{ data["politician"] }} is {{ data["donations"]["score"] }}% Democrat and {{ 100-data["donations"]["score"] }}% Republican on the issue of {{ data["issue"] }}</h4>
+                <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Donation Targets</th>
+                            <th>Total Donated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for don in data["donations"]["sample"] %}
+                            <tr>
+                                <td>{{ don["DonorOrganization"] }}</td>
+                                <td>${{ don["TransactionAmount"] }}</td>
+                                <td>{{ don["TransactionDate"] }}</td>
+                                <td>
+                                    <div id="{{ don['TransactionID'] }}" style="width: 80px; height: 80px;"></div>
+                                    <script>
+                                        prepChart(
+                                            "{{ don['TransactionID'] }}",
+                                            {{ don['org_data']['democrat_total'] }},
+                                            {{ don['org_data']['republican_total'] }},
+                                        );
+                                    </script>
+                                </td>
+                                <td>${{ don["org_data"]["donation_total"] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+           </div>
+           <div style="display:none" class="info-popup" id="tweets">
+               <h3 align="center">Top 10 Tweet Matches</h3>
+               <h5>{{data["politician"]}} tweets an average sentiment of {{data["tweets"]["avg_sentiment"]}} for "{{data["issue"]}}" </h5>
+               {% for tweet in data["tweets"]["tweet_dict"] %}
+                  <p>{{tweet["tweet"]}}<br>
+                  <b>Compound Sentiment:</b> {{'%0.2f' | format(tweet["sentiment"]["compound"])}}<br>
+                  <b>Similarity Score:</b> {{'%0.2f' | format(tweet["score"])}}</p>
+                {% endfor %}
+           </div>
+           <div style="display:none" class="info-popup" id="votes">
+               <h4>Sample Vote Data</h4>
+               <p>{{ data["votes" ]}}</p>
+               <h2 class="">{{ data["vote_score"]}}% votes with party</h2>
+           </div>
+       </div>
+     </div>
+     {% endif %}
+   </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Meet the Squad</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/dan.png" alt="">
+              <h5>Dan</h5>
+              <!-- <p class="font-weight-light mb-0">Facebook, ever heard of it?</p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/james.png" alt="">
+              <h5>James</h5>
+              <!-- <p class="font-weight-light mb-0">AKA the King of Piazza</p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/sam.png" alt="">
+              <h5>Samantha</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/joe.jpg" alt="">
+              <h5>Joe</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/isabel.png" alt="">
+              <h5>Isabel</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
 
 </html>
