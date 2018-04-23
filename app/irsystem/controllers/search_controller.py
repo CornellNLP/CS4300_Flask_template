@@ -5,6 +5,7 @@ import json
 import math
 import user_duration
 import user_release
+import boosting
 import utilities
 from random import *
 
@@ -53,6 +54,7 @@ year_list = range(1900, 2019)
 def search():
     output_message = ""
     data = []
+    query_dict = {}
 
     # user inputs
     similar = request.args.get('similar')
@@ -67,12 +69,11 @@ def search():
     acclaim = request.args.get('acclaim')
     popularity = request.args.get('popularity')
 
-    if not similar and not genres and not duration and not acclaim and not castCrew and not keywords and not release_start and not release_end:
+    if not acclaim and not popularity:
         data = []
         output_message = ''
     else:
         data = []
-        max_score = 0.0
         movie_dict = dict()
         score_dict = dict()
 
@@ -82,156 +83,141 @@ def search():
         reverse_dict = {y['title'].lower():x for x,y in movie_dict.iteritems()}
 
 
-        ########### MESSAGE UPDATE, SCORE ASSIGNMENT ###########
+        ########### MESSAGE UPDATE, QUERY DICT GENERATION ###########
         if similar:
             selected_movies = parse_lst_str(similar)
             output_message += "Similar: " + similar + "\n"
-            similar_score = 10.0
-            max_score += similar_score
         if genres:
             selected_genres = parse_lst_str(genres)
+            print selected_genres
             output_message += "Genres: " + genres + "\n"
-            genres_score = 10.0
-            max_score += genres_score
+            query_dict['genres'] = selected_genres
         if castCrew:
             selected_crew = parse_lst_str(castCrew)
             output_message += "Cast and Crew: " + castCrew + "\n"
-            castCrew_score = 10.0
-            max_score += castCrew_score
+            query_dict['castCrew'] = selected_crew
         if keywords:
             selected_keywords = parse_lst_str(keywords)
             output_message += "Keywords: " + keywords + "\n"
-            keywords_score = 10.0
-            max_score += keywords_score
+            query_dict['keywords'] = keywords
         if duration:
             output_message += "Duration: " + duration + "\n"
-            duration_score = 10.0
-            max_score += duration_score
+            duration_val = user_duration.parse(duration)
+            duration_val == duration_val[0] if len(duration_val) == 1 else (duration_val[0] + duration_val[1])/2 
+            query_dict['runtime'] = duration_val
         if release_start or release_end:
             if release_start and release_end:
                 output_message += "Release: " + release_start + "-" + release_end + "\n"
+                # query_dict['release_date'] = (release_start + release_end)/2
             elif release_start:
                 output_message += "Release: " + release_start + "-2018\n"
             else:
                 output_message += "Release: 1900-" + release_end + "\n"
-            release_score = 10.0
-            max_score += release_score
         if ratings:
             selected_ratings = parse_lst_str(ratings)
             output_message += "Ratings: " + ratings + "\n"
-            ratings_score = 10.0
-            max_score += ratings_score
         if languages:
             selected_languages = parse_lst_str(languages)
             output_message += "Languages: " + languages + "\n"
-            languages_score = 10.0
-            max_score += languages_score
         if acclaim == "yes":
             output_message += "Acclaim: Yes\n"
-            acclaim_score = 10.0
-            max_score += acclaim_score
         else:
             output_message += "Acclaim: No\n"
         if popularity == "yes":
             output_message += "Popularity: Yes\n"
-            popularity_score = 10.0
-            max_score += popularity_score
         else:
             output_message += "Popularity: No\n"
 
-        ########### CALCULATE SIMILAR SCORE ###########
+        ########### BOOST THE "QUERY MOVIE" WITH THE SIMILAR MOVIES ###########
         # must do before filtering because similar movies might be filtered out
         if similar:
-            for movie in score_dict:
-                # if the movie is already in the selected_titles
-                if movie_dict[movie]['title'].lower() in set(selected_movies):
-                    score_dict[movie] -= max_score
-                else:
-                    cumulative_score = 0.0
-                    for selected in selected_movies:
-                        sim_movie = reverse_dict[selected]
-                        genres_sim = get_set_overlap(movie_dict[sim_movie]['genres'], movie_dict[movie]['genres'])
-                        sim_cast = [member['name'] for member in movie_dict[sim_movie]['cast']]
-                        sim_crew = [member['name'] for member in movie_dict[sim_movie]['crew']]
-                        cast = [member['name'] for member in movie_dict[movie]['cast']]
-                        crew = [member['name'] for member in movie_dict[movie]['crew']]
-                        crew_sim = get_set_overlap(sim_cast + sim_crew, cast + crew)
-                        keywords_sim = get_set_overlap(movie_dict[sim_movie]['keywords'], movie_dict[movie]['keywords'])
-                        cumulative_score += (genres_sim + crew_sim + keywords_sim) / (3 * len(selected_movies))
-                    score_dict[movie] += cumulative_score * similar_score
+            query_dict = boosting.boost_query(query_dict,selected_movies,movie_dict)
+            movie_dict,score_dict = utilities.filter_similar(movie_dict,score_dict,selected_movies)
 
         ########### FILTERING OF DICTIONARIES ###########
         # updates dicts with hard filters
         # for duration and release, also computes scores
         if duration:
-            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,duration_score,0)
+            movie_dict, score_dict = user_duration.main(movie_dict,score_dict,duration,0,1)
+            duration_score = boosting.gaussian_score_duration(movie_dict,query_dict['runtime'],1,0)
         if release_start or release_end:
-            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], release_score, 0)
+            movie_dict, score_dict = user_release.main(movie_dict,score_dict,[release_start, release_end], 0, 1)
         if ratings:
-            movie_dict, score_dict = utilities.filter_ratings(movie_dict, score_dict, selected_ratings, ratings_score)
+            movie_dict, score_dict = utilities.filter_ratings(movie_dict, score_dict, selected_ratings, 1)
         if languages:
-            movie_dict, score_dict = utilities.filter_languages(movie_dict, score_dict, selected_languages, languages_score)
+            movie_dict, score_dict = utilities.filter_languages(movie_dict, score_dict, selected_languages, 1)
 
-        ########### CONSTRUCTION OF SCORE DICTIONARY ###########
-        for movie in score_dict:
+        ########### VECTORIZE MOVIES GIVEN QUERY ###########
+        mod_movie_dict,mod_movie_lst,movieid_lookup = {},[],{}
+        # release_score = boosting.gaussian_score_release(movie_dict,query_dict['release_date'],1,0)
+        
+        counter = 0
+        for movie in movie_dict:
+            tmp = []
+            # list of genres for movie m -> jaccard sim with query
             if genres:
-                jaccard_sim = get_set_overlap(selected_genres, movie_dict[movie]['genres'])
-                score_dict[movie] += jaccard_sim * genres_score
+                #mod_movie_dict[movie]['genres'] = get_set_overlap(query_dict['genres'],movie_dict[movie]['genres'])
+                tmp.append(get_set_overlap(query_dict['genres'],movie_dict[movie]['genres']))
 
+            # list of cast and crew for movie m -> jaccard sim with the query
             if castCrew:
                 cast = [member['name'] for member in movie_dict[movie]['cast']]
                 crew = [member['name'] for member in movie_dict[movie]['crew']]
-                jaccard_sim = get_set_overlap(selected_crew, cast + crew)
-                score_dict[movie] += jaccard_sim * castCrew_score
+                #mod_movie_dict[movie]['castCrew'] = get_set_overlap(selected_crew, cast + crew)
+                tmp.append(get_set_overlap(selected_crew, cast + crew))
 
+            # keywords from query -> jaccard sim with the movie m synopsis
             if keywords:
-                jaccard_sim = get_set_overlap(selected_keywords, movie_dict[movie]['keywords'])
-                score_dict[movie] += jaccard_sim * keywords_score
+                #mod_movie_dict[movie]['keywords'] = get_set_overlap(selected_keywords, movie_dict[movie]['keywords'])
+                tmp.append(get_set_overlap(selected_keywords, movie_dict[movie]['keywords']))
 
-            if acclaim == "yes":
-                tmdb_score = movie_dict[movie]['tmdb_score_value']
-                if tmdb_score >= 7.0:
-                    score_dict[movie] += tmdb_score / 10.0 * acclaim_score
-                else:
-                    score_dict[movie] += tmdb_score / 20.0 * acclaim_score
+            # duration & release date from movie m -> probabilistic gaussian fit around the mean 
+            if duration:
+                duration_val = duration_score[movie][0]
+                #mod_movie_dict[movie]['runtime'] = duration_val
+                tmp.append(duration_val)
 
-            if popularity == "yes":
-                tmdb_count = movie_dict[movie]['tmdb_score_count']
-                if tmdb_count == 0:
-                    tmdb_average = 0
-                else:
-                    tmdb_average = math.log(tmdb_count) / math.log(max_tmdb_count)
-                imdb_count = movie_dict[movie]['imdb_score_count']
-                if imdb_count == 0:
-                    imdb_average = 0
-                else:
-                    imdb_average = math.log(imdb_count) / math.log(max_imdb_count)
-                meta_count = movie_dict[movie]['meta_score_count']
-                if meta_count == 0:
-                    meta_average = 0
-                else:
-                    meta_average = math.log(meta_count) / math.log(max_meta_count)
-                average_score = (tmdb_average + imdb_average + meta_average) / 3.0
-                score_dict[movie] += average_score * popularity_score
+            # TODO: implement release date into calculation later
+            #mod_movie_dict[movie]['release_date'] = release_score[movie]
+            #tmp.append(duration_score[movie])
+
+            # clean-up...
+            mod_movie_lst.append(tmp)
+            movieid_lookup[counter] = movie
+            counter += 1
+
+            # TODO: incorporate acclaim and popularity into score...
 
 
-        ########### SORT SCORES, RETURN TOP MATCHES ###########
-        sorted_score_dict = sorted(score_dict.iteritems(), key=lambda (k,v): (v,k), reverse=True)[:24]
+        mod_movie_mat = np.zeros((len(mod_movie_lst),len(mod_movie_lst[0])))
+        for i in range(len(mod_movie_lst)):
+            for k in range(len(mod_movie_lst[i])):
+                mod_movie_mat[i][k] = mod_movie_lst[i][k]
 
-        if max_score == 0:
-            for movie_tuple in sorted_score_dict:
-                movie_id, movie_score = movie_tuple
-                movie_dict[movie_id]['similarity'] = 0.0
-                dt = datetime.datetime.strptime(movie_dict[movie_id]['release_date'], '%Y-%m-%d').strftime('%m-%d-%Y')
-                movie_dict[movie_id]['release_date'] = dt
-                data.append(movie_dict[movie_id])
-        else:
-            for movie_tuple in sorted_score_dict:
-                movie_id, movie_score = movie_tuple
-                movie_dict[movie_id]['similarity'] = movie_score / max_score * 100.0
-                dt = datetime.datetime.strptime(movie_dict[movie_id]['release_date'], '%Y-%m-%d').strftime('%m-%d-%Y')
-                movie_dict[movie_id]['release_date'] = dt
-                data.append(movie_dict[movie_id])
+        ########### RUN KNN ON VECTORS, RETURN TOP MATCHES ###########
+
+        n,d = mod_movie_mat.shape
+        query = np.ones(d)
+        dists = np.linalg.norm(mod_movie_mat - query,axis=1,ord=2)
+        #print(movie_dict.keys())
+        #print("here is your dists matrix ")
+        #print(dists)
+        #print()
+        ranked_lst = np.argsort(dists)
+
+        #print(ranked_lst)
+
+        print("movie_id lookup dictionary")
+        print(movieid_lookup)
+
+        
+        sorted_score_dict = [movieid_lookup[movie_id] for movie_id in ranked_lst]
+
+        for movie_id in sorted_score_dict:
+            #dt = datetime.datetime.strptime(movie_dict[movie_id]['release_date'], '%Y-%m-%d').strftime('%m-%d-%Y')
+            #movie_dict[movie_id]['release_date'] = dt
+            data.append(movie_dict[movie_id])
+
 
         data = [data[i:i + 4] for i in xrange(0, len(data), 4)]
 
@@ -248,7 +234,7 @@ def search():
         old_acclaim = xstr(acclaim),
         old_popularity = xstr(popularity),
         output_message= output_message,
-        data = data[:10],
+        data = data[:24],
         movie_list = movie_list,
         castCrew_list = castCrew_list,
         keywords_list = keywords_list,
