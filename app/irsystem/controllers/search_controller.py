@@ -49,7 +49,8 @@ def db_word_to_closest_books(word, ith, k = 15):
 	for i in asort[1:]:
 		near_names = Books.query.filter_by(start_index = i/100*100).first().names
 		name = near_names.split('***')[i % 100]
-		top_k_books.append((name, dot_products[i]/dot_products[asort[0]]))
+		name =name.encode('ascii','ignore')
+		top_k_books.append(name)
 	return top_k_books
 
 def db_book_to_closest_words(book, ith, k = 5):
@@ -184,7 +185,7 @@ def search():
 		if len(top_books) == len(keywords): 
 			top_books_message = ''
 		else:
-			top_books_message = "Top 15 books for the keyword are:"
+			top_books_message = "Top 10 books for the keyword are:"
 			word_list = []
 			ith_list = []
 			print(keyword_input)

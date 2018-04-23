@@ -54,9 +54,16 @@ p.card-text {
     font-size: 12px;
 }
 
+.form-control::-webkit-input-placeholder{
+color:white;
+letter-spacing: 1px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+padding-left:40px;
+ }
+
 .bg {
  /* The image used */
-    background: url("image/flowerbook.jpg") no-repeat center cover;
+    background: url("/image/book_image.jpg") no-repeat center cover;
     /* Full height */
    
     padding-top:0;
