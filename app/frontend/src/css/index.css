@@ -64,7 +64,8 @@ label{
 }
 
 .author {
-	color: steelblue;
+  color: #3e6695;
+  font-weight: bold;
 }
 
 .score {
@@ -76,13 +77,13 @@ label{
 	color: darkgray;
 }
 
-a {
+a.permalink {
 	font-size: 13px;
 	font-weight: bold;
 	color: gray;
 }
 
-a:hover {
+a:hover.permalink {
 	font-weight: bold;
 	color: gray;
 }
@@ -110,10 +111,10 @@ form {
 }
 
 .footer {
-  position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 11px;
-    text-align: center;
+  top: 100vh;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
 }
