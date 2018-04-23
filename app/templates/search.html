@@ -1,39 +1,262 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <title>CinemaPop</title>
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Rubik+Mono+One" rel="stylesheet">
+        <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Play|Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"/>
+        <script src="/static/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+        <script type="text/javascript" src="static/typeahead.bundle.js"></script>
         <link rel="stylesheet" href="/static/main.css">
+        <script src="/static/js/custom.js"></script>
+        <style>
+          body {
+            background-image: url("/static/film_background_3.png");
+          }
+          </style>
     </head>
+
+    <style>
+    @font-face {
+      font-family: BeautySchool;
+      src: url('static/beautyschooldropout.ttf');
+    }
+    </style>
+
     <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+        <div class="logo_band">
+          <img class="logo" src= "/static/logo_white.png" alt="CinemaPop"></img>
+          <form class="global-search custom-form" style="width: 100%">
+            <div class="form-row ">
+              <div class="form-group col-md-6">
+                <label class="tags animated-label center">Similar Movies:</label>
+                <input id="similar_movies" data-role="tagsinput" type="text" name="similar" placeholder="e.g. Black Panther; Jumanji; etc." style="width:75%" value="{{old_similar}}">
+                <script>
+                    var movies = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      prefetch: {
+                        url: 'static/data/movies.json'
+                      }
+                    });
+                    movies.initialize();
+                    $('#similar_movies').tagsinput({
+                        typeaheadjs: {
+                            name: 'movies',
+                            displayKey: 'title',
+                            valueKey: 'title',
+                            source: movies.ttAdapter(),
+                            hint: true,
+                            minLength: 1
+                        },
+                        confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
+                        maxTags: 5, //limit the number of tags
+                        freeInput: false, //don't allow the user to submit free text
+                        // itemValue: 'title',
+                        // tagClass: 'label label-primary' //tag colors
+                        // focusClass: 'bootstrap-tagsinput:focus',
+                        delimiter: ';'
+                    });
+                    // $('.bootstrap-tagsinput').focusin(function() {
+                    //     $(this).addClass('focus');
+                    // });
+                    // $('.bootstrap-tagsinput').focusout(function() {
+                    //     $(this).removeClass('focus');
+                    // });
+                </script>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Genres (separated by semicolons):</label>
+                <input id="select_genres" data-role="tagsinput" type="text" name="genres" placeholder="e.g. Action; History; etc." value="{{old_genres}}">
+                <script>
+                    var genres_lst = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      prefetch: {
+                        url: 'static/data/genres.json',
+                        transform: function (response) {
+                            return response.genres;
+                        },
+                        cache: false
+                      }
+                    });
+                    genres_lst.initialize();
+                    $('#select_genres').tagsinput({
+                        typeaheadjs: {
+                            name: 'genres_lst',
+                            displayKey: 'name',
+                            valueKey: 'name',
+                            source: genres_lst.ttAdapter(),
+                            hint: true,
+                            highlight: true,
+                            minLength: 1
+                        },
+                        confirmKeys: [13, 44], //keys user can use to submit tag - comma, add 188 for enter
+                        maxTags: 5, //limit the number of tags
+                        freeInput: false, //don't allow the user to submit free text
+                        // itemValue: 'title',
+                        // tagClass: 'label label-primary' //tag colors
+                     // focusClass: 'bootstrap-tagsinput:focus',
+                    });
+                </script>
+              </div>
+            </div><br><br><br><br><br><br>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="tags center">Cast/Crew (separated by semicolons):</label>
+                <input id="input" type="text" class="form-control center" list="castCrew_list" name="castCrew" class="form-control" placeholder="Name 1; Name 2; etc." value="{{old_castCrew}}">
+                <datalist id="castCrew_list"">
+                    {% if castCrew_list %}
+                        {% for c in castCrew_list %}
+                            <option value='{{c}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="tags center">Keywords (separated by semicolons):</label>
+                <input id="input" type="text" class="form-control center highlight" list="keywords_list" name="keywords" class="form-control" placeholder="Keyword 1; Keyword 2; etc." value="{{old_keywords}}">
+                <span></span>
+                <datalist id="keywords_list">
+                    {% if keywords_list %}
+                        {% for k in keywords_list %}
+                            <option value='{{k}}'>
+                        {% endfor %}
+                    {% endif %}
+                </datalist>
+              </div>
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
+            <br>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Duration (in minutes):</label>
+                  <input id="input" type="text" class="form-control center" name="duration" class="form-control" placeholder="range (e.g. 90-200) or single number (e.g. 90)" value="{{old_duration}}">
+              </div>
+              <div class="form-group col-md-6 center tags">
+                <div class="form-row">
+                  <label class="center">Range of Release Years:</label>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input name="release_start" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="Start" style="width:75%" maxlength="4" value="{{old_release_start}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input name= "release_end" id="input" class="form-control center form-inline" type="text" list= "year_list" class="form-control" placeholder="End" style="width:75%" maxlength="4" value="{{old_release_end}}">
+                  </div>
+                </div>
+              </div>
+              <datalist id="year_list">
+                  {% if year_list %}
+                      {% for m in year_list %}
+                          <option value='{{m}}'>
+                      {% endfor %}
+                  {% endif %}
+              </datalist>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label class="tags center">Ratings (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="ratings" class="form-control" placeholder="PG-13; PG; etc." value="{{old_ratings}}">
+              </div>
+              <div class="form-group col-md-6">
+                  <label class="tags center">Languages (separated by semicolons):</label>
+                  <input id="input" type="text" class="form-control center" name="languages" class="form-control" placeholder="en; etc." value="{{old_languages}}">
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="tags center">Do user scores matter to you?</label>
+              {% if old_acclaim == 'no': %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="acclaim" value="yes"> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="acclaim" value="no" checked> No<br>
+                </div>
+              {% else: %}
+                <div class="form-check tags center" style="height: 10px;">
+                  <input class="tags form-check-input" type="radio" name="acclaim" value="yes" checked> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="acclaim" value="no"> No<br>
+                </div>
+              {% endif %}
+            </div>
+            <div class="form-row">
+              <label class="tags center">Does the popularity of the movie matter to you?</label>
+              {% if old_popularity == 'no': %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="popularity" value="yes"> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="popularity" value="no" checked> No<br>
+                </div>
+              {% else: %}
+                <div class="form-check tags center" style="height: 10px;">
+                    <input class="tags form-check-input" type="radio" name="popularity" value="yes" checked> Yes<br>
+                </div>
+                <div class="form-check tags center">
+                  <input class="form-check-input" type="radio" name="popularity" value="no"> No<br>
+                </div>
+              {% endif %}
+            </div>
+            <br>
+            <div class="form-group tags center">
+              <button type="submit" class="btn btn-info"> Get Recommendations </button>
+            </div>
+          </form>
+        </div>
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+
+            {% for lst in data %}
+              <li data-target="#myCarousel" data-slide-to="{{ loop.index0}}"
+              {% if loop.index0 == 0 %}
+              class="active"
+              {% endif %}></li>
             {% endfor %}
-        {% endif %}
-        </form>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            {% for lst in data %}
+            <div class="item {{'active' if loop.index0 == 0}}">
+              <div class="row">
+              {% for d in lst %}
+                <div class="col-md-3 container">
+                  <img class="center poster" src="static/data/posters/{{d['id']}}.jpg" style="height:400px;" alt="">
+                  <div class="post_title" display="none">
+                    <p><strong style="font-size: 20px;">{{d['title']}}</strong></p>
+                    <p>{{d['release_date']}} </p>
+                    <p>User Score: {{d['tmdb_score_value']}}/10.0</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+            {% endfor %}
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      {% endif %}
+
+        <div class="footer">
+            <p>&copy; 2018 | Angela Zhang: az337, Chris Fifty: cjf92, Newton Ni: cn279, Erik Chan: ejc233, Xinyu Zhao: xz29</p>
+        </div>
     </body>
 
 </html>

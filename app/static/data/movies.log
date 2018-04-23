@@ -1,0 +1,2411 @@
+02:55:00 [INFO] [TOKENS] 337167: synopsis of length 7769
+02:55:00 [INFO] [SUCCESS] 337167: Fifty Shades Freed
+02:55:03 [INFO] [TOKENS] 269149: synopsis of length 24352
+02:55:03 [INFO] [SUCCESS] 269149: Zootopia
+02:55:06 [INFO] [TOKENS] 354912: synopsis of length 4145
+02:55:06 [INFO] [SUCCESS] 354912: Coco
+02:55:09 [INFO] [TOKENS] 284054: synopsis of length 5266
+02:55:10 [INFO] [SUCCESS] 284054: Black Panther
+02:55:12 [INFO] [TOKENS] 333339: synopsis of length 5774
+02:55:12 [INFO] [SUCCESS] 333339: Ready Player One
+02:55:14 [INFO] [TOKENS] 181808: synopsis of length 11655
+02:55:15 [INFO] [SUCCESS] 181808: Star Wars: The Last Jedi
+02:55:17 [INFO] [TOKENS] 447332: synopsis of length 10611
+02:55:18 [INFO] [SUCCESS] 447332: A Quiet Place
+02:55:20 [INFO] [TOKENS] 338970: synopsis of length 7361
+02:55:20 [INFO] [SUCCESS] 338970: Tomb Raider
+02:55:22 [INFO] [TOKENS] 353616: synopsis of length 7576
+02:55:23 [INFO] [SUCCESS] 353616: Pitch Perfect 3
+02:55:25 [INFO] [TOKENS] 284053: synopsis of length 10477
+02:55:26 [INFO] [SUCCESS] 284053: Thor: Ragnarok
+02:55:28 [INFO] [TOKENS] 141052: synopsis of length 9868
+02:55:28 [INFO] [SUCCESS] 141052: Justice League
+02:55:30 [INFO] [TOKENS] 321612: synopsis of length 14193
+02:55:31 [INFO] [SUCCESS] 321612: Beauty and the Beast
+02:55:33 [INFO] [TOKENS] 198663: synopsis of length 10059
+02:55:33 [INFO] [SUCCESS] 198663: The Maze Runner
+02:55:36 [INFO] [TOKENS] 399055: synopsis of length 7815
+02:55:36 [INFO] [SUCCESS] 399055: The Shape of Water
+02:55:38 [INFO] [TOKENS] 118340: synopsis of length 12899
+02:55:39 [INFO] [SUCCESS] 118340: Guardians of the Galaxy
+02:55:42 [INFO] [TOKENS] 245891: synopsis of length 8028
+02:55:42 [INFO] [SUCCESS] 245891: John Wick
+02:55:44 [INFO] [TOKENS] 268896: synopsis of length 8535
+02:55:45 [INFO] [SUCCESS] 268896: Pacific Rim: Uprising
+02:55:47 [INFO] [TOKENS] 446354: synopsis of length 4675
+02:55:47 [INFO] [SUCCESS] 446354: The Post
+02:55:49 [INFO] [TOKENS] 399035: synopsis of length 8378
+02:55:50 [INFO] [SUCCESS] 399035: The Commuter
+02:55:52 [INFO] [TOKENS] 24428: synopsis of length 13833
+02:55:52 [INFO] [SUCCESS] 24428: The Avengers
+02:55:55 [INFO] [TOKENS] 347882: synopsis of length 7419
+02:55:55 [INFO] [SUCCESS] 347882: Sleight
+02:55:56 [ERROR] 299536: Avengers: Infinity War is missing IMDB score
+02:55:58 [INFO] [TOKENS] 316029: synopsis of length 7150
+02:55:59 [INFO] [SUCCESS] 316029: The Greatest Showman
+02:56:01 [WARN] [TOKENS] 206647: summary of length 828
+02:56:02 [INFO] [SUCCESS] 206647: Spectre
+02:56:04 [INFO] [TOKENS] 263115: synopsis of length 14979
+02:56:05 [INFO] [SUCCESS] 263115: Logan
+02:56:07 [INFO] [TOKENS] 122917: synopsis of length 11931
+02:56:08 [INFO] [SUCCESS] 122917: The Hobbit: The Battle of the Five Armies
+02:56:10 [INFO] [TOKENS] 87101: synopsis of length 8472
+02:56:11 [INFO] [SUCCESS] 87101: Terminator Genisys
+02:56:14 [INFO] [TOKENS] 22: synopsis of length 6311
+02:56:14 [INFO] [SUCCESS] 22: Pirates of the Caribbean: The Curse of the Black Pearl
+02:56:16 [INFO] [TOKENS] 228150: synopsis of length 22486
+02:56:17 [INFO] [SUCCESS] 228150: Fury
+02:56:19 [INFO] [TOKENS] 353486: synopsis of length 8849
+02:56:20 [INFO] [SUCCESS] 353486: Jumanji: Welcome to the Jungle
+02:56:22 [INFO] [TOKENS] 131631: synopsis of length 15911
+02:56:23 [INFO] [SUCCESS] 131631: The Hunger Games: Mockingjay - Part 1
+02:56:25 [INFO] [TOKENS] 335984: synopsis of length 17188
+02:56:25 [INFO] [SUCCESS] 335984: Blade Runner 2049
+02:56:28 [INFO] [TOKENS] 99861: synopsis of length 5843
+02:56:28 [INFO] [SUCCESS] 99861: Avengers: Age of Ultron
+02:56:29 [ERROR] 483877: invalid type: null, expected a string at line 1 column 185
+02:56:31 [INFO] [TOKENS] 10195: synopsis of length 7888
+02:56:31 [INFO] [SUCCESS] 10195: Thor
+02:56:33 [INFO] [TOKENS] 254128: synopsis of length 10313
+02:56:34 [INFO] [SUCCESS] 254128: San Andreas
+02:56:36 [INFO] [TOKENS] 210577: synopsis of length 22351
+02:56:36 [INFO] [SUCCESS] 210577: Gone Girl
+02:56:39 [INFO] [TOKENS] 76338: synopsis of length 4099
+02:56:39 [INFO] [SUCCESS] 76338: Thor: The Dark World
+02:56:42 [WARN] [TOKENS] 429351: summary of length 293
+02:56:42 [INFO] [SUCCESS] 429351: 12 Strong
+02:56:45 [INFO] [TOKENS] 49026: synopsis of length 59739
+02:56:45 [INFO] [SUCCESS] 49026: The Dark Knight Rises
+02:56:48 [INFO] [TOKENS] 76341: synopsis of length 11717
+02:56:48 [INFO] [SUCCESS] 76341: Mad Max: Fury Road
+02:56:51 [INFO] [TOKENS] 209112: synopsis of length 5050
+02:56:52 [INFO] [SUCCESS] 209112: Batman v Superman: Dawn of Justice
+02:56:54 [INFO] [TOKENS] 396371: synopsis of length 6267
+02:56:54 [INFO] [SUCCESS] 396371: Molly's Game
+02:56:57 [INFO] [TOKENS] 374720: synopsis of length 7512
+02:56:57 [INFO] [SUCCESS] 374720: Dunkirk
+02:56:59 [INFO] [TOKENS] 140607: synopsis of length 14579
+02:57:00 [INFO] [SUCCESS] 140607: Star Wars: The Force Awakens
+02:57:02 [WARN] Kamen Rider Heisei Generations FINAL: Build & Ex-Aid with Legend Riders has no MPAA rating
+02:57:02 [WARN] Kamen Rider Heisei Generations FINAL: Build & Ex-Aid with Legend Riders has no Metacritic ratings
+02:57:03 [WARN] [TOKENS] 479363: summary of length 103
+02:57:03 [INFO] [SUCCESS] 479363: Kamen Rider Heisei Generations FINAL: Build & Ex-Aid with Legend Riders
+02:57:05 [INFO] [TOKENS] 166426: synopsis of length 9924
+02:57:06 [INFO] [SUCCESS] 166426: Pirates of the Caribbean: Dead Men Tell No Tales
+02:57:08 [INFO] [TOKENS] 274855: synopsis of length 8859
+02:57:08 [INFO] [SUCCESS] 274855: Geostorm
+02:57:10 [INFO] [TOKENS] 262500: synopsis of length 8858
+02:57:11 [INFO] [SUCCESS] 262500: Insurgent
+02:57:13 [INFO] [TOKENS] 150689: synopsis of length 12874
+02:57:13 [INFO] [SUCCESS] 150689: Cinderella
+02:57:15 [INFO] [TOKENS] 98566: synopsis of length 9755
+02:57:16 [INFO] [SUCCESS] 98566: Teenage Mutant Ninja Turtles
+02:57:18 [INFO] [TOKENS] 271110: synopsis of length 12906
+02:57:19 [INFO] [SUCCESS] 271110: Captain America: Civil War
+02:57:21 [INFO] [TOKENS] 120: synopsis of length 5249
+02:57:21 [INFO] [SUCCESS] 120: The Lord of the Rings: The Fellowship of the Ring
+02:57:22 [ERROR] 499772: invalid type: null, expected i32 at line 1 column 870
+02:57:24 [INFO] [TOKENS] 218: synopsis of length 14756
+02:57:24 [INFO] [SUCCESS] 218: The Terminator
+02:57:26 [INFO] [TOKENS] 19995: synopsis of length 25733
+02:57:27 [INFO] [SUCCESS] 19995: Avatar
+02:57:29 [INFO] [TOKENS] 8966: synopsis of length 13999
+02:57:30 [INFO] [SUCCESS] 8966: Twilight
+02:57:32 [INFO] [TOKENS] 281338: synopsis of length 10130
+02:57:32 [INFO] [SUCCESS] 281338: War for the Planet of the Apes
+02:57:35 [INFO] [TOKENS] 198184: synopsis of length 12839
+02:57:35 [INFO] [SUCCESS] 198184: Chappie
+02:57:37 [INFO] [TOKENS] 300668: synopsis of length 8766
+02:57:37 [INFO] [SUCCESS] 300668: Annihilation
+02:57:40 [INFO] [TOKENS] 272: synopsis of length 35789
+02:57:40 [INFO] [SUCCESS] 272: Batman Begins
+02:57:43 [INFO] [TOKENS] 392044: synopsis of length 10249
+02:57:43 [INFO] [SUCCESS] 392044: Murder on the Orient Express
+02:57:46 [INFO] [TOKENS] 158852: synopsis of length 17659
+02:57:46 [INFO] [SUCCESS] 158852: Tomorrowland
+02:57:48 [INFO] [TOKENS] 336843: synopsis of length 7242
+02:57:48 [INFO] [SUCCESS] 336843: Maze Runner: The Death Cure
+02:57:50 [INFO] [TOKENS] 2105: synopsis of length 11928
+02:57:51 [INFO] [SUCCESS] 2105: American Pie
+02:57:53 [INFO] [TOKENS] 359940: synopsis of length 9406
+02:57:54 [INFO] [SUCCESS] 359940: Three Billboards Outside Ebbing, Missouri
+02:57:56 [INFO] [TOKENS] 127585: synopsis of length 24738
+02:57:56 [INFO] [SUCCESS] 127585: X-Men: Days of Future Past
+02:57:58 [WARN] [TOKENS] 427641: summary of length 553
+02:57:59 [INFO] [SUCCESS] 427641: Rampage
+02:58:01 [INFO] [TOKENS] 119450: synopsis of length 12575
+02:58:02 [INFO] [SUCCESS] 119450: Dawn of the Planet of the Apes
+02:58:04 [INFO] [TOKENS] 294254: synopsis of length 7835
+02:58:04 [INFO] [SUCCESS] 294254: Maze Runner: The Scorch Trials
+02:58:07 [INFO] [TOKENS] 68721: synopsis of length 16611
+02:58:08 [INFO] [SUCCESS] 68721: Iron Man 3
+02:58:10 [INFO] [TOKENS] 62: synopsis of length 10495
+02:58:11 [INFO] [SUCCESS] 62: 2001: A Space Odyssey
+02:58:14 [INFO] [TOKENS] 150540: synopsis of length 14256
+02:58:14 [INFO] [SUCCESS] 150540: Inside Out
+02:58:16 [INFO] [TOKENS] 343668: synopsis of length 14790
+02:58:17 [INFO] [SUCCESS] 343668: Kingsman: The Golden Circle
+02:58:19 [INFO] [TOKENS] 398818: synopsis of length 5091
+02:58:20 [INFO] [SUCCESS] 398818: Call Me by Your Name
+02:58:23 [INFO] [TOKENS] 194662: synopsis of length 13286
+02:58:23 [INFO] [SUCCESS] 194662: Birdman
+02:58:25 [INFO] [TOKENS] 353491: synopsis of length 5777
+02:58:26 [INFO] [SUCCESS] 353491: The Dark Tower
+02:58:28 [INFO] [TOKENS] 1865: synopsis of length 4087
+02:58:28 [INFO] [SUCCESS] 1865: Pirates of the Caribbean: On Stranger Tides
+02:58:30 [INFO] [TOKENS] 297762: synopsis of length 11822
+02:58:31 [INFO] [SUCCESS] 297762: Wonder Woman
+02:58:33 [INFO] [TOKENS] 1726: synopsis of length 18614
+02:58:34 [INFO] [SUCCESS] 1726: Iron Man
+02:58:36 [INFO] [TOKENS] 242582: synopsis of length 7834
+02:58:37 [INFO] [SUCCESS] 242582: Nightcrawler
+02:58:39 [INFO] [TOKENS] 260346: synopsis of length 9095
+02:58:39 [INFO] [SUCCESS] 260346: Taken 3
+02:58:41 [INFO] [TOKENS] 20352: synopsis of length 4385
+02:58:42 [INFO] [SUCCESS] 20352: Despicable Me
+02:58:44 [INFO] [TOKENS] 85: synopsis of length 9846
+02:58:45 [INFO] [SUCCESS] 85: Raiders of the Lost Ark
+02:58:47 [INFO] [TOKENS] 205596: synopsis of length 24637
+02:58:47 [INFO] [SUCCESS] 205596: The Imitation Game
+02:58:49 [INFO] [TOKENS] 14160: synopsis of length 10653
+02:58:50 [INFO] [SUCCESS] 14160: Up
+02:58:52 [WARN] [TOKENS] 398181: summary of length 935
+02:58:52 [INFO] [SUCCESS] 398181: You Were Never Really Here
+02:58:54 [INFO] [TOKENS] 259316: synopsis of length 11520
+02:58:55 [INFO] [SUCCESS] 259316: Fantastic Beasts and Where to Find Them
+02:58:57 [WARN] [TOKENS] 339964: summary of length 616
+02:58:58 [INFO] [SUCCESS] 339964: Valerian and the City of a Thousand Planets
+02:59:00 [INFO] [TOKENS] 105: synopsis of length 38473
+02:59:01 [INFO] [SUCCESS] 105: Back to the Future
+02:59:03 [INFO] [TOKENS] 82702: synopsis of length 6690
+02:59:03 [INFO] [SUCCESS] 82702: How to Train Your Dragon 2
+02:59:06 [INFO] [TOKENS] 285: synopsis of length 8292
+02:59:07 [INFO] [SUCCESS] 285: Pirates of the Caribbean: At World's End
+02:59:09 [INFO] [TOKENS] 315837: synopsis of length 7398
+02:59:09 [INFO] [SUCCESS] 315837: Ghost in the Shell
+02:59:12 [INFO] [TOKENS] 324552: synopsis of length 6790
+02:59:12 [INFO] [SUCCESS] 324552: John Wick: Chapter 2
+02:59:14 [INFO] [TOKENS] 176: synopsis of length 7472
+02:59:15 [INFO] [SUCCESS] 176: Saw
+02:59:17 [INFO] [TOKENS] 58: synopsis of length 4700
+02:59:18 [INFO] [SUCCESS] 58: Pirates of the Caribbean: Dead Man's Chest
+02:59:20 [INFO] [TOKENS] 216015: synopsis of length 9232
+02:59:21 [INFO] [SUCCESS] 216015: Fifty Shades of Grey
+02:59:23 [INFO] [TOKENS] 339403: synopsis of length 11621
+02:59:23 [INFO] [SUCCESS] 339403: Baby Driver
+02:59:26 [INFO] [TOKENS] 381288: synopsis of length 9329
+02:59:26 [INFO] [SUCCESS] 381288: Split
+02:59:28 [INFO] [TOKENS] 102899: synopsis of length 9135
+02:59:29 [INFO] [SUCCESS] 102899: Ant-Man
+02:59:31 [INFO] [TOKENS] 177677: synopsis of length 6120
+02:59:32 [INFO] [SUCCESS] 177677: Mission: Impossible - Rogue Nation
+02:59:34 [INFO] [TOKENS] 12: synopsis of length 18821
+02:59:34 [INFO] [SUCCESS] 12: Finding Nemo
+02:59:36 [INFO] [TOKENS] 11: synopsis of length 35723
+02:59:37 [INFO] [SUCCESS] 11: Star Wars
+02:59:40 [INFO] [TOKENS] 189: synopsis of length 12602
+02:59:40 [INFO] [SUCCESS] 189: Sin City: A Dame to Kill For
+02:59:42 [INFO] [TOKENS] 270303: synopsis of length 5454
+02:59:43 [INFO] [SUCCESS] 270303: It Follows
+02:59:45 [INFO] [TOKENS] 121: synopsis of length 10834
+02:59:45 [INFO] [SUCCESS] 121: The Lord of the Rings: The Two Towers
+02:59:48 [INFO] [TOKENS] 156022: synopsis of length 10791
+02:59:48 [INFO] [SUCCESS] 156022: The Equalizer
+02:59:50 [INFO] [TOKENS] 315635: synopsis of length 14322
+02:59:51 [INFO] [SUCCESS] 315635: Spider-Man: Homecoming
+02:59:53 [INFO] [TOKENS] 18239: synopsis of length 32544
+02:59:54 [INFO] [SUCCESS] 18239: The Twilight Saga: New Moon
+02:59:56 [WARN] [TOKENS] 337339: summary of length 647
+02:59:57 [INFO] [SUCCESS] 337339: The Fate of the Furious
+02:59:59 [INFO] [TOKENS] 76757: synopsis of length 10267
+02:59:59 [INFO] [SUCCESS] 76757: Jupiter Ascending
+03:00:01 [INFO] [TOKENS] 12445: synopsis of length 7423
+03:00:02 [INFO] [SUCCESS] 12445: Harry Potter and the Deathly Hallows: Part 2
+03:00:04 [INFO] [TOKENS] 49521: synopsis of length 22437
+03:00:05 [INFO] [SUCCESS] 49521: Man of Steel
+03:00:07 [INFO] [TOKENS] 264660: synopsis of length 5518
+03:00:08 [INFO] [SUCCESS] 264660: Ex Machina
+03:00:11 [INFO] [TOKENS] 2024: synopsis of length 14319
+03:00:11 [INFO] [SUCCESS] 2024: The Patriot
+03:00:15 [INFO] [TOKENS] 283995: synopsis of length 12198
+03:00:16 [INFO] [SUCCESS] 283995: Guardians of the Galaxy Vol. 2
+03:00:20 [INFO] [TOKENS] 37724: synopsis of length 23004
+03:00:20 [INFO] [SUCCESS] 37724: Skyfall
+03:00:24 [INFO] [TOKENS] 49017: synopsis of length 5605
+03:00:25 [INFO] [SUCCESS] 49017: Dracula Untold
+03:00:28 [INFO] [TOKENS] 157336: synopsis of length 25594
+03:00:29 [INFO] [SUCCESS] 157336: Interstellar
+03:00:33 [INFO] [TOKENS] 122: synopsis of length 14735
+03:00:34 [INFO] [SUCCESS] 122: The Lord of the Rings: The Return of the King
+03:00:38 [INFO] [TOKENS] 348: synopsis of length 26382
+03:00:39 [INFO] [SUCCESS] 348: Alien
+03:00:42 [INFO] [TOKENS] 862: synopsis of length 23350
+03:00:43 [INFO] [SUCCESS] 862: Toy Story
+03:00:47 [INFO] [TOKENS] 258489: synopsis of length 6178
+03:00:47 [INFO] [SUCCESS] 258489: The Legend of Tarzan
+03:00:51 [WARN] [TOKENS] 425: summary of length 397
+03:00:51 [INFO] [SUCCESS] 425: Ice Age
+03:00:55 [INFO] [TOKENS] 91314: synopsis of length 17602
+03:00:56 [INFO] [SUCCESS] 91314: Transformers: Age of Extinction
+03:00:59 [INFO] [TOKENS] 109445: synopsis of length 28047
+03:01:00 [INFO] [SUCCESS] 109445: Frozen
+03:01:04 [INFO] [TOKENS] 293167: synopsis of length 9791
+03:01:05 [INFO] [SUCCESS] 293167: Kong: Skull Island
+03:01:09 [INFO] [TOKENS] 293660: synopsis of length 8730
+03:01:10 [INFO] [SUCCESS] 293660: Deadpool
+03:01:13 [INFO] [TOKENS] 238: synopsis of length 19037
+03:01:14 [INFO] [SUCCESS] 238: The Godfather
+03:01:18 [INFO] [TOKENS] 228967: synopsis of length 11103
+03:01:19 [INFO] [SUCCESS] 228967: The Interview
+03:01:23 [INFO] [TOKENS] 1771: synopsis of length 22123
+03:01:23 [INFO] [SUCCESS] 1771: Captain America: The First Avenger
+03:01:27 [INFO] [TOKENS] 550: synopsis of length 13080
+03:01:28 [INFO] [SUCCESS] 550: Fight Club
+03:01:32 [WARN] [TOKENS] 135397: summary of length 298
+03:01:32 [INFO] [SUCCESS] 135397: Jurassic World
+03:01:36 [INFO] [TOKENS] 671: synopsis of length 7723
+03:01:37 [INFO] [SUCCESS] 671: Harry Potter and the Philosopher's Stone
+03:01:41 [INFO] [TOKENS] 10138: synopsis of length 14405
+03:01:41 [INFO] [SUCCESS] 10138: Iron Man 2
+03:01:45 [INFO] [TOKENS] 27205: synopsis of length 29131
+03:01:46 [INFO] [SUCCESS] 27205: Inception
+03:01:50 [INFO] [TOKENS] 608: synopsis of length 57090
+03:01:50 [INFO] [SUCCESS] 608: Men in Black II
+03:01:54 [INFO] [TOKENS] 603: synopsis of length 35675
+03:01:54 [INFO] [SUCCESS] 603: The Matrix
+03:01:58 [INFO] [TOKENS] 184315: synopsis of length 10561
+03:01:58 [INFO] [SUCCESS] 184315: Hercules
+03:02:01 [WARN] Female War: A Nasty Deal has no MPAA rating
+03:02:01 [WARN] Female War: A Nasty Deal has no Metacritic ratings
+03:02:02 [WARN] [TOKENS] 399905: summary of length 132
+03:02:02 [INFO] [SUCCESS] 399905: Female War: A Nasty Deal
+03:02:07 [INFO] [TOKENS] 227159: synopsis of length 3228
+03:02:08 [INFO] [SUCCESS] 227159: Horrible Bosses 2
+03:02:11 [INFO] [TOKENS] 8587: synopsis of length 18618
+03:02:12 [INFO] [SUCCESS] 8587: The Lion King
+03:02:16 [INFO] [TOKENS] 307081: synopsis of length 2673
+03:02:16 [INFO] [SUCCESS] 307081: Southpaw
+03:02:21 [INFO] [TOKENS] 68718: synopsis of length 22715
+03:02:21 [INFO] [SUCCESS] 68718: Django Unchained
+03:02:28 [INFO] [TOKENS] 346364: synopsis of length 12737
+03:02:29 [INFO] [SUCCESS] 346364: It
+03:02:33 [INFO] [TOKENS] 106646: synopsis of length 22245
+03:02:34 [INFO] [SUCCESS] 106646: The Wolf of Wall Street
+03:02:37 [INFO] [TOKENS] 50620: synopsis of length 19307
+03:02:38 [INFO] [SUCCESS] 50620: The Twilight Saga: Breaking Dawn - Part 2
+03:02:42 [INFO] [TOKENS] 24021: synopsis of length 46064
+03:02:42 [INFO] [SUCCESS] 24021: The Twilight Saga: Eclipse
+03:02:46 [INFO] [TOKENS] 140300: synopsis of length 7508
+03:02:47 [INFO] [SUCCESS] 140300: Kung Fu Panda 3
+03:02:51 [INFO] [TOKENS] 78: synopsis of length 14644
+03:02:51 [INFO] [SUCCESS] 78: Blade Runner
+03:02:55 [INFO] [TOKENS] 920: synopsis of length 16142
+03:02:56 [INFO] [SUCCESS] 920: Cars
+03:02:59 [INFO] [TOKENS] 8355: synopsis of length 5272
+03:03:00 [INFO] [SUCCESS] 8355: Ice Age: Dawn of the Dinosaurs
+03:03:04 [INFO] [TOKENS] 1892: synopsis of length 14670
+03:03:05 [INFO] [SUCCESS] 1892: Return of the Jedi
+03:03:08 [WARN] [TOKENS] 390043: summary of length 972
+03:03:08 [INFO] [SUCCESS] 390043: The Hitman's Bodyguard
+03:03:12 [INFO] [TOKENS] 10681: synopsis of length 5998
+03:03:12 [INFO] [SUCCESS] 10681: WALL·E
+03:03:16 [INFO] [TOKENS] 280: synopsis of length 57610
+03:03:16 [INFO] [SUCCESS] 280: Terminator 2: Judgment Day
+03:03:19 [INFO] [TOKENS] 446791: synopsis of length 8273
+03:03:20 [INFO] [SUCCESS] 446791: All the Money in the World
+03:03:23 [INFO] [TOKENS] 36557: synopsis of length 16966
+03:03:24 [INFO] [SUCCESS] 36557: Casino Royale
+03:03:27 [INFO] [TOKENS] 98: synopsis of length 7228
+03:03:28 [INFO] [SUCCESS] 98: Gladiator
+03:03:31 [INFO] [TOKENS] 68726: synopsis of length 14186
+03:03:32 [INFO] [SUCCESS] 68726: Pacific Rim
+03:03:35 [WARN] The Monkey King 3: Kingdom of Women has no MPAA rating
+03:03:36 [WARN] [TOKENS] 437543: summary of length 94
+03:03:36 [INFO] [SUCCESS] 437543: The Monkey King 3: Kingdom of Women
+03:03:40 [INFO] [TOKENS] 278927: synopsis of length 5663
+03:03:40 [INFO] [SUCCESS] 278927: The Jungle Book
+03:03:44 [INFO] [TOKENS] 93456: synopsis of length 4586
+03:03:44 [INFO] [SUCCESS] 93456: Despicable Me 2
+03:03:48 [INFO] [TOKENS] 246655: synopsis of length 14280
+03:03:49 [INFO] [SUCCESS] 246655: X-Men: Apocalypse
+03:03:52 [INFO] [TOKENS] 607: synopsis of length 48898
+03:03:53 [INFO] [SUCCESS] 607: Men in Black
+03:03:56 [INFO] [TOKENS] 585: synopsis of length 4697
+03:03:57 [INFO] [SUCCESS] 585: Monsters, Inc.
+03:04:04 [INFO] [TOKENS] 1930: synopsis of length 6905
+03:04:05 [INFO] [SUCCESS] 1930: The Amazing Spider-Man
+03:04:08 [INFO] [TOKENS] 411: synopsis of length 36904
+03:04:09 [INFO] [SUCCESS] 411: The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
+03:04:12 [INFO] [TOKENS] 557: synopsis of length 9282
+03:04:13 [INFO] [SUCCESS] 557: Spider-Man
+03:04:17 [INFO] [TOKENS] 283366: synopsis of length 11645
+03:04:17 [INFO] [SUCCESS] 283366: Miss Peregrine's Home for Peculiar Children
+03:04:21 [INFO] [TOKENS] 49047: synopsis of length 6302
+03:04:22 [INFO] [SUCCESS] 49047: Gravity
+03:04:25 [INFO] [TOKENS] 112205: synopsis of length 32470
+03:04:25 [INFO] [SUCCESS] 112205: The Family
+03:04:29 [INFO] [TOKENS] 100402: synopsis of length 25160
+03:04:29 [INFO] [SUCCESS] 100402: Captain America: The Winter Soldier
+03:04:33 [INFO] [TOKENS] 675: synopsis of length 7558
+03:04:33 [INFO] [SUCCESS] 675: Harry Potter and the Order of the Phoenix
+03:04:37 [INFO] [TOKENS] 168259: synopsis of length 9846
+03:04:37 [INFO] [SUCCESS] 168259: Furious 7
+03:04:40 [INFO] [TOKENS] 38757: synopsis of length 15700
+03:04:41 [INFO] [SUCCESS] 38757: Tangled
+03:04:44 [WARN] The Titan has no Metacritic ratings
+03:04:44 [WARN] [TOKENS] 476926: summary of length 380
+03:04:45 [INFO] [SUCCESS] 476926: The Titan
+03:04:48 [INFO] [TOKENS] 240832: synopsis of length 10681
+03:04:48 [INFO] [SUCCESS] 240832: Lucy
+03:04:52 [INFO] [TOKENS] 324786: synopsis of length 7846
+03:04:52 [INFO] [SUCCESS] 324786: Hacksaw Ridge
+03:04:56 [INFO] [TOKENS] 18785: synopsis of length 13688
+03:04:56 [INFO] [SUCCESS] 18785: The Hangover
+03:05:00 [INFO] [TOKENS] 70981: synopsis of length 7547
+03:05:01 [INFO] [SUCCESS] 70981: Prometheus
+03:05:04 [INFO] [TOKENS] 419430: synopsis of length 14808
+03:05:05 [INFO] [SUCCESS] 419430: Get Out
+03:05:08 [INFO] [TOKENS] 2454: synopsis of length 27932
+03:05:08 [INFO] [SUCCESS] 2454: The Chronicles of Narnia: Prince Caspian
+03:05:12 [INFO] [TOKENS] 177572: synopsis of length 10916
+03:05:13 [INFO] [SUCCESS] 177572: Big Hero 6
+03:05:16 [INFO] [TOKENS] 27578: synopsis of length 4949
+03:05:17 [INFO] [SUCCESS] 27578: The Expendables
+03:05:20 [INFO] [TOKENS] 559: synopsis of length 18666
+03:05:21 [INFO] [SUCCESS] 559: Spider-Man 3
+03:05:25 [INFO] [TOKENS] 273481: synopsis of length 8419
+03:05:25 [INFO] [SUCCESS] 273481: Sicario
+03:05:29 [INFO] [TOKENS] 24: synopsis of length 11259
+03:05:29 [INFO] [SUCCESS] 24: Kill Bill: Vol. 1
+03:05:33 [INFO] [TOKENS] 510: synopsis of length 7525
+03:05:34 [INFO] [SUCCESS] 510: One Flew Over the Cuckoo's Nest
+03:05:37 [INFO] [TOKENS] 381283: synopsis of length 7583
+03:05:37 [INFO] [SUCCESS] 381283: mother!
+03:05:41 [INFO] [TOKENS] 284052: synopsis of length 7499
+03:05:41 [INFO] [SUCCESS] 284052: Doctor Strange
+03:05:43 [WARN] Russian Lolita has no MPAA rating
+03:05:44 [WARN] Russian Lolita has no Metacritic ratings
+03:05:44 [WARN] [TOKENS] 329103: summary of length 889
+03:05:44 [INFO] [SUCCESS] 329103: Russian Lolita
+03:05:48 [INFO] [TOKENS] 10191: synopsis of length 7066
+03:05:48 [INFO] [SUCCESS] 10191: How to Train Your Dragon
+03:05:52 [INFO] [TOKENS] 87: synopsis of length 5245
+03:05:52 [INFO] [SUCCESS] 87: Indiana Jones and the Temple of Doom
+03:05:55 [INFO] [TOKENS] 406563: synopsis of length 8649
+03:05:56 [INFO] [SUCCESS] 406563: Insidious: The Last Key
+03:05:59 [INFO] [TOKENS] 61791: synopsis of length 12982
+03:05:59 [INFO] [SUCCESS] 61791: Rise of the Planet of the Apes
+03:06:02 [INFO] [TOKENS] 10140: synopsis of length 19004
+03:06:03 [INFO] [SUCCESS] 10140: The Chronicles of Narnia: The Voyage of the Dawn Treader
+03:06:06 [INFO] [TOKENS] 129: synopsis of length 23134
+03:06:06 [INFO] [SUCCESS] 129: Spirited Away
+03:06:10 [INFO] [TOKENS] 188927: synopsis of length 9838
+03:06:10 [INFO] [SUCCESS] 188927: Star Trek Beyond
+03:06:14 [INFO] [TOKENS] 10020: synopsis of length 9665
+03:06:15 [INFO] [SUCCESS] 10020: Beauty and the Beast
+03:06:18 [INFO] [TOKENS] 807: synopsis of length 8468
+03:06:19 [INFO] [SUCCESS] 807: Se7en
+03:06:22 [INFO] [TOKENS] 266856: synopsis of length 1848
+03:06:23 [INFO] [SUCCESS] 266856: The Theory of Everything
+03:06:26 [INFO] [TOKENS] 268: synopsis of length 11785
+03:06:26 [INFO] [SUCCESS] 268: Batman
+03:06:30 [INFO] [TOKENS] 953: synopsis of length 22843
+03:06:30 [INFO] [SUCCESS] 953: Madagascar
+03:06:34 [INFO] [TOKENS] 59859: synopsis of length 15229
+03:06:34 [INFO] [SUCCESS] 59859: Kick-Ass 2
+03:06:37 [INFO] [TOKENS] 1124: synopsis of length 22144
+03:06:37 [INFO] [SUCCESS] 1124: The Prestige
+03:06:40 [INFO] [TOKENS] 49051: synopsis of length 12591
+03:06:41 [INFO] [SUCCESS] 49051: The Hobbit: An Unexpected Journey
+03:06:44 [INFO] [TOKENS] 863: synopsis of length 11411
+03:06:45 [INFO] [SUCCESS] 863: Toy Story 2
+03:06:48 [WARN] [TOKENS] 9806: summary of length 728
+03:06:48 [INFO] [SUCCESS] 9806: The Incredibles
+03:06:51 [INFO] [TOKENS] 313369: synopsis of length 28139
+03:06:52 [INFO] [SUCCESS] 313369: La La Land
+03:06:55 [WARN] The Little Mermaid has no Metacritic ratings
+03:06:55 [INFO] [TOKENS] 10144: synopsis of length 5463
+03:06:56 [INFO] [SUCCESS] 10144: The Little Mermaid
+03:06:59 [INFO] [TOKENS] 680: synopsis of length 10160
+03:06:59 [INFO] [SUCCESS] 680: Pulp Fiction
+03:07:02 [WARN] [TOKENS] 449176: summary of length 327
+03:07:03 [INFO] [SUCCESS] 449176: Love, Simon
+03:07:05 [INFO] [TOKENS] 10386: synopsis of length 4553
+03:07:06 [INFO] [SUCCESS] 10386: The Iron Giant
+03:07:09 [INFO] [TOKENS] 12444: synopsis of length 9100
+03:07:09 [INFO] [SUCCESS] 12444: Harry Potter and the Deathly Hallows: Part 1
+03:07:12 [INFO] [TOKENS] 10764: synopsis of length 10749
+03:07:13 [INFO] [SUCCESS] 10764: Quantum of Solace
+03:07:15 [INFO] [TOKENS] 18: synopsis of length 5374
+03:07:16 [INFO] [SUCCESS] 18: The Fifth Element
+03:07:18 [INFO] [TOKENS] 341174: synopsis of length 7109
+03:07:19 [INFO] [SUCCESS] 341174: Fifty Shades Darker
+03:07:21 [INFO] [TOKENS] 152601: synopsis of length 6115
+03:07:22 [INFO] [SUCCESS] 152601: Her
+03:07:24 [INFO] [TOKENS] 68724: synopsis of length 17294
+03:07:25 [INFO] [SUCCESS] 68724: Elysium
+03:07:27 [INFO] [TOKENS] 278: synopsis of length 14175
+03:07:28 [INFO] [SUCCESS] 278: The Shawshank Redemption
+03:07:30 [INFO] [TOKENS] 47964: synopsis of length 4072
+03:07:30 [INFO] [SUCCESS] 47964: A Good Day to Die Hard
+03:07:33 [INFO] [TOKENS] 679: synopsis of length 30036
+03:07:33 [INFO] [SUCCESS] 679: Aliens
+03:07:36 [INFO] [TOKENS] 238636: synopsis of length 9986
+03:07:36 [INFO] [SUCCESS] 238636: The Purge: Anarchy
+03:07:38 [INFO] [TOKENS] 240: synopsis of length 15153
+03:07:39 [INFO] [SUCCESS] 240: The Godfather: Part II
+03:07:41 [INFO] [TOKENS] 1724: synopsis of length 22647
+03:07:41 [INFO] [SUCCESS] 1724: The Incredible Hulk
+03:07:43 [INFO] [TOKENS] 254: synopsis of length 8182
+03:07:44 [INFO] [SUCCESS] 254: King Kong
+03:07:46 [INFO] [TOKENS] 534: synopsis of length 4903
+03:07:47 [INFO] [SUCCESS] 534: Terminator Salvation
+03:07:49 [INFO] [TOKENS] 256591: synopsis of length 8402
+03:07:50 [INFO] [SUCCESS] 256591: Focus
+03:07:52 [INFO] [TOKENS] 4247: synopsis of length 6364
+03:07:52 [INFO] [SUCCESS] 4247: Scary Movie
+03:07:54 [INFO] [TOKENS] 1422: synopsis of length 9926
+03:07:55 [INFO] [SUCCESS] 1422: The Departed
+03:07:58 [INFO] [TOKENS] 102651: synopsis of length 9531
+03:07:58 [INFO] [SUCCESS] 102651: Maleficent
+03:08:00 [INFO] [TOKENS] 157350: synopsis of length 22659
+03:08:01 [INFO] [SUCCESS] 157350: Divergent
+03:08:03 [INFO] [TOKENS] 16869: synopsis of length 17199
+03:08:04 [INFO] [SUCCESS] 16869: Inglourious Basterds
+03:08:06 [INFO] [TOKENS] 63: synopsis of length 6788
+03:08:06 [INFO] [SUCCESS] 63: Twelve Monkeys
+03:08:09 [INFO] [TOKENS] 257211: synopsis of length 12451
+03:08:09 [INFO] [SUCCESS] 257211: The Intern
+03:08:12 [INFO] [TOKENS] 954: synopsis of length 7801
+03:08:12 [INFO] [SUCCESS] 954: Mission: Impossible
+03:08:15 [WARN] [TOKENS] 950: summary of length 1001
+03:08:15 [INFO] [SUCCESS] 950: Ice Age: The Meltdown
+03:08:18 [INFO] [TOKENS] 710: synopsis of length 12976
+03:08:18 [INFO] [SUCCESS] 710: GoldenEye
+03:08:20 [INFO] [TOKENS] 101: synopsis of length 8894
+03:08:21 [INFO] [SUCCESS] 101: Leon: The Professional
+03:08:24 [INFO] [TOKENS] 312221: synopsis of length 7887
+03:08:24 [INFO] [SUCCESS] 312221: Creed
+03:08:26 [INFO] [TOKENS] 429: synopsis of length 4610
+03:08:27 [INFO] [SUCCESS] 429: The Good, the Bad and the Ugly
+03:08:30 [INFO] [TOKENS] 36669: synopsis of length 5158
+03:08:30 [INFO] [SUCCESS] 36669: Die Another Day
+03:08:32 [INFO] [TOKENS] 49013: synopsis of length 14537
+03:08:33 [INFO] [SUCCESS] 49013: Cars 2
+03:08:35 [INFO] [TOKENS] 238713: synopsis of length 9666
+03:08:36 [INFO] [SUCCESS] 238713: Spy
+03:08:37 [WARN] Paterno has no Metacritic ratings
+03:08:38 [WARN] [TOKENS] 467867: summary of length 273
+03:08:38 [INFO] [SUCCESS] 467867: Paterno
+03:08:40 [INFO] [TOKENS] 562: synopsis of length 7089
+03:08:41 [INFO] [SUCCESS] 562: Die Hard
+03:08:43 [INFO] [TOKENS] 57800: synopsis of length 7696
+03:08:44 [INFO] [SUCCESS] 57800: Ice Age: Continental Drift
+03:08:46 [INFO] [TOKENS] 80321: synopsis of length 7507
+03:08:46 [INFO] [SUCCESS] 80321: Madagascar 3: Europe's Most Wanted
+03:08:49 [INFO] [TOKENS] 50619: synopsis of length 18352
+03:08:49 [INFO] [SUCCESS] 50619: The Twilight Saga: Breaking Dawn - Part 1
+03:08:51 [INFO] [TOKENS] 124905: synopsis of length 18930
+03:08:52 [INFO] [SUCCESS] 124905: Godzilla
+03:08:54 [INFO] [TOKENS] 497: synopsis of length 23070
+03:08:54 [INFO] [SUCCESS] 497: The Green Mile
+03:08:57 [INFO] [TOKENS] 539: synopsis of length 15484
+03:08:57 [INFO] [SUCCESS] 539: Psycho
+03:08:59 [INFO] [TOKENS] 11970: synopsis of length 6897
+03:09:00 [INFO] [SUCCESS] 11970: Hercules
+03:09:02 [INFO] [TOKENS] 75612: synopsis of length 9676
+03:09:03 [INFO] [SUCCESS] 75612: Oblivion
+03:09:05 [INFO] [TOKENS] 10193: synopsis of length 17209
+03:09:06 [INFO] [SUCCESS] 10193: Toy Story 3
+03:09:08 [INFO] [TOKENS] 217: synopsis of length 4199
+03:09:08 [INFO] [SUCCESS] 217: Indiana Jones and the Kingdom of the Crystal Skull
+03:09:10 [WARN] [TOKENS] 9738: summary of length 1002
+03:09:11 [INFO] [SUCCESS] 9738: Fantastic Four
+03:09:13 [INFO] [TOKENS] 694: synopsis of length 10952
+03:09:13 [INFO] [SUCCESS] 694: The Shining
+03:09:15 [INFO] [TOKENS] 37799: synopsis of length 6263
+03:09:16 [INFO] [SUCCESS] 37799: The Social Network
+03:09:18 [INFO] [TOKENS] 809: synopsis of length 4528
+03:09:19 [INFO] [SUCCESS] 809: Shrek 2
+03:09:21 [INFO] [TOKENS] 2770: synopsis of length 6240
+03:09:21 [INFO] [SUCCESS] 2770: American Pie 2
+03:09:23 [INFO] [TOKENS] 27576: synopsis of length 12731
+03:09:24 [INFO] [SUCCESS] 27576: Salt
+03:09:26 [INFO] [TOKENS] 87827: synopsis of length 5259
+03:09:27 [INFO] [SUCCESS] 87827: Life of Pi
+03:09:29 [INFO] [TOKENS] 9836: synopsis of length 643
+03:09:29 [INFO] [SUCCESS] 9836: Happy Feet
+03:09:31 [INFO] [TOKENS] 652: synopsis of length 15548
+03:09:32 [INFO] [SUCCESS] 652: Troy
+03:09:34 [INFO] [TOKENS] 13811: synopsis of length 24623
+03:09:34 [INFO] [SUCCESS] 13811: Knowing
+03:09:37 [WARN] [TOKENS] 76163: summary of length 876
+03:09:37 [INFO] [SUCCESS] 76163: The Expendables 2
+03:09:40 [INFO] [TOKENS] 4935: synopsis of length 34148
+03:09:40 [INFO] [SUCCESS] 4935: Howl's Moving Castle
+03:09:42 [INFO] [TOKENS] 857: synopsis of length 21533
+03:09:43 [INFO] [SUCCESS] 857: Saving Private Ryan
+03:09:45 [INFO] [TOKENS] 97020: synopsis of length 15929
+03:09:45 [INFO] [SUCCESS] 97020: RoboCop
+03:09:47 [INFO] [TOKENS] 82690: synopsis of length 16733
+03:09:48 [INFO] [SUCCESS] 82690: Wreck-It Ralph
+03:09:50 [WARN] [TOKENS] 81188: summary of length 220
+03:09:50 [INFO] [SUCCESS] 81188: Rise of the Guardians
+03:09:52 [INFO] [TOKENS] 296: synopsis of length 10447
+03:09:53 [INFO] [SUCCESS] 296: Terminator 3: Rise of the Machines
+03:09:55 [INFO] [TOKENS] 180: synopsis of length 13306
+03:09:55 [INFO] [SUCCESS] 180: Minority Report
+03:09:57 [INFO] [TOKENS] 1366: synopsis of length 19327
+03:09:58 [INFO] [SUCCESS] 1366: Rocky
+03:10:01 [INFO] [TOKENS] 381284: synopsis of length 19222
+03:10:01 [INFO] [SUCCESS] 381284: Hidden Figures
+03:10:04 [INFO] [TOKENS] 97630: synopsis of length 22828
+03:10:04 [INFO] [SUCCESS] 97630: Zero Dark Thirty
+03:10:06 [INFO] [TOKENS] 277: synopsis of length 9925
+03:10:07 [INFO] [SUCCESS] 277: Underworld
+03:10:09 [INFO] [TOKENS] 11324: synopsis of length 22297
+03:10:09 [INFO] [SUCCESS] 11324: Shutter Island
+03:10:13 [WARN] [TOKENS] 400617: summary of length 635
+03:10:14 [INFO] [SUCCESS] 400617: Phantom Thread
+03:10:16 [WARN] Snow White and the Seven Dwarfs has no Metacritic ratings
+03:10:16 [INFO] [TOKENS] 408: synopsis of length 884
+03:10:17 [INFO] [SUCCESS] 408: Snow White and the Seven Dwarfs
+03:10:19 [INFO] [TOKENS] 955: synopsis of length 4119
+03:10:20 [INFO] [SUCCESS] 955: Mission: Impossible II
+03:10:22 [INFO] [TOKENS] 333484: synopsis of length 9009
+03:10:23 [INFO] [SUCCESS] 333484: The Magnificent Seven
+03:10:25 [INFO] [TOKENS] 73: synopsis of length 11632
+03:10:25 [INFO] [SUCCESS] 73: American History X
+03:10:27 [INFO] [TOKENS] 137106: synopsis of length 4305
+03:10:28 [INFO] [SUCCESS] 137106: The Lego Movie
+03:10:29 [WARN] Mayaanadhi has no MPAA rating
+03:10:30 [WARN] Mayaanadhi has no Metacritic ratings
+03:10:30 [WARN] [TOKENS] 458741: summary of length 75
+03:10:31 [INFO] [SUCCESS] 458741: Mayaanadhi
+03:10:33 [INFO] [TOKENS] 9487: synopsis of length 5189
+03:10:33 [INFO] [SUCCESS] 9487: A Bug's Life
+03:10:36 [INFO] [TOKENS] 401981: synopsis of length 3321
+03:10:36 [INFO] [SUCCESS] 401981: Red Sparrow
+03:10:38 [INFO] [TOKENS] 399404: synopsis of length 7713
+03:10:39 [INFO] [SUCCESS] 399404: Darkest Hour
+03:10:41 [INFO] [TOKENS] 39254: synopsis of length 7538
+03:10:42 [INFO] [SUCCESS] 39254: Real Steel
+03:10:44 [INFO] [TOKENS] 578: synopsis of length 17889
+03:10:45 [INFO] [SUCCESS] 578: Jaws
+03:10:47 [INFO] [TOKENS] 9502: synopsis of length 13339
+03:10:47 [INFO] [SUCCESS] 9502: Kung Fu Panda
+03:10:50 [INFO] [TOKENS] 254470: synopsis of length 8350
+03:10:50 [INFO] [SUCCESS] 254470: Pitch Perfect 2
+03:10:53 [INFO] [TOKENS] 56292: synopsis of length 4193
+03:10:54 [INFO] [SUCCESS] 56292: Mission: Impossible - Ghost Protocol
+03:10:57 [INFO] [TOKENS] 10483: synopsis of length 6142
+03:10:57 [INFO] [SUCCESS] 10483: Death Race
+03:10:59 [INFO] [TOKENS] 500: synopsis of length 9577
+03:11:00 [INFO] [SUCCESS] 500: Reservoir Dogs
+03:11:02 [INFO] [TOKENS] 120467: synopsis of length 20762
+03:11:03 [INFO] [SUCCESS] 120467: The Grand Budapest Hotel
+03:11:05 [INFO] [TOKENS] 106: synopsis of length 8969
+03:11:06 [INFO] [SUCCESS] 106: Predator
+03:11:07 [WARN] The Girl in the Fog has no MPAA rating
+03:11:07 [WARN] The Girl in the Fog has no Metacritic ratings
+03:11:08 [WARN] [TOKENS] 468202: summary of length 601
+03:11:08 [INFO] [SUCCESS] 468202: The Girl in the Fog
+03:11:10 [INFO] [TOKENS] 291805: synopsis of length 11240
+03:11:11 [INFO] [SUCCESS] 291805: Now You See Me 2
+03:11:13 [INFO] [TOKENS] 138832: synopsis of length 13811
+03:11:14 [INFO] [SUCCESS] 138832: We're the Millers
+03:11:16 [INFO] [TOKENS] 745: synopsis of length 4115
+03:11:16 [INFO] [SUCCESS] 745: The Sixth Sense
+03:11:18 [INFO] [TOKENS] 1359: synopsis of length 63959
+03:11:19 [INFO] [SUCCESS] 1359: American Psycho
+03:11:21 [INFO] [TOKENS] 185: synopsis of length 15604
+03:11:21 [INFO] [SUCCESS] 185: A Clockwork Orange
+03:11:23 [INFO] [TOKENS] 137: synopsis of length 6159
+03:11:24 [INFO] [SUCCESS] 137: Groundhog Day
+03:11:26 [INFO] [TOKENS] 9444: synopsis of length 9046
+03:11:26 [INFO] [SUCCESS] 9444: Anastasia
+03:11:29 [INFO] [TOKENS] 205775: synopsis of length 4502
+03:11:29 [INFO] [SUCCESS] 205775: In the Heart of the Sea
+03:11:32 [INFO] [TOKENS] 38: synopsis of length 2054
+03:11:32 [INFO] [SUCCESS] 38: Eternal Sunshine of the Spotless Mind
+03:11:34 [INFO] [TOKENS] 155: synopsis of length 36625
+03:11:35 [INFO] [SUCCESS] 155: The Dark Knight
+03:11:37 [INFO] [TOKENS] 57201: synopsis of length 19194
+03:11:37 [INFO] [SUCCESS] 57201: The Lone Ranger
+03:11:39 [INFO] [TOKENS] 77338: synopsis of length 5373
+03:11:40 [INFO] [SUCCESS] 77338: The Intouchables
+03:11:42 [INFO] [TOKENS] 49519: synopsis of length 5776
+03:11:42 [INFO] [SUCCESS] 49519: The Croods
+03:11:44 [WARN] Wrong Turn 2: Dead End has no Metacritic ratings
+03:11:45 [INFO] [TOKENS] 13186: synopsis of length 4143
+03:11:45 [INFO] [SUCCESS] 13186: Wrong Turn 2: Dead End
+03:11:47 [INFO] [TOKENS] 244786: synopsis of length 6742
+03:11:48 [INFO] [SUCCESS] 244786: Whiplash
+03:11:50 [INFO] [TOKENS] 9340: synopsis of length 3411
+03:11:50 [INFO] [SUCCESS] 9340: The Goonies
+03:11:52 [INFO] [TOKENS] 111: synopsis of length 17640
+03:11:53 [INFO] [SUCCESS] 111: Scarface
+03:11:55 [INFO] [TOKENS] 107985: synopsis of length 20176
+03:11:55 [INFO] [SUCCESS] 107985: The World's End
+03:11:58 [INFO] [TOKENS] 72105: synopsis of length 4966
+03:11:58 [INFO] [SUCCESS] 72105: Ted
+03:12:00 [INFO] [TOKENS] 58595: synopsis of length 5445
+03:12:01 [INFO] [SUCCESS] 58595: Snow White and the Huntsman
+03:12:03 [INFO] [TOKENS] 415: synopsis of length 1009
+03:12:03 [INFO] [SUCCESS] 415: Batman & Robin
+03:12:05 [INFO] [TOKENS] 45054: synopsis of length 1396
+03:12:06 [INFO] [SUCCESS] 45054: There Be Dragons
+03:12:08 [INFO] [TOKENS] 1571: synopsis of length 13097
+03:12:08 [INFO] [SUCCESS] 1571: Live Free or Die Hard
+03:12:11 [INFO] [TOKENS] 35: synopsis of length 9850
+03:12:12 [INFO] [SUCCESS] 35: The Simpsons Movie
+03:12:14 [INFO] [TOKENS] 644: synopsis of length 9720
+03:12:15 [INFO] [SUCCESS] 644: A.I. Artificial Intelligence
+03:12:17 [INFO] [TOKENS] 275: synopsis of length 32855
+03:12:17 [INFO] [SUCCESS] 275: Fargo
+03:12:20 [INFO] [TOKENS] 10527: synopsis of length 15979
+03:12:21 [INFO] [SUCCESS] 10527: Madagascar: Escape 2 Africa
+03:12:23 [INFO] [TOKENS] 581: synopsis of length 6099
+03:12:23 [INFO] [SUCCESS] 581: Dances with Wolves
+03:12:25 [INFO] [TOKENS] 5255: synopsis of length 1564
+03:12:26 [INFO] [SUCCESS] 5255: The Polar Express
+03:12:28 [INFO] [TOKENS] 203801: synopsis of length 9992
+03:12:28 [INFO] [SUCCESS] 203801: The Man from U.N.C.L.E.
+03:12:31 [INFO] [TOKENS] 277216: synopsis of length 9358
+03:12:31 [INFO] [SUCCESS] 277216: Straight Outta Compton
+03:12:33 [INFO] [TOKENS] 261023: synopsis of length 9846
+03:12:34 [INFO] [SUCCESS] 261023: Black Mass
+03:12:36 [INFO] [TOKENS] 118: synopsis of length 2741
+03:12:37 [INFO] [SUCCESS] 118: Charlie and the Chocolate Factory
+03:12:39 [INFO] [TOKENS] 44214: synopsis of length 22446
+03:12:39 [INFO] [SUCCESS] 44214: Black Swan
+03:12:42 [INFO] [TOKENS] 253412: synopsis of length 7601
+03:12:42 [INFO] [SUCCESS] 253412: Everest
+03:12:46 [INFO] [TOKENS] 41154: synopsis of length 6245
+03:12:46 [INFO] [SUCCESS] 41154: Men in Black 3
+03:12:48 [INFO] [TOKENS] 225574: synopsis of length 17050
+03:12:48 [INFO] [SUCCESS] 225574: Non-Stop
+03:12:51 [INFO] [TOKENS] 1495: synopsis of length 12003
+03:12:51 [INFO] [SUCCESS] 1495: Kingdom of Heaven
+03:12:53 [INFO] [TOKENS] 136795: synopsis of length 5556
+03:12:54 [INFO] [SUCCESS] 136795: The Heat
+03:12:56 [INFO] [TOKENS] 181533: synopsis of length 6206
+03:12:57 [INFO] [SUCCESS] 181533: Night at the Museum: Secret of the Tomb
+03:12:59 [INFO] [TOKENS] 110415: synopsis of length 4166
+03:13:00 [INFO] [SUCCESS] 110415: Snowpiercer
+03:13:02 [INFO] [TOKENS] 38050: synopsis of length 36753
+03:13:02 [INFO] [SUCCESS] 38050: The Adjustment Bureau
+03:13:05 [INFO] [TOKENS] 109428: synopsis of length 10454
+03:13:05 [INFO] [SUCCESS] 109428: Evil Dead
+03:13:07 [INFO] [TOKENS] 14836: synopsis of length 26786
+03:13:08 [INFO] [SUCCESS] 14836: Coraline
+03:13:10 [INFO] [TOKENS] 364689: synopsis of length 7342
+03:13:10 [INFO] [SUCCESS] 364689: Ferdinand
+03:13:13 [INFO] [TOKENS] 127380: synopsis of length 16204
+03:13:13 [INFO] [SUCCESS] 127380: Finding Dory
+03:13:15 [INFO] [TOKENS] 72559: synopsis of length 13165
+03:13:16 [INFO] [SUCCESS] 72559: G.I. Joe: Retaliation
+03:13:18 [INFO] [TOKENS] 769: synopsis of length 9018
+03:13:19 [INFO] [SUCCESS] 769: GoodFellas
+03:13:21 [INFO] [TOKENS] 318846: synopsis of length 8192
+03:13:22 [INFO] [SUCCESS] 318846: The Big Short
+03:13:24 [INFO] [TOKENS] 1891: synopsis of length 14116
+03:13:25 [INFO] [SUCCESS] 1891: The Empire Strikes Back
+03:13:27 [INFO] [TOKENS] 600: synopsis of length 11212
+03:13:28 [INFO] [SUCCESS] 600: Full Metal Jacket
+03:13:30 [INFO] [TOKENS] 36647: synopsis of length 11726
+03:13:30 [INFO] [SUCCESS] 36647: Blade
+03:13:32 [INFO] [TOKENS] 22538: synopsis of length 11763
+03:13:33 [INFO] [SUCCESS] 22538: Scott Pilgrim vs. the World
+03:13:35 [INFO] [TOKENS] 423: synopsis of length 9104
+03:13:36 [INFO] [SUCCESS] 423: The Pianist
+03:13:38 [INFO] [TOKENS] 296098: synopsis of length 6609
+03:13:38 [INFO] [SUCCESS] 296098: Bridge of Spies
+03:13:41 [INFO] [TOKENS] 9654: synopsis of length 3025
+03:13:41 [INFO] [SUCCESS] 9654: The Italian Job
+03:13:43 [INFO] [TOKENS] 376867: synopsis of length 6561
+03:13:44 [INFO] [SUCCESS] 376867: Moonlight
+03:13:46 [INFO] [TOKENS] 20504: synopsis of length 14082
+03:13:47 [INFO] [SUCCESS] 20504: The Book of Eli
+03:13:51 [INFO] [TOKENS] 107846: synopsis of length 21595
+03:13:51 [INFO] [SUCCESS] 107846: Escape Plan
+03:13:53 [INFO] [TOKENS] 2059: synopsis of length 15725
+03:13:54 [INFO] [SUCCESS] 2059: National Treasure
+03:13:56 [INFO] [TOKENS] 44833: synopsis of length 365
+03:13:57 [INFO] [SUCCESS] 44833: Battleship
+03:13:59 [INFO] [TOKENS] 14: synopsis of length 5365
+03:14:00 [INFO] [SUCCESS] 14: American Beauty
+03:14:03 [INFO] [TOKENS] 89: synopsis of length 10061
+03:14:03 [INFO] [SUCCESS] 89: Indiana Jones and the Last Crusade
+03:14:06 [INFO] [TOKENS] 855: synopsis of length 4609
+03:14:06 [INFO] [SUCCESS] 855: Black Hawk Down
+03:14:09 [INFO] [TOKENS] 190859: synopsis of length 19076
+03:14:09 [INFO] [SUCCESS] 190859: American Sniper
+03:14:12 [INFO] [TOKENS] 59967: synopsis of length 12478
+03:14:13 [INFO] [SUCCESS] 59967: Looper
+03:14:15 [INFO] [TOKENS] 22970: synopsis of length 15115
+03:14:16 [INFO] [SUCCESS] 22970: The Cabin in the Woods
+03:14:18 [INFO] [TOKENS] 391713: synopsis of length 4525
+03:14:19 [INFO] [SUCCESS] 391713: Lady Bird
+03:14:21 [INFO] [TOKENS] 87502: synopsis of length 10982
+03:14:21 [INFO] [SUCCESS] 87502: Flight
+03:14:23 [INFO] [TOKENS] 82695: synopsis of length 5919
+03:14:24 [INFO] [SUCCESS] 82695: Les Misérables
+03:14:27 [INFO] [TOKENS] 86834: synopsis of length 8904
+03:14:27 [INFO] [SUCCESS] 86834: Noah
+03:14:29 [INFO] [TOKENS] 70: synopsis of length 6675
+03:14:29 [INFO] [SUCCESS] 70: Million Dollar Baby
+03:14:32 [INFO] [TOKENS] 115: synopsis of length 28586
+03:14:32 [INFO] [SUCCESS] 115: The Big Lebowski
+03:14:32 [ERROR] 320288: invalid type: null, expected i32 at line 1 column 1430
+03:14:35 [INFO] [TOKENS] 941: synopsis of length 26706
+03:14:35 [INFO] [SUCCESS] 941: Lethal Weapon
+03:14:38 [INFO] [TOKENS] 36643: synopsis of length 11608
+03:14:38 [INFO] [SUCCESS] 36643: The World Is Not Enough
+03:14:40 [INFO] [TOKENS] 1593: synopsis of length 21711
+03:14:41 [INFO] [SUCCESS] 1593: Night at the Museum
+03:14:43 [INFO] [TOKENS] 1927: synopsis of length 6269
+03:14:43 [INFO] [SUCCESS] 1927: Hulk
+03:14:47 [INFO] [TOKENS] 808: synopsis of length 29298
+03:14:47 [INFO] [SUCCESS] 808: Shrek
+03:14:49 [INFO] [TOKENS] 212778: synopsis of length 2776
+03:14:50 [INFO] [SUCCESS] 212778: Chef
+03:14:53 [INFO] [TOKENS] 8273: synopsis of length 9206
+03:14:54 [INFO] [SUCCESS] 8273: American Wedding
+03:14:56 [INFO] [TOKENS] 187: synopsis of length 12482
+03:14:56 [INFO] [SUCCESS] 187: Sin City
+03:15:00 [INFO] [TOKENS] 335988: synopsis of length 9347
+03:15:00 [INFO] [SUCCESS] 335988: Transformers: The Last Knight
+03:15:02 [INFO] [TOKENS] 601: synopsis of length 7058
+03:15:03 [INFO] [SUCCESS] 601: E.T. the Extra-Terrestrial
+03:15:05 [INFO] [TOKENS] 161: synopsis of length 10097
+03:15:06 [INFO] [SUCCESS] 161: Ocean's Eleven
+03:15:08 [INFO] [TOKENS] 9388: synopsis of length 4437
+03:15:09 [INFO] [SUCCESS] 9388: Thank You for Smoking
+03:15:11 [INFO] [TOKENS] 20526: synopsis of length 13416
+03:15:12 [INFO] [SUCCESS] 20526: TRON: Legacy
+03:15:14 [INFO] [TOKENS] 2048: synopsis of length 9873
+03:15:14 [INFO] [SUCCESS] 2048: I, Robot
+03:15:17 [INFO] [TOKENS] 330459: synopsis of length 13259
+03:15:18 [INFO] [SUCCESS] 330459: Rogue One: A Star Wars Story
+03:15:20 [INFO] [TOKENS] 393: synopsis of length 11494
+03:15:21 [INFO] [SUCCESS] 393: Kill Bill: Vol. 2
+03:15:23 [INFO] [TOKENS] 37165: synopsis of length 15276
+03:15:23 [INFO] [SUCCESS] 37165: The Truman Show
+03:15:26 [INFO] [TOKENS] 1894: synopsis of length 5672
+03:15:26 [INFO] [SUCCESS] 1894: Star Wars: Episode II - Attack of the Clones
+03:15:28 [INFO] [TOKENS] 8681: synopsis of length 16397
+03:15:28 [INFO] [SUCCESS] 8681: Taken
+03:15:30 [INFO] [TOKENS] 1368: synopsis of length 7416
+03:15:31 [INFO] [SUCCESS] 1368: First Blood
+03:15:33 [INFO] [TOKENS] 128: synopsis of length 33616
+03:15:34 [INFO] [SUCCESS] 128: Princess Mononoke
+03:15:36 [INFO] [TOKENS] 1579: synopsis of length 13832
+03:15:36 [INFO] [SUCCESS] 1579: Apocalypto
+03:15:39 [INFO] [TOKENS] 1573: synopsis of length 35703
+03:15:39 [INFO] [SUCCESS] 1573: Die Hard 2
+03:15:41 [INFO] [TOKENS] 242: synopsis of length 11818
+03:15:42 [INFO] [SUCCESS] 242: The Godfather: Part III
+03:15:44 [INFO] [TOKENS] 1635: synopsis of length 59325
+03:15:45 [INFO] [SUCCESS] 1635: The Island
+03:15:47 [INFO] [TOKENS] 158015: synopsis of length 4915
+03:15:47 [INFO] [SUCCESS] 158015: The Purge
+03:15:49 [INFO] [TOKENS] 10184: synopsis of length 10214
+03:15:50 [INFO] [SUCCESS] 10184: He's Just Not That Into You
+03:15:52 [INFO] [TOKENS] 1572: synopsis of length 3611
+03:15:52 [INFO] [SUCCESS] 1572: Die Hard: With a Vengeance
+03:15:54 [INFO] [TOKENS] 109439: synopsis of length 4240
+03:15:55 [INFO] [SUCCESS] 109439: The Hangover Part III
+03:15:57 [INFO] [TOKENS] 339846: synopsis of length 13361
+03:15:57 [INFO] [SUCCESS] 339846: Baywatch
+03:16:00 [WARN] [TOKENS] 123553: summary of length 493
+03:16:00 [INFO] [SUCCESS] 123553: The Mortal Instruments: City of Bones
+03:16:03 [INFO] [TOKENS] 293863: synopsis of length 8769
+03:16:03 [INFO] [SUCCESS] 293863: The Age of Adaline
+03:16:05 [INFO] [TOKENS] 395: synopsis of length 8728
+03:16:06 [INFO] [SUCCESS] 395: AVP: Alien vs. Predator
+03:16:08 [INFO] [TOKENS] 64682: synopsis of length 11544
+03:16:09 [INFO] [SUCCESS] 64682: The Great Gatsby
+03:16:11 [INFO] [TOKENS] 18360: synopsis of length 6566
+03:16:12 [INFO] [SUCCESS] 18360: Night at the Museum: Battle of the Smithsonian
+03:16:15 [INFO] [TOKENS] 107: synopsis of length 17650
+03:16:15 [INFO] [SUCCESS] 107: Snatch
+03:16:17 [INFO] [TOKENS] 37710: synopsis of length 4718
+03:16:18 [INFO] [SUCCESS] 37710: The Tourist
+03:16:20 [INFO] [TOKENS] 2270: synopsis of length 4489
+03:16:22 [INFO] [SUCCESS] 2270: Stardust
+03:16:27 [INFO] [TOKENS] 2567: synopsis of length 5844
+03:16:28 [INFO] [SUCCESS] 2567: The Aviator
+03:16:32 [INFO] [TOKENS] 834: synopsis of length 6339
+03:16:33 [INFO] [SUCCESS] 834: Underworld: Evolution
+03:16:35 [INFO] [TOKENS] 395834: synopsis of length 7779
+03:16:35 [INFO] [SUCCESS] 395834: Wind River
+03:16:38 [INFO] [TOKENS] 91586: synopsis of length 12904
+03:16:40 [INFO] [SUCCESS] 91586: Insidious: Chapter 2
+03:16:46 [INFO] [TOKENS] 74: synopsis of length 14661
+03:16:46 [INFO] [SUCCESS] 74: War of the Worlds
+03:16:50 [INFO] [TOKENS] 38055: synopsis of length 5495
+03:16:50 [INFO] [SUCCESS] 38055: Megamind
+03:18:19 [WARN] [TOKENS] 64688: summary of length 359
+03:18:19 [INFO] [SUCCESS] 64688: 21 Jump Street
+03:18:22 [INFO] [TOKENS] 215: synopsis of length 7278
+03:18:22 [INFO] [SUCCESS] 215: Saw II
+03:18:25 [INFO] [TOKENS] 239: synopsis of length 11878
+03:18:26 [INFO] [SUCCESS] 239: Some Like It Hot
+03:18:29 [INFO] [TOKENS] 84892: synopsis of length 5334
+03:18:29 [INFO] [SUCCESS] 84892: The Perks of Being a Wallflower
+03:18:31 [INFO] [TOKENS] 264644: synopsis of length 18841
+03:18:32 [INFO] [SUCCESS] 264644: Room
+03:18:34 [INFO] [TOKENS] 36586: synopsis of length 11546
+03:18:34 [INFO] [SUCCESS] 36586: Blade II
+03:18:37 [INFO] [TOKENS] 41630: synopsis of length 10879
+03:18:37 [INFO] [SUCCESS] 41630: No Strings Attached
+03:18:39 [INFO] [TOKENS] 1538: synopsis of length 4852
+03:18:40 [INFO] [SUCCESS] 1538: Collateral
+03:18:42 [INFO] [TOKENS] 260514: synopsis of length 15370
+03:18:43 [INFO] [SUCCESS] 260514: Cars 3
+03:18:47 [INFO] [TOKENS] 10674: synopsis of length 9996
+03:18:48 [INFO] [SUCCESS] 10674: Mulan
+03:18:49 [WARN] 10x10 has no MPAA rating
+03:18:49 [ERROR] 505177: 10x10 is missing IMDB score
+03:18:52 [INFO] [TOKENS] 34851: synopsis of length 4197
+03:18:52 [INFO] [SUCCESS] 34851: Predators
+03:18:54 [INFO] [TOKENS] 431530: synopsis of length 8289
+03:18:55 [INFO] [SUCCESS] 431530: A Bad Moms Christmas
+03:18:57 [WARN] [TOKENS] 430040: summary of length 122
+03:18:57 [INFO] [SUCCESS] 430040: The Hurricane Heist
+03:19:00 [INFO] [TOKENS] 286217: synopsis of length 12713
+03:19:00 [INFO] [SUCCESS] 286217: The Martian
+03:19:02 [INFO] [TOKENS] 5548: synopsis of length 23475
+03:19:03 [INFO] [SUCCESS] 5548: RoboCop
+03:19:05 [INFO] [TOKENS] 37834: synopsis of length 7615
+03:19:06 [INFO] [SUCCESS] 37834: Knight and Day
+03:19:08 [INFO] [TOKENS] 147441: synopsis of length 7495
+03:19:08 [INFO] [SUCCESS] 147441: Exodus: Gods and Kings
+03:19:10 [INFO] [TOKENS] 389015: synopsis of length 9860
+03:19:11 [INFO] [SUCCESS] 389015: I, Tonya
+03:19:13 [INFO] [TOKENS] 744: synopsis of length 5522
+03:19:14 [INFO] [SUCCESS] 744: Top Gun
+03:19:16 [INFO] [TOKENS] 7191: synopsis of length 10869
+03:19:17 [INFO] [SUCCESS] 7191: Cloverfield
+03:19:20 [INFO] [TOKENS] 206487: synopsis of length 8651
+03:19:21 [INFO] [SUCCESS] 206487: Predestination
+03:19:23 [INFO] [TOKENS] 83542: synopsis of length 12025
+03:19:24 [INFO] [SUCCESS] 83542: Cloud Atlas
+03:19:26 [INFO] [TOKENS] 621: synopsis of length 8659
+03:19:27 [INFO] [SUCCESS] 621: Grease
+03:19:29 [INFO] [TOKENS] 126889: synopsis of length 4507
+03:19:30 [INFO] [SUCCESS] 126889: Alien: Covenant
+03:19:31 [INFO] [TOKENS] 591: synopsis of length 9707
+03:19:32 [INFO] [SUCCESS] 591: The Da Vinci Code
+03:19:34 [INFO] [TOKENS] 1895: synopsis of length 6652
+03:19:35 [INFO] [SUCCESS] 1895: Star Wars: Episode III - Revenge of the Sith
+03:19:38 [INFO] [TOKENS] 37135: synopsis of length 13469
+03:19:38 [INFO] [SUCCESS] 37135: Tarzan
+03:19:40 [INFO] [TOKENS] 82693: synopsis of length 3591
+03:19:41 [INFO] [SUCCESS] 82693: Silver Linings Playbook
+03:19:43 [INFO] [TOKENS] 34544: synopsis of length 6383
+03:19:44 [INFO] [SUCCESS] 34544: The A-Team
+03:19:46 [INFO] [TOKENS] 948: synopsis of length 27695
+03:19:47 [INFO] [SUCCESS] 948: Halloween
+03:19:49 [INFO] [TOKENS] 163: synopsis of length 5412
+03:19:50 [INFO] [SUCCESS] 163: Ocean's Twelve
+03:19:52 [INFO] [TOKENS] 2118: synopsis of length 23170
+03:19:52 [INFO] [SUCCESS] 2118: L.A. Confidential
+03:19:55 [INFO] [TOKENS] 23483: synopsis of length 15890
+03:19:55 [INFO] [SUCCESS] 23483: Kick-Ass
+03:19:57 [WARN] [TOKENS] 46195: summary of length 1000
+03:19:59 [INFO] [SUCCESS] 46195: Rio
+03:20:01 [INFO] [TOKENS] 2164: synopsis of length 4936
+03:20:02 [INFO] [SUCCESS] 2164: Stargate
+03:20:04 [INFO] [TOKENS] 23629: synopsis of length 4335
+03:20:05 [INFO] [SUCCESS] 23629: Sucker Punch
+03:20:07 [INFO] [TOKENS] 131634: synopsis of length 21275
+03:20:08 [INFO] [SUCCESS] 131634: The Hunger Games: Mockingjay - Part 2
+03:20:10 [INFO] [TOKENS] 630: synopsis of length 6262
+03:20:12 [INFO] [SUCCESS] 630: The Wizard of Oz
+03:20:15 [INFO] [TOKENS] 1640: synopsis of length 14332
+03:20:16 [INFO] [SUCCESS] 1640: Crash
+03:20:18 [INFO] [TOKENS] 18823: synopsis of length 6739
+03:20:18 [INFO] [SUCCESS] 18823: Clash of the Titans
+03:20:21 [INFO] [TOKENS] 227306: synopsis of length 8628
+03:20:21 [INFO] [SUCCESS] 227306: Unbroken
+03:20:25 [INFO] [TOKENS] 95: synopsis of length 9140
+03:20:26 [INFO] [SUCCESS] 95: Armageddon
+03:20:28 [INFO] [TOKENS] 146216: synopsis of length 4475
+03:20:28 [INFO] [SUCCESS] 146216: RED 2
+03:20:30 [INFO] [TOKENS] 28: synopsis of length 6871
+03:20:31 [INFO] [SUCCESS] 28: Apocalypse Now
+03:20:34 [WARN] Shipwrecked has no Metacritic ratings
+03:20:35 [WARN] [TOKENS] 71805: summary of length 849
+03:20:35 [INFO] [SUCCESS] 71805: Shipwrecked
+03:20:37 [INFO] [TOKENS] 1091: synopsis of length 11253
+03:20:37 [INFO] [SUCCESS] 1091: The Thing
+03:20:40 [INFO] [TOKENS] 8077: synopsis of length 29087
+03:20:41 [INFO] [SUCCESS] 8077: Alien³
+03:20:43 [INFO] [TOKENS] 770: synopsis of length 25235
+03:20:43 [INFO] [SUCCESS] 770: Gone with the Wind
+03:20:46 [INFO] [TOKENS] 114150: synopsis of length 10578
+03:20:46 [INFO] [SUCCESS] 114150: Pitch Perfect
+03:20:46 [ERROR] 511679: invalid type: null, expected a string at line 1 column 154
+03:20:49 [INFO] [TOKENS] 568: synopsis of length 10751
+03:20:49 [INFO] [SUCCESS] 568: Apollo 13
+03:20:51 [INFO] [TOKENS] 787: synopsis of length 3227
+03:20:52 [INFO] [SUCCESS] 787: Mr. & Mrs. Smith
+03:20:54 [INFO] [TOKENS] 634: synopsis of length 914
+03:20:54 [INFO] [SUCCESS] 634: Bridget Jones's Diary
+03:20:57 [INFO] [TOKENS] 399174: synopsis of length 10035
+03:20:57 [INFO] [SUCCESS] 399174: Isle of Dogs
+03:20:59 [INFO] [TOKENS] 49529: synopsis of length 17263
+03:21:00 [INFO] [SUCCESS] 49529: John Carter
+03:21:02 [INFO] [TOKENS] 103: synopsis of length 8457
+03:21:03 [INFO] [SUCCESS] 103: Taxi Driver
+03:21:05 [INFO] [TOKENS] 414: synopsis of length 3421
+03:21:05 [INFO] [SUCCESS] 414: Batman Forever
+03:21:08 [INFO] [TOKENS] 19913: synopsis of length 9255
+03:21:08 [INFO] [SUCCESS] 19913: (500) Days of Summer
+03:21:10 [INFO] [TOKENS] 6479: synopsis of length 8801
+03:21:11 [INFO] [SUCCESS] 6479: I Am Legend
+03:21:13 [INFO] [TOKENS] 310: synopsis of length 15519
+03:21:13 [INFO] [SUCCESS] 310: Bruce Almighty
+03:21:16 [INFO] [TOKENS] 1734: synopsis of length 5676
+03:21:16 [INFO] [SUCCESS] 1734: The Mummy Returns
+03:21:19 [INFO] [TOKENS] 627: synopsis of length 6242
+03:21:19 [INFO] [SUCCESS] 627: Trainspotting
+03:21:21 [INFO] [TOKENS] 346648: synopsis of length 5598
+03:21:22 [INFO] [SUCCESS] 346648: Paddington 2
+03:21:27 [INFO] [TOKENS] 8810: synopsis of length 12703
+03:21:27 [INFO] [SUCCESS] 8810: Mad Max 2: The Road Warrior
+03:21:30 [INFO] [TOKENS] 194: synopsis of length 6372
+03:21:30 [INFO] [SUCCESS] 194: Amélie
+03:21:32 [INFO] [TOKENS] 114: synopsis of length 4193
+03:21:33 [INFO] [SUCCESS] 114: Pretty Woman
+03:21:35 [WARN] [TOKENS] 10530: summary of length 439
+03:21:36 [INFO] [SUCCESS] 10530: Pocahontas
+03:21:38 [INFO] [TOKENS] 9335: synopsis of length 4096
+03:21:39 [INFO] [SUCCESS] 9335: Transporter 2
+03:21:41 [INFO] [TOKENS] 85350: synopsis of length 15243
+03:21:41 [INFO] [SUCCESS] 85350: Boyhood
+03:21:44 [INFO] [TOKENS] 672: synopsis of length 6823
+03:21:44 [INFO] [SUCCESS] 672: Harry Potter and the Chamber of Secrets
+03:21:47 [INFO] [TOKENS] 297761: synopsis of length 13151
+03:21:47 [INFO] [SUCCESS] 297761: Suicide Squad
+03:21:49 [INFO] [TOKENS] 75174: synopsis of length 5377
+03:21:50 [INFO] [SUCCESS] 75174: The Grey
+03:21:52 [INFO] [TOKENS] 8392: synopsis of length 9190
+03:21:53 [INFO] [SUCCESS] 8392: My Neighbor Totoro
+03:21:58 [INFO] [TOKENS] 1954: synopsis of length 2173
+03:21:58 [INFO] [SUCCESS] 1954: The Butterfly Effect
+03:21:58 [ERROR] 460019: invalid type: null, expected i32 at line 1 column 824
+03:22:01 [INFO] [TOKENS] 567: synopsis of length 8733
+03:22:01 [INFO] [SUCCESS] 567: Rear Window
+03:22:03 [INFO] [TOKENS] 4922: synopsis of length 20050
+03:22:04 [INFO] [SUCCESS] 4922: The Curious Case of Benjamin Button
+03:22:06 [INFO] [TOKENS] 1979: synopsis of length 14182
+03:22:07 [INFO] [SUCCESS] 1979: Fantastic 4: Rise of the Silver Surfer
+03:22:10 [INFO] [TOKENS] 2501: synopsis of length 4865
+03:22:10 [INFO] [SUCCESS] 2501: The Bourne Identity
+03:22:13 [INFO] [TOKENS] 13: synopsis of length 3294
+03:22:14 [INFO] [SUCCESS] 13: Forrest Gump
+03:22:16 [INFO] [TOKENS] 290250: synopsis of length 13337
+03:22:17 [INFO] [SUCCESS] 290250: The Nice Guys
+03:22:19 [INFO] [TOKENS] 146233: synopsis of length 12623
+03:22:20 [INFO] [SUCCESS] 146233: Prisoners
+03:22:22 [INFO] [TOKENS] 3933: synopsis of length 2852
+03:22:23 [INFO] [SUCCESS] 3933: Corpse Bride
+03:22:25 [INFO] [TOKENS] 956: synopsis of length 6115
+03:22:26 [INFO] [SUCCESS] 956: Mission: Impossible III
+03:22:28 [INFO] [TOKENS] 338766: synopsis of length 12739
+03:22:29 [INFO] [SUCCESS] 338766: Hell or High Water
+03:22:31 [INFO] [TOKENS] 205584: synopsis of length 7823
+03:22:31 [INFO] [SUCCESS] 205584: Gods of Egypt
+03:22:34 [INFO] [TOKENS] 7443: synopsis of length 6137
+03:22:34 [INFO] [SUCCESS] 7443: Chicken Run
+03:22:37 [INFO] [TOKENS] 7518: synopsis of length 880
+03:22:37 [INFO] [SUCCESS] 7518: Over the Hedge
+03:22:41 [INFO] [TOKENS] 449443: synopsis of length 5451
+03:22:42 [INFO] [SUCCESS] 449443: Den of Thieves
+03:22:44 [INFO] [TOKENS] 587: synopsis of length 10330
+03:22:45 [INFO] [SUCCESS] 587: Big Fish
+03:22:47 [INFO] [TOKENS] 289: synopsis of length 5561
+03:22:48 [INFO] [SUCCESS] 289: Casablanca
+03:22:50 [INFO] [TOKENS] 334541: synopsis of length 23118
+03:22:51 [INFO] [SUCCESS] 334541: Manchester by the Sea
+03:22:53 [INFO] [TOKENS] 616: synopsis of length 10170
+03:22:54 [INFO] [SUCCESS] 616: The Last Samurai
+03:22:56 [INFO] [TOKENS] 141: synopsis of length 8119
+03:22:57 [INFO] [SUCCESS] 141: Donnie Darko
+03:22:59 [INFO] [TOKENS] 36648: synopsis of length 9810
+03:22:59 [INFO] [SUCCESS] 36648: Blade: Trinity
+03:23:01 [WARN] Lady and the Tramp has no Metacritic ratings
+03:23:01 [INFO] [TOKENS] 10340: synopsis of length 5375
+03:23:02 [INFO] [SUCCESS] 10340: Lady and the Tramp
+03:23:04 [INFO] [TOKENS] 37735: synopsis of length 5077
+03:23:05 [INFO] [SUCCESS] 37735: Easy A
+03:23:07 [INFO] [TOKENS] 65754: synopsis of length 11321
+03:23:08 [INFO] [SUCCESS] 65754: The Girl with the Dragon Tattoo
+03:23:10 [INFO] [TOKENS] 77: synopsis of length 9135
+03:23:10 [INFO] [SUCCESS] 77: Memento
+03:23:13 [INFO] [TOKENS] 49018: synopsis of length 6730
+03:23:13 [INFO] [SUCCESS] 49018: Insidious
+03:23:16 [INFO] [TOKENS] 71552: synopsis of length 10770
+03:23:17 [INFO] [SUCCESS] 71552: American Reunion
+03:23:19 [INFO] [TOKENS] 879: synopsis of length 8147
+03:23:20 [INFO] [SUCCESS] 879: Hook
+03:23:22 [INFO] [TOKENS] 1487: synopsis of length 12693
+03:23:22 [INFO] [SUCCESS] 1487: Hellboy
+03:23:25 [INFO] [TOKENS] 597: synopsis of length 4042
+03:23:25 [INFO] [SUCCESS] 597: Titanic
+03:23:28 [INFO] [TOKENS] 21208: synopsis of length 28000
+03:23:28 [INFO] [SUCCESS] 21208: Orphan
+03:23:30 [INFO] [TOKENS] 58574: synopsis of length 3670
+03:23:31 [INFO] [SUCCESS] 58574: Sherlock Holmes: A Game of Shadows
+03:23:33 [INFO] [TOKENS] 389: synopsis of length 10004
+03:23:34 [INFO] [SUCCESS] 389: 12 Angry Men
+03:23:36 [INFO] [TOKENS] 46529: synopsis of length 4402
+03:23:36 [INFO] [SUCCESS] 46529: I Am Number Four
+03:23:38 [INFO] [TOKENS] 9762: synopsis of length 1725
+03:23:39 [INFO] [SUCCESS] 9762: Step Up
+03:23:41 [INFO] [TOKENS] 37958: synopsis of length 4770
+03:23:42 [INFO] [SUCCESS] 37958: Immortals
+03:23:44 [INFO] [TOKENS] 6957: synopsis of length 45
+03:23:45 [INFO] [SUCCESS] 6957: The 40 Year Old Virgin
+03:23:46 [INFO] [TOKENS] 464502: synopsis of length 9399
+03:23:47 [INFO] [SUCCESS] 464502: Acrimony
+03:23:49 [INFO] [TOKENS] 11688: synopsis of length 2147
+03:23:50 [INFO] [SUCCESS] 11688: The Emperor's New Groove
+03:23:52 [INFO] [TOKENS] 122906: synopsis of length 16904
+03:23:53 [INFO] [SUCCESS] 122906: About Time
+03:23:55 [INFO] [TOKENS] 285783: synopsis of length 9086
+03:23:55 [INFO] [SUCCESS] 285783: The Walk
+03:23:57 [INFO] [TOKENS] 251: synopsis of length 4072
+03:23:58 [INFO] [SUCCESS] 251: Ghost
+03:24:00 [INFO] [TOKENS] 12405: synopsis of length 1165
+03:24:01 [INFO] [SUCCESS] 12405: Slumdog Millionaire
+03:24:03 [INFO] [TOKENS] 109424: synopsis of length 28510
+03:24:03 [INFO] [SUCCESS] 109424: Captain Phillips
+03:24:05 [INFO] [TOKENS] 8960: synopsis of length 4033
+03:24:06 [INFO] [SUCCESS] 8960: Hancock
+03:24:08 [INFO] [TOKENS] 138697: synopsis of length 13589
+03:24:09 [INFO] [SUCCESS] 138697: Don Jon
+03:24:11 [INFO] [TOKENS] 1585: synopsis of length 17020
+03:24:12 [INFO] [SUCCESS] 1585: It's a Wonderful Life
+03:24:15 [INFO] [TOKENS] 49849: synopsis of length 3629
+03:24:15 [INFO] [SUCCESS] 49849: Cowboys & Aliens
+03:24:18 [INFO] [TOKENS] 9476: synopsis of length 15573
+03:24:18 [INFO] [SUCCESS] 9476: A Knight's Tale
+03:24:20 [INFO] [TOKENS] 301337: synopsis of length 6815
+03:24:21 [INFO] [SUCCESS] 301337: Downsizing
+03:24:23 [INFO] [TOKENS] 9480: synopsis of length 5169
+03:24:24 [INFO] [SUCCESS] 9480: Daredevil
+03:24:26 [INFO] [TOKENS] 1735: synopsis of length 6142
+03:24:27 [INFO] [SUCCESS] 1735: The Mummy: Tomb of the Dragon Emperor
+03:24:29 [INFO] [TOKENS] 1452: synopsis of length 9913
+03:24:29 [INFO] [SUCCESS] 1452: Superman Returns
+03:24:31 [INFO] [TOKENS] 17431: synopsis of length 13392
+03:24:32 [INFO] [SUCCESS] 17431: Moon
+03:24:34 [INFO] [TOKENS] 1893: synopsis of length 5324
+03:24:34 [INFO] [SUCCESS] 1893: Star Wars: Episode I - The Phantom Menace
+03:24:37 [INFO] [TOKENS] 792: synopsis of length 12683
+03:24:37 [INFO] [SUCCESS] 792: Platoon
+03:24:39 [INFO] [TOKENS] 2493: synopsis of length 14150
+03:24:40 [INFO] [SUCCESS] 2493: The Princess Bride
+03:24:43 [INFO] [TOKENS] 686: synopsis of length 13656
+03:24:43 [INFO] [SUCCESS] 686: Contact
+03:24:46 [WARN] [TOKENS] 396422: summary of length 570
+03:24:46 [INFO] [SUCCESS] 396422: Annabelle: Creation
+03:24:48 [INFO] [TOKENS] 329865: synopsis of length 5744
+03:24:49 [INFO] [SUCCESS] 329865: Arrival
+03:24:51 [INFO] [TOKENS] 673: synopsis of length 14811
+03:24:52 [INFO] [SUCCESS] 673: Harry Potter and the Prisoner of Azkaban
+03:24:54 [WARN] [TOKENS] 136400: summary of length 684
+03:24:55 [INFO] [SUCCESS] 136400: 2 Guns
+03:24:57 [INFO] [TOKENS] 8619: synopsis of length 5121
+03:24:57 [INFO] [SUCCESS] 8619: Master and Commander: The Far Side of the World
+03:24:59 [INFO] [TOKENS] 32657: synopsis of length 52593
+03:25:00 [INFO] [SUCCESS] 32657: Percy Jackson & the Olympians: The Lightning Thief
+03:25:02 [INFO] [TOKENS] 306819: synopsis of length 13403
+03:25:03 [INFO] [SUCCESS] 306819: The Danish Girl
+03:25:05 [INFO] [TOKENS] 20662: synopsis of length 18924
+03:25:06 [INFO] [SUCCESS] 20662: Robin Hood
+03:25:08 [INFO] [TOKENS] 45612: synopsis of length 4267
+03:25:08 [INFO] [SUCCESS] 45612: Source Code
+03:25:11 [INFO] [TOKENS] 9506: synopsis of length 5767
+03:25:11 [INFO] [SUCCESS] 9506: Anger Management
+03:25:13 [INFO] [TOKENS] 968: synopsis of length 4863
+03:25:14 [INFO] [SUCCESS] 968: Dog Day Afternoon
+03:25:16 [INFO] [TOKENS] 76203: synopsis of length 14279
+03:25:16 [INFO] [SUCCESS] 76203: 12 Years a Slave
+03:25:18 [WARN] Planet Terror has no Metacritic ratings
+03:25:19 [INFO] [TOKENS] 1992: synopsis of length 19955
+03:25:19 [INFO] [SUCCESS] 1992: Planet Terror
+03:25:22 [INFO] [TOKENS] 101299: synopsis of length 8945
+03:25:22 [INFO] [SUCCESS] 101299: The Hunger Games: Catching Fire
+03:25:25 [INFO] [TOKENS] 9477: synopsis of length 9194
+03:25:25 [INFO] [SUCCESS] 9477: King Arthur
+03:25:28 [INFO] [TOKENS] 282035: synopsis of length 7488
+03:25:28 [INFO] [SUCCESS] 282035: The Mummy
+03:25:31 [INFO] [TOKENS] 15: synopsis of length 8935
+03:25:31 [INFO] [SUCCESS] 15: Citizen Kane
+03:25:34 [INFO] [TOKENS] 7551: synopsis of length 10753
+03:25:34 [INFO] [SUCCESS] 7551: Déjà Vu
+03:25:37 [INFO] [TOKENS] 4147: synopsis of length 4092
+03:25:37 [INFO] [SUCCESS] 4147: Road to Perdition
+03:25:40 [INFO] [TOKENS] 4248: synopsis of length 3118
+03:25:40 [INFO] [SUCCESS] 4248: Scary Movie 2
+03:25:42 [INFO] [TOKENS] 2668: synopsis of length 2695
+03:25:43 [INFO] [SUCCESS] 2668: Sleepy Hollow
+03:25:45 [INFO] [TOKENS] 406997: synopsis of length 8669
+03:25:45 [INFO] [SUCCESS] 406997: Wonder
+03:25:48 [INFO] [TOKENS] 64635: synopsis of length 4355
+03:25:48 [INFO] [SUCCESS] 64635: Total Recall
+03:25:49 [ERROR] 434355: invalid type: null, expected i32 at line 1 column 772
+03:25:51 [INFO] [TOKENS] 714: synopsis of length 10057
+03:25:51 [INFO] [SUCCESS] 714: Tomorrow Never Dies
+03:25:52 [ERROR] 351286: invalid type: null, expected i32 at line 1 column 1803
+03:25:54 [INFO] [TOKENS] 3131: synopsis of length 17476
+03:25:55 [INFO] [SUCCESS] 3131: Gangs of New York
+03:25:57 [INFO] [TOKENS] 810: synopsis of length 6642
+03:25:58 [INFO] [SUCCESS] 810: Shrek the Third
+03:25:59 [WARN] Vertigo has no Metacritic ratings
+03:26:00 [INFO] [TOKENS] 426: synopsis of length 14537
+03:26:00 [INFO] [SUCCESS] 426: Vertigo
+03:26:03 [INFO] [TOKENS] 8247: synopsis of length 9525
+03:26:03 [INFO] [SUCCESS] 8247: Jumper
+03:26:06 [INFO] [TOKENS] 381719: synopsis of length 7037
+03:26:06 [INFO] [SUCCESS] 381719: Peter Rabbit
+03:26:09 [INFO] [TOKENS] 640: synopsis of length 9493
+03:26:09 [INFO] [SUCCESS] 640: Catch Me If You Can
+03:26:12 [INFO] [TOKENS] 453: synopsis of length 6659
+03:26:13 [INFO] [SUCCESS] 453: A Beautiful Mind
+03:26:15 [INFO] [TOKENS] 26389: synopsis of length 33561
+03:26:16 [INFO] [SUCCESS] 26389: From Paris with Love
+03:26:17 [WARN] The Dark Side of Love has no MPAA rating
+03:26:17 [WARN] The Dark Side of Love has no Metacritic ratings
+03:26:18 [WARN] [TOKENS] 80752: summary of length 130
+03:26:18 [INFO] [SUCCESS] 80752: The Dark Side of Love
+03:26:20 [INFO] [TOKENS] 670: synopsis of length 16811
+03:26:21 [INFO] [SUCCESS] 670: Oldboy
+03:26:23 [INFO] [TOKENS] 12437: synopsis of length 17864
+03:26:24 [INFO] [SUCCESS] 12437: Underworld: Rise of the Lycans
+03:26:26 [INFO] [TOKENS] 64690: synopsis of length 6752
+03:26:26 [INFO] [SUCCESS] 64690: Drive
+03:26:29 [INFO] [TOKENS] 17578: synopsis of length 10978
+03:26:29 [INFO] [SUCCESS] 17578: The Adventures of Tintin
+03:26:31 [WARN] Taxi has no Metacritic ratings
+03:26:32 [WARN] [TOKENS] 2330: summary of length 330
+03:26:32 [INFO] [SUCCESS] 2330: Taxi
+03:26:34 [INFO] [TOKENS] 8078: synopsis of length 12827
+03:26:35 [INFO] [SUCCESS] 8078: Alien: Resurrection
+03:26:37 [INFO] [TOKENS] 755: synopsis of length 6082
+03:26:38 [INFO] [SUCCESS] 755: From Dusk Till Dawn
+03:26:40 [INFO] [TOKENS] 13223: synopsis of length 8130
+03:26:40 [INFO] [SUCCESS] 13223: Gran Torino
+03:26:42 [INFO] [TOKENS] 629: synopsis of length 7281
+03:26:43 [INFO] [SUCCESS] 629: The Usual Suspects
+03:26:45 [INFO] [TOKENS] 23631: synopsis of length 49434
+03:26:45 [INFO] [SUCCESS] 23631: Machete
+03:26:47 [INFO] [TOKENS] 50546: synopsis of length 4155
+03:26:48 [INFO] [SUCCESS] 50546: Just Go with It
+03:26:50 [INFO] [TOKENS] 9029: synopsis of length 4474
+03:26:50 [INFO] [SUCCESS] 9029: What Happens in Vegas
+03:26:52 [INFO] [TOKENS] 4638: synopsis of length 9652
+03:26:53 [INFO] [SUCCESS] 4638: Hot Fuzz
+03:26:55 [INFO] [TOKENS] 11036: synopsis of length 5718
+03:26:55 [INFO] [SUCCESS] 11036: The Notebook
+03:26:58 [INFO] [TOKENS] 364: synopsis of length 9584
+03:26:59 [INFO] [SUCCESS] 364: Batman Returns
+03:27:01 [INFO] [TOKENS] 15092: synopsis of length 8598
+03:27:02 [INFO] [SUCCESS] 15092: Crank: High Voltage
+03:27:04 [INFO] [TOKENS] 49444: synopsis of length 3954
+03:27:04 [INFO] [SUCCESS] 49444: Kung Fu Panda 2
+03:27:06 [INFO] [TOKENS] 767: synopsis of length 6889
+03:27:07 [INFO] [SUCCESS] 767: Harry Potter and the Half-Blood Prince
+03:27:09 [INFO] [TOKENS] 6114: synopsis of length 8551
+03:27:09 [INFO] [SUCCESS] 6114: Dracula
+03:27:12 [WARN] [TOKENS] 395992: summary of length 470
+03:27:12 [INFO] [SUCCESS] 395992: Life
+03:27:15 [INFO] [TOKENS] 9902: synopsis of length 7861
+03:27:15 [INFO] [SUCCESS] 9902: Wrong Turn
+03:27:18 [INFO] [TOKENS] 241: synopsis of length 9560
+03:27:18 [INFO] [SUCCESS] 241: Natural Born Killers
+03:27:20 [WARN] [TOKENS] 406990: summary of length 780
+03:27:20 [INFO] [SUCCESS] 406990: What Happened to Monday
+03:27:23 [INFO] [TOKENS] 244761: synopsis of length 22692
+03:27:23 [INFO] [SUCCESS] 244761: The Captive
+03:27:25 [INFO] [TOKENS] 881: synopsis of length 16615
+03:27:25 [INFO] [SUCCESS] 881: A Few Good Men
+03:27:27 [WARN] The Man with the Iron Heart has no Metacritic ratings
+03:27:27 [WARN] [TOKENS] 339259: summary of length 387
+03:27:28 [INFO] [SUCCESS] 339259: The Man with the Iron Heart
+03:27:30 [INFO] [TOKENS] 298: synopsis of length 6032
+03:27:30 [INFO] [SUCCESS] 298: Ocean's Thirteen
+03:27:33 [INFO] [TOKENS] 80278: synopsis of length 3319
+03:27:33 [INFO] [SUCCESS] 80278: The Impossible
+03:27:35 [INFO] [TOKENS] 50544: synopsis of length 4538
+03:27:36 [INFO] [SUCCESS] 50544: Friends with Benefits
+03:27:38 [INFO] [TOKENS] 273248: synopsis of length 16346
+03:27:38 [INFO] [SUCCESS] 273248: The Hateful Eight
+03:27:40 [INFO] [TOKENS] 257344: synopsis of length 7900
+03:27:41 [INFO] [SUCCESS] 257344: Pixels
+03:27:43 [INFO] [TOKENS] 162: synopsis of length 4846
+03:27:44 [INFO] [SUCCESS] 162: Edward Scissorhands
+03:27:46 [INFO] [TOKENS] 924: synopsis of length 7606
+03:27:47 [INFO] [SUCCESS] 924: Dawn of the Dead
+03:27:49 [INFO] [TOKENS] 45269: synopsis of length 5735
+03:27:49 [INFO] [SUCCESS] 45269: The King's Speech
+03:27:52 [INFO] [TOKENS] 4951: synopsis of length 5159
+03:27:52 [INFO] [SUCCESS] 4951: 10 Things I Hate About You
+03:27:55 [INFO] [TOKENS] 72331: synopsis of length 4338
+03:27:55 [INFO] [SUCCESS] 72331: Abraham Lincoln: Vampire Hunter
+03:27:57 [INFO] [TOKENS] 10555: synopsis of length 1317
+03:27:58 [INFO] [SUCCESS] 10555: Shark Tale
+03:28:00 [INFO] [TOKENS] 45317: synopsis of length 9640
+03:28:01 [INFO] [SUCCESS] 45317: The Fighter
+03:28:04 [INFO] [TOKENS] 869: synopsis of length 3741
+03:28:04 [INFO] [SUCCESS] 869: Planet of the Apes
+03:28:06 [INFO] [TOKENS] 87818: synopsis of length 10972
+03:28:07 [INFO] [SUCCESS] 87818: Movie 43
+03:28:09 [INFO] [TOKENS] 7555: synopsis of length 17486
+03:28:10 [INFO] [SUCCESS] 7555: Rambo
+03:28:13 [INFO] [TOKENS] 612: synopsis of length 9943
+03:28:14 [INFO] [SUCCESS] 612: Munich
+03:28:16 [INFO] [TOKENS] 4512: synopsis of length 3946
+03:28:17 [INFO] [SUCCESS] 4512: The Assassination of Jesse James by the Coward Robert Ford
+03:28:19 [INFO] [TOKENS] 165: synopsis of length 42830
+03:28:19 [INFO] [SUCCESS] 165: Back to the Future Part II
+03:28:20 [ERROR] 348350: invalid type: null, expected i32 at line 1 column 1197
+03:28:21 [WARN] Boyka: Undisputed IV has no Metacritic ratings
+03:28:22 [INFO] [TOKENS] 348893: synopsis of length 361
+03:28:22 [INFO] [SUCCESS] 348893: Boyka: Undisputed IV
+03:28:24 [INFO] [TOKENS] 2832: synopsis of length 2555
+03:28:25 [INFO] [SUCCESS] 2832: Identity
+03:28:32 [INFO] [TOKENS] 77016: synopsis of length 8648
+03:28:32 [INFO] [SUCCESS] 77016: End of Watch
+03:28:34 [INFO] [TOKENS] 407448: synopsis of length 8732
+03:28:35 [INFO] [SUCCESS] 407448: Detroit
+03:28:37 [INFO] [TOKENS] 1562: synopsis of length 5573
+03:28:37 [INFO] [SUCCESS] 1562: 28 Weeks Later
+03:28:40 [INFO] [TOKENS] 12162: synopsis of length 17993
+03:28:40 [INFO] [SUCCESS] 12162: The Hurt Locker
+03:28:42 [INFO] [TOKENS] 637: synopsis of length 2929
+03:28:43 [INFO] [SUCCESS] 637: Life Is Beautiful
+03:28:45 [INFO] [TOKENS] 489: synopsis of length 6757
+03:28:45 [INFO] [SUCCESS] 489: Good Will Hunting
+03:28:47 [INFO] [TOKENS] 12244: synopsis of length 19060
+03:28:48 [INFO] [SUCCESS] 12244: 9
+03:28:50 [INFO] [TOKENS] 387: synopsis of length 13061
+03:28:51 [INFO] [SUCCESS] 387: Das Boot
+03:28:53 [WARN] [TOKENS] 1574: summary of length 329
+03:28:53 [INFO] [SUCCESS] 1574: Chicago
+03:28:55 [INFO] [TOKENS] 2675: synopsis of length 8752
+03:28:55 [INFO] [SUCCESS] 2675: Signs
+03:28:58 [INFO] [TOKENS] 57158: synopsis of length 8762
+03:28:58 [INFO] [SUCCESS] 57158: The Hobbit: The Desolation of Smaug
+03:29:01 [INFO] [TOKENS] 72976: synopsis of length 7153
+03:29:01 [INFO] [SUCCESS] 72976: Lincoln
+03:29:04 [INFO] [TOKENS] 8961: synopsis of length 500
+03:29:04 [INFO] [SUCCESS] 8961: Bad Boys II
+03:29:06 [INFO] [TOKENS] 43539: synopsis of length 10371
+03:29:07 [INFO] [SUCCESS] 43539: The Next Three Days
+03:29:09 [INFO] [TOKENS] 97367: synopsis of length 4703
+03:29:10 [INFO] [SUCCESS] 97367: The Place Beyond the Pines
+03:29:12 [INFO] [TOKENS] 207703: synopsis of length 21997
+03:29:13 [INFO] [SUCCESS] 207703: Kingsman: The Secret Service
+03:29:15 [INFO] [TOKENS] 346: synopsis of length 8215
+03:29:16 [INFO] [SUCCESS] 346: Seven Samurai
+03:29:18 [INFO] [TOKENS] 164: synopsis of length 1763
+03:29:18 [INFO] [SUCCESS] 164: Breakfast at Tiffany's
+03:29:20 [INFO] [TOKENS] 5176: synopsis of length 3485
+03:29:21 [INFO] [SUCCESS] 5176: 3:10 to Yuma
+03:29:23 [INFO] [TOKENS] 20943: synopsis of length 2296
+03:29:24 [INFO] [SUCCESS] 20943: The Ugly Truth
+03:29:25 [WARN] Wrong Turn 5: Bloodlines has no Metacritic ratings
+03:29:26 [WARN] [TOKENS] 125509: summary of length 307
+03:29:26 [INFO] [SUCCESS] 125509: Wrong Turn 5: Bloodlines
+03:29:28 [INFO] [TOKENS] 75656: synopsis of length 14546
+03:29:29 [INFO] [SUCCESS] 75656: Now You See Me
+03:29:31 [INFO] [TOKENS] 33: synopsis of length 9186
+03:29:31 [INFO] [SUCCESS] 33: Unforgiven
+03:29:34 [INFO] [TOKENS] 308266: synopsis of length 5545
+03:29:34 [INFO] [SUCCESS] 308266: War Dogs
+03:29:36 [INFO] [TOKENS] 20766: synopsis of length 12053
+03:29:36 [INFO] [SUCCESS] 20766: The Road
+03:29:39 [INFO] [TOKENS] 41733: synopsis of length 5757
+03:29:39 [INFO] [SUCCESS] 41733: Due Date
+03:29:42 [INFO] [TOKENS] 2666: synopsis of length 3765
+03:29:42 [INFO] [SUCCESS] 2666: Dark City
+03:29:45 [INFO] [TOKENS] 424: synopsis of length 7550
+03:29:46 [INFO] [SUCCESS] 424: Schindler's List
+03:29:48 [INFO] [TOKENS] 81005: synopsis of length 3682
+03:29:48 [INFO] [SUCCESS] 81005: Jack the Giant Slayer
+03:29:50 [INFO] [TOKENS] 384680: synopsis of length 10073
+03:29:51 [INFO] [SUCCESS] 384680: Hostiles
+03:29:53 [INFO] [TOKENS] 1949: synopsis of length 3898
+03:29:54 [INFO] [SUCCESS] 1949: Zodiac
+03:29:56 [INFO] [TOKENS] 8467: synopsis of length 5413
+03:29:56 [INFO] [SUCCESS] 8467: Dumb and Dumber
+03:29:58 [INFO] [TOKENS] 134374: synopsis of length 5981
+03:29:59 [INFO] [SUCCESS] 134374: Pain & Gain
+03:30:01 [INFO] [TOKENS] 68727: synopsis of length 4708
+03:30:01 [INFO] [SUCCESS] 68727: Trance
+03:30:04 [INFO] [TOKENS] 9543: synopsis of length 8692
+03:30:04 [INFO] [SUCCESS] 9543: Prince of Persia: The Sands of Time
+03:30:06 [INFO] [TOKENS] 9802: synopsis of length 12478
+03:30:07 [INFO] [SUCCESS] 9802: The Rock
+03:30:09 [INFO] [TOKENS] 48138: synopsis of length 4602
+03:30:10 [INFO] [SUCCESS] 48138: Unknown
+03:30:12 [INFO] [TOKENS] 942: synopsis of length 32648
+03:30:13 [INFO] [SUCCESS] 942: Lethal Weapon 2
+03:30:16 [INFO] [TOKENS] 1995: synopsis of length 5270
+03:30:16 [INFO] [SUCCESS] 1995: Lara Croft: Tomb Raider
+03:30:19 [INFO] [TOKENS] 4347: synopsis of length 14835
+03:30:19 [INFO] [SUCCESS] 4347: Atonement
+03:30:22 [INFO] [TOKENS] 6637: synopsis of length 6423
+03:30:22 [INFO] [SUCCESS] 6637: National Treasure: Book of Secrets
+03:30:25 [INFO] [TOKENS] 1878: synopsis of length 33717
+03:30:26 [INFO] [SUCCESS] 1878: Fear and Loathing in Las Vegas
+03:30:28 [INFO] [TOKENS] 76726: synopsis of length 12119
+03:30:29 [INFO] [SUCCESS] 76726: Chronicle
+03:30:31 [INFO] [TOKENS] 44896: synopsis of length 6605
+03:30:31 [INFO] [SUCCESS] 44896: Rango
+03:30:33 [WARN] The Sound of Music has no Metacritic ratings
+03:30:34 [INFO] [TOKENS] 15121: synopsis of length 2419
+03:30:34 [INFO] [SUCCESS] 15121: The Sound of Music
+03:30:36 [INFO] [TOKENS] 8699: synopsis of length 5736
+03:30:37 [INFO] [SUCCESS] 8699: Anchorman: The Legend of Ron Burgundy
+03:30:39 [INFO] [TOKENS] 2253: synopsis of length 9898
+03:30:40 [INFO] [SUCCESS] 2253: Valkyrie
+03:30:42 [INFO] [TOKENS] 57158: synopsis of length 8762
+03:30:43 [INFO] [SUCCESS] 57158: The Hobbit: The Desolation of Smaug
+03:30:45 [INFO] [TOKENS] 947: synopsis of length 5223
+03:30:46 [INFO] [SUCCESS] 947: Lawrence of Arabia
+03:30:48 [INFO] [TOKENS] 72976: synopsis of length 7153
+03:30:48 [INFO] [SUCCESS] 72976: Lincoln
+03:30:51 [INFO] [TOKENS] 470: synopsis of length 1519
+03:30:51 [INFO] [SUCCESS] 470: 21 Grams
+03:30:53 [WARN] Aladdin has no Metacritic ratings
+03:30:53 [INFO] [TOKENS] 812: synopsis of length 10177
+03:30:54 [INFO] [SUCCESS] 812: Aladdin
+03:30:56 [INFO] [TOKENS] 43539: synopsis of length 10371
+03:30:56 [INFO] [SUCCESS] 43539: The Next Three Days
+03:30:58 [INFO] [TOKENS] 33: synopsis of length 9186
+03:30:59 [INFO] [SUCCESS] 33: Unforgiven
+03:31:02 [INFO] [TOKENS] 1164: synopsis of length 11442
+03:31:02 [INFO] [SUCCESS] 1164: Babel
+03:31:05 [INFO] [TOKENS] 97367: synopsis of length 4703
+03:31:05 [INFO] [SUCCESS] 97367: The Place Beyond the Pines
+03:31:07 [INFO] [TOKENS] 869: synopsis of length 3741
+03:31:08 [INFO] [SUCCESS] 869: Planet of the Apes
+03:31:10 [INFO] [TOKENS] 207703: synopsis of length 21997
+03:31:11 [INFO] [SUCCESS] 207703: Kingsman: The Secret Service
+03:31:13 [WARN] [TOKENS] 320: summary of length 668
+03:31:13 [INFO] [SUCCESS] 320: Insomnia
+03:31:15 [INFO] [TOKENS] 11282: synopsis of length 11269
+03:31:15 [INFO] [SUCCESS] 11282: Harold & Kumar Go to White Castle
+03:31:18 [INFO] [TOKENS] 9798: synopsis of length 7827
+03:31:19 [INFO] [SUCCESS] 9798: Enemy of the State
+03:31:21 [INFO] [TOKENS] 9762: synopsis of length 1725
+03:31:21 [INFO] [SUCCESS] 9762: Step Up
+03:31:23 [INFO] [TOKENS] 20943: synopsis of length 2296
+03:31:24 [INFO] [SUCCESS] 20943: The Ugly Truth
+03:31:26 [WARN] Wrong Turn 5: Bloodlines has no Metacritic ratings
+03:31:27 [WARN] [TOKENS] 125509: summary of length 307
+03:31:27 [INFO] [SUCCESS] 125509: Wrong Turn 5: Bloodlines
+03:31:30 [INFO] [TOKENS] 75656: synopsis of length 14546
+03:31:31 [INFO] [SUCCESS] 75656: Now You See Me
+03:31:34 [INFO] [TOKENS] 345: synopsis of length 15501
+03:31:34 [INFO] [SUCCESS] 345: Eyes Wide Shut
+03:31:36 [INFO] [TOKENS] 308266: synopsis of length 5545
+03:31:37 [INFO] [SUCCESS] 308266: War Dogs
+03:31:39 [INFO] [TOKENS] 9798: synopsis of length 7827
+03:31:39 [INFO] [SUCCESS] 9798: Enemy of the State
+03:31:42 [INFO] [TOKENS] 15092: synopsis of length 8598
+03:31:42 [INFO] [SUCCESS] 15092: Crank: High Voltage
+03:31:44 [INFO] [TOKENS] 9762: synopsis of length 1725
+03:31:44 [INFO] [SUCCESS] 9762: Step Up
+03:31:46 [WARN] Wrong Turn 5: Bloodlines has no Metacritic ratings
+03:31:47 [WARN] [TOKENS] 125509: summary of length 307
+03:31:47 [INFO] [SUCCESS] 125509: Wrong Turn 5: Bloodlines
+03:31:49 [INFO] [TOKENS] 75656: synopsis of length 14546
+03:31:50 [INFO] [SUCCESS] 75656: Now You See Me
+03:31:52 [INFO] [TOKENS] 345: synopsis of length 15501
+03:31:52 [INFO] [SUCCESS] 345: Eyes Wide Shut
+03:31:55 [INFO] [TOKENS] 308266: synopsis of length 5545
+03:31:55 [INFO] [SUCCESS] 308266: War Dogs
+03:31:57 [INFO] [TOKENS] 6957: synopsis of length 45
+03:31:58 [INFO] [SUCCESS] 6957: The 40 Year Old Virgin
+03:32:00 [INFO] [TOKENS] 616: synopsis of length 10170
+03:32:00 [INFO] [SUCCESS] 616: The Last Samurai
+03:32:03 [INFO] [TOKENS] 553: synopsis of length 7860
+03:32:03 [INFO] [SUCCESS] 553: Dogville
+03:32:05 [INFO] [TOKENS] 23827: synopsis of length 4887
+03:32:06 [INFO] [SUCCESS] 23827: Paranormal Activity
+03:32:08 [INFO] [TOKENS] 2666: synopsis of length 3765
+03:32:08 [INFO] [SUCCESS] 2666: Dark City
+03:32:10 [INFO] [TOKENS] 81005: synopsis of length 3682
+03:32:11 [INFO] [SUCCESS] 81005: Jack the Giant Slayer
+03:32:13 [INFO] [TOKENS] 2062: synopsis of length 11767
+03:32:14 [INFO] [SUCCESS] 2062: Ratatouille
+03:32:16 [INFO] [TOKENS] 384680: synopsis of length 10073
+03:32:16 [INFO] [SUCCESS] 384680: Hostiles
+03:32:19 [INFO] [TOKENS] 1924: synopsis of length 19258
+03:32:19 [INFO] [SUCCESS] 1924: Superman
+03:32:22 [INFO] [TOKENS] 17578: synopsis of length 10978
+03:32:22 [INFO] [SUCCESS] 17578: The Adventures of Tintin
+03:32:25 [INFO] [TOKENS] 754: synopsis of length 54565
+03:32:25 [INFO] [SUCCESS] 754: Face/Off
+03:32:27 [INFO] [TOKENS] 9479: synopsis of length 3460
+03:32:28 [INFO] [SUCCESS] 9479: The Nightmare Before Christmas
+03:32:30 [INFO] [TOKENS] 747: synopsis of length 17788
+03:32:31 [INFO] [SUCCESS] 747: Shaun of the Dead
+03:32:33 [INFO] [TOKENS] 241: synopsis of length 9560
+03:32:34 [INFO] [SUCCESS] 241: Natural Born Killers
+03:32:36 [INFO] [TOKENS] 4951: synopsis of length 5159
+03:32:37 [INFO] [SUCCESS] 4951: 10 Things I Hate About You
+03:32:39 [INFO] [TOKENS] 4348: synopsis of length 21566
+03:32:40 [INFO] [SUCCESS] 4348: Pride & Prejudice
+03:32:41 [INFO] [TOKENS] 8467: synopsis of length 5413
+03:32:42 [INFO] [SUCCESS] 8467: Dumb and Dumber
+03:32:44 [INFO] [TOKENS] 646: synopsis of length 6009
+03:32:45 [INFO] [SUCCESS] 646: Dr. No
+03:32:47 [INFO] [TOKENS] 9476: synopsis of length 15573
+03:32:48 [INFO] [SUCCESS] 9476: A Knight's Tale
+03:32:50 [INFO] [TOKENS] 37735: synopsis of length 5077
+03:32:50 [INFO] [SUCCESS] 37735: Easy A
+03:32:53 [INFO] [TOKENS] 109421: synopsis of length 13120
+03:32:53 [INFO] [SUCCESS] 109421: Side Effects
+03:32:55 [INFO] [TOKENS] 37135: synopsis of length 13469
+03:32:56 [INFO] [SUCCESS] 37135: Tarzan
+03:32:58 [INFO] [TOKENS] 767: synopsis of length 6889
+03:32:59 [INFO] [SUCCESS] 767: Harry Potter and the Half-Blood Prince
+03:33:01 [INFO] [TOKENS] 335: synopsis of length 17619
+03:33:02 [INFO] [SUCCESS] 335: Once Upon a Time in the West
+03:33:04 [INFO] [TOKENS] 2493: synopsis of length 14150
+03:33:04 [INFO] [SUCCESS] 2493: The Princess Bride
+03:33:06 [INFO] [TOKENS] 8321: synopsis of length 23510
+03:33:07 [INFO] [SUCCESS] 8321: In Bruges
+03:33:09 [INFO] [TOKENS] 59436: synopsis of length 5240
+03:33:10 [INFO] [SUCCESS] 59436: Midnight in Paris
+03:33:12 [INFO] [TOKENS] 7443: synopsis of length 6137
+03:33:12 [INFO] [SUCCESS] 7443: Chicken Run
+03:33:15 [INFO] [TOKENS] 64688: synopsis of length 4886
+03:33:15 [INFO] [SUCCESS] 64688: 21 Jump Street
+03:33:18 [INFO] [TOKENS] 1701: synopsis of length 10183
+03:33:19 [INFO] [SUCCESS] 1701: Con Air
+03:33:21 [INFO] [TOKENS] 68: synopsis of length 8744
+03:33:21 [INFO] [SUCCESS] 68: Brazil
+03:33:24 [INFO] [TOKENS] 402: synopsis of length 5522
+03:33:24 [INFO] [SUCCESS] 402: Basic Instinct
+03:33:27 [INFO] [TOKENS] 193756: synopsis of length 4109
+03:33:27 [INFO] [SUCCESS] 193756: Lone Survivor
+03:33:30 [INFO] [TOKENS] 9472: synopsis of length 11677
+03:33:30 [INFO] [SUCCESS] 9472: DodgeBall: A True Underdog Story
+03:33:32 [INFO] [TOKENS] 10555: synopsis of length 1317
+03:33:33 [INFO] [SUCCESS] 10555: Shark Tale
+03:33:34 [WARN] Orbiter 9 has no MPAA rating
+03:33:34 [WARN] Orbiter 9 has no Metacritic ratings
+03:33:35 [WARN] [TOKENS] 437311: summary of length 503
+03:33:35 [INFO] [SUCCESS] 437311: Orbiter 9
+03:33:37 [WARN] Krystal has no Metacritic ratings
+03:33:37 [WARN] [TOKENS] 10148: summary of length 356
+03:33:38 [INFO] [SUCCESS] 10148: Krystal
+03:33:40 [INFO] [TOKENS] 9552: synopsis of length 11434
+03:33:40 [INFO] [SUCCESS] 9552: The Exorcist
+03:33:42 [INFO] [TOKENS] 879: synopsis of length 8147
+03:33:43 [INFO] [SUCCESS] 879: Hook
+03:33:45 [INFO] [TOKENS] 1624: synopsis of length 6107
+03:33:45 [INFO] [SUCCESS] 1624: Liar Liar
+03:33:47 [INFO] [TOKENS] 693: synopsis of length 686
+03:33:48 [INFO] [SUCCESS] 693: Meet the Fockers
+03:33:50 [INFO] [TOKENS] 38365: synopsis of length 6577
+03:33:51 [INFO] [SUCCESS] 38365: Grown Ups
+03:33:53 [INFO] [TOKENS] 395990: synopsis of length 7626
+03:33:53 [INFO] [SUCCESS] 395990: Death Wish
+03:33:55 [WARN] [TOKENS] 437557: summary of length 72
+03:33:55 [INFO] [SUCCESS] 437557: Blockers
+03:33:58 [INFO] [TOKENS] 9506: synopsis of length 5767
+03:33:58 [INFO] [SUCCESS] 9506: Anger Management
+03:34:00 [INFO] [TOKENS] 391: synopsis of length 3745
+03:34:01 [INFO] [SUCCESS] 391: A Fistful of Dollars
+03:34:03 [INFO] [TOKENS] 492: synopsis of length 4857
+03:34:03 [INFO] [SUCCESS] 492: Being John Malkovich
+03:34:06 [INFO] [TOKENS] 109421: synopsis of length 13120
+03:34:06 [INFO] [SUCCESS] 109421: Side Effects
+03:34:08 [WARN] Olaf's Frozen Adventure has no Metacritic ratings
+03:34:08 [WARN] [TOKENS] 460793: summary of length 511
+03:34:09 [INFO] [SUCCESS] 460793: Olaf's Frozen Adventure
+03:34:10 [WARN] Perfect Strangers has no MPAA rating
+03:34:10 [WARN] Perfect Strangers has no Metacritic ratings
+03:34:11 [WARN] [TOKENS] 435126: summary of length 1003
+03:34:12 [INFO] [SUCCESS] 435126: Perfect Strangers
+03:34:15 [INFO] [TOKENS] 9277: synopsis of length 6159
+03:34:15 [INFO] [SUCCESS] 9277: The Sting
+03:34:18 [INFO] [TOKENS] 22881: synopsis of length 5198
+03:34:19 [INFO] [SUCCESS] 22881: The Blind Side
+03:34:21 [INFO] [TOKENS] 70160: synopsis of length 4076
+03:34:21 [INFO] [SUCCESS] 70160: The Hunger Games
+03:34:24 [INFO] [TOKENS] 70160: synopsis of length 4076
+03:34:25 [INFO] [SUCCESS] 70160: The Hunger Games
+03:34:27 [INFO] [TOKENS] 394117: synopsis of length 6864
+03:34:27 [INFO] [SUCCESS] 394117: The Florida Project
+03:34:29 [INFO] [TOKENS] 1374: synopsis of length 4775
+03:34:30 [INFO] [SUCCESS] 1374: Rocky IV
+03:34:32 [INFO] [TOKENS] 1018: synopsis of length 20338
+03:34:33 [INFO] [SUCCESS] 1018: Mulholland Drive
+03:34:35 [INFO] [TOKENS] 47971: synopsis of length 8101
+03:34:35 [INFO] [SUCCESS] 47971: xXx: Return of Xander Cage
+03:34:37 [INFO] [TOKENS] 7446: synopsis of length 10057
+03:34:38 [INFO] [SUCCESS] 7446: Tropic Thunder
+03:34:40 [INFO] [TOKENS] 68727: synopsis of length 4708
+03:34:41 [INFO] [SUCCESS] 68727: Trance
+03:34:43 [INFO] [TOKENS] 305470: synopsis of length 16990
+03:34:43 [INFO] [SUCCESS] 305470: Power Rangers
+03:34:45 [INFO] [TOKENS] 281957: synopsis of length 9758
+03:34:46 [INFO] [SUCCESS] 281957: The Revenant
+03:34:48 [INFO] [TOKENS] 52449: synopsis of length 3607
+03:34:48 [INFO] [SUCCESS] 52449: Bad Teacher
+03:34:51 [INFO] [TOKENS] 44896: synopsis of length 6605
+03:34:51 [INFO] [SUCCESS] 44896: Rango
+03:34:53 [INFO] [TOKENS] 1900: synopsis of length 5809
+03:34:54 [INFO] [SUCCESS] 1900: Traffic
+03:34:56 [WARN] [TOKENS] 509: summary of length 665
+03:34:56 [INFO] [SUCCESS] 509: Notting Hill
+03:34:58 [WARN] Wrong Turn 5: Bloodlines has no Metacritic ratings
+03:34:59 [WARN] [TOKENS] 125509: summary of length 307
+03:34:59 [INFO] [SUCCESS] 125509: Wrong Turn 5: Bloodlines
+03:35:01 [INFO] [TOKENS] 9737: synopsis of length 559
+03:35:02 [INFO] [SUCCESS] 9737: Bad Boys
+03:35:04 [INFO] [TOKENS] 598: synopsis of length 4933
+03:35:04 [INFO] [SUCCESS] 598: City of God
+03:35:07 [INFO] [TOKENS] 235: synopsis of length 8943
+03:35:07 [INFO] [SUCCESS] 235: Stand by Me
+03:35:10 [INFO] [TOKENS] 1690: synopsis of length 6383
+03:35:11 [INFO] [SUCCESS] 1690: Hostel
+03:35:13 [INFO] [TOKENS] 153: synopsis of length 2338
+03:35:14 [INFO] [SUCCESS] 153: Lost in Translation
+03:35:16 [INFO] [TOKENS] 59440: synopsis of length 14595
+03:35:16 [INFO] [SUCCESS] 59440: Warrior
+03:35:19 [INFO] [TOKENS] 59440: synopsis of length 14595
+03:35:19 [INFO] [SUCCESS] 59440: Warrior
+03:35:21 [INFO] [TOKENS] 26388: synopsis of length 4036
+03:35:22 [INFO] [SUCCESS] 26388: Buried
+03:35:24 [INFO] [TOKENS] 6977: synopsis of length 16011
+03:35:24 [INFO] [SUCCESS] 6977: No Country for Old Men
+03:35:26 [INFO] [TOKENS] 670: synopsis of length 16811
+03:35:27 [INFO] [SUCCESS] 670: Oldboy
+03:35:29 [INFO] [TOKENS] 462: synopsis of length 2012
+03:35:32 [INFO] [SUCCESS] 462: Erin Brockovich
+03:35:32 [ERROR] 454619: invalid type: null, expected i32 at line 1 column 836
+03:35:34 [INFO] [TOKENS] 2756: synopsis of length 11665
+03:35:34 [INFO] [SUCCESS] 2756: The Abyss
+03:35:36 [INFO] [TOKENS] 9473: synopsis of length 2605
+03:35:37 [INFO] [SUCCESS] 9473: South Park: Bigger, Longer & Uncut
+03:35:39 [INFO] [TOKENS] 508: synopsis of length 8990
+03:35:39 [INFO] [SUCCESS] 508: Love Actually
+03:35:41 [INFO] [TOKENS] 7326: synopsis of length 7919
+03:35:42 [INFO] [SUCCESS] 7326: Juno
+03:35:44 [INFO] [TOKENS] 51828: synopsis of length 15674
+03:35:44 [INFO] [SUCCESS] 51828: One Day
+03:35:47 [INFO] [TOKENS] 935: synopsis of length 8036
+03:35:48 [INFO] [SUCCESS] 935: Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+03:35:50 [WARN] Taxi has no Metacritic ratings
+03:35:50 [WARN] [TOKENS] 2330: summary of length 330
+03:35:51 [INFO] [SUCCESS] 2330: Taxi
+03:35:53 [INFO] [TOKENS] 9477: synopsis of length 9194
+03:35:53 [INFO] [SUCCESS] 9477: King Arthur
+03:35:55 [INFO] [TOKENS] 613: synopsis of length 14837
+03:35:56 [INFO] [SUCCESS] 613: Downfall
+03:35:58 [INFO] [TOKENS] 544: synopsis of length 2169
+03:35:58 [INFO] [SUCCESS] 544: There's Something About Mary
+03:36:01 [INFO] [TOKENS] 4547: synopsis of length 12213
+03:36:01 [INFO] [SUCCESS] 4547: Panic Room
+03:36:03 [INFO] [TOKENS] 76493: synopsis of length 10746
+03:36:04 [INFO] [SUCCESS] 76493: The Dictator
+03:36:06 [INFO] [TOKENS] 205584: synopsis of length 7823
+03:36:07 [INFO] [SUCCESS] 205584: Gods of Egypt
+03:36:09 [INFO] [TOKENS] 11322: synopsis of length 12979
+03:36:09 [INFO] [SUCCESS] 11322: Public Enemies
+03:36:12 [INFO] [TOKENS] 11322: synopsis of length 12979
+03:36:13 [INFO] [SUCCESS] 11322: Public Enemies
+03:36:15 [INFO] [TOKENS] 97367: synopsis of length 4703
+03:36:16 [INFO] [SUCCESS] 97367: The Place Beyond the Pines
+03:36:18 [INFO] [TOKENS] 5236: synopsis of length 21856
+03:36:18 [INFO] [SUCCESS] 5236: Kiss Kiss Bang Bang
+03:36:21 [INFO] [TOKENS] 810: synopsis of length 6642
+03:36:21 [INFO] [SUCCESS] 810: Shrek the Third
+03:36:24 [INFO] [TOKENS] 26389: synopsis of length 33561
+03:36:24 [INFO] [SUCCESS] 26389: From Paris with Love
+03:36:26 [INFO] [TOKENS] 7555: synopsis of length 17486
+03:36:26 [INFO] [SUCCESS] 7555: Rambo
+03:36:29 [INFO] [TOKENS] 782: synopsis of length 6421
+03:36:29 [INFO] [SUCCESS] 782: Gattaca
+03:36:31 [INFO] [TOKENS] 45317: synopsis of length 9640
+03:36:32 [INFO] [SUCCESS] 45317: The Fighter
+03:36:35 [INFO] [TOKENS] 43539: synopsis of length 10371
+03:36:36 [INFO] [SUCCESS] 43539: The Next Three Days
+03:36:38 [INFO] [TOKENS] 85350: synopsis of length 15243
+03:36:38 [INFO] [SUCCESS] 85350: Boyhood
+03:36:40 [INFO] [TOKENS] 134: synopsis of length 6832
+03:36:41 [INFO] [SUCCESS] 134: O Brother, Where Art Thou?
+03:36:43 [INFO] [TOKENS] 55: synopsis of length 12741
+03:36:44 [INFO] [SUCCESS] 55: Amores perros
+03:36:46 [INFO] [TOKENS] 22947: synopsis of length 26631
+03:36:46 [INFO] [SUCCESS] 22947: Up in the Air
+03:36:49 [INFO] [TOKENS] 19959: synopsis of length 6262
+03:36:50 [INFO] [SUCCESS] 19959: Surrogates
+03:36:51 [INFO] [TOKENS] 8810: synopsis of length 12703
+03:36:52 [INFO] [SUCCESS] 8810: Mad Max 2: The Road Warrior
+03:36:54 [INFO] [TOKENS] 9522: synopsis of length 1418
+03:36:54 [INFO] [SUCCESS] 9522: Wedding Crashers
+03:36:57 [INFO] [TOKENS] 11778: synopsis of length 8273
+03:36:57 [INFO] [SUCCESS] 11778: The Deer Hunter
+03:36:59 [INFO] [TOKENS] 5548: synopsis of length 23475
+03:37:00 [INFO] [SUCCESS] 5548: RoboCop
+03:37:02 [INFO] [TOKENS] 142: synopsis of length 4784
+03:37:03 [INFO] [SUCCESS] 142: Brokeback Mountain
+03:37:05 [INFO] [TOKENS] 8055: synopsis of length 7377
+03:37:05 [INFO] [SUCCESS] 8055: The Reader
+03:37:07 [INFO] [TOKENS] 37834: synopsis of length 7615
+03:37:08 [INFO] [SUCCESS] 37834: Knight and Day
+03:37:10 [INFO] [TOKENS] 881: synopsis of length 16615
+03:37:11 [INFO] [SUCCESS] 881: A Few Good Men
+03:37:13 [INFO] [TOKENS] 10189: synopsis of length 11852
+03:37:14 [INFO] [SUCCESS] 10189: Pineapple Express
+03:37:16 [INFO] [TOKENS] 270946: synopsis of length 392
+03:37:16 [INFO] [SUCCESS] 270946: Penguins of Madagascar
+03:37:19 [INFO] [TOKENS] 968: synopsis of length 4863
+03:37:19 [INFO] [SUCCESS] 968: Dog Day Afternoon
+03:37:21 [INFO] [TOKENS] 4771: synopsis of length 3476
+03:37:22 [INFO] [SUCCESS] 4771: Gone Baby Gone
+03:37:24 [INFO] [TOKENS] 8619: synopsis of length 5121
+03:37:24 [INFO] [SUCCESS] 8619: Master and Commander: The Far Side of the World
+03:37:26 [INFO] [TOKENS] 50348: synopsis of length 3456
+03:37:27 [INFO] [SUCCESS] 50348: The Lincoln Lawyer
+03:37:30 [INFO] [TOKENS] 604: synopsis of length 31866
+03:37:30 [INFO] [SUCCESS] 604: The Matrix Reloaded
+03:37:32 [INFO] [TOKENS] 196867: synopsis of length 7770
+03:37:33 [INFO] [SUCCESS] 196867: Annie
+03:37:35 [INFO] [TOKENS] 8363: synopsis of length 7649
+03:37:35 [INFO] [SUCCESS] 8363: Superbad
+03:37:38 [INFO] [TOKENS] 440021: synopsis of length 10119
+03:37:38 [INFO] [SUCCESS] 440021: Happy Death Day
+03:37:40 [INFO] [TOKENS] 19898: synopsis of length 23787
+03:37:41 [INFO] [SUCCESS] 19898: Pandorum
+03:37:43 [INFO] [TOKENS] 297: synopsis of length 5728
+03:37:43 [INFO] [SUCCESS] 297: Meet Joe Black
+03:37:46 [INFO] [TOKENS] 2652: synopsis of length 8797
+03:37:46 [INFO] [SUCCESS] 2652: Hard Candy
+03:37:49 [INFO] [TOKENS] 11688: synopsis of length 2147
+03:37:50 [INFO] [SUCCESS] 11688: The Emperor's New Groove
+03:37:52 [INFO] [TOKENS] 5503: synopsis of length 24296
+03:37:52 [INFO] [SUCCESS] 5503: The Fugitive
+03:37:54 [INFO] [TOKENS] 2310: synopsis of length 17670
+03:37:55 [INFO] [SUCCESS] 2310: Beowulf
+03:37:58 [INFO] [TOKENS] 1523: synopsis of length 25312
+03:37:58 [INFO] [SUCCESS] 1523: The Last King of Scotland
+03:38:01 [INFO] [TOKENS] 10096: synopsis of length 4499
+03:38:01 [INFO] [SUCCESS] 10096: 13 Going on 30
+03:38:03 [WARN] The Man with the Iron Heart has no Metacritic ratings
+03:38:04 [WARN] [TOKENS] 339259: summary of length 387
+03:38:04 [INFO] [SUCCESS] 339259: The Man with the Iron Heart
+03:38:07 [INFO] [TOKENS] 672: synopsis of length 6823
+03:38:07 [INFO] [SUCCESS] 672: Harry Potter and the Chamber of Secrets
+03:38:10 [INFO] [TOKENS] 76025: synopsis of length 5703
+03:38:10 [INFO] [SUCCESS] 76025: Shame
+03:38:13 [INFO] [TOKENS] 55721: synopsis of length 5470
+03:38:14 [INFO] [SUCCESS] 55721: Bridesmaids
+03:38:16 [INFO] [TOKENS] 419680: synopsis of length 9311
+03:38:16 [INFO] [SUCCESS] 419680: Daddy's Home 2
+03:38:18 [INFO] [TOKENS] 942: synopsis of length 32648
+03:38:19 [INFO] [SUCCESS] 942: Lethal Weapon 2
+03:38:21 [INFO] [TOKENS] 522: synopsis of length 22994
+03:38:22 [INFO] [SUCCESS] 522: Ed Wood
+03:38:24 [INFO] [TOKENS] 3981: synopsis of length 5471
+03:38:25 [INFO] [SUCCESS] 3981: What Women Want
+03:38:27 [INFO] [TOKENS] 9679: synopsis of length 1106
+03:38:27 [INFO] [SUCCESS] 9679: Gone in Sixty Seconds
+03:38:30 [INFO] [TOKENS] 9273: synopsis of length 3641
+03:38:30 [INFO] [SUCCESS] 9273: Ace Ventura: When Nature Calls
+03:39:39 [ERROR] 1992: timed out
+03:39:42 [INFO] [TOKENS] 7299: synopsis of length 7099
+03:39:42 [INFO] [SUCCESS] 7299: Equilibrium
+03:39:45 [INFO] [TOKENS] 454: synopsis of length 2519
+03:39:45 [INFO] [SUCCESS] 454: Romeo + Juliet
+03:39:47 [INFO] [TOKENS] 50546: synopsis of length 4155
+03:39:48 [INFO] [SUCCESS] 50546: Just Go with It
+03:39:50 [INFO] [TOKENS] 83666: synopsis of length 9295
+03:39:51 [INFO] [SUCCESS] 83666: Moonrise Kingdom
+03:39:53 [INFO] [TOKENS] 2252: synopsis of length 19182
+03:39:54 [INFO] [SUCCESS] 2252: Eastern Promises
+03:39:56 [WARN] [TOKENS] 1597: summary of length 507
+03:39:57 [INFO] [SUCCESS] 1597: Meet the Parents
+03:39:59 [INFO] [TOKENS] 674: synopsis of length 5507
+03:39:59 [INFO] [SUCCESS] 674: Harry Potter and the Goblet of Fire
+03:40:01 [INFO] [TOKENS] 8871: synopsis of length 3572
+03:40:02 [INFO] [SUCCESS] 8871: How the Grinch Stole Christmas
+03:40:04 [INFO] [TOKENS] 25: synopsis of length 6870
+03:40:05 [INFO] [SUCCESS] 25: Jarhead
+03:40:07 [INFO] [TOKENS] 11615: synopsis of length 8632
+03:40:08 [INFO] [SUCCESS] 11615: The Life of David Gale
+03:40:10 [INFO] [TOKENS] 5876: synopsis of length 16727
+03:40:10 [INFO] [SUCCESS] 5876: The Mist
+03:40:12 [INFO] [TOKENS] 41630: synopsis of length 10879
+03:40:14 [INFO] [SUCCESS] 41630: No Strings Attached
+03:40:16 [INFO] [TOKENS] 44826: synopsis of length 5475
+03:40:16 [INFO] [SUCCESS] 44826: Hugo
+03:40:19 [INFO] [TOKENS] 171274: synopsis of length 11598
+03:40:19 [INFO] [SUCCESS] 171274: Inherent Vice
+03:40:21 [INFO] [TOKENS] 7220: synopsis of length 13616
+03:40:22 [INFO] [SUCCESS] 7220: The Punisher
+03:40:24 [INFO] [TOKENS] 2503: synopsis of length 4766
+03:40:24 [INFO] [SUCCESS] 2503: The Bourne Ultimatum
+03:40:27 [INFO] [TOKENS] 2898: synopsis of length 12700
+03:40:27 [INFO] [SUCCESS] 2898: As Good as It Gets
+03:40:29 [WARN] [TOKENS] 816: summary of length 622
+03:40:30 [INFO] [SUCCESS] 816: Austin Powers: International Man of Mystery
+03:40:32 [INFO] [TOKENS] 4442: synopsis of length 1012
+03:40:32 [INFO] [SUCCESS] 4442: The Brothers Grimm
+03:40:35 [INFO] [TOKENS] 41439: synopsis of length 11999
+03:40:36 [INFO] [SUCCESS] 41439: Saw: The Final Chapter
+03:40:38 [INFO] [TOKENS] 9428: synopsis of length 5476
+03:40:38 [INFO] [SUCCESS] 9428: The Royal Tenenbaums
+03:40:40 [INFO] [TOKENS] 927: synopsis of length 14552
+03:40:41 [INFO] [SUCCESS] 927: Gremlins
+03:40:43 [INFO] [TOKENS] 9802: synopsis of length 12478
+03:40:43 [INFO] [SUCCESS] 9802: The Rock
+03:40:45 [INFO] [TOKENS] 94329: synopsis of length 6249
+03:40:45 [INFO] [SUCCESS] 94329: The Raid
+03:40:48 [INFO] [TOKENS] 4147: synopsis of length 4092
+03:40:48 [INFO] [SUCCESS] 4147: Road to Perdition
+03:40:50 [INFO] [TOKENS] 4964: synopsis of length 3336
+03:40:50 [INFO] [SUCCESS] 4964: Knocked Up
+03:40:52 [INFO] [TOKENS] 1578: synopsis of length 5001
+03:40:53 [INFO] [SUCCESS] 1578: Raging Bull
+03:40:55 [INFO] [TOKENS] 1429: synopsis of length 18089
+03:40:56 [INFO] [SUCCESS] 1429: 25th Hour
+03:40:58 [INFO] [TOKENS] 75: synopsis of length 5348
+03:40:58 [INFO] [SUCCESS] 75: Mars Attacks!
+03:41:00 [WARN] [TOKENS] 437375: summary of length 436
+03:41:00 [INFO] [SUCCESS] 437375: Looking Glass
+03:41:03 [INFO] [TOKENS] 184: synopsis of length 8077
+03:41:03 [INFO] [SUCCESS] 184: Jackie Brown
+03:41:06 [INFO] [TOKENS] 813: synopsis of length 1866
+03:41:06 [INFO] [SUCCESS] 813: Airplane!
+03:41:09 [INFO] [TOKENS] 401: synopsis of length 4448
+03:41:09 [INFO] [SUCCESS] 401: Garden State
+03:41:11 [INFO] [TOKENS] 50544: synopsis of length 4538
+03:41:11 [INFO] [SUCCESS] 50544: Friends with Benefits
+03:41:14 [INFO] [TOKENS] 1584: synopsis of length 870
+03:41:14 [INFO] [SUCCESS] 1584: School of Rock
+03:41:16 [INFO] [TOKENS] 1907: synopsis of length 5576
+03:41:17 [INFO] [SUCCESS] 1907: The Beach
+03:41:18 [WARN] Sunset Boulevard has no Metacritic ratings
+03:41:19 [INFO] [TOKENS] 599: synopsis of length 6196
+03:41:19 [INFO] [SUCCESS] 599: Sunset Boulevard
+03:41:22 [INFO] [TOKENS] 2288: synopsis of length 9308
+03:41:22 [INFO] [SUCCESS] 2288: Closer
+03:41:24 [INFO] [TOKENS] 588: synopsis of length 25518
+03:41:25 [INFO] [SUCCESS] 588: Silent Hill
+03:41:27 [INFO] [TOKENS] 1576: synopsis of length 15599
+03:41:27 [INFO] [SUCCESS] 1576: Resident Evil
+03:41:29 [WARN] Andre the Giant has no MPAA rating
+03:41:29 [WARN] Andre the Giant has no Metacritic ratings
+03:41:30 [WARN] [TOKENS] 446663: summary of length 127
+03:41:30 [INFO] [SUCCESS] 446663: Andre the Giant
+03:41:32 [INFO] [TOKENS] 322: synopsis of length 22743
+03:41:33 [INFO] [SUCCESS] 322: Mystic River
+03:41:35 [INFO] [TOKENS] 316727: synopsis of length 5944
+03:41:36 [INFO] [SUCCESS] 316727: The Purge: Election Year
+03:41:38 [INFO] [TOKENS] 8699: synopsis of length 5736
+03:41:38 [INFO] [SUCCESS] 8699: Anchorman: The Legend of Ron Burgundy
+03:41:41 [INFO] [TOKENS] 116149: synopsis of length 8450
+03:41:41 [INFO] [SUCCESS] 116149: Paddington
+03:41:43 [INFO] [TOKENS] 15472: synopsis of length 8652
+03:41:44 [INFO] [SUCCESS] 15472: The Girl with the Dragon Tattoo
+03:41:47 [INFO] [TOKENS] 1246: synopsis of length 9548
+03:41:47 [INFO] [SUCCESS] 1246: Rocky Balboa
+03:41:49 [INFO] [TOKENS] 8923: synopsis of length 6110
+03:41:50 [INFO] [SUCCESS] 8923: Green Street Hooligans
+03:41:52 [INFO] [TOKENS] 381719: synopsis of length 7037
+03:41:52 [INFO] [SUCCESS] 381719: Peter Rabbit
+03:41:55 [INFO] [TOKENS] 1893: synopsis of length 5324
+03:41:55 [INFO] [SUCCESS] 1893: Star Wars: Episode I - The Phantom Menace
+03:41:58 [INFO] [TOKENS] 9377: synopsis of length 4551
+03:41:58 [INFO] [SUCCESS] 9377: Ferris Bueller's Day Off
+03:42:00 [INFO] [TOKENS] 764: synopsis of length 3007
+03:42:01 [INFO] [SUCCESS] 764: The Evil Dead
+03:42:03 [WARN] [TOKENS] 430040: summary of length 122
+03:42:03 [INFO] [SUCCESS] 430040: The Hurricane Heist
+03:42:06 [INFO] [TOKENS] 612: synopsis of length 9943
+03:42:06 [INFO] [SUCCESS] 612: Munich
+03:42:08 [INFO] [TOKENS] 241554: synopsis of length 8846
+03:42:09 [INFO] [SUCCESS] 241554: Run All Night
+03:42:12 [INFO] [TOKENS] 866: synopsis of length 1571
+03:42:13 [INFO] [SUCCESS] 866: Finding Neverland
+03:42:15 [INFO] [TOKENS] 46705: synopsis of length 16749
+03:42:15 [INFO] [SUCCESS] 46705: Blue Valentine
+03:42:18 [INFO] [TOKENS] 59961: synopsis of length 4278
+03:42:18 [INFO] [SUCCESS] 59961: Safe House
+03:42:21 [INFO] [TOKENS] 23631: synopsis of length 49434
+03:42:21 [INFO] [SUCCESS] 23631: Machete
+03:42:24 [INFO] [TOKENS] 213: synopsis of length 27375
+03:42:24 [INFO] [SUCCESS] 213: North by Northwest
+03:42:26 [WARN] Four Rooms has no Metacritic ratings
+03:42:26 [INFO] [TOKENS] 5: synopsis of length 10191
+03:42:27 [INFO] [SUCCESS] 5: Four Rooms
+03:42:29 [INFO] [TOKENS] 21208: synopsis of length 28000
+03:42:30 [INFO] [SUCCESS] 21208: Orphan
+03:42:32 [INFO] [TOKENS] 7485: synopsis of length 18772
+03:42:32 [INFO] [SUCCESS] 7485: Shooter
+03:42:35 [INFO] [TOKENS] 1381: synopsis of length 5028
+03:42:35 [INFO] [SUCCESS] 1381: The Fountain
+03:42:37 [INFO] [TOKENS] 80: synopsis of length 4340
+03:42:38 [INFO] [SUCCESS] 80: Before Sunset
+03:42:40 [INFO] [TOKENS] 783: synopsis of length 7412
+03:42:41 [INFO] [SUCCESS] 783: Gandhi
+03:42:43 [WARN] [TOKENS] 8835: summary of length 863
+03:42:43 [INFO] [SUCCESS] 8835: Legally Blonde
+03:42:45 [INFO] [TOKENS] 1367: synopsis of length 7556
+03:42:46 [INFO] [SUCCESS] 1367: Rocky II
+03:42:48 [INFO] [TOKENS] 1904: synopsis of length 6533
+03:42:48 [INFO] [SUCCESS] 1904: Memoirs of a Geisha
+03:42:51 [INFO] [TOKENS] 242224: synopsis of length 2860
+03:42:51 [INFO] [SUCCESS] 242224: The Babadook
+03:42:53 [INFO] [TOKENS] 699: synopsis of length 12212
+03:42:54 [INFO] [SUCCESS] 699: For Your Eyes Only
+03:42:55 [WARN] The Number 23 has no Metacritic ratings
+03:42:56 [INFO] [TOKENS] 3594: synopsis of length 11864
+03:42:56 [INFO] [SUCCESS] 3594: The Number 23
+03:42:59 [WARN] [TOKENS] 14574: summary of length 660
+03:42:59 [INFO] [SUCCESS] 14574: The Boy in the Striped Pyjamas
+03:43:01 [WARN] The Sound of Music has no Metacritic ratings
+03:43:02 [INFO] [TOKENS] 15121: synopsis of length 2419
+03:43:02 [INFO] [SUCCESS] 15121: The Sound of Music
+03:43:04 [INFO] [TOKENS] 371638: synopsis of length 11105
+03:43:05 [INFO] [SUCCESS] 371638: The Disaster Artist
+03:43:07 [INFO] [TOKENS] 37958: synopsis of length 4770
+03:43:07 [INFO] [SUCCESS] 37958: Immortals
+03:43:09 [INFO] [TOKENS] 431: synopsis of length 7852
+03:43:10 [INFO] [SUCCESS] 431: Cube
+03:43:12 [INFO] [TOKENS] 442064: synopsis of length 5017
+03:43:12 [INFO] [SUCCESS] 442064: Proud Mary
+03:43:14 [INFO] [TOKENS] 279: synopsis of length 4905
+03:43:14 [INFO] [SUCCESS] 279: Amadeus
+03:43:17 [INFO] [TOKENS] 5174: synopsis of length 5515
+03:43:17 [INFO] [SUCCESS] 5174: Rush Hour 3
+03:43:20 [INFO] [TOKENS] 43074: synopsis of length 11401
+03:43:20 [INFO] [SUCCESS] 43074: Ghostbusters
+03:43:22 [INFO] [TOKENS] 9334: synopsis of length 5033
+03:43:23 [INFO] [SUCCESS] 9334: The Scorpion King
+03:43:25 [INFO] [TOKENS] 196: synopsis of length 25578
+03:43:26 [INFO] [SUCCESS] 196: Back to the Future Part III
+03:43:28 [INFO] [TOKENS] 204922: synopsis of length 243
+03:43:28 [INFO] [SUCCESS] 204922: Before I Go to Sleep
+03:43:31 [INFO] [TOKENS] 79: synopsis of length 14180
+03:43:31 [INFO] [SUCCESS] 79: Hero
+03:43:33 [INFO] [TOKENS] 76640: synopsis of length 4206
+03:43:34 [INFO] [SUCCESS] 76640: The Last Stand
+03:43:36 [INFO] [TOKENS] 564: synopsis of length 11529
+03:43:36 [INFO] [SUCCESS] 564: The Mummy
+03:43:38 [INFO] [TOKENS] 12437: synopsis of length 17864
+03:43:38 [INFO] [SUCCESS] 12437: Underworld: Rise of the Lycans
+03:43:41 [WARN] [TOKENS] 5175: summary of length 877
+03:43:41 [INFO] [SUCCESS] 5175: Rush Hour 2
+03:43:44 [INFO] [TOKENS] 15373: synopsis of length 5549
+03:43:45 [INFO] [SUCCESS] 15373: Role Models
+03:43:47 [INFO] [TOKENS] 620: synopsis of length 20013
+03:43:47 [INFO] [SUCCESS] 620: Ghostbusters
+03:43:51 [INFO] [TOKENS] 2667: synopsis of length 12229
+03:43:51 [INFO] [SUCCESS] 2667: The Blair Witch Project
+03:43:54 [INFO] [TOKENS] 2277: synopsis of length 5347
+03:43:54 [INFO] [SUCCESS] 2277: Bicentennial Man
+03:43:56 [INFO] [TOKENS] 59: synopsis of length 10882
+03:43:56 [INFO] [SUCCESS] 59: A History of Violence
+03:43:58 [INFO] [TOKENS] 8068: synopsis of length 9968
+03:43:59 [INFO] [SUCCESS] 8068: Desperado
+03:44:01 [WARN] [TOKENS] 406990: summary of length 780
+03:44:01 [INFO] [SUCCESS] 406990: What Happened to Monday
+03:44:03 [INFO] [TOKENS] 162: synopsis of length 4846
+03:44:04 [INFO] [SUCCESS] 162: Edward Scissorhands
+03:44:06 [INFO] [TOKENS] 594: synopsis of length 4301
+03:44:07 [INFO] [SUCCESS] 594: The Terminal
+03:44:09 [INFO] [TOKENS] 59108: synopsis of length 4063
+03:44:09 [INFO] [SUCCESS] 59108: Tower Heist
+03:44:12 [INFO] [TOKENS] 68735: synopsis of length 10104
+03:44:13 [INFO] [SUCCESS] 68735: Warcraft
+03:44:15 [INFO] [TOKENS] 273248: synopsis of length 16346
+03:44:16 [INFO] [SUCCESS] 273248: The Hateful Eight
+03:44:18 [INFO] [TOKENS] 211672: synopsis of length 2293
+03:44:18 [INFO] [SUCCESS] 211672: Minions
+03:44:21 [INFO] [TOKENS] 9392: synopsis of length 12799
+03:44:21 [INFO] [SUCCESS] 9392: The Descent
+03:44:23 [INFO] [TOKENS] 49524: synopsis of length 29475
+03:44:24 [INFO] [SUCCESS] 49524: R.I.P.D.
+03:44:26 [INFO] [TOKENS] 8488: synopsis of length 9251
+03:44:26 [INFO] [SUCCESS] 8488: Hitch
+03:44:29 [INFO] [TOKENS] 50646: synopsis of length 5608
+03:44:29 [INFO] [SUCCESS] 50646: Crazy, Stupid, Love.
+03:44:31 [INFO] [TOKENS] 8374: synopsis of length 8345
+03:44:32 [INFO] [SUCCESS] 8374: The Boondock Saints
+03:44:34 [INFO] [TOKENS] 137113: synopsis of length 12062
+03:44:34 [INFO] [SUCCESS] 137113: Edge of Tomorrow
+03:44:36 [INFO] [TOKENS] 12133: synopsis of length 3661
+03:44:37 [INFO] [SUCCESS] 12133: Step Brothers
+03:44:39 [INFO] [TOKENS] 826: synopsis of length 8679
+03:44:39 [INFO] [SUCCESS] 826: The Bridge on the River Kwai
+03:44:41 [INFO] [TOKENS] 664: synopsis of length 10014
+03:44:42 [INFO] [SUCCESS] 664: Twister
+03:44:44 [INFO] [TOKENS] 1832: synopsis of length 13920
+03:44:45 [INFO] [SUCCESS] 1832: Dogma
+03:44:47 [INFO] [TOKENS] 1948: synopsis of length 3626
+03:44:47 [INFO] [SUCCESS] 1948: Crank
+03:44:49 [INFO] [TOKENS] 282035: synopsis of length 7488
+03:44:49 [INFO] [SUCCESS] 282035: The Mummy
+03:44:50 [WARN] What Every Frenchwoman Wants has no MPAA rating
+03:44:51 [WARN] What Every Frenchwoman Wants has no Metacritic ratings
+03:44:51 [WARN] [TOKENS] 81774: summary of length 447
+03:44:52 [INFO] [SUCCESS] 81774: What Every Frenchwoman Wants
+03:44:54 [INFO] [TOKENS] 117: synopsis of length 9878
+03:44:54 [INFO] [SUCCESS] 117: The Untouchables
+03:44:56 [WARN] [TOKENS] 429417: summary of length 177
+03:44:57 [INFO] [SUCCESS] 429417: Ghost Stories
+03:44:59 [INFO] [TOKENS] 12163: synopsis of length 12913
+03:45:00 [INFO] [SUCCESS] 12163: The Wrestler
+03:45:01 [ERROR] 401478: Death Race 4: Beyond Anarchy is missing IMDB score
+03:45:04 [INFO] [TOKENS] 2294: synopsis of length 7058
+03:45:04 [INFO] [SUCCESS] 2294: Jay and Silent Bob Strike Back
+03:45:06 [INFO] [TOKENS] 18487: synopsis of length 5732
+03:45:07 [INFO] [SUCCESS] 18487: The Taking of Pelham 1 2 3
+03:45:09 [INFO] [TOKENS] 35056: synopsis of length 16721
+03:45:10 [INFO] [SUCCESS] 35056: Date Night
+03:45:12 [INFO] [TOKENS] 205: synopsis of length 2089
+03:45:12 [INFO] [SUCCESS] 205: Hotel Rwanda
+03:45:15 [WARN] [TOKENS] 290764: summary of length 283
+03:45:15 [INFO] [SUCCESS] 290764: Tracers
+03:45:17 [INFO] [TOKENS] 372058: synopsis of length 16372
+03:45:17 [INFO] [SUCCESS] 372058: Your Name.
+03:45:20 [INFO] [TOKENS] 278154: synopsis of length 7854
+03:45:20 [INFO] [SUCCESS] 278154: Ice Age: Collision Course
+03:45:22 [INFO] [TOKENS] 9741: synopsis of length 7908
+03:45:23 [INFO] [SUCCESS] 9741: Unbreakable
+03:45:24 [WARN] The Elephant Man has no Metacritic ratings
+03:45:25 [INFO] [TOKENS] 1955: synopsis of length 2692
+03:45:25 [INFO] [SUCCESS] 1955: The Elephant Man
+03:45:27 [INFO] [TOKENS] 10201: synopsis of length 16862
+03:45:28 [INFO] [SUCCESS] 10201: Yes Man
+03:45:31 [INFO] [TOKENS] 31011: synopsis of length 3186
+03:45:31 [INFO] [SUCCESS] 31011: Mr. Nobody
+03:45:33 [INFO] [TOKENS] 61012: synopsis of length 15841
+03:45:34 [INFO] [SUCCESS] 61012: Silent Hill: Revelation 3D
+03:45:36 [INFO] [TOKENS] 197: synopsis of length 10702
+03:45:36 [INFO] [SUCCESS] 197: Braveheart
+03:45:38 [INFO] [TOKENS] 11631: synopsis of length 6845
+03:45:39 [INFO] [SUCCESS] 11631: Mamma Mia!
+03:45:41 [INFO] [TOKENS] 49444: synopsis of length 3954
+03:45:41 [INFO] [SUCCESS] 49444: Kung Fu Panda 2
+03:45:44 [INFO] [TOKENS] 384521: synopsis of length 12185
+03:45:44 [INFO] [SUCCESS] 384521: The Cloverfield Paradox
+03:45:46 [INFO] [TOKENS] 1417: synopsis of length 17883
+03:45:47 [INFO] [SUCCESS] 1417: Pan's Labyrinth
+03:45:49 [INFO] [TOKENS] 9313: synopsis of length 8524
+03:45:49 [INFO] [SUCCESS] 9313: The Man in the Iron Mask
+03:45:51 [INFO] [TOKENS] 595: synopsis of length 10487
+03:45:52 [INFO] [SUCCESS] 595: To Kill a Mockingbird
+03:45:54 [INFO] [TOKENS] 605: synopsis of length 12580
+03:45:54 [INFO] [SUCCESS] 605: The Matrix Revolutions
+03:45:56 [INFO] [TOKENS] 37094: synopsis of length 4633
+03:45:57 [INFO] [SUCCESS] 37094: Falling Down
+03:45:59 [WARN] [TOKENS] 265208: summary of length 447
+03:45:59 [INFO] [SUCCESS] 265208: Wild Card
+03:46:01 [INFO] [TOKENS] 401561: synopsis of length 3944
+03:46:02 [INFO] [SUCCESS] 401561: Mom and Dad
+03:46:04 [INFO] [TOKENS] 104: synopsis of length 11358
+03:46:05 [INFO] [SUCCESS] 104: Run Lola Run
+03:46:07 [INFO] [TOKENS] 116: synopsis of length 4912
+03:46:07 [INFO] [SUCCESS] 116: Match Point
+03:46:09 [WARN] [TOKENS] 437557: summary of length 72
+03:46:10 [INFO] [SUCCESS] 437557: Blockers
+03:46:13 [INFO] [TOKENS] 27573: synopsis of length 17405
+03:46:14 [INFO] [SUCCESS] 27573: The Bounty Hunter
+03:46:15 [INFO] [TOKENS] 2832: synopsis of length 2555
+03:46:16 [INFO] [SUCCESS] 2832: Identity
+03:46:18 [INFO] [TOKENS] 786: synopsis of length 12201
+03:46:19 [INFO] [SUCCESS] 786: Almost Famous
+03:46:21 [WARN] [TOKENS] 420622: summary of length 730
+03:46:21 [INFO] [SUCCESS] 420622: Professor Marston and the Wonder Women
+03:46:24 [INFO] [TOKENS] 12155: synopsis of length 8767
+03:46:24 [INFO] [SUCCESS] 12155: Alice in Wonderland
+03:46:26 [INFO] [TOKENS] 57158: synopsis of length 8762
+03:46:27 [INFO] [SUCCESS] 57158: The Hobbit: The Desolation of Smaug
+03:46:29 [INFO] [TOKENS] 9614: synopsis of length 5211
+03:46:29 [INFO] [SUCCESS] 9614: Happy Gilmore
+03:46:32 [INFO] [TOKENS] 400710: synopsis of length 6854
+03:46:32 [INFO] [SUCCESS] 400710: Flatliners
+03:46:35 [INFO] [TOKENS] 602: synopsis of length 8449
+03:46:35 [INFO] [SUCCESS] 602: Independence Day
+03:46:37 [INFO] [TOKENS] 193893: synopsis of length 10759
+03:46:37 [INFO] [SUCCESS] 193893: Let's Be Cops
+03:46:39 [INFO] [TOKENS] 262543: synopsis of length 2505
+03:46:40 [INFO] [SUCCESS] 262543: Automata
+03:46:42 [INFO] [TOKENS] 440: synopsis of length 6422
+03:46:42 [INFO] [SUCCESS] 440: Aliens vs Predator: Requiem
+03:46:45 [INFO] [TOKENS] 223702: synopsis of length 11997
+03:46:45 [INFO] [SUCCESS] 223702: Sausage Party
+03:46:48 [INFO] [TOKENS] 334: synopsis of length 12027
+03:46:48 [INFO] [SUCCESS] 334: Magnolia
+03:46:50 [INFO] [TOKENS] 262504: synopsis of length 7075
+03:46:51 [INFO] [SUCCESS] 262504: Allegiant
+03:46:53 [INFO] [TOKENS] 4512: synopsis of length 3946
+03:46:54 [INFO] [SUCCESS] 4512: The Assassination of Jesse James by the Coward Robert Ford
+03:46:56 [INFO] [TOKENS] 13183: synopsis of length 26959
+03:46:57 [INFO] [SUCCESS] 13183: Watchmen
+03:46:59 [WARN] [TOKENS] 27: summary of length 407
+03:46:59 [INFO] [SUCCESS] 27: 9 Songs
+03:47:01 [INFO] [TOKENS] 8367: synopsis of length 3206
+03:47:02 [INFO] [SUCCESS] 8367: Robin Hood: Prince of Thieves
+03:47:04 [INFO] [TOKENS] 350: synopsis of length 5660
+03:47:05 [INFO] [SUCCESS] 350: The Devil Wears Prada
+03:47:07 [INFO] [TOKENS] 4995: synopsis of length 19876
+03:47:07 [INFO] [SUCCESS] 4995: Boogie Nights
+03:47:10 [INFO] [TOKENS] 274857: synopsis of length 8976
+03:47:10 [INFO] [SUCCESS] 274857: King Arthur: Legend of the Sword
+03:47:13 [INFO] [TOKENS] 11439: synopsis of length 4259
+03:47:13 [INFO] [SUCCESS] 11439: The Ghost Writer
+03:47:16 [INFO] [TOKENS] 11005: synopsis of length 3128
+03:47:16 [INFO] [SUCCESS] 11005: Awakenings
+03:47:19 [INFO] [TOKENS] 54138: synopsis of length 10208
+03:47:19 [INFO] [SUCCESS] 54138: Star Trek Into Darkness
+03:47:22 [WARN] [TOKENS] 201088: summary of length 521
+03:47:22 [INFO] [SUCCESS] 201088: Blackhat
+03:47:24 [INFO] [TOKENS] 1272: synopsis of length 13909
+03:47:25 [INFO] [SUCCESS] 1272: Sunshine
+03:47:27 [INFO] [TOKENS] 1089: synopsis of length 6907
+03:47:28 [INFO] [SUCCESS] 1089: Point Break
+03:47:30 [INFO] [TOKENS] 424: synopsis of length 7550
+03:47:30 [INFO] [SUCCESS] 424: Schindler's List
+03:47:33 [INFO] [TOKENS] 13475: synopsis of length 27055
+03:47:33 [INFO] [SUCCESS] 13475: Star Trek
+03:47:36 [INFO] [TOKENS] 23514: synopsis of length 3219
+03:47:36 [INFO] [SUCCESS] 23514: The Rum Diary
+03:47:38 [WARN] Wrong Turn 4: Bloody Beginnings has no Metacritic ratings
+03:47:39 [INFO] [TOKENS] 71672: synopsis of length 6112
+03:47:39 [INFO] [SUCCESS] 71672: Wrong Turn 4: Bloody Beginnings
+03:47:41 [INFO] [TOKENS] 9475: synopsis of length 5504
+03:47:42 [INFO] [SUCCESS] 9475: Scent of a Woman
+03:47:44 [WARN] [TOKENS] 9366: summary of length 730
+03:47:44 [INFO] [SUCCESS] 9366: Donnie Brasco
+03:47:46 [WARN] [TOKENS] 323368: summary of length 370
+03:47:47 [INFO] [SUCCESS] 323368: Hangman
+03:47:48 [WARN] [REC] has no Metacritic ratings
+03:47:48 [INFO] [TOKENS] 8329: synopsis of length 4263
+03:47:49 [INFO] [SUCCESS] 8329: [REC]
+03:47:51 [INFO] [TOKENS] 9342: synopsis of length 6750
+03:47:51 [INFO] [SUCCESS] 9342: The Mask of Zorro
+03:47:53 [WARN] Lady and the Tramp has no Metacritic ratings
+03:47:53 [INFO] [TOKENS] 10340: synopsis of length 5375
+03:47:54 [INFO] [SUCCESS] 10340: Lady and the Tramp
+03:47:56 [INFO] [TOKENS] 165: synopsis of length 42830
+03:47:56 [INFO] [SUCCESS] 165: Back to the Future Part II
+03:47:59 [INFO] [TOKENS] 7453: synopsis of length 20455
+03:47:59 [INFO] [SUCCESS] 7453: The Hitchhiker's Guide to the Galaxy
+03:48:01 [INFO] [TOKENS] 1271: synopsis of length 7010
+03:48:02 [INFO] [SUCCESS] 1271: 300
+03:48:04 [INFO] [TOKENS] 445571: synopsis of length 9690
+03:48:04 [INFO] [SUCCESS] 445571: Game Night
+03:48:06 [INFO] [TOKENS] 37686: synopsis of length 15227
+03:48:07 [INFO] [SUCCESS] 37686: Super 8
+03:48:07 [ERROR] 442249: invalid type: null, expected i32 at line 1 column 975
+03:48:09 [INFO] [TOKENS] 8271: synopsis of length 7678
+03:48:09 [INFO] [SUCCESS] 8271: Disturbia
+03:48:12 [INFO] [TOKENS] 214: synopsis of length 5107
+03:48:13 [INFO] [SUCCESS] 214: Saw III
+03:48:13 [ERROR] 351286: invalid type: null, expected i32 at line 1 column 1803
+03:48:15 [WARN] Descendants has no Metacritic ratings
+03:48:15 [INFO] [TOKENS] 277217: synopsis of length 3939
+03:48:15 [INFO] [SUCCESS] 277217: Descendants
+03:48:17 [WARN] The Lion King 2: Simba's Pride has no Metacritic ratings
+03:48:17 [INFO] [TOKENS] 9732: synopsis of length 5554
+03:48:18 [INFO] [SUCCESS] 9732: The Lion King 2: Simba's Pride
+03:48:20 [INFO] [TOKENS] 10229: synopsis of length 5544
+03:48:20 [INFO] [SUCCESS] 10229: A Walk to Remember
+03:48:22 [INFO] [TOKENS] 14161: synopsis of length 5092
+03:48:23 [INFO] [SUCCESS] 14161: 2012
+03:48:25 [WARN] [TOKENS] 402897: summary of length 699
+03:48:25 [INFO] [SUCCESS] 402897: The Death of Stalin
+03:48:27 [INFO] [TOKENS] 102382: synopsis of length 23519
+03:48:28 [INFO] [SUCCESS] 102382: The Amazing Spider-Man 2
+03:48:30 [INFO] [TOKENS] 241239: synopsis of length 2197
+03:48:30 [INFO] [SUCCESS] 241239: A Most Violent Year
+03:48:33 [INFO] [TOKENS] 376290: synopsis of length 24698
+03:48:34 [INFO] [SUCCESS] 376290: Miss Sloane
+03:49:57 [ERROR] 346672: timed out
+03:49:59 [INFO] [TOKENS] 9667: synopsis of length 8181
+03:49:59 [INFO] [SUCCESS] 9667: The Jacket
+03:50:01 [INFO] [TOKENS] 47933: synopsis of length 8551
+03:50:02 [INFO] [SUCCESS] 47933: Independence Day: Resurgence
+03:50:04 [INFO] [TOKENS] 8645: synopsis of length 10674
+03:50:04 [INFO] [SUCCESS] 8645: The Happening
+03:50:06 [INFO] [TOKENS] 22971: synopsis of length 3996
+03:50:07 [INFO] [SUCCESS] 22971: Dear John
+03:50:08 [WARN] Wildling has no Metacritic ratings
+03:50:08 [WARN] [TOKENS] 362826: summary of length 452
+03:50:09 [INFO] [SUCCESS] 362826: Wildling
+03:50:11 [INFO] [TOKENS] 1587: synopsis of length 5335
+03:50:12 [INFO] [SUCCESS] 1587: What's Eating Gilbert Grape
+03:50:15 [INFO] [TOKENS] 1213: synopsis of length 7649
+03:50:16 [INFO] [SUCCESS] 1213: The Talented Mr. Ripley
+03:50:18 [INFO] [TOKENS] 667: synopsis of length 11458
+03:50:18 [INFO] [SUCCESS] 667: You Only Live Twice
+03:50:21 [WARN] [TOKENS] 324852: summary of length 415
+03:50:21 [INFO] [SUCCESS] 324852: Despicable Me 3
+03:50:24 [INFO] [TOKENS] 242512: synopsis of length 5610
+03:50:24 [INFO] [SUCCESS] 242512: Ouija
+03:50:27 [INFO] [TOKENS] 657: synopsis of length 21473
+03:50:27 [INFO] [SUCCESS] 657: From Russia with Love
+03:50:30 [INFO] [TOKENS] 297761: synopsis of length 13151
+03:50:30 [INFO] [SUCCESS] 297761: Suicide Squad
+03:50:33 [INFO] [TOKENS] 872: synopsis of length 2811
+03:50:33 [INFO] [SUCCESS] 872: Singin' in the Rain
+03:50:35 [INFO] [TOKENS] 9355: synopsis of length 8542
+03:50:36 [INFO] [SUCCESS] 9355: Mad Max Beyond Thunderdome
+03:50:38 [INFO] [TOKENS] 2123: synopsis of length 4475
+03:50:38 [INFO] [SUCCESS] 2123: Me, Myself & Irene
+03:50:39 [ERROR] 383498: invalid type: null, expected i32 at line 1 column 1167
+03:50:40 [INFO] [TOKENS] 106747: synopsis of length 17286
+03:50:41 [INFO] [SUCCESS] 106747: Machete Kills
+03:50:41 [ERROR] 425373: invalid type: null, expected i32 at line 1 column 667
+03:50:43 [INFO] [TOKENS] 49527: synopsis of length 4560
+03:50:43 [INFO] [SUCCESS] 49527: Man on a Ledge
+03:50:45 [INFO] [TOKENS] 1817: synopsis of length 6165
+03:50:46 [INFO] [SUCCESS] 1817: Phone Booth
+03:50:48 [WARN] [TOKENS] 9032: summary of length 542
+03:50:49 [INFO] [SUCCESS] 9032: Big Daddy
+03:50:51 [INFO] [TOKENS] 13455: synopsis of length 24887
+03:50:51 [INFO] [SUCCESS] 13455: Push
+03:50:53 [INFO] [TOKENS] 856: synopsis of length 14373
+03:50:53 [INFO] [SUCCESS] 856: Who Framed Roger Rabbit
+03:50:56 [INFO] [TOKENS] 11216: synopsis of length 3813
+03:50:56 [INFO] [SUCCESS] 11216: Cinema Paradiso
+03:50:59 [INFO] [TOKENS] 10661: synopsis of length 3886
+03:50:59 [INFO] [SUCCESS] 10661: You Don't Mess with the Zohan
+03:51:02 [INFO] [TOKENS] 333371: synopsis of length 8579
+03:51:02 [INFO] [SUCCESS] 333371: 10 Cloverfield Lane
+03:51:04 [INFO] [TOKENS] 262841: synopsis of length 6168
+03:51:05 [INFO] [SUCCESS] 262841: Monster Trucks
+03:51:07 [WARN] Suicide Squad: Hell to Pay has no Metacritic ratings
+03:51:07 [WARN] [TOKENS] 487242: summary of length 89
+03:51:08 [INFO] [SUCCESS] 487242: Suicide Squad: Hell to Pay
+03:51:10 [INFO] [TOKENS] 9870: synopsis of length 17828
+03:51:11 [INFO] [SUCCESS] 9870: Forgetting Sarah Marshall
+03:51:12 [WARN] Bar Boys has no MPAA rating
+03:51:12 [WARN] Bar Boys has no Metacritic ratings
+03:51:13 [WARN] [TOKENS] 469691: summary of length 235
+03:51:13 [INFO] [SUCCESS] 469691: Bar Boys
+03:51:15 [WARN] [TOKENS] 415842: summary of length 613
+03:51:16 [INFO] [SUCCESS] 415842: American Assassin
+03:51:18 [INFO] [TOKENS] 4553: synopsis of length 9725
+03:51:18 [INFO] [SUCCESS] 4553: The Machinist
+03:51:21 [INFO] [TOKENS] 829: synopsis of length 10848
+03:51:21 [INFO] [SUCCESS] 829: Chinatown
+03:51:24 [INFO] [TOKENS] 3600: synopsis of length 2374
+03:51:24 [INFO] [SUCCESS] 3600: I Still Know What You Did Last Summer
+03:51:28 [WARN] Trainwreck has no Metacritic ratings
+03:51:29 [INFO] [TOKENS] 271718: synopsis of length 8727
+03:51:29 [INFO] [SUCCESS] 271718: Trainwreck
+03:51:31 [INFO] [TOKENS] 399170: synopsis of length 6758
+03:51:32 [INFO] [SUCCESS] 399170: Logan Lucky
+03:51:34 [WARN] Wrong Turn 6: Last Resort has no Metacritic ratings
+03:51:34 [WARN] [TOKENS] 259072: summary of length 213
+03:51:34 [INFO] [SUCCESS] 259072: Wrong Turn 6: Last Resort
+03:51:36 [WARN] Vico C: The Life Of A Philosopher has no MPAA rating
+03:51:37 [WARN] Vico C: The Life Of A Philosopher has no Metacritic ratings
+03:51:37 [WARN] [TOKENS] 407650: summary of length 717
+03:51:37 [INFO] [SUCCESS] 407650: Vico C: The Life Of A Philosopher
+03:51:39 [WARN] [TOKENS] 396422: summary of length 570
+03:51:40 [INFO] [SUCCESS] 396422: Annabelle: Creation
+03:51:42 [INFO] [TOKENS] 137094: synopsis of length 4092
+03:51:42 [INFO] [SUCCESS] 137094: Jack Ryan: Shadow Recruit
+03:51:45 [INFO] [TOKENS] 2034: synopsis of length 6691
+03:51:45 [INFO] [SUCCESS] 2034: Training Day
+03:51:47 [INFO] [TOKENS] 49040: synopsis of length 8749
+03:51:47 [INFO] [SUCCESS] 49040: The Bourne Legacy
+03:51:50 [INFO] [TOKENS] 805: synopsis of length 9685
+03:51:50 [INFO] [SUCCESS] 805: Rosemary's Baby
+03:51:53 [INFO] [TOKENS] 4476: synopsis of length 6275
+03:51:53 [INFO] [SUCCESS] 4476: Legends of the Fall
+03:51:57 [INFO] [TOKENS] 22804: synopsis of length 20757
+03:51:57 [INFO] [SUCCESS] 22804: Saw VI
+03:51:59 [INFO] [TOKENS] 13809: synopsis of length 5449
+03:52:00 [INFO] [SUCCESS] 13809: RockNRolla
+03:52:02 [WARN] [TOKENS] 243683: summary of length 644
+03:52:03 [INFO] [SUCCESS] 243683: Step Up All In
+03:52:05 [INFO] [TOKENS] 71676: synopsis of length 5710
+03:52:05 [INFO] [SUCCESS] 71676: Ghost Rider: Spirit of Vengeance
+03:52:08 [INFO] [TOKENS] 642: synopsis of length 5523
+03:52:08 [INFO] [SUCCESS] 642: Butch Cassidy and the Sundance Kid
+03:52:10 [WARN] [TOKENS] 267192: summary of length 996
+03:52:11 [INFO] [SUCCESS] 267192: Genius
+03:52:14 [INFO] [TOKENS] 9276: synopsis of length 5234
+03:52:14 [INFO] [SUCCESS] 9276: The Faculty
+03:52:16 [WARN] [TOKENS] 378236: summary of length 859
+03:52:17 [INFO] [SUCCESS] 378236: The Emoji Movie
+03:52:19 [INFO] [TOKENS] 324668: synopsis of length 6183
+03:52:20 [INFO] [SUCCESS] 324668: Jason Bourne
+03:52:22 [WARN] [TOKENS] 3082: summary of length 667
+03:52:22 [INFO] [SUCCESS] 3082: Modern Times
+03:52:24 [INFO] [TOKENS] 658: synopsis of length 12184
+03:52:25 [INFO] [SUCCESS] 658: Goldfinger
+03:52:27 [INFO] [TOKENS] 390062: synopsis of length 2050
+03:52:27 [INFO] [SUCCESS] 390062: Jungle
+03:52:29 [INFO] [TOKENS] 10528: synopsis of length 40657
+03:52:29 [INFO] [SUCCESS] 10528: Sherlock Holmes
+03:52:32 [INFO] [TOKENS] 2502: synopsis of length 16003
+03:52:32 [INFO] [SUCCESS] 2502: The Bourne Supremacy
+03:52:34 [INFO] [TOKENS] 440021: synopsis of length 10119
+03:52:35 [INFO] [SUCCESS] 440021: Happy Death Day
+03:52:37 [INFO] [TOKENS] 136835: synopsis of length 7052
+03:52:37 [INFO] [SUCCESS] 136835: No Good Deed
+03:52:40 [INFO] [TOKENS] 13027: synopsis of length 19094
+03:52:41 [INFO] [SUCCESS] 13027: Eagle Eye
+03:52:43 [WARN] [TOKENS] 181283: summary of length 464
+03:52:43 [INFO] [SUCCESS] 181283: Child 44
+03:52:45 [INFO] [TOKENS] 60243: synopsis of length 5027
+03:52:46 [INFO] [SUCCESS] 60243: A Separation
+03:52:48 [WARN] [TOKENS] 112160: summary of length 329
+03:52:48 [INFO] [SUCCESS] 112160: Sexual Chronicles of a French Family
+03:52:50 [WARN] [TOKENS] 419473: summary of length 263
+03:52:50 [INFO] [SUCCESS] 419473: Aardvark
+03:52:53 [INFO] [TOKENS] 52520: synopsis of length 4727
+03:52:53 [INFO] [SUCCESS] 52520: Underworld: Awakening
+03:52:56 [INFO] [TOKENS] 238615: synopsis of length 6630
+03:52:56 [INFO] [SUCCESS] 238615: Self/less
+03:52:58 [INFO] [TOKENS] 82675: synopsis of length 7084
+03:52:58 [INFO] [SUCCESS] 82675: Taken 2
+03:53:00 [INFO] [TOKENS] 23168: synopsis of length 36421
+03:53:01 [INFO] [SUCCESS] 23168: The Town
+03:53:03 [INFO] [TOKENS] 62211: synopsis of length 5328
+03:53:04 [INFO] [SUCCESS] 62211: Monsters University
+03:53:06 [INFO] [TOKENS] 314365: synopsis of length 32733
+03:53:06 [INFO] [SUCCESS] 314365: Spotlight
+03:53:08 [INFO] [TOKENS] 2978: synopsis of length 4688
+03:53:09 [INFO] [SUCCESS] 2978: Ghostbusters II
+03:53:11 [INFO] [TOKENS] 169917: synopsis of length 14500
+03:53:11 [INFO] [SUCCESS] 169917: A Walk Among the Tombstones
+03:53:13 [INFO] [TOKENS] 1830: synopsis of length 7004
+03:53:13 [INFO] [SUCCESS] 1830: Lord of War
+03:53:15 [WARN] [TOKENS] 370567: summary of length 149
+03:53:16 [INFO] [SUCCESS] 370567: Sherlock Gnomes
+03:53:18 [INFO] [TOKENS] 2292: synopsis of length 8016
+03:53:18 [INFO] [SUCCESS] 2292: Clerks
+03:53:20 [WARN] [TOKENS] 342473: summary of length 182
+03:53:21 [INFO] [SUCCESS] 342473: Ballerina
+03:53:23 [INFO] [TOKENS] 354861: synopsis of length 7187
+03:53:23 [INFO] [SUCCESS] 354861: Father Figures
+03:53:24 [WARN] Carlito's Way has no Metacritic ratings
+03:53:25 [INFO] [TOKENS] 6075: synopsis of length 3677
+03:53:25 [INFO] [SUCCESS] 6075: Carlito's Way
+03:53:27 [WARN] Getaway Plan has no MPAA rating
+03:53:27 [WARN] Getaway Plan has no Metacritic ratings
+03:53:28 [WARN] [TOKENS] 436827: summary of length 1011
+03:53:28 [INFO] [SUCCESS] 436827: Getaway Plan
+03:53:30 [INFO] [TOKENS] 222935: synopsis of length 13899
+03:53:31 [INFO] [SUCCESS] 222935: The Fault in Our Stars
+03:53:33 [INFO] [TOKENS] 337170: synopsis of length 6130
+03:53:34 [INFO] [SUCCESS] 337170: American Made
+03:53:36 [INFO] [TOKENS] 60304: synopsis of length 5012
+03:53:37 [INFO] [SUCCESS] 60304: Hansel & Gretel: Witch Hunters
+03:53:39 [WARN] Honey: Rise Up and Dance has no Metacritic ratings
+03:53:39 [WARN] [TOKENS] 515114: summary of length 599
+03:53:40 [INFO] [SUCCESS] 515114: Honey: Rise Up and Dance
+03:53:42 [WARN] [TOKENS] 207933: summary of length 686
+03:53:42 [INFO] [SUCCESS] 207933: Stonehearst Asylum
+03:53:45 [INFO] [TOKENS] 2907: synopsis of length 4279
+03:53:45 [INFO] [SUCCESS] 2907: The Addams Family
+03:53:48 [WARN] [TOKENS] 2009: summary of length 565
+03:53:48 [INFO] [SUCCESS] 2009: 4 Months, 3 Weeks and 2 Days
+03:53:50 [INFO] [TOKENS] 256961: synopsis of length 6374
+03:53:51 [INFO] [SUCCESS] 256961: Paul Blart: Mall Cop 2
+03:53:55 [INFO] [TOKENS] 10316: synopsis of length 15218
+03:53:55 [INFO] [SUCCESS] 10316: The Ides of March
+03:53:57 [INFO] [TOKENS] 429733: synopsis of length 4461
+03:53:57 [INFO] [SUCCESS] 429733: Mayhem
+03:53:59 [WARN] 2:22 has no Metacritic ratings
+03:54:00 [WARN] [TOKENS] 269795: summary of length 610
+03:54:00 [INFO] [SUCCESS] 269795: 2:22
+03:54:02 [INFO] [TOKENS] 3580: synopsis of length 22950
+03:54:03 [INFO] [SUCCESS] 3580: Changeling
+03:54:05 [INFO] [TOKENS] 1542: synopsis of length 9745
+03:54:05 [INFO] [SUCCESS] 1542: Office Space
+03:54:07 [INFO] [TOKENS] 417261: synopsis of length 14033
+03:54:07 [INFO] [SUCCESS] 417261: Forever My Girl
+03:54:10 [INFO] [TOKENS] 27582: synopsis of length 6072
+03:54:10 [INFO] [SUCCESS] 27582: The Mechanic
+03:54:13 [WARN] Secret Love: The Schoolboy and the Mailwoman has no MPAA rating
+03:54:13 [WARN] Secret Love: The Schoolboy and the Mailwoman has no Metacritic ratings
+03:54:14 [WARN] [TOKENS] 176147: summary of length 144
+03:54:14 [INFO] [SUCCESS] 176147: Secret Love: The Schoolboy and the Mailwoman
+03:54:16 [WARN] Dilwale Dulhania Le Jayenge has no Metacritic ratings
+03:54:16 [INFO] [TOKENS] 19404: synopsis of length 9160
+03:54:17 [INFO] [SUCCESS] 19404: Dilwale Dulhania Le Jayenge
+03:54:19 [INFO] [TOKENS] 254904: synopsis of length 25323
+03:54:19 [INFO] [SUCCESS] 254904: The November Man
+03:54:21 [INFO] [TOKENS] 133805: synopsis of length 25139
+03:54:22 [INFO] [SUCCESS] 133805: Carrie
+03:54:24 [INFO] [TOKENS] 138103: synopsis of length 8597
+03:54:24 [INFO] [SUCCESS] 138103: The Expendables 3
+03:54:27 [WARN] [TOKENS] 239571: summary of length 416
+03:54:27 [INFO] [SUCCESS] 239571: The Best of Me
+03:54:29 [INFO] [TOKENS] 249070: synopsis of length 5970
+03:54:29 [INFO] [SUCCESS] 249070: Hitman: Agent 47
+03:54:32 [INFO] [TOKENS] 788: synopsis of length 5449
+03:54:32 [INFO] [SUCCESS] 788: Mrs. Doubtfire
+03:54:34 [INFO] [TOKENS] 1581: synopsis of length 6956
+03:54:34 [INFO] [SUCCESS] 1581: The Holiday
+03:54:37 [WARN] [TOKENS] 399248: summary of length 180
+03:54:37 [INFO] [SUCCESS] 399248: Beirut
+03:54:39 [INFO] [TOKENS] 300665: synopsis of length 5077
+03:54:39 [INFO] [SUCCESS] 300665: Leatherface
+03:54:42 [INFO] [TOKENS] 188222: synopsis of length 11181
+03:54:43 [INFO] [SUCCESS] 188222: Entourage
+03:54:45 [INFO] [TOKENS] 8656: synopsis of length 47201
+03:54:45 [INFO] [SUCCESS] 8656: Deep Impact
+03:54:48 [INFO] [TOKENS] 561: synopsis of length 6056
+03:54:48 [INFO] [SUCCESS] 561: Constantine
+03:54:50 [INFO] [TOKENS] 10192: synopsis of length 9230
+03:54:51 [INFO] [SUCCESS] 10192: Shrek Forever After
+03:54:53 [INFO] [TOKENS] 17654: synopsis of length 7623
+03:54:53 [INFO] [SUCCESS] 17654: District 9
+03:54:56 [INFO] [TOKENS] 8358: synopsis of length 8016
+03:54:56 [INFO] [SUCCESS] 8358: Cast Away
+03:54:58 [INFO] [TOKENS] 13310: synopsis of length 9988
+03:54:59 [INFO] [SUCCESS] 13310: Let the Right One In
+03:55:01 [INFO] [TOKENS] 773: synopsis of length 5728
+03:55:01 [INFO] [SUCCESS] 773: Little Miss Sunshine
+03:55:03 [WARN] [TOKENS] 339692: summary of length 357
+03:55:04 [INFO] [SUCCESS] 339692: Shot Caller
+03:55:06 [INFO] [TOKENS] 698: synopsis of length 11615
+03:55:06 [INFO] [SUCCESS] 698: Moonraker
+03:55:08 [INFO] [TOKENS] 87421: synopsis of length 4859
+03:55:09 [INFO] [SUCCESS] 87421: Riddick
+03:55:09 [ERROR] 482560: invalid type: null, expected a string at line 1 column 184
+03:55:11 [INFO] [TOKENS] 339988: synopsis of length 11765
+03:55:12 [INFO] [SUCCESS] 339988: The Circle
+03:55:14 [INFO] [TOKENS] 1824: synopsis of length 630
+03:55:14 [INFO] [SUCCESS] 1824: 50 First Dates
+03:55:16 [WARN] [TOKENS] 241254: summary of length 763
+03:55:17 [INFO] [SUCCESS] 241254: The Prince
+03:55:19 [INFO] [TOKENS] 267860: synopsis of length 6983
+03:55:19 [INFO] [SUCCESS] 267860: London Has Fallen
+03:55:21 [INFO] [TOKENS] 1996: synopsis of length 5248
+03:55:22 [INFO] [SUCCESS] 1996: Lara Croft Tomb Raider: The Cradle of Life
+03:55:24 [WARN] [TOKENS] 2642: summary of length 997
+03:55:25 [INFO] [SUCCESS] 2642: Two Weeks Notice
+03:55:27 [INFO] [TOKENS] 335797: synopsis of length 10024
+03:55:27 [INFO] [SUCCESS] 335797: Sing
+03:55:30 [INFO] [TOKENS] 228205: synopsis of length 12107
+03:55:30 [INFO] [SUCCESS] 228205: The Longest Ride
+03:56:43 [WARN] [TOKENS] 435: summary of length 806
+03:56:43 [INFO] [SUCCESS] 435: The Day After Tomorrow
+03:56:45 [INFO] [TOKENS] 274854: synopsis of length 8077
+03:56:46 [INFO] [SUCCESS] 274854: The Last Witch Hunter
