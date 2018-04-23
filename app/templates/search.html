@@ -7,9 +7,7 @@
         
         <link href = "/static/bootstrap-tokenfield.css" rel= "stylesheet" >
         <link href = "/static/bootstrap-typeahead.css" rel = "stylesheet" > 
-       
-         <link href = "/static/bootstrap-grid.css" rel = "stylesheet" > 
-       
+        <link href = "/static/bootstrap-grid.css" rel = "stylesheet" >   
         <link href = "/static/jquery-ui.theme.css" rel = "stylesheet" > 
         <link href = "/static/jquery-ui.css" rel = "stylesheet" > 
         <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
@@ -34,24 +32,23 @@
             </div>
             <button type="submit" class="btn btn-info"> title </button>
         </form>
+     
         <form class="form-inline global-search">
-         
+        
         {% if word_cloud %}
-            <h1>{{word_cloud_message}}</h1>
+            <h1 id = "wordcloudtext" style="display: none;" > {{word_cloud_message}}</h1>
             {% for d in word_cloud %}  
              <div id = "donewordcloud" > </div>
-              
-            <div class = "transparent"> 
-                <div class  = "wordcloud" > {{d}}</div>
-            </div>
             
+            <div hidden class = "wordcloud" style="display: none;"> {{d}}</div>
+          
             {% endfor %}
         {% endif %} 
-
         
         </form>
         
-
+     
+    
         <form class="form-inline global-search">
             <div class="form-group">
                 <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
@@ -59,7 +56,8 @@
             <button type="submit" class="btn btn-info"> keyword </button>
         </form>
 
-        <div> 
+      
+        <div id = "transparent"> 
         <form class="form-inline global-search">
 
         {% if top_books %}
@@ -71,7 +69,7 @@
                         <div class = "left"> 
                          <div class="col-md-4 ">
                              <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
-                                onError="this.onerror=null;this.src='https://images.gr-assets.com/groups/1220414390p8/8095.jpg'; this.width = 180 ; this.height = 180">
+                                onError="this.onerror=null;this.src='https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png'; this.width = 160 ; this.height = 160">
                         </div>
                         </div>
                         <div class="col-md-8">
@@ -90,8 +88,9 @@
         {% endif %} 
             
         </form>
-
         </div>
+
+  
     
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -118,8 +117,9 @@
                     for (var i = 0; i < lst.length ; i++) { 
                         tuple = lst[i].innerText 
                         twowordlst = tuple.split(",") 
-                        word = twowordlst[0].substring(2)
+                        word = twowordlst[0].substring(4, twowordlst[0].length-1)
                         console.log(word)
+                        console.log('hellowords')
                         num= twowordlst[1].substring(0, twowordlst[1].length-1)  
                         num = num.trim()   
                         wordlist.push(word) 

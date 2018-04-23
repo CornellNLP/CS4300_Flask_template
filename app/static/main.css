@@ -14,10 +14,10 @@ padding-bottom: 15px;
 
 }
 
-.wordcloudtext{
-    opacity: 0%; 
-    color : rgba (0,0,0,0.5);
 
+h1.wordcloudtext{
+ 
+    color : transparent;
 }
 .global-search {
 text-align:center;
@@ -71,6 +71,16 @@ p.card-text {
     /*background-position: center; */
     /*background-repeat: no-repeat; */
   
+}
+
+#transparent{
+  background-color: rgba(239, 224, 185, .8);
+  border-radius:30px;
+  padding:10px;
+  margin-top:4%;
+  margin-left:20%;
+  margin-right:20%;
+
 }
 
 #dialog-window {
