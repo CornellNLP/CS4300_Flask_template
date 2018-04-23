@@ -118,11 +118,10 @@ def tokenizer_custom(tweet):
 #return (top n tweet indices, n top tweet scores)
 def process_tweets(politician, query, n):
 	tweets = get_tweets_by_politician(politician)
-	vocab = json.load((open("app/irsystem/models/vocab.json", 'r')))
+	vocab = json.load((open("app/irsystem/models/vocab.json", 'r')))['vocab']
 	query_tokens = tokenizer_custom(query)
 
     #check query validity before proceeding
-	valid_query = False
 	for token in query_tokens:
 		if token in vocab:
 			valid_query = True
@@ -131,39 +130,44 @@ def process_tweets(politician, query, n):
 	if valid_query == False:
 		return ([],[])
 
-    #dot query arrays
-	acc = csr_matrix(np.ones(len(vocab)))
+	#dot query arrays
+	query_dict = {}
 	for token in query_tokens:
-    	#build vector from postings
-		postings = get_co_occurrence(token)
-		vectorized = np.zeros(len(vocab))
-		for post_obj in postings['postings']:
-			idx = post_obj['index']
-			score = post_obj['score']
-			vectorized[idx] = score
-		vectorized = csr_matrix(vectorized)
-		vec_norm = normalize(vectorized, 'l1')
-		acc = acc.multiply(vec_norm)
-	arr = acc.transpose()
+		postings = get_co_occurrence(token)['postings']
+		for posting in postings:
+			idx = posting['index']
+			score = posting['score']
+			word = vocab[idx]
+			if word in query_dict:
+				query_dict[word] *= score
+			else:
+				query_dict[word] = score
 
-    #vectorize politician tweets
-	just_tweets = [tweet['tweet_text'] for tweet in tweets]
-	vectorizer = CountVectorizer(vocabulary = vocab, tokenizer = tokenizer_custom)
-	word_counts = vectorizer.fit_transform(just_tweets)
+	#get similarity for each tweet
+	sim_scores = []
+	just_tweets = []
+	sentiments = []
+	for tweet in tweets:
+		text = tweet['tweet_text']
+		just_tweets.append(text)
+		sentiments.append(tweet['sentiment'])
+		tokens = tokenizer_custom(text)
+		sim_score = 0.0
+		for token in tokens:
+			if token in query_dict:
+				sim_score += query_dict[token]
+		sim_scores.append(sim_score)
 
-    #determine top matches
-	doc_scores = (word_counts*arr).transpose()
-	doc_scores = doc_scores.todense()
-	top_docs = list(np.asarray(np.argsort(-1*doc_scores)))[0][:n]
-	top_scores = list(np.asarray(-1*np.sort(-1*doc_scores)))[0][:n]
+	sim_scores = np.array(sim_scores)
 
-    #turn tweet indices into actual tweets
+	top_scores = -1*np.sort(-1*sim_scores)[:n]
+	top_docs = np.argsort(-1*sim_scores)[:n]
+
 	tweet_lst = []
 	for tweet_idx in top_docs:
 		tweet_lst.append(just_tweets[tweet_idx])
 
-	return (tweet_lst, top_scores)
-
+	return (tweet_lst, top_scores, sentiments)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -200,7 +204,7 @@ def search():
 				}
 				data["donations"] = don_data
 
-			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
+			top_tweets, top_tweet_scores, top_tweet_sentiments = process_tweets(politician_query, free_form_query, 5)
 			#return top 5 for now
 			if len(top_tweets) != 0:
 				for tweet in top_tweets:
