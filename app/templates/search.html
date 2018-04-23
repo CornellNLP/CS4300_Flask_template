@@ -32,6 +32,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
 
+    <!-- Load custom js  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/static/main.js"></script>
 
   </head>
 
@@ -87,7 +90,6 @@
                  <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('votes')">
                      Votes
                  </div>
-                 <h2 class="">{{ data["vote_score"]}}% votes with party</h2>
              </div>
              <div class="col-md-1"></div>
              <div class="col-md-2">
@@ -100,10 +102,39 @@
          <br>
          <div class="col-12 col-md-0">
            <div style="display:none" class="info-popup" id="donations">
-               <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
-               {% for don in data["donations"]["sample"] %}
-                   <p><b>{{ don["DonorOrganization"] }}:</b> ${{ don["TransactionAmount"] }}</p>
-               {% endfor %}
+                <h4>Based on donations, we estimate {{ data["politician"] }} is {{ data["donations"]["score"] }}% Democrat and {{ 100-data["donations"]["score"] }}% Republican on the issue of {{ data["issue"] }}</h4>
+                <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Donation Targets</th>
+                            <th>Total Donated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for don in data["donations"]["sample"] %}
+                            <tr>
+                                <td>{{ don["DonorOrganization"] }}</td>
+                                <td>${{ don["TransactionAmount"] }}</td>
+                                <td>{{ don["TransactionDate"] }}</td>
+                                <td>
+                                    <div id="{{ don['TransactionID'] }}" style="width: 80px; height: 80px;"></div>
+                                    <script>
+                                        prepChart(
+                                            "{{ don['TransactionID'] }}",
+                                            {{ don['org_data']['democrat_total'] }},
+                                            {{ don['org_data']['republican_total'] }},
+                                        );
+                                    </script>
+                                </td>
+                                <td>${{ don["org_data"]["donation_total"] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
            </div>
            <div style="display:none" class="info-popup" id="tweets">
                <h4>Sample Tweet Data</h4>
@@ -112,6 +143,7 @@
            <div style="display:none" class="info-popup" id="votes">
                <h4>Sample Vote Data</h4>
                <p>{{ data["votes" ]}}</p>
+               <h2 class="">{{ data["vote_score"]}}% votes with party</h2>
            </div>
        </div>
      </div>
@@ -167,9 +199,6 @@
     <!-- Bootstrap core JavaScript -->
     <script src="../static/vendor/jquery/jquery.min.js"></script>
     <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Load custom js  -->
-    <script src="/static/main.js"></script>
 
   </body>
 
