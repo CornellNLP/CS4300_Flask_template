@@ -34,6 +34,7 @@ def process_donations(donations):
 		"sample": sorted(donations_list, key=lambda d:d["TransactionAmount"], reverse=True)[:min(len(donations_list), 10)] 
 	}
 
+
 def get_issue_list(issue):
 	stemmer = PorterStemmer()
 
@@ -48,7 +49,55 @@ def get_issue_list(issue):
 	return final
 
 
+# Calculate vote score based simply on if they voted yes or no on an issue
+def vote_score_yes_no(votes):
+	total_yes = 0
+	total_no = 0
+	if len(votes) > 0:
+		for vote in votes:
+			if vote["vote_position"] == "Yes":
+				total_yes += 1
+			elif vote["vote_position"] == "No":
+				total_no += 1
+	if total_yes > total_no:
+		vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
+	elif total_no > total_yes:
+		vote_score = -2.0*total_no/(total_yes+total_no)
+	else:
+		vote_score = 0.0
+	vote_score = round(vote_score, 2)
+	return vote_score
 
+# Returns percentage of people in same party this politician voted with
+def vote_score_agree_with_party(votes):
+	total_agree = 0.0
+	total_party_votes = 0.0
+	for vote in votes:
+		if vote["party"] == "R":
+			for key in vote["republican"]:
+				if key != "majority_position" and key != "not_voting":
+					total_party_votes += vote["republican"][key]
+					if key == vote["vote_position"].lower():
+						total_agree += vote["republican"][key]
+		elif vote["party"] == "D":
+			for key in vote["democratic"]:
+				if key != "majority_position" and key != "not_voting":
+					total_party_votes += vote["republican"][key]
+					if key == vote["vote_position"].lower():
+						total_agree += vote["republican"][key]
+		elif vote["party"] == "I":
+			for key in vote["independent"]:
+				if key != "majority_position" and key != "not_voting":
+					total_party_votes += vote["independent"][key]
+					if key == vote["vote_position"].lower():
+						total_agree += vote["independent"][key]
+		#If independent, simply return 0?
+	if len(votes) == 0 or len(votes) == total_party_votes:
+		score = 0
+	else:
+		score = round((total_agree-len(votes))/(total_party_votes-len(votes)), 2)
+	return score
+	
 def tokenizer_custom(tweet):
     token = TweetTokenizer()
     stemmer = PorterStemmer()
@@ -123,7 +172,6 @@ def process_tweets(politician, query, n):
 def search():
 	politician_query = request.args.get('politician_name')
 	free_form_query = request.args.get('free_form')
-	lexicon = Empath()
 	data = None
 	if not politician_query or not free_form_query: # no input
 		output_message = 'Please provide an input'
@@ -134,7 +182,7 @@ def search():
 				data=data,
 		)
 	else:
-		output_message = "Politician Name: " + politician_query
+		output_message = "Politician Name: " + politician_query + " - Issue: " + free_form_query
 		data = {
 			"politician": politician_query,
 			"issue": free_form_query,
@@ -161,48 +209,41 @@ def search():
 
 			print(time.time() - t)
 
-			# top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
-			# #return top 5 for now
-			# if len(top_tweets) != 0:
-			# 	for tweet in top_tweets:
-			# 		data["tweets"].append(tweet)
+			top_tweets, top_tweet_scores = process_tweets(politician_query, free_form_query, 5)
+			#return top 5 for now
+			if len(top_tweets) != 0:
+				for tweet in top_tweets:
+					data["tweets"].append(tweet)
 
-			# raw_vote_data = get_votes_by_politician(politician_query)
-			# for vote in raw_vote_data:
-			# 	vote_categories = lexicon.analyze(vote["vote"]["description"], normalize=True)
-			# 	intersect = False
-			# 	#Determine if query and vote have similar topics
-			# 	if vote_categories:
-			# 		for category in vote_categories:
-			# 			if vote_categories[category] > 0 and issues_categories[category] > 0:
-			# 				intersect = True
-			# 	#If query and vote have similar topics, add the vote to vote data
-			# 	if intersect:
-			# 		description = vote["vote"]["description"]
-			# 		politician_vote = "Unknown"
-			# 		for position in vote["vote"]["positions"]:
-			# 			if position["PoliticianName"] == politician_query:
-			# 				politician_vote = position["vote_position"]
-			# 				break
-			# 		if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
-			# 			data["votes"].append({"description":description, "vote_position":politician_vote})
-			# #Do basic scoring system where score is > 0 if votes yes more often and < 0 if votes no more often
-			# total_yes = 0
-			# total_no = 0
-			# if len(data["votes"]) > 0:
-			# 	for vote in data["votes"]:
-			# 		if vote["vote_position"] == "Yes":
-			# 			total_yes += 1
-			# 		elif vote["vote_position"] == "No":
-			# 			total_no += 1
-			# if total_yes > total_no:
-			# 	vote_score = 2.0*total_yes/(total_yes+total_no) - 1.0
-			# elif total_no > total_yes:
-			# 	vote_score = 2.0*total_no/(total_yes+total_no) - 1.0
-			# else:
-			# 	vote_score = 0.0
-			# vote_score = round(vote_score, 2)
-			# data["vote_score"] = vote_score
+			raw_vote_data = get_votes_by_politician(politician_query)
+			# Find all votes that have a subject that contains the issue typed in
+			query_lower = free_form_query.lower()
+			for vote in raw_vote_data:
+				issue_in_topics = False
+				relevant_topic = ""
+				if "subjects" in vote["vote"].keys():
+					for topic in vote["vote"]["subjects"]:
+						if query_lower in topic["name"].lower():
+							issue_in_topics = True
+							relevant_topic = topic["name"]
+							break
+				#If query and vote have similar topics or if query in bill description, add the vote to vote data
+				if issue_in_topics or free_form_query.lower() in vote["vote"]["description"].lower():
+					description = vote["vote"]["description"]
+					politician_vote = "Unknown"
+					for position in vote["vote"]["positions"]:
+						if position["PoliticianName"] == politician_query:
+							politician_vote = position["vote_position"]
+							politician_party = position["party"]
+							democratic_votes = vote["vote"]["democratic"]
+							republican_votes = vote["vote"]["republican"]
+							independent_votes = vote["vote"]["independent"]
+							break
+					if position["vote_position"] != "Not Voting" and position["vote_position"] != "Present":
+						data["votes"].append({"relevant_topic":relevant_topic, "description":description, "vote_position":politician_vote, "independent":independent_votes, "democratic":democratic_votes, "republican":republican_votes, "party":politician_party})
+			#Do basic scoring system where score is % of time vote with party
+			vote_score = vote_score_agree_with_party(data["votes"])
+			data["vote_score"] = vote_score
 		if free_form_query:
 			pass
 			#print("Need to implement this")

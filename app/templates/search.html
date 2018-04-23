@@ -1,74 +1,176 @@
-<html>
-    <head>
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link rel="stylesheet" href="/static/main.css">
-      <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
-      <link rel="stylesheet" href="/static/awesomplete.css">
-      <script src="/static/awesomplete.js" async></script>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fundy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/landing-page.min.css" rel="stylesheet">
+    <link href="../static/main.css" rel="stylesheet">
+
+    <!-- Fundy Stuff -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/static/awesomplete.css">
+    <script src="/static/awesomplete.js" async></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+
   </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Fundy</a>
+        <!-- <a class="btn btn-primary" href="#">Sign In</a> -->
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Putting the fun-ds back in politics</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form onsubmit="return validateForm()" class="col-12 form-inline global-search">
+              <div>
+                <div class="container">
+                  <div class="col-12 col-md-12 mb-2 mb-md-0">
+                    <input id="politician_input" type="text" name="politician_name" class="form-control form-control-lg" placeholder="A Politician's Name"/>
+                    <input id="free_form_input" type="text" name="free_form" class="form-control form-control-lg" placeholder="Free Form Input">
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <h1>FUNDY</h1>
-        <form onsubmit="return validateForm()" class="form-inline global-search">
-            <div class="form-group">
-                <!-- <input id="input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name"> -->
-                <input id="politician_input" type="text" name="politician_name" class="form-control" placeholder="A Politician's Name"/>
-                <input id="free_form_input" type="text" name="free_form" class="form-control" placeholder="Free Form Input">
-            </div>
-            <button type="submit" class="btn btn-secondary"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
-            <div>
-              <h2>{{output_message}}</h2>
-            </div>
-        </form>
+      </div>
+    </header>
+
+    <section style="margin-top:25px" class="results">
+    <div class="container">
         {% if data %}
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-2">
-                    <div class="metric-box" onclick="showPopup('tweets')">
-                        Tweets
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-2">
-                    <div class="metric-box" onclick="showPopup('votes')">
-                        Votes
-                    </div>
-                    <h2>{{ data["vote_score" ]}}</h2>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-2">
-                    <div class="metric-box" onclick="showPopup('donations')">
-                        Donations
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
+         <div class="row">
+             <div class="col-md-2"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('tweets')">
+                     Tweets
+                 </div>
+             </div>
+             <div class="col-md-1"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('votes')">
+                     Votes
+                 </div>
+                 <h2 class="">{{ data["vote_score"]}}% votes with party</h2>
+             </div>
+             <div class="col-md-1"></div>
+             <div class="col-md-2">
+                 <div class="btn btn-block btn-lg btn-primary" onclick="showPopup('donations')">
+                     Donations
+                 </div>
+             </div>
+             <div class="col-md-2"></div>
+         </div>
+         <br>
+         <div class="col-12 col-md-0">
+           <div style="display:none" class="info-popup" id="donations">
+               <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
+               {% for don in data["donations"]["sample"] %}
+                   <p><b>{{ don["DonorOrganization"] }}:</b> ${{ don["TransactionAmount"] }}</p>
+               {% endfor %}
+           </div>
+           <div style="display:none" class="info-popup" id="tweets">
+               <h4>Sample Tweet Data</h4>
+               <p>{{ data["tweets"] }}</p>
+           </div>
+           <div style="display:none" class="info-popup" id="votes">
+               <h4>Sample Vote Data</h4>
+               <p>{{ data["votes" ]}}</p>
+           </div>
+       </div>
+     </div>
+     {% endif %}
+   </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Meet the Squad</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/dan.png" alt="">
+              <h5>Dan</h5>
+              <!-- <p class="font-weight-light mb-0">Facebook, ever heard of it?</p> -->
             </div>
-            <br>
-            <div class="info-popup" id="donations">
-                <h4>{{ data["politician"] }} has received ${{ data["donations"]["total"] }} from organizations related to {{ data["issue"] }}</h4>
-                {% for don in data["donations"]["sample"] %}
-                    <p><b>{{ don["DonorOrganization"] }}:</b> ${{ don["TransactionAmount"] }}</p>
-                {% endfor %}
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/james.png" alt="">
+              <h5>James</h5>
+              <!-- <p class="font-weight-light mb-0">AKA the King of Piazza</p> -->
             </div>
-            <div class="info-popup" id="tweets">
-                <h4>Sample Tweet Data</h4>
-                <p>{{ data["tweets"] }}</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/sam.png" alt="">
+              <h5>Samantha</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
             </div>
-            <div class="info-popup" id="votes">
-                <h4>Sample Vote Data</h4>
-                <p>{{ data["votes" ]}}</p>
+          </div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/joe.jpg" alt="">
+              <h5>Joe</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
             </div>
-        {% endif %}
-        <script src="/static/main.js"></script>
-        <!-- needs to be at the end so everything has loaded -->
-    </body>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="../static/img/isabel.png" alt="">
+              <h5>Isabel</h5>
+              <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p> -->
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load custom js  -->
+    <script src="/static/main.js"></script>
+
+  </body>
 
 </html>
