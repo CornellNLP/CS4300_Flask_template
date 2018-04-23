@@ -1,4 +1,7 @@
-@media (min-width: 1200px) {
+.results {
+  padding-top:25px;
+}
+/* @media (min-width: 1200px) {
 	.container {
 	    max-width: 970px;
 	}
@@ -50,7 +53,7 @@ h1 {
 h4 {
 	text-align: center;
 }
-
+*/
 .info-popup {
 	display: none;
 	margin-left: 10%;
