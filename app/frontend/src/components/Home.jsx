@@ -67,6 +67,7 @@ class Home extends Component {
     return (
     	<div>
     		<div>
+    			<div className="header">
 		      <form>
 		      	<label>
 		      		<p className = "title">learnddit</p>
@@ -74,15 +75,18 @@ class Home extends Component {
 		      		I want to learn how to...
 		      		<input className="searchBar" id="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder={this.suggestion}/>
 		      		</span>
-		      		<button id = "submit_button" onClick={this.handleSubmit}>Search</button>
+		      		<button id="submit_button" onClick={this.handleSubmit}><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
 		      	</label>
 		      </form>
+		      </div>
+		      <div>
 		      {
 		      	this.state.loading ? (<div className="loader"></div>) :
 		      	(data.map((comment, i) => {
 		      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>
 		      	}))
 		      }
+	      </div>
 	      </div>
 	    	<div className="footer">
 	    		<p>Zack Brody (ztb5), Eric Feng (evf23), Michelle Ip (mvi4), Monica Ong (myo3), Jill Wu (jw975)</p>
