@@ -146,11 +146,10 @@ def process_tweets(politician, query, n):
 	#get similarity for each tweet
 	sim_scores = []
 	just_tweets = []
-	sentiments = []
 	for tweet in tweets:
 		text = tweet['tweet_text']
-		just_tweets.append(text)
-		sentiments.append(tweet['sentiment'])
+		sentiment = tweet['sentiment']
+		just_tweets.append((text, sentiment))
 		tokens = tokenizer_custom(text)
 		sim_score = 0.0
 		for token in tokens:
@@ -163,11 +162,12 @@ def process_tweets(politician, query, n):
 	top_scores = -1*np.sort(-1*sim_scores)[:n]
 	top_docs = np.argsort(-1*sim_scores)[:n]
 
-	tweet_lst = []
-	for tweet_idx in top_docs:
-		tweet_lst.append(just_tweets[tweet_idx])
+	final_lst = []
+	for i in range(len(top_docs)):
+		idx = top_docs[i]
+		final_lst.append({"tweet": just_tweets[idx][0], "sentiment": just_tweets[idx][1], "score": top_scores[i]})
 
-	return (tweet_lst, top_scores, sentiments)
+	return final_lst
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -204,11 +204,10 @@ def search():
 				}
 				data["donations"] = don_data
 
-			top_tweets, top_tweet_scores, top_tweet_sentiments = process_tweets(politician_query, free_form_query, 5)
+			tweet_dict = process_tweets(politician_query, free_form_query, 10)
 			#return top 5 for now
-			if len(top_tweets) != 0:
-				for tweet in top_tweets:
-					data["tweets"].append(tweet)
+			if len(tweet_dict) != 0:
+				data["tweets"] = tweet_dict
 
 			raw_vote_data = get_votes_by_politician(politician_query)
 			# Find all votes that have a subject that contains the issue typed in

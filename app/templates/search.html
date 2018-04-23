@@ -106,8 +106,12 @@
                {% endfor %}
            </div>
            <div style="display:none" class="info-popup" id="tweets">
-               <h4>Sample Tweet Data</h4>
-               <p>{{ data["tweets"] }}</p>
+               <h4>Top 10 Tweet Matches</h4>
+               {% for tweet in data["tweets"] %}
+                  <p><b>Tweet:</b> {{tweet["tweet"]}}</p>
+                  <p><b>Compound Sentiment:</b> {{tweet["sentiment"]["compound"]}}</p>
+                  <p><b>Similarity Score:</b> {{tweet["score"]}}</p>
+                {% endfor %}
            </div>
            <div style="display:none" class="info-popup" id="votes">
                <h4>Sample Vote Data</h4>
