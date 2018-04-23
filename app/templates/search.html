@@ -14,10 +14,7 @@
         <link href = "/static/jquery-ui.css" rel = "stylesheet" > 
         <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 
-
-
     </head>
- 
 
         <form class="form-inline global-search">
 
@@ -44,8 +41,8 @@
             {% for d in word_cloud %}  
              <div id = "donewordcloud" > </div>
               
-            <div style = {color :transparent}> 
-                <div class  = "wordcloud" >  {{d}}  </div>
+            <div class = "transparent"> 
+                <div class  = "wordcloud" > {{d}}</div>
             </div>
             
             {% endfor %}
@@ -66,38 +63,36 @@
         <form class="form-inline global-search">
 
         {% if top_books %}
+        <div >
             <h1>{{top_books_message}}</h1>
-            {% for d in top_books %}    
-                 <div class = "mb-3" > 
-                    <div class="card mt-2">
-            <div class="row align-items-center">
-                <div class="col-md-3 pl-4">
-                    <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
-                    onError="this.onerror=null;this.src='https://media.steepster.com/api/file/anN07UThRu6hWl3o9Dvt/convert?fit=crop&h=190&w=190';">
-                </div>
-                <div class="col-md-9 pl-0">
-                    <div class="card-body">
-                        <h5 class="card-title">{{d}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">by Good Reads</h6>
-                        <p class="card-text mb-2"> Random Text</p>
-                        <p class="card-text mb-2"> Random Text </p>
+            {% for d in top_books %} 
+                    <div class="container">
+                        <div class="row align-items-center">
+                        <div class = "left"> 
+                         <div class="col-md-4 ">
+                             <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
+                                onError="this.onerror=null;this.src='https://images.gr-assets.com/groups/1220414390p8/8095.jpg'; this.width = 180 ; this.height = 180">
+                        </div>
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{d}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">by Good Reads</h6>
+                            <p class="card-text mb-4"> Random Text</p>
+                            <p class="card-text mb-4"> Random Text </p>
                    
-                    </div>
+                        </div>
+                        </div>
                 </div>
             </div>
-            </div>
-            </div>
-
-
-            {% endfor %}
+            {% endfor %} 
+        </div>
         {% endif %} 
- 
-              
+            
         </form>
 
         </div>
-     
-
+    
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -107,37 +102,43 @@
         <script src ="/static/bootstrap-tokenfield.js" > </script> 
         <script src = "/static/jquery-ui.js"> </script>
         <script type="text/javascript" src="/static/jqcloud.js"></script> 
-
         <script> 
 
         $( document ).ready(function() {
                 console.log( "document loaded try to get the data load" );  
                 console.log("document ready")  
-                    var newlist = [] 
+                    var wordlist = [] 
+                    var numlist = []
                     lst = document.getElementsByClassName("wordcloud")
-                    console.log(lst.length)
-                    if (lst.length = 13) {
+                    console.log(lst)
+                    
+                    if (lst.length ==13) {
                         console.log(" Word not in index display create a prettier output") 
-                    }
-
-
-                    for (var i = 0; i < lst.length ; i++) {
-                        newlist.push(lst[i].innerText) 
-
+                    } else {
+                    for (var i = 0; i < lst.length ; i++) { 
+                        tuple = lst[i].innerText 
+                        twowordlst = tuple.split(",") 
+                        word = twowordlst[0].substring(2)
+                        console.log(word)
+                        num= twowordlst[1].substring(0, twowordlst[1].length-1)  
+                        num = num.trim()   
+                        wordlist.push(word) 
+                        numlist.push(Number(num)) 
                     }    
+                    console.log(numlist)
                     var weightlist =[] 
-                    for (var i = 0 ; i < newlist.length ; i++) {
-                        weightlist.push({text : newlist[i], weight : 11}) 
+                    for (var i = 0 ; i < wordlist.length ; i++) {
+                        weightlist.push({text : wordlist[i], weight :numlist[i]}) 
 
                     }
                     console.log(weightlist)
-
             $("#donewordcloud").jQCloud(weightlist, {
-             width: 400,
-            height: 300
-            });
-
+                width: 400,
+                height: 300
                     }); 
+                } 
+            });  
+
         
         </script>
         <!--script for title field added for autocomplete--> 
@@ -147,26 +148,19 @@
         $('#keyfield').tokenfield({
             autocomplete: {
                 source: ['romantic','horror','language', 'computer', 'definitive']
-              
-            }, 
-           
+                },  
             noDuplicate: true ,
             lookupLimit: 5
 
-
         }); 
-
 
         $('#field').tokenfield({
             autocomplete: {
-                source: ['romantic','horror','language', 'computer', 'definitive']
-              
+                source: ['romantic','horror','language', 'computer', 'definitive']      
             }, 
            
             noDuplicate: true ,
             lookupLimit: 1
-
-
         }); 
 
 

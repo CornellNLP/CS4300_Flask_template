@@ -14,8 +14,9 @@ padding-bottom: 15px;
 
 }
 
-#wordcloud{
-    color: rgba(0, 0, 0, 0);
+.wordcloudtext{
+    opacity: 0%; 
+    color : rgba (0,0,0,0.5);
 
 }
 .global-search {

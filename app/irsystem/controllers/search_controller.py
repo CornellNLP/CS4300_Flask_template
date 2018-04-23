@@ -31,7 +31,7 @@ def create_books_to_wordcloud(title_in, index_to_word, book_to_index, words_comp
     sims = words_compressed.dot(docs_compressed[int(book_to_index[title_in]),:])
     asort = np.argsort(-sims)[:k+1]
     print(asort)
-    return [(index_to_word[str(i)])for i in asort[1:]]
+    return [(index_to_word[str(i)],sims[i]/sims[asort[0]] )for i in asort[1:]]
 
 
 # Ability to add multiple words 
