@@ -74,22 +74,6 @@ def gaussian_score_duration(movie_dict,mean,high_val,low_val):
 
 	return score_dict
 
-def gaussian_score_release(movie_dict,mean,high_val,low_val):
-	score_dict = {}
-	mod_movie_dict = dict(movie_dict)
-	for movie in mod_movie_dict:
-		if mod_movie_dict[movie]['release_date'] is None:
-			mod_movie_dict[movie]['release_date'] = int("0000")
-		else:
-			mod_movie_dict[movie]['release_date'] = int(mod_movie_dict[movie]['release_date'][:4])
-	dist = scipy.stats.norm(mean,4)
-	movie_to_weight = {k:dist.pdf(v['release_date']) for k,v in mod_movie_dict.iteritems()}
-	max_val,min_val = max(movie_to_weight.values()), min(movie_to_weight.values())
-	movie_to_weight = {k:((v - min_val)/(max_val - min_val)) for k,v in movie_to_weight.iteritems()}
-	for movie in score_dict:
-		score_dict[movie] = score_dict[movie] + (movie_to_weight[movie]*(high_val + low_val) - low_val)
-	return score_dict
-
 # get the fraction of items in list1 available in list2
 def get_set_overlap(list1, list2):
     set1 = set([x.lower() for x in list1])
@@ -97,3 +81,4 @@ def get_set_overlap(list1, list2):
     num = float(len(set1.intersection(set2)))
     den = len(set1)
     return num / den
+
