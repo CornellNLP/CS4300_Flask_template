@@ -12,7 +12,8 @@ class Home extends Component {
 			data : [],
 			query: [],
 			hasSearched: false,
-			loading : false
+			loading : false,
+			errored: false,
 		};
 		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
     this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
@@ -60,7 +61,6 @@ class Home extends Component {
 			this.setState({
 				query : response.data
 			})
-			console.log("setting query");
 		})
 	}
 
@@ -81,17 +81,21 @@ class Home extends Component {
 			this.setState({
 				data: response.data,
 				hasSearched: true,
-				loading: false
+				loading: false,
+				errored: false
 			})
 		}).catch(error => {
-			console.error("get related comments failed");
+			this.setState({ errored: true });
+			console.error(error);
 		});
 	}
 
 	render() {
-		console.log(this.state.query.length)
-		console.log(this.state.hasSearched);
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
+		let terms = this.state.query.map((term, i) => { return term[0] });
+  	terms = Array.from(new Set(terms));
+  	console.log(terms)
+  	let termList = terms.join(", ");
     return (
     	<div>
     		<div>
@@ -99,6 +103,7 @@ class Home extends Component {
 		      <form>
 		      	<label>
 		      		<p className = "title">learnddit</p>
+		      		{this.state.errored ? <div className="alert alert-danger">Failed to retrieve results!</div> : null}
 		      		<span>
 		      		I want to learn how to...
 		      		<input className="searchBar" id="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder={this.suggestion}/>
@@ -106,12 +111,9 @@ class Home extends Component {
 		      		<button id="submit_button" onClick={this.handleSubmit}><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
 		      	</label>
 		      </form>
-		      {this.state.hasSearched && this.state.query.length ? (<p> Similar terms: {this.state.query.map((term, i) => {
-						console.log("mapping");
-		      	return <span key={i}>{term[0]}</span>
-		      })} </p>) : null}
 		      </div>
 		      <div>
+		      {this.state.hasSearched && this.state.query.length ? (<div className="related"> Similar terms: { termList } </div>) : null}
 		      {
 		      	this.state.loading ? (<div className="loader"></div>) :
 		      	(data.map((comment, i) => {

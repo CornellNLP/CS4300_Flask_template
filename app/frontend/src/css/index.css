@@ -44,6 +44,12 @@ label{
 	font-weight: bold;
 }
 
+.related {
+  margin: auto;
+  display: block;
+  width: 65%;
+}
+
 .comment {
 	margin: auto;
 	display: block;
