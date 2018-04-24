@@ -12,6 +12,7 @@ import numpy as np
 import flask, os, pickle, json
 
 lemmatiser = WordNetLemmatizer()
+tokenizer = TreebankWordTokenizer()
 
 @app.route('/', methods=['GET'])
 def render_homepage():
@@ -19,6 +20,15 @@ def render_homepage():
   # print(url_for('/'))
   return render_template('index.html')
 
+@app.route('/svd', methods=['GET'])
+def get_svd():
+  CLOSEST_WORDS = 2
+  query = str(request.args.get('query'))
+  tokens = [token for token in tokenizer.tokenize(query.lower()) if token]
+  sim = []
+  for token in tokens:
+    sim += closest_words(token, CLOSEST_WORDS)
+  return json.dumps(sim)
 
 @app.route('/search', methods=['GET'])
 def search2():
@@ -28,7 +38,6 @@ def search2():
   # irrelevant_tokens = ['i','want','to','learn','how']
   irrelevant_tokens = []
 
-  tokenizer = TreebankWordTokenizer()
   tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
   tokens = expand_query(tokens)
 
@@ -49,7 +58,10 @@ def get_wordnet_pos(treebank_tag):
   else:
     return ''
 
-def closest_words(word_in, k, words_compressed, word_to_index, index_to_word):
+def closest_words(word_in, k):
+  words_compressed = app.config['words_compressed']
+  word_to_index = app.config['word_to_index']
+  index_to_word = app.config['index_to_word']
   if word_in not in word_to_index: return []
   sims = words_compressed.dot(words_compressed[word_to_index[word_in], :])
   asort = np.argsort(-sims)[:k + 1]
@@ -58,14 +70,9 @@ def closest_words(word_in, k, words_compressed, word_to_index, index_to_word):
 def expand_query(query_tokens):
   # builds a list of tokens that are the stemmed versions of the word
   # see marcobonzanini.com/2015/01/26/stemming-lemmatisation-and-pos-tagging-with-python-and-nltk/
-
   CLOSEST_WORDS = 2
   addtl_tokens = set([])
   tokens_pos = pos_tag(query_tokens)
-
-  words_compressed = app.config['words_compressed']
-  word_to_index = app.config['word_to_index']
-  index_to_word = app.config['index_to_word']
 
   for (token, pos_treebank) in tokens_pos:
     # get stemmed words
@@ -75,8 +82,7 @@ def expand_query(query_tokens):
     addtl_tokens.add(lemmatiser.lemmatize(token, pos=pos))
 
     # use SVD to get related words
-    print closest_words(token, CLOSEST_WORDS, words_compressed, word_to_index, index_to_word)
-    for (word, _) in closest_words(token, CLOSEST_WORDS, words_compressed, word_to_index, index_to_word):
+    for (word, _) in closest_words(token, CLOSEST_WORDS):
       addtl_tokens.add(word)
 
   # LMFAO need to do this to ensure no overlap between addtl_tokens and query_tokens

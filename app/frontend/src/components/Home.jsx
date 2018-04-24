@@ -10,6 +10,8 @@ class Home extends Component {
 		this.state = {
 			value: '',
 			data : [],
+			query: [],
+			hasSearched: false,
 			loading : false
 		};
 		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
@@ -18,6 +20,7 @@ class Home extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getRelatedComments = this.getRelatedComments.bind(this)
+		this.getRelatedSearchTerms = this.getRelatedSearchTerms.bind(this)
 	}
 
 	componentWillMount(){
@@ -45,6 +48,21 @@ class Home extends Component {
 		this.getRelatedComments(this.state.value)
 	}
 
+	getRelatedSearchTerms(input_query) {
+		var arr = input_query.split(" ")
+		var qParams = arr.map(key =>key).join('&');
+		console.log('running related query fetch')
+		axios.get('/svd', {
+				params: { query: qParams }
+			})
+		.then(response => {
+			console.log(response)
+			this.setState({
+				query : response.data
+			})
+		})
+	}
+
 	getRelatedComments(input_query) {
 		this.setState({loading: true})
 		var arr = input_query.split(" ")
@@ -54,15 +72,18 @@ class Home extends Component {
 				params: { query: qParams }
 			})
 		.then(response => {
+			this.getRelatedSearchTerms(input_query)
 			console.log(response)
 			this.setState({
 				data: response.data,
+				hasSearched: true,
 				loading: false
 			})
 		})
 	}
 
 	render() {
+		console.log(this.state.query.length)
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
     return (
     	<div>
@@ -78,6 +99,9 @@ class Home extends Component {
 		      		<button id="submit_button" onClick={this.handleSubmit}><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
 		      	</label>
 		      </form>
+		      {this.state.hasSearched && !this.state.query.length ? (<p> Similar terms: {this.state.query.map((term, i) => {
+		      	return <span key={i}>{term[0]}</span>
+		      })} </p>) : null}
 		      </div>
 		      <div>
 		      {
