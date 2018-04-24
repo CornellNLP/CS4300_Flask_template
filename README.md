@@ -845,7 +845,30 @@ Successfully tagged ifilonenko/flask-template:v3
 ...
 ```
 
-Now we have a publicly accessible Docker image which you can version and update by re-building and re-push as much as you want. **Now we deploy to Kubernetes**
+Now we have a publicly accessible Docker image which you can version and update by re-building and re-push as much as you want. How do we test this locally? You need to run a docker-compose script to bring the image up. An example script is provided in `kubernetes/docker-compose.yml`. This script is super easy:
+```yml
+flask:
+    image: ifilonenko/flask-template:v3
+    ports:
+      - "5000:5000"
+    environment:
+    - APP_SETTINGS=config.ProductionConfig
+    - DATABASE_URL=postgresql://localhost/my_app_db
+```
+And can be run with the following:
+```bash
+> pwd
+CS4300_Flask_template/kubernetes
+> ls
+Dockerfile         docker-compose.yml run-deployment.yml
+> docker-compose up
+kubernetes_flask_1 is up-to-date
+Attaching to kubernetes_flask_1
+flask_1  | Flask app running at http://0.0.0.0:5000
+```
+You can now navigate to `http://0.0.0.0:5000`to see if your app is running correctly.
+
+But we need to put this app online behind a load-balanced service so we can interact with it publicly. So **now we deploy to Kubernetes**
 
 For Kubernetes you will:
 
