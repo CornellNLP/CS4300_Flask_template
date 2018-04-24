@@ -39,13 +39,13 @@ class Home extends Component {
 
 	handleSubmit(event){
 		let submission = this.state.value === "" ? this.suggestion : this.state.value
-		let query = '?query=' + this.state.value
+		let query = '?query=' + submission
 		event.preventDefault();
 		this.props.history.push({
 		  pathname: '/',
 		  search: query
 		})
-		this.getRelatedComments(this.state.value)
+		this.getRelatedComments(submission)
 	}
 
 	getRelatedSearchTerms(input_query) {
