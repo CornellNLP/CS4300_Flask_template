@@ -1,12 +1,13 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import json
+import pickle
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 
 # for plotting
-import matplotlib
+# import matplotlib
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 class SVD:
     @staticmethod
@@ -63,20 +64,34 @@ if __name__ == "__main__":
     vectorizer = TfidfVectorizer(stop_words='english', max_df=.7,
                                  min_df=75)
     td_matrix = SVD.getTermDocMatrix(vectorizer)
+
+    #save the term-doc matrix in a file
+    np.save("term_doc_matrix.npy", td_matrix)
+
     words_compressed, docs_compressed = SVD.getSVDMatrices(td_matrix)
 
-    print(words_compressed.shape)
-    print(docs_compressed.shape)
+    np.save("docs_compressed.npy", docs_compressed)
+
+    # print(words_compressed.shape)
+    # print(docs_compressed.shape)
 
     word_to_index = vectorizer.vocabulary_
     index_to_word = {i: t for t, i in word_to_index.iteritems()}
 
+    word_to_index_file = open("word_to_index.pkl","wb")
+    pickle.dump(word_to_index, word_to_index_file)
+
+    index_to_word_file = open("index_to_word.pkl","wb")
+    pickle.dump(index_to_word, index_to_word_file)
+
     words_compressed = normalize(words_compressed, axis=1)
 
-    print(type(words_compressed))
-    print(words_compressed.dtype)
-    print(type(docs_compressed))
-    print(docs_compressed.dtype)
-    print({k: word_to_index[k] for k in word_to_index.keys()[:10]})
+    np.save("words_compressed.npy", words_compressed)
 
-    print(SVD.closest_words("kids", 10, words_compressed, word_to_index, index_to_word))
+    # print(type(words_compressed))
+    # print(words_compressed.dtype)
+    # print(type(docs_compressed))
+    # print(docs_compressed.dtype)
+    # print({k: word_to_index[k] for k in word_to_index.keys()[:10]})
+
+    # print(SVD.closest_words("kids", 10, words_compressed, word_to_index, index_to_word))
