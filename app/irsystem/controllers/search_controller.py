@@ -164,6 +164,7 @@ def search():
 
 	book_to_index = json.load(open("book_to_index.json"))
 	word_to_index = json.load(open("word_to_index.json"))
+	book_image_url =json.load(open("ISBN_100000_to_200000.json"))
 
 	if title_input == None and keyword_input == None:
 		word_cloud_message = ''
@@ -195,7 +196,31 @@ def search():
 				word_list.append(w)
 				ith_list.append(int(i)%100) 
 			for close_book in db_word_to_closest_books(word_list, ith_list):
-				top_books.append(close_book)
+				each_book_list =[]
+				each_book_list.append(close_book)
+				if close_book in book_image_url:
+					print("hellothere")
+					isbn= book_image_url[close_book]
+					print("notisbn")
+					newisbn =[]
+					for nums in isbn[:2] : 
+						url = "http://covers.openlibrary.org/b/isbn/" + nums +"-M.jpg"
+						url=url.encode('ascii','ignore')
+						print(url)
+						newisbn.append(url)
+					link=isbn[2].encode('ascii','ignore')
+					link ="http://www.goodreads.com/book/show/" + link
+					newisbn.append(link)
+					for nounicode in newisbn: 
+						each_book_list.append(nounicode)
+
+					each_book_list.append([])
+				else: 
+					errorlist = ["", "",""]
+					each_book_list += errorlist
+					
+				top_books.append(each_book_list)
+
 
 	else:
 		top_books_message = ""

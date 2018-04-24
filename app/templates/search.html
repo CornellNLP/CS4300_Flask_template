@@ -16,7 +16,7 @@
 
         <form class="form-inline global-search">
 
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
+            <h1 style="font-size: 55px; font-family:Lato; color: #4285F4">
             B
             <font color=#EA4335>OO</font>
             <font color=#FBBC05>K</font>
@@ -30,7 +30,7 @@
             <div class="form-group">
                 <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title" >
             </div>
-            <button type="submit" class="btn btn-info"> title </button>
+            <button type="submit" class="btn btn-info"> Go </button>
         </form>
      
         <form class="form-inline global-search">
@@ -53,7 +53,7 @@
             <div class="form-group">
                 <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
             </div>
-            <button type="submit" class="btn btn-info"> keyword </button>
+            <button type="submit" class="btn btn-info"> Go </button>
         </form>
 
 
@@ -65,29 +65,40 @@
         <div >
             <h1  style="display:none;">{{top_books_message}}</h1>
             {% for d in top_books %} 
+                
+
                     <div class="container">
                         <div class="row align-items-center">
                         <div class = "left"> 
                          <div class="col-md-4 ">
+                          
+                            {% if d[2] %}
+                            <div id= "imagediv" class="card-img-top d-flex align-items-center bg-light imagediv"></div>
 
-
-
-                             <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
+                          
+                            {% endif%}
+                            <img class="card-img-top d-flex align-items-center bg-light" src="hee.png"
                                 onError="this.onerror=null;this.src='https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png'; this.width = 160 ; this.height = 160">
+
+                            <div class="default_link" style ="display:none;">{{d[1]}}</div>
                         </div>
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
-                            <h5 hidden class = "booktitle" style="display: none;"> {{d}}</h5>
+                            <h5 hidden class = "booktitle" style="display: none;"> {{d[0]}}</h5>
                      
-                            <h5 class="card-title" >{{d}}</h5>
+                            <h5 class="card-title" >{{d[0]}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">by GoodReads</h6>
-                          
+           
+                            <a id = "link" class = "link"> {{d[3]}} </a>
+                        
+                                
                    
                         </div>
                         </div>
                 </div>
             </div>
+          
             {% endfor %} 
         </div>
         {% endif %} 
@@ -110,8 +121,10 @@
                 console.log( "document loaded try to get the data load" );  
             
 
+                   
 
-
+                 
+                
                     var wordlist = [] 
                     var numlist = []
                     lst = document.getElementsByClassName("wordcloud")
@@ -141,6 +154,9 @@
                     }); 
                 } 
                 
+
+
+
             finalist=["romantic","awkward"]
 
                 $('#keyfield').tokenfield({
@@ -168,6 +184,51 @@
 
         </script>
 
+
+        <script>
+            var container = document.getElementsByClassName("imagediv");
+
+            var links = document.getElementsByClassName("link");
+
+            for (var i =0 ; i < links.length; i++) {
+
+                createlink= link[i].innerText
+
+                 $("a#link").on('click', function(){
+                window.location = createlink;    
+            });
+                console.log(createlink)
+            }
+           
+
+
+
+             var container = document.getElementsByClassName("imagediv");
+                    link_lst = document.getElementsByClassName("default_link")
+                    
+                    for (var i=0;i<link_lst.length;i++){
+                        links = link_lst[i].innerText
+
+                         newimage = ""
+                   
+                        if(links.length >=15){
+
+                            url_list = links.split(",")
+                            img_link =url_list[1].trim()  
+                            web_link =url_list[2].trim()
+                            newimage = "<img src=" + img_link + ">"
+                            console.log(newimage)
+                            $('#imagediv').append(newimage)   
+                            $('#showlink').append(web_link)
+                          
+                            console.log("HI")        
+
+                        }   
+                                 
+
+                    }
+
+        </script>
     
     </body>
 
