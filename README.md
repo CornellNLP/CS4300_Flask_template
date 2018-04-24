@@ -887,31 +887,38 @@ Now we want to deploy a Kubernetes pod with the image. This is defined by a `.ym
 
 
 ```yml
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1beta2
+kind: Deployment
 metadata:
   name: flask
-  labels:
-    name: flask
 spec:
-  containers:
-  - name: flask
-    image: ifilonenko/flask-template:v3
-    env:
-    - name: APP_SETTINGS
-      value: config.ProductionConfig
-    - name: DATABASE_URL
-      value: postgresql://localhost/my_app_db
-    ports:
-    - containerPort: 5000
+  selector:
+    matchLabels:
+      app: flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: flask
+        image: ifilonenko/flask-template:v3
+        env:
+        - name: APP_SETTINGS
+          value: config.ProductionConfig
+        - name: DATABASE_URL
+          value: postgresql://localhost/my_app_db
+        ports:
+        - containerPort: 5000
 ```
 
-As you can see we are naming this Pod `flask` and we are defining the image to be: `ifilonenko/flask-template:v3`. You customize this version here. You also set the environment variables here. Make sure to open up the port to `5000` so that you are able to expose that port via a Kubernetes service.
+As you can see we are naming this Pod and Deployment `flask` and we are defining the image to be: `ifilonenko/flask-template:v3`. You customize this version here. You also set the environment variables here. Make sure to open up the port to `5000` so that you are able to expose that port via a Kubernetes service. We are leverage a Deployment here so that we can update the deployment in real-time to edit the version tag on the image. (This is highly useful for swapping between prototypes) while the Deployment handles the A/B swap between versions, so that there is no down-time in your app. Furthermore, Deployments allow for your system to use a replica set (in the case that you want to scale up your app) but for now we will only have 1 replicat.
 
 ```bash
 # We will now launch this pod
 > kubectl create -f kubernetes/run-deployment.yml
-pod "flask" created
+deployment "flask" created
 # List pods
 > kubectl get pods
 NAME      READY     STATUS              RESTARTS   AGE
@@ -920,24 +927,43 @@ flask     0/1       ContainerCreating   0          18s
 > kubectl get pods
 NAME      READY     STATUS    RESTARTS   AGE
 flask     1/1       Running   0          1m
+> kubectl get deployments
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+flask     1         1         1            1           1m
 # Here we see the services running. The only one that is running is the Kubernetes Master
 > kubectl get svc
 NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.27.240.1   <none>        443/TCP   11m
 # Now we deploy the service for our pod: flask
-> kubectl expose pod flask --type=LoadBalancer
+> kubectl expose deployment flask --type=LoadBalancer
 service "flask" exposed
 > kubectl get svc
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-flask        LoadBalancer   10.27.250.228   <pending>     5000:30524/TCP   9s
+flask        LoadBalancer   10.27.248.200   <pending>     5000:31380/TCP   9s
 kubernetes   ClusterIP      10.27.240.1     <none>        443/TCP          11m
 # Wait a minute
 > kubectl get svc
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
-flask        LoadBalancer   10.27.250.228   35.194.88.37   5000:30524/TCP   52s
+flask        LoadBalancer   10.27.248.200   35.188.251.150 5000:31380/TCP   46s
 kubernetes   ClusterIP      10.27.240.1     <none>         443/TCP          12m
 ```
 
-Now if we go to: `35.194.88.37:5000` you can see the page up.
+Now if we go to: `35.188.251.150:5000` you can see the page up.
+
+### Updating your app in real time
+Now that you have your workflow setup. Let us say that you want to update your current version. After updating the files in the directory that houses your code (via git). You will push your production versions to docker with the familiar Docker command above:
+```bash
+# Note the v4 instead of the v3.. showing an updated version
+> docker build -t ifilonenko/flask-template:v4 -f kubernetes/Dockerfile .
+> docker push ifilonenko/flask-template:v4
+```
+With docker updated you now will update the deployment (only the deployment... the service is still running fine) live with the following command:
+```bash
+# This will take you to a vi portal which will
+# allow you to edit the run-deployment.yml file.
+# You simply need to update the version number on the image config and BOOM
+> kubectl edit deployment flask
+...
+```
 
 IT IS THAT EASY!!!
