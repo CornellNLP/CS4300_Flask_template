@@ -1,0 +1,5 @@
+flask:
+    image: ifilonenko/flask-template:v3
+    environment:
+    - APP_SETTINGS=config.ProductionConfig
+    - DATABASE_URL=postgresql://localhost/my_app_db
