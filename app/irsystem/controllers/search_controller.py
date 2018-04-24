@@ -160,7 +160,12 @@ def search():
 	keyword_input = request.args.get('keyword_search')
 
 	book_to_index = json.load(open("book_to_index.json"))
+	book_to_index = {key.strip() : value for key, value in book_to_index.iteritems()}
+
+
 	word_to_index = json.load(open("word_to_index.json"))
+
+
 
 	if title_input == None and keyword_input == None:
 		word_cloud_message = ''
@@ -180,7 +185,7 @@ def search():
 			else:
 				rel_keywords.append(keyword)
 		if len(top_books) == len(keywords): 
-			top_books_message = ''
+			top_books_message = 'All the keywords are not in our database.'
 		else:
 			top_books_message = "Top 15 books for the keyword are:"
 			word_list = []
