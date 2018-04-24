@@ -4,12 +4,9 @@ import pickle
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 
-# for plotting
-# import matplotlib
 import numpy as np
-# import matplotlib.pyplot as plt
 
-class SVD:
+class SVD(Object):
     @staticmethod
     # return jsons from startYear and startMonth to endYear and endMonth (inclusive)
     def getJsonFilePaths(startYear, startMonth, endYear, endMonth):

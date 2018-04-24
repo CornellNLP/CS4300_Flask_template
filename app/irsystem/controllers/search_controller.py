@@ -7,6 +7,8 @@ from nltk.corpus import wordnet
 from nltk import pos_tag
 from collections import Counter, defaultdict
 from app import app
+# from app.utils import SVD
+import numpy as np
 import flask, os, pickle, json
 
 lemmatiser = WordNetLemmatizer()
@@ -28,7 +30,7 @@ def search2():
 
   tokenizer = TreebankWordTokenizer()
   tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
-  tokens = add_stemmed_words(tokens)
+  tokens = expand_query(tokens)
 
   index, tokens = build_index(tokens)
   results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
@@ -36,27 +38,46 @@ def search2():
   return json.dumps(results)
 
 def get_wordnet_pos(treebank_tag):
-    if treebank_tag.startswith('J'):
-      return wordnet.ADJ
-    elif treebank_tag.startswith('V'):
-      return wordnet.VERB
-    elif treebank_tag.startswith('N'):
-      return wordnet.NOUN
-    elif treebank_tag.startswith('R'):
-      return wordnet.ADV
-    else:
-      return ''
+  if treebank_tag.startswith('J'):
+    return wordnet.ADJ
+  elif treebank_tag.startswith('V'):
+    return wordnet.VERB
+  elif treebank_tag.startswith('N'):
+    return wordnet.NOUN
+  elif treebank_tag.startswith('R'):
+    return wordnet.ADV
+  else:
+    return ''
 
-def add_stemmed_words(query_tokens):
+def closest_words(word_in, k, words_compressed, word_to_index, index_to_word):
+  if word_in not in word_to_index: return []
+  sims = words_compressed.dot(words_compressed[word_to_index[word_in], :])
+  asort = np.argsort(-sims)[:k + 1]
+  return [(index_to_word[i], sims[i] / sims[asort[0]]) for i in asort[1:]]
+
+def expand_query(query_tokens):
   # builds a list of tokens that are the stemmed versions of the word
   # see marcobonzanini.com/2015/01/26/stemming-lemmatisation-and-pos-tagging-with-python-and-nltk/
+
+  CLOSEST_WORDS = 2
   addtl_tokens = set([])
   tokens_pos = pos_tag(query_tokens)
+
+  words_compressed = app.config['words_compressed']
+  word_to_index = app.config['word_to_index']
+  index_to_word = app.config['index_to_word']
+
   for (token, pos_treebank) in tokens_pos:
+    # get stemmed words
     pos = get_wordnet_pos(pos_treebank)
     if pos == '':
       continue
     addtl_tokens.add(lemmatiser.lemmatize(token, pos=pos))
+
+    # use SVD to get related words
+    print closest_words(token, CLOSEST_WORDS, words_compressed, word_to_index, index_to_word)
+    for (word, _) in closest_words(token, CLOSEST_WORDS, words_compressed, word_to_index, index_to_word):
+      addtl_tokens.add(word)
 
   # LMFAO need to do this to ensure no overlap between addtl_tokens and query_tokens
   return list(set(query_tokens).union(addtl_tokens))
