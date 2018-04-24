@@ -60,10 +60,14 @@ class Home extends Component {
 			this.setState({
 				query : response.data
 			})
+			console.log("setting query");
 		})
 	}
 
 	getRelatedComments(input_query) {
+		if(input_query === "") {
+			input_query = this.suggestion;
+		}
 		this.setState({loading: true})
 		var arr = input_query.split(" ")
 		var qParams = arr.map(key =>key).join('&');
@@ -79,11 +83,14 @@ class Home extends Component {
 				hasSearched: true,
 				loading: false
 			})
-		})
+		}).catch(error => {
+			console.error("get related comments failed");
+		});
 	}
 
 	render() {
 		console.log(this.state.query.length)
+		console.log(this.state.hasSearched);
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
     return (
     	<div>
@@ -99,7 +106,8 @@ class Home extends Component {
 		      		<button id="submit_button" onClick={this.handleSubmit}><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
 		      	</label>
 		      </form>
-		      {this.state.hasSearched && !this.state.query.length ? (<p> Similar terms: {this.state.query.map((term, i) => {
+		      {this.state.hasSearched && this.state.query.length ? (<p> Similar terms: {this.state.query.map((term, i) => {
+						console.log("mapping");
 		      	return <span key={i}>{term[0]}</span>
 		      })} </p>) : null}
 		      </div>
