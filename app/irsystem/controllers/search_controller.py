@@ -14,15 +14,16 @@ from app.irsystem.models.books import *
 import json
 import os
 import csv
+import unicodedata
 
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
 def db_word_to_closest_books(word, ith, k = 15):
-	avg_word = np.zeros(200)
+	avg_word = np.zeros(100)
 	for w, i in zip(word, ith):
 		np_word = np.fromstring(w.vectors, sep= ', ')
-		td_np_word = np.reshape(np_word, (100,200))
+		td_np_word = np.reshape(np_word, (100,100))
 		np_word = td_np_word[i]
 		avg_word += np_word
 	avg_word /= len(word)
@@ -33,8 +34,8 @@ def db_word_to_closest_books(word, ith, k = 15):
 	print('before processing')
 	for book in query_result:
 		np_book = np.fromstring(book.vectors, sep = ', ')
-		num_books = len(np_book) / 200
-		td_np_book = np.reshape(np_book, (num_books, 200))
+		num_books = len(np_book) / 100
+		td_np_book = np.reshape(np_book, (num_books, 100))
 		dot_prod = np.dot(td_np_book, avg_word)
 		for i in range(num_books):
 			dot_products[book.start_index + i] = dot_prod[i]
@@ -52,14 +53,14 @@ def db_word_to_closest_books(word, ith, k = 15):
 
 def db_book_to_closest_words(book, ith, k = 5):
 	np_book = np.fromstring(book.vectors, sep= ', ')
-	td_np_book = np.reshape(np_book, (100,200))
+	td_np_book = np.reshape(np_book, (100,100))
 	np_book = td_np_book[ith]
 	query_result = Words.query.all()
 	dot_products = np.zeros(len(query_result*100))
 	for word in query_result:
 		np_word = np.fromstring(word.vectors, sep = ', ')
-		num_words = len(np_word) / 200
-		td_np_word = np.reshape(np_word, (num_words, 200))
+		num_words = len(np_word) / 100
+		td_np_word = np.reshape(np_word, (num_words, 100))
 		dot_prod = np.dot(td_np_word, np_book)
 		for i in range(num_words):
 			dot_products[word.start_index + i] = dot_prod[i]
@@ -133,14 +134,6 @@ def put_books_in_db(hash_factor = 100):
 	db.session.commit()
 	print('commited!')
 
-# @irsystem.route('/', methods=['GET'])
-# def search():
-# 	empty_db()
-# 	word_cloud_message = ''
-# 	top_books_message = ''
-# 	word_cloud = ['successfully deleted']
-# 	top_books = ['successfully deleted']
-# 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
 # @irsystem.route('/', methods=['GET'])
 # def delandadd():
@@ -151,9 +144,18 @@ def put_books_in_db(hash_factor = 100):
 # 	top_books_message = ''
 # 	word_cloud = ['successfully added']
 # 	top_books = ['successfully added']
+# 	available_words = []
+# 	available_books = []
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+
+
 @irsystem.route('/', methods=['GET'])
 def search():
+	available_words = json.load(open('words.json'))
+	available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
+	available_books = json.load(open('books.json'))
+	available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
+
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
@@ -204,4 +206,4 @@ def search():
 			b = Books.query.filter_by(start_index = int(i)/100*100).first()
 			word_cloud_message = 'Word cloud is: '	
 			word_cloud = db_book_to_closest_words(b, int(i) % 100)
-	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books, avail_keywords = available_words, avail_books = available_books)

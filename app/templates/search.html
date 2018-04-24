@@ -1,20 +1,20 @@
 <html>
+<body background= "flowerbook.jpg"   >
+
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: BookRec </p>
-            <p>Student Name: <br>
-              Hannah Lee <br>
-              Linda Lu <br>
-              Hyun Kyo Jung  <br>
-              Seyun Kim <br>
-              Jason Cho </p>
-        </div>
 
+        <link href = "/static/bootstrap-tokenfield.css" rel= "stylesheet" >
+        <link href = "/static/bootstrap-typeahead.css" rel = "stylesheet" > 
+        <link href = "/static/bootstrap-grid.css" rel = "stylesheet" >   
+        <link href = "/static/jquery-ui.theme.css" rel = "stylesheet" > 
+        <link href = "/static/jquery-ui.css" rel = "stylesheet" > 
+        <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
+
+    </head>
         <form class="form-inline global-search">
+
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
             B
             <font color=#EA4335>OO</font>
@@ -27,37 +27,168 @@
             <br><br>
 
             <div class="form-group">
-                <input id="input" type="text" name="title_search" class="form-control" placeholder="Input Book Title">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title" >
             </div>
             <button type="submit" class="btn btn-info"> title </button>
-        </form>
-        <form class="form-inline global-search">
-        {% if word_cloud %}
-            <h1>{{word_cloud_message}}</h1>
-            {% for d in word_cloud %}
-                <br>
-                <p>{{d}}</p>
+
+            {% for keyword in avail_keywords %}
+                <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
             {% endfor %}
-        {% endif %}
+
+            {% for book in avail_books %}
+                <div hidden class = "book" style="display: none;"> {{book}}</div>
+            {% endfor %}
+
         </form>
-
-
+     
+        <form class="form-inline global-search">
+        
+        {% if word_cloud %}
+            <h1 id = "wordcloudtext" style="display: none;" > {{word_cloud_message}}</h1>
+            {% for d in word_cloud %}  
+             <div id = "donewordcloud" > </div>
+            
+            <div hidden class = "wordcloud" style="display: none;"> {{d}}</div>
+          
+            {% endfor %}
+        {% endif %} 
+        
+        </form>
+     
+    
         <form class="form-inline global-search">
             <div class="form-group">
-                <input id="input" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword">
             </div>
             <button type="submit" class="btn btn-info"> keyword </button>
         </form>
-        <form class="form-inline global-search">
-        {% if top_books %}
-            <h1>{{top_books_message}}</h1>
-            {% for d in top_books %}
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
 
+
+      
+        
+        <form class="form-inline global-search">
+
+        {% if top_books %}
+        <div >
+            <h1  style="display:none;">{{top_books_message}}</h1>
+            {% for d in top_books %} 
+                    <div class="container">
+                        <div class="row align-items-center">
+                        <div class = "left"> 
+                         <div class="col-md-4 ">
+
+                             <img class="card-img-top d-flex align-items-center bg-light" src="hell.png" 
+                                onError="this.onerror=null;this.src='https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png'; this.width = 160 ; this.height = 160">
+                        </div>
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 hidden class = "booktitle" style="display: none;"> {{d}}</h5>
+                     
+                            <h5 class="card-title" >{{d}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">by GoodReads</h6>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            {% endfor %} 
+        </div>
+        {% endif %} 
+            
+        </form>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="/static/bootstrap-typeahead.js" > </script>
+        <script src ="/static/bootstrap-tokenfield.js" > </script> 
+
+        <script src = "/static/jquery-ui.js"> </script>
+        <script type="text/javascript" id="hello" src="/newbook_encode.js"></script> 
+        <script type="text/javascript" src="/static/jqcloud.js"></script> 
+        <script> 
+
+        $( document ).ready(function() {
+                console.log( "document loaded try to get the data load" );  
+            
+
+
+
+                    var wordlist = [] 
+                    var numlist = []
+                    lst = document.getElementsByClassName("wordcloud")
+
+                    if (lst.length ==13) {
+                        console.log(" Word not in index display create a prettier output") 
+                    } else {
+                    for (var i = 0; i < lst.length ; i++) { 
+                        tuple = lst[i].innerText 
+                        twowordlst = tuple.split(",") 
+                        word = twowordlst[0].substring(4, twowordlst[0].length-1)
+                     
+                        num= twowordlst[1].substring(0, twowordlst[1].length-1)  
+                        num = num.trim()   
+                        wordlist.push(word) 
+                        numlist.push(Number(num)) 
+                    }    
+             
+                    var weightlist =[] 
+                    for (var i = 0 ; i < wordlist.length ; i++) {
+                        weightlist.push({text : wordlist[i], weight :numlist[i]}) 
+                    }
+
+                $("#donewordcloud").jQCloud(weightlist, {
+                    width: 400,
+                    height: 300
+                    }); 
+                } 
+                
+            console.log("0");
+            keyword_list = document.getElementsByClassName("keyword")
+            console.log("1");
+            console.log(keyword_list);
+            console.log("2");
+            var keyword_array = []
+            for (var i = 0; i < keyword_list.length; i++){
+                keyword_array.push(keyword_list[i].innerText)
+            }
+            console.log("3");
+            book_list = document.getElementsByClassName("book")
+            console.log("4");
+            console.log(book_list);
+            console.log("5");
+            var book_array = []
+            for (var i = 0; i < book_list.length; i++){
+                book_array.push(book_list[i].innerText)
+            }
+            
+
+                $('#keyfield').tokenfield({
+                    autocomplete: {
+                        source: keyword_array 
+                    },
+                    noDuplicate: true ,
+                    minLength: 3,
+                    lookupLimit: 5
+                }
+                ); 
+
+
+                $('#titlefield').tokenfield({
+                    autocomplete: {
+                        source: book_array
+                    },
+                    noDuplicate: true ,
+                    minLength: 15,
+                    lookupLimit: 1
+                }
+                ); 
+
+        });  
+        </script>
     </body>
+
+
 
 </html>
