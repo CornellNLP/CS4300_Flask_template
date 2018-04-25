@@ -112,7 +112,20 @@ form {
     100% { transform: rotate(360deg); }
 }
 
+.load-more {
+  color: #3e6695;
+  font-weight: bold;
+  margin-top: 0.5%;
+  border: none;
+  background: none;
+  text-decoration: none;
+  margin-left: 17.5%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .footer {
+  margin-top: 2%;
   top: 100vh;
   left: 0;
   bottom: 0;

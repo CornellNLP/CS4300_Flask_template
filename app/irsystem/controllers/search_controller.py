@@ -204,7 +204,7 @@ def index_search(query_tokens, index, idf, doc_norms):
     if (scores[doc_id] > 0):
       filtered_scores[doc_id] = scores[doc_id]
 
-  output = sorted(filtered_scores.items(), key=lambda x: x[1], reverse=True)[:20]
+  output = sorted(filtered_scores.items(), key=lambda x: x[1], reverse=True)
 
   return [id_to_comment[str(comment[0])] for comment in output]
 
