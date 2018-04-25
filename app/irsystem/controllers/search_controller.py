@@ -37,6 +37,7 @@ def pre_db_word_to_closest_books(word, ith, k = 15):
 	for i in asort[1:]:
 		near_names = Books.query.filter_by(start_index = i/100*100).first().names
 		name = near_names.split('***')[i % 100]
+		name = name.encode("ascii", "ignore") 
 		top_k_books.append((name, avg_word[i]/avg_word[asort[0]]))
 	return top_k_books
 
@@ -299,8 +300,9 @@ def search(hash_factor = 1):
 				word_list.append(w)
 				ith_list.append(int(i)%hash_factor) 
 			for close_book in pre_db_word_to_closest_books(word_list, ith_list):
+				book_title = close_book[0]
 				each_book_list =[]
-				each_book_list.append(close_book)
+				each_book_list.append(book_title)
 				if close_book in book_image_url:
 					print("hellothere")
 					isbn= book_image_url[close_book]
