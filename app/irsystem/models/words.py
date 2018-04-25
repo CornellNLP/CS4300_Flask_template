@@ -4,7 +4,8 @@ class Words(Base):
   __tablename__ = 'words'
   start_index = db.Column(db.Integer, nullable=False)
   names = db.Column(db.Text, nullable=False)
-  vectors = db.Column(db.Text, nullable=False)
+  #vectors = db.Column(db.Text, nullable=False)
+  scores = db.Column(db.Text, nullable=False)
 
 
 

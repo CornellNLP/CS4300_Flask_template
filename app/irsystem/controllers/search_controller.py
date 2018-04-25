@@ -20,6 +20,26 @@ project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
 
+def pre_db_word_to_closest_books(word, ith, k = 15):
+	#this can be better
+	length = len(np.fromstring(word[0].scores, sep= ', '))
+	avg_word = np.zeros(length)
+	for w, i in zip(word, ith):
+		np_word = np.fromstring(w.scores, sep= ', ')
+		avg_word += np_word
+	avg_word /= len(word)
+	#argsort avg_word and take top  k 
+	avg_word = np.absolute(avg_word)
+	asort = np.argsort(-avg_word)[:k+1]
+	
+	top_k_books = []
+	#do we still have to do this? excluding the first one 
+	for i in asort[1:]:
+		near_names = Books.query.filter_by(start_index = i/100*100).first().names
+		name = near_names.split('***')[i % 100]
+		top_k_books.append((name, avg_word[i]/avg_word[asort[0]]))
+	return top_k_books
+
 def db_word_to_closest_books(word, ith, k = 15):
 	avg_word = np.zeros(100)
 	for w, i in zip(word, ith):
@@ -88,7 +108,7 @@ def create_tables():
 	db.create_all()
 
 #Create a book instance
-def put_books_in_db(hash_factor = 100):
+def put_books_and_words_in_db(hash_factor = 100):
 	#load the files
 	docs_compressed = pickle.load(open("docs.pkl", "rb"))
 
@@ -139,12 +159,81 @@ def put_books_in_db(hash_factor = 100):
 	db.session.commit()
 	print('commited!')
 
+def put_books_in_db(hash_factor = 100):
+	#load the files
+	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+	index_to_book = json.load(open("index_to_book.json"))
+	print('files all opened!')
+
+	num_doc = len(docs_compressed)
+	row_i = 0
+	while row_i < num_doc:
+		i = 0
+		hundred_vectors = ''
+		hundred_names   = ''
+		while row_i + i < num_doc and i < hash_factor:
+			if i == 0:
+				hundred_vectors += str(docs_compressed[row_i + i].tolist())[1:-1]
+				hundred_names += index_to_book[str(row_i + i)]
+			else:
+				hundred_vectors = hundred_vectors + ', ' + str(docs_compressed[row_i + i].tolist())[1:-1]
+				hundred_names = hundred_names + '***' + index_to_book[str(row_i + i)]
+			i+=1
+		b = Books(start_index = row_i, names = hundred_names, vectors = hundred_vectors)
+		db.session.add(b)
+		row_i += i
+	print('done with books!')
+	print('last row i was %s' % str(row_i-1))
+	db.session.commit()
+	print('commited!')
+
+#Create a book instance
+def precompute_put_words_in_db(hash_factor = 1):
+	#load the files
+	words_compressed = pickle.load(open("word2doc17.pkl", "rb"))										#1
+	index_to_word = json.load(open("index_to_word.json"))
+	print('files all opened!')
+
+	num_word = len(words_compressed)
+	row_i = 0
+	while row_i < num_word:
+		i = 0
+		scores = ''
+		names  = ''
+		while row_i + i < num_word and i < hash_factor:
+			if i == 0:
+				scores += str(words_compressed[row_i + i].tolist())[1:-1]
+				names += index_to_word[str(row_i + i + 4800)]										#2
+			else:
+				scores = scores + ', ' + str(words_compressed[row_i + i].tolist())[1:-1]
+				names = names + '***' + index_to_word[str(row_i + i + 4800)]						#3
+			i+=1
+		w = Words(start_index = row_i + 4800, names = names, scores = scores)						#4
+		db.session.add(w)
+		row_i += i
+	print(row_i + 4800)																				#5
+	print('done with words!')
+
+	db.session.commit()
+	print('commited!')
 
 # @irsystem.route('/', methods=['GET'])
 # def delandadd():
 # 	empty_db()
 # 	create_tables()
+# 	precompute_put_words_in_db()
 # 	put_books_in_db()
+# 	word_cloud_message = ''
+# 	top_books_message = ''
+# 	word_cloud = ['successfully added']
+# 	top_books = ['successfully added']
+# 	available_words = []
+# 	available_books = []
+# 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+
+# @irsystem.route('/', methods=['GET'])
+# def add_words_chunks():
+# 	precompute_put_words_in_db()
 # 	word_cloud_message = ''
 # 	top_books_message = ''
 # 	word_cloud = ['successfully added']
@@ -155,24 +244,30 @@ def put_books_in_db(hash_factor = 100):
 
 
 @irsystem.route('/', methods=['GET'])
-def search():
+def search(hash_factor = 1):
 	available_words = json.load(open('words.json'))
+	print('words.json opened!')
 	available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
+	print('stringified words!')
 	available_books = json.load(open('books.json'))
+	print('books.json opened!')
 	available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
+	print('stringified books!')
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search') 
 	print(title_input)
 
 	book_to_index = json.load(open("book_to_index.json"))
+	print('book_to_index.json opened!')
 	book_to_index = {key.strip() : value for key, value in book_to_index.iteritems()}
 
 
 	word_to_index = json.load(open("word_to_index.json"))
 	book_image_url =json.load(open("ISBN_100000_to_200000.json"))
+	print('word_to_index.json opened!')
 
-
+	#print(len(Words.query.all()))
 
 	if title_input == None and keyword_input == None:
 		word_cloud_message = ''
@@ -200,10 +295,10 @@ def search():
 			print(keyword_input)
 			for keyword in rel_keywords:
 				i = word_to_index[keyword]
-				w = Words.query.filter_by(start_index = int(i)/100*100).first()
+				w = Words.query.filter_by(start_index = int(i)/hash_factor*hash_factor).first()
 				word_list.append(w)
-				ith_list.append(int(i)%100) 
-			for close_book in db_word_to_closest_books(word_list, ith_list):
+				ith_list.append(int(i)%hash_factor) 
+			for close_book in pre_db_word_to_closest_books(word_list, ith_list):
 				each_book_list =[]
 				each_book_list.append(close_book)
 				if close_book in book_image_url:
@@ -229,7 +324,6 @@ def search():
 					
 				top_books.append(each_book_list)
 
-
 	else:
 		top_books_message = ""
 		top_books = []
@@ -239,7 +333,7 @@ def search():
 			word_cloud = ['The book is not in our database.']
 		else:
 			i = book_to_index[title_input]
-			b = Books.query.filter_by(start_index = int(i)/100*100).first()
+			b = Books.query.filter_by(start_index = int(i)/hash_factor*hash_factor).first()
 			word_cloud_message = 'Word cloud is: '	
-			word_cloud = db_book_to_closest_words(b, int(i) % 100)
+			word_cloud = db_book_to_closest_words(b, int(i) % hash_factor)
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books, avail_keywords = available_words, avail_books = available_books)
