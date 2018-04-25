@@ -224,7 +224,7 @@ def search():
 
 					each_book_list.append([])
 				else: 
-					errorlist = ["", "",""]
+					errorlist = [None ,None , None ]
 					each_book_list += errorlist
 					
 				top_books.append(each_book_list)

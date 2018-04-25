@@ -96,14 +96,17 @@
                          <div class="col-md-4 ">
                           
                             
-                            <div id= "imagediv" class="card-img-top d-flex align-items-center bg-light imagediv"></div>
+                            {% if d[1] %}
 
-                          
-                         
+                            <img class="card-img-top d-flex align-items-center bg-light" src={{d[1]}} height = 160 width = 160 > </img> 
+
+                            {% else %}
                             <img class="card-img-top d-flex align-items-center bg-light" src="hee.png"
                                 onError="this.onerror=null;this.src='https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png'; this.width = 160 ; this.height = 160">
 
-                            <div class="default_link" style ="display:none;">{{d[1]}}</div>
+                            <div class="default_link" style ="display:none;"> {{d[1]}}</div> 
+
+                            {% endif %}
 
                         </div>
                         </div>
@@ -207,22 +210,18 @@
 
             }      
 
-
             console.log("is this defined?")
             var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
                       queryTokenizer: Bloodhound.tokenizers.whitespace, 
-
-                      local : new_key_word
-                
+                      local : new_key_word             
                     });
             console.log(movies)
             console.log("moves bloodhound ever defined?")
                     movies.initialize();
                     console.log("typeahed.js")
                     $('#keyfield').tagsinput({
-                        typeaheadjs: {
-                      
+                        typeaheadjs: {                   
                             displayKey: 'value',
                             valueKey: 'name',
                             source: movies.ttAdapter(),
@@ -292,8 +291,7 @@
 
 
         <script>
-            var container = document.getElementsByClassName("imagediv");
-
+            
             var links = document.getElementsByClassName("link");
 
             for (var i =0 ; i < links.length; i++) {
