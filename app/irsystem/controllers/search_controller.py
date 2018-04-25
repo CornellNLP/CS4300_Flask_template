@@ -19,6 +19,7 @@ import unicodedata
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
+
 def pre_db_word_to_closest_books(word, ith, k = 15):
 	#this can be better
 	length = len(np.fromstring(word[0].scores, sep= ', '))
@@ -65,10 +66,13 @@ def db_word_to_closest_books(word, ith, k = 15):
 	asort = np.argsort(-dot_products)[:k+1]
 
 	top_k_books = []
+	top_k_sim_scores = []
 	for i in asort[1:]:
 		near_names = Books.query.filter_by(start_index = i/100*100).first().names
-		name = 	near_names.split('***')[i % 100]
-		top_k_books.append((name, dot_products[i]/dot_products[asort[0]]))
+		name = near_names.split('***')[i % 100]
+		name =name.encode('ascii','ignore')
+		top_k_books.append(name)
+		top_k_sim_scores.append(dot_products[i]/dot_products[asort[0]])
 	return top_k_books
 
 def db_book_to_closest_words(book, ith, k = 5):
@@ -107,6 +111,7 @@ def create_tables():
 def put_books_and_words_in_db(hash_factor = 100):
 	#load the files
 	docs_compressed = pickle.load(open("docs.pkl", "rb"))
+
 	index_to_book = json.load(open("index_to_book.json"))
 	words_compressed = pickle.load(open("words.pkl", "rb"))
 	index_to_word = json.load(open("index_to_word.json"))
@@ -250,7 +255,8 @@ def search(hash_factor = 1):
 	print('stringified books!')
 
 	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search')
+	keyword_input = request.args.get('keyword_search') 
+	print(title_input)
 
 	book_to_index = json.load(open("book_to_index.json"))
 	print('book_to_index.json opened!')
@@ -258,6 +264,7 @@ def search(hash_factor = 1):
 
 
 	word_to_index = json.load(open("word_to_index.json"))
+	book_image_url =json.load(open("ISBN_100000_to_200000.json"))
 	print('word_to_index.json opened!')
 
 	#print(len(Words.query.all()))
@@ -282,7 +289,7 @@ def search(hash_factor = 1):
 		if len(top_books) == len(keywords): 
 			top_books_message = 'All the keywords are not in our database.'
 		else:
-			top_books_message = "Top 15 books for the keyword are:"
+			top_books_message = "Top 10 books for the keyword are:"
 			word_list = []
 			ith_list = []
 			print(keyword_input)
@@ -291,9 +298,31 @@ def search(hash_factor = 1):
 				w = Words.query.filter_by(start_index = int(i)/hash_factor*hash_factor).first()
 				word_list.append(w)
 				ith_list.append(int(i)%hash_factor) 
-			#for close_book in db_word_to_closest_books(word_list, ith_list):
 			for close_book in pre_db_word_to_closest_books(word_list, ith_list):
-				top_books.append(close_book)
+				each_book_list =[]
+				each_book_list.append(close_book)
+				if close_book in book_image_url:
+					print("hellothere")
+					isbn= book_image_url[close_book]
+					print("notisbn")
+					newisbn =[]
+					for nums in isbn[:2] : 
+						url = "http://covers.openlibrary.org/b/isbn/" + nums +"-M.jpg"
+						url=url.encode('ascii','ignore')
+						print(url)
+						newisbn.append(url)
+					link=isbn[2].encode('ascii','ignore')
+					link ="http://www.goodreads.com/book/show/" + link
+					newisbn.append(link)
+					for nounicode in newisbn: 
+						each_book_list.append(nounicode)
+
+					each_book_list.append([])
+				else: 
+					errorlist = [None ,None , None ]
+					each_book_list += errorlist
+					
+				top_books.append(each_book_list)
 
 	else:
 		top_books_message = ""

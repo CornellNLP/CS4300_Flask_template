@@ -11,6 +11,13 @@ text-align:center;
 body {
 padding-top: 15%;
 padding-bottom: 15px;
+
+}
+
+
+h1.wordcloudtext{
+ 
+    color : transparent;
 }
 .global-search {
 text-align:center;
@@ -35,4 +42,68 @@ border: none
 }
 .step-links a{
 color: #4285F4;
+} 
+h5.card-title {
+    color: #4285F4;
+    margin-bottom: 8px;
 }
+h6.card-subtitle {
+    font-size: 14px;
+}
+p.card-text {
+    font-size: 12px;
+}
+
+.form-control::-webkit-input-placeholder{
+color:white;
+letter-spacing: 1px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+padding-left:40px;
+ }
+
+.bg {
+ /* The image used */
+    background: url("/image/book_image.jpg") no-repeat center cover;
+    /* Full height */
+   
+    padding-top:0;
+
+
+    background-size: contain; 
+	 /* Center and scale the image nicely */
+    background-attachment:fixed;
+    overflow: hidden;
+
+    /*background-image: no-repeat; */
+    /*background-position: center; */
+    /*background-repeat: no-repeat; */
+  
+}
+
+#transparent{
+  background-color: rgba(239, 224, 185, .8);
+  border-radius:30px;
+  padding:10px;
+  margin-top:4%;
+  margin-left:20%;
+  margin-right:20%;
+
+}
+
+#dialog-window {
+  height: 200px;
+  border: 1px black solid;
+}
+
+#scrollable-content {
+  height: 180px;
+  overflow: auto;
+  background-color: blue;
+}
+
+#footer {
+  height: 20px;
+  background-color: green;
+}
+
+
