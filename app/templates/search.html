@@ -210,9 +210,7 @@
 
             }      
 
-            console.log(new_key_word)
-            var lst = 
-
+        
             console.log("is this defined?")
             var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
@@ -242,20 +240,46 @@
 
                 ); 
 
-            console.log("hasitbeenfinished?")
 
 
+            var new_book_word = []
+            for ( var i =0 ; i < book_array.length ; i ++ ) { 
+                word = book_array[i].trim() 
+             
+                new_book_word.push({ "value" : word , "name" : word })
+
+            }    
 
 
-                $('#lolzfield').tokenfield({
-                    autocomplete: {
-                        source: keyword_array 
-                    },
-                    noDuplicate: true ,
-                    minLength: 3,
-                    lookupLimit: 5
+      var titles = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace, 
+
+                      local : new_book_word
+                
+                    });
+
+      titles.initialize() 
+
+        $('#titlefield').tagsinput({
+                        typeaheadjs: {
+                      
+                            displayKey: 'value',
+                            valueKey: 'name',
+                            source: titles.ttAdapter(),
+                            hint: true,
+                            minLength: 1 ,
+                            limit : 10
+                        },
+                    freeinput : false ,
+                    maxTags : 1
+
                 }
+
                 ); 
+
+
+
 
 
                 $('#lolzzfield').tokenfield({
