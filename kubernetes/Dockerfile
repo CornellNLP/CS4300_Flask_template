@@ -13,7 +13,7 @@ ADD book_to_index.json /service/book_to_index.json
 ADD books.json /service/books.json
 ADD word_to_index.json /service/word_to_index.json
 ADD words.json /service/words.json
-
+ADD ISBN_100000_to_200000.json /service/ISBN_100000_to_200000.json
 WORKDIR /service/
 RUN pip install -r requirements.txt
 CMD python -u app.py $APP_SETTINGS $DATABASE_URL
