@@ -95,11 +95,11 @@
                         <div class = "left"> 
                          <div class="col-md-4 ">
                           
-                            {% if d[2] %}
+                            
                             <div id= "imagediv" class="card-img-top d-flex align-items-center bg-light imagediv"></div>
 
                           
-                            {% endif%}
+                         
                             <img class="card-img-top d-flex align-items-center bg-light" src="hee.png"
                                 onError="this.onerror=null;this.src='https://s.gr-assets.com/assets/icons/goodreads_icon_1000x1000-aed808dec2093e20867b35cd56d9862d.png'; this.width = 160 ; this.height = 160">
 
@@ -115,9 +115,6 @@
                                 
                             <a id = "link" class = "link" > {{d[3]}}
                             </a> 
-
-
-
 
                             <a id = "newlink" class = "newlink"  >  newbutton 
                             </a>   
@@ -210,7 +207,7 @@
 
             }      
 
-        
+
             console.log("is this defined?")
             var movies = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
@@ -239,7 +236,6 @@
                 }
 
                 ); 
-
 
 
             var new_book_word = []
