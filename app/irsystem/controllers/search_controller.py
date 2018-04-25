@@ -162,7 +162,8 @@ def search():
 	available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
 
 	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search')
+	keyword_input = request.args.get('keyword_search') 
+	print(keyword_input)
 
 	book_to_index = json.load(open("book_to_index.json"))
 	book_to_index = {key.strip() : value for key, value in book_to_index.iteritems()}
@@ -183,7 +184,7 @@ def search():
 		word_cloud_message = ''
 		word_cloud = []
 		top_books = []
-		keywords = keyword_input.split(' ')
+		keywords = keyword_input.split(',')
 		rel_keywords = []
 		for keyword in keywords:
 			if keyword not in word_to_index.keys():
