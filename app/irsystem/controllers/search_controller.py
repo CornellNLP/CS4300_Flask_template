@@ -163,7 +163,7 @@ def search():
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search') 
-	print(keyword_input)
+	print(title_input)
 
 	book_to_index = json.load(open("book_to_index.json"))
 	book_to_index = {key.strip() : value for key, value in book_to_index.iteritems()}

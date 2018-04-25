@@ -244,12 +244,11 @@
 
             var new_book_word = []
             for ( var i =0 ; i < book_array.length ; i ++ ) { 
-                word = book_array[i].trim() 
+                word = book_array[i].trim()
              
                 new_book_word.push({ "value" : word , "name" : word })
 
             }    
-
 
       var titles = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
@@ -258,7 +257,6 @@
                       local : new_book_word
                 
                     });
-
       titles.initialize() 
 
         $('#titlefield').tagsinput({
@@ -268,11 +266,11 @@
                             valueKey: 'name',
                             source: titles.ttAdapter(),
                             hint: true,
-                            minLength: 1 ,
-                            limit : 10
+                            minLength: 10 ,
+                            limit : 5
                         },
                     freeinput : false ,
-                    maxTags : 1
+                    maxTags : 2
 
                 }
 
