@@ -272,7 +272,7 @@ def search(hash_factor = 1):
 		word_cloud_message = ''
 		word_cloud = []
 		top_books = []
-		keywords = keyword_input.split(' ')
+		keywords = keyword_input.split(',')
 		rel_keywords = []
 		for keyword in keywords:
 			if keyword not in word_to_index.keys():

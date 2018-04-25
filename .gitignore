@@ -1,3 +1,7 @@
+vagrant/
+Vagrantfile
+Vagrantfile
+.vagrant/
 venv
 *.pyc
 migrations 
