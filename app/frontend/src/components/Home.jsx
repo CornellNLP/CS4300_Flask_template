@@ -12,7 +12,6 @@ class Home extends Component {
 		this.state = {
 			value: '',
 			data : [],
-			query: [],
 			numShowing: DEFAULT_NUM,
 			hasSearched: false,
 			loading : false,
@@ -24,8 +23,7 @@ class Home extends Component {
     this.showMore = this.showMore.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.getRelatedComments = this.getRelatedComments.bind(this)
-		this.getRelatedSearchTerms = this.getRelatedSearchTerms.bind(this)
+		this.getRelatedComments = this.getRelatedComments.bind(this);
 	}
 
 	componentWillMount(){
@@ -53,21 +51,6 @@ class Home extends Component {
 		this.getRelatedComments(submission)
 	}
 
-	getRelatedSearchTerms(input_query) {
-		var arr = input_query.split(" ")
-		var qParams = arr.map(key =>key).join('&');
-		console.log('running related query fetch')
-		axios.get('/svd', {
-				params: { query: qParams }
-			})
-		.then(response => {
-			console.log(response)
-			this.setState({
-				query : response.data
-			})
-		})
-	}
-
 	getRelatedComments(input_query) {
 		if(input_query === "") {
 			input_query = this.suggestion;
@@ -80,7 +63,6 @@ class Home extends Component {
 				params: { query: qParams }
 			})
 		.then(response => {
-			this.getRelatedSearchTerms(input_query)
 			console.log(response)
 			this.setState({
 				data: response.data,
@@ -102,9 +84,6 @@ class Home extends Component {
 
 	render() {
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
-		let terms = this.state.query.map((term, i) => { return term[0] });
-  	terms = Array.from(new Set(terms));
-  	let termList = terms.join(", ");
     return (
     	<div>
     		<div>
@@ -124,19 +103,18 @@ class Home extends Component {
 			      </form>
 		      </div>
 		      <div>
-				      {this.state.hasSearched && this.state.query.length ? (<div className="related"> Similar terms: { termList } </div>) : null}
-				      {
-				      	this.state.loading ? (<div className="loader"></div>) :
-				      	(
-				      		data.slice(0, this.state.numShowing).map((comment, i) => {
-				      		return <Result key={comment.id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>})
-			      		)
-				      }
-				      {
-				      	data.length && !this.state.loading ?
-				      		<button className="load-more" onClick={this.showMore}>Load more comments ({data.length - this.state.numShowing})</button> :
-				      		null
-				    	}
+			      {
+			      	this.state.loading ? (<div className="loader"></div>) :
+			      	(
+			      		data.slice(0, this.state.numShowing).map((comment, i) => {
+			      		return <Result key={comment[0].id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>})
+		      		)
+			      }
+			      {
+			      	data.length && !this.state.loading ?
+			      		<button className="load-more" onClick={this.showMore}>Load more comments ({data.length - this.state.numShowing})</button> :
+			      		null
+			    	}
 		      </div>
 	      </div>
 	    	<div className="footer">

@@ -8,15 +8,23 @@ class Result extends Component {
     this.state = {
       expanded: false,
     }
+    this.roundNearest = this.roundNearest.bind(this);
+  }
+
+  roundNearest(val) {
+    let absVal = Math.abs(val);
+    return Math.round(100*absVal)/100;
   }
 
   render() {
-  	let comment = this.props.comment;
+  	let comment = this.props.comment[0];
+    let breakdown = this.props.comment[1];
+    let irScore = this.roundNearest(breakdown[breakdown.length -1]);
     return (
     	<div className="comment" style={{backgroundColor: this.props.style}}>
     		<div className="comment-header">
     			<span className="author" ><a href={"http://reddit.com/u/" + comment.author} target="_blank">{comment.author}</a></span>
-    			<span className="score">&nbsp; {comment.score} points</span>
+    			<span className="score">&nbsp; {comment.score} points &nbsp; IR score: {irScore}</span>
     		</div>
         {
           !this.state.expanded ?
