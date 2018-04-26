@@ -8,9 +8,18 @@
             background-attachment: fixed;
             background-size: cover;
           }
-          
 
-
+     input[type="text"]
+    {
+       min-width: 500px;
+        min-height:40px; 
+       max-width: 800px ;
+     }
+     button[type="submit"]{
+         min-height:45px;
+     
+    }
+    
     </style>
 
     <head>
@@ -42,7 +51,7 @@
             <br><br>
 
             <div class="form-group">
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title" >
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title"  width = "500px">
             </div>
 
             <button type="submit" class="btn btn-info"> Go </button>
@@ -72,7 +81,7 @@
         <form class="form-inline global-search">
             <div class="form-group"> 
          
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword"> 
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword" width = "500px"> 
                 
             </div>
             <button type="submit" class="btn btn-info"> Go </button>
