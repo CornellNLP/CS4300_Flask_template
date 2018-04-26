@@ -8,12 +8,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 input[type=text]{
   background: #d2e3f6;
-	width: 60%;
+	width: 75%;
   border: none;
   border-bottom: 1px solid black;
 	padding: 12px 20px;
@@ -39,9 +39,12 @@ label{
 .title{
 	font-size: 100px;
 	text-align: center;
-	padding-right: 10%;
 	font-family: 'VAG Rounded';
 	font-weight: bold;
+}
+
+.info {
+  font-weight: 550;
 }
 
 .related {

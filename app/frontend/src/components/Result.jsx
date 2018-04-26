@@ -20,10 +20,13 @@ class Result extends Component {
     		</div>
         {
           !this.state.expanded ?
-          <Truncate lines={3} ellipsis={<div>...<button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
+          <Truncate lines={3} ellipsis={<div><div>...</div><button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
                   {comment.body}
           </Truncate> :
-          <p>{comment.body}<button onClick={() => this.setState({expanded: false})}>read less</button></p>
+          <div>
+            <p>{comment.body}</p>
+            <button onClick={() => this.setState({expanded: false})}>read less</button>
+          </div>
         }
 	    	<a className="permalink" href={comment.permalink} target="_blank">permalink</a>
         <a className="permalink" href={comment.link_id} target="_blank">&nbsp; thread</a>

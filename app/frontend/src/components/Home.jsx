@@ -111,7 +111,9 @@ class Home extends Component {
     			<div className="header">
 			      <form>
 			      	<label>
-			      		<p className = "title">learnddit</p>
+			      		<p className = "title text-center">learnddit</p>
+			      		<p className = "info text-center">see what's worked for redditors to learn</p>
+			      		<p className = "info text-center">search for whatever you've wanted to learn and we'll tell you how <a href="https://reddit.com" target="_blank">reddit</a> users think you should learn it</p>
 			      		{this.state.errored ? <div className="alert alert-danger">Failed to retrieve results!</div> : null}
 			      		<span>
 			      		I want to learn how to...
