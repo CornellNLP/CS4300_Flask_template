@@ -852,7 +852,7 @@ flask:
     ports:
       - "5000:5000"
     environment:
-    - APP_SETTINGS=config.ProductionConfig
+    - APP_SETTINGS=config.DevelopmentConfig
     - DATABASE_URL=postgresql://localhost/my_app_db
 ```
 And can be run with the following:
@@ -929,7 +929,7 @@ spec:
         image: ifilonenko/flask-template:v3
         env:
         - name: APP_SETTINGS
-          value: config.ProductionConfig
+          value: config.DevelopmentConfig
         - name: DATABASE_URL
           value: postgresql://localhost/my_app_db
         ports:

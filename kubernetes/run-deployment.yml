@@ -17,7 +17,7 @@ spec:
         image: ifilonenko/flask-template:v3
         env:
         - name: APP_SETTINGS
-          value: config.ProductionConfig
+          value: config.DevelopmentConfig
         - name: DATABASE_URL
           value: postgresql://localhost/my_app_db
         ports:
