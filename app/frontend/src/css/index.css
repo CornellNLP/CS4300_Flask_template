@@ -60,6 +60,14 @@ label{
 	/*margin: 10px 10px;*/
 }
 
+.comment button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3e6695;
+  text-decoration: underline;
+}
+
 .comment-header {
 	font-size: 13px;
 	margin-bottom: 5px;

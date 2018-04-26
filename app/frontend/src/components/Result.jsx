@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import Truncate from 'react-truncate';
 
 class Result extends Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      expanded: false,
+    }
   }
 
   render() {
@@ -14,7 +18,13 @@ class Result extends Component {
     			<span className="author" ><a href={"http://reddit.com/u/" + comment.author} target="_blank">{comment.author}</a></span>
     			<span className="score">&nbsp; {comment.score} points</span>
     		</div>
-	    	<p>{comment.body}</p>
+        {
+          !this.state.expanded ?
+          <Truncate lines={3} ellipsis={<div>...<button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
+                  {comment.body}
+          </Truncate> :
+          <p>{comment.body}<button onClick={() => this.setState({expanded: false})}>read less</button></p>
+        }
 	    	<a className="permalink" href={comment.permalink} target="_blank">permalink</a>
         <a className="permalink" href={comment.link_id} target="_blank">&nbsp; thread</a>
 	    	{/*<a className="permalink" href={"http://reddit.com/" + comment.subreddit} target="_blank"> {comment.subreddit}</a>*/}
