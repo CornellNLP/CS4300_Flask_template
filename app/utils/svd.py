@@ -3,10 +3,10 @@ import json
 import pickle
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
-
 import numpy as np
+from nltk.stem import PorterStemmer
 
-class SVD(Object):
+class SVD:
     @staticmethod
     # return jsons from startYear and startMonth to endYear and endMonth (inclusive)
     def getJsonFilePaths(startYear, startMonth, endYear, endMonth):
@@ -14,8 +14,9 @@ class SVD(Object):
         year = startYear
         month = startMonth
 
-        while year <= endYear:
+        while year < endYear:
             if year == 2017 and month == 8: # for some reason we don't have this json
+                month += 1
                 continue
             jsonFiles.append("Parsed JSONs/RC_{0}-{1:0>2}.json".format(year,month))
             month += 1
@@ -25,6 +26,7 @@ class SVD(Object):
 
         while month <= endMonth and month <= 12:
             if year == 2017 and month == 8: # for some reason we don't have this json
+                month += 1
                 continue
             jsonFiles.append("Parsed JSONs/RC_{0}-{1:0>2}.json".format(year,month))
             month += 1
@@ -34,8 +36,9 @@ class SVD(Object):
     @staticmethod
     def getTermDocMatrix(vectorizer):
         comments = []
-        jsonFilePaths = SVD.getJsonFilePaths(2016, 1, 2016, 1)
+        jsonFilePaths = SVD.getJsonFilePaths(2016, 1, 2018, 1)
         for filePath in jsonFilePaths:
+            print("Opening %s" % filePath)
             with open(filePath, 'r') as f:
                 rawJson = json.load(f)
                 comments += [c["body"] for c in rawJson if c["subreddit"] == "IWantToLearn"]
@@ -60,35 +63,46 @@ class SVD(Object):
 if __name__ == "__main__":
     vectorizer = TfidfVectorizer(stop_words='english', max_df=.7,
                                  min_df=75)
+    folder = "Matrices"
+
+    print("Getting term doc matrix...")
     td_matrix = SVD.getTermDocMatrix(vectorizer)
+    print("Got term doc matrix!")
+    print("Saving term doc matrix...")
+    np.save(folder + "/term_doc_matrix.npy", td_matrix)
+    print("Saved term doc matrix!")
 
-    #save the term-doc matrix in a file
-    np.save("term_doc_matrix.npy", td_matrix)
-
+    print("Getting svd matrices..")
     words_compressed, docs_compressed = SVD.getSVDMatrices(td_matrix)
+    print("Got svd matrices!")
+    print("Saving docs_compressed...")
+    np.save(folder + "/docs_compressed.npy", docs_compressed)
+    print("Saved docs_compressed!")
 
-    np.save("docs_compressed.npy", docs_compressed)
-
-    # print(words_compressed.shape)
-    # print(docs_compressed.shape)
-
+    print("Getting word_to_index...")
     word_to_index = vectorizer.vocabulary_
+    print("Got word_to_index!")
+
+    print("Getting index_to_word...")
     index_to_word = {i: t for t, i in word_to_index.iteritems()}
+    print("Got index_to_word!")
 
-    word_to_index_file = open("word_to_index.pkl","wb")
+    print("Saving word_to_index...")
+    word_to_index_file = open(folder + "/word_to_index.pkl","wb")
     pickle.dump(word_to_index, word_to_index_file)
+    print("Saved word_to_index!")
 
-    index_to_word_file = open("index_to_word.pkl","wb")
+    print("Saving index_to_word...")
+    index_to_word_file = open(folder + "/index_to_word.pkl","wb")
     pickle.dump(index_to_word, index_to_word_file)
+    print("Saved index_to_word!")
 
+    print("Normalizing words_compressed...")
     words_compressed = normalize(words_compressed, axis=1)
+    print("Normalized words_compressed!")
+    print("Saving words_compressed...")
+    np.save(folder + "/words_compressed.npy", words_compressed)
+    print("Saved words_compressed!")
 
-    np.save("words_compressed.npy", words_compressed)
-
-    # print(type(words_compressed))
-    # print(words_compressed.dtype)
-    # print(type(docs_compressed))
-    # print(docs_compressed.dtype)
-    # print({k: word_to_index[k] for k in word_to_index.keys()[:10]})
-
-    # print(SVD.closest_words("kids", 10, words_compressed, word_to_index, index_to_word))
+    print({k: word_to_index[k] for k in word_to_index.keys()[:10]})
+    print(SVD.closest_words("piano", 10, words_compressed, word_to_index, index_to_word))
