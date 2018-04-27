@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: flask
+spec:
+  selector:
+    matchLabels:
+      app: flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: flask
+        image: bookrec/flask:v1
+        env:
+        - name: APP_SETTINGS
+          value: config.ProductionConfig
+        - name: DATABASE_URL
+          value: postgresql://localhost/my_app_db
+        ports:
+        - containerPort: 5000
