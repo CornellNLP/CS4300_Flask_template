@@ -1,10 +1,10 @@
-from . import *  
-import numpy as np 
-import pickle 
-import numpy as np 
+from . import *
+import numpy as np
+import pickle
+import numpy as np
 import json
 #import zipfile
-#import Collections 
+#import Collections
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
@@ -152,9 +152,11 @@ def put_books_in_db(hash_factor = 100):
 # 	available_words = []
 # 	available_books = []
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
-
-
-@irsystem.route('/', methods=['GET'])
+@irsystem.route('/secondpage', methods=['GET'])
+def secondpage():
+	return render_template("secondpage.html")
+	
+@irsystem.route('/main', methods=['GET'])
 def search():
 	available_words = json.load(open('words.json'))
 	available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
@@ -162,7 +164,7 @@ def search():
 	available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
 
 	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search') 
+	keyword_input = request.args.get('keyword_search')
 	print(title_input)
 
 	book_to_index = json.load(open("book_to_index.json"))
@@ -180,7 +182,7 @@ def search():
 		word_cloud = []
 		top_books = []
 
-	elif keyword_input is not None: 
+	elif keyword_input is not None:
 		word_cloud_message = ''
 		word_cloud = []
 		top_books = []
@@ -191,7 +193,7 @@ def search():
 				top_books.append(keyword + " is not in our database.")
 			else:
 				rel_keywords.append(keyword)
-		if len(top_books) == len(keywords): 
+		if len(top_books) == len(keywords):
 			top_books_message = 'All the keywords are not in our database.'
 		else:
 			top_books_message = "Top 10 books for the keyword are:"
@@ -202,7 +204,7 @@ def search():
 				i = word_to_index[keyword]
 				w = Words.query.filter_by(start_index = int(i)/100*100).first()
 				word_list.append(w)
-				ith_list.append(int(i)%100) 
+				ith_list.append(int(i)%100)
 			for close_book in db_word_to_closest_books(word_list, ith_list):
 				each_book_list =[]
 				each_book_list.append(close_book)
@@ -211,7 +213,7 @@ def search():
 					isbn= book_image_url[close_book]
 					print("notisbn")
 					newisbn =[]
-					for nums in isbn[:2] : 
+					for nums in isbn[:2] :
 						url = "http://covers.openlibrary.org/b/isbn/" + nums +"-M.jpg"
 						url=url.encode('ascii','ignore')
 						print(url)
@@ -219,14 +221,14 @@ def search():
 					link=isbn[2].encode('ascii','ignore')
 					link ="http://www.goodreads.com/book/show/" + link
 					newisbn.append(link)
-					for nounicode in newisbn: 
+					for nounicode in newisbn:
 						each_book_list.append(nounicode)
 
 					each_book_list.append([])
-				else: 
+				else:
 					errorlist = [None ,None , None ]
 					each_book_list += errorlist
-					
+
 				top_books.append(each_book_list)
 
 
@@ -240,6 +242,6 @@ def search():
 		else:
 			i = book_to_index[title_input]
 			b = Books.query.filter_by(start_index = int(i)/100*100).first()
-			word_cloud_message = 'Word cloud is: '	
+			word_cloud_message = 'Word cloud is: '
 			word_cloud = db_book_to_closest_words(b, int(i) % 100)
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books, avail_keywords = available_words, avail_books = available_books)
