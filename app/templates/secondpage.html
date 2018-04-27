@@ -1,6 +1,137 @@
-<html>
-  <body>
-    <div> hello there </div>
-    <a class="btn btn-lg btn-success" href="main"> Refresh </a>
-  </body>
+
+<html> 
+
+<style> 
+ 
+ .containerimage {
+            position: relative;
+            display: flex;     
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .containerimage:hover .image {
+            opacity: 0.3;
+        }
+
+        .containerimage:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            color: black;
+            font-size: 200%;
+            font-family: sans-serif;
+            padding: 16px 32px;
+        }
+
+</style>
+<body> 
+
+<div class="container"  >
+    <div style = "position: relative;
+top: -22px; "> 
+</div>
+
+   
+    <div > 
+    <center style = "margin-top : 8% ; margin-bottom: 6%;  font-size: 40">Bootstrap 4 Five Columns</center>  
+    </div>
+ 
+    <div style = "position: relative" > 
+
+    <div class="row" >
+     
+            <div class = "container" style = "display: flex;
+    justify-content:space-around ; 
+    margin-bottom: 100px" > 
+            <div ></div>
+
+            <div class ="containerimage"> 
+            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <p>Title:</p>
+                <p>Author:</p>
+                <p>Average Rating:</p>
+                <p>Book Description: </p>
+            </div>
+            </div>
+        </div>
+
+
+
+     <div class ="containerimage"> 
+            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <p>Title:</p>
+                <p>Author:</p>
+                <p>Average Rating:</p>
+                <p>Book Description: </p>
+            </div>
+        </div>
+        </div>
+
+        <div class ="containerimage"> 
+            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <p>Title:</p>
+                <p>Author:</p>
+                <p>Average Rating:</p>
+                <p>Book Description: </p>
+            </div>
+        </div>
+        </div>
+            <div> </div>
+            </div>
+            
+
+        <div class="col-sm-6 col-md-6 col-xs-12 image-container" style = "display: flex;
+    justify-content:space-between; 
+    position:relative; margin-bottom: 100px">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+             <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+        </div>
+        <div class="col">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+             <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+
+        </div>
+        <div class="col">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid"  width = "300px" height = "300px">
+        </div>
+        <div class="col">
+            <img src="//placehold.it/640x480" class="img-fluid" width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid" width = "300px" height = "300px">
+            <img src="//placehold.it/640x480" class="img-fluid" width = "300px" height = "300px">
+        </div>
+    </div>
+</div>
+ </div>
+</body>
 </html>
+   
