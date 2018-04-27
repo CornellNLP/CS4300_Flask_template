@@ -1,7 +1,7 @@
-from . import *  
-import numpy as np 
-import pickle 
-import numpy as np 
+from . import *
+import numpy as np
+import pickle
+import numpy as np
 import json
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
@@ -44,9 +44,12 @@ net_id = "Hyun Kyo Jung: hj283"
 # 	available_books = []
 # 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-
-@irsystem.route('/', methods=['GET'])
-def search(hash_factor = 1):
+@irsystem.route('/secondpage', methods=['GET'])
+def secondpage():
+	return render_template("secondpage.html")
+	
+@irsystem.route('/main', methods=['GET'])
+def search():
 	available_words = json.load(open('words.json'))
 	available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
 	available_books = json.load(open('books.json'))
@@ -54,8 +57,7 @@ def search(hash_factor = 1):
 
 	#author_input = request.args.get('author_search')
 	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search') 
-
+	keyword_input = request.args.get('keyword_search')
 	book_to_index = json.load(open("book_to_index.json"))
 	book_to_index = {key.strip() : value for key, value in book_to_index.iteritems()}
 
@@ -72,7 +74,7 @@ def search(hash_factor = 1):
 		word_cloud = []
 		top_books = []
 
-	elif keyword_input is not None: 
+	elif keyword_input is not None:
 		word_cloud_message = ''
 		word_cloud = []
 		top_books = []
@@ -83,7 +85,7 @@ def search(hash_factor = 1):
 				top_books.append(keyword + " is not in our database.")
 			else:
 				rel_keywords.append(keyword)
-		if len(top_books) == len(keywords): 
+		if len(top_books) == len(keywords):
 			top_books_message = 'All the keywords are not in our database.'
 		else:
 			top_books_message = "Top 10 books for the keyword are:"
@@ -95,6 +97,7 @@ def search(hash_factor = 1):
 				i = word_to_index[keyword]
 				w = Word.query.filter_by(index = int(i)).first()
 				word_list.append(w)
+
 				ith_list.append(int(i)) 
 			for close_book in pre_db_word_to_closest_books(word_list, ith_list):
 				book_title = close_book[0]
@@ -105,7 +108,7 @@ def search(hash_factor = 1):
 					isbn= book_image_url[close_book]
 					print("notisbn")
 					newisbn =[]
-					for nums in isbn[:2] : 
+					for nums in isbn[:2] :
 						url = "http://covers.openlibrary.org/b/isbn/" + nums +"-M.jpg"
 						url=url.encode('ascii','ignore')
 						print(url)
@@ -113,14 +116,14 @@ def search(hash_factor = 1):
 					link=isbn[2].encode('ascii','ignore')
 					link ="http://www.goodreads.com/book/show/" + link
 					newisbn.append(link)
-					for nounicode in newisbn: 
+					for nounicode in newisbn:
 						each_book_list.append(nounicode)
 
 					each_book_list.append([])
-				else: 
+				else:
 					errorlist = [None ,None , None ]
 					each_book_list += errorlist
-					
+
 				top_books.append(each_book_list)
 
 	else:
@@ -132,7 +135,7 @@ def search(hash_factor = 1):
 			word_cloud = ['The book is not in our database.']
 		else:
 			i = book_to_index[title_input]
-			b = Books.query.filter_by(start_index = int(i)/hash_factor*hash_factor).first()
+			b = Books.query.filter_by(index = int(i)).first()
 			word_cloud_message = 'Word cloud is: '	
-			word_cloud = pre_db_book_to_closest_words(b, int(i) % hash_factor)
+			word_cloud = pre_db_book_to_closest_words(b, int(i))
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books, avail_keywords = available_words, avail_books = available_books)
