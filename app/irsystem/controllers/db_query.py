@@ -46,8 +46,8 @@ def combine_result(scores_from_word_input, scores_from_book_input, k = 15):
 		book_list = []
 		book_query_object = Books.query.filter_by(index = i).first()
 		book_list.append(book_query_object.name)
-		book_list.append(book_query_object.ISBN10)
-		book_list.append(book_query_object.ISBN13)
+		book_list.append(book_query_object.isbn10)
+		book_list.append(book_query_object.isbn13)
 		book_list.append(book_query_object.link)
 		top_k_books.append(book_list)
 	return top_k_books

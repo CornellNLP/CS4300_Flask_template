@@ -52,7 +52,7 @@ def secondpage():
 		result[2] = url2 
 		result[3] = link 
 
-	return render_template('second.html', name=project_name, netid=net_id, word_cloud_message='', 
+	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
 		top_books_message=top_book_message, word_cloud=[], top_books = results, avail_keywords = [], avail_books = [])
  
 	
