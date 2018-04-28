@@ -73,7 +73,7 @@ def search():
 	if title_input is not None or keyword_input is not None :
 		w = word_to_closest_books(keyword_input)
 		b = book_to_closest_books(title_input)
-		result = combine_results(w, b) 
+		result = combine_result(w, b) 
 		session["result"] = result 
 		session["title_input"]  = title_input 
 		session["keyword_input"] = keyword_input

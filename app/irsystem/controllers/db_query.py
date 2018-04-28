@@ -22,7 +22,9 @@ import unicodedata
 
 
 #words: user's keyword input! 
-def word_to_closest_books(words):
+def word_to_closest_books(words, length = 59646):
+	if words is None:
+		return np.zeros(length)
 	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(',')] ###this delimeter might change
 	sum_sim_scores = np.zeros(len(np.fromstring(keyword_query_objects[0].book_scores, sep = ', ')))
 	for keyword in keyword_query_objects:
@@ -30,7 +32,9 @@ def word_to_closest_books(words):
 	return sum_sim_scores
 
 #book: user's book title input
-def book_to_closest_books(book):
+def book_to_closest_books(book, length = 59646):
+	if book is None:
+		return np.zeros(length)
 	book_query_object = Books.query.filter_by(name=book).first()
 	return np.fromstring(book_query_object.book_scores, sep=', ')
 
