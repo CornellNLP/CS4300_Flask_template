@@ -157,66 +157,55 @@
 <div class="container">
     <div>
     <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: [INPUT] </center>
-
-
     </div>
-
+    {% if top_books %}
     <div style = "position: relative" >
-
     <div class="row" >
-
-            <div class = "container" style = "display: flex;
-    justify-content:space-around ;
-    margin-bottom: 100px" >
-            <div  style = "width:10%" ></div>
+        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
+            <div style = "width:10%" ></div>
+            <div class ="containerimage">
+                <img src={{top_books[0][1]}}  class="img-fluid"  width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title:{{top_books[0][0]}}</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
+                <!-- Trigger/Open The Modal -->
+                <button class="myBtn">Open Modal</button>   
+                </div>
+                </div>
+            </div>
 
             <div class ="containerimage">
-            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-            <div class="middle">
-            <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
-                <!-- Trigger/Open The Modal -->
-<button class="myBtn">Open Modal</button>
-
-            </div>
-            </div>
-        </div>
-
-     <div class ="containerimage">
-            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-            <div class="middle">
-            <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
-<button class="myBtn">Open Modal</button>
-            </div>
-        </div>
-        </div>
-
-        <div class ="containerimage">
-            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
-            <div class="middle">
-            <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
+                <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title:</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
                 <button class="myBtn">Open Modal</button>
+                </div>
+                </div>
             </div>
-        </div>
-        </div>
+
+            <div class ="containerimage">
+                <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title:</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
+                <button class="myBtn">Open Modal</button>
+                </div>
+                </div>
+            </div>
             <div> </div>
-            </div>
-            <div class="row" >
-
-                    <div class = "container" style = "display: flex;
-            justify-content:space-around ;
-            margin-bottom: 100px" >
-                    <div  style = "width:10%" ></div>
-
-                    <div class ="containerimage">
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
+            <div style = "width:10%" ></div>
+                <div class ="containerimage">
                     <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
@@ -237,7 +226,6 @@
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
-
                     </div>
                 </div>
                 </div>
@@ -250,156 +238,132 @@
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
-
                     </div>
                 </div>
                 </div>
-                    <div> </div>
-                    </div>
-
-                    <div class="row" >
-
-                            <div class = "container" style = "display: flex;
-                    justify-content:space-around ;
-                    margin-bottom: 100px" >
-                            <div  style = "width:10%" ></div>
-
-                            <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                            <div class="middle">
-                            <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
-
-                            </div>
-                            </div>
-                        </div>
-
-                     <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                            <div class="middle">
-                            <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
-
-                            </div>
-                        </div>
-                        </div>
-
-                        <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
-                            <div class="middle">
-                            <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
-
-                            </div>
-                        </div>
-                        </div>
-                            <div> </div>
-                            </div>
-
-                            <div class="row" >
-
-                                    <div class = "container" style = "display: flex;
-                            justify-content:space-around ;
-                            margin-bottom: 100px" >
-                                    <div  style = "width:10%" ></div>
-
-                                    <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                                    <div class="middle">
-                                    <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
-
-                                    </div>
-                                    </div>
-                                </div>
-
-                             <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                                    <div class="middle">
-                                    <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
-
-                                    </div>
-                                </div>
-                                </div>
-
-                                <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
-                                    <div class="middle">
-                                    <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
-
-                                    </div>
-                                </div>
-                                </div>
-                                    <div> </div>
-                                    </div>
-                                    <div class="row" >
-
-                                            <div class = "container" style = "display: flex;
-                                    justify-content:space-around ;
-                                    margin-bottom: 100px" >
-                                            <div  style = "width:10%" ></div>
-
-                                            <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                                            <div class="middle">
-                                            <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
-
-                                            </div>
-                                            </div>
-                                        </div>
-
-                                     <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
-                                            <div class="middle">
-                                            <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
-
-                                            </div>
-                                        </div>
-                                        </div>
-
-                                        <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
-                                            <div class="middle">
-                                            <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
-
-                                            </div>
-                                        </div>
-                                        </div>
-                                            <div> </div>
-                                            </div>
+            <div> </div>
+        </div>
     </div>
+
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>                       
+    </div>
+    {% endif %}
 </div>
  </div>
 
