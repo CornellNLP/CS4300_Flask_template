@@ -9,9 +9,21 @@
    background-size: cover;
  }
 
+ .legend {
+     border: 1px solid #555555;
+     border-radius: 5px 5px 5px 5px;
+     font-size: 0.8em;
+     margin: 10px;
+     padding: 8px;
+ }
+ .bld {
+     font-weight: bold;
+ }
  .containerimage {
             position: relative;
             display: flex;
+            width: 20%;
+
         }
 
         .image {
@@ -21,32 +33,58 @@
             height: auto;
             transition: .5s ease;
             backface-visibility: hidden;
+
         }
 
-        .middle {
+        /* .middle {
             transition: .5s ease;
-            opacity: 0;
+            opacity: 0.3;
             position: absolute;
             top: 50%;
             left: 50%;
+            height:100%;
+            width: 100%;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             text-align: center;
-        }
+            background-color: #eed9c0;
+        } */
 
+        .middle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 90%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #eed9c0;
+          text-align: center;
+        }
         .containerimage:hover .image {
             opacity: 0.3;
         }
 
         .containerimage:hover .middle {
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .text {
             color: black;
             font-size: 150%;
             font-family: 'Vidaloka', serif;
-            padding: 16px 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
         }
 
         #refresh_button {
@@ -71,7 +109,8 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+    max-height: calc(100vh - 150px);
+  }
 
 /* Modal Content */
 .modal-content {
@@ -80,13 +119,17 @@
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 black;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+
+
+
 }
+
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -116,7 +159,8 @@
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #eed9c0;
+    opacity: 0.8;
     color: white;
 }
 
@@ -124,13 +168,15 @@
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #eed9c0;
+    opacity: 0.8;
     color: white;
 }
 
 </style>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+  <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 </head>
 <body>
   <!-- The Modal -->
@@ -140,23 +186,41 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-        <h2>Modal Header</h2>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">The Hunger Games</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
       </div>
-      <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
+
+      <div class="modal-body" style="text-align:center">
+
+        <p>Similarity Score: 95%</p>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <div id="wc" style="width:100%; height:50%">
       </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
+
+When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
+      </div>
+
       <div class="modal-footer">
-        <h3>Modal Footer</h3>
+        <h3></h3>
       </div>
     </div>
 
   </div>
-<a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
 
 <div class="container">
+  <a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
     <div>
-    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: [INPUT] </center>
+    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 400%"> Showing results for: [INPUT] </center>
 
 
     </div>
@@ -168,30 +232,26 @@
             <div class = "container" style = "display: flex;
     justify-content:space-around ;
     margin-bottom: 100px" >
-            <div  style = "width:10%" ></div>
+            <div  style = "width:3%" ></div>
 
             <div class ="containerimage">
-            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
+                <h3>the hunger games</h3>
                 <!-- Trigger/Open The Modal -->
-<button class="myBtn">Open Modal</button>
+                <button class="myBtn">Click for more info!</button>
 
             </div>
             </div>
         </div>
 
      <div class ="containerimage">
-            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/To_Kill_a_Mockingbird.JPG/220px-To_Kill_a_Mockingbird.JPG" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
-<button class="myBtn">Open Modal</button>
+                <h3>to kill a mockingbird</h3>
+<button class="myBtn">Click for more info!</button>
             </div>
         </div>
         </div>
@@ -200,10 +260,8 @@
             <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Average Rating:</p>
-                <button class="myBtn">Open Modal</button>
+                <h2>The Hunger Games</h2>
+                <button class="myBtn">Click for more info!</button>
             </div>
         </div>
         </div>
@@ -214,42 +272,36 @@
                     <div class = "container" style = "display: flex;
             justify-content:space-around ;
             margin-bottom: 100px" >
-                    <div  style = "width:10%" ></div>
+                    <div  style = "width:3%" ></div>
 
                     <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
+                        <h2>The Hunger Games</h2>
+                        <button class="myBtn">Click for more info!</button>
 
                     </div>
                     </div>
                 </div>
 
              <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
+                        <h2>The Hunger Games</h2>
+                        <button class="myBtn">Click for more info!</button>
 
                     </div>
                 </div>
                 </div>
 
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
+                        <h2>The Hunger Games</h2>
+                        <button class="myBtn">Click for more info!</button>
 
                     </div>
                 </div>
@@ -262,42 +314,36 @@
                             <div class = "container" style = "display: flex;
                     justify-content:space-around ;
                     margin-bottom: 100px" >
-                            <div  style = "width:10%" ></div>
+                          <div  style = "width:3%" ></div>
 
                             <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
+                                <h2>The Hunger Games</h2>
+                                <button class="myBtn">Click for more info!</button>
 
                             </div>
                             </div>
                         </div>
 
                      <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
+                                <h2>The Hunger Games</h2>
+                                <button class="myBtn">Click for more info!</button>
 
                             </div>
                         </div>
                         </div>
 
                         <div class ="containerimage">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
-                                <p>Title:</p>
-                                <p>Author:</p>
-                                <p>Average Rating:</p>
-                                <button class="myBtn">Open Modal</button>
+                                <h2>The Hunger Games</h2>
+                                <button class="myBtn">Click for more info!</button>
 
                             </div>
                         </div>
@@ -310,42 +356,36 @@
                                     <div class = "container" style = "display: flex;
                             justify-content:space-around ;
                             margin-bottom: 100px" >
-                                    <div  style = "width:10%" ></div>
+                                    <div  style = "width:3%" ></div>
 
                                     <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
+                                        <h2>The Hunger Games</h2>
+                                        <button class="myBtn">Click for more info!</button>
 
                                     </div>
                                     </div>
                                 </div>
 
                              <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
+                                        <h2>The Hunger Games</h2>
+                                        <button class="myBtn">Click for more info!</button>
 
                                     </div>
                                 </div>
                                 </div>
 
                                 <div class ="containerimage">
-                                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
-                                        <p>Title:</p>
-                                        <p>Author:</p>
-                                        <p>Average Rating:</p>
-                                        <button class="myBtn">Open Modal</button>
+                                        <h2>The Hunger Games</h2>
+                                        <button class="myBtn">Click for more info!</button>
 
                                     </div>
                                 </div>
@@ -357,42 +397,36 @@
                                             <div class = "container" style = "display: flex;
                                     justify-content:space-around ;
                                     margin-bottom: 100px" >
-                                            <div  style = "width:10%" ></div>
+                                            <div  style = "width:3%" ></div>
 
                                             <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
+                                                <h2>The Hunger Games</h2>
+                                                <button class="myBtn">Click for more info!</button>
 
                                             </div>
                                             </div>
                                         </div>
 
                                      <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
+                                                <h2>The Hunger Games</h2>
+                                                <button class="myBtn">Click for more info!</button>
 
                                             </div>
                                         </div>
                                         </div>
 
                                         <div class ="containerimage">
-                                            <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
-                                                <p>Title:</p>
-                                                <p>Author:</p>
-                                                <p>Average Rating:</p>
-                                                <button class="myBtn">Open Modal</button>
+                                                <h2>The Hunger Games</h2>
+                                                <button class="myBtn">Click for more info!</button>
 
                                             </div>
                                         </div>
@@ -403,8 +437,22 @@
 </div>
  </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="/static/d3.layout.cloud.js"></script>
  <script>
- var modal = document.getElementById('myModal');
+
+var weightlist = [{text: "warm", weight:1}, {text: "romantic", weight:2}, {text: "fun", weight:4}, {text: "hehe", weight:3}, {text: "hoho", weight:10},{text: "seyun", weight:3},
+ {text: "hyunkyo", weight:2}, {text: "hansol",weight:5.3}, {text: "byungjae",weight:3.4}, {text: "linda",weight:0.1}];
+//
+// $("#donewordcloud").jQCloud(weightlist);
+
+
+var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
 // var btn = document.getElementById("myBtn");
@@ -424,9 +472,11 @@ for (var i = 0; i < btn.length; i++) {
           modal.style.display = "none";
       }
   }
-}
+};
+
+
 // // When the user clicks the button, open the modal
-// btn[i].onclick = function() {
+// btn.onclick = function() {
 //     modal.style.display = "block";
 // }
 //
@@ -442,6 +492,45 @@ for (var i = 0; i < btn.length; i++) {
 //     }
 // }
 // Get the <span> element that closes the modal
+var frequency_list = [{"text":"study","size":40},{"text":"motion","size":15},{"text":"forces","size":10},{"text":"electricity","size":15},{"text":"movement","size":10},{"text":"relation","size":5},{"text":"things","size":10},{"text":"force","size":5},{"text":"ad","size":5},{"text":"energy","size":85},{"text":"living","size":5},{"text":"nonliving","size":5},{"text":"laws","size":15},{"text":"speed","size":45},{"text":"velocity","size":30},{"text":"define","size":5},{"text":"constraints","size":5},{"text":"universe","size":10},{"text":"physics","size":120},{"text":"describing","size":5},{"text":"matter","size":90},{"text":"physics-the","size":5},{"text":"world","size":10},{"text":"works","size":10},{"text":"science","size":70},{"text":"interactions","size":30},{"text":"studies","size":5},{"text":"properties","size":45},{"text":"nature","size":40},{"text":"branch","size":30},{"text":"concerned","size":25},{"text":"source","size":40},{"text":"google","size":10},{"text":"defintions","size":5},{"text":"two","size":15},{"text":"grouped","size":15},{"text":"traditional","size":15},{"text":"fields","size":15},{"text":"acoustics","size":15},{"text":"optics","size":15},{"text":"mechanics","size":20},{"text":"thermodynamics","size":15},{"text":"electromagnetism","size":15},{"text":"modern","size":15},{"text":"extensions","size":15},{"text":"thefreedictionary","size":15},{"text":"interaction","size":15},{"text":"org","size":25},{"text":"answers","size":5},{"text":"natural","size":15},{"text":"objects","size":5},{"text":"treats","size":10},{"text":"acting","size":5},{"text":"department","size":5},{"text":"gravitation","size":5},{"text":"heat","size":10},{"text":"light","size":10},{"text":"magnetism","size":10},{"text":"modify","size":5},{"text":"general","size":10},{"text":"bodies","size":5},{"text":"philosophy","size":5},{"text":"brainyquote","size":5},{"text":"words","size":5},{"text":"ph","size":5},{"text":"html","size":5},{"text":"lrl","size":5},{"text":"zgzmeylfwuy","size":5},{"text":"subject","size":5},{"text":"distinguished","size":5},{"text":"chemistry","size":5},{"text":"biology","size":5},{"text":"includes","size":5},{"text":"radiation","size":5},{"text":"sound","size":5},{"text":"structure","size":5},{"text":"atoms","size":5},{"text":"including","size":10},{"text":"atomic","size":10},{"text":"nuclear","size":10},{"text":"cryogenics","size":10},{"text":"solid-state","size":10},{"text":"particle","size":10},{"text":"plasma","size":10},{"text":"deals","size":5},{"text":"merriam-webster","size":5},{"text":"dictionary","size":10},{"text":"analysis","size":5},{"text":"conducted","size":5},{"text":"order","size":5},{"text":"understand","size":5},{"text":"behaves","size":5},{"text":"en","size":5},{"text":"wikipedia","size":5},{"text":"wiki","size":5},{"text":"physics-","size":5},{"text":"physical","size":5},{"text":"behaviour","size":5},{"text":"collinsdictionary","size":5},{"text":"english","size":5},{"text":"time","size":35},{"text":"distance","size":35},{"text":"wheels","size":5},{"text":"revelations","size":5},{"text":"minute","size":5},{"text":"acceleration","size":20},{"text":"torque","size":5},{"text":"wheel","size":5},{"text":"rotations","size":5},{"text":"resistance","size":5},{"text":"momentum","size":5},{"text":"measure","size":10},{"text":"direction","size":10},{"text":"car","size":5},{"text":"add","size":5},{"text":"traveled","size":5},{"text":"weight","size":5},{"text":"electrical","size":5},{"text":"power","size":5}];
+
+
+var color = d3.scale.linear()
+        .domain([0,1,2,3,4,5,6,10,15,20,100])
+        .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
+
+d3.layout.cloud().size([800, 300])
+        .words(frequency_list)
+        .rotate(0)
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw)
+        .start();
+
+function draw(words) {
+  var div_w = d3.select("#wc").style("width").split("px").shift();
+  var div_h = d3.select("#wc").style("height").split("px").shift();
+    d3.selectAll("#wc").append("svg")
+            .attr("width", div_w)
+            .attr("height", div_h * (10/4))
+            .attr("class", "wordcloud")
+            .append("g")
+            // without the transform, words words would get cutoff to the left and top, they would
+            // appear outside of the SVG area
+            .attr("transform", "translate(320,200)")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("fill", function(d, i) { return color(i); })
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+}
+
+
+
+
 
  </script>
 </body>
