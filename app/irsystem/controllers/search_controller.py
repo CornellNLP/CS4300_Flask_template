@@ -6,7 +6,7 @@ import json
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from app.irsystem.models.word import *
+from app.irsystem.models.words import *
 from app.irsystem.models.books import *
 from app.irsystem.models.authors import *
 from app.irsystem.controllers.db_change import *
@@ -19,30 +19,8 @@ import unicodedata
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
-# @irsystem.route('/', methods=['GET'])
-# def delandadd():
-# 	empty_db()
-# 	create_tables()
-# 	put_words_in_db()
-# 	put_books_in_db()
-# 	word_cloud_message = ''
-# 	top_books_message = ''
-# 	word_cloud = ['successfully added']
-# 	top_books = ['successfully added']
-# 	available_words = []
-# 	available_books = []
-# 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
 
-# @irsystem.route('/', methods=['GET'])
-# def add_words_chunks():
-# 	put_books_in_db()
-# 	word_cloud_message = ''
-# 	top_books_message = ''
-# 	word_cloud = ['successfully added']
-# 	top_books = ['successfully added']
-# 	available_words = []
-# 	available_books = []
-# 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message=word_cloud_message, top_books_message=top_books_message, word_cloud=word_cloud, top_books = top_books)
+
 
 @irsystem.route('/secondpage', methods=['GET'])
 def secondpage(): 
@@ -103,4 +81,3 @@ def search():
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='', 
 		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
 
-	#print(len(Word.query.all()))
