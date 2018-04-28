@@ -3,15 +3,22 @@ from . import *
 class Books(Base):
   __tablename__ = 'books'
 
-  start_index = db.Column(db.Integer, nullable=False)
-  names = db.Column(db.Text, nullable=False)
-  word_scores = db.Column(db.Text, nullable=False)
+  index = db.Column(db.Integer, nullable=False)
+  name = db.Column(db.Text, nullable=False)
+  word_cloud = db.Column(db.Text, nullable=False)
+  vector = db.Column(db.Text, nullable = False)
+  avg_rating = db.Column(db.Float, nullable=True)
+  description = db.Column(db.Text, nullable=True)
+  author = db.Column(db.Text, nullable=True)
+  isbn10   = db.Column(db.String(30), nullable=True)
+  isbn13 = db.Column(db.String(30), nullable=True)
+  link = db.Column(db.Text, nullable=True)
 
 
 
 
   def __repr__(self):
-    return '<Name: %r, Index: %r>' % (self.names, self.start_index)
+    return '<Name: %r, Index: %r>' % (self.names, self.index)
     #print("Total score for %s is %s" % (name, score))
 
 
