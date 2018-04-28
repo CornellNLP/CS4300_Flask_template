@@ -10,7 +10,7 @@ import json
 from sklearn.preprocessing import normalize
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from app.irsystem.models.word import *
+from app.irsystem.models.words import *
 from app.irsystem.models.books import *
 from app.irsystem.models.authors import *
 from app.irsystem.controllers.db_change import *
@@ -20,53 +20,50 @@ import os
 import csv
 import unicodedata
 
-def pre_db_word_to_closest_books(word, ith, k = 15):
-	#this can be better
-	length = len(np.fromstring(word[0].book_scores, sep= ', '))
-	avg_word = np.zeros(length)
-	for w, i in zip(word, ith):
-		np_word = np.fromstring(w.book_scores, sep= ', ')
-		avg_word += np_word
-	avg_word /= len(word)
-	#argsort avg_word and take top  k 
-	avg_word = np.absolute(avg_word)
-	asort = np.argsort(-avg_word)[:k+1]
-	
+
+#words: user's keyword input! 
+def word_to_closest_books(words, length = 59646):
+	if words == '':
+		return np.zeros(length)
+	print('words is ' + words)
+	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] ###this delimeter might change
+	print(keyword_query_objects)
+	sum_sim_scores = np.zeros(len(np.fromstring(keyword_query_objects[0].book_scores, sep = ', ')))
+	for keyword in keyword_query_objects:
+		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
+	return sum_sim_scores
+
+#book: user's book title input
+def book_to_closest_books(book, length = 59646):
+	if book == '':
+		return np.zeros(length)
+	book_query_object = Books.query.filter_by(name=book).first()
+	book_vector = np.fromstring(book_query_object.vector, sep=', ')
+	sim_scores = np.zeros(length)
+	for book in Books.query.all():
+		index = book.index
+		ith_book_vector = np.fromstring(book.vector, sep = ', ')
+		sim_scores[index] = ith_book_vector.dot(book_vector)
+		print(index)
+	return sim_scores
+
+def combine_result(scores_from_word_input, scores_from_book_input, k = 15):
+	sum_scores = np.zeros(len(scores_from_book_input)) + scores_from_book_input + scores_from_word_input
+	asort = np.argsort(-sum_scores)[:k]
 	top_k_books = []
-	#do we still have to do this? excluding the first one 
-	for i in asort[1:]:
-		near_names = Books.query.filter_by(start_index = i/100*100).first().names
-		name = near_names.split('***')[i % 100]
-		name = name.encode("ascii", "ignore") 
-		top_k_books.append((name, avg_word[i]/avg_word[asort[0]]))
+	for i in asort:
+		book_list = []
+		book_query_object = Books.query.filter_by(index = i).first()
+		book_list.append(book_query_object.name)
+		book_list.append(book_query_object.isbn10)
+		book_list.append(book_query_object.isbn13)
+		book_list.append(book_query_object.link)
+		top_k_books.append(book_list)
 	return top_k_books
 
-def pre_db_book_to_closest_words(book, ith, k = 5):
-	book_to_word_scores = np.fromstring(book.word_scores, sep= ', ')
-	two_d_scores = np.reshape(book_to_word_scores, (100,100))
-	book_to_word_scores = two_d_scores[ith]
-
-	asort = np.argsort(-book_to_word_scores)[:k+1]
+def book_to_closest_words(book, k = 5):
+	sim_scores = np.fromstring(book.word_scores, sep= ', ')
 	top_k_words = []
-	for i in asort[1:]:
-		name = Word.query.filter_by(index = i).first().name
-		top_k_words.append((name, book_to_word_scores[i]/book_to_word_scores[asort[0]]))
+	for i in np.argsort(-sim_scores)[:k]:
+		top_k_words.append(Words.query.filter_by(index = i).first().name)
 	return top_k_words
-
-	# query_result = Word.query.all()
-	# dot_products = np.zeros(len(query_result*100))
-	# for word in query_result:
-	# 	np_word = np.fromstring(word.vectors, sep = ', ')
-	# 	num_words = len(np_word) / 100
-	# 	td_np_word = np.reshape(np_word, (num_words, 100))
-	# 	dot_prod = np.dot(td_np_word, book_to_word_scores)
-	# 	for i in range(num_words):
-	# 		dot_products[word.start_index + i] = dot_prod[i]
-	# asort = np.argsort(-dot_products)[:k+1]
-
-	# top_k_words = []
-	# for i in asort[1:]:
-	# 	near_names = Word.query.filter_by(start_index = i/100*100).first().names
-	# 	name = near_names.split('***')[i % 100]
-	# 	top_k_words.append((name, dot_products[i]/dot_products[asort[0]]))
-	# return top_k_words
