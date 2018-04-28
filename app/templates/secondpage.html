@@ -1,4 +1,3 @@
-
 <html>
 
 <style>
@@ -156,19 +155,18 @@
 
 <div class="container">
     <div>
-    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: [INPUT] </center>
+    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: {{ top_books_message }} </center>
     </div>
     {% if top_books %}
     <div style = "position: relative" >
     <div class="row" >
         <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
             <div style = "width:10%" ></div>
-            <div class ="containerimage"> 
-            	<div style = "color: white"> {{top_books[0][1]}} </div>
+            <div class ="containerimage">
                 <img src={{top_books[0][1]}}  class="img-fluid"  width =  "90%" height = "400px">
                 <div class="middle">
                 <div class="text">
-                    <p style = "color:white">Title:{{top_books[0][0]}}</p>
+                    <p>Title:{{top_books[0][0]}}</p>
                     <p>Author:</p>
                     <p>Average Rating:</p>
                 <!-- Trigger/Open The Modal -->
@@ -178,10 +176,10 @@
             </div>
 
             <div class ="containerimage">
-                <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <img src={{top_books[1][1]}}  width =  "90%" height = "400px">
                 <div class="middle">
                 <div class="text">
-                    <p>Title:</p>
+                    <p>Title: {{top_books[1][0]}}</p>
                     <p>Author:</p>
                     <p>Average Rating:</p>
                 <button class="myBtn">Open Modal</button>
@@ -190,10 +188,10 @@
             </div>
 
             <div class ="containerimage">
-                <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                <img src={{top_books[2][1]}} width =  "90%" height = "400px">
                 <div class="middle">
                 <div class="text">
-                    <p>Title:</p>
+                    <p>Title:{{top_books[2][0]}}</p>
                     <p>Author:</p>
                     <p>Average Rating:</p>
                 <button class="myBtn">Open Modal</button>
@@ -207,10 +205,10 @@
         <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
             <div style = "width:10%" ></div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[3][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[3][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -220,10 +218,10 @@
                 </div>
 
              <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[4][1]}} width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[4][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -232,10 +230,10 @@
                 </div>
 
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid" width =  "90%" height = "400px">
+                    <img src={{top_books[5][1]}} width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[5][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -250,10 +248,10 @@
         <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
             <div  style = "width:10%" ></div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[6][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[6][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -261,10 +259,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[7][1]}} width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[7][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -272,10 +270,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[8][1]}} width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[8][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -289,10 +287,10 @@
         <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
             <div  style = "width:10%" ></div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[9][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[9][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -300,10 +298,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[10][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[10][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -311,10 +309,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[11][1]}} width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[11][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -328,10 +326,10 @@
         <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
             <div  style = "width:10%" ></div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[12][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title::{{top_books[12][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -339,10 +337,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[13][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[13][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>
@@ -350,10 +348,10 @@
                     </div>
                 </div>
                 <div class ="containerimage">
-                    <img src="https://media1.popsugar-assets.com/files/thumbor/oYrNQReR1ssqdlt1W9NiOyJ25ow/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/02/13/861/n/38761221/e4379e555a833f538c3d63.68228695_edit_img_image_845153_1518550121/i/March-Penguins-2-Photos-Details.jpg" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img src={{top_books[14][1]}}  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
-                        <p>Title:</p>
+                        <p>Title:{{top_books[14][0]}}</p>
                         <p>Author:</p>
                         <p>Average Rating:</p>
                         <button class="myBtn">Open Modal</button>

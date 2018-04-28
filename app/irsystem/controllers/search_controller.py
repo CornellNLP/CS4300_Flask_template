@@ -18,14 +18,21 @@ import unicodedata
 
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
+# index_to_book = json.load(open('index_to_book.json'))
+# for i in range(55000,59646):
+# 	name = index_to_book[unicode(str(i),'utf-8')]
+# 	book_object = Books.query.filter_by(index = i).first()
+# 	book_object.name = name
+# 	print(i)
+# print('done')
+# db.session.flush()
+# db.session.commit()
+# print('55,000 - 59,646 Committed!')
 
 @irsystem.route('/debug', methods=['GET'])
 def debug():
-	# b = Books.query.all()
-	# for book in b:
-	# 	book.name = book.name
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
-		top_books_message=top_book_message, word_cloud=[], top_books = results, avail_keywords = [], avail_books = [])
+		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
 
 @irsystem.route('/secondpage', methods=['GET'])
@@ -51,6 +58,8 @@ def secondpage():
 			else: 
 				result[i] = result[i].encode('ascii','ignore')
 		result[3] = "http://www.goodreads.com/book/show/" + result[3]
+		result[2] = "http://covers.openlibrary.org/b/isbn/" + result[2] + "-M.jpg"
+		result[1] = "http://covers.openlibrary.org/b/isbn/" + result[1] + "-M.jpg"
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
 		top_books_message=top_book_message, word_cloud=[], top_books = results, avail_keywords = [], avail_books = [])
@@ -69,14 +78,18 @@ def search():
 	
 	print("first page")
 	print(title_input)
+	print(type(title_input))
 	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement")
-		title_input = title_input.encode("ascii","ignore") 
-		title_input = title_input.lstrip()
-		print("after trim infront" + title_input)
-		title_input = unicode(title_input, "utf-8")
+		if title_input is not None : 
+		 	title_input  = unicode(title_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+		if keyword_input is not None : 
+		 	keyword_input  = unicode(keyword_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+		 	# title_input = title_input.lstrip()  
+		 	# unicode(title_input, 'utf-8')
+
 		w = word_to_closest_books(keyword_input)
 		b = book_to_closest_books(title_input)
 		result = combine_result(w, b) 
