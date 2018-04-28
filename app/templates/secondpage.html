@@ -163,11 +163,12 @@
     <div class="row" >
         <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
             <div style = "width:10%" ></div>
-            <div class ="containerimage">
+            <div class ="containerimage"> 
+            	<div style = "color: white"> {{top_books[0][1]}} </div>
                 <img src={{top_books[0][1]}}  class="img-fluid"  width =  "90%" height = "400px">
                 <div class="middle">
                 <div class="text">
-                    <p>Title:{{top_books[0][0]}}</p>
+                    <p style = "color:white">Title:{{top_books[0][0]}}</p>
                     <p>Author:</p>
                     <p>Average Rating:</p>
                 <!-- Trigger/Open The Modal -->

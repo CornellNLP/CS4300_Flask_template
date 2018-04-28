@@ -19,7 +19,13 @@ import unicodedata
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
-
+@irsystem.route('/debug', methods=['GET'])
+def debug():
+	# b = Books.query.all()
+	# for book in b:
+	# 	book.name = book.name
+	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
+		top_books_message=top_book_message, word_cloud=[], top_books = results, avail_keywords = [], avail_books = [])
 
 
 @irsystem.route('/secondpage', methods=['GET'])
@@ -39,18 +45,12 @@ def secondpage():
 	#encode everything to make sure that the output is the correct ouput format 
 
 	for result in results :
-		link=result[3].encode('ascii','ignore')
-		link ="http://www.goodreads.com/book/show/" + link
-		result[1] = result[1].encode('ascii','ignore') 
-		result[2] = result[2].encode('ascii','ignore') 
-		url = "http://covers.openlibrary.org/b/isbn/" + result[1]  + '-M.jpg'
-		url2 = "http://covers.openlibrary.org/b/isbn/" + result[2]  + '-M.jpg'
-		url=url.encode('ascii','ignore') 
-		url2=url2.encode('ascii','ignore') 
-		result[1] = result[1].encode('ascii', 'ignore')
-		result[1] = url  
-		result[2] = url2 
-		result[3] = link 
+		for i in range(4):
+			if result[i] is None:
+				result[i] = ''
+			else: 
+				result[i] = result[i].encode('ascii','ignore')
+		result[3] = "http://www.goodreads.com/book/show/" + result[3]
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
 		top_books_message=top_book_message, word_cloud=[], top_books = results, avail_keywords = [], avail_books = [])
@@ -66,11 +66,17 @@ def search():
 	#author_input = request.args.get('author_search')
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
-	title_input = request.args.get('title_search')
-	keyword_input = request.args.get('keyword_search') 
+	
 	print("first page")
+	print(title_input)
+	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
+		print("enter if statement")
+		title_input = title_input.encode("ascii","ignore") 
+		title_input = title_input.lstrip()
+		print("after trim infront" + title_input)
+		title_input = unicode(title_input, "utf-8")
 		w = word_to_closest_books(keyword_input)
 		b = book_to_closest_books(title_input)
 		result = combine_result(w, b) 

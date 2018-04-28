@@ -159,7 +159,7 @@
         </div>
         {% endif %}
         </form>
-        <form  class="form-inline global-search" action="{{ url_for('irsystem.secondpage') }}" >
+        <form  class="form-inline global-search">
            <button class="btn btn-info" > Next Page </button>
       </form>
 </div>
@@ -230,7 +230,7 @@
 
             var new_key_word = []
             for ( var i =0 ; i < keyword_array.length ; i ++ ) {
-                word = keyword_array[i].trim()
+                word = keyword_array[i]
 
                 new_key_word.push({ "value" : word , "name" : word })
 
@@ -265,7 +265,7 @@
 
             var new_book_word = []
             for ( var i =0 ; i < book_array.length ; i ++ ) {
-                word = book_array[i].trim()
+                word = book_array[i]
 
                 new_book_word.push({ "value" : word , "name" : word })
 
