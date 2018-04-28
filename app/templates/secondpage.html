@@ -1,6 +1,411 @@
 <html>
-  <body>
-    <div> hello there </div>
-    <a class="btn btn-lg btn-success" href="main"> Refresh </a>
-  </body>
+
+<style>
+ body {
+   /* background-color: black; */
+   background-image: url("http://college.koreadaily.com/wp-content/uploads/2016/07/light-465350_960_720.jpg");
+   background-repeat:no-repeat;
+   background-size: cover;
+ }
+
+ .containerimage {
+            position: relative;
+            display: flex;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .containerimage:hover .image {
+            opacity: 0.3;
+        }
+
+        .containerimage:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            color: black;
+            font-size: 150%;
+            font-family: 'Vidaloka', serif;
+            padding: 16px 32px;
+        }
+
+        #refresh_button {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 30px;
+          color: white;
+
+        }
+
+        /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+</style>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+</head>
+<body>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+
+  </div>
+<a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
+
+<div class="container">
+    <div>
+    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: {{ top_books_message }} </center>
+    </div>
+    {% if top_books %}
+    <div style = "position: relative" >
+    <div class="row" >
+        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
+            <div style = "width:10%" ></div>
+            <div class ="containerimage">
+                <img src={{top_books[0][1]}}  class="img-fluid"  width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title:{{top_books[0][0]}}</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
+                <!-- Trigger/Open The Modal -->
+                <button class="myBtn">Open Modal</button>   
+                </div>
+                </div>
+            </div>
+
+            <div class ="containerimage">
+                <img src={{top_books[1][1]}}  width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title: {{top_books[1][0]}}</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
+                <button class="myBtn">Open Modal</button>
+                </div>
+                </div>
+            </div>
+
+            <div class ="containerimage">
+                <img src={{top_books[2][1]}} width =  "90%" height = "400px">
+                <div class="middle">
+                <div class="text">
+                    <p>Title:{{top_books[2][0]}}</p>
+                    <p>Author:</p>
+                    <p>Average Rating:</p>
+                <button class="myBtn">Open Modal</button>
+                </div>
+                </div>
+            </div>
+            <div> </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
+            <div style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src={{top_books[3][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[3][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+
+                    </div>
+                    </div>
+                </div>
+
+             <div class ="containerimage">
+                    <img src={{top_books[4][1]}} width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[4][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class ="containerimage">
+                    <img src={{top_books[5][1]}} width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[5][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                </div>
+                </div>
+            <div> </div>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src={{top_books[6][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[6][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[7][1]}} width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[7][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[8][1]}} width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[8][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src={{top_books[9][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[9][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[10][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[10][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[11][1]}} width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[11][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
+            <div  style = "width:10%" ></div>
+                <div class ="containerimage">
+                    <img src={{top_books[12][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title::{{top_books[12][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[13][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[13][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>
+                <div class ="containerimage">
+                    <img src={{top_books[14][1]}}  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <p>Title:{{top_books[14][0]}}</p>
+                        <p>Author:</p>
+                        <p>Average Rating:</p>
+                        <button class="myBtn">Open Modal</button>
+                    </div>
+                    </div>
+                </div>   
+        <div> </div>
+        </div>
+    </div>                       
+    </div>
+    {% endif %}
+</div>
+ </div>
+
+ <script>
+ var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+var btn = document.getElementsByClassName("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+for (var i = 0; i < btn.length; i++) {
+  btn[i].onclick = function() {
+      modal.style.display = "block";
+  }
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+}
+// // When the user clicks the button, open the modal
+// btn[i].onclick = function() {
+//     modal.style.display = "block";
+// }
+//
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
+//
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+// Get the <span> element that closes the modal
+
+ </script>
+</body>
 </html>

@@ -13,6 +13,21 @@ padding-top: 15%;
 padding-bottom: 15px;
 }
 
+.sidebyside{
+  display: inline-block; 
+  float: none ; 
+  vertical-align : middle ;
+
+}
+
+.boxed {
+  border-radius : 10px; 
+  height : 500px ; 
+  width : 300px ;
+}
+.custom {
+  vertical-align : top ;
+}
 
 h1.wordcloudtext{
 
