@@ -27,11 +27,15 @@
      }
      button[type="submit"]{
          min-height:45px;
+         background-color:#DEB887 !important;
     }
     #formm {
       position: absolute;
       left: 6%;
       top: 15%;
+    } 
+    .marge{
+        margin-top:30px;
     }
     </style>
     <head>
@@ -44,8 +48,12 @@
         <link href = "/static/jquery-ui.css" rel = "stylesheet" >
         <link href = "/static/hover.css" rel = "stylesheet" >
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
-    </head>
+    </head> 
+
     <div id = "names">
+    <a color = "white" href = "https://bookrec.herokuapp.com"> Version 1 </a>
+    <a color = "white" href = "https://bookrec-p04.herokuapp.com">  version 2 </a>
+     <br> 
       <p>
         BookRec - A Book Recommender (Cornell University CS4300 SP18)
         <br>
@@ -79,9 +87,12 @@
                 <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword" width = "500px" >
                 </div>
             </div>
-             <button class="btn btn-info" > Go </button>
-        </form>
-
+            <div class = "marge" > 
+             <button class="btn btn-info" > Go </button> 
+            </div>
+            </form>
+     
+    
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -16,3 +16,4 @@ kubernetes/Dockerfile
 kubernetes/docker-compose.yml 
 kubernetes/run-deployment.yml 
 requirements.txt
+config.py
