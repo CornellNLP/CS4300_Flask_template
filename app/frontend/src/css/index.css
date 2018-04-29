@@ -47,10 +47,13 @@ label{
   font-weight: 550;
 }
 
-.related {
+.tip {
+  font-size: 13px;
   margin: auto;
   display: block;
   width: 65%;
+  font-family: "Verdana";
+  padding: 10px 30px;
 }
 
 .comment {
@@ -60,7 +63,6 @@ label{
 	font-family: "Verdana";
 	border: 1px #ccc solid;
 	padding: 10px 30px;
-	/*margin: 10px 10px;*/
 }
 
 .comment button {

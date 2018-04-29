@@ -103,6 +103,7 @@ class Home extends Component {
 			      </form>
 		      </div>
 		      <div>
+		      	{data.length ? <div className="tip">Hover over the IR score to see how comments are ranked!</div> : null}
 			      {
 			      	this.state.loading ? (<div className="loader"></div>) :
 			      	(

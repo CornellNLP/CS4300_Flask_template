@@ -7,7 +7,9 @@ class Result extends Component {
     super(props);
     this.state = {
       expanded: false,
+      showBreakdown: false
     }
+    this.showScore = this.showScore.bind(this);
     this.roundNearest = this.roundNearest.bind(this);
   }
 
@@ -16,15 +18,28 @@ class Result extends Component {
     return Math.round(100*absVal)/100;
   }
 
+  showScore() {
+    let breakdown = this.props.comment[1];
+    let showBreakdown = this.state.showBreakdown;
+    this.setState({ showBreakdown: !showBreakdown })
+  }
+
   render() {
+    let breakdownLabel = ["Cos-sim score:", " x # of noun terms:", ' x √(comment score):']
+    let colors = ["blue", "green", "red"]
+
   	let comment = this.props.comment[0];
     let breakdown = this.props.comment[1];
     let irScore = this.roundNearest(breakdown[breakdown.length -1]);
+    let visibilityState = this.state.showBreakdown ? "visible" : "hidden";
     return (
     	<div className="comment" style={{backgroundColor: this.props.style}}>
     		<div className="comment-header">
-    			<span className="author" ><a href={"http://reddit.com/u/" + comment.author} target="_blank">{comment.author}</a></span>
-    			<span className="score">&nbsp; {comment.score} points &nbsp; IR score: {irScore}</span>
+    			<span className="author"><a href={"http://reddit.com/u/" + comment.author} target="_blank">{comment.author}</a></span>
+    			<span className="score" onMouseEnter={this.showScore} onMouseLeave={this.showScore}>&nbsp; {comment.score} points &nbsp; IR score: {irScore}</span>
+          <span className="score" style={{visibility: visibilityState}}>
+            &nbsp;|{breakdownLabel.map((label, i) => <span>{label}<span style={{color: colors[i]}}> {this.roundNearest(breakdown[i])}</span></span>)}
+          </span>
     		</div>
         {
           !this.state.expanded ?
