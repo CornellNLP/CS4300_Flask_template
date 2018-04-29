@@ -72,9 +72,7 @@ def secondpage():
 @irsystem.route('/main', methods=['GET'])
 def search():
 	available_words = json.load(open('words.json'))
-	# available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
 	available_books = json.load(open('books.json'))
-	# available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
@@ -85,10 +83,7 @@ def search():
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
-		# if title_input is not None :
-		#  	title_input  = unicode(title_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
-		# if keyword_input is not None :
-		#  	keyword_input  = unicode(keyword_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+	
 		if title_input !="" or keyword_input!="":
 			w = word_to_closest_books(keyword_input)
 			b = book_to_closest_books(title_input)
@@ -98,11 +93,11 @@ def search():
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
 			return redirect(url_for('irsystem.secondpage'))
+
 		else:
 			print("enter both empty")
 			return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
 			word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
-
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)

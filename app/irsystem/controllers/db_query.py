@@ -23,12 +23,9 @@ import unicodedata
 
 #words: user's keyword input! 
 def word_to_closest_books(words, length = 59646):
-	print('input to word_to_closest_books is : {}'.format(words))
 	if words == '':
 		return np.zeros(length)
-	print(words.split(';'))
 	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] ###this delimeter might change
-	print(keyword_query_objects)
 	sum_sim_scores = np.zeros(length)
 	for keyword in keyword_query_objects:
 		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
@@ -36,7 +33,6 @@ def word_to_closest_books(words, length = 59646):
 
 #book: user's book title input
 def book_to_closest_books(book, length = 59646):
-	print('input to book_to_closest_books is : {}'.format(type(book)))
 	if book == '':
 		return np.zeros(length)
 	book_query_object = Books.query.filter_by(name=book).first()
@@ -49,18 +45,15 @@ def book_to_closest_books(book, length = 59646):
 	return sim_scores
 
 def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):	
-	print('entered combined_two_scores method')
 	sum_scores = np.zeros(len(scores_from_book_input)) + scores_from_book_input + scores_from_word_input
 	if (scores_from_book_input[0] != 0.0 and scores_from_word_input[0] != 0.0): sum_scores /= 2
 	asort = np.argsort(-sum_scores)
 	#When there's a book input, we will exclude the book itself (need the while loop since there might be mutliple) 
 	if scores_from_book_input[0] != 0.0:
-		print('inside first if statement')
 		index = 1
 		prev = sum_scores[asort[index-1]]
 		curr = sum_scores[asort[index]]
 		while prev == curr:
-			print('inside the first while loop')
 			index += 1
 			prev = sum_scores[asort[index-1]]
 			curr = sum_scores[asort[index]]
@@ -71,7 +64,10 @@ def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):
 	prev = -1
 	index = 0
 	while length < k:
-		print('inside the second while loop')
+		boook = Books.query.filter_by(index=asort[index]).first()
+		if unicodedata.normalize('NFKD', boook.name).encode('ascii','ignore').strip() == '':
+			index+=1
+			continue
 		if sum_scores[asort[index]] != prev:
 			new_asort.append((asort[index], round(sum_scores[asort[index]], 4)*100))
 			length += 1
@@ -80,7 +76,6 @@ def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):
 	return new_asort
 
 def get_books(asorted_list):
-	print('entered get_books method')
 	top_k_books = []
 	for tup in asorted_list:
 		book_list = []
