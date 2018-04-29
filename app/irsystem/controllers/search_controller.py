@@ -37,11 +37,11 @@ def secondpage():
 	keyword_input = session.get('keyword_input', None)
 	top_book_message = ""
 	if title_input is not None :
-		title_input = title_input.encode('ascii', 'gignore')
+		title_input = unicodedata.normalize('NFKD', title_input).encode('ascii', 'ignore')
 		top_book_message += title_input
 		top_book_message += " ,"
 	if keyword_input is not None:
-		keyword_input = keyword_input.encode('ascii', 'ignore')
+		keyword_input = unicodedata.normalize('NFKD', keyword_input).encode('ascii', 'ignore')
 		top_book_message += keyword_input
 
 	top15_asorted = session.get('top15_asorted', None)
@@ -55,9 +55,9 @@ def secondpage():
 			if result[i] is None:
 				result[i] = ''
 			else:
-				result[i] = result[i].encode('ascii','ignore')
+				result[i] = unicodedata.normalize('NFKD', result[i]).encode('ascii','ignore')
 		for idx in range(len(result[6])) :
-			result[6][idx] = result[6][idx].encode('ascii','ignore')
+			result[6][idx] = unicodedata.normalize('NFKD', result[6][idx]).encode('ascii','ignore')
 		if result[3] != "" :
 			result[3] = "http://www.goodreads.com/book/show/" + result[3]
 		else :
@@ -72,25 +72,23 @@ def secondpage():
 @irsystem.route('/main', methods=['GET'])
 def search():
 	available_words = json.load(open('words.json'))
-	available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
+	# available_words = [unicodedata.normalize('NFKD', w).encode('ascii','ignore') for w in available_words]
 	available_books = json.load(open('books.json'))
-	available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
+	# available_books = [unicodedata.normalize('NFKD', b).encode('ascii','ignore') for b in available_books]
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
 	print("first page")
-	print("title input is : {}".format(title_input))
 	print("title input type is : {}".format(type(title_input)))
-	print("keyword input is : {}".format(keyword_input))
 	print("keyword input type is : {}".format(type(keyword_input)))
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
-		if title_input is not None :
-		 	title_input  = unicode(title_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
-		if keyword_input is not None :
-		 	keyword_input  = unicode(keyword_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+		# if title_input is not None :
+		#  	title_input  = unicode(title_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+		# if keyword_input is not None :
+		#  	keyword_input  = unicode(keyword_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
 		if title_input !="" or keyword_input!="":
 			w = word_to_closest_books(keyword_input)
 			b = book_to_closest_books(title_input)
@@ -108,3 +106,5 @@ def search():
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+
+
