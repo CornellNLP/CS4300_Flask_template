@@ -198,7 +198,7 @@ def index_search(query_tokens, orig_tokens, index, idf, doc_norms):
   for doc_id in scores.keys():
     # init the breakdown to be the base cos-sim score
     score_breakdowns[doc_id] = [scores[doc_id], 1]
-    if doc_id not in noun_docs:
+    if doc_id not in noun_docs and len(noun_docs) != 0:
       scores[doc_id] *= 0.1
 
       # appropriately set the second entry of breakdown
