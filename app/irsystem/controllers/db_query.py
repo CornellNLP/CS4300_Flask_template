@@ -73,7 +73,7 @@ def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):
 	while length < k:
 		print('inside the second while loop')
 		if sum_scores[asort[index]] != prev:
-			new_asort.append((asort[index], round(sum_scores[asort[index]], 5)*100))
+			new_asort.append((asort[index], round(sum_scores[asort[index]], 4)*100))
 			length += 1
 		prev = sum_scores[asort[index]]
 		index += 1
