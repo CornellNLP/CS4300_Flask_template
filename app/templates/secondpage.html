@@ -1,3 +1,4 @@
+
 <html>
 
 <style>
@@ -8,9 +9,25 @@
    background-size: cover;
  }
 
+ .legend {
+     border: 3px solid #cdc187;
+     border-radius: 5px 5px 5px 5px;
+     /* font-size: 0.8em; */
+     /* justify-content: center ; */
+     margin: auto;
+     margin-top: 3.5%;
+     padding: 1%;
+     width: 40%;
+
+ }
+ .bld {
+     font-weight: bold;
+ }
  .containerimage {
             position: relative;
             display: flex;
+            width: 20%;
+
         }
 
         .image {
@@ -20,32 +37,58 @@
             height: auto;
             transition: .5s ease;
             backface-visibility: hidden;
+
         }
 
-        .middle {
+        /* .middle {
             transition: .5s ease;
-            opacity: 0;
+            opacity: 0.3;
             position: absolute;
             top: 50%;
             left: 50%;
+            height:100%;
+            width: 100%;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             text-align: center;
-        }
+            background-color: #eed9c0;
+        } */
 
+        .middle {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 90%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #eed9c0;
+          text-align: center;
+        }
         .containerimage:hover .image {
             opacity: 0.3;
         }
 
         .containerimage:hover .middle {
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .text {
             color: black;
             font-size: 150%;
             font-family: 'Vidaloka', serif;
-            padding: 16px 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
         }
 
         #refresh_button {
@@ -70,7 +113,8 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+    max-height: calc(100vh - 150px);
+  }
 
 /* Modal Content */
 .modal-content {
@@ -79,13 +123,25 @@
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 black;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
-}
+    animation-duration: 0.4s;
+  }
+
+
+#realimage {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+#defaultimage {
+        position: relative;
+        top: 0px;
+        left: 0px ;
+    }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -115,7 +171,8 @@
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #eed9c0;
+    opacity: 0.8;
     color: white;
 }
 
@@ -123,288 +180,1164 @@
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #eed9c0;
+    opacity: 0.8;
     color: white;
 }
 
 </style>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+  <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 </head>
 <body>
   <!-- The Modal -->
-  <div id="myModal" class="modal">
 
+  <div id="myModal0" class="modal">
+{% if top_books %}
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-        <h2>Modal Header</h2>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[0][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[0][4]}}</p>
       </div>
-      <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[0][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[0][7]}}</p>
+
+<p>Tags from reviews: {{top_books[0][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
       </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[0][5]}} </p>      </div>
+
       <div class="modal-footer">
-        <h3>Modal Footer</h3>
+        {% if top_books[0][3]!= "" %}
+        <a href={{top_books[0][3]}} target="_blank" >
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+
       </div>
-    </div>
-
-  </div>
-<a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
-
-<div class="container">
-    <div>
-    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 300%"> Showing results for: {{ top_books_message }} </center>
-    </div>
-    {% if top_books %}
-    <div style = "position: relative" >
-    <div class="row" >
-        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
-            <div style = "width:10%" ></div>
-            <div class ="containerimage">
-                <img src={{top_books[0][1]}}  class="img-fluid"  width =  "90%" height = "400px">
-                <div class="middle">
-                <div class="text">
-                    <p>Title:{{top_books[0][0]}}</p>
-                    <p>Author:</p>
-                    <p>Average Rating:</p>
-                <!-- Trigger/Open The Modal -->
-                <button class="myBtn">Open Modal</button>   
-                </div>
-                </div>
-            </div>
-
-            <div class ="containerimage">
-                <img src={{top_books[1][1]}}  width =  "90%" height = "400px">
-                <div class="middle">
-                <div class="text">
-                    <p>Title: {{top_books[1][0]}}</p>
-                    <p>Author:</p>
-                    <p>Average Rating:</p>
-                <button class="myBtn">Open Modal</button>
-                </div>
-                </div>
-            </div>
-
-            <div class ="containerimage">
-                <img src={{top_books[2][1]}} width =  "90%" height = "400px">
-                <div class="middle">
-                <div class="text">
-                    <p>Title:{{top_books[2][0]}}</p>
-                    <p>Author:</p>
-                    <p>Average Rating:</p>
-                <button class="myBtn">Open Modal</button>
-                </div>
-                </div>
-            </div>
-            <div> </div>
-        </div>
-    </div>
-    <div class="row" >
-        <div class = "container" style = "display:flex; justify-content:space-around; margin-bottom:100px" >
-            <div style = "width:10%" ></div>
-                <div class ="containerimage">
-                    <img src={{top_books[3][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[3][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-
-                    </div>
-                    </div>
-                </div>
-
-             <div class ="containerimage">
-                    <img src={{top_books[4][1]}} width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[4][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                </div>
-                </div>
-
-                <div class ="containerimage">
-                    <img src={{top_books[5][1]}} width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[5][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                </div>
-                </div>
-            <div> </div>
-        </div>
-    </div>
-
-    <div class="row" >
-        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
-            <div  style = "width:10%" ></div>
-                <div class ="containerimage">
-                    <img src={{top_books[6][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[6][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[7][1]}} width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[7][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[8][1]}} width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[8][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>   
-        <div> </div>
-        </div>
-    </div>
-    <div class="row" >
-        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
-            <div  style = "width:10%" ></div>
-                <div class ="containerimage">
-                    <img src={{top_books[9][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[9][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[10][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[10][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[11][1]}} width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[11][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>   
-        <div> </div>
-        </div>
-    </div>
-    <div class="row" >
-        <div class = "container" style = "display: flex; justify-content:space-around; margin-bottom:100px" >
-            <div  style = "width:10%" ></div>
-                <div class ="containerimage">
-                    <img src={{top_books[12][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title::{{top_books[12][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[13][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[13][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>
-                <div class ="containerimage">
-                    <img src={{top_books[14][1]}}  width =  "90%" height = "400px">
-                    <div class="middle">
-                    <div class="text">
-                        <p>Title:{{top_books[14][0]}}</p>
-                        <p>Author:</p>
-                        <p>Average Rating:</p>
-                        <button class="myBtn">Open Modal</button>
-                    </div>
-                    </div>
-                </div>   
-        <div> </div>
-        </div>
-    </div>                       
     </div>
     {% endif %}
+  </div>
+
+  <div id="myModal1" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[1][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[1][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[1][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[1][7]}}</p>
+<p>Tags from reviews: {{top_books[1][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[1][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[1][3]!= "" %}
+        <a href={{top_books[1][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div id="myModal2" class="modal">
+  {% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[2][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[2][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[2][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[2][7]}}</p>
+<p>Tags from reviews: {{top_books[2][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>  Summary: {{top_books[2][5]}} </p> </div>
+
+      <div class="modal-footer">
+        {% if top_books[2][3]!= "" %}
+        <a href={{top_books[2][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div id="myModal3" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[3][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[3][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[3][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[3][7]}}</p>
+<p>Tags from reviews: {{top_books[3][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[3][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[3][3]!= "" %}
+        <a href={{top_books[3][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div id="myModal4" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[4][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[4][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[4][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[4][7]}}</p>
+<p>Tags from reviews: {{top_books[4][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[4][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[4][3]!= "" %}
+        <a href={{top_books[4][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div id="myModal5" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[5][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[5][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[5][7]}}</p>
+<p>Tags from reviews: {{top_books[5][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[5][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[5][3]!= "" %}
+        <a href={{top_books[5][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal6" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[6][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[6][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[6][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[6][7]}}</p>
+<p>Tags from reviews: {{top_books[6][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[6][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[6][3]!= "" %}
+        <a href={{top_books[6][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal7" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[7][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[7][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[7][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[7][7]}}</p>
+<p>Tags from reviews: {{top_books[7][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[7][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[7][3]!= "" %}
+        <a href={{top_books[7][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal8" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[8][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[8][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[8][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[8][7]}}</p>
+<p>Tags from reviews: {{top_books[8][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[8][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[8][3]!= "" %}
+        <a href={{top_books[8][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal9" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[9][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[9][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[9][7]}}</p>
+<p>Tags from reviews: {{top_books[9][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[9][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[9][3]!= "" %}
+        <a href={{top_books[9][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal10" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[10][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[10][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[10][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[10][7]}}</p>
+<p>Tags from reviews: {{top_books[10][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[10][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[10][3]!= "" %}
+        <a href={{top_books[10][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal11" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[11][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[11][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[11][7]}}</p>
+<p>Tags from reviews: {{top_books[11][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[11][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[11][3]!= "" %}
+        <a href={{top_books[11][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal12" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[12][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[12][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[12][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[12][7]}}</p>
+<p>Tags from reviews: {{top_books[12][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[12][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[12][3]!= "" %}
+        <a href={{top_books[12][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal13" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[13][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[13][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[13][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[13][7]}}</p>
+<p>Tags from reviews: {{top_books[13][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[13][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[13][3]!= "" %}
+        <a href={{top_books[13][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div id="myModal14" class="modal">
+{% if top_books %}
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+        <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[14][0]}}</h4>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[14][4]}}</p>
+      </div>
+
+      <div class="modal-body" style="text-align:center">
+
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[14][8]}}%</h2>
+        <!-- <div style="width: 40%;">
+            <div class="legend">
+                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+            </div>
+
+        </div> -->
+        <p>Average rating: {{top_books[14][7]}}</p>
+<p>Tags from reviews: {{top_books[14][6]}}</p>
+        <div id="wc" style="width:100%; height:50%">
+      </div>
+        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
+        </div> -->
+        <p>Summary: {{top_books[14][5]}} </p>      </div>
+
+      <div class="modal-footer">
+        {% if top_books[14][3]!= "" %}
+        <a href={{top_books[14][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+<div class="container">
+  <a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
+    <div>
+    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 400%"> Showing results for:  {{ top_books_message }} </center>
+
+
+    </div>
+{% if top_books %}
+    <div style = "position: relative" >
+
+    <div class="row" >
+
+            <div class = "container" style = "display: flex;
+    justify-content:space-around ;
+    margin-bottom: 100px" >
+            <div  style = "width:3%" ></div>
+
+            <div class ="containerimage" style="position: relative; left: 0; top: 0">
+            <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <img id="realimage" src={{top_books[0][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <h3>{{top_books[0][0]}}</h3>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn0">Click for more info!</button>
+
+            </div>
+            </div>
+        </div>
+
+        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <img id="realimage" src={{top_books[1][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <h3>{{top_books[1][0]}}</h3>
+<button id="myBtn1">Click for more info!</button>
+            </div>
+        </div>
+        </div>
+
+        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <img id="realimage" src={{top_books[2][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <div class="middle">
+            <div class="text">
+                <h3>{{top_books[2][0]}}</h3>
+                <button id="myBtn2">Click for more info!</button>
+            </div>
+        </div>
+        </div>
+            <div> </div>
+            </div>
+            <div class="row" >
+
+                    <div class = "container" style = "display: flex;
+            justify-content:space-around ;
+            margin-bottom: 100px" >
+                    <div  style = "width:3%" ></div>
+
+                    <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                    <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img id="realimage" src={{top_books[3][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <h3>{{top_books[3][0]}}</h3>
+                        <button id="myBtn3">Click for more info!</button>
+
+                    </div>
+                    </div>
+                </div>
+
+                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <img id="realimage" src={{top_books[4][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <h3>{{top_books[4][0]}}</h3>
+                        <button id="myBtn4">Click for more info!</button>
+
+                    </div>
+                </div>
+                </div>
+
+                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <img id="realimage" src={{top_books[5][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class="middle">
+                    <div class="text">
+                        <h3>{{top_books[5][0]}}</h3>
+                        <button id="myBtn5">Click for more info!</button>
+
+                    </div>
+                </div>
+                </div>
+                    <div> </div>
+                    </div>
+
+                    <div class="row" >
+
+                            <div class = "container" style = "display: flex;
+                    justify-content:space-around ;
+                    margin-bottom: 100px" >
+                          <div  style = "width:3%" ></div>
+
+                          <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                          <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                          <img id="realimage" src={{top_books[6][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                            <div class="middle">
+                            <div class="text">
+                                <h3>{{top_books[6][0]}}</h3>
+                                <button id="myBtn6">Click for more info!</button>
+
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <img id="realimage" src={{top_books[7][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                            <div class="middle">
+                            <div class="text">
+                                <h3>{{top_books[7][0]}}</h3>
+                                <button id="myBtn7">Click for more info!</button>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <img id="realimage" src={{top_books[8][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                            <div class="middle">
+                            <div class="text">
+                                <h3>{{top_books[8][0]}}</h3>
+                                <button id="myBtn8">Click for more info!</button>
+
+                            </div>
+                        </div>
+                        </div>
+                            <div> </div>
+                            </div>
+
+                            <div class="row" >
+
+                                    <div class = "container" style = "display: flex;
+                            justify-content:space-around ;
+                            margin-bottom: 100px" >
+                                    <div  style = "width:3%" ></div>
+
+                                    <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                    <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <img id="realimage" src={{top_books[9][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <div class="middle">
+                                    <div class="text">
+                                        <h3>{{top_books[9][0]}}</h3>
+                                        <button id="myBtn9">Click for more info!</button>
+
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <img id="realimage" src={{top_books[10][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <div class="middle">
+                                    <div class="text">
+                                        <h3>{{top_books[10][0]}}</h3>
+                                        <button id="myBtn10">Click for more info!</button>
+
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <img id="realimage" src={{top_books[11][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <div class="middle">
+                                    <div class="text">
+                                        <h3>{{top_books[11][0]}}</h3>
+                                        <button id="myBtn11">Click for more info!</button>
+
+                                    </div>
+                                </div>
+                                </div>
+                                    <div> </div>
+                                    </div>
+                                    <div class="row" >
+
+                                            <div class = "container" style = "display: flex;
+                                    justify-content:space-around ;
+                                    margin-bottom: 100px" >
+                                            <div  style = "width:3%" ></div>
+
+                                            <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                            <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <img id="realimage" src={{top_books[12][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <div class="middle">
+                                            <div class="text">
+                                                <h3>{{top_books[12][0]}}</h3>
+                                                <button id="myBtn12">Click for more info!</button>
+
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <img id="realimage" src={{top_books[13][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <div class="middle">
+                                            <div class="text">
+                                                <h3>{{top_books[13][0]}}</h3>
+                                                <button id="myBtn13">Click for more info!</button>
+
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <img id="realimage" src={{top_books[14][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <div class="middle">
+                                            <div class="text">
+                                                <h3>{{top_books[14][0]}}</h3>
+                                                <button id="myBtn14">Click for more info!</button>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                            <div> </div>
+                                            </div>
+    </div>
+
+{% endif %}
 </div>
  </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="/static/d3.layout.cloud.js"></script>
  <script>
- var modal = document.getElementById('myModal');
+
+var weightlist = [{text: "warm", weight:1}, {text: "romantic", weight:2}, {text: "fun", weight:4}, {text: "hehe", weight:3}, {text: "hoho", weight:10},{text: "seyun", weight:3},
+ {text: "hyunkyo", weight:2}, {text: "hansol",weight:5.3}, {text: "byungjae",weight:3.4}, {text: "linda",weight:0.1}];
+//
+// $("#donewordcloud").jQCloud(weightlist);
+
+// var modal = document.getElementById('myModal');
+
+var modal0 = document.getElementById('myModal0');
+var modal1 = document.getElementById('myModal1');
+var modal2 = document.getElementById('myModal2');
+var modal3 = document.getElementById('myModal3');
+var modal4 = document.getElementById('myModal4');
+var modal5 = document.getElementById('myModal5');
+var modal6 = document.getElementById('myModal6');
+var modal7 = document.getElementById('myModal7');
+var modal8 = document.getElementById('myModal8');
+var modal9 = document.getElementById('myModal9');
+var modal10 = document.getElementById('myModal10');
+var modal11 = document.getElementById('myModal11');
+var modal12 = document.getElementById('myModal12');
+var modal13 = document.getElementById('myModal13');
+var modal14 = document.getElementById('myModal14');
+
 
 // Get the button that opens the modal
 // var btn = document.getElementById("myBtn");
-var btn = document.getElementsByClassName("myBtn");
+// var btn = document.getElementsByClassName("myBtn");
+var btn0 = document.getElementById("myBtn0");
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+var btn7 = document.getElementById("myBtn7");
+var btn8 = document.getElementById("myBtn8");
+var btn9 = document.getElementById("myBtn9");
+var btn10 = document.getElementById("myBtn10");
+var btn11 = document.getElementById("myBtn11");
+var btn12 = document.getElementById("myBtn12");
+var btn13 = document.getElementById("myBtn13");
+var btn14 = document.getElementById("myBtn14");
 
-var span = document.getElementsByClassName("close")[0];
 
-for (var i = 0; i < btn.length; i++) {
-  btn[i].onclick = function() {
-      modal.style.display = "block";
-  }
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
+var span0 = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[1];
+var span2 = document.getElementsByClassName("close")[2];
+var span3 = document.getElementsByClassName("close")[3];
+var span4 = document.getElementsByClassName("close")[4];
+var span5 = document.getElementsByClassName("close")[5];
+var span6 = document.getElementsByClassName("close")[6];
+var span7 = document.getElementsByClassName("close")[7];
+var span8 = document.getElementsByClassName("close")[8];
+var span9 = document.getElementsByClassName("close")[9];
+var span10 = document.getElementsByClassName("close")[10];
+var span11 = document.getElementsByClassName("close")[11];
+var span12 = document.getElementsByClassName("close")[12];
+var span13 = document.getElementsByClassName("close")[13];
+var span14 = document.getElementsByClassName("close")[14];
+
+
+
+// for (var i = 0; i < btn.length; i++) {
+//   btn[i].onclick = function() {
+//       modal.style.display = "block";
+//   }
+//   span.onclick = function() {
+//       modal.style.display = "none";
+//   }
+//   window.onclick = function(event) {
+//       if (event.target == modal) {
+//           modal.style.display = "none";
+//       }
+//   }
+// };
+
+
+// When the user clicks the button, open the modal
+btn0.onclick = function() {
+    modal0.style.display = "block";
 }
-// // When the user clicks the button, open the modal
-// btn[i].onclick = function() {
-//     modal.style.display = "block";
-// }
-//
+// When the user clicks the button, open the modal
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn3.onclick = function() {
+    modal3.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn4.onclick = function() {
+    modal4.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn5.onclick = function() {
+    modal5.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn6.onclick = function() {
+    modal6.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn7.onclick = function() {
+    modal7.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn8.onclick = function() {
+    modal8.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn9.onclick = function() {
+    modal9.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn10.onclick = function() {
+    modal10.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn11.onclick = function() {
+    modal11.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn12.onclick = function() {
+    modal12.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn13.onclick = function() {
+    modal13.style.display = "block";
+}
+// When the user clicks the button, open the modal
+btn14.onclick = function() {
+    modal14.style.display = "block";
+}
+
+span0.onclick = function() {
+  modal0.style.display = "none";
+}
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
+span5.onclick = function() {
+  modal5.style.display = "none";
+}
+span6.onclick = function() {
+  modal6.style.display = "none";
+}
+span7.onclick = function() {
+  modal7.style.display = "none";
+}
+span8.onclick = function() {
+  modal8.style.display = "none";
+}
+span9.onclick = function() {
+  modal9.style.display = "none";
+}
+span10.onclick = function() {
+  modal10.style.display = "none";
+}
+span11.onclick = function() {
+  modal11.style.display = "none";
+}
+span12.onclick = function() {
+  modal12.style.display = "none";
+}
+span13.onclick = function() {
+  modal13.style.display = "none";
+}
+span14.onclick = function() {
+  modal14.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal0) {
+        modal0.style.display = "none";
+    }
+    else if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    else if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    else if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+    else if (event.target == modal4) {
+        modal4.style.display = "none";
+    }
+    else if (event.target == modal5) {
+        modal5.style.display = "none";
+    }
+    else if (event.target == modal6) {
+        modal6.style.display = "none";
+    }
+    else if (event.target == modal7) {
+        modal7.style.display = "none";
+    }
+    else if (event.target == modal8) {
+        modal8.style.display = "none";
+    }
+    else if (event.target == modal9) {
+        modal9.style.display = "none";
+    }
+    else if (event.target == modal10) {
+        modal10.style.display = "none";
+    }
+    else if (event.target == modal11) {
+        modal11.style.display = "none";
+    }
+    else if (event.target == modal12) {
+        modal12.style.display = "none";
+    }
+    else if (event.target == modal13) {
+        modal13.style.display = "none";
+    }
+    else if (event.target == modal14) {
+        modal14.style.display = "none";
+    }
+
+}
+
+
+
 // // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
+// span1.onclick = function() {
+//     modal1.style.display = "none";
 // }
 //
-// // When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the modal, close it
 // window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
+//     if (event.target == modal1) {
+//         modal1.style.display = "none";
 //     }
 // }
 // Get the <span> element that closes the modal
+var frequency_list = [{"text":"study","size":40},{"text":"motion","size":15},{"text":"forces","size":10},{"text":"electricity","size":15},{"text":"movement","size":10},{"text":"relation","size":5},{"text":"things","size":10},{"text":"force","size":5},{"text":"ad","size":5},{"text":"energy","size":85},{"text":"living","size":5},{"text":"nonliving","size":5},{"text":"laws","size":15},{"text":"speed","size":45},{"text":"velocity","size":30},{"text":"define","size":5},{"text":"constraints","size":5},{"text":"universe","size":10},{"text":"physics","size":120},{"text":"describing","size":5},{"text":"matter","size":90},{"text":"physics-the","size":5},{"text":"world","size":10},{"text":"works","size":10},{"text":"science","size":70},{"text":"interactions","size":30},{"text":"studies","size":5},{"text":"properties","size":45},{"text":"nature","size":40},{"text":"branch","size":30},{"text":"concerned","size":25},{"text":"source","size":40},{"text":"google","size":10},{"text":"defintions","size":5},{"text":"two","size":15},{"text":"grouped","size":15},{"text":"traditional","size":15},{"text":"fields","size":15},{"text":"acoustics","size":15},{"text":"optics","size":15},{"text":"mechanics","size":20},{"text":"thermodynamics","size":15},{"text":"electromagnetism","size":15},{"text":"modern","size":15},{"text":"extensions","size":15},{"text":"thefreedictionary","size":15},{"text":"interaction","size":15},{"text":"org","size":25},{"text":"answers","size":5},{"text":"natural","size":15},{"text":"objects","size":5},{"text":"treats","size":10},{"text":"acting","size":5},{"text":"department","size":5},{"text":"gravitation","size":5},{"text":"heat","size":10},{"text":"light","size":10},{"text":"magnetism","size":10},{"text":"modify","size":5},{"text":"general","size":10},{"text":"bodies","size":5},{"text":"philosophy","size":5},{"text":"brainyquote","size":5},{"text":"words","size":5},{"text":"ph","size":5},{"text":"html","size":5},{"text":"lrl","size":5},{"text":"zgzmeylfwuy","size":5},{"text":"subject","size":5},{"text":"distinguished","size":5},{"text":"chemistry","size":5},{"text":"biology","size":5},{"text":"includes","size":5},{"text":"radiation","size":5},{"text":"sound","size":5},{"text":"structure","size":5},{"text":"atoms","size":5},{"text":"including","size":10},{"text":"atomic","size":10},{"text":"nuclear","size":10},{"text":"cryogenics","size":10},{"text":"solid-state","size":10},{"text":"particle","size":10},{"text":"plasma","size":10},{"text":"deals","size":5},{"text":"merriam-webster","size":5},{"text":"dictionary","size":10},{"text":"analysis","size":5},{"text":"conducted","size":5},{"text":"order","size":5},{"text":"understand","size":5},{"text":"behaves","size":5},{"text":"en","size":5},{"text":"wikipedia","size":5},{"text":"wiki","size":5},{"text":"physics-","size":5},{"text":"physical","size":5},{"text":"behaviour","size":5},{"text":"collinsdictionary","size":5},{"text":"english","size":5},{"text":"time","size":35},{"text":"distance","size":35},{"text":"wheels","size":5},{"text":"revelations","size":5},{"text":"minute","size":5},{"text":"acceleration","size":20},{"text":"torque","size":5},{"text":"wheel","size":5},{"text":"rotations","size":5},{"text":"resistance","size":5},{"text":"momentum","size":5},{"text":"measure","size":10},{"text":"direction","size":10},{"text":"car","size":5},{"text":"add","size":5},{"text":"traveled","size":5},{"text":"weight","size":5},{"text":"electrical","size":5},{"text":"power","size":5}];
+
+
+
+var color = d3.scale.linear()
+        .domain([0,1,2,3,4,5,6,10,15,20,100])
+        .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
+
+d3.layout.cloud().size([800, 300])
+        .words(frequency_list)
+        .rotate(0)
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw)
+        .start();
+
+function draw(words) {
+  var div_w = d3.select("#wc").style("width").split("px").shift();
+  var div_h = d3.select("#wc").style("height").split("px").shift();
+    d3.selectAll("#wc").append("svg")
+            .attr("width", div_w)
+            .attr("height", div_h * (10/4))
+            .attr("class", "wordcloud")
+            .append("g")
+            // without the transform, words words would get cutoff to the left and top, they would
+            // appear outside of the SVG area
+            .attr("transform", "translate(320,200)")
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("fill", function(d, i) { return color(i); })
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+}
+
+
+
+
 
  </script>
 </body>

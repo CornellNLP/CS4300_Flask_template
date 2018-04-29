@@ -26,44 +26,49 @@ def debug():
 	print(b.index)
 	print(b.book_scores)
 	#print(b.word_cloud)
-	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
+	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
 
 @irsystem.route('/secondpage', methods=['GET'])
-def secondpage(): 
+def secondpage():
 	print("enter second page ")
 	title_input = session.get('title_input', None)
 	keyword_input = session.get('keyword_input', None)
 	top_book_message = ""
-	if title_input is not None : 
+	if title_input is not None :
 		title_input = title_input.encode('ascii', 'gignore')
-		top_book_message += title_input 
-	if keyword_input is not None: 
+		top_book_message += title_input
+		top_book_message += " ,"
+	if keyword_input is not None:
 		keyword_input = keyword_input.encode('ascii', 'ignore')
 		top_book_message += keyword_input
+
 	top15_asorted = session.get('top15_asorted', None)
 	top_15_book_info = get_books(top15_asorted)
 	print(top_15_book_info[0])
-	
-	#encode everything to make sure that the output is the correct ouput format 
+
+	#encode everything to make sure that the output is the correct ouput format
 
 	for result in top_15_book_info:
 		for i in range(6):
 			if result[i] is None:
 				result[i] = ''
-			else: 
+			else:
 				result[i] = result[i].encode('ascii','ignore')
-		for idx in range(len(result[6])) : 
+		for idx in range(len(result[6])) :
 			result[6][idx] = result[6][idx].encode('ascii','ignore')
-		result[3] = "http://www.goodreads.com/book/show/" + result[3]
+		if result[3] != "" :
+			result[3] = "http://www.goodreads.com/book/show/" + result[3]
+		else :
+			result[3] =""
 		result[2] = "http://covers.openlibrary.org/b/isbn/" + result[2] + "-M.jpg"
 		result[1] = "http://covers.openlibrary.org/b/isbn/" + result[1] + "-M.jpg"
 
-	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='', 
+	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message=top_book_message, word_cloud=[], top_books = top_15_book_info, avail_keywords = [], avail_books = [])
- 
-	
+
+
 @irsystem.route('/main', methods=['GET'])
 def search():
 	available_words = json.load(open('words.json'))
@@ -73,7 +78,7 @@ def search():
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
-	
+
 	print("first page")
 	print("title input is : {}".format(title_input))
 	print("title input type is : {}".format(type(title_input)))
@@ -82,19 +87,24 @@ def search():
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
-		if title_input is not None : 
+		if title_input is not None :
 		 	title_input  = unicode(title_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
-		if keyword_input is not None : 
+		if keyword_input is not None :
 		 	keyword_input  = unicode(keyword_input.encode('ascii', 'ignore').lstrip(), 'utf-8')
+		if title_input !="" or keyword_input!="":
+			w = word_to_closest_books(keyword_input)
+			b = book_to_closest_books(title_input)
+			top15_asorted = combine_two_scores(w, b)
 
-		w = word_to_closest_books(keyword_input)
-		b = book_to_closest_books(title_input)
-		top15_asorted = combine_two_scores(w, b) 
-		
-		session["top15_asorted"] = top15_asorted 
-		session["title_input"]  = title_input 
-		session["keyword_input"] = keyword_input
-		return redirect(url_for('irsystem.secondpage'))
-	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='', 
+			session["top15_asorted"] = top15_asorted
+			session["title_input"]  = title_input
+			session["keyword_input"] = keyword_input
+			return redirect(url_for('irsystem.secondpage'))
+		else:
+			print("enter both empty")
+			return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
+			word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+
+
+	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
-
