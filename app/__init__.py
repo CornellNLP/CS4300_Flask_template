@@ -17,6 +17,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # DB
 db = SQLAlchemy(app)
 
+
 # Import + Register Blueprints
 from app.accounts import accounts as accounts
 app.register_blueprint(accounts)

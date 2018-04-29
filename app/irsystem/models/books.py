@@ -18,7 +18,7 @@ class Books(Base):
 
 
   def __repr__(self):
-    return '<Name: %r, Index: %r>' % (self.names, self.index)
+    return '<Name: %r, Index: %r>' % (self.name, self.index)
     #print("Total score for %s is %s" % (name, score))
 
 
