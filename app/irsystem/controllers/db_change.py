@@ -20,6 +20,19 @@ import os
 import csv
 import unicodedata
 
+#change this function to change column values of some table
+def change_column_value():
+	index_to_book = json.load(open('index_to_book.json'))
+	for i in range(55000,59646):
+		name = index_to_book[unicode(str(i),'utf-8')]
+		book_object = Books.query.filter_by(index = i).first()
+		book_object.name = name
+		print(i)
+	print('done')
+	db.session.flush()
+	db.session.commit()
+	print('55,000 - 59,646 Committed!')
+
 #Empties out all tables within the postgresql database
 def empty_db():
 	db.reflect()

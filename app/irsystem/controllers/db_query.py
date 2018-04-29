@@ -23,12 +23,13 @@ import unicodedata
 
 #words: user's keyword input! 
 def word_to_closest_books(words, length = 59646):
+	print('input to word_to_closest_books is : {}'.format(words))
 	if words == '':
 		return np.zeros(length)
-	print('words is ' + words)
+	print(words.split(';'))
 	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] ###this delimeter might change
 	print(keyword_query_objects)
-	sum_sim_scores = np.zeros(len(np.fromstring(keyword_query_objects[0].book_scores, sep = ', ')))
+	sum_sim_scores = np.zeros(length)
 	for keyword in keyword_query_objects:
 		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
 	return sum_sim_scores
@@ -44,26 +45,53 @@ def book_to_closest_books(book, length = 59646):
 		index = book.index
 		ith_book_vector = np.fromstring(book.vector, sep = ', ')
 		sim_scores[index] = ith_book_vector.dot(book_vector)
-		print(index)
 	return sim_scores
 
-def combine_result(scores_from_word_input, scores_from_book_input, k = 15):
+def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):	
 	sum_scores = np.zeros(len(scores_from_book_input)) + scores_from_book_input + scores_from_word_input
-	asort = np.argsort(-sum_scores)[:k]
+	asort = np.argsort(-sum_scores)
+	#When there's a book input, we will exclude the book itself (need the while loop since there might be mutliple) 
+	if scores_from_book_input[0] != 0.0:
+		index = 1
+		prev = sum_scores[asort[index-1]]
+		curr = sum_scores[asort[index]]
+		while prev == curr:
+			index += 1
+		asort = asort[index:]
+	#exluding the same books (those with the same exact similarity scores)	
+	length = 0
+	new_asort = []
+	prev = -1
+	index = 0
+	while length < k:
+		if sum_scores[asort[index]] != prev:
+			new_asort.append((asort[index], round(sum_scores[asort[index]], 2)))
+			length += 1
+		prev = sum_scores[asort[index]]
+		index += 1
+	return new_asort
+
+def get_books(asorted_list):
 	top_k_books = []
-	for i in asort:
+	for i in asorted_list:
 		book_list = []
-		book_query_object = Books.query.filter_by(index = i).first()
-		book_list.append(book_query_object.name)
-		book_list.append(book_query_object.isbn10)
-		book_list.append(book_query_object.isbn13)
-		book_list.append(book_query_object.link)
+		book_query_object = Books.query.filter_by(index = i[0]).first()
+		book_list.append(book_query_object.name)							##1. Bookname
+		book_list.append(book_query_object.isbn10)							##2. ISBN10
+		book_list.append(book_query_object.isbn13)							##3. ISBN13
+		book_list.append(book_query_object.link)							##4. Link
+		book_list.append(book_query_object.author)							##5. author
+		book_list.append(book_query_object.description)						##6. description
+		book_list.append(book_query_object.word_cloud.split('***'))			##7. word cloud
+		book_list.append(book_query_object.avg_rating)						##8. average rating
+		book_list.append(i[1])												##9. Similarity Score
 		top_k_books.append(book_list)
 	return top_k_books
 
-def book_to_closest_words(book, k = 5):
+def book_to_closest_words(book, k = 100):
 	sim_scores = np.fromstring(book.word_scores, sep= ', ')
-	top_k_words = []
-	for i in np.argsort(-sim_scores)[:k]:
-		top_k_words.append(Words.query.filter_by(index = i).first().name)
-	return top_k_words
+	top_k_words_tup = []
+	asorted = np.argsort(-sim_scores)[:k]
+	for i in asorted:
+		top_k_words_tup.append((Words.query.filter_by(index = i).first().name, round(sim_scores[i], 2)))
+	return top_k_words_tup
