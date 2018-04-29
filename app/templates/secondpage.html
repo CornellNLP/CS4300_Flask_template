@@ -10,11 +10,15 @@
  }
 
  .legend {
-     border: 1px solid #555555;
+     border: 3px solid #cdc187;
      border-radius: 5px 5px 5px 5px;
-     font-size: 0.8em;
-     margin: 10px;
-     padding: 8px;
+     /* font-size: 0.8em; */
+     /* justify-content: center ; */
+     margin: auto;
+     margin-top: 3.5%;
+     padding: 1%;
+     width: 40%;
+
  }
  .bld {
      font-weight: bold;
@@ -124,12 +128,20 @@
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+  }
 
 
-
-}
-
+#realimage {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+#defaultimage {
+        position: relative;
+        top: 0px;
+        left: 0px ;
+    }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -189,30 +201,36 @@
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[0][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[0][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[0][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[0][7]}}</p>
+
+<p>Tags from reviews: {{top_books[0][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[0][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[0][3]!= "" %}
+        <a href={{top_books[0][3]}} target="_blank" >
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
+
       </div>
     </div>
     {% endif %}
@@ -226,30 +244,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[1][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[1][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[1][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[1][7]}}</p>
+<p>Tags from reviews: {{top_books[1][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[1][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[1][3]!= "" %}
+        <a href={{top_books[1][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -263,30 +285,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[2][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[2][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[2][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[2][7]}}</p>
+<p>Tags from reviews: {{top_books[2][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-  When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>  Summary: {{top_books[2][5]}} </p> </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[2][3]!= "" %}
+        <a href={{top_books[2][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -300,30 +326,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[3][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[3][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[3][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[3][7]}}</p>
+<p>Tags from reviews: {{top_books[3][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[3][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[3][3]!= "" %}
+        <a href={{top_books[3][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -337,30 +367,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[4][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[4][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[4][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[4][7]}}</p>
+<p>Tags from reviews: {{top_books[4][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[4][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[4][3]!= "" %}
+        <a href={{top_books[4][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -374,30 +408,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[5][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[5][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[5][7]}}</p>
+<p>Tags from reviews: {{top_books[5][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[5][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[5][3]!= "" %}
+        <a href={{top_books[5][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -410,30 +448,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[6][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[6][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[6][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[6][7]}}</p>
+<p>Tags from reviews: {{top_books[6][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[6][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[6][3]!= "" %}
+        <a href={{top_books[6][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -446,30 +488,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[7][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[7][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[7][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[7][7]}}</p>
+<p>Tags from reviews: {{top_books[7][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[7][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[7][3]!= "" %}
+        <a href={{top_books[7][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -482,30 +528,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[8][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[8][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[8][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[8][7]}}</p>
+<p>Tags from reviews: {{top_books[8][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[8][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[8][3]!= "" %}
+        <a href={{top_books[8][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -518,30 +568,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[9][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[9][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[9][7]}}</p>
+<p>Tags from reviews: {{top_books[9][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[9][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[9][3]!= "" %}
+        <a href={{top_books[9][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -554,30 +608,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[10][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[10][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[10][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[10][7]}}</p>
+<p>Tags from reviews: {{top_books[10][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[10][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[10][3]!= "" %}
+        <a href={{top_books[10][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -590,30 +648,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[11][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[11][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[11][7]}}</p>
+<p>Tags from reviews: {{top_books[11][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[11][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[11][3]!= "" %}
+        <a href={{top_books[11][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -626,30 +688,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[12][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[12][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[12][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[12][7]}}</p>
+<p>Tags from reviews: {{top_books[12][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[12][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[12][3]!= "" %}
+        <a href={{top_books[12][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -662,30 +728,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[13][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[13][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[13][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[13][7]}}</p>
+<p>Tags from reviews: {{top_books[13][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[13][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[13][3]!= "" %}
+        <a href={{top_books[13][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -698,30 +768,34 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         <span class="close">&times;</span>
 
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[14][0]}}</h4>
-        <p style = "text-align: center; color: black; font-size:200%">by Suzanne Collins</p>
+        <p style = "text-align: center; color: black; font-size:200%">by {{top_books[14][4]}}</p>
       </div>
 
       <div class="modal-body" style="text-align:center">
 
-        <p>Similarity Score: 95%</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[14][8]}}%</h2>
         <!-- <div style="width: 40%;">
             <div class="legend">
                 Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
             </div>
 
         </div> -->
-        <p>Tags from reviews: fun, hehe, hoho, hohoooo</p>
+        <p>Average rating: {{top_books[14][7]}}</p>
+<p>Tags from reviews: {{top_books[14][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.
-
-When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
-      </div>
+        <p>Summary: {{top_books[14][5]}} </p>      </div>
 
       <div class="modal-footer">
-        <h3></h3>
+        {% if top_books[14][3]!= "" %}
+        <a href={{top_books[14][3]}} target="_blank">
+        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        </a>
+        {% else %}
+          <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+        {% endif %}
       </div>
     </div>
     {% endif %}
@@ -744,9 +818,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
     margin-bottom: 100px" >
             <div  style = "width:3%" ></div>
 
-            <div class ="containerimage">
-
-            <img src={{top_books[0][1]}} alt="image"  class="img-fluid"  width="90%" height = "400px">
+            <div class ="containerimage" style="position: relative; left: 0; top: 0">
+            <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+            <img id="realimage" src={{top_books[0][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
                 <h3>{{top_books[0][0]}}</h3>
@@ -757,8 +831,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
             </div>
         </div>
 
-     <div class ="containerimage">
-            <img src={{top_books[1][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <img id="realimage" src={{top_books[1][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
                 <h3>{{top_books[1][0]}}</h3>
@@ -767,8 +842,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
         </div>
         </div>
 
-        <div class ="containerimage">
-<img src={{top_books[2][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+        <img id="realimage" src={{top_books[2][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
             <div class="middle">
             <div class="text">
                 <h3>{{top_books[2][0]}}</h3>
@@ -785,8 +861,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
             margin-bottom: 100px" >
                     <div  style = "width:3%" ></div>
 
-                    <div class ="containerimage">
-                  <img src={{top_books[3][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                    <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                    <img id="realimage" src={{top_books[3][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
                         <h3>{{top_books[3][0]}}</h3>
@@ -796,8 +873,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                     </div>
                 </div>
 
-             <div class ="containerimage">
-                    <img src={{top_books[4][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <img id="realimage" src={{top_books[4][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
                         <h3>{{top_books[4][0]}}</h3>
@@ -807,8 +885,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                 </div>
                 </div>
 
-                <div class ="containerimage">
-                    <img src={{top_books[5][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                <img id="realimage" src={{top_books[5][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                     <div class="middle">
                     <div class="text">
                         <h3>{{top_books[5][0]}}</h3>
@@ -827,8 +906,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                     margin-bottom: 100px" >
                           <div  style = "width:3%" ></div>
 
-                            <div class ="containerimage">
-                          <img src={{top_books[6][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                          <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                          <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                          <img id="realimage" src={{top_books[6][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
                                 <h3>{{top_books[6][0]}}</h3>
@@ -838,8 +918,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                             </div>
                         </div>
 
-                     <div class ="containerimage">
-                            <img src={{top_books[7][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <img id="realimage" src={{top_books[7][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
                                 <h3>{{top_books[7][0]}}</h3>
@@ -849,8 +930,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                         </div>
                         </div>
 
-                        <div class ="containerimage">
-                          <img src={{top_books[8][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                        <img id="realimage" src={{top_books[8][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                             <div class="middle">
                             <div class="text">
                                 <h3>{{top_books[8][0]}}</h3>
@@ -869,8 +951,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                             margin-bottom: 100px" >
                                     <div  style = "width:3%" ></div>
 
-                                    <div class ="containerimage">
-                                    <img src={{top_books[9][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                    <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                    <img id="realimage" src={{top_books[9][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
                                         <h3>{{top_books[9][0]}}</h3>
@@ -880,8 +963,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                                     </div>
                                 </div>
 
-                             <div class ="containerimage">
-                                  <img src={{top_books[10][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <img id="realimage" src={{top_books[10][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
                                         <h3>{{top_books[10][0]}}</h3>
@@ -891,8 +975,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                                 </div>
                                 </div>
 
-                                <div class ="containerimage">
-                                    <img src={{top_books[11][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                <img id="realimage" src={{top_books[11][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                     <div class="middle">
                                     <div class="text">
                                         <h3>{{top_books[11][0]}}</h3>
@@ -910,8 +995,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                                     margin-bottom: 100px" >
                                             <div  style = "width:3%" ></div>
 
-                                            <div class ="containerimage">
-                                          <img src={{top_books[12][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                            <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                            <img id="realimage" src={{top_books[12][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
                                                 <h3>{{top_books[12][0]}}</h3>
@@ -921,8 +1007,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                                             </div>
                                         </div>
 
-                                     <div class ="containerimage">
-                                            <img src={{top_books[13][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <img id="realimage" src={{top_books[13][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
                                                 <h3>{{top_books[13][0]}}</h3>
@@ -932,8 +1019,9 @@ When 16-year-old Katniss's young sister, Prim, is selected as District 12's fema
                                         </div>
                                         </div>
 
-                                        <div class ="containerimage">
-                                          <img src={{top_books[14][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <div class ="containerimage" style="position: relative; left: 0; top: 0">
+                                        <img id = "defaultimage" src= "https://s.gr-assets.com/assets/icons/goodreads_icon_200x200-8b5b322a54ffbe04db26585de0830763.png" alt="image"  class="img-fluid"  width =  "90%" height = "400px">
+                                        <img id="realimage" src={{top_books[14][1]}} alt="image"  class="img-fluid"  width =  "90%" height = "400px">
                                             <div class="middle">
                                             <div class="text">
                                                 <h3>{{top_books[14][0]}}</h3>
@@ -1211,6 +1299,7 @@ window.onclick = function(event) {
 // }
 // Get the <span> element that closes the modal
 var frequency_list = [{"text":"study","size":40},{"text":"motion","size":15},{"text":"forces","size":10},{"text":"electricity","size":15},{"text":"movement","size":10},{"text":"relation","size":5},{"text":"things","size":10},{"text":"force","size":5},{"text":"ad","size":5},{"text":"energy","size":85},{"text":"living","size":5},{"text":"nonliving","size":5},{"text":"laws","size":15},{"text":"speed","size":45},{"text":"velocity","size":30},{"text":"define","size":5},{"text":"constraints","size":5},{"text":"universe","size":10},{"text":"physics","size":120},{"text":"describing","size":5},{"text":"matter","size":90},{"text":"physics-the","size":5},{"text":"world","size":10},{"text":"works","size":10},{"text":"science","size":70},{"text":"interactions","size":30},{"text":"studies","size":5},{"text":"properties","size":45},{"text":"nature","size":40},{"text":"branch","size":30},{"text":"concerned","size":25},{"text":"source","size":40},{"text":"google","size":10},{"text":"defintions","size":5},{"text":"two","size":15},{"text":"grouped","size":15},{"text":"traditional","size":15},{"text":"fields","size":15},{"text":"acoustics","size":15},{"text":"optics","size":15},{"text":"mechanics","size":20},{"text":"thermodynamics","size":15},{"text":"electromagnetism","size":15},{"text":"modern","size":15},{"text":"extensions","size":15},{"text":"thefreedictionary","size":15},{"text":"interaction","size":15},{"text":"org","size":25},{"text":"answers","size":5},{"text":"natural","size":15},{"text":"objects","size":5},{"text":"treats","size":10},{"text":"acting","size":5},{"text":"department","size":5},{"text":"gravitation","size":5},{"text":"heat","size":10},{"text":"light","size":10},{"text":"magnetism","size":10},{"text":"modify","size":5},{"text":"general","size":10},{"text":"bodies","size":5},{"text":"philosophy","size":5},{"text":"brainyquote","size":5},{"text":"words","size":5},{"text":"ph","size":5},{"text":"html","size":5},{"text":"lrl","size":5},{"text":"zgzmeylfwuy","size":5},{"text":"subject","size":5},{"text":"distinguished","size":5},{"text":"chemistry","size":5},{"text":"biology","size":5},{"text":"includes","size":5},{"text":"radiation","size":5},{"text":"sound","size":5},{"text":"structure","size":5},{"text":"atoms","size":5},{"text":"including","size":10},{"text":"atomic","size":10},{"text":"nuclear","size":10},{"text":"cryogenics","size":10},{"text":"solid-state","size":10},{"text":"particle","size":10},{"text":"plasma","size":10},{"text":"deals","size":5},{"text":"merriam-webster","size":5},{"text":"dictionary","size":10},{"text":"analysis","size":5},{"text":"conducted","size":5},{"text":"order","size":5},{"text":"understand","size":5},{"text":"behaves","size":5},{"text":"en","size":5},{"text":"wikipedia","size":5},{"text":"wiki","size":5},{"text":"physics-","size":5},{"text":"physical","size":5},{"text":"behaviour","size":5},{"text":"collinsdictionary","size":5},{"text":"english","size":5},{"text":"time","size":35},{"text":"distance","size":35},{"text":"wheels","size":5},{"text":"revelations","size":5},{"text":"minute","size":5},{"text":"acceleration","size":20},{"text":"torque","size":5},{"text":"wheel","size":5},{"text":"rotations","size":5},{"text":"resistance","size":5},{"text":"momentum","size":5},{"text":"measure","size":10},{"text":"direction","size":10},{"text":"car","size":5},{"text":"add","size":5},{"text":"traveled","size":5},{"text":"weight","size":5},{"text":"electrical","size":5},{"text":"power","size":5}];
+
 
 
 var color = d3.scale.linear()
