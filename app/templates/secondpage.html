@@ -220,8 +220,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[0][5]}} </p>      </div>
-
+        {% if top_books[0][5]!= "" %}
+        <p>Summary: {{top_books[0][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
       <div class="modal-footer">
         {% if top_books[0][3]!= "" %}
         <a href={{top_books[0][3]}} target="_blank" >
@@ -262,7 +266,13 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[1][5]}} </p>      </div>
+
+        {% if top_books[1][5]!= "" %}
+        <p>Summary: {{top_books[1][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[1][3]!= "" %}
@@ -303,7 +313,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>  Summary: {{top_books[2][5]}} </p> </div>
+        {% if top_books[2][5]!= "" %}
+        <p>Summary: {{top_books[2][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[2][3]!= "" %}
@@ -344,7 +359,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[3][5]}} </p>      </div>
+       {% if top_books[3][5]!= "" %}
+        <p>Summary: {{top_books[3][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[3][3]!= "" %}
@@ -385,7 +405,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[4][5]}} </p>      </div>
+        {% if top_books[4][5]!= "" %}
+        <p>Summary: {{top_books[4][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[4][3]!= "" %}
@@ -426,7 +451,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[5][5]}} </p>      </div>
+        {% if top_books[5][5]!= "" %}
+        <p>Summary: {{top_books[5][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[5][3]!= "" %}
@@ -466,7 +496,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[6][5]}} </p>      </div>
+        {% if top_books[6][5]!= " " %}
+        <p>Summary: {{top_books[6][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[6][3]!= "" %}
@@ -506,7 +541,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[7][5]}} </p>      </div>
+        {% if top_books[7][5]!= "" %}
+        <p>Summary: {{top_books[7][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[7][3]!= "" %}
@@ -546,7 +586,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[8][5]}} </p>      </div>
+        {% if top_books[8][5]!= "" %}
+        <p>Summary: {{top_books[8][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[8][3]!= "" %}
@@ -586,7 +631,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[9][5]}} </p>      </div>
+        {% if top_books[9][5]!= "" %}
+        <p>Summary: {{top_books[9][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[9][3]!= "" %}
@@ -626,7 +676,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[10][5]}} </p>      </div>
+        {% if top_books[10][5]!= "" %}
+        <p>Summary: {{top_books[10][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[10][3]!= "" %}
@@ -666,7 +721,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[11][5]}} </p>      </div>
+        {% if top_books[11][5]!= "" %}
+        <p>Summary: {{top_books[11][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[11][3]!= "" %}
@@ -706,7 +766,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[12][5]}} </p>      </div>
+       {% if top_books[12][5]!= "" %}
+        <p>Summary: {{top_books[12][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[12][3]!= "" %}
@@ -746,7 +811,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[13][5]}} </p>      </div>
+      {% if top_books[13][5]!= "" %}
+        <p>Summary: {{top_books[13][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[13][3]!= "" %}
@@ -786,7 +856,12 @@
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
-        <p>Summary: {{top_books[14][5]}} </p>      </div>
+        {% if top_books[14][5]!= "" %}
+        <p>Summary: {{top_books[14][5]}} </p>    
+        {% else %} 
+        <p> Sorry Summary Does Not Exist </p> 
+        {% endif %} 
+         </div>
 
       <div class="modal-footer">
         {% if top_books[14][3]!= "" %}
