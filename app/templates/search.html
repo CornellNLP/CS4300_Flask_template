@@ -1,10 +1,7 @@
 <html>
 <body>
-
-
     <style>
     #gobutton {
-
       border: 2px solid #eed9c0;
       border-radius: 6px;
       border-width: 2px;
@@ -13,11 +10,8 @@
       display: inline-block;
       font-size: 20px;
       margin: 1.5% 1.5%;
-      backgroud-color: #eed9c0;
-
       text-transform: uppercase;
     }
-
     .centered {
       position: fixed;
       top: 50%;
@@ -37,21 +31,21 @@
       text-align: right;
     }
     body {
-            background-image: url("http://college.koreadaily.com/wp-content/uploads/2016/07/light-465350_960_720.jpg");
-            background-repeat:no-repeat;
-            background-size: 100% 100%;
+        background-image: url("http://college.koreadaily.com/wp-content/uploads/2016/07/light-465350_960_720.jpg");
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
           }
 
-     input[type="text"]
+    input[type="text"]
     {
-       min-width: 500px;
+        min-width: 500px;
         min-height:40px;
-       max-width: 800px ;
+        max-width: 800px ;
        text-align: left;
      }
      button[type="submit"]{
-         min-height:45px;
-         background-color:#DEB887 !important;
+        min-height:45px;
+        background-color:#DEB887 !important;
     }
     #formm {
       position: absolute;
@@ -79,8 +73,8 @@
     </head>
 
     <div id = "names">
-    <a color = "white" href = "https://bookrec.herokuapp.com" target="_blank"> Version 1 </a>
-    <a color = "white" href = "https://bookrec-p04.herokuapp.com" target="_blank">  Version 2 </a>
+        <a color = "white" href = "https://bookrec.herokuapp.com" target="_blank"> Version 1 </a>
+        <a color = "white" href = "https://bookrec-p04.herokuapp.com" target="_blank">  Version 2 </a>
      <br>
       <p>
         BookRec - A Book Recommender (Cornell University CS4300 SP18)
@@ -91,23 +85,20 @@
         Data is collected from GoodReads for academic purposes only.
       </p>
     </div>
+
     <div class="centered">
-<form>
+        <form>
         <!-- <form class="form-horizontal row global-search"> -->
             <h1 style="font-size: 900%; font-family: 'Vidaloka', serif; color: white; margin-bottom:20px">
               BookRec
             </h1>
-
             <br>
             
             <h5 id="desc" style="text-align:center">What is your favorite book? What did you particularly like about it? <br> BookRec has taken 3.2 million book reviews of 63,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
-<br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
+            <br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
-                <!-- <label class="control-label col-sm-2"></label> -->
-                 <!-- <div class="col-sm-10"> -->
                 <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '제일 좋고 유명한 예시')">
-                <!-- </div> -->
             </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
@@ -116,19 +107,14 @@
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
             <label class="form-group col-sm-12">
-                <!-- <label class="control-label col-sm-2"></label> -->
-                <!-- <div class="col-sm-10"> -->
                 <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '위에 책 예시에 가장 사람들이 많이 좋아햇을법한 단어') ">
-                <!-- </div> -->
             </label>
-
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
             </div>
+            <h3 style = "color:white; font-family: 'Vidaloka', serif; font-size : 18px"> {{error_message}} </h3>
             </form>
           </div>
-<!-- </div> -->
-
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -137,23 +123,18 @@
         <script src="/static/bootstrap-tagsinput.js" > </script>
         <script src="/static/typeahead.js" > </script>
         <script src = "/static/jquery-ui.js"> </script>
+        
         <script>
 
         $( document ).ready(function() {
             console.log( "document loaded try to get the data load" );
 
             keyword_list = document.getElementsByClassName("keyword")
-
             var keyword_array = []
             for (var i = 0; i < keyword_list.length; i++){
                 keyword_array.push(keyword_list[i].innerText)
             }
-
             book_list = document.getElementsByClassName("book")
-
-            console.log(book_list);
-            console.log("create a new book for jquery typeahead")
-
             var book_array = []
             for (var i = 0; i < book_list.length; i++){
                 book_array.push(book_list[i].innerText)
@@ -162,10 +143,7 @@
             for ( var i =0 ; i < keyword_array.length ; i ++ ) {
                 word = keyword_array[i].trim()
                 new_key_word.push({ "value" : word , "name" : word })
-
-
             }
-
             var keywords = new Bloodhound({
                       datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
                       queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -182,7 +160,7 @@
                             limit : 10
                         },
                     freeinput : false ,
-                    maxTags : 10
+               
                     }
                 );
 
@@ -210,7 +188,6 @@
                             limit : 5
                         },
                     freeinput : false ,
-                    maxTags : 10,
                     delimiterRegex: /[**]+/,
                     delimiter: '**'
 
