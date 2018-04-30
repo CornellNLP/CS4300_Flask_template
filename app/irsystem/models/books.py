@@ -5,7 +5,6 @@ class Books(Base):
 
   index = db.Column(db.Integer, nullable=False)
   name = db.Column(db.Text, nullable=False)
-  word_cloud = db.Column(db.Text, nullable=False)
   vector = db.Column(db.Text, nullable = False)
   avg_rating = db.Column(db.Float, nullable=True)
   description = db.Column(db.Text, nullable=True)

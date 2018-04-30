@@ -19,6 +19,21 @@ import unicodedata
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
 
+
+@irsystem.route('/db', methods=['GET'])
+def change_db_final():
+	print('start')
+	# put_books_in_db(11)
+	# put_words_in_db(11)
+	# db.session.commit()
+	db.session.flush()
+	print('flushed!')
+	db.session.commit()
+	print('commited!')
+	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
+		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
+
+
 @irsystem.route('/debug', methods=['GET'])
 def debug():
 	b = Words.query.filter_by(name = u'wrong').first()
@@ -46,7 +61,7 @@ def secondpage():
 
 	top15_asorted = session.get('top15_asorted', None)
 	top_15_book_info = get_books(top15_asorted)
-	print(top_15_book_info[0])
+
 
 	#encode everything to make sure that the output is the correct ouput format
 
@@ -58,10 +73,8 @@ def secondpage():
 		for i in range(6):
 			if result[i] is None:
 				result[i] = ''
-			else:
+			else: 
 				result[i] = unicodedata.normalize('NFKD', result[i]).encode('ascii','ignore')
-		for idx in range(len(result[6])) :
-			result[6][idx] = unicodedata.normalize('NFKD', result[6][idx]).encode('ascii','ignore')
 		if result[3] != "" :
 			result[3] = "http://www.goodreads.com/book/show/" + result[3]
 		else :
@@ -92,19 +105,16 @@ def search():
 		print("enter if statement inside the first page")
 	
 		if title_input !="" or keyword_input!="":
-			w = word_to_closest_books(keyword_input)
-			b = book_to_closest_books(title_input)
-			top15_asorted = combine_two_scores(w, b)
+			sim_scores = inputs_to_scores(keyword_input, title_input)
+			if sim_scores is None:
+				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
+						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+			top15_asorted = scores_to_asort(sim_scores)
 
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
 			return redirect(url_for('irsystem.secondpage'))
-
-		else:
-			print("enter both empty")
-			return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
-			word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
