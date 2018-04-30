@@ -25,7 +25,7 @@ import unicodedata
 def word_to_closest_books(words, length = 59646):
 	if words == '':
 		return np.zeros(length)
-	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] 
+	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split('**')] 
 	for word in keyword_query_objects : 
 		if word  is None : 
 			return None 
