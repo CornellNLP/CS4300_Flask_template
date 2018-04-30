@@ -42,6 +42,13 @@ def search2():
   else:
     start_index = 0
 
+  page_size = request.args.get('page_size') 
+  if page_size is not None:
+    print(page_size)
+    page_size = int(page_size)
+  else:
+    page_size = 10
+
 
 
   # irrelevant_tokens = ['i','want','to','learn','how']
@@ -55,7 +62,7 @@ def search2():
   tokens = expand_query(orig_tokens)
 
   index, tokens = build_index(tokens)
-  results = index_search(tokens, orig_tokens, index, app.config['idfs'], app.config['doc_norms'], start_index)
+  results = index_search(tokens, orig_tokens, index, app.config['idfs'], app.config['doc_norms'], start_index, page_size)
 
   return json.dumps(results)
 
@@ -118,7 +125,7 @@ def build_index(query_tokens):
       index[token] = {}
   return index, tokens
 
-def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0):
+def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0, page_size=10):
   """ Search the collection of documents for the given query
 
   Arguments
@@ -263,7 +270,7 @@ def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0
 
   output = []
 
-  for comment in sorted_list[start_index:start_index+10]:
+  for comment in sorted_list[start_index:start_index+page_size]:
     comment_dict = id_to_comment[str(comment[0])]
     comment_body = comment_dict["body"].encode("ascii", "ignore")
     # print(type(comment_body))
@@ -273,7 +280,7 @@ def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0
     comment_dict["summary"] = summary
     output.append([comment_dict, score_breakdowns[str(comment[0])]])
 
-  return output, int(len(sorted_list) > start_index + 10)
+  return output, len(sorted_list)
 
 ################################ HELPER FUNCTIONS ##################################
 
