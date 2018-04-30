@@ -25,24 +25,25 @@ import unicodedata
 def word_to_closest_books(words, length = 59646):
 	if words == '':
 		return np.zeros(length)
-	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] ###this delimeter might change
+	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split('**')] 
 	sum_sim_scores = np.zeros(length)
 	for keyword in keyword_query_objects:
 		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
-	return sum_sim_scores/len(words.split(';'))
+	return sum_sim_scores/len(keyword_query_objects)
 
 #book: user's book title input
-def book_to_closest_books(book, length = 59646):
-	if book == '':
+def book_to_closest_books(books, length = 59646):
+	if books == '':
 		return np.zeros(length)
-	book_query_object = Books.query.filter_by(name=book).first()
+	book_query_objects = [Books.query.filter_by(name=book).first() for book in books.split('**')]
 	book_vector = np.fromstring(book_query_object.vector, sep=', ')
 	sim_scores = np.zeros(length)
 	for book in Books.query.all():
 		index = book.index
 		ith_book_vector = np.fromstring(book.vector, sep = ', ')
-		sim_scores[index] = ith_book_vector.dot(book_vector)
-	return sim_scores
+		for book_q_obj in book_query_objects:
+			sim_scores[index] += ith_book_vector.dot(np.fromstring(book_q_obj.vector, sep = ', '))
+	return sim_scores / len(book_query_objects)
 
 def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):	
 	sum_scores = np.zeros(len(scores_from_book_input)) + scores_from_book_input + scores_from_word_input
@@ -57,6 +58,8 @@ def combine_two_scores(scores_from_word_input, scores_from_book_input, k = 15):
 			index += 1
 			prev = sum_scores[asort[index-1]]
 			curr = sum_scores[asort[index]]
+		#excluding books of same series when given a book input
+		book_input = Books.query.filter_by(index=asort[0]).first().name
 		asort = asort[index:]
 	#exluding the same books (those with the same exact similarity scores)	
 	length = 0
