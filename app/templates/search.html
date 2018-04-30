@@ -3,6 +3,29 @@
 
 
     <style>
+    #gobutton {
+
+      border: 2px solid #eed9c0;
+      border-radius: 6px;
+      border-width: 2px;
+      padding: 1.5% 1.5%;
+      text-align: center;
+      display: inline-block;
+      font-size: 20px;
+      margin: 1.5% 1.5%;
+      backgroud-color: #eed9c0;
+
+      text-transform: uppercase;
+    }
+
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
     h1 {
       color: white !important;
     }
@@ -33,9 +56,13 @@
       position: absolute;
       left: 6%;
       top: 15%;
-    } 
+    }
+    #desc {
+      color:white;
+      line-height: 1.5;
+    }
     .marge{
-        margin-top:30px;
+        margin-top:19%;
     }
     </style>
     <head>
@@ -48,51 +75,56 @@
         <link href = "/static/jquery-ui.css" rel = "stylesheet" >
         <link href = "/static/hover.css" rel = "stylesheet" >
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
-    </head> 
+    </head>
 
     <div id = "names">
-    <a color = "white" href = "https://bookrec.herokuapp.com"> Version 1 </a>
-    <a color = "white" href = "https://bookrec-p04.herokuapp.com">  version 2 </a>
-     <br> 
+    <a color = "white" href = "https://bookrec.herokuapp.com" target="_blank"> Version 1 </a>
+    <a color = "white" href = "https://bookrec-p04.herokuapp.com" target="_blank">  Version 2 </a>
+     <br>
       <p>
         BookRec - A Book Recommender (Cornell University CS4300 SP18)
         <br>
-        Hannah Lee | Jason Cho | Seyun Kim | Hyun Kyo Jung | Linda Lu
+        Hannah Lee | Jason Cho | Seyun Kim | Hyun Kyo Jung | Haitian Lu
         <br>
 
-        Data collected from GoodReads for academic purposes only.
+        Data is collected from GoodReads for academic purposes only.
       </p>
     </div>
-
-        <form class="form-horizontal row global-search">
+<form class="centered">
+        <!-- <form class="form-horizontal row global-search"> -->
             <h1 style="font-size: 900%; font-family: 'Vidaloka', serif; color: white; margin-bottom:20px">
               BookRec
             </h1>
-            <br><br><br><br>
-            <div class="form-group col-sm-12">
-                <label class="control-label col-sm-2"></label>
-                 <div class="col-sm-10">
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Title"  width = "500px">
-                </div>
-            </div>
+
+            <br><br>
+
+            <h5 id="desc">Welcome to BookRec! </h5>
+            <br>
+            <label class="form-group col-sm-12">
+                <!-- <label class="control-label col-sm-2"></label> -->
+                 <!-- <div class="col-sm-10"> -->
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Titles ('The Great Gatsby', 'The Hunger Games'...)">
+                <!-- </div> -->
+            </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
             {% endfor %}
             {% for book in avail_books %}
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
-            <div class="form-group col-sm-12">
-                <label class="control-label col-sm-2"></label>
-                <div class="col-sm-10">
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Keyword" width = "500px" >
-                </div>
-            </div>
-            <div class = "marge" > 
-             <button class="btn btn-info" > Go </button> 
+            <label class="form-group col-sm-12">
+                <!-- <label class="control-label col-sm-2"></label> -->
+                <!-- <div class="col-sm-10"> -->
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Tags ('fight', 'romance', 'depression'...) ">
+                <!-- </div> -->
+            </label>
+
+            <div class = "marge" >
+             <button id="gobutton" class="btn btn-info" > Go </button>
             </div>
             </form>
-     
-    
+</div>
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

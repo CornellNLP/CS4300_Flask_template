@@ -50,6 +50,10 @@ def secondpage():
 
 	#encode everything to make sure that the output is the correct ouput format
 
+	arr=["<i>", "</i>", "<i/>","<br />","</b>", "<b>", "<strong>", "<a href=https://", "</blockquote>"
+	"<em>" , "</em>", "<emAVA>" , "<sub>",  "</sub>", "<sup>",  "</sup>", "<hr>", "</hr>",  "<p>", "</p>", 
+     "</strong>", "<em>", "</em>", "<p>","</p>","<div>", "<u>", "</u>", "<a>", "</a>", "</div>"] 
+
 	for result in top_15_book_info:
 		for i in range(6):
 			if result[i] is None:
@@ -64,6 +68,9 @@ def secondpage():
 			result[3] =""
 		result[2] = "http://covers.openlibrary.org/b/isbn/" + result[2] + "-M.jpg"
 		result[1] = "http://covers.openlibrary.org/b/isbn/" + result[1] + "-M.jpg"
+		for i in range(0, len(arr)-1):
+			result[5] = result[5].replace(arr[i],"")
+
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message=top_book_message, word_cloud=[], top_books = top_15_book_info, avail_keywords = [], avail_books = [])
