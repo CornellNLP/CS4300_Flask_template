@@ -45,67 +45,50 @@ def create_tables():
 
 def put_books_in_db(round):
 	#load the files
-	d2w_file_string_begin = 'docs_to_words_'
-	file_string_end       = '.pkl'
-	d2w_file_string       = d2w_file_string_begin + str(round+1) + file_string_end
-	docs_to_words = pickle.load(open(d2w_file_string, "rb"))				
 	index_to_book = json.load(open("index_to_book.json"))
-	book_to_author = json.load(open('book_to_author.json'))
-	index_to_word = json.load(open('index_to_word.json'))
 	book_info = json.load(open('book_info.json'))
 	docs = pickle.load(open('docs.pkl', 'rb'))
 	print('files all opened!')
 
-	num_doc = len(docs_to_words)
+	num_doc = len(docs)
 	row_i = 0
-	for i in range(num_doc):
-		index = i + 4000 * round 																		
-		name = index_to_book[str(i + 4000 * round)]											
-		author = book_to_author[name]													
-		word_cloud = ''
-		for top_word_i in np.argsort(-docs_to_words[i])[:5]:
-			word_cloud = word_cloud + '***' + (index_to_word[str(top_word_i)])
-		word_cloud = word_cloud[3:]
-		row_i += 1
-		info_list = book_info[name]
-		vector = str(docs[i + 4000 * round].tolist())[1:-1]
+	for i in range(6000*(round-1),num_doc):
+		unicode_index = unicode(str(i),'utf-8')
+		name = index_to_book[unicode_index][:index_to_book[unicode_index].rfind(' (published by)')]
+		author = name[name.rfind('(by)')+5:]
+		info_list = book_info[index_to_book[unicode_index]]
+		vector = str(docs[i].tolist())[1:-1]
 		description = info_list[u'description']
 		avg_rating = info_list[u'average_rating']
 		isbn10 = info_list[u'ISBN10']
 		isbn13 = info_list[u'ISBN13']
 		link = info_list[u'link']
-
-		#isbn, avg_rating, and description are null for now
-		book = Books(index = index, name = name, author = author, word_cloud = word_cloud, description = description, vector = vector, 
+		row_i = i+1
+		book = Books(index = i, name = name, author = author, description = description, vector = vector, 
 			         avg_rating = avg_rating, isbn10 = isbn10, isbn13 = isbn13, link = link)
 		db.session.add(book)
 	print('done with books!')
-	print('last row for the books was %s' % str(row_i + 4000 * round))											
+	print('last row for the books was %s' % str(row_i))											
 
 
 	
 #Create a book instance
 def put_words_in_db(round):
 	#load the files
-	w2d_file_string_begin = 'words_to_docs_'
-	file_string_end = '.pkl'
-	w2d_file_string = w2d_file_string_begin + str(round+1) + file_string_end
-	words_to_docs =  pickle.load(open(w2d_file_string, "rb"))										
+	words 		  = pickle.load(open('words.pkl')) 
 	index_to_word = json.load(open("index_to_word.json"))
 	print('files all opened!')
 
-	num_word = len(words_to_docs)
+	num_word = len(words)
 	row_i = 0
-	for i in range(num_word):																		
-		index = i + 400 * round																					
-		name  = index_to_word[str(i + 400 * round)]																
-		book_scores = str(words_to_docs[i].tolist())[1:-1]
-		w = Words(index = index, name = name, book_scores = book_scores)
+	for i in range(500*(round-1),num_word):		
+		name  = index_to_word[unicode(str(i),'utf-8')]													
+		vector = str(words[i].tolist())[1:-1]
+		w = Words(index = i, name = name, vector = vector)
 		db.session.add(w)
-		row_i += 1
-
-	print('last row for the words was %s' % str(row_i + 400 * round))												
+		row_i = i+1
 	print('done with words!')
+	print('last row for the words was %s' % str(row_i))												
 
 
 
