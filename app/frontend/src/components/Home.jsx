@@ -15,8 +15,7 @@ class Home extends Component {
 			numShowing: DEFAULT_NUM,
 			hasSearched: false,
 			loading : false,
-			errored: false,
-			global_nsfw: false
+			errored: false
 		};
 		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
     this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
@@ -48,7 +47,6 @@ class Home extends Component {
 		this.props.history.push({
 		  pathname: '/',
 			search: query,
-
 		})
 		this.getRelatedComments(submission)
 	}
@@ -84,11 +82,6 @@ class Home extends Component {
 		this.setState({ numShowing: currNum+=10 })
 	}
 
-	updateNSFW() {
-		console.log(document.getElementById("NSFWcheckbox").checked);
-		this.setState({global_nsfw: document.getElementById("NSFWcheckbox").checked})
-	}
-
 	render() {
 		let data = this.state.data.filter(comment => { return comment.body !== "[deleted]"})
     return (
@@ -106,7 +99,6 @@ class Home extends Component {
 			      		<input className="searchBar" id="search" type="text" value={this.state.value} onChange={this.handleChange} placeholder={this.suggestion}/>
 			      		</span>
 			      		<button id="submit_button" onClick={this.handleSubmit}><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
-								<p className = "text-center">display NSFW results<input id="NSFWcheckbox" type="checkbox" onClick={this.updateNSFW.bind(this)}/></p>
 			      	</label>
 			      </form>
 		      </div>
@@ -117,7 +109,7 @@ class Home extends Component {
 			      	(
 			      		data.slice(0, this.state.numShowing).map((comment, i) => {
 									console.log("rendering results")
-			      		return <Result key={comment[0].id} comment={comment} showExplicit={this.state.global_nsfw} style={i % 2 === 0 ? "white" : "whitesmoke"}/>})
+			      		return <Result key={comment[0].id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>})
 		      		)
 			      }
 			      {
