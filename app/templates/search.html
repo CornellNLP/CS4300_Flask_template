@@ -47,6 +47,7 @@
        min-width: 500px;
         min-height:40px;
        max-width: 800px ;
+       text-align: left;
      }
      button[type="submit"]{
          min-height:45px;
@@ -90,20 +91,22 @@
         Data is collected from GoodReads for academic purposes only.
       </p>
     </div>
-<form class="centered">
+    <div class="centered">
+<form>
         <!-- <form class="form-horizontal row global-search"> -->
             <h1 style="font-size: 900%; font-family: 'Vidaloka', serif; color: white; margin-bottom:20px">
               BookRec
             </h1>
 
-            <br><br>
-
-            <h5 id="desc">Welcome to BookRec! </h5>
+            <br>
+            
+            <h5 id="desc" style="text-align:center">What is your favorite book? What did you particularly like about it? <br> BookRec has taken 3.2 million book reviews of 63,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
+<br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
                 <!-- <label class="control-label col-sm-2"></label> -->
                  <!-- <div class="col-sm-10"> -->
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder="Input Book Titles ('The Great Gatsby', 'The Hunger Games'...)">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '제일 좋고 유명한 예시')">
                 <!-- </div> -->
             </label>
             {% for keyword in avail_keywords %}
@@ -115,7 +118,7 @@
             <label class="form-group col-sm-12">
                 <!-- <label class="control-label col-sm-2"></label> -->
                 <!-- <div class="col-sm-10"> -->
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder="Input Tags ('fight', 'romance', 'depression'...) ">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '위에 책 예시에 가장 사람들이 많이 좋아햇을법한 단어') ">
                 <!-- </div> -->
             </label>
 
@@ -123,7 +126,8 @@
              <button id="gobutton" class="btn btn-info" > Go </button>
             </div>
             </form>
-</div>
+          </div>
+<!-- </div> -->
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
