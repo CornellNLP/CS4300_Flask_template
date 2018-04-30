@@ -42,11 +42,16 @@ def inputs_to_scores(words, books, length = 61082, k =100):
 		return None
 	vector_sum /= len(word_inputs) + len(book_inputs)
 
-	sum_sim_scores = np.zeros(length)
+	books = np.zeros((length,k))
+	print('enter books.query.all()')
 	for book in Books.query.all():
 		index = book.index
 		ith_book_vector = np.fromstring(book.vector, sep=', ')
-		sum_sim_scores[index] = ith_book_vector.dot(vector_sum)
+		books[index] = ith_book_vector
+	print('exit books.query.all()')
+	print('enter dot product operation')
+	sum_sim_scores = np.dot(books, vector_sum)
+	print('exit dot product operation')
 
 	return sum_sim_scores
 
@@ -97,6 +102,7 @@ def book_to_closest_words(book, k = 50, length = 5260):
 	book_vector = book.vector
 
 	sim_scores = np.zeros(length)
+	print()
 	for word in Words.query.all():
 		index = word.index
 		ith_word_vector = np.fromstring(word.vector, sep=', ')
