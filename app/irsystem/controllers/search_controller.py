@@ -273,7 +273,7 @@ def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0
     comment_dict["summary"] = summary
     output.append([comment_dict, score_breakdowns[str(comment[0])]])
 
-  return output
+  return output, int(len(sorted_list) > start_index + 10)
 
 ################################ HELPER FUNCTIONS ##################################
 

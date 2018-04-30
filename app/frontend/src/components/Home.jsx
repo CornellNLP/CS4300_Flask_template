@@ -21,7 +21,8 @@ class Home extends Component {
 		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
     this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
 
-    this.showMore = this.showMore.bind(this);
+		this.showNextPage = this.showNextPage.bind(this);
+		this.showPrevPage = this.showPrevPage.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.getRelatedComments = this.getRelatedComments.bind(this);
@@ -72,7 +73,8 @@ class Home extends Component {
 		.then(response => {
 			console.log(response)
 			this.setState({
-				data: response.data,
+				data: response.data[0],
+				areMoreResults: response.data[1],
 				hasSearched: true,
 				loading: false,
 				errored: false,
@@ -84,7 +86,12 @@ class Home extends Component {
 		});
 	}
 
-	showMore() {
+	showNextPage() {
+		this.state.start_index += 10;
+		this.getRelatedComments(this.state.value);
+	}
+
+	showPrevPage() {
 		this.state.start_index += 10;
 		this.getRelatedComments(this.state.value);
 	}
@@ -120,8 +127,8 @@ class Home extends Component {
 		      		)
 			      }
 			      {
-			      	data.length && !this.state.loading ?
-			      		<button className="load-more" onClick={this.showMore}>Load more comments ({data.length - this.state.numShowing})</button> :
+			      	data.length && !this.state.loading && this.state.areMoreResults ?
+			      		<button className="Next Page" onC lick={this.showNextPage}>Load more comments ({data.length - this.state.numShowing})</button> :
 			      		null
 			    	}
 		      </div>
