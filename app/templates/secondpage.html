@@ -171,26 +171,6 @@
   text-align: center;
 }
 
-.stars {
-  font-size: 0;
-  padding-bottom: 16px;
-}
-.star-content {
-  width: 185px;
-  height: 35px;
-  font-size: 13px;
-  display: inline-block;
-  margin-left: 20px;
-  vertical-align: top;
-  background: url('https://i.stack.imgur.com/rwkqF.png') 0 0 repeat-x;
-
-}
-.stars .star-content span.stars span {
-  background: url('https://i.stack.imgur.com/rwkqF.png') 0 -36px repeat-x;
-  display: inline-block;
-  height: 35px;
-}
-
 
 </style>
 <head>
@@ -206,48 +186,29 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[0][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[0][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[0][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
         <p style="font-size:20px ; color:gray">Average rating: {{top_books[0][7]}}</p>
-        <div class="stars">
-  <div class="star-content">
-    <span class="stars">3.4</span> 
-  </div>
-</div>
-
-
-<p style ="font-size:20px">Tags from reviews: {{top_books[0][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style ="font-size:20px">Tags from reviews: {{top_books[0][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>        
         {% if top_books[0][5]!= "" %}
-        <p style= "font-size: 18px" > Summary : </p>
-         <p style = "font-size: 18px" >{{top_books[0][5]}} </p>
+          <p style= "font-size: 18px" > Summary : </p>
+          <p style = "font-size: 18px" >{{top_books[0][5]}} </p>     
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+          <p> Sorry Summary Does Not Exist </p>
         {% endif %}
          </div>
       <div class = "center" >
       <div class="modal-footer">
         {% if top_books[0][3]!= "" %}
-        <a href={{top_books[0][3]}} target="_blank" >
-        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
-        </a>
+          <a href={{top_books[0][3]}} target="_blank" >
+            <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+          </a>
         {% else %}
-            <h1></h1>
+          <h1></h1>
         {% endif %}
         </div>
       </div>
@@ -256,40 +217,28 @@
   </div>
 
   <div id="myModal1" class="modal">
-{% if top_books %}
+    {% if top_books %}
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[1][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[1][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[1][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[1][7]}}</p>
-<p style = "font-size: 40px">Tags from reviews: {{top_books[1][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[1][7]}}</p>
+        <p style = "font-size: 20px">Tags from reviews: {{top_books[1][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-
         {% if top_books[1][5]!= "" %}
-        <p>Summary: {{top_books[1][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
          </div>
       <div class = "center" >
-
       <div class="modal-footer">
         {% if top_books[1][3]!= "" %}
         <a href={{top_books[1][3]}} target="_blank">
@@ -310,29 +259,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[2][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[2][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[2][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[2][7]}}</p>
-
-<p>Tags from reviews: {{top_books[2][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[2][7]}}</p>
+        <p>Tags from reviews: {{top_books[2][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[2][5]!= "" %}
-        <p>Summary: {{top_books[2][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -358,28 +296,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[3][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[3][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[3][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[3][7]}}</p>
-<p>Tags from reviews: {{top_books[3][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[3][7]}}</p>
+        <p>Tags from reviews: {{top_books[3][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
        {% if top_books[3][5]!= "" %}
-        <p>Summary: {{top_books[3][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -411,22 +339,14 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[4][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[4][7]}}</p>
-<p>Tags from reviews: {{top_books[4][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[4][7]}}</p>
+        <p>Tags from reviews: {{top_books[4][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[4][5]!= "" %}
-        <p>Summary: {{top_books[4][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -456,24 +376,15 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[5][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[5][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[5][7]}}</p>
-<p>Tags from reviews: {{top_books[5][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[5][7]}}</p>
+        <p>Tags from reviews: {{top_books[5][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[5][5]!= "" %}
-        <p>Summary: {{top_books[5][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -498,28 +409,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[6][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[6][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[6][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[6][7]}}</p>
-<p>Tags from reviews: {{top_books[6][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[6][7]}}</p>
+        <p>Tags from reviews: {{top_books[6][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[6][5]!= " " %}
-        <p>Summary: {{top_books[6][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -544,28 +445,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[7][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[7][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[7][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[7][7]}}</p>
-<p>Tags from reviews: {{top_books[7][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[7][7]}}</p>
+        <p>Tags from reviews: {{top_books[7][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[7][5]!= "" %}
-        <p>Summary: {{top_books[7][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -590,28 +481,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[8][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[8][4]}}</p>
       </div>
-
-      <div class="modal-body" style="text-align:center">
-
+      <div class="modal-body" style="text-align:center">  
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[8][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[8][7]}}</p>
-<p>Tags from reviews: {{top_books[8][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[8][7]}}</p>
+        <p>Tags from reviews: {{top_books[8][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[8][5]!= "" %}
-        <p>Summary: {{top_books[8][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -636,28 +517,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[9][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[9][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[9][7]}}</p>
-<p>Tags from reviews: {{top_books[9][6]}}</p>
+        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>   
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[9][7]}}</p>
+        <p>Tags from reviews: {{top_books[9][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[9][5]!= "" %}
-        <p>Summary: {{top_books[9][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -686,24 +557,15 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[10][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[10][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[10][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[10][7]}}</p>
-<p>Tags from reviews: {{top_books[10][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[10][7]}}</p>
+        <p>Tags from reviews: {{top_books[10][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[10][5]!= "" %}
-        <p>Summary: {{top_books[10][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -732,24 +594,15 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[11][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[11][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[11][7]}}</p>
-<p>Tags from reviews: {{top_books[11][6]}}</p>
+      <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
+       <p style="font-size:20px ; color:gray">Average rating: {{top_books[11][7]}}</p>
+       <p>Tags from reviews: {{top_books[11][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[11][5]!= "" %}
-        <p>Summary: {{top_books[11][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -778,24 +631,15 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[12][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[12][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[12][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[12][7]}}</p>
-<p>Tags from reviews: {{top_books[12][6]}}</p>
+       <p style="font-size:20px ; color:gray">Average rating: {{top_books[12][7]}}</p>
+      <p>Tags from reviews: {{top_books[12][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
        {% if top_books[12][5]!= "" %}
-        <p>Summary: {{top_books[12][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -826,22 +670,14 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[13][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[13][7]}}</p>
-<p>Tags from reviews: {{top_books[13][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[13][7]}}</p>
+        <p>Tags from reviews: {{top_books[13][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
       {% if top_books[13][5]!= "" %}
-        <p>Summary: {{top_books[13][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -866,28 +702,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[14][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[14][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
-
         <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[14][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[14][7]}}</p>
-<p>Tags from reviews: {{top_books[14][6]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[14][7]}}</p>
+        <p>Tags from reviews: {{top_books[14][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
         {% if top_books[14][5]!= "" %}
-        <p>Summary: {{top_books[14][5]}} </p>
+        <p style= "font-size: 18px">Summary : <p>
+        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
