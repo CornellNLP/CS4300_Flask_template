@@ -18,6 +18,17 @@
      width: 40%;
 
  }
+ .legend2 {
+      border: 3px solid #cdc187;
+      border-radius: 5px 5px 5px 5px;
+      /* margin: auto;
+      /* margin-top: 3.5%; */ */
+      padding: 0.5%;
+
+      width: 100%;
+      margin-bottom: 1.9%;
+
+  }
 .bld {
      font-weight: bold;
  }
@@ -172,9 +183,12 @@
 }
 
 
+
+
 </style>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 </head>
 <body>
@@ -190,23 +204,30 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[0][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[0][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[0][7]}}</p>
-        <p style ="font-size:20px">Tags from reviews: {{top_books[0][6]}}</p>
-        <div id="wc" style="width:100%; height:50%"> </div>        
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[0][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[0][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[0][5]!= "" %}
-          <p style= "font-size: 18px" > Summary : </p>
-          <p style = "font-size: 18px" >{{top_books[0][5]}} </p>     
+          <div class = "legend2">
+<p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+<br>
+  <div style="color:grey">Average Rating: {{top_books[0][7]}} / 5.0 </div>
+          <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[0][5]}} </p>
         {% else %}
-          <p> Sorry Summary Does Not Exist </p>
+          <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
         {% if top_books[0][3]!= "" %}
+
           <a href={{top_books[0][3]}} target="_blank" >
             <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
           </a>
+
         {% else %}
           <h1></h1>
         {% endif %}
@@ -226,17 +247,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[1][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[1][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[1][7]}}</p>
-        <p style = "font-size: 20px">Tags from reviews: {{top_books[1][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[1][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[1][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[1][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[1][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -263,17 +288,22 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[2][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[2][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[2][7]}}</p>
-        <p>Tags from reviews: {{top_books[2][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[2][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[2][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[2][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[2][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+      </div>
+      </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -300,17 +330,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[3][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[3][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[3][7]}}</p>
-        <p>Tags from reviews: {{top_books[3][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-       {% if top_books[3][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[3][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[3][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[3][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[3][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[3][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+        </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -339,17 +373,21 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[4][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[4][7]}}</p>
-        <p>Tags from reviews: {{top_books[4][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[4][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[4][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[4][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[4][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[4][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -377,17 +415,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[5][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[5][7]}}</p>
-        <p>Tags from reviews: {{top_books[5][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[5][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[5][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[5][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[5][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[5][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
        <div class = "center" >
       <div class="modal-footer">
@@ -413,17 +455,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[6][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[6][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[6][7]}}</p>
-        <p>Tags from reviews: {{top_books[6][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        {% if top_books[6][5]!= " " %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[6][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[6][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[6][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[6][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[6][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -449,17 +495,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[7][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[7][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[7][7]}}</p>
-        <p>Tags from reviews: {{top_books[7][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[7][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[7][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[7][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[7][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[7][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -484,18 +534,22 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[8][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[8][4]}}</p>
       </div>
-      <div class="modal-body" style="text-align:center">  
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[8][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[8][7]}}</p>
-        <p>Tags from reviews: {{top_books[8][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+      <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[8][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[8][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[8][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[8][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[8][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
        <div class = "center" >
       <div class="modal-footer">
@@ -521,17 +575,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[9][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>   
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[9][7]}}</p>
-        <p>Tags from reviews: {{top_books[9][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[9][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[9][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[9][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[9][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[9][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -558,17 +616,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[10][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[10][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[10][7]}}</p>
-        <p>Tags from reviews: {{top_books[10][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[10][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[10][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[10][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[10][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[10][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -595,17 +657,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[11][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-      <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
-       <p style="font-size:20px ; color:gray">Average rating: {{top_books[11][7]}}</p>
-       <p>Tags from reviews: {{top_books[11][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[11][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[11][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[11][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[11][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[11][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -632,17 +698,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[12][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[12][8]}}%</h2>
-       <p style="font-size:20px ; color:gray">Average rating: {{top_books[12][7]}}</p>
-      <p>Tags from reviews: {{top_books[12][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-       {% if top_books[12][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[12][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[12][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[12][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[12][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[12][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -670,17 +740,21 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[13][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[13][7]}}</p>
-        <p>Tags from reviews: {{top_books[13][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-      {% if top_books[13][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[13][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[13][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[13][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[13][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[13][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -706,17 +780,21 @@
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[14][4]}}</p>
       </div>
       <div class="modal-body" style="text-align:center">
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[14][8]}}%</h2>
-        <p style="font-size:20px ; color:gray">Average rating: {{top_books[14][7]}}</p>
-        <p>Tags from reviews: {{top_books[14][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[14][8]}}%</div></h2>
+
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[14][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[14][5]!= "" %}
-        <p style= "font-size: 18px">Summary : <p>
-        <p style= "font-size: 18px"> {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[14][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[14][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book. </p>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -736,9 +814,9 @@
 <div class="container">
   <a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
     <div>
-    <center style = "margin-top : 8% ;margin-bottom: 1% ; font-family: 'Vidaloka', serif; color: white; font-size: 400%">  Showing results for: </center>
-    <center style = "text-align: center; margin-left : 10% ;margin-right : 10% ;font-family: 'Vidaloka', serif; margin-bottom: 6% ; color: white; font-size: 200%"> {{ top_books_message }} </center>
-  
+    <center style = "margin-top : 8% ;margin-bottom: 1% ; font-family: 'Vidaloka', serif; color: white; font-size: 400%; font-weight: normal;">  Showing results for: </center>
+    <center style = "text-align: center; margin-left : 10% ;margin-right : 10% ;font-family: 'Source Sans Pro', sans-serif; text-transform: uppercase; margin-bottom: 6% ; color: white; font-weight: bold; font-size: 150%"> {{ top_books_message }} </center>
+
   <p>hover </p>
     </div>
 {% if top_books %}
@@ -1269,12 +1347,12 @@ function draw(words) {
 }
 
 
-<!-- Code referenced from https://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css --> 
-$.fn.stars = function() { 
+<!-- Code referenced from https://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css -->
+$.fn.stars = function() {
   return this.each(function() {
-    var floatedval  = parseFloat($(this).html()); 
-    var values = Math.max(0, (Math.min(5, floatedval))) * 36.5; 
-    var $span = $('<span> </span>').width(values); 
+    var floatedval  = parseFloat($(this).html());
+    var values = Math.max(0, (Math.min(5, floatedval))) * 36.5;
+    var $span = $('<span> </span>').width(values);
     $(this).empty().append($span);
   });
 }
