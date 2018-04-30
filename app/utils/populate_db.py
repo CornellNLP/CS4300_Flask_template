@@ -4,6 +4,9 @@ import os
 import sys
 import pickle
 
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
 sys.path.append(os.getcwd())
 
 from app import db
@@ -26,6 +29,15 @@ files = set([])
 
 ids = set([])
 
+# some_engine = create_engine('postgresql://postgres:alpine@35.188.248.54:5432/learnddit')
+
+# # create a configured "Session" class
+# Session = sessionmaker(bind=some_engine)
+
+# # create a Session
+# session = Session()
+# session.rollback()
+comment_counter = 0
 print "starting population of db..."
 start_time = int(time.time())
 
@@ -44,26 +56,25 @@ for filename in os.listdir(os.getcwd() + "/" + path):
     counter = 0
     print "starting", filename
     for line in file:
-      counter+=1
       objs = json.loads(line)
       count = len(objs)
       # iterate through all the comments of this
       for obj in objs:
+        counter+=1
         upvotes = obj["ups"] if "ups" in obj else 0
         comment = Comment(obj["id"], obj["author"], obj["subreddit"], obj["link_id"], obj["body"], obj["score"], obj["gilded"], upvotes, obj["controversiality"])
         try:
           db.session.add(comment)
           db.session.commit()
-        except:
+        except Exception as e:
+          db.session.rollback()
+          print counter
           continue
         if counter % 3000 == 0:
           print "", float(counter)/count, "%\r"
   print "completed", filename
 end_time = int(time.time())
 print comment_counter, "comments"
-print len(ids), "ids"
-print id_confl, "conflicts"
-print id_set, "set conflicts"
 print "finished in", (end_time-start_time)
 
 f = open(os.path.dirname(os.path.abspath(__file__)) + "/filenames_db.pkl","wb")

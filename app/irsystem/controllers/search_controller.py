@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 from app import app
 # from app.utils import SVD
 import numpy as np
-import flask, os, pickle, json
+import flask, os, pickle, json, math
 
 lemmatiser = WordNetLemmatizer()
 tokenizer = TreebankWordTokenizer()
@@ -38,11 +38,15 @@ def search2():
   # irrelevant_tokens = ['i','want','to','learn','how']
   irrelevant_tokens = []
 
+  # we want to keep capitalization for pos-tagging in the main search method!!!
+  orig_tokens = [token for token in tokenizer.tokenize(query) if token not in irrelevant_tokens]
+
+  # these will be used for everything else
   tokens = [token for token in tokenizer.tokenize(query.lower()) if token not in irrelevant_tokens]
-  tokens = expand_query(tokens)
+  tokens = expand_query(orig_tokens)
 
   index, tokens = build_index(tokens)
-  results = index_search(tokens, index, app.config['idfs'], app.config['doc_norms'])
+  results = index_search(tokens, orig_tokens, index, app.config['idfs'], app.config['doc_norms'])
 
   return json.dumps(results)
 
@@ -105,7 +109,7 @@ def build_index(query_tokens):
       index[token] = {}
   return index, tokens
 
-def index_search(query_tokens, index, idf, doc_norms):
+def index_search(query_tokens, orig_tokens, index, idf, doc_norms):
   """ Search the collection of documents for the given query
 
   Arguments
@@ -132,14 +136,27 @@ def index_search(query_tokens, index, idf, doc_norms):
   score_norm = { "iwanttolearn" : 1, "explainlikeimfive" : 0 } # dont consider ELI5 anymore
   tokens = query_tokens
 
-  tokens_pos = pos_tag(tokens)
+  # get the parts of speech with the included sentence to help the perceptron
+  base_sentence = ["I", "want", "to", "learn", "how", "to"]
+  tokens_pos = pos_tag(base_sentence + orig_tokens)
+
   word_weights = {}
+
+  # query expnaded words get a score of 1 by default because otherwise certain words
+  # that have been expanded get too much weight I'll fix this later -eric
+  for token in tokens:
+    word_weights[token] = 1
 
   # nouns are important, want to have them in the response
   nouns = set([])
 
   # weigh adj/adverbs lower then verbs, which are weighed lower than nouns
   for (token, treebank_tag) in tokens_pos:
+    if token in base_sentence or token in word_weights:
+      continue
+
+    # lower is necessary because we kept capitalization from the original query for POS tagging!
+    token = token.lower()
     if treebank_tag.startswith('J') or treebank_tag.startswith('R'):
       word_weights[token] = 1
     elif treebank_tag.startswith('V'):
@@ -162,16 +179,32 @@ def index_search(query_tokens, index, idf, doc_norms):
     if token in idf and token in index:
       for (doc_id, doc_count) in index[token].items():
         scores[doc_id] += doc_count * \
-          (idf[token] ** 2) * query_count * word_weights[token] / \
+          (idf[token] ** 2) * query_count * word_weights[token]**2 / \
           (query_norm + 1)
+
+  # have a score breakdown dict to display on frontend
+  # first entry of breakdown is baseline cos_sim score
+  # second entry is the noun score
+  # third entry is the upvote score
+  # fourth entry will be the token count score
+  # final entry will be the final score
+  score_breakdowns = {}
 
   #significantly reduce scores of comments without nouns in it
   noun_docs = set([])
   for token in nouns:
     noun_docs.update(set(index[token].keys()))
+
   for doc_id in scores.keys():
-    if doc_id not in noun_docs:
+    # init the breakdown to be the base cos-sim score
+    score_breakdowns[doc_id] = [scores[doc_id], 1]
+    if doc_id not in noun_docs and len(noun_docs) != 0:
       scores[doc_id] *= 0.1
+
+      # appropriately set the second entry of breakdown
+      curr_score_breakdown = score_breakdowns[doc_id]
+      curr_score_breakdown[1] = 0.1
+      score_breakdowns[doc_id] = curr_score_breakdown
 
   # will map comment ids to the comment dicts
   id_to_comment = {}
@@ -184,7 +217,6 @@ def index_search(query_tokens, index, idf, doc_norms):
     comment_obj = cvt_Comment_to_dict(comment_obj)
     id_to_comment[comment_obj["id"]] = comment_obj
 
-  # factor in comment scores in the scoring
   for doc_id in scores:
     # if comment_id is not in DB for some reason, get rid of it
     if doc_id not in id_to_comment:
@@ -193,10 +225,16 @@ def index_search(query_tokens, index, idf, doc_norms):
 
     comment = id_to_comment[doc_id]
 
+    # factor in comment scores in the scoring
     subreddit = comment["subreddit"].lower()
-    scores[doc_id] *= comment["score"] * score_norm[subreddit]
+    scores[doc_id] *= math.sqrt(comment["score"] * score_norm[subreddit])
     scores[doc_id] += comment["ups"] * score_norm[subreddit]
     scores[doc_id] -= comment["downs"] * score_norm[subreddit]
+
+    # appropriately set the third entry of breakdown to be upvote score
+    curr_score_breakdown = score_breakdowns[doc_id]
+    curr_score_breakdown.append(comment["score"] * score_norm[subreddit])
+    score_breakdowns[doc_id] = curr_score_breakdown
 
   # get rid of all doc ids not in the DB
   filtered_scores = {}
@@ -204,14 +242,18 @@ def index_search(query_tokens, index, idf, doc_norms):
     if (scores[doc_id] > 0):
       filtered_scores[doc_id] = scores[doc_id]
 
-  output = sorted(filtered_scores.items(), key=lambda x: x[1], reverse=True)[:20]
+    # appropriately set the final entry to be the overall score
+    curr_score_breakdown = score_breakdowns[doc_id]
+    curr_score_breakdown.append(scores[doc_id])
+    score_breakdowns[doc_id] = curr_score_breakdown
 
-  return [id_to_comment[str(comment[0])] for comment in output]
+  output = sorted(filtered_scores.items(), key=lambda x: x[1], reverse=True)
+
+  return [[id_to_comment[str(comment[0])], score_breakdowns[str(comment[0])]] for comment in output]
 
 ################################ HELPER FUNCTIONS ##################################
 
 def get_reddit_comment_as_dict(id):
-  print("ID: " + str(id))
   """
   Given a comment id, queries reddit API for the info and
   returns a json comment containing the body, author,
@@ -224,6 +266,10 @@ def get_reddit_comment_as_dict(id):
   return cvt_Comment_to_dict(comment)
 
 def cvt_Comment_to_dict(comment):
+  """
+  Given a comment object, convert it to a universal, unchanging dict
+  to standardize representation
+  """
   comment_dict = {}
   comment_dict["id"] = comment.comment_id
   comment_dict["body"] = comment.body
