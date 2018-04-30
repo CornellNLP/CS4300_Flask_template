@@ -50,6 +50,10 @@ def secondpage():
 
 	#encode everything to make sure that the output is the correct ouput format
 
+	arr=["<i>", "</i>", "<i/>","<br />","</b>", "<b>", "<strong>", "<a href=https://", "</blockquote>"
+	"<em>" , "</em>", "<emAVA>" , "<sub>",  "</sub>", "<sup>",  "</sup>", "<hr>", "</hr>",  "<p>", "</p>", 
+     "</strong>", "<em>", "</em>", "<p>","</p>","<div>", "<u>", "</u>", "<a>", "</a>", "</div>"] 
+
 	for result in top_15_book_info:
 		for i in range(6):
 			if result[i] is None:
@@ -64,6 +68,9 @@ def secondpage():
 			result[3] =""
 		result[2] = "http://covers.openlibrary.org/b/isbn/" + result[2] + "-M.jpg"
 		result[1] = "http://covers.openlibrary.org/b/isbn/" + result[1] + "-M.jpg"
+		for i in range(0, len(arr)-1):
+			result[5] = result[5].replace(arr[i],"")
+
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message=top_book_message, word_cloud=[], top_books = top_15_book_info, avail_keywords = [], avail_books = [])
@@ -78,8 +85,8 @@ def search():
 	keyword_input = request.args.get('keyword_search')
 
 	print("first page")
-	print("title input type is : {}".format(type(title_input)))
-	print("keyword input type is : {}".format(type(keyword_input)))
+	print(title_input)
+	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
@@ -87,6 +94,10 @@ def search():
 		if title_input !="" or keyword_input!="":
 			w = word_to_closest_books(keyword_input)
 			b = book_to_closest_books(title_input)
+			if w is None or b is None : 
+				print("This input and output is invalid try another")
+				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
+						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = combine_two_scores(w, b)
 
 			session["top15_asorted"] = top15_asorted
