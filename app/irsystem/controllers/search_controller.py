@@ -96,7 +96,9 @@ def secondpage():
 		result[1] = "http://covers.openlibrary.org/b/isbn/" + result[1] + "-M.jpg"
 		for i in range(0, len(arr)-1):
 			result[5] = result[5].replace(arr[i],"")
-
+		title_by_list = result[0].split("(by)") 
+		print(title_by_list) 
+		result[0] = title_by_list[0].strip()
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message=top_book_message, word_cloud=[], top_books = top_15_book_info, avail_keywords = [], avail_books = [])
@@ -120,8 +122,9 @@ def search():
 		if title_input !="" or keyword_input!="":
 			sim_scores = inputs_to_scores(keyword_input, title_input)
 			if sim_scores is None:
+				error_message = "The Input is Invalid Please Use the Autocomplete Functionality"
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
-						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+						word_cloud=[], top_books = [], error_message = error_message, avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = scores_to_asort(sim_scores)
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
