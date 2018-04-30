@@ -74,7 +74,9 @@ label{
 }
 
 .explicit {
-  visibility: hidden;
+  cursor: pointer;
+  color: red;
+  text-align: center;
 }
 
 .comment-header {

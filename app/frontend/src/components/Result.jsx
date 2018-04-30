@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Truncate from 'react-truncate';
 
+import { nsfwWords } from '../constants/constants.js'
+
 class Result extends Component {
 
   constructor(props){
@@ -10,8 +12,12 @@ class Result extends Component {
       showBreakdown: false,
       showExplicit: false
     }
+
     this.showScore = this.showScore.bind(this);
     this.roundNearest = this.roundNearest.bind(this);
+    this.checkExplicit = this.checkExplicit.bind(this);
+
+    this.explicit = this.checkExplicit(this.props.comment[0].body)
   }
 
   onClick(e) {
@@ -31,9 +37,10 @@ class Result extends Component {
   }
 
   checkExplicit(comment) {
-    let explicitWords = ["fuck", "shit", "bitch", "cunt", "bastard"];
-    for (var i = 0; i < explicitWords.length; i++) {
-      if (comment.indexOf(explicitWords[i]) != -1) {
+    for (var i = 0; i < nsfwWords.length; i++) {
+      let regex = new RegExp("(" + nsfwWords[i] + ")");
+      if (regex.test(comment)) {
+        console.log("explicit!!!")
         return true;
       }
     }
@@ -48,33 +55,33 @@ class Result extends Component {
     let breakdown = this.props.comment[1];
     let irScore = this.roundNearest(breakdown[breakdown.length -1]);
     let visibilityState = this.state.showBreakdown ? "visible" : "hidden";
-    let explicit = this.checkExplicit(comment.body)
-    let expVisibilityState = (explicit && !this.state.showExplicit) ? "visible" : "hidden";
+
+    let display = this.explicit && !this.state.showExplicit ?
+      (<div className='explicit' onClick={this.onClick.bind(this)}>
+        <p><strong>Warning:</strong> this content may be NSFW. Click to reveal.</p>
+      </div>) :
+      (!this.state.expanded ?
+        (<Truncate lines={3} ellipsis={<div><div>...</div><button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
+            {comment.body}
+        </Truncate>) :
+        (<div>
+          <p>{comment.body}</p>
+          <button onClick={() => this.setState({expanded: false})}>read less</button>
+        </div>)
+      )
+
     return (
     	<div className="comment" style={{backgroundColor: this.props.style}}>
     		<div className="comment-header">
     			<span className="author"><a href={"http://reddit.com/u/" + comment.author} target="_blank">{comment.author}</a></span>
     			<span className="score" onMouseEnter={this.showScore} onMouseLeave={this.showScore}>&nbsp; {comment.score} points &nbsp; IR score: {irScore}</span>
           <span className="score" style={{visibility: visibilityState}}>
-            &nbsp;|{breakdownLabel.map((label, i) => <span>{label}<span style={{color: colors[i]}}> {this.roundNearest(breakdown[i])}</span></span>)}
+            &nbsp;|{breakdownLabel.map((label, i) => <span key={i}>{label}<span style={{color: colors[i]}}> {this.roundNearest(breakdown[i])}</span></span>)}
           </span>
     		</div>
-        <div className={(explicit && !this.state.showExplicit) ? 'explicit' : ''} onClick={this.onClick.bind(this)}>
-          <p style={{visibility: expVisibilityState}}>Warning: this content contains expletives. Click to reveal.</p>
-        {
-          !this.state.expanded ?
-          <Truncate lines={3} ellipsis={<div><div>...</div><button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
-                  {comment.body}
-          </Truncate> :
-          <div>
-            <p>{comment.body}</p>
-            <button onClick={() => this.setState({expanded: false})}>read less</button>
-          </div>
-        }
-        </div>
+        { display }
 	    	<a className="permalink" href={comment.permalink} target="_blank">permalink</a>
         <a className="permalink" href={comment.link_id} target="_blank">&nbsp; thread</a>
-	    	{/*<a className="permalink" href={"http://reddit.com/" + comment.subreddit} target="_blank"> {comment.subreddit}</a>*/}
     	</div>);
   }
 }
