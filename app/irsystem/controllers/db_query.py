@@ -25,7 +25,10 @@ import unicodedata
 def word_to_closest_books(words, length = 59646):
 	if words == '':
 		return np.zeros(length)
-	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split('**')] 
+	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] 
+	for word in keyword_query_objects : 
+		if word  is None : 
+			return None 
 	sum_sim_scores = np.zeros(length)
 	for keyword in keyword_query_objects:
 		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
@@ -35,8 +38,12 @@ def word_to_closest_books(words, length = 59646):
 def book_to_closest_books(books, length = 59646):
 	if books == '':
 		return np.zeros(length)
+	print(books)
 	book_query_objects = [Books.query.filter_by(name=book).first() for book in books.split('**')]
-	book_vector = np.fromstring(book_query_object.vector, sep=', ')
+	print(book_query_objects)
+	for book in book_query_objects : 
+		if book is None : 
+			return None 
 	sim_scores = np.zeros(length)
 	for book in Books.query.all():
 		index = book.index
