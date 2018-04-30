@@ -61,9 +61,10 @@ class Result extends Component {
         <p><strong>Warning:</strong> this content may be NSFW. Click to reveal.</p>
       </div>) :
       (!this.state.expanded ?
-        (<Truncate lines={3} ellipsis={<div><div>...</div><button onClick={() => this.setState({expanded: true})}>read more</button></div>}>
-            {comment.body}
-        </Truncate>) :
+        (<div>
+            <div>{comment.summary}</div>
+            <button onClick={() => this.setState({expanded: true})}>read more</button>
+         </div>) :
         (<div>
           <p>{comment.body}</p>
           <button onClick={() => this.setState({expanded: false})}>read less</button>
