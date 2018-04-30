@@ -73,6 +73,10 @@ label{
   text-decoration: underline;
 }
 
+.explicit {
+  visibility: hidden;
+}
+
 .comment-header {
 	font-size: 13px;
 	margin-bottom: 5px;
