@@ -51,12 +51,12 @@ def secondpage():
 		keyword_input = unicodedata.normalize('NFKD', keyword_input).encode('ascii', 'ignore')
 		keyword_input_list = keyword_input.split("**")
 		for key in keyword_input_list : 
-			top_book_message += key 
-			top_book_message += ", "
+			if key =="" : 
+				top_book_message += key 
+			else : 
+				top_book_message += key 
+				top_book_message += ", "
 	top_book_message = top_book_message[:-2]
-
-
-
 	top15_asorted = session.get('top15_asorted', None)
 	top_15_book_info = get_books(top15_asorted)
 	print(top_15_book_info[0])
