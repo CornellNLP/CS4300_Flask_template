@@ -9,96 +9,90 @@
    background-size: cover;
  }
 
- .legend {
+.legend {
      border: 3px solid #cdc187;
      border-radius: 5px 5px 5px 5px;
-     /* font-size: 0.8em; */
-     /* justify-content: center ; */
      margin: auto;
      margin-top: 3.5%;
      padding: 1%;
-     width: 40%;
+     width: 20%;
 
  }
- .bld {
+ .legend2 {
+      border: 3px solid #cdc187;
+      border-radius: 5px 5px 5px 5px;
+      /* margin: auto;
+      /* margin-top: 3.5%; */ */
+      padding: 0.5%;
+
+      width: 100%;
+      margin-bottom: 1.9%;
+
+  }
+.bld {
      font-weight: bold;
  }
- .containerimage {
+.containerimage {
             position: relative;
             display: flex;
             width: 20%;
 
         }
-
-        .image {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-
-        }
-
-        /* .middle {
-            transition: .5s ease;
-            opacity: 0.3;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height:100%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-            background-color: #eed9c0;
-        } */
-
-        .middle {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 90%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #eed9c0;
-          text-align: center;
-        }
-        .containerimage:hover .image {
-            opacity: 0.3;
-        }
-
-        .containerimage:hover .middle {
-            opacity: 0.8;
-        }
-
-        .text {
-            color: black;
-            font-size: 150%;
-            font-family: 'Vidaloka', serif;
-            font-weight: 600;
-            text-transform: uppercase;
-
-
-            position: relative;
-            float: left;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 
         }
 
-        #refresh_button {
-          position: absolute;
-          top: 8px;
-          right: 16px;
-          font-size: 30px;
-          color: white;
+.middle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #eed9c0;
+  text-align: center;
+}
+.containerimage:hover .image {
+    opacity: 0.3;
+}
 
-        }
+.containerimage:hover .middle {
+    opacity: 0.8;
+}
+
+.text {
+    color: black;
+    font-size: 150%;
+    font-family: 'Vidaloka', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#refresh_button {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 30px;
+  color: white;
+
+}
 
         /* The Modal (background) */
 .modal {
@@ -133,14 +127,14 @@
 
 
 #realimage {
-        position: absolute;
-        top: 0;
-        left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
     }
 #defaultimage {
-        position: relative;
-        top: 0px;
-        left: 0px ;
+  position: relative;
+  top: 0px;
+  left: 0px ;
     }
 
 /* Add Animation */
@@ -188,9 +182,13 @@
   text-align: center;
 }
 
+
+
+
 </style>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 </head>
 <body>
@@ -202,41 +200,37 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[0][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[0][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[0][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[0][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[0][7]}}</p>
-
-<p>Tags from reviews: {{top_books[0][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[0][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[0][5]!= "" %}
-        <p>Summary: {{top_books[0][5]}} </p>
+          <div class = "legend2">
+<p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+<br>
+  <div style="color:grey">Average Rating: {{top_books[0][7]}} / 5.0 </div>
+          <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[0][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+          <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[0][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
         {% if top_books[0][3]!= "" %}
-        <a href={{top_books[0][3]}} target="_blank" >
-        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
-        </a>
+
+          <a href={{top_books[0][3]}} target="_blank" >
+            <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+          </a>
+
         {% else %}
-            <h1></h1>
+          <h1></h1>
         {% endif %}
         </div>
       </div>
@@ -245,40 +239,33 @@
   </div>
 
   <div id="myModal1" class="modal">
-{% if top_books %}
+    {% if top_books %}
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[1][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[1][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[1][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[1][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[1][7]}}</p>
-<p>Tags from reviews: {{top_books[1][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[1][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[1][5]!= "" %}
-        <p>Summary: {{top_books[1][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[1][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
+<br>
         {% endif %}
          </div>
+         </div>
       <div class = "center" >
-
       <div class="modal-footer">
         {% if top_books[1][3]!= "" %}
         <a href={{top_books[1][3]}} target="_blank">
@@ -299,31 +286,27 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[2][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[2][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[2][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[2][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[2][7]}}</p>
-<p>Tags from reviews: {{top_books[2][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[2][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[2][5]!= "" %}
-        <p>Summary: {{top_books[2][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[2][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
+<br>
         {% endif %}
+      </div>
+      </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -346,31 +329,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[3][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[3][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[3][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[3][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[3][7]}}</p>
-<p>Tags from reviews: {{top_books[3][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-       {% if top_books[3][5]!= "" %}
-        <p>Summary: {{top_books[3][5]}} </p>
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[3][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[3][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[3][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[3][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[3][7]}} / 5.0 </div>
+<br>
         {% endif %}
+        </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -399,25 +377,22 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[4][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[4][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[4][7]}}</p>
-<p>Tags from reviews: {{top_books[4][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[4][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[4][5]!= "" %}
-        <p>Summary: {{top_books[4][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[4][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[4][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[4][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -444,27 +419,23 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[5][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[5][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[5][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[5][7]}}</p>
-<p>Tags from reviews: {{top_books[5][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[5][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[5][5]!= "" %}
-        <p>Summary: {{top_books[5][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[5][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[5][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[5][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
        <div class = "center" >
       <div class="modal-footer">
@@ -486,31 +457,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[6][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[6][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[6][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[6][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[6][7]}}</p>
-<p>Tags from reviews: {{top_books[6][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-        {% if top_books[6][5]!= " " %}
-        <p>Summary: {{top_books[6][5]}} </p>
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[6][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[6][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[6][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[6][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[6][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -532,31 +498,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[7][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[7][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[7][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[7][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[7][7]}}</p>
-<p>Tags from reviews: {{top_books[7][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[7][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[7][5]!= "" %}
-        <p>Summary: {{top_books[7][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[7][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[7][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[7][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -578,31 +539,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[8][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[8][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[8][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[8][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[8][7]}}</p>
-<p>Tags from reviews: {{top_books[8][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[8][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[8][5]!= "" %}
-        <p>Summary: {{top_books[8][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[8][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[8][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[8][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
        <div class = "center" >
       <div class="modal-footer">
@@ -624,31 +580,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[9][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[9][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[9][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[9][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[9][7]}}</p>
-<p>Tags from reviews: {{top_books[9][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[9][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[9][5]!= "" %}
-        <p>Summary: {{top_books[9][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[9][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[9][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[9][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -674,27 +625,23 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[10][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[10][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[10][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[10][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[10][7]}}</p>
-<p>Tags from reviews: {{top_books[10][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[10][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[10][5]!= "" %}
-        <p>Summary: {{top_books[10][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[10][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[10][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[10][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -720,27 +667,24 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[11][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[11][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[11][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[11][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[11][7]}}</p>
-<p>Tags from reviews: {{top_books[11][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[11][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[11][5]!= "" %}
-        <p>Summary: {{top_books[11][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[11][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[11][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[11][7]}} / 5.0 </div>
+<br><div style="color:grey">Average Rating: {{top_books[11][7]}} / 5.0 </div>
+        <br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -766,27 +710,23 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[12][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[12][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[12][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[12][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[12][7]}}</p>
-<p>Tags from reviews: {{top_books[12][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-       {% if top_books[12][5]!= "" %}
-        <p>Summary: {{top_books[12][5]}} </p>
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[12][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[12][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[12][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[12][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[12][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -814,25 +754,22 @@
       </div>
 
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[13][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[13][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[13][7]}}</p>
-<p>Tags from reviews: {{top_books[13][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
-      {% if top_books[13][5]!= "" %}
-        <p>Summary: {{top_books[13][5]}} </p>
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[13][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
+        {% if top_books[13][5]!= "" %}
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[13][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[13][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[13][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -854,31 +791,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[14][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[14][4]}}</p>
       </div>
-
       <div class="modal-body" style="text-align:center">
+        <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[14][8]}}%</div></h2>
 
-        <h2 class = "legend" style="color:gray;">Similarity Score: {{top_books[14][8]}}%</h2>
-        <!-- <div style="width: 40%;">
-            <div class="legend">
-                Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-            </div>
-
-        </div> -->
-        <p>Average rating: {{top_books[14][7]}}</p>
-<p>Tags from reviews: {{top_books[14][6]}}</p>
-        <div id="wc" style="width:100%; height:50%">
-      </div>
-        <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
-        </div> -->
+        <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
+          <p>{{top_books[14][6]}}</p>
+        <div id="wc" style="width:100%; height:50%"> </div>
         {% if top_books[14][5]!= "" %}
-        <p>Summary: {{top_books[14][5]}} </p>
+          <div class = "legend2">
+      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+      <br>
+      <div style="color:grey">Average Rating: {{top_books[14][7]}} / 5.0 </div>
+        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[14][5]}} </p>
         {% else %}
-        <p> Sorry Summary Does Not Exist </p>
+        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[14][7]}} / 5.0 </div>
+<br>
         {% endif %}
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
@@ -898,9 +830,12 @@
 <div class="container">
   <a class="btn btn-lg btn-success"href="main" id = "refresh_button" style = "font-family: 'Vidaloka', serif; "> Go Back </a>
     <div>
-    <center style = "margin-top : 8% ;font-family: 'Vidaloka', serif; margin-bottom: 6%;  color: white; font-size: 400%"> Showing results for:  {{ top_books_message }} </center>
-<p>hover </p>
+    <center style = "margin-top : 8% ;margin-bottom: 3% ; font-family: 'Vidaloka', serif; color: white; font-size: 400%; font-weight: normal;">  Showing results for: </center>
+    <center style = "text-align: center; margin-left : 10% ;margin-right : 10% ;font-family: 'Source Sans Pro', sans-serif; margin-bottom: 6% ; color: white; font-weight: bold; font-size: 200%"> {{ top_books_message }} </center>
+    <center style = "text-align: center; margin-left : 10% ;margin-right : 10% ;font-family: 'Source Sans Pro', sans-serif; margin-bottom: 6% ; color: white; font-weight: bold; font-size: 100%"> Hover Over Image for More Details </center>
 
+
+  <p>hover </p>
     </div>
 {% if top_books %}
     <div style = "position: relative" >
@@ -1131,7 +1066,7 @@
 {% endif %}
 </div>
  </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -1430,9 +1365,21 @@ function draw(words) {
 }
 
 
+<!-- Code referenced from https://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css -->
+$.fn.stars = function() {
+  return this.each(function() {
+    var floatedval  = parseFloat($(this).html());
+    var values = Math.max(0, (Math.min(5, floatedval))) * 36.5;
+    var $span = $('<span> </span>').width(values);
+    $(this).empty().append($span);
+  });
+}
 
+$(function() {
+  $('.star-content span.stars').stars();
+});
 
-
+<!-- end of code referred from stack overflow -->
  </script>
 </body>
 </html>

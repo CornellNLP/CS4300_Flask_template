@@ -53,12 +53,25 @@ def secondpage():
 	top_book_message = ""
 	if title_input is not None :
 		title_input = unicodedata.normalize('NFKD', title_input).encode('ascii', 'ignore')
-		top_book_message += title_input
-		top_book_message += " ,"
+		title_input_list = title_input.split("**") 
+		print("title_input_list")
+		print(title_input_list)
+		for title in title_input_list : 
+			if title == "": 
+				top_book_message += title 
+			else : 
+				top_book_message += title 
+				top_book_message += ", "
 	if keyword_input is not None:
 		keyword_input = unicodedata.normalize('NFKD', keyword_input).encode('ascii', 'ignore')
-		top_book_message += keyword_input
-
+		keyword_input_list = keyword_input.split("**")
+		for key in keyword_input_list : 
+			if key =="" : 
+				top_book_message += key 
+			else : 
+				top_book_message += key 
+				top_book_message += ", "
+	top_book_message = top_book_message[:-2]
 	top15_asorted = session.get('top15_asorted', None)
 	top_15_book_info = get_books(top15_asorted)
 
@@ -98,25 +111,44 @@ def search():
 	keyword_input = request.args.get('keyword_search')
 
 	print("first page")
-	print("title input type is : {}".format(type(title_input)))
-	print("keyword input type is : {}".format(type(keyword_input)))
+	print(title_input)
+	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
 	
 		if title_input !="" or keyword_input!="":
+<<<<<<< HEAD
 			sim_scores = inputs_to_scores(keyword_input, title_input)
 			if sim_scores is None:
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
 						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = scores_to_asort(sim_scores)
 
+=======
+			w = word_to_closest_books(keyword_input)
+			b = book_to_closest_books(title_input)
+			if w is None or b is None : 
+				print("This input and output is invalid try another")
+				error_message = "The Input is Invalid Please Use the Autocomplete Functionality"
+				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
+						word_cloud=[], top_books = [], error_message = error_message,  avail_keywords = available_words, avail_books = available_books)
+			top15_asorted = combine_two_scores(w, b)
+>>>>>>> 2d3e1146e8857ff555de28392a7e70238b77cba9
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
 			return redirect(url_for('irsystem.secondpage'))
 
+<<<<<<< HEAD
+=======
+		else:
+			
+			return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
+			word_cloud=[], top_books = [], error_message = "", avail_keywords = available_words, avail_books = available_books)
+
+>>>>>>> 2d3e1146e8857ff555de28392a7e70238b77cba9
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
-		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+		word_cloud=[], top_books = [], error_message = "",  avail_keywords = available_words, avail_books = available_books)
 
 
