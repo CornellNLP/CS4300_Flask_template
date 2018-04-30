@@ -25,7 +25,13 @@ import unicodedata
 def word_to_closest_books(words, length = 59646):
 	if words == '':
 		return np.zeros(length)
+	print("keyword query objects ")
 	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split(';')] ###this delimeter might change
+	print("keyword query objects after")
+	print(keyword_query_objects)
+	for word in keyword_query_objects : 
+		if word  is None : 
+			return None 
 	sum_sim_scores = np.zeros(length)
 	for keyword in keyword_query_objects:
 		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
@@ -35,7 +41,12 @@ def word_to_closest_books(words, length = 59646):
 def book_to_closest_books(book, length = 59646):
 	if book == '':
 		return np.zeros(length)
+	print("before book query objejct")
 	book_query_object = Books.query.filter_by(name=book).first()
+
+	print("book_query_object") 
+	if book_query_object is None : 
+		return None 
 	book_vector = np.fromstring(book_query_object.vector, sep=', ')
 	sim_scores = np.zeros(length)
 	for book in Books.query.all():

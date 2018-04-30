@@ -187,6 +187,24 @@
 .center{
   text-align: center;
 }
+.results {
+  font-size: 0;
+  padding-bottom: 16px;
+}
+.results-content {
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  background: url('https://i.stack.imgur.com/rwkqF.png') 0 0 repeat-x;
+  width: 185px;
+  height: 35px;
+}
+.results .results-content span.stars span {
+  background: url('https://i.stack.imgur.com/rwkqF.png') 0 -36px repeat-x;
+  display: inline-block;
+  height: 35px;
+}
 
 </style>
 <head>
@@ -216,15 +234,22 @@
             </div>
 
         </div> -->
-        <p>Average rating: {{top_books[0][7]}}</p>
+        <p style="font-size:20px ; color:gray">Average rating: {{top_books[0][7]}}</p>
+        <div class="results">
+  <div class="results-content">
+    <span class="stars">3.4</span> 
+  </div>
+</div>
 
-<p>Tags from reviews: {{top_books[0][6]}}</p>
+
+<p style ="font-size:20px">Tags from reviews: {{top_books[0][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
         </div> -->
         {% if top_books[0][5]!= "" %}
-        <p>Summary: {{top_books[0][5]}} </p>
+        <p style= "font-size: 18px" > Summary : </p>
+         <p style = "font-size: 18px" >{{top_books[0][5]}} </p>
         {% else %}
         <p> Sorry Summary Does Not Exist </p>
         {% endif %}
@@ -265,7 +290,7 @@
 
         </div> -->
         <p>Average rating: {{top_books[1][7]}}</p>
-<p>Tags from reviews: {{top_books[1][6]}}</p>
+<p style = "font-size: 40px">Tags from reviews: {{top_books[1][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
         <!-- <div id="donewordcloud" style="width:100%; height:100%"> hey
@@ -314,6 +339,7 @@
 
         </div> -->
         <p>Average rating: {{top_books[2][7]}}</p>
+
 <p>Tags from reviews: {{top_books[2][6]}}</p>
         <div id="wc" style="width:100%; height:50%">
       </div>
@@ -1131,7 +1157,7 @@
 {% endif %}
 </div>
  </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -1429,7 +1455,23 @@ function draw(words) {
             .text(function(d) { return d.text; });
 }
 
+$.fn.stars = function() { 
+  return this.each(function() {
+    // Get the value
+    var val = parseFloat($(this).html()); 
+    // Make sure that the value is in 0 - 5 range, multiply to get width
+    var size = Math.max(0, (Math.min(5, val))) * 36.5; 
+    // Create stars holder
+    var $span = $('<span> </span>').width(size); 
+    // Replace the numerical value with stars
+    $(this).empty().append($span);
+  });
+}
 
+$(function() {
+  console.log("Calling stars()");
+  $('.results-content span.stars').stars();
+});
 
 
 
