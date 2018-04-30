@@ -113,7 +113,6 @@ def search():
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 						word_cloud=[], top_books = [], error_message = error_message,  avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = combine_two_scores(w, b)
-
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
