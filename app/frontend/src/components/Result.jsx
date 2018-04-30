@@ -40,7 +40,7 @@ class Result extends Component {
     for (var i = 0; i < nsfwWords.length; i++) {
       let regex = new RegExp("(" + nsfwWords[i] + ")");
       if (regex.test(comment)) {
-        console.log("explicit!!!")
+        // console.log("explicit!!!")
         return true;
       }
     }

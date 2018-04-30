@@ -337,8 +337,6 @@ export let nsfwWords = [
 'women rapping',
 'wrapping men',
 'wrinkled starfish',
-'xx',
-'xxx',
 'yaoi',
 'yellow showers',
 'yiffy',

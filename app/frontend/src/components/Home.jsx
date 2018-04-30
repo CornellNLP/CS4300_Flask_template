@@ -15,7 +15,8 @@ class Home extends Component {
 			numShowing: DEFAULT_NUM,
 			hasSearched: false,
 			loading : false,
-			errored: false
+			errored: false,
+			start_index: 0
 		};
 		const randSuggestions = ["play the piano", "motivate myself", "sleep earlier", "be less insecure", "speak japanese"]
     this.suggestion = randSuggestions[Math.floor(Math.random()*randSuggestions.length)]
@@ -29,9 +30,12 @@ class Home extends Component {
 	componentWillMount(){
 		console.log(this.props)
 		let query = this.props.location.search
+		console.dir(this.props)
+		let input_index = this.props.history.start_index
 		if (query) {
 			let parsed = queryString.parse(query)
-			this.getRelatedComments(parsed.query)
+			if (parsed.input_index) this.setState({start_index: parsed.input_index})
+			this.getRelatedComments(parsed.query, this.state.start_index)
 			this.setState({value: parsed.query})
 		}
 	}
@@ -43,12 +47,13 @@ class Home extends Component {
 	handleSubmit(event){
 		let submission = this.state.value === "" ? this.suggestion : this.state.value
 		let query = '?query=' + submission
-		event.preventDefault();
+		if (event) event.preventDefault();
 		this.props.history.push({
 		  pathname: '/',
 			search: query,
+			start_index: 0
 		})
-		this.getRelatedComments(submission)
+		this.getRelatedComments(submission, 0)
 	}
 
 	getRelatedComments(input_query) {
@@ -58,9 +63,11 @@ class Home extends Component {
 		this.setState({loading: true})
 		var arr = input_query.split(" ")
 		var qParams = arr.map(key =>key).join('&');
+		console.dir(qParams);
 		console.log('running related comments fetch')
+		console.log(this.state.start_index);
 		axios.get('/search', {
-				params: { query: qParams }
+				params: { start_index: this.state.start_index, query: qParams }
 			})
 		.then(response => {
 			console.log(response)
@@ -78,8 +85,8 @@ class Home extends Component {
 	}
 
 	showMore() {
-		let currNum = this.state.numShowing;
-		this.setState({ numShowing: currNum+=10 })
+		this.state.start_index += 10;
+		this.getRelatedComments(this.state.value);
 	}
 
 	render() {
@@ -107,7 +114,7 @@ class Home extends Component {
 			      {
 			      	this.state.loading ? (<div className="loader"></div>) :
 			      	(
-			      		data.slice(0, this.state.numShowing).map((comment, i) => {
+			      		data.slice(this.props.history.start_index, this.state.numShowing).map((comment, i) => {
 									console.log("rendering results")
 			      		return <Result key={comment[0].id} comment={comment} style={i % 2 === 0 ? "white" : "whitesmoke"}/>})
 		      		)

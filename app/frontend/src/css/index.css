@@ -34,6 +34,7 @@ label{
 
 .header {
   background: #d2e3f6;
+  user-select: none;
 }
 
 .title{

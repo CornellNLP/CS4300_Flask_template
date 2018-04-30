@@ -37,6 +37,7 @@ def search2():
 
   start_index = request.args.get('start_index') 
   if start_index is not None:
+    print(start_index)
     start_index = int(start_index)
   else:
     start_index = 0
@@ -265,10 +266,10 @@ def index_search(query_tokens, orig_tokens, index, idf, doc_norms, start_index=0
   for comment in sorted_list[start_index:start_index+10]:
     comment_dict = id_to_comment[str(comment[0])]
     comment_body = comment_dict["body"].encode("ascii", "ignore")
-    print(type(comment_body))
-    print(len("comment_body"))
+    # print(type(comment_body))
+    # print(len("comment_body"))
     summary = summarizePassage(comment_body, summaryRatio=(250./len(comment_body)))
-    print(summary)
+    # print(summary)
     comment_dict["summary"] = summary
     output.append([comment_dict, score_breakdowns[str(comment[0])]])
 
