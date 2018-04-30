@@ -9,96 +9,79 @@
    background-size: cover;
  }
 
- .legend {
+.legend {
      border: 3px solid #cdc187;
      border-radius: 5px 5px 5px 5px;
-     /* font-size: 0.8em; */
-     /* justify-content: center ; */
      margin: auto;
      margin-top: 3.5%;
      padding: 1%;
      width: 40%;
 
  }
- .bld {
+.bld {
      font-weight: bold;
  }
- .containerimage {
+.containerimage {
             position: relative;
             display: flex;
             width: 20%;
 
         }
-
-        .image {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-
-        }
-
-        /* .middle {
-            transition: .5s ease;
-            opacity: 0.3;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height:100%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-            background-color: #eed9c0;
-        } */
-
-        .middle {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 90%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: #eed9c0;
-          text-align: center;
-        }
-        .containerimage:hover .image {
-            opacity: 0.3;
-        }
-
-        .containerimage:hover .middle {
-            opacity: 0.8;
-        }
-
-        .text {
-            color: black;
-            font-size: 150%;
-            font-family: 'Vidaloka', serif;
-            font-weight: 600;
-            text-transform: uppercase;
-
-
-            position: relative;
-            float: left;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 
         }
 
-        #refresh_button {
-          position: absolute;
-          top: 8px;
-          right: 16px;
-          font-size: 30px;
-          color: white;
+.middle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #eed9c0;
+  text-align: center;
+}
+.containerimage:hover .image {
+    opacity: 0.3;
+}
 
-        }
+.containerimage:hover .middle {
+    opacity: 0.8;
+}
+
+.text {
+    color: black;
+    font-size: 150%;
+    font-family: 'Vidaloka', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#refresh_button {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 30px;
+  color: white;
+
+}
 
         /* The Modal (background) */
 .modal {
@@ -133,14 +116,14 @@
 
 
 #realimage {
-        position: absolute;
-        top: 0;
-        left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
     }
 #defaultimage {
-        position: relative;
-        top: 0px;
-        left: 0px ;
+  position: relative;
+  top: 0px;
+  left: 0px ;
     }
 
 /* Add Animation */
@@ -187,24 +170,27 @@
 .center{
   text-align: center;
 }
-.results {
+
+.stars {
   font-size: 0;
   padding-bottom: 16px;
 }
-.results-content {
+.star-content {
+  width: 185px;
+  height: 35px;
   font-size: 13px;
   display: inline-block;
   margin-left: 20px;
   vertical-align: top;
   background: url('https://i.stack.imgur.com/rwkqF.png') 0 0 repeat-x;
-  width: 185px;
-  height: 35px;
+
 }
-.results .results-content span.stars span {
+.stars .star-content span.stars span {
   background: url('https://i.stack.imgur.com/rwkqF.png') 0 -36px repeat-x;
   display: inline-block;
   height: 35px;
 }
+
 
 </style>
 <head>
@@ -235,8 +221,8 @@
 
         </div> -->
         <p style="font-size:20px ; color:gray">Average rating: {{top_books[0][7]}}</p>
-        <div class="results">
-  <div class="results-content">
+        <div class="stars">
+  <div class="star-content">
     <span class="stars">3.4</span> 
   </div>
 </div>
@@ -1455,26 +1441,22 @@ function draw(words) {
             .text(function(d) { return d.text; });
 }
 
+
+<!-- Code referenced from https://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css --> 
 $.fn.stars = function() { 
   return this.each(function() {
-    // Get the value
-    var val = parseFloat($(this).html()); 
-    // Make sure that the value is in 0 - 5 range, multiply to get width
-    var size = Math.max(0, (Math.min(5, val))) * 36.5; 
-    // Create stars holder
-    var $span = $('<span> </span>').width(size); 
-    // Replace the numerical value with stars
+    var floatedval  = parseFloat($(this).html()); 
+    var values = Math.max(0, (Math.min(5, floatedval))) * 36.5; 
+    var $span = $('<span> </span>').width(values); 
     $(this).empty().append($span);
   });
 }
 
 $(function() {
-  console.log("Calling stars()");
-  $('.results-content span.stars').stars();
+  $('.star-content span.stars').stars();
 });
 
-
-
+<!-- end of code referred from stack overflow -->
  </script>
 </body>
 </html>
