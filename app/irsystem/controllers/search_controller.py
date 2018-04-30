@@ -96,8 +96,9 @@ def search():
 			b = book_to_closest_books(title_input)
 			if w is None or b is None : 
 				print("This input and output is invalid try another")
+				error_message = "The Input is Invalid Please Use the Autocomplete Functionality"
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
-						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+						word_cloud=[], top_books = [], error_message = error_message,  avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = combine_two_scores(w, b)
 
 			session["top15_asorted"] = top15_asorted
@@ -106,11 +107,11 @@ def search():
 			return redirect(url_for('irsystem.secondpage'))
 
 		else:
-			print("enter both empty")
+			
 			return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
-			word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+			word_cloud=[], top_books = [], error_message = "", avail_keywords = available_words, avail_books = available_books)
 
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
-		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books)
+		word_cloud=[], top_books = [], error_message = "",  avail_keywords = available_words, avail_books = available_books)
 
 
