@@ -54,7 +54,8 @@
     }
     #desc {
       color:white;
-      line-height: 1.5;
+      line-height: 1.6;
+      font-size:100%;
     }
     .marge{
         margin-top:19%;
@@ -89,16 +90,16 @@
     <div class="centered">
         <form>
         <!-- <form class="form-horizontal row global-search"> -->
-            <h1 style="font-size: 900%; font-family: 'Vidaloka', serif; color: white; margin-bottom:20px">
+            <h1 style="font-size: 900%; font-family: 'Vidaloka', serif; color: white; margin-bottom:20px; text-shadow: 2px 2px black">
               BookRec
             </h1>
             <br>
-            
-            <h5 id="desc" style="text-align:center">What is your favorite book? What did you particularly like about it? <br> BookRec has taken 3.2 million book reviews of 63,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
+
+            <h5 id="desc" style="text-align:center; text-shadow: 2px 2px black">What is your favorite book? What did you particularly like about it? <br> BookRec has taken 3.2 million book reviews of 61,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
             <br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '제일 좋고 유명한 예시')">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '')">
             </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
@@ -107,7 +108,7 @@
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
             <label class="form-group col-sm-12">
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '위에 책 예시에 가장 사람들이 많이 좋아햇을법한 단어') ">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '') ">
             </label>
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
@@ -123,7 +124,7 @@
         <script src="/static/bootstrap-tagsinput.js" > </script>
         <script src="/static/typeahead.js" > </script>
         <script src = "/static/jquery-ui.js"> </script>
-        
+
         <script>
 
         $( document ).ready(function() {
@@ -160,7 +161,7 @@
                             limit : 10
                         },
                     freeinput : false ,
-               
+
                     }
                 );
 

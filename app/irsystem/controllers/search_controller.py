@@ -38,12 +38,25 @@ def secondpage():
 	top_book_message = ""
 	if title_input is not None :
 		title_input = unicodedata.normalize('NFKD', title_input).encode('ascii', 'ignore')
-		top_book_message += title_input
-		top_book_message += " ,"
+		title_input_list = title_input.split("**") 
+		print("title_input_list")
+		print(title_input_list)
+		for title in title_input_list : 
+			if title == "": 
+				top_book_message += title 
+			else : 
+				top_book_message += title 
+				top_book_message += ", "
 	if keyword_input is not None:
 		keyword_input = unicodedata.normalize('NFKD', keyword_input).encode('ascii', 'ignore')
-		top_book_message += keyword_input
-
+		keyword_input_list = keyword_input.split("**")
+		for key in keyword_input_list : 
+			if key =="" : 
+				top_book_message += key 
+			else : 
+				top_book_message += key 
+				top_book_message += ", "
+	top_book_message = top_book_message[:-2]
 	top15_asorted = session.get('top15_asorted', None)
 	top_15_book_info = get_books(top15_asorted)
 	print(top_15_book_info[0])
@@ -100,7 +113,6 @@ def search():
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
 						word_cloud=[], top_books = [], error_message = error_message,  avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = combine_two_scores(w, b)
-
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
