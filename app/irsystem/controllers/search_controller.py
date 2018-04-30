@@ -85,8 +85,8 @@ def search():
 	keyword_input = request.args.get('keyword_search')
 
 	print("first page")
-	print("title input type is : {}".format(title_input))
-	print("keyword input type is : {}".format(keyword_input))
+	print(title_input)
+	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
