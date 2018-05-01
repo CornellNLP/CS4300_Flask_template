@@ -111,7 +111,7 @@
                 <div hidden class = "author" style="display: none;"> {{author}}</div> 
             {% endfor %}
             <label class="form-group col-sm-12">
-                <input id="authorfield" type="text" name="author_search" class="form-control" placeholder="Input Author (e.g. '') ">
+                <input id="authorfield" type="text" name="author_search" class="form-control" placeholder="Input Authors (e.g. 'J.K.Rowling') ">
             </label>
 
             <label class="form-group col-sm-12">
@@ -170,10 +170,11 @@
                             valueKey: 'name',
                             source: keywords.ttAdapter(),
                             hint: true,
-                            minLength: 1 ,
                             limit : 10
                         },
                     freeinput : false ,
+                    delimiterRegex: /[**]+/,
+                    delimiter: '**'
 
                     }
                 );
@@ -198,14 +199,42 @@
                             valueKey: 'name',
                             source: titles.ttAdapter(),
                             hint: true,
-                            minLength: 10 ,
-                            limit : 5
+                            limit : 10
                         },
                     freeinput : false ,
                     delimiterRegex: /[**]+/,
                     delimiter: '**'
 
                 });
+
+
+
+            var new_author_word = []
+            for ( var i =0 ; i < author_array.length ; i ++ ) {
+                author = author_array[i].trim()
+                new_author_word.push({ "value" : author , "name" : author})
+            }
+            var authorwords = new Bloodhound({
+                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
+                      queryTokenizer: Bloodhound.tokenizers.whitespace,
+                      local : new_author_word
+                    });
+                    authorwords.initialize();
+                    $('#authorfield').tagsinput({
+                        typeaheadjs: {
+                            displayKey: 'value',
+                            valueKey: 'name',
+                            source: authorwords.ttAdapter(),
+                            hint: true,
+                            limit : 10
+                        },
+                    freeinput : false ,
+                    delimiterRegex: /[**]+/,
+                    delimiter: '**'
+
+
+                    }
+                );
 
         });
 

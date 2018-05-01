@@ -107,7 +107,7 @@ def get_books(asorted_list):
 		top_k_books.append(book_list)
 	return top_k_books
 
-def book_to_closest_words(book, words_query_objects, k = 50, length = 5260):
+def book_to_closest_words(book, words_query_objects, k = 25, length = 5260):
 	book_vector = book.vector
 
 	sim_scores = np.zeros(length)
