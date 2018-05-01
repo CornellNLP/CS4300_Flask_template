@@ -114,6 +114,8 @@ def search():
 	print("first page")
 	print(title_input)
 	print(keyword_input)
+	print("author input")
+	print(author_input)
 
 	if title_input is not None or keyword_input is not None or author_input is not None:
 		print("enter if statement inside the first page")
@@ -128,11 +130,11 @@ def search():
 			if sim_scores is None:
 				error_message = "The Input is Invalid Please Use the Autocomplete Functionality"
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
-						word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
+						word_cloud=[], top_books = [], error_message = error_message, avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
 			top15_asorted = scores_to_asort(sim_scores)
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
 			return redirect(url_for('irsystem.secondpage'))
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
-		word_cloud=[], top_books = [], avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
+		word_cloud=[], top_books = [], error_message = None, avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
