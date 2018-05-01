@@ -111,10 +111,13 @@ def search():
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
+	author_input = request.args.get('author_search')
 
 	print("first page")
 	print(title_input)
 	print(keyword_input)
+	print("author input")
+	print(author_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
