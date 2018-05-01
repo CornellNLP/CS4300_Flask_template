@@ -12,7 +12,6 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.words import *
 from app.irsystem.models.books import *
-from app.irsystem.models.authors import *
 from app.irsystem.controllers.db_change import *
 from app.irsystem.controllers.db_query import *
 import json
