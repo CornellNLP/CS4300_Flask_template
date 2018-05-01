@@ -21,10 +21,8 @@ import csv
 import unicodedata
 
 
-#words: user's keyword input! 
+#when user inputs both  
 def inputs_to_scores(words, books, length = 61082, k =100):
-
-
 	vector_sum = np.zeros(k)
 	word_inputs = words.split('**')
 	book_inputs = books.split('**')
@@ -60,22 +58,35 @@ def inputs_to_scores(words, books, length = 61082, k =100):
 	print('enter dot product operation')
 	sum_sim_scores = np.dot(books, vector_sum)
 	print('exit dot product operation')
-
 	return sum_sim_scores
 
-# #book: user's book title input
-# def book_to_closest_books(books, length = 61082):
-# 	if books == '':
-# 		return np.zeros(length)
-# 	book_query_objects = [Books.query.filter_by(name=book).first() for book in books.split('**')]
-# 	book_vector = np.fromstring(book_query_object.vector, sep=', ')
-# 	sim_scores = np.zeros(length)
-# 	for book in Books.query.all():
-# 		index = book.index
-# 		ith_book_vector = np.fromstring(book.vector, sep = ', ')
-# 		for book_q_obj in book_query_objects:
-# 			sim_scores[index] += ith_book_vector.dot(np.fromstring(book_q_obj.vector, sep = ', '))
-# 	return sim_scores / len(book_query_objects)
+#user inputs words only
+def words_to_scores(words, length = 61082):
+	# if words == '':
+	# 	return np.zeros(length)
+	keyword_query_objects = [Words.query.filter_by(name = word).first() for word in words.split('**')] 
+	sum_sim_scores = np.zeros(length)
+	for keyword in keyword_query_objects:
+		if keyword is None:
+			return None
+		sum_sim_scores += np.fromstring(keyword.book_scores, sep=', ')
+	return sum_sim_scores/len(keyword_query_objects)
+
+#user inputs books only
+def books_to_scores(books, length = 61082):
+	# if books == '':
+	# 	return np.zeros(length)
+	book_query_objects = [Books.query.filter_by(name=book).first() for book in books.split('**')]
+	for book in book_query_objects : 
+		if book is None : 
+			return None 
+	sim_scores = np.zeros(length)
+	for book in Books.query.all():
+		index = book.index
+		ith_book_vector = np.fromstring(book.vector, sep = ', ')
+		for book_q_obj in book_query_objects:
+			sim_scores[index] += ith_book_vector.dot(np.fromstring(book_q_obj.vector, sep = ', '))
+	return sim_scores / len(book_query_objects)
 
 def scores_to_asort(scores, k = 15):	
 	asort = np.argsort(-scores)
@@ -111,8 +122,7 @@ def book_to_closest_words(book, words_query_objects, k = 25, length = 5260):
 	book_vector = book.vector
 
 	sim_scores = np.zeros(length)
-	print('enter words.query.all()')
-	for word in words_query_objects:
+	for word in Words.query.all():
 		index = word.index
 		ith_word_vector = np.fromstring(word.vector, sep=', ')
 		sim_scores[index] = ith_word_vector.dot(np.fromstring(book_vector,sep=', '))
