@@ -30,19 +30,27 @@ def inputs_to_scores(words, books, length = 61082, k =100):
 		if word == '':
 			del word_inputs[0]
 			break
-		vector_sum += np.fromstring(Words.query.filter_by(name = word).first().vector, sep=', ')
+		word_object = Words.query.filter_by(name = word).first()
+		if word_object is None:
+			return None
+		vector_sum += np.fromstring(word_object.vector, sep=', ')
 	for book in book_inputs:
 		if book == '':
 			del book_inputs[0]
 			break
-		vector_sum += np.fromstring(Books.query.filter_by(name = book).first().vector, sep=', ')
+		book_object = Books.query.filter_by(name = book).first()
+		if book_object is None:
+			return None
+		vector_sum += np.fromstring(book_object.vector, sep=', ')
 	if len(word_inputs) + len(book_inputs) == 0:
 		return None
 	vector_sum /= len(word_inputs) + len(book_inputs)
 
 	books = np.zeros((length,k))
 	print('enter books.query.all()')
-	for book in Books.query.all():
+	book_query_objects = Books.query.all()
+	print('out of books.query.all()')
+	for book in book_query_objects:
 		index = book.index
 		ith_book_vector = np.fromstring(book.vector, sep=', ')
 		books[index] = ith_book_vector
@@ -93,6 +101,7 @@ def scores_to_asort(scores, k = 15):
 
 def get_books(asorted_list):
 	top_k_books = []
+	word_query_objects = Words.query.all()
 	for tup in asorted_list:
 		book_list = []
 		book_query_object = Books.query.filter_by(index = tup[0]).first()
@@ -103,13 +112,13 @@ def get_books(asorted_list):
 		book_list.append(book_query_object.author)							##5. author
 		book_list.append(book_query_object.description)						##6. description
 		#add word cloud ([('warm', 95), ('cold', 7)])
-		book_list.append(book_to_closest_words(book_query_object))			##7. word cloud
+		book_list.append(book_to_closest_words(book_query_object, word_query_objects))			##7. word cloud
 		book_list.append(book_query_object.avg_rating)						##8. average rating
 		book_list.append(tup[1])											##9. Similarity Score
 		top_k_books.append(book_list)
 	return top_k_books
 
-def book_to_closest_words(book, k = 50, length = 5260):
+def book_to_closest_words(book, words_query_objects, k = 50, length = 5260):
 	book_vector = book.vector
 
 	sim_scores = np.zeros(length)
@@ -117,6 +126,7 @@ def book_to_closest_words(book, k = 50, length = 5260):
 		index = word.index
 		ith_word_vector = np.fromstring(word.vector, sep=', ')
 		sim_scores[index] = ith_word_vector.dot(np.fromstring(book_vector,sep=', '))
+	print('exit words.query.all()')
 	word_score_tup_list = []
 	for i in np.argsort(-sim_scores)[:k]:
 		word_name = unicodedata.normalize('NFKD', Words.query.filter_by(index=i).first().name).encode('ascii', 'ignore')
