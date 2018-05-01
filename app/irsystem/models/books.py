@@ -12,6 +12,7 @@ class Books(Base):
   isbn10   = db.Column(db.String(30), nullable=True)
   isbn13 = db.Column(db.String(30), nullable=True)
   link = db.Column(db.Text, nullable=True)
+  word_scores = db.Column(db.Text,    nullable=True)
 
 
 
