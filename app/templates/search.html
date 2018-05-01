@@ -120,7 +120,9 @@
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
             </div>
+            {% if error_message %}
             <h3 style = "color:white; font-family: 'Vidaloka', serif; font-size : 18px"> {{error_message}} </h3>
+            {% endif %}
             </form>
           </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
