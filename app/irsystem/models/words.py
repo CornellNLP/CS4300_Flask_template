@@ -5,7 +5,7 @@ class Words(Base):
   index       = db.Column(db.Integer, nullable=False)
   name        = db.Column(db.String,  nullable=False)
   vector 	  = db.Column(db.Text,    nullable=False)
-  book_scores = db.Column(db.Text,    nullable=True)
+  #book_scores = db.Column(db.Text,    nullable=True)
 
 
 
