@@ -99,7 +99,7 @@
             <br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '')">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. 'Green Lantern', 'The Hunger Games' etc.)">
             </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
@@ -108,7 +108,7 @@
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
             <label class="form-group col-sm-12">
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '') ">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. 'vampire','battle','romantic' etc.) ">
             </label>
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
@@ -157,7 +157,6 @@
                             valueKey: 'name',
                             source: keywords.ttAdapter(),
                             hint: true,
-                            minLength: 1 ,
                             limit : 10
                         },
                     freeinput : false ,
@@ -185,8 +184,7 @@
                             valueKey: 'name',
                             source: titles.ttAdapter(),
                             hint: true,
-                            minLength: 10 ,
-                            limit : 5
+                            limit : 10
                         },
                     freeinput : false ,
                     delimiterRegex: /[**]+/,
