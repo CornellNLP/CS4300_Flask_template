@@ -206,7 +206,6 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="/static/jqcloud.css" type="text/css" rel="stylesheet"  />
 </head>
 <body>
   <!-- The Modal -->
@@ -256,8 +255,8 @@
     {% endif %}
   </div>
 
-  <div id="myModal1" class="modal">
-    {% if top_books %}
+    <div id="myModal1" class="modal">
+{% if top_books %}
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
@@ -274,12 +273,12 @@
           {% endfor %}
         {% if top_books[1][5]!= "" %}
           <div class = "legend2">
-      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
-      <br>
-      <div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
-        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[1][5]}} </p>
+<p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+<br>
+  <div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
+          <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[1][5]}} </p>
         {% else %}
-        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
+          <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[1][7]}} / 5.0 </div>
 <br>
         {% endif %}
          </div>
@@ -287,20 +286,22 @@
       <div class = "center" >
       <div class="modal-footer">
         {% if top_books[1][3]!= "" %}
-        <a href={{top_books[1][3]}} target="_blank">
-        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
-        </a>
+
+          <a href={{top_books[0][3]}} target="_blank" >
+            <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+          </a>
+
         {% else %}
-            <h1></h1>
+          <h1></h1>
         {% endif %}
+        </div>
       </div>
-    </div>
     </div>
     {% endif %}
   </div>
 
-  <div id="myModal2" class="modal">
-  {% if top_books %}
+   <div id="myModal1" class="modal">
+{% if top_books %}
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
@@ -312,31 +313,33 @@
         <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[2][8]}}%</div></h2>
 
         <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
-           {% for word in top_books[2][6] %}
+          {% for word in top_books[2][6] %}
           <button id = "tagbutton">{{word}}</button>
           {% endfor %}
         {% if top_books[2][5]!= "" %}
           <div class = "legend2">
-      <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
-      <br>
-      <div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
-        <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[2][5]}} </p>
+<p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
+<br>
+  <div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
+          <p style= "font-size: 18px; color:black; font-weight:normal"> {{top_books[2][5]}} </p>
         {% else %}
-        <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
+          <p> Summary is not available for this book.</p><div style="color:grey">Average Rating: {{top_books[2][7]}} / 5.0 </div>
 <br>
         {% endif %}
-      </div>
+         </div>
          </div>
       <div class = "center" >
       <div class="modal-footer">
         {% if top_books[2][3]!= "" %}
-        <a href={{top_books[2][3]}} target="_blank">
-        <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
-        </a>
+
+          <a href={{top_books[0][3]}} target="_blank" >
+            <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
+          </a>
+
         {% else %}
           <h1></h1>
         {% endif %}
-      </div>
+        </div>
       </div>
     </div>
     {% endif %}
