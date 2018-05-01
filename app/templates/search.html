@@ -95,11 +95,11 @@
             </h1>
             <br>
 
-            <h5 id="desc" style="text-align:center; text-shadow: 2px 2px black">What is your favorite book? What did you particularly like about them? <br> BookRec has taken 3.2 million book reviews of 61,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
-            <br>Input some of your favorite books and/or specific keywords you want to explore more to get started!</h5>
+            <h5 id="desc" style="text-align:center; text-shadow: 2px 2px black">What is your favorite book? What did you particularly like about it? <br> BookRec has taken 3.2 million book reviews of 61,000 books to find the perfect book for you to read next based on what you answer to these simple questions.
+            <br>Input some of your favorite books, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. 'Green Lantern', 'The Hunger Games' etc.)">
+                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. '')">
             </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
@@ -107,16 +107,13 @@
             {% for book in avail_books %}
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
-
             <label class="form-group col-sm-12">
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. 'vampire','battle','romantic' etc.) ">
+                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. '') ">
             </label>
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
             </div>
-            {% if error_message %}
             <h3 style = "color:white; font-family: 'Vidaloka', serif; font-size : 18px"> {{error_message}} </h3>
-            {% endif %}
             </form>
           </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -143,7 +140,6 @@
             for (var i = 0; i < book_list.length; i++){
                 book_array.push(book_list[i].innerText)
             }
-
             var new_key_word = []
             for ( var i =0 ; i < keyword_array.length ; i ++ ) {
                 word = keyword_array[i].trim()
@@ -161,11 +157,10 @@
                             valueKey: 'name',
                             source: keywords.ttAdapter(),
                             hint: true,
+                            minLength: 1 ,
                             limit : 10
                         },
                     freeinput : false ,
-                    delimiterRegex: /[**]+/,
-                    delimiter: '**'
 
                     }
                 );
@@ -190,7 +185,8 @@
                             valueKey: 'name',
                             source: titles.ttAdapter(),
                             hint: true,
-                            limit : 10
+                            minLength: 10 ,
+                            limit : 5
                         },
                     freeinput : false ,
                     delimiterRegex: /[**]+/,

@@ -38,8 +38,7 @@ def debug():
 	b = Words.query.filter_by(name = u'wrong').first()
 	print(b.name)
 	print(b.index)
-	print(b.book_scores)
-	#print(b.word_cloud)
+		#print(b.word_cloud)
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
