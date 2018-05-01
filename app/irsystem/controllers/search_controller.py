@@ -15,7 +15,6 @@ import json
 import os
 import csv
 import unicodedata
-import psycopg2
 
 project_name = "BookRec"
 net_id = "Hyun Kyo Jung: hj283"
@@ -27,16 +26,21 @@ def change_db_final():
 	# put_books_in_db(11)
 	# put_words_in_db(11)
 	# db.session.commit()
-	# change_b2w_value(3)
-	# change_w2b_value(3)
-	print('all done')
+	db.session.flush()
+	print('flushed!')
+	db.session.commit()
+	print('commited!')
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
 
 @irsystem.route('/debug', methods=['GET'])
 def debug():
-
+	b = Words.query.filter_by(name = u'wrong').first()
+	print(b.name)
+	print(b.index)
+	print(b.book_scores)
+	#print(b.word_cloud)
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
@@ -104,37 +108,28 @@ def secondpage():
 def search():
 	available_words = json.load(open('words.json'))
 	available_books = json.load(open('books.json'))
-	available_authors = json.load(open('authors.json'))
-	authors_to_books = json.load(open('authors_to_books.json'))
 
-	author_input = request.args.get('author_search')
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
 	print("first page")
 	print(title_input)
 	print(keyword_input)
-	print("author input")
-	print(author_input)
 
-	if title_input is not None or keyword_input is not None or author_input is not None:
+	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
-		if author_input != "":
-			for author in author_input.split('**'):
-				for book in authors_to_books[author]:
-					new_format = book[:book.rfind(' (published by) ')]
-					title_input += '**' + new_format
-			
+	
 		if title_input !="" or keyword_input!="":
 			sim_scores = inputs_to_scores(keyword_input, title_input)
 			if sim_scores is None:
 				error_message = "The Input is Invalid Please Use the Autocomplete Functionality"
 				return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',\
-						word_cloud=[], top_books = [], error_message = error_message, avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
+						word_cloud=[], top_books = [], error_message = error_message, avail_keywords = available_words, avail_books = available_books)
 			top15_asorted = scores_to_asort(sim_scores)
 			session["top15_asorted"] = top15_asorted
 			session["title_input"]  = title_input
 			session["keyword_input"] = keyword_input
 			return redirect(url_for('irsystem.secondpage'))
 	return render_template('search.html', name=project_name, netid=net_id, word_cloud_message='', top_books_message='',
-		word_cloud=[], top_books = [], error_message = None, avail_keywords = available_words, avail_books = available_books, avail_authors = available_authors)
+		word_cloud=[], top_books = [], error_message = "",  avail_keywords = available_words, avail_books = available_books)
+

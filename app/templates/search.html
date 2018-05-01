@@ -99,11 +99,7 @@
             <br>Input some of your favorite books or authors, and/or specific keywords you want to explore more to get started!</h5>
             <br>
             <label class="form-group col-sm-12">
-<<<<<<< HEAD
                 <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. 'Green Lantern', 'The Hunger Games' etc.)">
-=======
-                <input type="text" id="titlefield" name="title_search" class="form-control" placeholder=" Input Book Titles (e.g. 'The Green Lantern')">
->>>>>>> 096866abddbe904db86a0dfa0dec8f180d984a63
             </label>
             {% for keyword in avail_keywords %}
                 <div hidden class = "keyword" style="display: none;"> {{keyword}}</div>
@@ -111,19 +107,9 @@
             {% for book in avail_books %}
                 <div hidden class = "book" style="display: none;"> {{book}}</div>
             {% endfor %}
-            {% for author in avail_authors %}
-                <div hidden class = "author" style="display: none;"> {{author}}</div> 
-            {% endfor %}
-            <label class="form-group col-sm-12">
-                <input id="authorfield" type="text" name="author_search" class="form-control" placeholder="Input Authors (e.g. 'J.K.Rowling') ">
-            </label>
 
             <label class="form-group col-sm-12">
-<<<<<<< HEAD
                 <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. 'vampire','battle','romantic' etc.) ">
-=======
-                <input id="keyfield" type="text" name="keyword_search" class="form-control" placeholder=" Input Keywords (e.g. 'vampire') ">
->>>>>>> 096866abddbe904db86a0dfa0dec8f180d984a63
             </label>
             <div class = "marge" >
              <button id="gobutton" class="btn btn-info" > Go </button>
@@ -216,35 +202,6 @@
                     delimiter: '**'
 
                 });
-
-
-
-            var new_author_word = []
-            for ( var i =0 ; i < author_array.length ; i ++ ) {
-                author = author_array[i].trim()
-                new_author_word.push({ "value" : author , "name" : author})
-            }
-            var authorwords = new Bloodhound({
-                      datumTokenizer: Bloodhound.tokenizers.obj.whitespace("value"),
-                      queryTokenizer: Bloodhound.tokenizers.whitespace,
-                      local : new_author_word
-                    });
-                    authorwords.initialize();
-                    $('#authorfield').tagsinput({
-                        typeaheadjs: {
-                            displayKey: 'value',
-                            valueKey: 'name',
-                            source: authorwords.ttAdapter(),
-                            hint: true,
-                            limit : 10
-                        },
-                    freeinput : false ,
-                    delimiterRegex: /[**]+/,
-                    delimiter: '**'
-
-
-                    }
-                );
 
         });
 
