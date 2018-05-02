@@ -288,7 +288,7 @@
       <div class="modal-footer">
         {% if top_books[1][3]!= "" %}
 
-          <a href={{top_books[0][3]}} target="_blank" >
+          <a href={{top_books[1][3]}} target="_blank" >
             <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
           </a>
 
@@ -333,7 +333,7 @@
       <div class="modal-footer">
         {% if top_books[2][3]!= "" %}
 
-          <a href={{top_books[0][3]}} target="_blank" >
+          <a href={{top_books[2][3]}} target="_blank" >
             <img src="https://s.gr-assets.com/assets/badge/goodreads-badge-read-reviews-a8508f765fac427f58da8ebf9e89721a.png" >
           </a>
 
@@ -444,14 +444,15 @@
         <h4 style = "text-align: center; color: black; font-size:350%; margin-bottom:0">{{top_books[5][0]}}</h4>
         <p style = "text-align: center; color: black; font-size:200%">by {{top_books[5][4]}}</p>
       </div>
+
       <div class="modal-body" style="text-align:center">
         <h2 class = "legend" style="color:gray; font-size:130%">BookRec Score<div style="color:#355c7d; font-size:180%">{{top_books[5][8]}}%</div></h2>
 
         <p style="color:gray; font-size:130%; font-weight:bold">Tags From Reviews</p>
-          {% for word in top_books[5][6] %}
+           {% for word in top_books[5][6] %}
           <button id = "tagbutton">{{word}}</button>
           {% endfor %}
-        {% if top_books[5][5]!= "" %}
+        {% if top_books[4][5]!= "" %}
           <div class = "legend2">
       <p style="font-weight: bold; color:gray; font-size:150%; margin-bottom:0; margin-top:2.5%"> Summary</p>
       <br>
@@ -463,7 +464,7 @@
         {% endif %}
          </div>
          </div>
-       <div class = "center" >
+      <div class = "center" >
       <div class="modal-footer">
         {% if top_books[5][3]!= "" %}
         <a href={{top_books[5][3]}} target="_blank">
@@ -473,10 +474,11 @@
             <h1></h1>
         {% endif %}
       </div>
-    </div>
+      </div>
     </div>
     {% endif %}
   </div>
+
   <div id="myModal6" class="modal">
 {% if top_books %}
     <!-- Modal content -->
