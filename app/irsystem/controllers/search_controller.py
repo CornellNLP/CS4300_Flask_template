@@ -36,9 +36,6 @@ def change_db_final():
 @irsystem.route('/debug', methods=['GET'])
 def debug():
 	b = Words.query.filter_by(name = u'wrong').first()
-	print(b.name)
-	print(b.index)
-		#print(b.word_cloud)
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
 		top_books_message='', word_cloud=[], top_books = [], avail_keywords = [], avail_books = [])
 
@@ -53,7 +50,6 @@ def secondpage():
 		title_input = unicodedata.normalize('NFKD', title_input).encode('ascii', 'ignore')
 		title_input_list = title_input.split("**") 
 		print("title_input_list")
-		print(title_input_list)
 		for title in title_input_list : 
 			if title == "": 
 				top_book_message += title 
@@ -95,7 +91,6 @@ def secondpage():
 		for i in range(0, len(arr)-1):
 			result[5] = result[5].replace(arr[i],"")
 		title_by_list = result[0].split("(by)") 
-		print(title_by_list) 
 		result[0] = title_by_list[0].strip()
 
 	return render_template('secondpage.html', name=project_name, netid=net_id, word_cloud_message='',
@@ -109,10 +104,6 @@ def search():
 
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
-
-	print("first page")
-	print(title_input)
-	print(keyword_input)
 
 	if title_input is not None or keyword_input is not None :
 		print("enter if statement inside the first page")
