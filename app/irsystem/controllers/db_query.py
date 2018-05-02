@@ -85,12 +85,10 @@ def get_books(asorted_list, k = 15):
 def book_to_closest_words(book, words_query_objects, k = 50, length = 5260):
 	book_vector = book.vector
 	sim_scores = np.zeros(length)
-	print('enter words.query.all()')
 	for word in words_query_objects:
 		index = word.index
 		ith_word_vector = np.fromstring(word.vector, sep=', ')
 		sim_scores[index] = ith_word_vector.dot(np.fromstring(book_vector,sep=', '))
-	print('exit words.query.all()')
 	word_score_tup_list = []
 	for i in np.argsort(-sim_scores)[:k]:
 		word_name = unicodedata.normalize('NFKD', Words.query.filter_by(index=i).first().name).encode('ascii', 'ignore')
