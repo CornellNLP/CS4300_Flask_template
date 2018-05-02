@@ -42,14 +42,12 @@ def debug():
 
 @irsystem.route('/secondpage', methods=['GET'])
 def secondpage():
-	print("enter second page ")
 	title_input = session.get('title_input', None)
 	keyword_input = session.get('keyword_input', None)
 	top_book_message = ""
 	if title_input is not None :
 		title_input = unicodedata.normalize('NFKD', title_input).encode('ascii', 'ignore')
-		title_input_list = title_input.split("**") 
-		print("title_input_list")
+		title_input_list = title_input.split("%") 
 		for title in title_input_list : 
 			if title == "": 
 				top_book_message += title 
@@ -58,7 +56,7 @@ def secondpage():
 				top_book_message += ", "
 	if keyword_input is not None:
 		keyword_input = unicodedata.normalize('NFKD', keyword_input).encode('ascii', 'ignore')
-		keyword_input_list = keyword_input.split("**")
+		keyword_input_list = keyword_input.split("%")
 		for key in keyword_input_list : 
 			if key =="" : 
 				top_book_message += key 
@@ -105,9 +103,7 @@ def search():
 	title_input = request.args.get('title_search')
 	keyword_input = request.args.get('keyword_search')
 
-	if title_input is not None or keyword_input is not None :
-		print("enter if statement inside the first page")
-	
+	if title_input is not None or keyword_input is not None :	
 		if title_input !="" or keyword_input!="":
 			sim_scores = inputs_to_scores(keyword_input, title_input)
 			if sim_scores is None:
