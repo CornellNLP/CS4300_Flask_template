@@ -19,8 +19,8 @@
     maxTags: undefined,
     maxChars: undefined,
     confirmKeys: [13, 44],
-    delimiter: '**',
-    delimiterRegex:  /[**]+/,
+    delimiter: '%',
+    delimiterRegex:  /[%]+/,
     cancelConfirmKeysOnEmpty: true,
     onTagExists: function(item, $tag) {
       $tag.hide().fadeIn();
