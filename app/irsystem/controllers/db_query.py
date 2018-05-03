@@ -56,7 +56,7 @@ def scores_to_asort(scores, k = 15):
 	if round(scores[0][asort[0]], 2) == 1.0: 
 		start_index += 1
 	asort_score_tup = []
-	for i in asort[start_index:start_index+k+len(scores[1])]:
+	for i in asort[start_index:start_index+k+len(scores[1])+30]:
 		asort_score_tup.append((i, round(scores[0][i],4)*100))
 	return (asort_score_tup, scores[1])
 
@@ -65,10 +65,13 @@ def get_books(asorted_list, k = 15):
 	top_k_books = []
 	books_to_words = json.load(open('docs_to_words.json'))
 	for tup in asorted_list[0]:
+		if len(top_k_books) == k:
+			break
 		book_list = []
 		book_query_object = Books.query.filter_by(index = tup[0]).first()
-		book_list.append(book_query_object.name)							##1. Bookname
-		if book_query_object.name in asorted_list[1]:
+		book_name = book_query_object.name
+		book_list.append(book_name)							##1. Bookname
+		if book_name in asorted_list[1] or unicodedata.normalize('NFKD', book_name).encode('ascii','ignore').strip()[:4] == '(by)':
 			continue
 		book_list.append(book_query_object.isbn10)							##2. ISBN10
 		book_list.append(book_query_object.isbn13)							##3. ISBN13
