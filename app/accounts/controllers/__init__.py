@@ -3,5 +3,5 @@ from flask import request, jsonify, abort
 import os
 
 # Import module models
-from app.accounts.models.user import *
-from app.accounts.models.session import *
+from ..models.user import *
+from ..models.session import *
