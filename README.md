@@ -1,67 +1,135 @@
 # CS4300 - Flask Template
-## Notes
-This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience).  If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons addcoming soon. This README was written by Ilan Filonenko with help from Joseph Antonakakis.
+This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience). 
+
+**We recommend you start with the quick start guide FIRST and then read the Flask Template Walk-through section.** Some may find the additional information about AWS and KUBERNETES deployment to be useful, but those are not vital to getting your project working.
+
+If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons addcoming soon. This README was originally written by Ilan Filonenko with help from Joseph Antonakakis.
+
 ## Table of Contents
-### [Overview](#overview-of-the-project-and-introduction-to-flask)
-### [Step-By-Step](#step-by-step-guide)
-### [Post-Setup-Getting-Started](#getting-started)
+### [Quick Start Guide](#quickstart-guide)
+### [Flask Template Walk-through](#an-indepth-flask-app-walk-through)
 ### [AWS Deployment](#deploy-to-ec2-quick)
 ### [KUBERNETES Deployment](#google-cloud-db-docker-kubernetes)
-## Overview of the project and Introduction to Flask
-This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern.
 
-This guide will be utilizing `PostgreSQL` to drive persistent storage on the backend.  
-
-### Get PyPI
-
-This guide depends on you being able to easily download Python modules.  In order to do so, you should get `PyPI`.  Follow the basic guide [here](https://pip.pypa.io/en/stable/installing/).
-
-### Virtualenv - The Key to Python Projects
-
-Before even touching `Flask`, you should be introduced into `virtualenv` (if you have not already seen this amazing tool). `Virtualenv` allows you to create an isolated environment to build and run a Python project in.  All dependencies for the project can be freshly declared and utilized, and the project can, therefore, be built and executed in a modular and isolated fashion.  In addition, if you download a preexisting Python project, you can create a virtual environment with `virtualenv` to install and store all dependencies for the project.  Think of it like your `node_modules` file if you come from `Node.js`, or your project gems if you come from `Ruby on Rails`.  To install, go [here](https://virtualenv.pypa.io/en/stable/installation/).  For dead-simple usage, go [here](https://virtualenv.pypa.io/en/stable/userguide/).
-
-Once you have `virtualenv` setup, create an actual virtual environment with the following command:
-
+## Quickstart Guide
+### 1. Cloning the repository from Git
 ```bash
-virtualenv venv
+git clone https://github.com/CornellNLP/CS4300_Flask_template.git
+cd CS4300_Flask_template
 ```
+### 2. Setting up your virtual environment
 
-In the above example, I chose to name the environment `venv`, but you can name it whatever you'd like.
-
-To activate and enter the virtual environment, run the following:
+We assume by now all of you have seen and used virtualenv, but if not, go [here](https://virtualenv.pypa.io/en/stable/installation/) to install and for dead-simple usage go [here](https://virtualenv.pypa.io/en/stable/installation/)
 
 ```bash
+# Create a new python3 virtualenv named venv.
+virtualenv -p python3 venv
+# Activate the environment
+source venv/bin/activate
+
+# Install all requirements
+pip install -r requirements.txt
+```
+An aside note: In the above example, we created a virtualenv for a python3 environment. For most of you, you will have python3.5.2 installed by default as we've used that version for assignments. Heroku uses python 3.6.8 for their python runtime. I don't *anticipate* there being issues if you're using python 3.5.2 for development, but if you want to be consistent with heroku, use 3.6.8.
+
+If you wish to add any dependencies for future development just do this:
+
+``` bash
+pip install <MODULE_NAME>
+pip freeze > requirements.txt
+```
+### 3. Ensuring environment variables are present
+You will now be setting up a tool called `autoenv` so that everytime you enter the directory all enviroment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above. To fully set it up:
+
+``` bash
+# Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc),
+# according to your current CLI. I'll use bash in this example:
+echo "source `which activate.sh`" >> ~/.bashrc
+
+# Reload your shell
+source ~/.bashrc
+
+# Check to see you have a .env file that exists and 
+# has sets the appropriate APP_SETTINGS and DATABASE_URL variables;
+# else create a new file with those variables
+cat .env
+
+# This command should produce something non-empty if your autoenv is correctly configured
+echo $APP_SETTINGS
+
+# Reactivate the environment because you just reloaded the shell
 source venv/bin/activate
 ```
 
-The following command line prompt will indicate that you're in the virtual environment:
+### 4. Setting up Postgres Backend (if interested in Postgres)
+First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up: **NOTE:** you may find the need to "initialize" a new database through the Postgres App or through the `initdb` command before you're able to proceed with the above commands.
+``` bash
+# Enter postgres command line interface
+$ psql
+# Create your database which I will call my_app_db in this example, but you can change accordingly
+CREATE DATABASE my_app_db;
+# Quit out
+\q
+```
+The above creates the actual database that will be used for this application and the name of the database is `my_app_db` which you can change, but make sure to change the `.env` file and in your production app accordingly which I will talk about lower in this guide.
 
-```bash
-(venv) >
+### 5. Check to see if app runs fine by running in localhost:
+``` bash
+python app.py
+```
+At this point the app should be running on [http://localhost:5000/](http://localhost:5000/). Navigate to that URL in your browser.
+
+### 6. Push to heroku
+I have included the Procfile which leverages gunicorn which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn) for deployment.
+
+To setup heroku and push this app to there you will run the following:
+First you must install the heroku-cli; the installation instructions can be found [here](https://devcenter.heroku.com/articles/heroku-cli) and create an account with heroku. After, you can run the following commands to push to your heroku app into deployment using git from your command line!
+
+``` bash
+# Login with your heroku credentials
+$ heroku auth:login
+Enter your Heroku credentials:
+Email: <YOUR EMAIL>
+Password: <YOUR PASSWORD>
+
+# This create logic might be deprecated so
+# navigate to Heroku Dashboard and create app manually
+$ heroku create <YOUR_WEBSITE_NAME>
+
+# Note you will have had to commit any changes you've made
+# since cloning this template in order to push to heroku
+$ git push heroku master
 ```
 
-To deactivate the virtual environment, run the following:
+Before being able to interact with this application you will go to your Heroku dashboard and find your app.
+This will probably be here: `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>`.
+On that page you will need to modify your environment variables (remember your .env??) by navigating to
+`https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in left box below DATABASE_URL write:
+`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI. You can also do this from the heroku-cli using the `heroku config:edit` command.
 
-```bash
-deactivate
+You lastly will run:
+``` bash
+heroku ps:scale web=1
 ```
+You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. Hooray!
 
-I have inluded a requirements.txt file in the project. The typical workflow will be to install something via `pip`, (whatever you want) and then run the following:
+You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
 
-```bash
-pip freeze > requirements.txt
-```
+## Where to go from here?
+At some point you will need to fork this repo and name your repo cs4300sp2019-##### with your netids substituting the #####.
 
-The command `pip freeze` actually lists the dependencies encapsulated by the virtual environment.  The above command copies those into a text file that will allow one to run the following on downloading and using the Python project:
+To begin customizing this boilerplate webapp to actually do something interesting with your search queries, you should look at modifying the `app/irsystem/controllers/search_controller.py` file where you can see the params we are passing into the rendered view.
 
-```bash
-pip install -r requirements.txt
-```
+If you plan on reading no further than this, please at least skim the section **[An Indepth Flask App Walk-through](#an-indepth-flask-app-walk-through)**, it will provide you a good background on how to interact and modify this template.
 
-**NOTE**: The `.env` file is intentionally **NOT** `.gitignore`-ed.  
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-### Flask App
-#### Organization
+## An Indepth Flask App Walk-through
+This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern. This guide will be utilizing `PostgreSQL` to drive persistent storage on the backend.  
+
+Some of the first few sections will mirror the steps you took in the quickstart guide but will be more in-depth. 
+
+### Organization
 A `Flask` app has some utility scripts at the top-level, and has a modular organization when defining any sort of functionality.  Dividing up a `Flask` app into modules allows one to separate resource / logic concerns.  
 
 The utility scripts at the top level include the following:
@@ -75,24 +143,10 @@ app.py    # runs the app on a port
 The entire functional backend of a `Flask` app is housed in a parent module called `app`.  You can create this by creating a directory `app` and populating it with an `__init__.py` file.  Then, inside that `app` directory, you can create modules that describe the resources of your app.  These modules should be as de-coupled and reusable as possible.  For example, let's say I need a bunch of user authentication logic described by a couple of endpoints and helper functions.  These might be useful in another `Flask` app and can be comfortably separated from other functionality.  As a result, I would make a module called `accounts` inside my app directory.  Each module (including `app`) should also have a `templates` directory if you plan on adding any `HTML` views to your app.   
 
 #### Template
-The use of templates here is specifically for the purpose of mimicing the structure of an MVC application. In this application I have seperated the system into two seperate templates: accounts and irsystem, since some of you might need to leverage the database for user/session log flow so you would only use the irsystem template. The irsystem is what you will be manipulating for the purposes of your information retrevial. If you look at the file `search_controller.py` you can see that we are rendering the view with data being passed in. This data will the results from your IR system which you will customize accordingly. You may make more models/controllers for organization purposes.
+The use of templates here is specifically for the purpose of mimicking the structure of an MVC application. In this application I have seperated the system into two seperate templates: accounts and irsystem, since some of you might need to leverage the database for user/session log flow so you would only use the irsystem template. The irsystem is what you will be manipulating for the purposes of your information retrevial. If you look at the file `search_controller.py` you can see that we are rendering the view with data being passed in. This data will the results from your IR system which you will customize accordingly. You may make more models/controllers for organization purposes.
 
 ### Database Setup
-
-In this example, as stated, `PostgreSQL` (or `Postgres`) will be the database leveraged.  `Postgres` can be installed a multitude of ways, but if you're on `OSX` I recommend utilizing the [`Postgres App`](https://postgresapp.com/).  
-
-Once you have `Postgres` setup and have your `$PATH` configured accordingly, run the following:
-
-```bash
-# Enter postgres command line interface
-$ psql
-# Create your database
-CREATE DATABASE my_app_db;
-# Quit out
-\q
-```
-
-The above creates the actual database that will be used for this application and the name of the database is `my_app_db` which you can change, but make sure to change the .env and in your production app accordingly which I will talk about lower in this guide.
+If you followed the quickstart guide, you should now have set up postgres.
 
 Rather than writing raw-SQL for this application, I have chosen to utilize [`SQLAlchemy`](http://flask-sqlalchemy.pocoo.org/2.1/) (specifically, `Flask-SQLAlchemy`) as a database `Object-Relational-Model` (`ORM`, for short).  In addition, for the purposes of serialization (turning these database entities into organized [`JSONs`](http://www.json.org/) that we can send over the wire) and deserialization (turning a `JSON` into a entity once again), I have chosen to use [`Marshmallow`](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/) (specifically, `marshmallow-SQLAlchemy`).
 
@@ -126,7 +180,7 @@ python manage.py db migrate
 # Apply it to the DB
 python manage.py db upgrade
 ```
-You should run these methods after having the .env setup because it requires the APP_SETTINGS and DATABASE_URL to be defined. If you get errors in this section as a result of key-errors for APP_SETTINGS and DATABASE_URL go to the **Environmental Variables** section and make sure to delete the migrations folder that is already created with running `python manage.py db init`
+You should run these methods after having the .env setup because it requires the APP_SETTINGS and DATABASE_URL to be defined. If you get errors in this section as a result of key-errors for APP_SETTINGS and DATABASE_URL go to the **Environment Variables** section and make sure to delete the migrations folder that is already created with running `python manage.py db init`
 
 ### Configuration Setup
 Now that we have setup our database and have handled our `manage.py` script, we can create our `config.py` script, which involves the database and various other configuration information specific to `Flask`.  This file will be used in our initialization of the `Flask` app in the `app` module in the near future.  
@@ -167,8 +221,8 @@ The above defines several classes used to instantiate configuration objects in t
 * `CSRF_ENABLED`, `CSRF_SESSION_KEY`, and `SECRET_KEY` all relate to `Cross-Site-Request-Forgery`, which you can read more about [here](https://goo.gl/qkGU9).  
 * `SQLALCHEMY_DATABASE_URI` refers to the database URL (a server running your database).  In the above example, I refer to an environment variable `'DATABASE_URL'`.  I will be discussing environment variables in the next section, so stay tuned.
 
-### Environmental Variables
-Environment variables allow one to specify credentials like a sensitive database URL, API keys, secret keys, etc.  These variables can be manually `export-ed` in the shell that you are running your server in, but that is a clunky approach.  The tool [`autoenv`](https://github.com/kennethreitz/autoenv) solves this problem.  
+### Environment Variables
+Environment variables allow one to specify credentials like a sensitive database URL, API keys, secret keys, etc.  These variables can be manually `export-ed` in the shell that you are running your server in, but that is a clunky approach.  The tool [`autoenv`](https://github.com/kennethreitz/autoenv) solves this problem.
 
 `autoenv` allows for environment variable loading on `cd`-ing into the base directory of the project. Follow the following command line arguments to install `autoenv`:
 
@@ -176,7 +230,7 @@ Environment variables allow one to specify credentials like a sensitive database
 # Install the package from pip
 pip install autoenv
 # Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc), I'll use
-echo "source `which activate`" >> ~/.?rc
+echo "source `which activate.sh`" >> ~/.?rc
 # Reload your shell
 source ~/.?rc
 # Make a .env file to hold variables
@@ -190,11 +244,11 @@ As mentioned in the above code, your `.env` file will be where you hold variable
 export APP_SETTINGS=config.DevelopmentConfig
 # Set the DB url to a local database for development
 export DATABASE_URL=postgresql://localhost/my_app_db
-````
+```
 
 As you can see above in the example, I reference a specific configuration class (`DevelopmentConfig`), meaning I plan on working in my development environment.  I also have my database URL. Both of which are used heavily in the app. In local mode you will be maniuplating the .env file but in production you will be manipulating the Config Variables in your Heroku instance or you will modify the .env files in your AWS EC2/EB application.
 
-**NOTE:**  Be sure to `gitignore` your `.env` file.  
+**NOTE:** Now, be sure to `gitignore` your `.env` file.  
 
 ### Flask App Setup
 
@@ -246,11 +300,10 @@ Finally, in order to actually start our server, you will run the  `app.py` scrip
 from app import app, socketio
 
 if __name__ == "__main__":
-  print "Flask app running at http://0.0.0.0:5000"
+  print("Flask app running at http://0.0.0.0:5000")
   socketio.run(app, host="0.0.0.0", port=5000)
 
 ```
-
 
 Now, at the root of your application, you can run:
 
@@ -264,7 +317,7 @@ Your server is now running!
 
 ## That's it, for now...
 
-This marks the end of project configuration for a well-constructed `Flask` app following `MVC`.  However, for additional development-related advice regarding project setup, keep reading.  
+This marks the end of project configuration for a well-constructed `Flask` app following `MVC`.  However, for additional development-related advice regarding project setup, keep reading. 
 
 ### Accounts Blueprint
 
@@ -296,7 +349,7 @@ accounts = Blueprint('accounts', __name__, url_prefix='/accounts')
 # Import all controllers
 from controllers.users_controller import *
 from controllers.sessions_controller import *
-````
+```
 
 In addition, register your new blueprint in `./app/__init__.py` by changing the lines:
 
@@ -431,7 +484,6 @@ from app.accounts.models.session import *
 
 ```
 
-
 For other models and controllers you add with database connection you can safely run the following in the root of your project to migrate your database:
 
 ``` bash
@@ -549,108 +601,6 @@ entries_dict = redis.get_dictionary(connection, entry_redis_key)
 You should leverage the pipeline() feature if you are going to be calling more than one (non 2D numpy array) value from Redis. Pipelines are a subclass of the base Redis class that provide support for buffering multiple commands to the server in a single request. They can be used to dramatically increase the performance of groups of commands by reducing the number of back-and-forth TCP packets between the client and server. In the example above there is only 1 in the array, but you can get any number of values you want, in order of requested, given the keys.
 ##### MySQL
 (IN PROGRESS) But you may use MySQL for the cool connector available [here](https://github.com/cuappdev/appdev.py/blob/master/appdev/connectors/mysql_connector.py)
-
-## Step-By-Step Guide
-### 1. Cloning the repository from Git
-```bash
-git clone https://github.com/CornellNLP/CS4300_Flask_template.git
-cd CS4300_Flask_template
-```
-### 2. Setting up your virtual environment
-To install, go [here](https://virtualenv.pypa.io/en/stable/installation/) or for dead-simple usage go [here](https://virtualenv.pypa.io/en/stable/installation/)
-```bash
-# I would recommend to install virtualenv with Mac's built-in version of python because
-# Anaconda is causing problems
-/usr/local/bin/pip2.7 install virtualenv
-# My virtual environment here will be called: venv
-virtualenv venv. The python version is 2.7
-# Activate the environment
-source venv/bin/activate
-# Pip install AppDev specific dependencies for Redis / MySQL connectors
-pip install git+https://github.com/cuappdev/appdev.py.git --upgrade
-# Install all dependencies into the virtual environment, this will be done by Heroku and AWS as well
-pip install -r requirements.txt
-```
-If you wish to add any dependencies for future development just do this:
-``` bash
-pip install <MODULE_NAME>
-pip freeze > requirements.txt
-```
-### 3. Ensuring environment variables are present
-You will now be setting up autoenv so that everytime you enter the directory all enviromental variables are set immeditaly.
-As such you must have autoenv installed which means that you must be inside of the virtualenv environment we created above.
-``` bash
-# Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc),
-# according to your current CLI. I'll use bash in this example:
-$ echo "source `which activate.sh`" >> ~/.bashrc
-# Reload your shell
-$ source ~/.bashrc
-# You should have a .env file, if not touch .env and add the
-# approriate APP_SETTINGS And DATABASE_URL linking you to your local postgresDB
-# After running this you should get the APP_SETTINGS by running echo
-$ echo $APP_SETTINGS
-# Reactivate the environment because you just reloaded the shell
-$ source venv/bin/activate
-```
-### 4. Setting up Postgres Backend (if interested in Postgres)
-First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up:
-``` bash
-# Enter postgres command line interface
-$ psql
-# Create your database which I will call my_app_db in this example, but you can change accordingly
-CREATE DATABASE my_app_db;
-# Quit out
-\q
-```
-### 5. Check to see if app runs fine by running in localhost:
-``` bash
-python app.py
-```
-At this point the app should be running on [http://localhost:5000/](http://localhost:5000/). Navigate to that URL in your browser.
-### 6. Push to heroku
-I have included the Procile which leverages gunicorn which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn) for deployment.
-If you get errors finding modules on Heroku this is because you have not defined a `runtime.txt` file that specifies `python2.7`. It seems that Heroku defaults to 3.6 now.
-
-To setup heroku and push this app to there you will run the following:
-First you must install the heroku-cli; the installation instructions can be found [here](https://devcenter.heroku.com/articles/heroku-cli)
-After, with your github located at the remote origin you will run the following commands to push to your heroku app.
-``` bash
-# Login with your heroku credentials
-$ heroku auth:login
-Enter your Heroku credentials:
-Email: <YOUR EMAIL>
-Password: <YOUR PASSWORD>
-# This create logic might be deprecated so
-# navigate to Heroku Dashboard and create app manually
-$ heroku create <YOUR_WEBSITE_NAME>
-$ git push heroku master
-```
-Before being able to interact with this application you will go to your Heroku dashboard and find your app.
-This will probably be here: `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>`.
-On that page you will need to modify your environmental variabls (remember your .env??) by navigating to
-`https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in left box below DATABASE_URL write:
-`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI.
-You lastly will run:
-``` bash
-heroku ps:scale web=1
-```
-You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production.
-
-**Next steps are optional***
-
-### 7. Setting up RedisML on localhost for you to interact with for pre-processing
-Build using a Ansible Build or a Kubernetes Helm Chart both of which available [here](https://github.com/cuappdev/devOps/tree/master/redis)
-
-## Getting Started
-After forking the repo make sure to name your repo cs4300sp2018-##### with your netids substituting the #####.
-
-To being interacting with the service, modify the app/irsystem/controllers/search_controller.py file where you can see the params we are passing into the rendered view.
-
-The view is seen in app/irsystem/templates/search.html and the data is hardcoded to be range(0,5) right now, but that is what you will modify for your system.
-
-Ensure that you swap out my dummy Project Name and NetID field for your group.
-
-You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
 
 ## Deploy to EC2 Quick
 Welcome to the world of automation. Get ready to be blown away :)
