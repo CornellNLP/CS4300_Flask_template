@@ -60,6 +60,7 @@ echo $APP_SETTINGS
 # Reactivate the environment because you just reloaded the shell
 source venv/bin/activate
 ```
+If you are having issues getting autoenv working (echo $APP_SETTINGS returns empty), try running `source .env` from the root directory of your forked repository. This will *manually* set the environment variables. You will have to do this each each time you reopen the terminal.
 
 ### 4. Setting up Postgres Backend (if interested in Postgres)
 First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up: **NOTE:** you may find the need to "initialize" a new database through the Postgres App or through the `initdb` command before you're able to proceed with the above commands.
