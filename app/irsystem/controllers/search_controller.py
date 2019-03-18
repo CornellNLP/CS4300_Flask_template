@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
-project_name = "Bryan's Cool Project Template"
+project_name = "DestiNationMatcher (DNM)"
 net_id = "Bryan Kamau: bkn7"
 
 @irsystem.route('/', methods=['GET'])
