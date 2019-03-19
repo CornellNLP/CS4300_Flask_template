@@ -38,8 +38,36 @@ If you wish to add any dependencies for future development just do this:
 pip install <MODULE_NAME>
 pip freeze > requirements.txt
 ```
-### 3. Ensuring environment variables are present
-You will now be setting up a tool called `autoenv` so that everytime you enter the directory all enviroment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above. To fully set it up:
+### 3. Ensuring environment variables are present 
+
+We will be using environment variables to manage configurations for our application. This is a good practice to hide settings you want to keep out of your public code like passwords or machine-specific configurations. We will maintain all of our environment variables in a file, and we will populate our environment with these settings before running the app. We have provided you with starter environment files but remember to add them to your `.gitignore` if you add sensitive information to them.
+
+#### Unix - MacOSx, Linux, Git Bash on Windows
+- Your environment variables are stored in a file called `.env`
+- To set your environment:
+``` bash
+source .env
+```
+- To add a variable to your file, use the syntax:
+``` cmd
+export MY_VARIABLE=SOME_VALUE
+```
+
+#### Windows Cmd Prompt
+- Your environment variables are stored in a file called `env.bat`
+- To set your environment:
+``` cmd
+call env.bat
+```
+- To add a variable to your file, use the syntax:
+``` cmd
+SET MY_VARIABLE=SOME_VALUE
+```
+
+#### autoenv (Optional: Unix only)
+If you desire, you can set up a tool called `autoenv` (Will only work with Unix systems or Windows Git Bash) so that everytime you enter the directory all enviroment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above.
+**NOTE: This utility is not critical to the project, it's just nice to have.**
+To set up `autoenv`:
 
 ``` bash
 # Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc),
