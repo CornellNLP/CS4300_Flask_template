@@ -5,25 +5,30 @@
     </head>
     <body>
         <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+            <p style="font-size: 15px; font-family:Didot; color: white; position:relative; top:560px; left:-230">Project: {{ name }}</p>
+            <p style="font-size: 15px; font-family:Didot; color: white; position:relative; top:560px; left: -320">Creators: ({{ netid }})</p>
         </div>
+        <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/164829/pexels-photo-164829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+            background-position: 50% 50%;
+            background-color: rgb(24, 23, 23);
+            background-repeat: no-repeat;
+        }
+        </style>
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-            
+                <h1 style="font-size: 55px; font-family:Didot; color: #f86450; position:relative; top:-80px; left:150">
+                    get starTED
+                </h1>
+                <h2 style="font-size: 22px; font-family:Cursive; color:white; position:relative; top:-30px">
+                        ...One Step Closer to Your Goals
+                </h2>
             <br><br>
             
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="search" class="form-control" placeholder="What's Your Goal?">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <button type="submit" class="btn btn-info"> Begin </button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
