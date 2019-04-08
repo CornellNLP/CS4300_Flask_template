@@ -29,7 +29,7 @@ Mako==1.0.7
 MarkupSafe==1.1.1
 marshmallow==2.19.0
 marshmallow-sqlalchemy==0.16.1
-mysql-connector==2.1.6
+mysql-connector==2.1.7
 nltk==3.4
 numpy==1.16.2
 packaging==19.0

@@ -8,8 +8,8 @@ If you have any questions dont hesistate to ask the TAs or come to OH. In this R
 ## Table of Contents
 ### [Quick Start Guide](#quickstart-guide)
 ### [Flask Template Walk-through](#an-indepth-flask-app-walk-through)
+### [Google Cloud Deployment](#google-cloud-db-docker-kubernetes)
 ### [AWS Deployment](#deploy-to-ec2-quick)
-### [KUBERNETES Deployment](#google-cloud-db-docker-kubernetes)
 
 ## Quickstart Guide
 ### 1. Cloning the repository from Git
@@ -603,6 +603,190 @@ You should leverage the pipeline() feature if you are going to be calling more t
 ##### MySQL
 (IN PROGRESS) But you may use MySQL for the cool connector available [here](https://github.com/cuappdev/appdev.py/blob/master/appdev/connectors/mysql_connector.py)
 
+## Google Cloud (DB, Docker, Kubernetes)
+### Prerequisites
+There a few things you need to do to get started:
+
+1. Apply the Google Cloud Credits to your account. Follow the directions on Piazza to do this
+2. Create a new project. Open up the [Google Cloud Platform Console](https://console.cloud.google.com) and click on the project dropdown on the top menu bar (it will either say "No Project" or the name of your current project). Select "New Project", choose a name, and click "Create".
+3. Install the command line tools. You will need to install `kubectl` [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and `gcloud` [here](https://cloud.google.com/sdk/downloads) for this (see the Quickstarts on the left).
+4. Install Docker [here](https://docs.docker.com/install/).
+
+### Setting up your Database
+You can setup a database quickly by doing the following:
+
+1. Open up the [Google Cloud Platform Console](https://console.cloud.google.com)
+2. Go to Storage > SQL
+3. Create Instance
+4. Create a PostgreSQL Instance
+
+And everything else is self-explanatory. Upon creation it will give you an instance link that you will use for the `DATABASE_URL`.
+
+### Dockerizing your App
+
+Docker is a program that is used to run an app in a container (essentially a virtualized operating system). It is useful
+because it allows you to setup your app in one environment, your container, then deploy it anywhere. A Docker container
+is configured using a Dockerfile, such as the one below (taken from `/kubernetes`):
+```
+# Read from Ubuntu Base Image
+FROM python:3.6.8
+RUN mkdir -p /service
+# Copy over all the files of interest
+ADD app /service/app
+ADD app.py /service/app.py
+ADD config.py /service/config.py
+ADD manage.py /service/manage.py
+ADD requirements.txt /service/requirements.txt
+WORKDIR /service/
+RUN pip install -r requirements.txt
+CMD python -u app.py $APP_SETTINGS $DATABASE_URL
+```
+This Dockerfile is using an existing Ubuntu-based container with Python installed, adding your app files, then
+installing your app dependencies. You most likely won't need to modify this further for your app, but this should
+give a good idea of how you can add other files to your container and execute other setup commands.
+
+Now let's walk through pushing this Docker image:
+
+```bash
+> pwd
+/Users/hunruh/CS4300_Flask_template
+> ls
+Procfile         app              config.py        kubernetes       requirements.txt vagrant
+README.md        app.py           config.pyc       manage.py        runtime.txt      venv
+> docker build -t <YOUR DOCKER USERNAME>/flask-template:v1 -f kubernetes/Dockerfile .
+```
+
+You will replace `<YOUR DOCKER USERNAME>` with your own Docker username so that you can push the image to your public Docker Hub account. The image name is `flask-template` which you can also replace and `:v1` is the image tag (you can change this to `:latest` if you only want the most recent version).
+
+Now that you have the Docker image built, push it to a public repo on Docker Hub
+
+```bash
+> docker push <YOUR DOCKER USERNAME>/flask-template:v1
+```
+
+Now we have a publicly accessible Docker image. You can update this image as your app changes by re-building and re-pushing (you may find it helpful to change the image tag for new versions, or a cached version of your image may be used rather than the latest from Docker Hub). How do we test this locally? You need to run a `docker-compose.yml` script to bring the image up. A sample script is provided in `kubernetes/docker-compose.yml`, and can be run with the following:
+```bash
+# Note we are now in the /kubernetes subdirectory
+> pwd
+/Users/hunruh/CS4300_Flask_template/kubernetes
+> docker-compose up
+kubernetes_flask_1 is up-to-date
+Attaching to kubernetes_flask_1
+flask_1  | Flask app running at http://0.0.0.0:5000
+```
+You can now navigate to `http://0.0.0.0:5000` to see if your app is running correctly.
+
+### Getting Ready for Kubernetes
+
+Your app is configured and ready to go, but we need to deploy to Kubernetes and put it behind a load-balancer to make it publicly accessible. Do the following:
+
+1. Open up the [Google Cloud Platform Console](https://console.cloud.google.com)
+2. Go to Compute > Kubernetes Engine
+3. Click Create Cluster
+4. Name the cluster and set a description.
+5. Set Zone to `us-east4-a`.
+6. Set Number of Nodes to `1`
+7. Leave Cluster Version to be `1.11.7-gke.12 (default)`.
+8. Leave Machine Type with `1 vCPU` and `3.75 GB memory`
+9. Click Create
+
+Now wait for the cluster to come up. When you see a green check mark next to the cluster name then you are ready to continue.
+
+Configure `kubectl` to connect to your cluster:
+
+1. Click Connect
+2. Copy and paste the command shown in the dialog into the terminal on your computer. It should look something like `gcloud container clusters get-credentials <YOUR CLUSTER NAME> --zone us-east4-a --project <YOUR PROJECT ID>`
+
+If everything is working right, you should be able to run the following:
+
+```bash
+# Configure your connection to your cluster
+> gcloud container clusters get-credentials <YOUR CLUSTER NAME> --zone us-east4-a --project <YOUR PROJECT ID>
+Fetching cluster endpoint and auth data.
+kubeconfig entry generated for cluster-1.
+
+# Check the nodes - we should only see 1
+> kubectl get nodes
+NAME                                       STATUS    ROLES     AGE       VERSION
+gke-cluster-1-default-pool-a7da8d2d-2g8c   Ready     <none>    1m        v1.11.7-gke.12
+
+# Check pods running - none are running yet
+> kubectl get pods
+No resources found.
+```
+
+Now we want to deploy a Kubernetes pod with the Docker image we configured. This is defined by a `.yml` file like the one found in `kubernetes/run-deployment.yml`. You should be able to use this file as-is, with one exception: make sure to replace `<YOUR DOCKER USERNAME>/flask-template:v1` with your Docker image name and the most recent tag you want to use. Feel free to customize anything else you need.
+
+We are levaraging a Deployment here so that we can update the app in real-time via the version tag on the image (this useful for swapping between prototypes). A/B swaps are handled by Kubernetes, so there will be no down-time in your app. If you find your app is getting heavy traffic and needs to be scaled up, you can increase the number of replicas, but for now it is only 1 (that should be enough - note that the more resources you use, the more it will cost).
+
+### Deploying to Kubernetes
+
+Now run the following to deploy your app:
+
+```bash
+# We will now launch this pod
+> kubectl create -f kubernetes/run-deployment.yml
+deployment "flask" created
+
+# List pods
+> kubectl get pods
+NAME      READY     STATUS              RESTARTS   AGE
+flask     0/1       ContainerCreating   0          18s
+
+# Wait about a minute
+> kubectl get pods
+NAME      READY     STATUS    RESTARTS   AGE
+flask     1/1       Running   0          1m
+
+> kubectl get deployments
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+flask     1         1         1            1           1m
+
+# See which services are running - it will only be Kubernetes Master
+> kubectl get svc
+NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.27.240.1   <none>        443/TCP   11m
+
+# Deploy the service for our pod: flask
+> kubectl expose deployment flask --type=LoadBalancer
+service "flask" exposed
+
+> kubectl get svc
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+flask        LoadBalancer   10.27.248.200   <pending>     5000:31380/TCP   9s
+kubernetes   ClusterIP      10.27.240.1     <none>        443/TCP          11m
+
+# Wait a minute
+> kubectl get svc
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
+flask        LoadBalancer   10.27.248.200   35.188.251.150 5000:31380/TCP   46s
+kubernetes   ClusterIP      10.27.240.1     <none>         443/TCP          12m
+```
+
+Now if we go to `35.188.251.150:5000` (replace the address with the `EXTERNAL-IP` provided) you should be able to see your app.
+
+### Updating your app in real time
+
+Now that you have your workflow setup, suppose you want to update your app for the next prototype. Update your Docker image by building a new version:
+
+```bash
+# Note the v2 instead of the v1.. showing an updated version
+> docker build -t <YOUR DOCKER USERNAME>/flask-template:v2 -f kubernetes/Dockerfile .
+> docker push <YOUR DOCKER USERNAME>/flask-template:v2
+```
+
+Then update the deployment (only the deployment... the service is still running fine) live with the following command:
+
+```bash
+# This will take you to a vi portal which will
+# allow you to edit the run-deployment.yml file.
+# You simply need to update the version number on the image config and BOOM
+> kubectl edit deployment flask
+...
+```
+
+Enjoy your Kubernetes-deployed app!!
+
 ## Deploy to EC2 Quick
 Welcome to the world of automation. Get ready to be blown away :)
 
@@ -706,238 +890,3 @@ PLAY RECAP *********************************************************************
 ```
 
 Boom! You are done :) How easy was that!
-
-## Google Cloud (DB, Docker, Kubernetes)
-### Setting up Google Cloud
-We are very lucky to have gotten Google Cloud Credits.
-Follow the directions on Piazza to setup your account.
-
-### Database
-You can setup a database REALLY easily by doing the following:
-
-1. Open up the [Google Cloud Platform Console](https://console.cloud.google.com)
-2. Go to Storage > SQL
-3. Create Instance
-
-And everything else is self-explainitory. Upon creation it will give you an instance link that you will use for the `DATABASE_URL`.
-
-### Dockerizing your App
-
-An example Dockerfile is seen below (taken from /kubernetes)
-```
-# Read from Ubuntu Base Image
-FROM python:2.7
-RUN mkdir -p /service
-# Copy over all the files of interest
-ADD app /service/app
-ADD app.py /service/app.py
-ADD config.py /service/config.py
-ADD manage.py /service/manage.py
-ADD requirements.txt /service/requirements.txt
-WORKDIR /service/
-RUN pip install -r requirements.txt
-CMD python -u app.py $APP_SETTINGS $DATABASE_URL
-```
-The contents of this are pretty self-explainitory and you can see how easy Docker is.
-All you have to worry about is the application files and dependencies.
-
-So let us install Docker [here](https://docs.docker.com/install/) to get setup.
-
-Now let's walk through pushing this Docker image:
-
-```bash
-> pwd
-/Users/ilanfilonenko/CS4300_Flask_template
-> ls
-Procfile         app              config.py        kubernetes       requirements.txt vagrant
-README.md        app.py           config.pyc       manage.py        runtime.txt      venv
-> docker build -t ifilonenko/flask-template:v3 -f kubernetes/Dockerfile .
-```
-
-You will replace `ifilonenko` with your own Docker username so that you can push the image to your public Docker hub account. The image name is `flask-template` which you can also replace and `v3` is the image tag which you change to `:latest` if you do not want to version.
-
-Now that you have the docker image built we will push the image to a public repo.
-
-```bash
-> docker build -t ifilonenko/flask-template:v3 -f kubernetes/Dockerfile .
-Sending build context to Docker daemon  107.7MB
-Step 1/10 : FROM python:2.7
- ---> 2863c80c418c
-Step 2/10 : RUN mkdir -p /service
- ---> Using cache
- ---> 43f4bea7a248
-Step 3/10 : ADD app /service/app
- ---> Using cache
- ---> b5cd6d716b2c
-Step 4/10 : ADD app.py /service/app.py
- ---> Using cache
- ---> 1c5280948d59
-Step 5/10 : ADD config.py /service/config.py
- ---> Using cache
- ---> 7d13c7549ec8
-Step 6/10 : ADD manage.py /service/manage.py
- ---> Using cache
- ---> 233cd10e0fd4
-Step 7/10 : ADD requirements.txt /service/requirements.txt
- ---> Using cache
- ---> 385d0fa43691
-Step 8/10 : WORKDIR /service/
- ---> Using cache
- ---> c0f4dec97809
-Step 9/10 : RUN pip install -r requirements.txt
- ---> Using cache
- ---> 4065e4f7fcb6
-Step 10/10 : CMD python -u app.py $APP_SETTINGS $DATABASE_URL
- ---> Using cache
- ---> 4dc171e1c0f2
-Successfully built 4dc171e1c0f2
-Successfully tagged ifilonenko/flask-template:v3
-> docker push ifilonenko/flask-template:v3
-...
-```
-
-Now we have a publicly accessible Docker image which you can version and update by re-building and re-push as much as you want. How do we test this locally? You need to run a docker-compose script to bring the image up. An example script is provided in `kubernetes/docker-compose.yml`. This script is super easy:
-```yml
-flask:
-    image: ifilonenko/flask-template:v3
-    ports:
-      - "5000:5000"
-    environment:
-    - APP_SETTINGS=config.DevelopmentConfig
-    - DATABASE_URL=postgresql://localhost/my_app_db
-```
-And can be run with the following:
-```bash
-> pwd
-CS4300_Flask_template/kubernetes
-> ls
-Dockerfile         docker-compose.yml run-deployment.yml
-> docker-compose up
-kubernetes_flask_1 is up-to-date
-Attaching to kubernetes_flask_1
-flask_1  | Flask app running at http://0.0.0.0:5000
-```
-You can now navigate to `http://0.0.0.0:5000`to see if your app is running correctly.
-
-But we need to put this app online behind a load-balanced service so we can interact with it publicly. So **now we deploy to Kubernetes**
-
-For Kubernetes you will:
-
-1. Open up the [Google Cloud Platform Console](https://console.cloud.google.com)
-2. Go to Compute > Kubernetes Engine
-3. Click Create Cluster
-4. Name the cluster and set a description.
-5. Set Zone to `us-east4-a`.
-6. Leave Cluster Version to be `1.8.8-gke.0 (default)`.
-7. Set Machine Type to `small(1 shared vCPU) 1.7 GB` memory
-8. Leave default `Container-Optimized OS (cos)`
-9. Set Size to 1
-10. Click Create
-
-Now you will wait for the cluster to come up. When you see a green check mark next to the cluster name then you are ready to continue.
-
-Deploying to Kubernetes:
-
-1. Click Connect
-2. Execute `gcloud container clusters get-credentials cluster-1 --zone us-east4-a --project YOUR_PROJECT_HERE` in shell. You will need to install `kubectl` [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and `gcloud` [here](https://cloud.google.com/sdk/downloads) for this. This sets up your `kubectl` bindings to communicate with your cluster.
-
-Now you can run the following commands:
-
-```bash
-# This sets up the cluster
-> gcloud container clusters get-credentials cluster-1 --zone us-east4-a --project <YOUR_PNAME>
-Fetching cluster endpoint and auth data.
-kubeconfig entry generated for cluster-1.
-# This checks the nodes. We should only see 1
-> kubectl get nodes
-NAME                                       STATUS    ROLES     AGE       VERSION
-gke-cluster-1-default-pool-a7da8d2d-2g8c   Ready     <none>    3m        v1.8.8-gke.0
-# Check pods running. There are none atm.
-> kubectl get pods
-No resources found.
-```
-
-Now we want to deploy a Kubernetes pod with the image. This is defined by a `.yml` file like the one below, taken from '/kubernetes':
-
-
-```yml
-apiVersion: apps/v1beta2
-kind: Deployment
-metadata:
-  name: flask
-spec:
-  selector:
-    matchLabels:
-      app: flask
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: flask
-    spec:
-      containers:
-      - name: flask
-        image: ifilonenko/flask-template:v3
-        env:
-        - name: APP_SETTINGS
-          value: config.DevelopmentConfig
-        - name: DATABASE_URL
-          value: postgresql://localhost/my_app_db
-        ports:
-        - containerPort: 5000
-```
-
-As you can see we are naming this Pod and Deployment `flask` and we are defining the image to be: `ifilonenko/flask-template:v3`. You customize this version here. You also set the environment variables here. Make sure to open up the port to `5000` so that you are able to expose that port via a Kubernetes service. We are leverage a Deployment here so that we can update the deployment in real-time to edit the version tag on the image. (This is highly useful for swapping between prototypes) while the Deployment handles the A/B swap between versions, so that there is no down-time in your app. Furthermore, Deployments allow for your system to use a replica set (in the case that you want to scale up your app) but for now we will only have 1 replicat.
-
-```bash
-# We will now launch this pod
-> kubectl create -f kubernetes/run-deployment.yml
-deployment "flask" created
-# List pods
-> kubectl get pods
-NAME      READY     STATUS              RESTARTS   AGE
-flask     0/1       ContainerCreating   0          18s
-# Wait about a minute
-> kubectl get pods
-NAME      READY     STATUS    RESTARTS   AGE
-flask     1/1       Running   0          1m
-> kubectl get deployments
-NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-flask     1         1         1            1           1m
-# Here we see the services running. The only one that is running is the Kubernetes Master
-> kubectl get svc
-NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.27.240.1   <none>        443/TCP   11m
-# Now we deploy the service for our pod: flask
-> kubectl expose deployment flask --type=LoadBalancer
-service "flask" exposed
-> kubectl get svc
-NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-flask        LoadBalancer   10.27.248.200   <pending>     5000:31380/TCP   9s
-kubernetes   ClusterIP      10.27.240.1     <none>        443/TCP          11m
-# Wait a minute
-> kubectl get svc
-NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
-flask        LoadBalancer   10.27.248.200   35.188.251.150 5000:31380/TCP   46s
-kubernetes   ClusterIP      10.27.240.1     <none>         443/TCP          12m
-```
-
-Now if we go to: `35.188.251.150:5000` you can see the page up.
-
-### Updating your app in real time
-Now that you have your workflow setup. Let us say that you want to update your current version. After updating the files in the directory that houses your code (via git). You will push your production versions to docker with the familiar Docker command above:
-```bash
-# Note the v4 instead of the v3.. showing an updated version
-> docker build -t ifilonenko/flask-template:v4 -f kubernetes/Dockerfile .
-> docker push ifilonenko/flask-template:v4
-```
-With docker updated you now will update the deployment (only the deployment... the service is still running fine) live with the following command:
-```bash
-# This will take you to a vi portal which will
-# allow you to edit the run-deployment.yml file.
-# You simply need to update the version number on the image config and BOOM
-> kubectl edit deployment flask
-...
-```
-
-IT IS THAT EASY!!!
