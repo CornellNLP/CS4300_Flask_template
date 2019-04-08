@@ -1,5 +1,5 @@
 # Read from Ubuntu Base Image
-FROM python:2.7
+FROM python:3.6.8
 RUN mkdir -p /service
 # Copy over all the files of interest
 ADD app /service/app
