@@ -1,4 +1,4 @@
-from . import *
+from . import *  
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import pickle
@@ -14,8 +14,37 @@ tf_transcripts = {}
 word_id_lookup = {}
 tf_idf_transcripts = {}
 name_id_lookup = {}
-output_message = "Hey bitches"
-data = []
+
+
+
+
+@irsystem.route('/', methods=['GET'])
+
+def search():
+	activity = request.args.get('activities')
+	likes = request.args.get('likes')
+	dislikes = request.args.get('dislikes')
+	nearby = request.args.get('nearby')
+	returnTypes = request.args.get('Returntypes')
+	resultsPerPage = request.args.get('Results_per_page')
+	page = request.args.get('page')
+	output_message = "Hey bitches"
+	data = []
+	
+
+	with open ('./data/tf.pickle', 'rb') as f:
+		tf_transcripts = pickle.load(f)
+		for p in tf_transcripts:
+			print (p)
+	with open ('./data/tfidf.pickle', 'rb') as f:
+		tf_idf_transcripts = pickle.load(f)
+	with open ('./data/word_id_lookup.json') as wil_file:
+		word_id_lookup = json.load(wil_file)
+	with open ('./data/name_id_lookup.json') as wil_file:
+		name_id_lookup = json.load(wil_file)
+	with open ('./data/preprocessed_wikivoyage_notext.json') as pwn_file:
+		wikivoyage = json.load(pwn_file)
+		
 
 def tokenize(query):
 	tokenized_query = treebank_tokenizer.tokenize(query.lower())
@@ -40,32 +69,21 @@ def tokenize_listings(listing):
 		results+= x['description']
 	return tokenize(results)
 
-@irsystem.route('/', methods=['GET'])
 
-def search():
-	activity = request.args.get('activities')
-	likes = request.args.get('likes')
-	dislikes = request.args.get('dislikes')
-	nearby = request.args.get('nearby')
-	returnTypes = request.args.get('Returntypes')
-	resultsPerPage = request.args.get('Results_per_page')
-	page = request.args.get('page')
-
-	with open ('./data/tf.pickle', 'rb') as f:
-		tf_transcripts = pickle.load(f)
-	with open ('./data/tfidf.pickle', 'rb') as f:
-		tf_idf_transcripts = pickle.load(f)
-	with open ('./data/word_id_lookup.json') as wil_file:
-		word_id_lookup = json.load(wil_file)
-	with open ('./data/name_id_lookup.json') as wil_file:
-		name_id_lookup = json.load(wil_file)
-	with open ('./data/preprocessed_wikivoyage_notext.json') as pwn_file:
-		wikivoyage = json.load(pwn_file)
+# for p , r in wikivoyage.items():
+# 	id
 
 
+
+
+
+	
 	# if not activity:
-	# 	isActivity =
+	# 	isActivity = 
 	# else:
 	# 	output_message = "Your search: " + query
 	# 	data = range(5)
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+
+
+
