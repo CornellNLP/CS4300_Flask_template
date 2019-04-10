@@ -16,6 +16,7 @@ tf_idf_transcripts = {}
 name_id_lookup = {}
 output_message = "Hey bitches"
 data = []
+msgs = []
 
 def tokenize(query):
 	tokenized_query = treebank_tokenizer.tokenize(query.lower())
@@ -50,6 +51,7 @@ def search():
 	returnTypes = request.args.get('Returntypes')
 	resultsPerPage = request.args.get('Results_per_page')
 	page = request.args.get('page')
+	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
 	with open ('./data/tf.pickle', 'rb') as f:
 		tf_transcripts = pickle.load(f)
@@ -62,10 +64,21 @@ def search():
 	with open ('./data/preprocessed_wikivoyage_notext.json') as pwn_file:
 		wikivoyage = json.load(pwn_file)
 
+for p, r in wikivoyage:
+	tokens = tokenize_listings(r['listings'])
+	msgs.append((p,tokens))
+result = {}
+for i in range(len(msgs)):
+	token_set  = msgs[i][1]
+	for token in token_set:
+		if token in result:
+			result[token].append((msgs[i][0], token_set.count(token)))
+		else: 
+			result[token]  = ((msgs[i][0], token_set.count(token)))
+
 
 	# if not activity:
 	# 	isActivity =
 	# else:
 	# 	output_message = "Your search: " + query
 	# 	data = range(5)
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
