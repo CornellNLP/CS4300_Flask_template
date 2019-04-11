@@ -1,39 +1,122 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <font color=#EA4335>S</font>
-                <font color=#FBBC05>4</font>
-                3
-                <font color=#34A853>0</font>
-                <font color=#EA4335>0</font>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+
+<head>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+    <!-- <div class="topcorner">
+        <p>Project Name: {{ name }}</p>
+        <p>Student Name: ({{ netid }})</p>
+    </div> -->
+
+    <h1 style="font-size: 55px; font-family:Futura; color: #4285F4" class="global-search">
+        Desti-Nation Matcher
+    </h1>
+
+    <form>
+
+        <!-- Activities Input -->
+        <div class=row>
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+                <label for="activitiesInput">Activities</label>
+                <input type="text" class="form-control" id="activitiesInput" 
+                    name="activities" placeholder="Skydiving, Kayaking, Hiking">
+                <small id="activitiesHelp" class="form-text text-muted">
+                    List out activities that you're interested in doing on your trip!
+                </small>
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-    </body>
+            <div class="col-md-4"></div>
+        </div>
+
+        <!-- Nearby Input -->
+        <div class=row>
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+                <label for="nearbyInput">Nearby</label>
+                <input type="text" class="form-control" id="nearbyInput" 
+                    name="nearby" placeholder="Paris">
+                <small id="nearbyHelp" class="form-text text-muted">
+                    In or near what city would you like to travel to?
+                </small>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <!-- Likes and Dislikes Inputs -->
+        <div class=row>
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-2">
+                <label for="likesInput">Likes</label>
+                <input type="text" class="form-control" id="likesInput" 
+                    name="likes" placeholder="Warm Weather, Mountains">
+                <small id="likesHelp" class="form-text text-muted">
+                    What are some things you would like to have in the places you travel to?
+                </small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="dislikesInput">Dislikes</label>
+                <input type="text" class="form-control" id="dislikesInput" 
+                    name="dislikes" placeholder="Mosquitos, Heavy Traffic">
+                <small id="dislikesHelp" class="form-text text-muted">
+                    What are some things you would not like to have in the places you travel to?
+                </small>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <!-- Language and Drinking Age Inputs -->
+        <div class=row>
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-2">
+                <label for="languageInput">Language</label>
+                <input type="text" class="form-control" id="languageInput" 
+                    name="language" placeholder="Spanish">
+                <small id="languageHelp" class="form-text text-muted">
+                    What is the dominant language you would like the local populace to speak?
+                </small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="drinkingAgeInput">Drinking Age</label>
+                <input type="text" class="form-control" id="drinkingAgeInput" 
+                    name="drinkingAge" placeholder="18">
+                <small id="drinkingAgeHelp" class="form-text text-muted">
+                    What would you like the drinking age of the destination to be?
+                </small>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <!-- Submit button -->
+        <div class=row align="center">
+            <button type="submit" class="btn btn-success" align="center">Go!</button>
+        </div>
+
+    </form>
+
+    {% if data %}
+        {% for data_idx in range(10) %}
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2">
+                        <img src="../static/images/caribbean.jpg" class="card-img img-thumbnail">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ data[data_idx] }}</h5>
+                            <p class="card-text">This location is amazing!</p>
+                            <p class="card-text"><small class="text-muted">Location selected because it has: kayaking</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+</body>
 
 </html>
