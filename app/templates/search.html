@@ -2,11 +2,10 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
+        <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Codystar|Glass+Antiqua|Kodchasan|Major+Mono+Display|Megrim|Poiret+One|Raleway+Dots|Sacramento|Srisakdi" rel="stylesheet">    <body>
         <div class="topcorner">
-            <p style="font-size: 15px; font-family:Didot; color: white; position:relative; top:560px; left:-230">Project: {{ name }}</p>
-            <p style="font-size: 15px; font-family:Didot; color: white; position:relative; top:560px; left: -320">Creators: ({{ netid }})</p>
+            <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative; top:560px; left:-180">Project: {{ name }}</p>
+            <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative; top:560px; left: -300">Creators: ({{ netid }})</p>
         </div>
         <style>
         body {
@@ -17,20 +16,20 @@
         }
         </style>
         <form class="form-inline global-search">
-                <h1 style="font-size: 55px; font-family:Didot; color: #f86450; position:relative; top:-80px; left:150">
+                <h1 style="font-size: 70px; font-family: 'Poiret One',cursive; color: #f86450; position:relative; top:-80px; left:150">
                     get starTED
                 </h1>
-                <h2 style="font-size: 22px; font-family:Cursive; color:white; position:relative; top:-30px">
+                <h2 style="font-size: 22px; font-family: 'Srisakdi', cursive; color:white; position:relative; top:-30px">
                         ...One Step Closer to Your Goals
                 </h2>
             <br><br>
             
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="What's Your Goal?">
+                    <input id="input" type="text" name="search" class="form-control" placeholder="What's Your Goal?">
             </div>
-            <button type="submit" class="btn btn-info"> Begin </button>
+            <a href="results.html"><button type="submit" class="btn btn-info"> Begin </button></a>
         </form>
-        <form class="form-inline global-search">
+        <!-- <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}  
@@ -38,7 +37,7 @@
                 <p>{{d}}</p>
             {% endfor %}
         {% endif %}
-        </form>
+        </form> -->
     </body>
 
 </html>
