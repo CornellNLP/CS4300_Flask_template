@@ -1,20 +1,84 @@
-from . import *  
+from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+import pickle
+import json
+from nltk.tokenize import TreebankWordTokenizer
+import string
 
-project_name = "DestiNationMatcher (DNM)"
-net_id = "Bryan Kamau: bkn7"
+project_name = "Ilan's Cool Project Template"
+net_id = "Ilan Filonenko: if56"
+treebank_tokenizer = TreebankWordTokenizer()
+wikivoyage = {}
+tf_transcripts = {}
+word_id_lookup = {}
+tf_idf_transcripts = {}
+name_id_lookup = {}
+output_message = "Hey bitches"
+data = []
+msgs = []
+
+def tokenize(query):
+	tokenized_query = treebank_tokenizer.tokenize(query.lower())
+	tokenized_set = list(set([x for x in tokenized_query if x not in string.puntuation]))
+
+def tokenize_listings(listing):
+	results = ""
+	eat = listing['eat']
+	for x in eat:
+		results+= x['description']
+	sleep = listing['sleep']
+	for x in sleep:
+		results+= x['description']
+	drink = listing['drink']
+	for x in drink:
+		results+= x['description']
+	do = listing['do']
+	for x in do:
+		results+= x['description']
+	see = listing['see']
+	for x in see:
+		results+= x['description']
+	return tokenize(results)
 
 @irsystem.route('/', methods=['GET'])
+
 def search():
-	query = request.args.get('search')
-	if not query:
-		data = []
-		output_message = ''
-	else:
-		output_message = "Your search: " + query
-		data = range(5)
+	activity = request.args.get('activities')
+	likes = request.args.get('likes')
+	dislikes = request.args.get('dislikes')
+	nearby = request.args.get('nearby')
+	returnTypes = request.args.get('Returntypes')
+	resultsPerPage = request.args.get('Results_per_page')
+	page = request.args.get('page')
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
+	with open ('./data/tf.pickle', 'rb') as f:
+		tf_transcripts = pickle.load(f)
+	with open ('./data/tfidf.pickle', 'rb') as f:
+		tf_idf_transcripts = pickle.load(f)
+	with open ('./data/word_id_lookup.json') as wil_file:
+		word_id_lookup = json.load(wil_file)
+	with open ('./data/name_id_lookup.json') as wil_file:
+		name_id_lookup = json.load(wil_file)
+	with open ('./data/preprocessed_wikivoyage_notext.json') as pwn_file:
+		wikivoyage = json.load(pwn_file)
+
+for p, r in wikivoyage:
+	tokens = tokenize_listings(r['listings'])
+	msgs.append((p,tokens))
+result = {}
+for i in range(len(msgs)):
+	token_set  = msgs[i][1]
+	for token in token_set:
+		if token in result:
+			result[token].append((msgs[i][0], token_set.count(token)))
+		else: 
+			result[token]  = ((msgs[i][0], token_set.count(token)))
 
 
+	# if not activity:
+	# 	isActivity =
+	# else:
+	# 	output_message = "Your search: " + query
+	# 	data = range(5)

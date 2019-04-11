@@ -7,3 +7,4 @@ vagrant/site.retry
 vagrant/a4keypair.pem
 name_id_lookup.json
 word_id_lookup.json
+data
