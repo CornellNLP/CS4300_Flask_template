@@ -3,6 +3,7 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.similarity import *
 
+
 project_name = "Get StartTED: TED Talk Recommendation System"
 # net_id = "Andrea Benson ab2393, Caroline Chang cdc222, Nandita Mohan nkm39, Gauri Jain gj82, Michael Rivera mr858"
 net_id = "Andrea Benson, Caroline Chang, Nandita Mohan, Gauri Jain, Michael Rivera"
@@ -16,5 +17,5 @@ def search():
 		return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
 	else:
-		output_message = descrip_search(query)
+		output_message = query
 		return render_template('results.html', output_message=output_message)
