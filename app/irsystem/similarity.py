@@ -5,6 +5,7 @@ import pickle
 import json
 from nltk.tokenize import TreebankWordTokenizer
 import collections
+import math
 
 transcripts = pd.read_csv('ted-talks/transcripts.csv')
 talk_information = pd.read_csv('ted-talks/ted_main.csv')
@@ -30,7 +31,7 @@ def tokenize_transcript(tokenize_method,input_transcript):
     final_lst = []
     for i in (range(0,len(input_transcript))):
         #print(tokenize_method(input_transcript[i]))
-        final_lst = final_lst + set(tokenize_method(input_transcript[i]))
+        final_lst = final_lst + list(set(tokenize_method(input_transcript[i])))
     return final_lst
 
 all_words_total = tokenize_transcript(tokenize,talk_information['description'])
@@ -68,10 +69,10 @@ def compute_inv(tokenize_method,input_transcript,t_idf):
         temp = {}
         for term in trans_df.keys():
             if term in t_idf.keys():
-                if temp.get(word) == None:
-                    temp[word] = 1
+                if temp.get(term) == None:
+                    temp[term] = 1
                 else:
-                    temp[word] += 1
+                    temp[term] += 1
         for k in temp.keys():
             if q.get(k) == None:
                 q[k] = [(i,temp[k])]
@@ -84,7 +85,6 @@ description_inv = compute_inv(tokenize,talk_information['description'],descripti
 transcript_inv = compute_inv(tokenize,transcripts['transcript'],transcript_idf)
 
 def compute_doc_norms(index, idf, n_docs):
-    q = np.zeros(n_docs)
     d = {}
     for k in index.keys():
         for t in index[k]:
@@ -94,20 +94,23 @@ def compute_doc_norms(index, idf, n_docs):
                 else:
                     d[t[0]] += (t[1] * idf[k])**2
     for doc in d.keys():
-        q[doc] = math.sqrt(d[doc])
-    return q
+        d[doc] = math.sqrt(d[doc])
+    return d
 
 description_norms = compute_doc_norms(description_inv, description_idf, len(description_inv))
 transcript_norms = compute_doc_norms(transcript_inv, transcript_idf, len(transcript_inv))
 
-def index_search(query, index, idf, doc_norms, tokenizer=treebank_tokenizer):
+def index_search(query, index, idf, doc_norms, tokenize_method):
     _id = 0
     ret = []
-    while _id < len(doc_norms):
-        ret.append((0,_id))
+    _id_ref = {}
+    temp = list(doc_norms.keys())
+    while _id < len(temp):
+        _id_ref[temp[_id]] = _id
+        ret.append((0,temp[_id]))
         _id += 1
         
-    q = tokenizer.tokenize(query.lower())
+    q = tokenize_method(query.lower())
     q_comp = {}
     for w in q:
         if q_comp.get(w) == None:
@@ -123,12 +126,11 @@ def index_search(query, index, idf, doc_norms, tokenizer=treebank_tokenizer):
     for w in q:
         if idf.get(w) != None:
             for ent in index[w]:
-                ret[ent[0]] = (ret[ent[0]][0] + q_comp.get(w) * idf.get(w) * ent[1] * idf.get(w), ret[ent[0]][1])
+                ret[_id_ref[ent[0]]] = (ret[_id_ref[ent[0]]][0] + q_comp.get(w) * idf.get(w) * ent[1] * idf.get(w), ret[_id_ref[ent[0]]][1])
     _id = 0
-    d_norms = doc_norms.tolist()
-    while _id < len(doc_norms):
-        if q_norm * d_norms[_id] != 0:
-            ret[_id] = (ret[_id][0] / (q_norm * d_norms[_id]), ret[_id][1])
+    while _id < len(temp):
+        if q_norm * doc_norms[temp[_id]] != 0:
+            ret[_id] = (ret[_id][0] / (q_norm * doc_norms[temp[_id]]), ret[_id][1])
         _id += 1
         
     ret = sorted(ret,reverse=True)
@@ -136,7 +138,7 @@ def index_search(query, index, idf, doc_norms, tokenizer=treebank_tokenizer):
 
 
 def descrip_search(query):
-    return index_search(query, description_idx, description_idf, description_norms)
+    return index_search(query, description_inv, description_idf, description_norms,tokenize)
 
 def trans_search(query):
-    return index_search(query, transcript_idx, transcript_idf, transcript_norms)
+    return index_search(query, transcript_inv, transcript_idf, transcript_norms,tokenize)
