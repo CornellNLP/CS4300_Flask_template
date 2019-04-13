@@ -133,3 +133,10 @@ def index_search(query, index, idf, doc_norms, tokenizer=treebank_tokenizer):
         
     ret = sorted(ret,reverse=True)
     return ret
+
+
+def descrip_search(query):
+    return index_search(query, description_idx, description_idf, description_norms)
+
+def trans_search(query):
+    return index_search(query, transcript_idx, transcript_idf, transcript_norms)
