@@ -16,5 +16,5 @@ def search():
 		return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
 
 	else:
-		output_message = descrip_search(query)
+		output_message = query
 		return render_template('results.html', output_message=output_message)

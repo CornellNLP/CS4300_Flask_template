@@ -15,7 +15,7 @@
   article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
     display: block;
   }
-  
+
   audio,canvas,progress,video {
     display: inline-block;
     vertical-align: baseline;
@@ -3384,14 +3384,46 @@
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
   }
-  
-  .dropdown {
-    position: relative;
-  }
-  
+
   .dropdown-toggle:focus {
     outline: 0;
   }
+
+  .dropbtn {
+    background-color: rgb(205, 207, 206);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(248, 245, 245);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #f89187;}
   
   .dropdown-menu {
     position: absolute;

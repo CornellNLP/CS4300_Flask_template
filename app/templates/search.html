@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Codystar|Glass+Antiqua|Kodchasan|Major+Mono+Display|Megrim|Poiret+One|Raleway+Dots|Sacramento|Srisakdi" rel="stylesheet">    <body>
         <div class="topcorner">
             <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative; top:560px; left:-180">Project: {{ name }}</p>
@@ -14,14 +15,55 @@
             background-color: rgb(24, 23, 23);
             background-repeat: no-repeat;
         }
+
+        .dropbtn {
+            background-color: rgb(230, 210, 99);
+            color: rgb(63, 61, 61);
+            padding: 10px;
+            font-size: 16px;
+            font-family: Didot;
+            min-width: 160px;
+            height: 40px;
+            border: none;
+            }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+        .dropdown-content a {
+            color: black;
+            font-size: 12px;
+            font-family: Megrim;
+            font-weight: bold;
+            padding: 9px 12px;
+            text-decoration: none;
+            display: block;
+            }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #fc8181;}
         </style>
         <form class="form-inline global-search">
-                <h1 style="font-size: 70px; font-family: 'Poiret One',cursive; color: #f86450; position:relative; top:-80px; left:150">
-                    get starTED
-                </h1>
-                <h2 style="font-size: 22px; font-family: 'Srisakdi', cursive; color:white; position:relative; top:-30px">
-                        ...One Step Closer to Your Goals
-                </h2>
+            <h1 style="font-size: 70px; font-family: 'Poiret One',cursive; color: #f86450; position:relative; top:-80px; left:150">
+                get starTED
+            </h1>
+            <h2 style="font-size: 22px; font-family: 'Srisakdi', cursive; color:white; position:relative; top:-30px">
+                    ...One Step Closer to Your Goals
+            </h2>
             <br><br>
             
             <div class="form-group">
@@ -29,6 +71,19 @@
             </div>
             <a href="results.html"><button type="submit" class="btn btn-info"> Begin </button></a>
         </form>
+        <div style="text-align:center">
+        <div class="dropdown">
+          <button class="dropbtn">Select Category</button>
+          <div class="dropdown-content">
+            <a href="#">Health</a>
+            <a href="#">Sports</a>
+            <a href="#">Education</a>
+            <a href="#">Technology</a>
+            <a href="#">Entertainment</a>
+            <a href="#">Politics</a>
+            <a href="#">Religion and Culture</a>
+          </div>
+        </div>
         <!-- <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
