@@ -6,8 +6,20 @@
     <body>
         <div class="topcorner">
             <li><a href="?search.html" class="btn btn-info"> Back to Search </a></li>
-            <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative; top:560px; left:-180">Prompt: {{ prompt }}</p>
         </div>
+	<form class="form-inline global-search">
+        {% if data %}
+            <h1>Showing Results for: {{output_message}}</h1>
+            {% for d in data %}  
+                <br>
+	        <br>
+		{% for f in d %}
+                    <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative;text-align:left;">{{f}}</p>
+	            <br>
+	        {% endfor %}
+            {% endfor %}
+        {% endif %}
+        </form>
         <style>
         body {
             background-position: 50% 50%;

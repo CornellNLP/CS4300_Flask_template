@@ -37,11 +37,11 @@ def tokenize_transcript(tokenize_method,input_transcript):
 all_words_total = tokenize_transcript(tokenize,talk_information['description'])
 
 description_word_dict = (collections.Counter(all_words_total))
-good_types_descriptions = {k:v for (k,v) in description_word_dict.items() if (v != 1)}
+good_types_descriptions = {k:v for (k,v) in description_word_dict.items() if (v != 0)}
 
 all_words_total_transcripts = tokenize_transcript(tokenize, transcripts['transcript'])
 transcript_word_dict = (collections.Counter(all_words_total_transcripts))
-good_types_transcripts = {k:v for (k,v) in transcript_word_dict.items() if (v!=1)}
+good_types_transcripts = {k:v for (k,v) in transcript_word_dict.items() if (v!=0)}
 
 def compute_idf(doc_freq, n_docs, min_df=1, max_df_ratio=0.95):
     """Returns a dictionary of IDFs for each word
@@ -124,7 +124,7 @@ def index_search(query, index, idf, doc_norms, tokenize_method):
     q_norm = math.sqrt(q_norm)
     
     for w in q:
-        if idf.get(w) != None:
+        if idf.get(w) != None and index.get(w) != None:
             for ent in index[w]:
                 ret[_id_ref[ent[0]]] = (ret[_id_ref[ent[0]]][0] + q_comp.get(w) * idf.get(w) * ent[1] * idf.get(w), ret[_id_ref[ent[0]]][1])
     _id = 0
@@ -138,7 +138,13 @@ def index_search(query, index, idf, doc_norms, tokenize_method):
 
 
 def descrip_search(query):
-    return index_search(query, description_inv, description_idf, description_norms,tokenize)
+    #print("Search: "+ query)
+    r = index_search(query, description_inv, description_idf, description_norms,tokenize)
+    ret = []
+    for score, msg_id in r[:10]:
+        ret.append([score, talk_information['title'][msg_id], talk_information['description'][msg_id]])
+    return ret
 
 def trans_search(query):
-    return index_search(query, transcript_inv, transcript_idf, transcript_norms,tokenize)
+    r = index_search(query, transcript_inv, transcript_idf, transcript_norms,tokenize)
+    

@@ -28,8 +28,8 @@ def search():
 	else:
 		output_message = query
 		prompt1 = process_single_prompt(request.url)
-		s = descrip_search(output_message)
+		data = descrip_search(prompt1)
 		# print("here is the output message ! : ")
-		# print(output_message)
-		print(s)
-		return render_template('results.html', output_message=output_message, prompt=prompt1)
+		#print("Input: "+ output_message)
+		#print(data)
+		return render_template('results.html', output_message=output_message, data=data)
