@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import pickle
 import json
-from nltk.tokenize import TreebankWordTokenizer
 import collections
 import math
 
