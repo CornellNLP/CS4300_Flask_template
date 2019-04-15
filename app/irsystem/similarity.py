@@ -6,8 +6,8 @@ import json
 import collections
 import math
 
-transcripts = pd.read_csv('ted-talks/transcripts.csv')
-talk_information = pd.read_csv('ted-talks/ted_main.csv')
+transcripts = pd.read_csv('transcripts.csv')
+talk_information = pd.read_csv('ted_main.csv')
 
 def tokenize(text):
     """Returns a list of words that make up the text.
