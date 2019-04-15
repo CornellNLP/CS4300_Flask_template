@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cd "{{ repository_path }}"
+
+exec gunicorn app:app \
+    --bind=unix:/tmp/cs.sock \
+    --workers 3 \
+    --user=root \
+    --log-level=debug \
+    -e DATABASE_URL=postgresql://localhost/my_app_db \
+    -e APP_SETTINGS=config.ProductionConfig
