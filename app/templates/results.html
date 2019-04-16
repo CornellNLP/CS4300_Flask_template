@@ -2,21 +2,51 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Codystar|Glass+Antiqua|Kodchasan|Major+Mono+Display|Megrim|Poiret+One|Raleway+Dots|Sacramento|Srisakdi" rel="stylesheet"><body>                
     </head>
+    <style>
+        .text-vid {
+            height: relative;
+            scroll-behavior: auto; 
+            align-content: center;
+            background-color: white;
+        }
+        .video {
+            margin: 0 auto;
+	        border: 10px outset #ddd;
+            align-content: center;
+        }
+        .video-box {
+            width:420px;
+            height:315px;
+            align-content: center;
+        }
+    </style>
     <body>
         <div class="topcorner">
             <li><a href="?search.html" class="btn btn-info"> Back to Search </a></li>
         </div>
 	<form class="form-inline global-search">
         {% if data %}
-            <h1>Showing Results for: {{output_message}}</h1>
+            <h1 style="font-family:Codystar; color:rgb(245, 115, 110);">Showing Results for: {{output_message}}</h1>
             {% for d in data %}  
                 <br>
-	        <br>
-		{% for f in d %}
-                    <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative;text-align:left;">{{f}}</p>
-	            <br>
-	        {% endfor %}
+            <br>
+        <div class="text-vid">
+            <div class="video-box" style:"text-align:center">
+                <!-- <p style="font-size: 17px; font-family: 'Poiret One',cursive; color: white; position:relative;text-align:left;">{{video_url}}</p> -->
+                <iframe class="video"
+                src={{video_url}}
+                width="420" height="315"
+                frameborder="0" scrolling="no"></iframe><br><br>
+                {% for f in d %}
+                <p style="font-size: 18px; font-family: 'Poiret One'; color: rgb(3, 3, 3); position:relative;text-align:left;">{{f}}</p>
+                <br>
+                {% endfor %}
+            </div> <br><br>
+        
+        </div>
+	        
             {% endfor %}
         {% endif %}
         </form>

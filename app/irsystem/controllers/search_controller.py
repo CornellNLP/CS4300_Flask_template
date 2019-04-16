@@ -28,8 +28,9 @@ def search():
 	else:
 		output_message = query
 		prompt1 = process_single_prompt(request.url)
+		video_url= "https://embed.ted.com/talks/colin_powell_kids_need_structure"
 		data = descrip_search(prompt1)
 		# print("here is the output message ! : ")
 		#print("Input: "+ output_message)
 		#print(data)
-		return render_template('results.html', output_message=output_message, data=data)
+		return render_template('results.html', output_message=output_message, data=data, video_url=video_url)
