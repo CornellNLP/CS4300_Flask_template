@@ -3,12 +3,11 @@ import numpy as np
 import pandas as pd
 import pickle
 import json
-from nltk.tokenize import TreebankWordTokenizer
 import collections
 import math
 
-transcripts = pd.read_csv('ted-talks/transcripts.csv')
-talk_information = pd.read_csv('ted-talks/ted_main.csv')
+transcripts = pd.read_csv('transcripts.csv')
+talk_information = pd.read_csv('ted_main.csv')
 
 def tokenize(text):
     """Returns a list of words that make up the text.
@@ -34,71 +33,14 @@ def tokenize_transcript(tokenize_method,input_transcript):
         final_lst = final_lst + list(set(tokenize_method(input_transcript[i])))
     return final_lst
 
-all_words_total = tokenize_transcript(tokenize,talk_information['description'])
+description_idf = pickle.load(open("description_idf.pkl", "rb"))
+transcript_idf = pickle.load(open("transcript_idf.pkl", "rb"))
 
-description_word_dict = (collections.Counter(all_words_total))
-good_types_descriptions = {k:v for (k,v) in description_word_dict.items() if (v != 0)}
+description_inv = pickle.load(open("description_inv.pkl", "rb"))
+transcript_inv = pickle.load(open("transcript_inv.pkl", "rb"))
 
-all_words_total_transcripts = tokenize_transcript(tokenize, transcripts['transcript'])
-transcript_word_dict = (collections.Counter(all_words_total_transcripts))
-good_types_transcripts = {k:v for (k,v) in transcript_word_dict.items() if (v!=0)}
-
-def compute_idf(doc_freq, n_docs, min_df=1, max_df_ratio=0.95):
-    """Returns a dictionary of IDFs for each word
-    Params: {doc_freq: Dictionary,
-             n_docs: Int}
-    Returns: Dictionary
-    """
-    q = {}
-    temp = 0
-    for term in doc_freq.keys():
-        temp = doc_freq[term]
-        if temp >= min_df and temp <= n_docs * max_df_ratio:
-            q[term] = math.log(n_docs/(1+temp),2)
-    return q
-
-description_idf = compute_idf(good_types_descriptions,len(good_types_descriptions.keys()))
-transcript_idf = compute_idf(good_types_transcripts,len(good_types_transcripts.keys()))
-
-def compute_inv(tokenize_method,input_transcript,t_idf):
-    q = {}
-    for i in (range(0,len(input_transcript))):
-        final_lst = tokenize_method(input_transcript[i])
-        df_temp = (collections.Counter(final_lst))
-        trans_df = {k:v for (k,v) in df_temp.items() if (v != 1)}
-        temp = {}
-        for term in trans_df.keys():
-            if term in t_idf.keys():
-                if temp.get(term) == None:
-                    temp[term] = 1
-                else:
-                    temp[term] += 1
-        for k in temp.keys():
-            if q.get(k) == None:
-                q[k] = [(i,temp[k])]
-            else:
-                q[k].append((i,temp[k]))
-    return q
-
-
-description_inv = compute_inv(tokenize,talk_information['description'],description_idf)
-transcript_inv = compute_inv(tokenize,transcripts['transcript'],transcript_idf)
-
-def compute_doc_norms(index, idf, n_docs):
-    d = {}
-    for k in index.keys():
-        for t in index[k]:
-            if idf.get(k) != None:
-                if d.get(t[0]) == None:
-                    d[t[0]] = (t[1] * idf[k])**2
-                else:
-                    d[t[0]] += (t[1] * idf[k])**2
-    for doc in d.keys():
-        d[doc] = math.sqrt(d[doc])
-    return d
-
-description_norms = compute_doc_norms(description_inv, description_idf, len(description_inv))
-transcript_norms = compute_doc_norms(transcript_inv, transcript_idf, len(transcript_inv))
+description_norms = pickle.load(open("description_norms.pkl", "rb"))
+transcript_norms = pickle.load(open("transcript_norms.pkl", "rb"))
 
 def index_search(query, index, idf, doc_norms, tokenize_method):
     _id = 0
