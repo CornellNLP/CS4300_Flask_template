@@ -36,10 +36,10 @@ def tokenize_transcript(tokenize_method,input_transcript):
 description_idf = pickle.load(open("description_idf.pkl", "rb"))
 transcript_idf = pickle.load(open("transcript_idf.pkl", "rb"))
 
-description_inv = pickle.load(open("description_idf.pkl", "rb"))
+description_inv = pickle.load(open("description_inv.pkl", "rb"))
 transcript_inv = pickle.load(open("transcript_inv.pkl", "rb"))
 
-description_norms = pickle.load(open("description_idf.pkl", "rb"))
+description_norms = pickle.load(open("description_norms.pkl", "rb"))
 transcript_norms = pickle.load(open("transcript_norms.pkl", "rb"))
 
 def index_search(query, index, idf, doc_norms, tokenize_method):
