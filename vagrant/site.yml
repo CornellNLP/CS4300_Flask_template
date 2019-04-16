@@ -82,3 +82,5 @@
   handlers:
     - name: restart nginx
       service: name=nginx state=restarted
+    - name: restart application
+      systemd: name=flask-project state=restarted
