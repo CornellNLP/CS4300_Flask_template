@@ -68,7 +68,7 @@
       become: yes
       postgresql_privs: db={{dbname}} role=PUBLIC type=database priv=ALL state=absent login_user=postgres
     - name: Make sure our server is running
-      systemd: name=flask-project state=started
+      systemd: name=flask-project enabled=yes state=started
     - name: Copy Nginx site values
       template: src=cs.nginx.j2 dest=/etc/nginx/sites-enabled/cs
       notify:
