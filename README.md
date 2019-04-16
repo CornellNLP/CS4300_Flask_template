@@ -849,7 +849,7 @@ Let's deploy this AWS now!
 
 First step is to launch an EC2 instance (on the Oregon Availability Zone)
 
-This EC2 instance should be using `Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-7c22b41c` as an AMI.
+This EC2 instance should be using `Ubuntu Server 18.04 LTS (HVM), SSD Volume Type` as an AMI.
 This AMI will be the same type of OS that we used for our VM.
 
 I would recommend that you choose the `t2.micro`, which is a small, free tier-eligible instance type.
@@ -870,7 +870,7 @@ Ensure, that your vagrant folder looks like this:
 
 ```bash
 $ ls
-Vagrantfile     a4keypair.pem   ansible.cfg     cs.nginx.j2     hosts           site.yml        upstart.conf.j2
+Vagrantfile     a4keypair.pem   ansible.cfg     cs.nginx.j2     hosts           site.yml        start.sh.j2       systemd.service.j2
 $ chmod 700 a4keypair.pem
 ```
 
@@ -879,7 +879,7 @@ and putting that into the hosts file. So the hosts file should look like this, w
 
 ```yml
 [webservers]
- <YOUR_PUBLIC_IP> ansible_ssh_user=ubuntu
+ <YOUR_PUBLIC_IP> ansible_ssh_user=ubuntu ansible_python_interpreter=/usr/bin/python3
 ```
 
 Insure that you had the the private key by running `ssh-keygen`:
