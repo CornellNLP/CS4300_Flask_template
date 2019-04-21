@@ -5,7 +5,7 @@
   remote_user: root
   become: true
   become_method: sudo
-  environment: 
+  environment:
     LC_ALL: en_US.UTF-8
     LANG: en_US.UTF-8
     LANGUAGE: en_US.UTF-8
@@ -17,22 +17,21 @@
       dbpassword: password
   tasks:
     - name: Install necessary packages
-      apt: update_cache=yes name={{ item }} state=present
-      with_items:
-        - libatlas-base-dev 
-        - gfortran 
+      apt: update_cache=yes name={{ packages }} state=present
+      vars:
+        packages:
+        - libatlas-base-dev
+        - gfortran
         - g++
         - build-essential
-        - libssl-dev 
-        - libffi-dev 
-        - python-dev
+        - libssl-dev
+        - libffi-dev
         - postgresql
         - libpq-dev
         - git
-        - python-pip
+        - python3-dev
+        - python3-pip
         - nginx
-        - python-numpy
-        - python-scipy
     - name: Run echo
       command: echo $APP_SETTINGS; echo $DATABASE_URL
     - name: Check if directory exists
@@ -45,11 +44,13 @@
       git: repo='{{ repository_url }}' dest='{{ repository_path }}'
       when: cloned.stat.exists == false
     - name: Install appdev
-      command: pip install git+https://github.com/cuappdev/appdev.py.git --upgrade
+      pip: executable=pip3 name=git+https://github.com/cuappdev/appdev.py.git state=forcereinstall
     - name: Install pip requirements
-      pip: requirements='{{ repository_path }}/requirements.txt'
-    - name: Copy Upstart configuration
-      template: src=upstart.conf.j2 dest=/etc/init/upstart.conf
+      pip: executable=pip3 requirements='{{ repository_path }}/requirements.txt'
+    - name: Copy systemd start script
+      template: src=start.sh.j2 dest='{{ repository_path }}/start.sh' mode=a+x
+    - name: Copy systemd configuration
+      template: src=systemd.service.j2 dest=/etc/systemd/system/flask-project.service
     - name: ensure database is created
       become_user: postgres
       become: yes
@@ -67,7 +68,7 @@
       become: yes
       postgresql_privs: db={{dbname}} role=PUBLIC type=database priv=ALL state=absent login_user=postgres
     - name: Make sure our server is running
-      service: name=upstart state=started
+      systemd: name=flask-project enabled=yes state=started
     - name: Copy Nginx site values
       template: src=cs.nginx.j2 dest=/etc/nginx/sites-enabled/cs
       notify:
@@ -81,3 +82,5 @@
   handlers:
     - name: restart nginx
       service: name=nginx state=restarted
+    - name: restart application
+      systemd: name=flask-project state=restarted

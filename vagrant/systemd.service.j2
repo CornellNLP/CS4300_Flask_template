@@ -1,0 +1,16 @@
+[Unit]
+Description=flask-project
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+
+[Service]
+User=root
+Group=nogroup
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=5s
+ExecStart={{ repository_path }}/start.sh
+
+[Install]
+WantedBy=multi-user.target
