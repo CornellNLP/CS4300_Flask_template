@@ -3,7 +3,7 @@ This Flask app template is intended to get you started with your project and lau
 
 **We recommend you start with the quick start guide FIRST and then read the Flask Template Walk-through section.** Some may find the additional information about AWS and KUBERNETES deployment to be useful, but those are not vital to getting your project working.
 
-If you have any questions dont hesistate to ask the TAs or come to OH. In this README I will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons addcoming soon. This README was originally written by Ilan Filonenko with help from Joseph Antonakakis.
+If you have any questions, do not hesitate to ask the TAs or come to OH. In this README, we will include an overview section with information on the flask app architecture and a step-by-step guide to loading up your app in dev and production (in Heroku) with instructions for (optional) EC2/EB add-ons coming soon. This README was originally written by Ilan Filonenko with help from Joseph Antonakakis.
 
 ## Table of Contents
 ### [Quick Start Guide](#quickstart-guide)
@@ -30,7 +30,7 @@ source venv/bin/activate
 # Install all requirements
 pip install -r requirements.txt
 ```
-An aside note: In the above example, we created a virtualenv for a python3 environment. For most of you, you will have python3.5.2 installed by default as we've used that version for assignments. Heroku uses python 3.6.8 for their python runtime. I don't *anticipate* there being issues if you're using python 3.5.2 for development, but if you want to be consistent with heroku, use 3.6.8.
+An aside note: In the above example, we created a virtualenv for a python3 environment. For most of you, you will have python3.7.6 installed by default as we've used that version for assignments. 
 
 If you wish to add any dependencies for future development just do this:
 
@@ -40,7 +40,10 @@ pip freeze > requirements.txt
 ```
 ### 3. Ensuring environment variables are present 
 
-We will be using environment variables to manage configurations for our application. This is a good practice to hide settings you want to keep out of your public code like passwords or machine-specific configurations. We will maintain all of our environment variables in a file, and we will populate our environment with these settings before running the app. We have provided you with starter environment files but remember to add them to your `.gitignore` if you add sensitive information to them.
+We will be using environment variables to manage configurations for our application. 
+This is a good practice to hide settings you want to keep out of your public code like passwords or machine-specific configurations. 
+We will maintain all of our environment variables in a file, and we will populate our environment with these settings before running the app. 
+We have provided you with starter environment files but remember to add them to your `.gitignore` if you add sensitive information to them.
 
 #### Unix - MacOSx, Linux, Git Bash on Windows
 - Your environment variables are stored in a file called `.env`
@@ -145,7 +148,7 @@ You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your
 You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
 
 ## Where to go from here?
-At some point you will need to fork this repo and name your repo cs4300sp2019-##### with your netids substituting the #####.
+At some point you will need to fork this repo and name your repo cs4300sp2020-##### with your netids substituting the #####.
 
 To begin customizing this boilerplate webapp to actually do something interesting with your search queries, you should look at modifying the `app/irsystem/controllers/search_controller.py` file where you can see the params we are passing into the rendered view.
 
@@ -657,7 +660,7 @@ because it allows you to setup your app in one environment, your container, then
 is configured using a Dockerfile, such as the one below (taken from `/kubernetes`):
 ```
 # Read from Ubuntu Base Image
-FROM python:3.6.8
+FROM python:3.7.6
 RUN mkdir -p /service
 # Copy over all the files of interest
 ADD app /service/app
