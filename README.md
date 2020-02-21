@@ -30,9 +30,12 @@ source venv/bin/activate
 # Install all requirements
 pip install -r requirements.txt
 ```
-An aside note: In the above example, we created a virtualenv for a python3 environment. For most of you, you will have python3.7.6 installed by default as we've used that version for assignments. 
+An aside note: In the above example, we created a virtualenv for a python3 environment. For most of you, you will have python3.7.6 installed by default as we have used that version for assignments. 
 
-If you wish to add any dependencies for future development just do this:
+**NOTE: While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly. 
+This will be important when you add new dependencies.**
+
+To add any dependencies for future development just do this:
 
 ``` bash
 pip install <MODULE_NAME>
@@ -51,7 +54,7 @@ We have provided you with starter environment files but remember to add them to 
 ``` bash
 source .env
 ```
-- To add a variable to your file, use the syntax:
+- To add a variable to your file, add a line to `.env` with the syntax:
 ``` cmd
 export MY_VARIABLE=SOME_VALUE
 ```
@@ -62,18 +65,18 @@ export MY_VARIABLE=SOME_VALUE
 ``` cmd
 call env.bat
 ```
-- To add a variable to your file, use the syntax:
+- To add a variable to your file, add a line to `env.bat` with the syntax:
 ``` cmd
 SET MY_VARIABLE=SOME_VALUE
 ```
 
 #### autoenv (Optional: Unix only)
-If you desire, you can set up a tool called `autoenv` (Will only work with Unix systems or Windows Git Bash) so that everytime you enter the directory all enviroment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above.
+If you desire, you can set up a tool called `autoenv` (Will only work with Unix systems or Windows Git Bash) so that every time you enter the directory, all environment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above.
 **NOTE: This utility is not critical to the project, it's just nice to have.**
 To set up `autoenv`:
 
 ``` bash
-# Override cd by adding this to your .?rc file (? = bash, zsh, fish, etc),
+# Override cd by adding this to your .[?]rc file ([?] = bash, zsh, fish, etc),
 # according to your current CLI. I'll use bash in this example:
 echo "source `which activate.sh`" >> ~/.bashrc
 
@@ -85,7 +88,7 @@ source ~/.bashrc
 # else create a new file with those variables
 cat .env
 
-# This command should produce something non-empty if your autoenv is correctly configured
+# This command should produce something non-empty (specifically: config.DevelopmentConfig) if your autoenv is correctly configured
 echo $APP_SETTINGS
 
 # Reactivate the environment because you just reloaded the shell
@@ -93,8 +96,8 @@ source venv/bin/activate
 ```
 If you are having issues getting autoenv working (echo $APP_SETTINGS returns empty), try running `source .env` from the root directory of your forked repository. This will *manually* set the environment variables. You will have to do this each each time you reopen the terminal.
 
-### 4. Setting up Postgres Backend (if interested in Postgres)
-First, either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [here](https://wiki.postgresql.org/wiki/Detailed_installation_guides) if you wish to install it manually on your Mac or Windows. Then run the following code after Postgres server is up: **NOTE:** you may find the need to "initialize" a new database through the Postgres App or through the `initdb` command before you're able to proceed with the above commands.
+### 4. Optional: Setting up Postgres Backend (if interested in Postgres)
+You may either install the PostgresApp if you are using a Mac [here](https://postgresapp.com/) or [follow the detailed installation guide](https://wiki.postgresql.org/wiki/Detailed_installation_guides) to install it **manually** on your Mac or Windows. Then run the following code after Postgres server is up: **NOTE:** you may find the need to "initialize" a new database through the Postgres App or through the `initdb` command before you are able to proceed with the following commands.
 ``` bash
 # Enter postgres command line interface
 $ psql
@@ -107,22 +110,28 @@ The above creates the actual database that will be used for this application and
 
 ### 5. Check to see if app runs fine by running in localhost:
 ``` bash
-python app.py
+python3 app.py
 ```
+
+If you encounter a `KeyError: 'APP_SETTINGS'`, try running `source .env` (Mac) or `call env.bat` (Windows) again.
 At this point the app should be running on [http://localhost:5000/](http://localhost:5000/). Navigate to that URL in your browser.
 
 ### 6. Push to heroku
-I have included the Procfile which leverages gunicorn which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn) for deployment.
+We have included a Procfile (*process file*) that leverages gunicorn (which you can read more about [here](https://devcenter.heroku.com/articles/python-gunicorn)) for deployment.
 
-To setup heroku and push this app to there you will run the following:
-First you must install the heroku-cli; the installation instructions can be found [here](https://devcenter.heroku.com/articles/heroku-cli) and create an account with heroku. After, you can run the following commands to push to your heroku app into deployment using git from your command line!
+To set up heroku and push this app to it, you must do the following:
+
+1. Install the heroku-cli following the installation instructions found [here](https://devcenter.heroku.com/articles/heroku-cli) and create an account with heroku. 
+After that, run the following commands to push to your heroku app into deployment using git from your command line!
 
 ``` bash
+# Update heroku-cli to its latest version
+$ heroku update
+
 # Login with your heroku credentials
 $ heroku auth:login
 Enter your Heroku credentials:
-Email: <YOUR EMAIL>
-Password: <YOUR PASSWORD>
+# You will be directed to a browser login page
 
 # This create logic might be deprecated so
 # navigate to Heroku Dashboard and create app manually
