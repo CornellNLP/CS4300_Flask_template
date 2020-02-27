@@ -2,7 +2,8 @@
 from flask import jsonify
 import base64
 import json
-import numpy as np 
+import numpy as np
+
 def http_json(result, bool):
 	result.update({ "success": bool })
 	return jsonify(result)
