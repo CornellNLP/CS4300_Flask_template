@@ -30,10 +30,12 @@ source venv/bin/activate
 # Install all requirements
 pip install -r requirements.txt
 ```
+(For Mac users, you may encounter an `ERROR: Failed building wheel for greenlet`. This can be fixed with `xcode-select --install`.)
+
 An aside note: In the above example, we created a virtualenv for a python3 environment. You will have python3.7.6 installed by default as we have used that version for assignments. This is what we will use for the application as well.
 
-**NOTE: While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly. 
-This will be important when you add new dependencies.**
+**NOTE:** While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly. 
+This will be important when you add new dependencies.
 
 To add any dependencies for future development just do this:
 
@@ -70,8 +72,8 @@ call env.bat
 SET MY_VARIABLE=SOME_VALUE
 ```
 
-#### autoenv (Optional: Unix only)
-If you desire, you can set up a tool called `autoenv` (Will only work with Unix systems or Windows Git Bash) so that every time you enter the directory, all environment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above.
+#### autoenv (Optional: Unix systems or Windows Git Bash only)
+If you desire, you can set up a tool called `autoenv` so that every time you enter the directory, all environment variables are set immediately. This is handy for hiding configurations that you want to keep out of your public code, like passwords for example. `autoenv` is already installed with the requirements you installed above.
 **NOTE: This utility is not critical to the project, it's just nice to have.**
 To set up `autoenv`:
 
@@ -142,13 +144,15 @@ $ heroku create <YOUR_WEBSITE_NAME>
 $ git push heroku master
 ```
 
-Before being able to interact with this application you will go to your Heroku dashboard and find your app.
-This will probably be here: `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>`.
-On that page you will need to modify your environment variables (remember your .env??) by navigating to
-`https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in left box below DATABASE_URL write:
+2. Now, go to your Heroku dashboard and find your app. This will probably be here: `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>`.
+
+3. You need to modify your environment variables (remember your .env?) by navigating to
+`https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in the left box below DATABASE_URL write:
 `APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI. You can also do this from the heroku-cli using the `heroku config:edit` command.
 
-You lastly will run:
+![](img/app_settings_img.png)
+
+4. You lastly will run:
 ``` bash
 heroku ps:scale web=1
 ```
