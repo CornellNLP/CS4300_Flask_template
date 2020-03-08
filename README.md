@@ -25,7 +25,7 @@ We assume by now all of you have seen and used virtualenv, but if not, go [here]
 # Create a new python3 virtualenv named venv.
 virtualenv -p python3 venv
 # Activate the environment
-source venv/bin/activate
+source venv/bin/activate # (or the equivalent in Windows)
 
 # Install all requirements
 pip install -r requirements.txt
@@ -148,14 +148,13 @@ $ git push heroku master
 
 3. You need to modify your environment variables (remember your .env?) by navigating to
 `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in the left box below DATABASE_URL write:
-`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI. You can also do this from the heroku-cli using the `heroku config:edit` command.
+`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. 
+
+(In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI. You can also do this from the heroku-cli using the `heroku config:edit` command.)
 
 ![](img/app_settings_img.png)
 
-4. You lastly will run:
-``` bash
-heroku ps:scale web=1
-```
+4. You lastly will run: `heroku ps:scale web=1`. 
 You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. Hooray!
 
 You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
