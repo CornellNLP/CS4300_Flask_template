@@ -1,0 +1,150 @@
+<html><body>
+<head>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<p id="hist_1" align="center" style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+  <br>Histogram of Reddit Jokes Scores<br>
+  <script>
+    var rdjokeData;
+    let jokes = d3.select("p#hist_1");
+    d3.json("joke_dataset/json/reddit_jokes_raw.json").then(function(rdjokeData) {
+      console.log(rdjokeData);
+      let svg = jokes.append("svg").attr("width",1150).attr("height",500);
+      let padding = { top: 0, right: 0, bottom: 50, left: 60 };
+      const width = svg.attr("width");
+      const height = svg.attr("height");
+      const chartWidth = width - padding.left;
+      const chartHeight = height - padding.bottom;
+
+      const minScore = d3.min(rdjokeData, d => d["score"]); //28113
+      const maxScore = d3.max(rdjokeData, d => d["score"]); //136362
+
+      //xAxis
+      let xScale = d3.scaleLinear().domain([20000, 140000]).range([padding.left, chartWidth]);
+      let bottomAxis = d3.axisBottom(xScale).ticks(20);
+      svg.append("g")
+         .attr("class", "x axis")
+         .attr("transform", "translate("+0+","+(chartHeight+10)+")")
+         .call(bottomAxis);
+
+      //xAxis label
+      svg.append("text")
+         .attr("transform","translate(" + (chartWidth/2 + padding.left) + " ," + (chartHeight + 50) + ")")
+         .style("text-anchor", "middle")
+         .attr("font-size", "12px")
+         .text("Joke Scores");
+
+      //Setting parameters
+      let histogram = d3.histogram()
+        .value(function(d) { return d["score"]; })
+        .domain(xScale.domain())
+        .thresholds(xScale.ticks(20)); // numbers of bins
+
+      let bins = histogram(rdjokeData);
+
+      //yAxis
+      let yScale = d3.scaleLinear().domain([0, d3.max(bins, function(d) { return d.length; })]).range([chartHeight,padding.bottom]);
+      let leftAxis = d3.axisLeft(yScale).ticks(10);
+      svg.append("g")
+         .attr("class", "y axis")
+         .attr("transform","translate("+(padding.left-10)+","+padding.top+")")
+         .call(leftAxis);
+
+      //yAxis label
+      svg.append("text")
+         .attr("transform", "rotate(-90)")
+         .attr("y", -3)
+         .attr("x",0 - (chartHeight/2 + 15))
+         .attr("dy", "1em")
+         .style("text-anchor", "middle")
+         .attr("font-size", "12px")
+         .text("Number of Jokes");
+
+      //Plot bars
+      svg.selectAll("rect")
+         .data(bins)
+         .enter()
+         .append("rect")
+          .attr("xScale", 1)
+          .attr("transform", function(d) { return "translate(" + xScale(d.x0) + "," + yScale(d.length) + ")"; })
+          .attr("width", function(d) { return xScale(d.x1) - xScale(d.x0) -1 ; })
+          .attr("height", function(d) { return height - yScale(d.length) - padding.bottom; })
+          .style("fill", "#69b3a2")
+          .style("fill","#BF7C90")
+          .style("fill","#FF4301");
+    });
+  </script>
+</p>
+
+<p id="hist_2" align="center" style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+  <br><br>Histogram of StupidStuff Jokes Scores<br>
+  <script>
+    var ssData;
+    let ssjokes = d3.select("p#hist_2");
+    d3.json("joke_dataset/json/stupidstuff_jokes_raw.json").then(function(ssData) {
+      console.log(ssData);
+      let svg2 = ssjokes.append("svg").attr("width",500).attr("height",400);
+      let margin = { top: 0, right: 0, bottom: 50, left: 60 };
+
+      const width2 = svg2.attr("width");
+      const height2 = svg2.attr("height");
+      const chartWidth2 = width2 - margin.left;
+      const chartHeight2 = height2 - margin.bottom;
+
+      //xAxis
+      let xScale2 = d3.scaleLinear().domain([0, 5]).range([margin.left, chartWidth2]);
+      let bottomAxis2 = d3.axisBottom(xScale2).ticks(5);
+      svg2.append("g")
+         .attr("class", "x axis")
+         .attr("transform", "translate("+0+","+(chartHeight2+10)+")")
+         .call(bottomAxis2);
+
+      //xAxis label
+      svg2.append("text")
+         .attr("transform","translate(" + (chartWidth2/2 + margin.left) + " ," + (chartHeight2 + 50) + ")")
+         .style("text-anchor", "middle")
+         .attr("font-size", "12px")
+         .text("Joke Scores");
+
+      //Setting parameters
+      let histogram2 = d3.histogram()
+        .value(function(d) { return d["score"]; })
+        .domain(xScale2.domain())
+        .thresholds(xScale2.ticks(5)); // numbers of bins
+
+      let bins2 = histogram2(ssData);
+
+      //yAxis
+      let yScale2 = d3.scaleLinear().domain([0, d3.max(bins2, function(d) { return d.length; })]).range([chartHeight2,margin.bottom]);
+      let leftAxis2 = d3.axisLeft(yScale2).ticks(10);
+      svg2.append("g")
+         .attr("class", "y axis")
+         .attr("transform","translate("+(margin.left-10)+","+margin.top+")")
+         .call(leftAxis2);
+
+      //yAxis label
+      svg2.append("text")
+         .attr("transform", "rotate(-90)")
+         .attr("y", -3)
+         .attr("x",0 - (chartHeight2/2 + 15))
+         .attr("dy", "1em")
+         .style("text-anchor", "middle")
+         .attr("font-size", "12px")
+         .text("Number of Jokes");
+
+      //Plot bars
+      svg2.selectAll("rect")
+         .data(bins2)
+         .enter()
+         .append("rect")
+          .attr("xScale2", 1)
+          .attr("transform", function(d) { return "translate(" + xScale2(d.x0) + "," + yScale2(d.length) + ")"; })
+          .attr("width", function(d) { return xScale2(d.x1) - xScale2(d.x0) -1 ; })
+          .attr("height", function(d) { return height2 - yScale2(d.length) - margin.bottom; })
+          .style("fill","#9F99E8");
+
+    });
+  </script>
+</p>
+
+</body></html>
