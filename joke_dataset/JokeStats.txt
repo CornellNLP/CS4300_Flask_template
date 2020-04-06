@@ -1,55 +1,55 @@
-Number of Jokes:5863
+Number of Jokes: 5863
 
 Categories: 
-Biology: 112 jokes 
-Pick-up Line: 465 jokes 
-Pun: 120 jokes 
-Computer: 28 jokes 
-Chemistry: 104 jokes 
-Physics: 48 jokes 
-Children: 82 jokes 
-Blonde Jokes: 112 jokes 
-Office Jokes: 18 jokes 
-Military: 57 jokes 
-Aviation: 35 jokes 
-Political: 141 jokes 
-Deep Thoughts: 14 jokes 
-Men: 190 jokes 
-Crazy Jokes: 43 jokes 
-Medical: 101 jokes 
-Food Jokes: 13 jokes 
-Bar Jokes: 87 jokes 
-Science: 18 jokes 
-Police Jokes: 67 jokes 
-Miscellaneous: 831 jokes 
-Sex: 54 jokes 
-Idiots: 31 jokes 
-Business: 104 jokes 
-Women: 144 jokes 
-Redneck: 27 jokes 
-One Liners: 28 jokes 
-Money: 82 jokes 
-School: 62 jokes 
-Family, Parents: 96 jokes 
-Sports: 61 jokes 
-Heaven and Hell: 91 jokes 
-Religious: 152 jokes 
-Farmers: 29 jokes 
-Love & Romance: 48 jokes 
-Blind Jokes: 11 jokes 
-Marriage: 37 jokes 
-Old Age: 22 jokes 
 Animals: 131 jokes 
-Holidays: 69 jokes 
-Ethnic Jokes: 8 jokes 
-State Jokes: 10 jokes 
-English: 1 jokes 
+Aviation: 35 jokes 
+Bar Jokes: 87 jokes 
+Biology: 112 jokes 
+Blind Jokes: 11 jokes 
+Blonde Jokes: 112 jokes 
+Business: 104 jokes 
+Chemistry: 104 jokes 
+Children: 82 jokes 
+Computer: 28 jokes 
 Computers: 150 jokes 
-Lawyers: 50 jokes 
-Yo Mama: 141 jokes 
+Crazy Jokes: 43 jokes 
+Deep Thoughts: 14 jokes 
+English: 1 jokes 
+Ethnic Jokes: 8 jokes 
+Family, Parents: 96 jokes 
+Farmers: 29 jokes 
+Food Jokes: 13 jokes 
+Heaven and Hell: 91 jokes 
+Holidays: 69 jokes 
+Idiots: 31 jokes 
 Insults: 196 jokes 
+Lawyers: 50 jokes 
 Light Bulbs: 120 jokes 
+Love & Romance: 48 jokes 
+Marriage: 37 jokes 
+Medical: 101 jokes 
+Men: 190 jokes 
+Military: 57 jokes 
+Miscellaneous: 831 jokes 
+Money: 82 jokes 
 Music: 9 jokes 
+Office Jokes: 18 jokes 
+Old Age: 22 jokes 
+One Liners: 28 jokes 
+Physics: 48 jokes 
+Pick-up Line: 465 jokes 
+Police Jokes: 67 jokes 
+Political: 141 jokes 
+Pun: 120 jokes 
+Redneck: 27 jokes 
+Religious: 152 jokes 
+School: 62 jokes 
+Science: 18 jokes 
+Sex: 54 jokes 
+Sports: 61 jokes 
+State Jokes: 10 jokes 
+Women: 144 jokes 
+Yo Mama: 141 jokes 
 
 Sources: 
 ./json\ajokeaday_jokes_raw.json: 396 jokes 

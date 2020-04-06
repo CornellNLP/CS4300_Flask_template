@@ -19,17 +19,20 @@ for filename in glob('./json/*.json'): #loop over .json files
         source_list[filename] = source_num
         f.close()
 
+cat_list = sorted(cat_list.items(), key=lambda item: item[0])
+source_list = sorted(source_list.items(), key=lambda item: item[0])
+
 f = open("JokeStats.txt", "w+")
-str1 = "Number of Jokes:" + str(num) + "\n"
+str1 = "Number of Jokes: " + str(num) + "\n"
 f.write(str1)
 f.write("\nCategories: \n")
-for item in cat_list.items():
+for item in cat_list:
     str2 = item[0] + ": "+ str(item[1]) + " jokes \n"
     f.write(str2)
 
 f.write("\nSources: \n")
-for item in source_list.items():
+for item in source_list:
     str2 = item[0] + ": " + str(item[1]) + " jokes \n"
     f.write(str2)
-f.close()
 
+f.close()
