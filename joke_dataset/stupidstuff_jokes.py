@@ -38,5 +38,5 @@ try:
 		jokes.append(extract_joke(i))
 
 finally:
-	with open('stupidstuff_jokes_raw(2).json', 'w') as file:
+	with open('./json/stupidstuff_jokes_raw(2).json', 'w') as file:
 		json.dump(jokes, file, indent=4)

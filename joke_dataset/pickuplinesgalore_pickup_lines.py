@@ -16,7 +16,7 @@ def extract_jokes():
 		lst = joke.text_content().strip().split('\n')
 		for i in range(len(lst)):
 			if len(lst[i].strip())!= 0:
-				result.append({'joke': lst[i].strip(), 'score': None, 'categories': []})
+				result.append({'joke': lst[i].strip(), 'score': None, 'categories': ['Pick-up Line']})
 		# result.append({'joke': joke.text_content().strip(), 'score': None, 'categories': []})
 
 	return result
@@ -27,5 +27,5 @@ try:
 	jokes = extract_jokes()
 	jokes = jokes[1:len(jokes)-1]
 finally:
-	with open('pickuplinesgalore_pickup_lines.json', 'w') as file:
+	with open('./json/pickuplinesgalore_pickup_lines.json', 'w') as file:
 		json.dump(jokes, file, indent=4)

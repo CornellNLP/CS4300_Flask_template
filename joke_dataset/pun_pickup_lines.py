@@ -13,7 +13,7 @@ def extract_jokes():
 	html_elmnts = html.fromstring(response.content)
 
 	for joke in sel(html_elmnts):
-		result.append({'joke': joke.text_content().strip(), 'score': None, 'categories': []})
+		result.append({'joke': joke.text_content().strip(), 'score': None, 'categories': ['Pun', 'Pick-up Line']})
 
 	return result
 
@@ -22,5 +22,5 @@ jokes = []
 try:
     jokes = extract_jokes()
 finally:
-	with open('pun_pickup_lines.json', 'w') as file:
+	with open('./json/pun_pickup_lines.json', 'w') as file:
 			json.dump(jokes, file, indent=4)
