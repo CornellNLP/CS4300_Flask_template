@@ -1,7 +1,7 @@
-Total Number of Jokes: 5863
+Total Number of Jokes: 5923
 
 Number of jokes without categories: 
-2224
+2284
 
 Categories: 
 Animals: 131 jokes 
@@ -54,10 +54,11 @@ Women: 144 jokes
 Yo Mama: 141 jokes 
 
 Number of jokes without scores: 
-697
+757
 
 Sources: 
 ./json\ajokeaday_jokes_raw.json: 396 jokes 
+./json\dadjokes.json: 60 jokes 
 ./json\pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
 ./json\pickuplinesgalore_pickup_lines.json: 285 jokes 
 ./json\pun_pickup_lines.json: 120 jokes 
