@@ -25,9 +25,13 @@ def extract_joke(id):
 	for cat in sel_cat(html_elmnts):
 		content = cat.text_content().strip()
 		category = (cat_regex.search(content)).group(0)
+		if (category == 'Miscellaneous'):
+			res['categories'] = []
+		else: 
+			res['categories'] = [category]
 		rating = (scr_regex.search(content)).group(0)
 		res['score'] = float(rating)
-		res['categories'] = [category]
+		
 
 	return res
 
@@ -38,5 +42,5 @@ try:
 		jokes.append(extract_joke(i))
 
 finally:
-	with open('stupidstuff_jokes_raw(2).json', 'w') as file:
+	with open('./json/stupidstuff_jokes_raw.json', 'w') as file:
 		json.dump(jokes, file, indent=4)
