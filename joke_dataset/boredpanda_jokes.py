@@ -26,7 +26,7 @@ def extract_jokes():
         joke = jokes[i].text_content().strip()
         vote_raw = votes[i].text_content().strip()
         vote = (vote_regex.search(vote_raw)).group(0)
-        result.append({'joke': joke, 'score': int(vote), 'categories': ['Pun', 'Dad Jokes']})
+        result.append({'joke': joke, 'score': int(vote), 'categories': ['Dad Jokes']})
 
     return result
 
@@ -35,5 +35,5 @@ jokes = None
 try :
     jokes = extract_jokes()
 finally:
-    with open('./json/boredpanda_dadpuns_raw.json', 'w') as f:
+    with open('./json/boredpanda_jokes_raw.json', 'w') as f:
         json.dump(jokes, f, indent=4)
