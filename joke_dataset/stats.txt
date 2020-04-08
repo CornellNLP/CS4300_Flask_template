@@ -1,16 +1,10 @@
-Total Number of Jokes: 5923
-
-Number of jokes without categories: 
-2284
+Number of Jokes:6321
 
 Categories: 
-Animals: 131 jokes 
-Aviation: 35 jokes 
-Bar Jokes: 87 jokes 
+Pun: 578 jokes 
 Biology: 112 jokes 
-Blind Jokes: 11 jokes 
-Blonde Jokes: 111 jokes 
-Business: 104 jokes 
+Pick-up Line: 465 jokes 
+Computer: 28 jokes 
 Chemistry: 104 jokes 
 Children: 82 jokes 
 Computer: 28 jokes 
@@ -57,6 +51,7 @@ Number of jokes without scores:
 757
 
 Sources: 
+<<<<<<< HEAD:joke_dataset/stats.txt
 ./json\ajokeaday_jokes_raw.json: 396 jokes 
 ./json\dadjokes.json: 60 jokes 
 ./json\pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
@@ -68,3 +63,17 @@ Sources:
 ./json\quickfunnyjokes_phys_jokes.json: 48 jokes 
 ./json\reddit_jokes_raw.json: 997 jokes 
 ./json\stupidstuff_jokes_raw.json: 3773 jokes 
+=======
+./json/ajokeaday_jokes_raw.json: 396 jokes 
+./json/boredpanda_puns_raw.json: 80 jokes 
+./json/pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
+./json/pickuplinesgalore_pickup_lines.json: 285 jokes 
+./json/pun_pickup_lines.json: 120 jokes 
+./json/quickfunnyjokes_bio_jokes.json: 52 jokes 
+./json/quickfunnyjokes_comp_jokes.json: 28 jokes 
+./json/quickfunnyjokes_jokes.json: 104 jokes 
+./json/quickfunnyjokes_phys_jokes.json: 48 jokes 
+./json/rd_puns_jokes_raw.json: 378 jokes 
+./json/reddit_jokes_raw.json: 997 jokes 
+./json/stupidstuff_jokes_raw.json: 3773 jokes 
+>>>>>>> finished rd_puns and added boredpanda, ran stats again:joke_dataset/JokeStats.txt
