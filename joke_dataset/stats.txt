@@ -58,10 +58,10 @@ Number of jokes without scores:
 1255
 
 Sources: 
-./json/ajokeaday_jokes_raw.json: 396 jokes 
-./json/bestlifeonline_puns_raw.json: 65 jokes 
-./json/boredpanda_jokes_raw.json: 99 jokes 
-./json/boredpanda_puns_raw.json: 80 jokes 
+./json/ajokeaday_jokes.json: 396 jokes 
+./json/bestlifeonline_puns.json: 65 jokes 
+./json/boredpanda_jokes.json: 99 jokes 
+./json/boredpanda_puns.json: 80 jokes 
 ./json/dadjokes.json: 57 jokes 
 ./json/pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
 ./json/pickuplinesgalore_pickup_lines.json: 285 jokes 
@@ -70,7 +70,7 @@ Sources:
 ./json/quickfunnyjokes_comp_jokes.json: 28 jokes 
 ./json/quickfunnyjokes_jokes.json: 104 jokes 
 ./json/quickfunnyjokes_phys_jokes.json: 48 jokes 
-./json/rd_puns_jokes_raw.json: 378 jokes 
-./json/reddit_jokes_raw.json: 997 jokes 
-./json/stupidstuff_jokes_raw.json: 3773 jokes 
-./json/sunnyskyz_puns_raw.json: 58 jokes 
+./json/rd_puns_jokes.json: 378 jokes 
+./json/reddit_jokes.json: 997 jokes 
+./json/stupidstuff_jokes.json: 3773 jokes 
+./json/sunnyskyz_puns.json: 58 jokes 
