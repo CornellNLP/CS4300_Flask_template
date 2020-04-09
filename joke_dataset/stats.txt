@@ -1,7 +1,7 @@
-Total Number of Jokes: 6378
+Total Number of Jokes: 6600
 
 Number of jokes without categories: 
-2281
+2224
 
 Categories: 
 Animals: 131 jokes 
@@ -16,6 +16,7 @@ Children: 82 jokes
 Computer: 28 jokes 
 Computers: 150 jokes 
 Crazy Jokes: 43 jokes 
+Dad Jokes: 156 jokes 
 Deep Thoughts: 14 jokes 
 English: 1 jokes 
 Ethnic Jokes: 8 jokes 
@@ -42,7 +43,7 @@ Physics: 48 jokes
 Pick-up Line: 465 jokes 
 Police Jokes: 67 jokes 
 Political: 141 jokes 
-Pun: 578 jokes 
+Pun: 701 jokes 
 Redneck: 27 jokes 
 Religious: 152 jokes 
 School: 62 jokes 
@@ -54,11 +55,13 @@ Women: 144 jokes
 Yo Mama: 141 jokes 
 
 Number of jokes without scores: 
-1075
+1255
 
 Sources: 
-./json/ajokeaday_jokes_raw.json: 396 jokes 
-./json/boredpanda_puns_raw.json: 80 jokes 
+./json/ajokeaday_jokes.json: 396 jokes 
+./json/bestlifeonline_puns.json: 65 jokes 
+./json/boredpanda_jokes.json: 99 jokes 
+./json/boredpanda_puns.json: 80 jokes 
 ./json/dadjokes.json: 57 jokes 
 ./json/pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
 ./json/pickuplinesgalore_pickup_lines.json: 285 jokes 
@@ -67,6 +70,7 @@ Sources:
 ./json/quickfunnyjokes_comp_jokes.json: 28 jokes 
 ./json/quickfunnyjokes_jokes.json: 104 jokes 
 ./json/quickfunnyjokes_phys_jokes.json: 48 jokes 
-./json/rd_puns_jokes_raw.json: 378 jokes 
-./json/reddit_jokes_raw.json: 997 jokes 
-./json/stupidstuff_jokes_raw.json: 3773 jokes 
+./json/rd_puns_jokes.json: 378 jokes 
+./json/reddit_jokes.json: 997 jokes 
+./json/stupidstuff_jokes.json: 3773 jokes 
+./json/sunnyskyz_puns.json: 58 jokes 
