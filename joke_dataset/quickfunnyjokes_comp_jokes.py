@@ -19,10 +19,10 @@ def extract_jokes():
 			tmp = lst[i].strip()
 			if len(tmp)!= 0:
 				if 'Q:' in tmp:
-					result.append({'joke': tmp + '\n ' + (lst[i+1].strip()), 'score': None, 'categories': ['Computer']})
+					result.append({'joke': tmp + '\n ' + (lst[i+1].strip()), 'score': None, 'categories': ['Computers']})
 					i += 1
 				else:
-					result.append({'joke': tmp, 'score': None, 'categories': ['Computer']})
+					result.append({'joke': tmp, 'score': None, 'categories': ['Computers']})
 			i += 1
 
 	return result

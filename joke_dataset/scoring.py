@@ -11,6 +11,7 @@ Path('/root/dir/sub/file.ext').stem
 scaler = StandardScaler()
 minmax_scaler = MinMaxScaler(feature_range = (2.5, 5))
 
+final = []
 for filename in glob('./json/data_nopreprocess/*.json'):
     name = Path(filename).stem
 
@@ -29,12 +30,19 @@ for filename in glob('./json/data_nopreprocess/*.json'):
             scores_scaled = scaler.fit_transform(scores_train)
             for i in range(0, len(data)):
                 data[i]['score'] = scores_scaled[i][0]
+        final += data
         f.close()
     
     path = os.path.join('./json/data_preprocess', name + "." + "json")
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)
         f.close()
+
+# COMBINES ALL THE JSON FILES IN ./RAW/DATA_PREPROCESS INTO '.final/json'
+with open('./final.json', 'w') as f:
+    json.dump(final, f, indent=4)
+    f.close()
+
 
 with open ('./final.json') as f:
     data = json.load(f)

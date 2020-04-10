@@ -13,8 +13,7 @@ Blonde Jokes: 111 jokes
 Business: 104 jokes 
 Chemistry: 104 jokes 
 Children: 82 jokes 
-Computer: 28 jokes 
-Computers: 150 jokes 
+Computers: 178 jokes 
 Crazy Jokes: 43 jokes 
 Dad Jokes: 156 jokes 
 Deep Thoughts: 14 jokes 
