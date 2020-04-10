@@ -161,18 +161,32 @@ for s in speaker_text:
 
 inv_idx = build_inverted_index(flat_msgs)
 
+CANDIDATE_ARRAY = ['Bernie Sanders', 'Amy Klobuchar', 'Pete Buttigieg', 'Mike Bloomberg', 'Joe Biden', 'Elizabeth Warren', 'Tom Steyer'] 
 
-def show_word_freq(word, inv_idx): 
-    search = inv_idx[word]
+def show_word_freq(query, inv_idx): 
+    words = query.split(' ')
+    if len(words) > 1: 
+        search = boolean_and_search(words[0], words[1], inv_idx)
+    else: 
+        search = [a[0] for a in inv_idx[words[0]]]
 
-    x = []
+    candidates = []
+    moderators = []
     for i in search: 
-        x.append(flat_msgs[i[0]]['time_stamp'])
+        if flat_msgs[i]['speaker'] in CANDIDATE_ARRAY: 
+            candidates.append(flat_msgs[i]['time_stamp'])
+        else: 
+            moderators.append(flat_msgs[i]['time_stamp'])
 
     max_x = flat_msgs[-1]['time_stamp']
 
-    plt.hist(x, range=(0,max_x))
-    plt.ylim(top=len(search))
+    plt.hist([candidates, moderators], range=(0,max_x), bins=20)
+    plt.ylabel('# of occurrences of word: ' + query)
+    plt.xlabel('Time (s)')
+    plt.title('Mentions of "' + query + '" over time of debate')
     plt.show()
 
-#show_word_freq('climate', inv_idx)
+# show_word_freq('healthcare', inv_idx)
+# show_word_freq('foreign policy', inv_idx)
+#show_word_freq('gun', inv_idx)
+
