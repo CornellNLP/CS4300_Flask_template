@@ -10,9 +10,12 @@ total_jokes = 0 #total number of jokes in dataset
 num_unclassified = 0 #total number of jokes that are unclassified
 num_noscore = 0 #total number of jokes that do not have a score 
 
+final = []
+
 for filename in glob('./json/data_preprocess/*json'): #loop over .json files
     with open(filename) as f: 
         data = json.load(f) #open the json file 
+        final += data
         source_num = 0
         for obj in data:
             source_num = source_num + 1
@@ -31,6 +34,10 @@ for filename in glob('./json/data_preprocess/*json'): #loop over .json files
                     cat_list[cat] = cat_list[cat] +1
         source_list[filename] = source_num
         f.close()
+
+with open('./final.json', 'w') as f:
+    json.dump(final, f, indent=4)
+    f.close()
 
 cat_list = sorted(cat_list.items(), key=lambda item: item[0])
 source_list = sorted(source_list.items(), key=lambda item: item[0])

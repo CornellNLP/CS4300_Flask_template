@@ -21,17 +21,32 @@ for filename in glob('./json/data_nopreprocess/*.json'):
             scores_train = np.array_split(scores_train, len(scores_train))
 
             # normalize scoring from [min, max] to [2.5, 5]
-            scores_normalized = minmax_scaler.fit_transform(scores_train)
-            for i in range(0, len(data)):
-                data[i]['score'] = scores_normalized[i][0]
+            # scores_normalized = minmax_scaler.fit_transform(scores_train)
+            # for i in range(0, len(data)):
+            #     data[i]['score'] = scores_normalized[i][0]
 
             # standardize scoring, then normalize to [2.5, 5]
-            # scores_scaled = scaler.fit_transform(scores_train)
-            # for i in range(0, len(data)):
-            #     data[i]['score'] = scores_scaled[i][0]
+            scores_scaled = scaler.fit_transform(scores_train)
+            for i in range(0, len(data)):
+                data[i]['score'] = scores_scaled[i][0]
         f.close()
     
     path = os.path.join('./json/data_preprocess', name + "." + "json")
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)
         f.close()
+
+with open ('./final.json') as f:
+    data = json.load(f)
+    scores_train = [obj['score'] for obj in data]
+    scores_train = np.array_split(scores_train, len(scores_train))
+            # normalize scoring from [min, max] to [2.5, 5]
+    scores_normalized = minmax_scaler.fit_transform(scores_train)
+    for i in range(0, len(data)):
+        data[i]['score'] = scores_normalized[i][0]
+    f.close()
+
+with open ('./final.json', "w") as f:
+    json.dump(data, f, indent = 4)
+
+#relevant link: https://scikit-learn.org/stable/modules/preprocessing.html
