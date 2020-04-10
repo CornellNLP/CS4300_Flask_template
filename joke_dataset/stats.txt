@@ -58,19 +58,19 @@ Number of jokes without scores:
 1255
 
 Sources: 
-./json/ajokeaday_jokes.json: 396 jokes 
-./json/bestlifeonline_puns.json: 65 jokes 
-./json/boredpanda_jokes.json: 99 jokes 
-./json/boredpanda_puns.json: 80 jokes 
-./json/dadjokes.json: 57 jokes 
-./json/pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
-./json/pickuplinesgalore_pickup_lines.json: 285 jokes 
-./json/pun_pickup_lines.json: 120 jokes 
-./json/quickfunnyjokes_bio_jokes.json: 52 jokes 
-./json/quickfunnyjokes_comp_jokes.json: 28 jokes 
-./json/quickfunnyjokes_jokes.json: 104 jokes 
-./json/quickfunnyjokes_phys_jokes.json: 48 jokes 
-./json/rd_puns_jokes.json: 378 jokes 
-./json/reddit_jokes.json: 997 jokes 
-./json/stupidstuff_jokes.json: 3773 jokes 
-./json/sunnyskyz_puns.json: 58 jokes 
+./json/data_preprocess\ajokeaday_jokes..json: 396 jokes 
+./json/data_preprocess\bestlifeonline_puns..json: 65 jokes 
+./json/data_preprocess\boredpanda_jokes..json: 99 jokes 
+./json/data_preprocess\boredpanda_puns..json: 80 jokes 
+./json/data_preprocess\dadjokes..json: 57 jokes 
+./json/data_preprocess\pickuplinesgalore_bio_pickup_lines..json: 60 jokes 
+./json/data_preprocess\pickuplinesgalore_pickup_lines..json: 285 jokes 
+./json/data_preprocess\pun_pickup_lines..json: 120 jokes 
+./json/data_preprocess\quickfunnyjokes_bio_jokes..json: 52 jokes 
+./json/data_preprocess\quickfunnyjokes_comp_jokes..json: 28 jokes 
+./json/data_preprocess\quickfunnyjokes_jokes..json: 104 jokes 
+./json/data_preprocess\quickfunnyjokes_phys_jokes..json: 48 jokes 
+./json/data_preprocess\rd_puns_jokes..json: 378 jokes 
+./json/data_preprocess\reddit_jokes..json: 997 jokes 
+./json/data_preprocess\stupidstuff_jokes..json: 3773 jokes 
+./json/data_preprocess\sunnyskyz_puns..json: 58 jokes 

@@ -33,5 +33,5 @@ try:
 	jokes = extract_jokes()
 	jokes = jokes[1:len(jokes)-1]
 finally:
-	with open('./json/quickfunnyjokes_bio_jokes.json', 'w') as file:
+	with open('./json/raw/quickfunnyjokes_bio_jokes.json', 'w') as file:
 		json.dump(jokes, file, indent=4)

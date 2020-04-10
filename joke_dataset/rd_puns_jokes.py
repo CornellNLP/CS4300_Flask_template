@@ -26,5 +26,5 @@ try :
         for joke in joke_lst:
             jokes.append(joke)
 finally:
-    with open('./json/rd_puns_jokes_raw.json', 'w') as f:
+    with open('./json/raw/rd_puns_jokes_raw.json', 'w') as f:
         json.dump(jokes, f, indent=4)

@@ -35,5 +35,5 @@ jokes = None
 try :
     jokes = extract_jokes()
 finally:
-    with open('./json/boredpanda_jokes_raw.json', 'w') as f:
+    with open('./json/raw/boredpanda_jokes_raw.json', 'w') as f:
         json.dump(jokes, f, indent=4)

@@ -1,5 +1,7 @@
+# run to update stats.txt with statistics on jokes
 from glob import glob
 import json
+from pathlib import Path
 
 cat_list = {} #dictionary w/ (key, value) = (category name, number of jokes in category)
 source_list = {} #dictionary w/ (key, value) = (source, number of jokes from source)
@@ -8,7 +10,7 @@ total_jokes = 0 #total number of jokes in dataset
 num_unclassified = 0 #total number of jokes that are unclassified
 num_noscore = 0 #total number of jokes that do not have a score 
 
-for filename in glob('./json/*.json'): #loop over .json files
+for filename in glob('./json/data_preprocess/*json'): #loop over .json files
     with open(filename) as f: 
         data = json.load(f) #open the json file 
         source_num = 0
