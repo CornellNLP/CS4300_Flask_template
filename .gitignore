@@ -1,8 +1,10 @@
 venv
 *.pyc
-migrations 
+migrations
 vagrant/.vagrant
 vagrant/site.retry
 vagrant/a4keypair.pem
 .idea/
 *.iml
+reddit-data-1000-posts.json
+top-1000-reddit-data-processed.json
