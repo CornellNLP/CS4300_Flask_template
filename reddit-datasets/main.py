@@ -2,6 +2,11 @@ import requests
 import csv
 import json
 
+
+"""
+script is used to create a json of the top 100 posts for the top 100 subreddits
+"""
+
 fields_we_care_about = ['author', 'created_utc', 'score', 'selftext', 'subreddit', 'total_awards_received', 'title', 'subreddit_subscribers']
 default = ['', 0 , 0, '', 'danger-no-subreddit', 0, '', 0]
 def make_query(subreddit):

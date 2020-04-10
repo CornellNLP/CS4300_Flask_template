@@ -1,7 +1,13 @@
 import json
-import numpy as np
 
-with open('reddit-data-100-posts.json') as file:
+"""
+used to use the finalized dataset to come up with meaningful statistics, like
+word averages, etc
+"""
+
+file_path = 'reddit-data-100-posts.json'
+
+with open(file_path) as file:
   data = json.load(file)
 
 """
@@ -20,8 +26,6 @@ def get_stats():
         total_words += len_post
         longest_post = max(len_post, longest_post)
         shortest_post = min(len_post, shortest_post)
-        if len_post == 2:
-            print(post)
     return  total_words / num_posts, longest_post, shortest_post
 
 print(get_stats())
