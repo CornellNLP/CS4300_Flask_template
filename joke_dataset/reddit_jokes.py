@@ -27,5 +27,5 @@ try:
         # print("Joke: {}, Score: {}".format(new_joke['joke'], new_joke['score']))
         jokes.append(new_joke)
 finally:
-    with open('./json/reddit_jokes_raw.json', 'w') as file:
+    with open('./json/raw/reddit_jokes_raw.json', 'w') as file:
         json.dump(jokes, file, indent=4)

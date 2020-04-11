@@ -19,10 +19,10 @@ def extract_jokes():
 			tmp = lst[i].strip()
 			if len(tmp)!= 0:
 				if 'Q:' in tmp:
-					result.append({'joke': tmp + '\n ' + (lst[i+1].strip()), 'score': None, 'categories': ['Computer']})
+					result.append({'joke': tmp + '\n ' + (lst[i+1].strip()), 'score': None, 'categories': ['Computers']})
 					i += 1
 				else:
-					result.append({'joke': tmp, 'score': None, 'categories': ['Computer']})
+					result.append({'joke': tmp, 'score': None, 'categories': ['Computers']})
 			i += 1
 
 	return result
@@ -33,5 +33,5 @@ try:
 	jokes = extract_jokes()
 	jokes = jokes[1:len(jokes)-1]
 finally:
-	with open('./json/quickfunnyjokes_comp_jokes.json', 'w') as file:
+	with open('./json/raw/quickfunnyjokes_comp_jokes.json', 'w') as file:
 		json.dump(jokes, file, indent=4)

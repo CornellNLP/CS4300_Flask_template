@@ -22,5 +22,5 @@ jokes = []
 try:
     jokes = extract_jokes()
 finally:
-	with open('./json/pun_pickup_lines.json', 'w') as file:
+	with open('./json/raw/pun_pickup_lines.json', 'w') as file:
 			json.dump(jokes, file, indent=4)

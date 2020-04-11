@@ -24,5 +24,5 @@ jokes = []
 try :
     jokes = extract_jokes()
 finally:
-    with open('./json/sunnyskyz_puns_raw.json', 'w') as f:
+    with open('./json/raw/sunnyskyz_puns_raw.json', 'w') as f:
         json.dump(jokes, f, indent=4)
