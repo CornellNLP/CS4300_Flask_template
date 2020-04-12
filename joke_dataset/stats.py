@@ -5,7 +5,6 @@ from pathlib import Path
 
 cat_list = {} #dictionary w/ (key, value) = (category name, number of jokes in category)
 source_list = {} #dictionary w/ (key, value) = (source, number of jokes from source)
-total_jokes = 0 #total number of jokes in dataset
 
 num_unclassified = 0 #total number of jokes that are unclassified
 num_noscore = 0 #total number of jokes that do not have a score 
@@ -16,7 +15,6 @@ for filename in glob('./json/data_preprocess/*json'): #loop over .json files
         source_num = 0
         for obj in data:
             source_num = source_num + 1
-            total_jokes += 1
             if len(obj['categories']) == 0:
                 num_unclassified += 1
                 continue
@@ -31,6 +29,10 @@ for filename in glob('./json/data_preprocess/*json'): #loop over .json files
                     cat_list[cat] = cat_list[cat] +1
         source_list[filename] = source_num
         f.close()
+
+with open('./final.json') as f:
+    data = json.load(f)
+    total_jokes = len(data)
 
 ##### writing to stats.py #####
 cat_list = sorted(cat_list.items(), key=lambda item: item[0])

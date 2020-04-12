@@ -1,4 +1,4 @@
-Total Number of Jokes: 6600
+Total Number of Jokes: 6407
 
 Number of jokes without categories: 
 2224
@@ -11,7 +11,7 @@ Biology: 112 jokes
 Blind Jokes: 11 jokes 
 Blonde Jokes: 111 jokes 
 Business: 104 jokes 
-Chemistry: 104 jokes 
+Chemistry: 103 jokes 
 Children: 82 jokes 
 Computers: 178 jokes 
 Crazy Jokes: 43 jokes 
@@ -38,11 +38,11 @@ Music: 9 jokes
 Office Jokes: 18 jokes 
 Old Age: 22 jokes 
 One Liners: 28 jokes 
-Physics: 48 jokes 
+Physics: 46 jokes 
 Pick-up Line: 465 jokes 
 Police Jokes: 67 jokes 
 Political: 141 jokes 
-Pun: 701 jokes 
+Pun: 697 jokes 
 Redneck: 27 jokes 
 Religious: 152 jokes 
 School: 62 jokes 
@@ -54,22 +54,22 @@ Women: 144 jokes
 Yo Mama: 141 jokes 
 
 Number of jokes without scores: 
-1255
+1248
 
 Sources: 
-./json/data_preprocess/ajokeaday_jokes.json: 396 jokes 
-./json/data_preprocess/bestlifeonline_puns.json: 65 jokes 
-./json/data_preprocess/boredpanda_jokes.json: 99 jokes 
-./json/data_preprocess/boredpanda_puns.json: 80 jokes 
-./json/data_preprocess/dadjokes.json: 57 jokes 
-./json/data_preprocess/pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
-./json/data_preprocess/pickuplinesgalore_pickup_lines.json: 285 jokes 
-./json/data_preprocess/pun_pickup_lines.json: 120 jokes 
-./json/data_preprocess/quickfunnyjokes_bio_jokes.json: 52 jokes 
-./json/data_preprocess/quickfunnyjokes_comp_jokes.json: 28 jokes 
-./json/data_preprocess/quickfunnyjokes_jokes.json: 104 jokes 
-./json/data_preprocess/quickfunnyjokes_phys_jokes.json: 48 jokes 
-./json/data_preprocess/rd_puns_jokes.json: 378 jokes 
-./json/data_preprocess/reddit_jokes.json: 997 jokes 
-./json/data_preprocess/stupidstuff_jokes.json: 3773 jokes 
-./json/data_preprocess/sunnyskyz_puns.json: 58 jokes 
+./json/data_preprocess\ajokeaday_jokes.json: 396 jokes 
+./json/data_preprocess\bestlifeonline_puns.json: 65 jokes 
+./json/data_preprocess\boredpanda_jokes.json: 99 jokes 
+./json/data_preprocess\boredpanda_puns.json: 80 jokes 
+./json/data_preprocess\dadjokes.json: 57 jokes 
+./json/data_preprocess\pickuplinesgalore_bio_pickup_lines.json: 60 jokes 
+./json/data_preprocess\pickuplinesgalore_pickup_lines.json: 285 jokes 
+./json/data_preprocess\pun_pickup_lines.json: 120 jokes 
+./json/data_preprocess\quickfunnyjokes_bio_jokes.json: 52 jokes 
+./json/data_preprocess\quickfunnyjokes_comp_jokes.json: 28 jokes 
+./json/data_preprocess\quickfunnyjokes_jokes.json: 103 jokes 
+./json/data_preprocess\quickfunnyjokes_phys_jokes.json: 46 jokes 
+./json/data_preprocess\rd_puns_jokes.json: 374 jokes 
+./json/data_preprocess\reddit_jokes.json: 997 jokes 
+./json/data_preprocess\stupidstuff_jokes.json: 3773 jokes 
+./json/data_preprocess\sunnyskyz_puns.json: 58 jokes 

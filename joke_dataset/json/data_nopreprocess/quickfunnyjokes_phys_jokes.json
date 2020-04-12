@@ -56,13 +56,6 @@
         ]
     },
     {
-        "joke": "Q: What is the name of the first electricity detective?\n A: Sherlock Ohms",
-        "score": null,
-        "categories": [
-            "Physics"
-        ]
-    },
-    {
         "joke": "Q: How does a German physicist drink beer?\n A: With ein Stein",
         "score": null,
         "categories": [
@@ -162,13 +155,6 @@
     },
     {
         "joke": "Q: Why wasn't Heisenberg a good lover?\n A: Because whenever he had the time, he didn't have the energy.",
-        "score": null,
-        "categories": [
-            "Physics"
-        ]
-    },
-    {
-        "joke": "Q: Two cats are on a roof. Which one slides off first?\n A: The one with the smaller mew!",
         "score": null,
         "categories": [
             "Physics"
