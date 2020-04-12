@@ -9,3 +9,5 @@ vagrant/a4keypair.pem
 venv
 .env
 env.bat
+.ipynb_checkpoints
+
