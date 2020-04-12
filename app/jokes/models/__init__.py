@@ -3,7 +3,7 @@ from marshmallow_sqlalchemy import ModelSchema # Needed for serialization in eac
 import datetime # For handling dates 
 
 class Base(db.Model):
-  """Base PostgreSQL model"""
+  """Base PostgreSQL model: Base data model for all objects"""
   __abstract__ = True
   id         = db.Column(db.Integer, primary_key =True)
   created_at = db.Column(db.DateTime, default    =db.func.current_timestamp())
