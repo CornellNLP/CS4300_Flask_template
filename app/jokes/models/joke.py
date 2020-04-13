@@ -6,7 +6,7 @@ class Joke(Base):
 
   text          = db.Column(db.Text, nullable =False)
   categories    = db.Column(db.ARRAY(db.Text))
-  score         = db.Column(db.Numeric(5), nullable =True)
+  score         = db.Column(db.Numeric(5,4), nullable =True)
   maturity      = db.Column(db.Integer, nullable =True)
 
   def __init__(self, **kwargs):
