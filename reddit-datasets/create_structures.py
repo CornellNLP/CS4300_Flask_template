@@ -3,6 +3,7 @@ from collections import Counter
 import json
 import math
 import string
+import pickle
 import time
 import numpy as np
 # from nltk.tokenize import TreebankWordTokenizer
@@ -47,7 +48,6 @@ def make_inverted_index(file):
     return inv_index
 
 
-inverted_index = make_inverted_index(data)
 
 """
 Compute IDF values from the inverted index
@@ -66,7 +66,6 @@ def get_idf(inv_index, num_docs, min_df=0, max_df=1):  # TODO: change these min/
     return idf
 
 
-idf = get_idf(inverted_index, num_docs)
 
 """
   Computes norm of each document
@@ -90,75 +89,12 @@ def get_doc_norms(inv_index, idf, num_docs):
     return norms
 
 
+
+inverted_index = make_inverted_index(data)
+idf = get_idf(inverted_index, num_docs)
 norms = get_doc_norms(inverted_index, idf, num_docs)
 
-"""
-    Computes cosine similarity between the given query and all the posts
-    Assumse query is given as tokenized already
-    Returns: dictionary of cosine similarities where {index: cossim}
-"""
-
-
-def get_cossim(query, inv_index, idf, norms):
-    query_tf = {}  # term frequency of query
-    for token in query:
-        wordcount = query.count(token)
-        if token not in query_tf:
-            query_tf[token] = wordcount
-    dot_prod = {}
-    for token in set(query):
-        if token in inv_index:
-            posts = inv_index[token]
-        # if token in idf:              do we need this if statement
-            for index, tf in posts:
-                if index not in dot_prod:
-                    dot_prod[index] = 0
-                dot_prod[index] += (tf*idf[token]) * (query_tf[token]*idf[token])
-    query_norm = 0
-    for tf in query_tf:
-        if tf in idf:
-            query_norm += (query_tf[tf] * idf[tf])**2
-    query_norm = query_norm**(0.5)
-    cos_sim = {}
-    for k, v in dot_prod.items():
-        cos_sim[k] = dot_prod[k] / (query_norm * norms[k])
-    return cos_sim
-
-
-test_query = [
-    "my",
-    "cab",
-    "driver",
-    "tonight",
-    "was",
-    "so",
-    "excited",
-    "to",
-    "share",
-    "with",
-    "me",
-    "that",
-    "he",
-    "d",
-    "made",
-    "the",
-    "cover",
-    "of",
-    "the",
-    "calendar",
-    "i",
-    "told",
-    "him",
-    "i",
-    "d",
-    "help",
-    "let",
-    "the",
-    "world",
-    "see"
-]
-
-
-# TODO: this print statement is returning 1.23825871347 when cossim should never return
-# more than 1. It should be returning 1 since our test query is the same as the post 1.
-print(get_cossim(test_query, inverted_index, idf, norms)[1])
+jar = "reddit-datasets/picklejar/"
+pickle.dump(inverted_index, open(jar + "inverted_index.pickle", 'wb'))
+pickle.dump(idf, open(jar + "idf.pickle", 'wb'))
+pickle.dump(norms, open(jar + "norms.pickle", 'wb'))
