@@ -7,4 +7,5 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 reddit-data-1000-posts.json
-top-1000-reddit-data-processed.json
+reddit-data-1000-posts-processed.json
+reddit-data-1000-posts-processed.pickle
