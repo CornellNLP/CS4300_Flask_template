@@ -42,10 +42,8 @@ def make_inverted_index(file):
                 temp_dict[w] += 1
         for k, v in temp_dict.items():
             if k not in inv_index:
-                inv_index[k] = [(i, temp_dict[k])]
-            else:
-                inv_index[k].append((i, temp_dict[k]))
-
+                inv_index[k] = []
+            inv_index[k].append((i, temp_dict[k]))
     return inv_index
 
 
@@ -63,10 +61,8 @@ def get_idf(inv_index, num_docs, min_df=0, max_df=1):  # TODO: change these min/
 
     for k, v in inv_index.items():
         df = len(v)
-        if df > min_df and df < max_rat:
-            t_idf = num_docs / (1 + df)
-            idf[k] = math.log(t_idf, 2)
-
+        if df >= min_df and df <= max_rat:
+            idf[k] = num_docs / float(df)
     return idf
 
 
@@ -106,38 +102,26 @@ norms = get_doc_norms(inverted_index, idf, num_docs)
 def get_cossim(query, inv_index, idf, norms):
     query_tf = {}  # term frequency of query
     for token in query:
-        wordcount = 0
-        for t in query:
-            if t == token:
-                wordcount += 1
+        wordcount = query.count(token)
         if token not in query_tf:
             query_tf[token] = wordcount
-
     dot_prod = {}
-    for token in query:
+    for token in set(query):
         if token in inv_index:
             posts = inv_index[token]
-        if token in idf:
-            for pair in posts:
-                index = pair[0]
-                tf = pair[1]
-                if index in dot_prod:
-                    dot_prod[index] += (tf*idf[token]) * \
-                        (query_tf[token]*idf[token])
-                else:
-                    dot_prod[index] = (tf*idf[token]) * \
-                        (query_tf[token]*idf[token])
-
+        # if token in idf:              do we need this if statement
+            for index, tf in posts:
+                if index not in dot_prod:
+                    dot_prod[index] = 0
+                dot_prod[index] += (tf*idf[token]) * (query_tf[token]*idf[token])
     query_norm = 0
     for tf in query_tf:
         if tf in idf:
             query_norm += (query_tf[tf] * idf[tf])**2
     query_norm = query_norm**(0.5)
-
     cos_sim = {}
     for k, v in dot_prod.items():
         cos_sim[k] = dot_prod[k] / (query_norm * norms[k])
-
     return cos_sim
 
 
