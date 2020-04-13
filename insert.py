@@ -6,6 +6,7 @@ try:
                                   host="localhost",
                                   port="5432",
                                   database="hahadata")
+                                  
    cursor = connection.cursor()
    with open ('./final.json') as f: 
        data = json.load(f)
