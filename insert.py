@@ -1,12 +1,11 @@
 import psycopg2
 import json
+import os
 
 try:
-   connection = psycopg2.connect(
-                                  host="localhost",
-                                  port="5432",
-                                  database="hahadata")
-                                  
+   connection = psycopg2.connect(os.environ['DATABASE_URL'], sslmode='require')
+
+
    cursor = connection.cursor()
    with open ('./final.json') as f: 
        data = json.load(f)
