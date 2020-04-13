@@ -2,8 +2,7 @@ import psycopg2
 import json
 
 try:
-   connection = psycopg2.connect(user="winice",
-                                  password="password",
+   connection = psycopg2.connect(
                                   host="localhost",
                                   port="5432",
                                   database="hahadata")
@@ -18,15 +17,15 @@ try:
 
    connection.commit()
    count = cursor.rowcount
-   print (count, "Record inserted successfully into mobile table")
+   print (count, "Records inserted successfully into mobile table")
 
 except (Exception, psycopg2.Error) as error :
     if(connection):
         print("Failed to insert record into mobile table", error)
 
-# finally:
-#     #closing database connection.
-#     if(connection):
-#         cursor.close()
-#         connection.close()
-#         print("PostgreSQL connection is closed")
+finally:
+    #closing database connection.
+    if(connection):
+        cursor.close()
+        connection.close()
+        print("PostgreSQL connection is closed")
