@@ -63,7 +63,7 @@ def get_idf(inv_index, num_docs, min_df=0, max_df=1):  # TODO: change these min/
 
     for k, v in inv_index.items():
         df = len(v)
-        if df > min_df and df < max_rat:
+        if df >= min_df and df <= max_rat:
             t_idf = num_docs / (1 + df)
             idf[k] = math.log(t_idf, 2)
 
@@ -106,10 +106,7 @@ norms = get_doc_norms(inverted_index, idf, num_docs)
 def get_cossim(query, inv_index, idf, norms):
     query_tf = {}  # term frequency of query
     for token in query:
-        wordcount = 0
-        for t in query:
-            if t == token:
-                wordcount += 1
+        wordcount = query.count(token)
         if token not in query_tf:
             query_tf[token] = wordcount
 
