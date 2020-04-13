@@ -62,7 +62,7 @@ def get_idf(inv_index, num_docs, min_df=0, max_df=1):  # TODO: change these min/
     for k, v in inv_index.items():
         df = len(v)
         if df >= min_df and df <= max_rat:
-            idf[k] = 1 / float(df)
+            idf[k] = num_docs / float(df)
     return idf
 
 
@@ -106,7 +106,7 @@ def get_cossim(query, inv_index, idf, norms):
         if token not in query_tf:
             query_tf[token] = wordcount
     dot_prod = {}
-    for token in query:
+    for token in set(query):
         if token in inv_index:
             posts = inv_index[token]
         # if token in idf:              do we need this if statement
