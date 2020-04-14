@@ -7,5 +7,4 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 .env
-app/db_manage2.py
 app/testdata.py
