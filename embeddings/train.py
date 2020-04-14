@@ -22,4 +22,4 @@ def main():
 
     model = Word2Vec(norm_sentences, size=300, min_count=5, iter=15)
 
-main()
+# main()
