@@ -52,15 +52,25 @@ all_classes = np.array(funny_classes + notfunny_classes)
 
 num_all_jokes = len(all_jokes)
 
-shuffle_split = ShuffleSplit(n_splits = 1, test_size=0.5, random_state=0)
+shuffle_split = ShuffleSplit(n_splits = 1, test_size=0.5, random_state=25)
 train_idx, test_idx = next(iter(shuffle_split.split(all_jokes)))
 
-jokes_train = all_jokes[train_idx]
-jokes_test = all_jokes[test_idx]
+jokes_train = all_jokes[train_idx] # jokes to train on
+jokes_test = all_jokes[test_idx] # jokes to test on
 
+# corresponding classification for training
 classes_train = all_classes[train_idx]
+# corresponding classification for testing
 classes_test = all_classes[test_idx]
 
+train_size = len(classes_train)
+num_funny_training = np.count_nonzero(classes_train)
+num_notfunny_training = train_size - num_funny_training
+
+pr_funny = num_funny_training/train_size # Pr[funny]
+pr_notfunny = num_notfunny_training/train_size # Pr[notfunny]
+
+# list of toks and dictionary mapping toks to its index in [tok-lst]
 tok_lst, tok_to_idx = get_toks(all_jokes)
 
 def comp_prob_dict(jk_lst, cl_lst, tok_lst, tok_idx):
@@ -74,8 +84,6 @@ def comp_prob_dict(jk_lst, cl_lst, tok_lst, tok_idx):
     """
     funny_mtrx = np.zeros((len(tok_lst), 2))
     notfunny_mtrx = np.zeros((len(tok_lst), 2))
-
-    print(funny_mtrx)
 
     for i in range(len(jk_lst)):
         lst = jk_lst[i]['toks']
@@ -97,29 +105,47 @@ def comp_prob_dict(jk_lst, cl_lst, tok_lst, tok_idx):
     num_notfunny = notfunny_mtrx[0][0] + notfunny_mtrx[0][1]
     for t in tok_lst:
         idx = tok_idx[t]
-        one_funny = funny_mtrx[idx][1]/num_funny
-        zero_funny = funny_mtrx[idx][0]/num_funny
-        one_notfunny = notfunny_mtrx[idx][1]/num_notfunny
-        zero_notfunny = notfunny_mtrx[idx][0]/num_notfunny
+        # additive smoothing
+        one_funny = (funny_mtrx[idx][1]+1)/(num_funny + 2)
+        zero_funny = (funny_mtrx[idx][0]+1)/(num_funny + 2)
+        one_notfunny = (notfunny_mtrx[idx][1]+1)/(num_notfunny + 2)
+        zero_notfunny = (notfunny_mtrx[idx][0]+1)/(num_notfunny + 2)
         result[t] = {'one_funny': one_funny, 'zero_funny': zero_funny, 'one_notfunny': one_notfunny, 'zero_notfunny': zero_notfunny}
     return result
 
 prob_dict = comp_prob_dict(jokes_train, classes_train, tok_lst, tok_to_idx)
 
-# def build_inverted_index(jokes):
-#     result = {}
-#     for joke in range(len(jokes)):
-#         toks = jokes[joke]['toks']
-#         tmp = {}
-#         for tok in toks:
-#             if tok not in tmp:
-#                 tmp[tok] = 0
-#             tmp[tok] += 1
-#         for key in tmp:
-#             if key not in result:
-#                 result[key] = [(joke, tmp[key])]
-#             else:
-#                 result[key].append((joke, tmp[key]))
-#     return result
-#
-# inv_idx = build_inverted_index(data)
+def calc_pr(jk_toks, pr_dict, tok_lst, funny):
+    acc = 1
+    one = None
+    zero = None
+    if funny:
+        one = 'one_funny'
+        zero = 'zero_funny'
+    else:
+        one = 'one_notfunny'
+        zero = 'zero_notfunny'
+    for tok in tok_lst:
+        if tok in jk_toks:
+            acc *= pr_dict[tok][one]
+        else:
+            acc *= pr_dict[tok][zero]
+    return acc
+
+def test_ml(pr_dict, jk_lst, cl_lst, tk_lst):
+    """
+    Tests on the test set and returns the correctness
+    """
+    num_correct = 0
+    total = 0
+    for jk in range(len(jk_lst)):
+        cat_fun = calc_pr(jk_lst[jk]['toks'], pr_dict, tk_lst, True) * pr_funny
+        cat_notfun = calc_pr(jk_lst[jk]['toks'], pr_dict, tk_lst, False) * pr_notfunny
+        cat = 1 if cat_fun >= cat_notfun else 0
+        if cl_lst[jk] == cat:
+            num_correct += 1
+        total += 1
+    return num_correct/total
+
+correctness = test_ml(prob_dict, jokes_test, classes_test, tok_lst)
+print (correctness)
