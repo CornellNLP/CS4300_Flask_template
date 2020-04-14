@@ -14,8 +14,13 @@ def search():
 	if query == '' or query is None: 
 		query = None 
 	
-	jokes = Joke.query.filter_by(score =  min_score).all()
-    
+	if min_score is not None: 
+		jokes = Joke.query.filter_by(score =  min_score).all()
+	else: 
+		jokes = Joke.query.all()
+	
+	Joke.testFunct()
+	
 	results = [
       {
         "text": joke.text,
@@ -23,7 +28,6 @@ def search():
         "score": str(joke.score),
         "maturity": joke.maturity,
       } for joke in jokes]
-	
 
 	if not query:
 		data = []

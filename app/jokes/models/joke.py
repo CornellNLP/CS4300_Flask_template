@@ -19,10 +19,13 @@ class Joke(Base):
     """Define a base way to print models"""
     return str(self.__dict__)
 
-
-  
-
+  @classmethod
+  def testFunct(cls):
+    print('test')
 
 class JokeSchema(ModelSchema):
   class Meta:
     model = Joke
+    fields = ('text', 'categories', 'score', 'maturity')  # Serialize these fields
+
+    
