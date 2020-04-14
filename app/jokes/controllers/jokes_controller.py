@@ -9,11 +9,6 @@ from . import *
 } 
 """
 
-
-def hello():
-  print("hello")
-
-
 @jokes.route('/api', methods=['GET','POST'])
 def handle_jokes():
   if request.method == 'POST':

@@ -23,9 +23,6 @@ class Joke(Base):
   def testFunct(cls):
     print('test')
 
-  
-
-
 class JokeSchema(ModelSchema):
   class Meta:
     model = Joke
