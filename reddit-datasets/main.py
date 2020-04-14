@@ -35,14 +35,16 @@ def open_datastructures():
     return inverted_index, idf, norms, post_list
 
 def run_tests(inverted_index, idf, norms, post_list):
-    test_query = "my cab driver tonight was so excited to share with me that he'd made the cover of the calendar i told him i'd help let the world see"
-    query1 = "I found out that a coworker in the same position"
-    query2 = "a mandatory class in high school that teaches about budgeting, handling or avoiding debt"
-    query3 = "He went for a full body soak instead"
-    query4 = "I think that the moon should be smaller than the sun because science"
-    query5 = "Hey dad, I'm hungry. Hi hungry I'm dad!"
-    ranks = compare_string_to_posts(query5, inverted_index, idf, norms)
-    print(find_subreddits(10, ranks, post_list))
+    # test_query = "my cab driver tonight was so excited to share with me that he'd made the cover of the calendar i told him i'd help let the world see"
+    # query1 = "I found out that a coworker in the same position"
+    # query2 = "a mandatory class in high school that teaches about budgeting, handling or avoiding debt"
+    # query3 = "He went for a full body soak instead"
+    # query4 = "I think that the moon should be smaller than the sun because science"
+    # query5 = "Hey dad, I'm hungry. Hi hungry I'm dad!"
+    while True:
+        print("query:", "")
+        ranks = compare_string_to_posts(input(), inverted_index, idf, norms)
+        print(find_subreddits(10, ranks, post_list))
 
 inverted_index, idf, norms, post_list = open_datastructures()
 run_tests(inverted_index, idf, norms, post_list)
