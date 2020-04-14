@@ -2,17 +2,19 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 import statistics
+from collections import Counter
 
 """
 used to use the finalized dataset to come up with meaningful statistics, like
 word averages, etc
 """
 
-file_path = 'reddit-data-100-posts.json'
+file_path = 'reddit-datasets/picklejar/reddit-data-1000-posts-processed.json'
 
+print("...opening file")
 with open(file_path) as file:
   data = json.load(file)
-
+print("closing file")
 """
 stats I want to keep track of
 
@@ -32,9 +34,18 @@ def get_stats():
     return  total_words / num_posts, longest_post, shortest_post
 
 len_post_hist = []
+num_posts_per_subreddit = []
 for post in data:
     len_post_hist.append(len(post['title'].split(' ')) + len(post['selftext'].split(' ')))
+    num_posts_per_subreddit.append(post['subreddit'])
 print(statistics.median(len_post_hist))
+
+print(Counter(num_posts_per_subreddit))
+
+temp = plt.hist(num_posts_per_subreddit)
+plt.xlabel("Number of Posts Per Subreddit")
+plt.ylabel("Count")
+plt.show()
 
 temp = plt.hist(len_post_hist, bins=100, range=(2,100))
 plt.xlabel("Number of Words Per Post")

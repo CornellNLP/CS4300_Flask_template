@@ -76,14 +76,16 @@ def get_doc_norms(inv_index, idf, num_docs):
     return norms
 
 def create_and_store_structures():
+    print("...creating structures")
     data = load_data()
     num_docs = len(data)
 
     inverted_index = make_inverted_index(data)
-    idf = get_idf(inverted_index, num_docs)
+    idf = get_idf(inverted_index, num_docs, 0.05)
     norms = get_doc_norms(inverted_index, idf, num_docs)
 
     #store data in pickle files
     pickle.dump(inverted_index, open(jar + str(num_posts) + "-inverted_index.pickle", 'wb'))
     pickle.dump(idf, open(jar + str(num_posts) + "-idf.pickle", 'wb'))
     pickle.dump(norms, open(jar + str(num_posts) + "-norms.pickle", 'wb'))
+    print("completed creating and storing structures.")

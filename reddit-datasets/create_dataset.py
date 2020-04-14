@@ -2,14 +2,17 @@ import requests
 import csv
 import json
 import time
+from collections import Counter
 from shared_variables import num_posts
-from shared_variables import original_dataset_path
+from shared_variables import file_path
+from shared_variables import reddit_list
+from processing import process_post
+
 """
 script is used to create a json of the top n posts for the top 100 subreddits
 """
-fields_we_care_about = ['author', 'created_utc', 'score', 'selftext', 'subreddit', 'total_awards_received', 'title', 'subreddit_subscribers']
-default = ['', 0 , 0, '', 'danger-no-subreddit', 0, '', 0]
-time_between_calls = 0.5 #seconds
+
+time_between_calls = 0.2 #seconds
 
 def make_query(subreddit):
     query_prefix="https://api.pushshift.io/reddit/search/submission/?subreddit="
@@ -19,10 +22,16 @@ def make_query(subreddit):
 
 def create_dataset():
     dataset = []
-    with open("reddit-datasets/top100.csv") as csvfile:
+    with open(reddit_list) as csvfile:
         reader = csv.reader(csvfile)
+
+        #keep track of number of posts in the subreddit
+        cnt = Counter()
+
+        #for ids
+        count = 0
         for subreddit in reader:
-            print("query:" + str(make_query(subreddit[0])), "\n")
+            print("query: " + str(make_query(subreddit[0])), "\n")
 
             #set time between calls so as to not get a throttling error
             time.sleep(time_between_calls)
@@ -32,16 +41,21 @@ def create_dataset():
             data = response['data']
 
             for post in data:
-                if post['over_18']:
-                    print("ignoring " + subreddit[0])
-                    continue
-                shortend_post = {}
-                for field in fields_we_care_about:
-                    if not field in post:
-                        shortend_post[field] = default[fields_we_care_about.index(field)]
-                    else:
-                        shortend_post[field] = post[field]
-                dataset.append(shortend_post)
+                success, ppost = process_post(post)
+                if(success):
+                    cnt[subreddit[0]] += 1
+                    ppost['id'] = count
+                    count += 1
+                    dataset.append(ppost)
+        invalid_subreddits = set()
+        for subreddit_name, freq in cnt.most_common():
+            if freq < num_posts * 0.1: #don't include subreddits with fewer than 10% of posts
+                invalid_subreddits.add(subreddit_name)
+                print("removing " + subreddit_name + " with a low count " + str(freq))
+        finalized_dataset = []
+        for post in dataset:
+            if not post['subreddit'].lower() in invalid_subreddits:
+                finalized_dataset.append(post)
 
-    with open(original_dataset_path, 'w') as outfile:
-        json.dump(dataset, outfile)
+    with open(file_path, 'w') as outfile:
+        json.dump(finalized_dataset, outfile)

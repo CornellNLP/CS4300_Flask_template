@@ -19,9 +19,8 @@ def get_cossim(query, inv_index, idf, norms):
             query_tf[token] = wordcount
     dot_prod = {}
     for token in set(query):
-        if token in inv_index:
+        if token in inv_index and token in idf:
             posts = inv_index[token]
-        # if token in idf:              do we need this if statement
             for index, tf in posts:
                 if index not in dot_prod:
                     dot_prod[index] = 0
