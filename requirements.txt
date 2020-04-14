@@ -50,7 +50,7 @@ python-socketio==4.4.0
 pytz==2019.3
 redis==3.4.1
 requests==2.23.0
-scikit-learn==0.22.1
+scikit-learn==0.22.2
 scipy==1.4.1
 singledispatch==3.4.0.3
 six==1.14.0
