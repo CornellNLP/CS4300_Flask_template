@@ -9,3 +9,6 @@ vagrant/a4keypair.pem
 reddit-data-1000-posts.json
 reddit-data-1000-posts-processed.json
 reddit-data-1000-posts-processed.pickle
+1000-idf.pickle
+1000-inverted_index.pickle
+1000-norms.pickle
