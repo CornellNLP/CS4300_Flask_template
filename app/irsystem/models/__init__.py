@@ -34,14 +34,13 @@ class Recipe(Base):
     protein = Column(Float)
     rating = Column(Float)
     title = Column(String())
-    ingredients = Column(String())
     sodium = Column(Float)
 
 
 class Category(Base):
     __tablename__ = "categories"
     id = Column(Integer, primary_key=True)
-    name = Column(String(40))
+    name = Column(String(40), unique=True)
 
 
 class Ingredient(Base):
