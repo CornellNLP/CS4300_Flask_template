@@ -2,6 +2,15 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
+from app import db
+from app.irsystem.models import (
+    Recipe, 
+    Category, 
+    Ingredient, 
+    RecipeCategorization, 
+    RecipeIngredient
+)
+
 project_name = "Fitness Dream Team"
 net_ids = "Genghis Shyy: gs484, Henri Clarke: hxc2, Alice Hu: ath84, Michael Pinelis: mdp93, Sam Vacura: smv66"
 
@@ -16,3 +25,8 @@ def search():
         output_message = "Your search: " + query
         data = range(5)
     return render_template('search.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
+
+
+@irsystem.route("/test", methods=["GET"])
+def test_route():
+    return jsonify({"status": "Success", "message": "Test Success!"})

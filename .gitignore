@@ -7,3 +7,5 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 .env
+data
+app/db_manage
