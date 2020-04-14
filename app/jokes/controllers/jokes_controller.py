@@ -9,7 +9,12 @@ from . import *
 } 
 """
 
-@jokes.route('/', methods=['GET','POST'])
+
+def hello():
+  print("hello")
+
+
+@jokes.route('/api', methods=['GET','POST'])
 def handle_jokes():
   if request.method == 'POST':
     if request.is_json:
@@ -23,6 +28,7 @@ def handle_jokes():
 
   elif request.method == 'GET':
     jokes = Joke.query.all()
+    print(jokes)
     results = [
       {
         "text": joke.text,
