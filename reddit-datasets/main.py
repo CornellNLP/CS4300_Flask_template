@@ -13,8 +13,6 @@ import time
 #create the dataset from the pushshift api
 #create_dataset()
 
-#process_data()
-
 #create the idf, inverted index, and norms
 #create_and_store_structures()
 
