@@ -1,47 +1,50 @@
-import requests
-import csv
+import pickle
 import json
-import time
+from create_dataset import create_dataset
+from processing import process_data
+from create_structures import create_and_store_structures
+from shared_variables import num_posts
+from shared_variables import jar
+from shared_variables import file_path
+from comparison import compare_string_to_posts
+from comparison import find_subreddits
 
-"""
-script is used to create a json of the top n posts for the top 100 subreddits
-"""
+#create the dataset from the pushshift api
+#create_dataset()
 
-fields_we_care_about = ['author', 'created_utc', 'score', 'selftext', 'subreddit', 'total_awards_received', 'title', 'subreddit_subscribers']
-default = ['', 0 , 0, '', 'danger-no-subreddit', 0, '', 0]
-num_posts = 1
-time_between_calls = 0.5 #seconds
+#process the raw data taken from the api
+#process_data()
 
-def make_query(subreddit):
-    query_prefix="https://api.pushshift.io/reddit/search/submission/?subreddit="
-    query_suffix="&sort=desc&sort_type=score&size="
-    str_num_posts=str(num_posts)
-    return query_prefix + subreddit + query_suffix + str_num_posts
+#create the idf, inverted index, and norms
+#create_and_store_structures()
 
-dataset = []
-with open("top100.csv") as csvfile:
-    reader = csv.reader(csvfile)
-    for subreddit in reader:
-        print("query:" + str(make_query(subreddit[0])), "\n")
 
-        #set time between calls so as to not get a throttling error
-        time.sleep(time_between_calls)
+def open_datastructures():
+    with open(jar + str(num_posts) + "-inverted_index.pickle", 'rb') as file:
+        inverted_index = pickle.load(file)
 
-        raw_response = requests.get(make_query(subreddit[0]))
-        response = raw_response.json()
-        data = response['data']
+    with open(jar + str(num_posts) + "-idf.pickle", 'rb') as file:
+        idf = pickle.load(file)
 
-        for post in data:
-            if post['over_18']:
-                print("ignoring " + subreddit[0])
-                continue
-            shortend_post = {}
-            for field in fields_we_care_about:
-                if not field in post:
-                    shortend_post[field] = default[fields_we_care_about.index(field)]
-                else:
-                    shortend_post[field] = post[field]
-            dataset.append(shortend_post)
+    with open(jar + str(num_posts) + "-norms.pickle", 'rb') as file:
+        norms = pickle.load(file)
 
-with open('reddit-data-' + str(num_posts) + '-post.json', 'w') as outfile:
-    json.dump(dataset, outfile)
+    with open(file_path) as file:
+        post_list = json.load(file)
+
+    return inverted_index, idf, norms, post_list
+
+def run_tests(inverted_index, idf, norms, post_list):
+    # test_query = "my cab driver tonight was so excited to share with me that he'd made the cover of the calendar i told him i'd help let the world see"
+    # query1 = "I found out that a coworker in the same position"
+    # query2 = "a mandatory class in high school that teaches about budgeting, handling or avoiding debt"
+    # query3 = "He went for a full body soak instead"
+    # query4 = "I think that the moon should be smaller than the sun because science"
+    # query5 = "Hey dad, I'm hungry. Hi hungry I'm dad!"
+    while True:
+        print("query:", "")
+        ranks = compare_string_to_posts(input(), inverted_index, idf, norms)
+        print(find_subreddits(10, ranks, post_list))
+
+inverted_index, idf, norms, post_list = open_datastructures()
+run_tests(inverted_index, idf, norms, post_list)

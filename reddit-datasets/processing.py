@@ -1,44 +1,35 @@
 import json
 import re
 import pickle
+from shared_variables import file_path
+from shared_variables import file_path_name
+from shared_variables import original_dataset_path
+from create_structures import load_data
 
-file_path_name = 'reddit-datasets/reddit-data-1-post'
-file_path = file_path_name + ".json"
 """
 this file is to filter out the array of posts based on the following filters:
 
 - posts with fewer than 3 words in the title and body combined
 """
 
-
-# LOAD DATA
-with open(file_path) as file:
-    data = json.load(file)
+def load_data():
+    #open original, unfiltered dataset
+    with open(original_dataset_path) as file:
+        return json.load(file)
 
 # FILTERS
-
-
 def is_too_short(post):
     return len(post['title'].split(' ')) + len(post['selftext'].split(' ')) < 3
 
-
-filters = [is_too_short]
-
 # given a post, determine whether or not we should filter it
 
-
 def should_filter(post):
+    filters = [is_too_short]
     for my_filter in filters:
         if my_filter(post):
             print("...filtering " + post['subreddit'])
             return False
     return True
-
-
-# RUN ALL FILTERS
-processed_data = list(filter(should_filter, data))
-
-# ADD TOKENS TO EACH POST
 
 
 def tokenize(text):
@@ -53,16 +44,20 @@ def tokenize_post(post, tokenizer=tokenize):
     return words_title
 
 
-count = 0
+def process_data():
+    data = load_data()
+    processed_data = list(filter(should_filter, data))
 
-for post in processed_data:
-    post['id'] = count
-    post['tokens'] = tokenize_post(post)
-    count += 1
+    count = 0
 
-# create json with updated tokens
-with open(file_path_name + "-processed.json", 'w') as outfile:
-    json.dump(processed_data, outfile)
+    for post in processed_data:
+        post['id'] = count
+        post['tokens'] = tokenize_post(post)
+        count += 1
 
-# create pickle with updated tokens
-pickle.dump(processed_data, open(file_path_name + "-processed.pickle", 'wb'))
+    # create json with updated tokens
+    with open(file_path, 'w') as outfile:
+        json.dump(processed_data, outfile)
+
+    # create pickle with updated tokens
+    pickle.dump(processed_data, open(file_path_name + '.pickle', 'wb'))
