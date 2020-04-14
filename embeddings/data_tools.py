@@ -29,17 +29,22 @@ def get_descriptor(word):
     else:
         return word
 
-# Returns a list of unique types that appear in the corpus.
-# @param data_list is a list of strings where each string is the review for a
-# beverage and the index of the string is the index of the beverage that the
-# review corresponds to.
+# Returns a list of tokens for each document where the index of the token list
+# is the document ID.
 def tokenize(data_list):
     bev_tokens = []
     descr_rgx = "[a-z]+"
     num_docs = len(data_list)
     for doc_ind in range(0, num_docs):
-        tokens = set(TOKENIZER.tokenize(data_list[doc_ind].lower()))
-        fil_tokens = [x for x in tokens if re.match(descr_rgx, x)]
+        tokens = set(TOKENIZER.tokenize(data_list[doc_ind]))
+        fil_tokens = [x.lower() for x in tokens if re.match(descr_rgx, x.lower())]
         bev_tokens.append(fil_tokens)
-    types = list(set(token for token_list in bev_tokens for token in token_list))
-    return types
+    return bev_tokens
+
+# Return a list of unique types found in entire corpus.
+def get_types(bev_tokens):
+    return list(set(token for token_list in bev_tokens for token in token_list))
+
+# Return a list of descriptors found in each wine's description where index of list
+# is the document ID
+# def get_doc_descriptors(data_list):

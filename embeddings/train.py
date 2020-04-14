@@ -1,14 +1,9 @@
-import sys, os
-sys.path.append(os.getcwd())
-import numpy as np
 from gensim.models import Word2Vec
 from data_tools import get_descriptor, get_wine_data, get_beer_data, tokenize
 
 def main():
-    wine_data = get_wine_data() # Sentence reviews about wines
-    wine_types = tokenize(wine_data) # Set of unique types that appear in sentences
-    beer_data = get_beer_data()
-    beer_types = tokenize(beer_data)
+    wine_data = tokenize(get_wine_data())
+    beer_data = tokenize(get_beer_data())
 
     sentences = [] # placeholder
 
@@ -22,4 +17,4 @@ def main():
 
     model = Word2Vec(norm_sentences, size=300, min_count=5, iter=15)
 
-main()
+# main()
