@@ -20,6 +20,9 @@ class Joke(Base):
     return str(self.__dict__)
 
 
+  
+
+
 class JokeSchema(ModelSchema):
   class Meta:
     model = Joke
