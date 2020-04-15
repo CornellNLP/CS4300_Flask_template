@@ -65,8 +65,17 @@ h1 {
 .body-text {
     margin-top: 50px;
     font-size: 30px; 
-    font-family: normal verdana, arial, helvetica, sans-serif;;
+    font-family: normal verdana, arial, helvetica, sans-serif;
     color: black;
+    text-align: center;
+    
+}
+
+.blurb-text {
+    margin-top: 50px;
+    font-size: 14px; 
+    font-family: normal verdana, arial, helvetica, sans-serif;
+    color: purple;
     text-align: center;
     
 }
