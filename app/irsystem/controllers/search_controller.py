@@ -5,10 +5,8 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app import db
 from app.irsystem.models import (
     Recipe, 
-    Category, 
-    Ingredient, 
-    RecipeCategorization, 
-    RecipeIngredient
+    Category,
+    RecipeCategorization
 )
 
 project_name = "Fitness Dream Team"

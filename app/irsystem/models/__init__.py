@@ -7,7 +7,8 @@ from sqlalchemy import (
     Column,
     ForeignKey,
     DateTime,
-    Float
+    Float,
+    JSON
 )
 from werkzeug import check_password_hash, generate_password_hash  # Hashing
 import hashlib  # For session_token generation (session-based auth. flow)
@@ -26,7 +27,7 @@ class Recipe(Base):
     # recipes table
     __tablename__ = "recipes"
     id = Column(Integer, primary_key=True)
-    directions = Column(String(10000))
+    details = Column(JSON)
     fat = Column(Float)
     date = Column(DateTime)
     calories = Column(Float)
@@ -42,11 +43,12 @@ class Category(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(40), unique=True)
 
-
+"""
 class Ingredient(Base):
     __tablename__ = "ingredients"
     id = Column(Integer, primary_key=True)
     name = Column(String(800))
+"""
 
 
 class RecipeCategorization(Base):
@@ -54,8 +56,9 @@ class RecipeCategorization(Base):
     recipe_id = Column(Integer, ForeignKey("recipes.id"))
     category_id = Column(Integer, ForeignKey("categories.id"))
 
-
+"""
 class RecipeIngredient(Base):
     __tablename__ = "recipe_ingredients"
     recipe_id = Column(Integer, ForeignKey("recipes.id"))
     ingredient_id = Column(Integer, ForeignKey("ingredients.id"))
+"""

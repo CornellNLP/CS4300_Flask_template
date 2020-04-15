@@ -2,9 +2,7 @@ from app import db
 from app.irsystem.models import (
     Recipe, 
     Category, 
-    Ingredient, 
-    RecipeCategorization, 
-    RecipeIngredient
+    RecipeCategorization
 )
 import json
 from app.testdata import data
@@ -20,17 +18,23 @@ def reset_db():
   db.session.commit()
 
 def populate_db():
+  recipes_exist = db.session.query(Recipe).filter_by(id=1).first()
+  if recipes_exist:
+    return
   recipe_counter = 1
   category_counter = 1
   ingredient_counter = 1
   for d in data:
     if len(d) == 11:
       # add main recipe information
+      """
       directions = ""
       for step in d["directions"]:
         directions += step + " "
+      """
+      details_dict = {"directions": d["directions"], "ingredients": d["ingredients"]}
       db.session.add(Recipe(
-          directions = directions,
+          details = details_dict,
           fat = d["fat"],
           date = d["date"],
           calories = d["calories"],
@@ -52,12 +56,14 @@ def populate_db():
         except IntegrityError:
           db.session.rollback()
       
+      """
       # add ingredients
       for ingredient in d["ingredients"]:
         db.session.add(Ingredient(
           name = ingredient
         ))
         db.session.commit()
+      """
       
       # add recipe-category link
       db.session.add(RecipeCategorization(
@@ -66,13 +72,14 @@ def populate_db():
       ))
       db.session.commit()
 
+      """
       # add recipe-ingredient link
       db.session.add(RecipeIngredient(
         recipe_id = recipe_counter,
         ingredient_id = ingredient_counter
       ))
       db.session.commit()
+      """
 
       recipe_counter += 1
       category_counter += 1
-      ingredient_counter += 1
