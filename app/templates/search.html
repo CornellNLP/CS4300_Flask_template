@@ -1,39 +1,44 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/app/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/app/static/main.css">
     </head>
     <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Corona! </button>
-        </form>
-        <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
+        <div class="header">
+            <h1>
+                Sub 
+                <img src="reddit-logo.png" height="90">
                 <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
+                Recommender
+            </h1>
+        </div>
+        <div class="body-text">
+            Where Do I Post?
+        </div>
+        <div> 
+            <form class="form-inline global-search">  
+                <br><br>      
+                <div class="form-group">
+                    <input id="input" type="text" name="search" class="form-control" placeholder="Your Reddit Post Here">
+                </div>
+                <button type="submit" class="btn btn-info"> Go! </button>
+            </form>
+
+            <form class="form-inline global-search">
+            {% if data %}
+                <h2 class="outputmessage">
+                    {{output_message}}
+                </h2>
+                {% for d, _ in data %}  
+                    <br>
+                    <a href="https://www.reddit.com/r/{{d}}" target = "_blank">
+                        r/{{d}}
+                    </a>
+                {% endfor %}
+            {% endif %}
+            </form>
+    </div>
     </body>
 
 </html>
