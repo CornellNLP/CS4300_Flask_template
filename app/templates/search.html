@@ -1,44 +1,46 @@
 <html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/app/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/app/static/main.css">
-    </head>
-    <body>
-        <div class="header">
-            <h1>
-                
-                <img src="reddit-logo-no-text.png" height="100">
-                Subreddit Recommender 
-                
-            </h1>
-        </div>
-        <div class="body-text">
-            Where Do I Post?
-        </div>
-        <div> 
-            <form class="form-inline global-search">  
-                <br><br>      
-                <div class="form-group">
-                    <input id="input" type="text" name="search" class="form-control" placeholder="Your Reddit Post Here">
-                </div>
-                <button type="submit" class="btn btn-info"> Go! </button>
-            </form>
 
-            <form class="form-inline global-search">
-            {% if data %}
-                <h2 class="outputmessage">
-                    {{output_message}}
-                </h2>
-                {% for d, _ in data %}  
-                    <br>
-                    <a href="https://www.reddit.com/r/{{d}}" target = "_blank">
-                        r/{{d}}
-                    </a>
-                {% endfor %}
-            {% endif %}
-            </form>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+
+            <img src="/img/reddit-logo-no-text.png" height="100">
+            Subreddit Recommender
+
+        </h1>
     </div>
-    </body>
+    <div class="body-text">
+        Where Do I Post?
+    </div>
+    <div>
+        <form class="form-inline global-search">
+            <br><br>
+            <div class="form-group">
+                <input id="input" type="text" name="search" class="form-control" placeholder="Your Reddit Post Here">
+            </div>
+            <button type="submit" class="btn btn-info"> Go! </button>
+        </form>
+
+        <form class="form-inline global-search">
+            {% if data %}
+            <h2 class="outputmessage">
+                {{output_message}}
+            </h2>
+            {% for d in data %}
+            <br>
+            <a href="https://www.reddit.com/r/{{d}}" target="_blank">
+                r/{{d}}
+            </a>
+            {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+</body>
 
 </html>
