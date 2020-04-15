@@ -1,16 +1,19 @@
 @media (min-width: 1200px) {
 .container {
     max-width: 970px;
+
 }
+
 }
 @media (min-width:400px){
 .global-search {
 padding: 20px 0;
 text-align:center;
+
 }
 body {
 padding-top: 15%;
-padding-bottom: 15px;
+
 }
 .global-search {
 text-align:center;
@@ -18,21 +21,23 @@ padding:10px;
 }
 .global-search .form-control {
 width:500px;
+
 }
 .global-search * {
 display:inline-block;
 margin-bottom:0;
 }
 }
-.topcorner{
-position:absolute;
-top:2%;
-right:2%;
+.bottomcorner{
+position: fixed;
+bottom:0;
+right:0;
 }
 .btn{
-background-color: #4285F4;
+background-color: #89cff0;
 border: none
+
 }
 .step-links a{
-color: #4285F4;
+color: #89cff0;
 }
