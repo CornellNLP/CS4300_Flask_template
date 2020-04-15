@@ -55,6 +55,7 @@ h1 {
     font-family: 'Varela Round', sans-serif;
     color: black;
     text-align: center;
+    line-height: 155px;
 }
 
 .body-text {
@@ -63,6 +64,7 @@ h1 {
     font-family: normal verdana, arial, helvetica, sans-serif;;
     color: black;
     text-align: center;
+    
 }
 
 .outputmessage {
