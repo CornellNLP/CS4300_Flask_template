@@ -1,6 +1,7 @@
 # Methods to compose HTTP response JSON 
 from flask import jsonify
 import base64
+import re
 import json
 import numpy as np
 
@@ -47,3 +48,7 @@ def json_numpy_obj_hook(dct):
         data = base64.b64decode(dct['__ndarray__'])
         return np.frombuffer(data, dct['dtype']).reshape(dct['shape'])
     return dct
+
+def tokenize(text):
+    lowercase_text = text.lower()
+    return re.findall(r'[a-z]+', lowercase_text)

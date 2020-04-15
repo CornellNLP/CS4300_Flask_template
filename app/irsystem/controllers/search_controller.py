@@ -1,9 +1,10 @@
 from . import *  
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+from app.irsystem.models.search import full_search
 
-project_name = "Ilan's Cool Project Template"
-net_id = "Ilan Filonenko: if56"
+project_name = "Subreddit Recommender"
+class_name = "CS 4300 Spring 2020"
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -13,8 +14,8 @@ def search():
 		output_message = ''
 	else:
 		output_message = "Your search: " + query
-		data = range(5)
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+		data = full_search(query)
+	return render_template('search.html', name=project_name, class_name=class_name, output_message=output_message, data=data)
 
 
 

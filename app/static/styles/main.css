@@ -22,21 +22,25 @@ padding:10px;
 .global-search .form-control {
 width:500px;
 }
+
 .global-search * {
 display:inline-block;
 margin-bottom:0;
 }
 }
-.topcorner{
+
+.topcorner {
 position:absolute;
 top:2%;
 right:2%;
 }
-.btn{
+
+.btn {
 background-color: #ff4600; 
 border: none
 }
-.step-links a{
+
+.step-links a {
 color: #4285F4;
 }
 
