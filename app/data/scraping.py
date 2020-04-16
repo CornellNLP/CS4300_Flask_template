@@ -1,3 +1,4 @@
+import json
 import sys
 
 import dateutil.parser
@@ -14,59 +15,90 @@ def get_bs_request(url):
     return BeautifulSoup(request_response.text, 'html.parser')
 
 
-# links for the search page
-url_pt1 = 'https://www.rev.com/blog/transcript-category/debate-transcripts/page/'
-url_pt2 = '?view=all'
-page = 1
+# get all debate urls from the provided url
+def get_debates(url):
+    page = 1
+    debates = set()
+    debate_results = get_bs_request(url + '/page/' + str(page) + '?view=all')
+    debate_results = debate_results.find_all('div', class_='fl-post-columns-post')
+    # while there are results
+    while len(debate_results) > 0:
+        for result in debate_results:
+            # add the transcript urls to the list
+            debates.add(result.find('a').attrs['href'])
 
-debate_links = []
-debates = dict()
+        page += 1
+        debate_results = get_bs_request(url + '/page/' + str(page) + '?view=all')
+        debate_results = debate_results.find_all('div', class_='fl-post-columns-post')
 
-soup = get_bs_request(url_pt1 + str(page) + url_pt2)
-debate_results = soup.find_all('div', class_='fl-post-columns-post')
-# while there are results
-while len(debate_results) > 0:
-    for result in debate_results:
-        # add links to the transcript to the list
-        link = result.find('a').attrs['href']
-        debate_links.append(link)
+    return debates
 
-    page += 1
-    soup = get_bs_request(url_pt1 + str(page) + url_pt2)
-    debate_results = soup.find_all('div', class_='fl-post-columns-post')
 
-# for each debate transcript link
-for debate_link in debate_links:
-    soup = get_bs_request(debate_link)
-    # intro paragraph for background info
-    intro_text = soup.find_all('div', class_='fl-rich-text')[1].text
+# urls for the search pages
+election_2020_url = 'https://www.rev.com/blog/transcript-category/2020-election-transcripts'
+debates_url = 'https://www.rev.com/blog/transcript-category/debate-transcripts'
+
+debate_urls = get_debates(election_2020_url).union(get_debates(debates_url))
+bad_debates = {'https://www.rev.com/blog/transcripts/transcript-of-the-kamala-harris-and-joe-biden-heated-exchange', 'https://www.rev.com/blog/transcripts/transcript-from-first-night-of-democratic-debates'}
+debate_urls -= bad_debates
+
+# for each debate transcript url
+for debate_url in debate_urls:
+    debate = get_bs_request(debate_url)
+
+    # background info for the debate
+    intro_text = debate.find_all('div', class_='fl-rich-text')[1].text.strip()
+    title = debate.find('h1', class_='fl-heading').text.strip()
+    # attempt to get the date from the background paragraph
+    try:
+        date = dateutil.parser.parse(intro_text, fuzzy=True, ignoretz=True).date()
+    except ValueError:
+        date = None
 
     # get each response
-    transcript_text = soup.find('div', class_='fl-callout-text').find_all('p')
-    transcript_text = [q for q in transcript_text if len(q.contents) == 5]
-    speaker_text = []
-    for quote in transcript_text:
-        name = quote.contents[0].split(':')[0].strip()
-        time = quote.contents[1].text
-        text = quote.contents[4]
-        speaker_text.append((name, time, text))
+    parts = []
+    number = 1
+    speakers = set()
+    transcript_text = debate.find('div', class_='fl-callout-text')
+    for e in transcript_text.children:
+        if e.name == 'p' and len(e.contents) == 5:
+            # text
+            name = e.contents[0].split(':')[0].strip()
+            clock = e.contents[1].text
+            text = e.contents[4].strip()
+
+            if not parts:
+                # hopefully this signals the debate is only one part
+                parts.append({'number': None, 'video': None, 'text': []})
+            if parts[-1]['video'] is None:
+                # url for video is in the text, not the heading
+                parts[-1]['video'] = e.contents[1].attrs['href'].rsplit('&', 1)[0]
+
+            speakers.add(name)
+            parts[-1]['text'].append({'speaker': name, 'time': clock, 'text': text})
+        elif e.name == 'h2':
+            # new part
+            parts.append({'number': number, 'video': None, 'text': []})
+            number += 1
+        else:
+            print(debate_url)
+            print(e)
+            print()
 
     # determine who are the candidates from the background info
-    speakers = set((s[0] for s in speaker_text))
     candidates = set(c for c in speakers if c in intro_text)
     moderators = speakers.difference(candidates)
 
-    # attempt to get the date from the background paragraph
-    try:
-        date = dateutil.parser.parse(intro_text, fuzzy=True).date()
-    except:
-        date = None
-
     # assemble all of the info in a dictionary
-    debates[debate_link] = {
+    debate_info = {
+        'url': debate_url,
+        'title': title,
         'date': date,
         'candidates': candidates,
         'moderators': moderators,
-        'summary': intro_text,
-        'speaker_text': speaker_text
+        'description': intro_text,
+        'parts': parts
     }
+
+    with open('output/' + debate_url.split('/')[-1] + '.txt', 'w') as f:
+        f.write(json.dumps(debate_info, default=str))
