@@ -8,6 +8,7 @@ from nltk.tokenize import TreebankWordTokenizer
 import re
 
 tokenizer = re.compile(r"[^A-z0-9]*\s+[^A-z0-9]*|\.\s*|'(?=s)[A-z]+\s*|-", re.VERBOSE)
+tokenizer = TreebankWordTokenizer()
 
 def tokenize(str):
     toks = tokenizer.split(' ' + str.lower() + ' ')
@@ -17,7 +18,7 @@ def add_tokens(tokenizer, data):
     result = data
 
     for i in range(len(result)):
-        result[i]['toks'] = tokenize(result[i]['joke'])
+        result[i]['toks'] = tokenizer.tokenize(result[i]['joke'])
 
     return result
 
