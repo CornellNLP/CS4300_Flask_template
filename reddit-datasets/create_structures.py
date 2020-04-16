@@ -6,9 +6,8 @@ import string
 import pickle
 import time
 import numpy as np
-from shared_variables import num_posts
-from shared_variables import jar
 from shared_variables import file_path
+from shared_variables import file_path_name
 """
 this file is to create datastructures. Currently creates:
 
@@ -23,7 +22,7 @@ def load_data():
 
 
 """
-  Makes an inverted index from given file
+  Makes an inverted index from given file (list of posts)
   Returns: inverted index as a dictionary
   list of tuples of (post_id, term_count)
 """
@@ -89,19 +88,24 @@ def get_doc_norms(inv_index, idf, num_docs):
 
     return norms
 
+def make_post_lookup(data):
+    post_lookup = {}
+    for post in data:
+        post_lookup[post['id']] = post['subreddit']
+    return post_lookup
 
 def create_and_store_structures():
     print("...creating structures")
     data = load_data()
     num_docs = len(data)
 
+    post_lookup = make_post_lookup(data)
     inverted_index = make_inverted_index(data)
     idf = get_idf(inverted_index, num_docs, 0.05)
     norms = get_doc_norms(inverted_index, idf, num_docs)
-
     # store data in pickle files
-    pickle.dump(inverted_index, open(
-        jar + str(num_posts) + "-inverted_index.pickle", 'wb'))
-    pickle.dump(idf, open(jar + str(num_posts) + "-idf.pickle", 'wb'))
-    pickle.dump(norms, open(jar + str(num_posts) + "-norms.pickle", 'wb'))
+    pickle.dump(post_lookup, open(file_path_name + "-post_lookup.pickle", 'wb'))
+    pickle.dump(inverted_index, open(file_path_name + "-inverted_index.pickle", 'wb'))
+    pickle.dump(idf, open(file_path_name + "-idf.pickle", 'wb'))
+    pickle.dump(norms, open(file_path_name + "-norms.pickle", 'wb'))
     print("completed creating and storing structures.")

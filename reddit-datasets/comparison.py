@@ -50,18 +50,18 @@ def compare_string_to_posts(query, inverted_index, idf, norms):
     Top-level function, outputs list of subreddits for each post in
     post_ids (set of unique subreddit names)
 """
-def find_subreddits(top_x, post_ids, post_list):
+def find_subreddits(top_x, post_ids, post_lookup):
     #need to group posts by subreddit
     subreddit_dict = {}
     subreddit_freq = {}
-    for post, score in post_ids:
-        subreddit = post_list[post]['subreddit']
+    for post_id, score in post_ids:
+        #need to get the post associated with this post id
+        subreddit = post_lookup[post_id]
         if subreddit not in subreddit_dict:
             subreddit_dict[subreddit] = 0
             subreddit_freq[subreddit] = 0
         subreddit_dict[subreddit] += score
         subreddit_freq[subreddit] += 1
-    #TODO: normalize based on # of posts in the subreddit
 
     k = Counter(subreddit_dict)
     normalized = [(x[0], x[1] / float(subreddit_freq[x[0]])) for x in k.most_common(top_x)]

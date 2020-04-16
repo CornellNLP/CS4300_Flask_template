@@ -4,6 +4,7 @@ import pickle
 from shared_variables import file_path
 from shared_variables import file_path_name
 from shared_variables import num_posts
+from shared_variables import min_words_per_post
 from create_structures import load_data
 from collections import Counter
 
@@ -22,7 +23,7 @@ def load_data():
 
 # FILTERS
 def is_too_short(post):
-    return 'selftext' in post and 'title' in post and len(post['title'].split(' ')) + len(post['selftext'].split(' ')) < 10
+    return 'selftext' in post and 'title' in post and len(post['title'].split(' ')) + len(post['selftext'].split(' ')) < min_words_per_post
 
 #figure out if post contains an image, we should ignore those
 def is_img_post(post):
@@ -40,14 +41,12 @@ def should_keep(post):
         my_filter = filters[i]
         name = filterNames[i]
         if my_filter(post):
-            #print("...filtering " + post['subreddit'] + " because " + name)
-            return False
-    return True
+            return False, name
+    return True, ""
 
 
 def tokenize(text):
-    lowercase_text = text.lower()
-    return re.findall(r'[a-z]+', lowercase_text)
+    return re.findall(r'[a-z]+', text.lower())
 
 
 def tokenize_post(post, tokenizer=tokenize):
@@ -57,7 +56,8 @@ def tokenize_post(post, tokenizer=tokenize):
     return words_title
 
 def process_post(post):
-    if(should_keep(post)):
+    is_valid_post, message = should_keep(post)
+    if(is_valid_post):
         shortened_post = {}
         for field in fields_we_care_about:
             if not field in post:
@@ -65,8 +65,13 @@ def process_post(post):
             else:
                 shortened_post[field] = post[field]
         shortened_post['tokens'] = tokenize_post(shortened_post)
-        return True, shortened_post
-    return False, None
+
+        #remove the title and body of the post to lessen the size of the dataset
+        del shortened_post['selftext']
+        del shortened_post['title']
+
+        return True, shortened_post, None
+    return False, None, message
 
 def remove_low_subreddit_counts(dataset):
     count = Counter()
@@ -77,24 +82,35 @@ def remove_low_subreddit_counts(dataset):
     invalid_subreddits = set()
     for subreddit, freq in count.most_common():
         if freq < num_posts * 0.1 : #don't include subreddits with fewer than 10% of original queried posts
-            invalid_subreddits.add(subreddit)
-            print("removing subreddit: " + subreddit)
+            invalid_subreddits.add(subreddit.lower())
 
     finalized_dataset = []
+    index = 0
     for post in dataset:
         if not post['subreddit'].lower() in invalid_subreddits:
+            post['id'] = index
+            index += 1
             finalized_dataset.append(post)
+        else:
+            print("removing: " + post['subreddit'])
     return finalized_dataset
 
 
+"""
+creates a new json with an additional "-manually-added" part of the name added
+to avoid overwriting an exisiting json
+
+in order to be used, the "-manually-added" must be removed from the name of the file,
+which may overwrite an exisiting file. Here is where you must check that process_data()
+actually performed as planned.
+"""
 def process_data():
     data = load_data()
-    #filtered_data = list(filter(should_keep, data))
+    filtered_data = list(filter(should_keep, data))
     final_dataset = remove_low_subreddit_counts(data)
-
     # create json with updated tokens
-    # with open(file_path, 'w') as outfile:
-    #     json.dump(final_dataset, outfile)
+    with open(file_path_name + '-manually-added.json', 'w') as outfile:
+        json.dump(final_dataset, outfile)
 
     # # create pickle with updated tokens
     # pickle.dump(processed_data, open(file_path_name + '.pickle', 'wb'))

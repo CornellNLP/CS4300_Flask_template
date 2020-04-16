@@ -13,3 +13,5 @@ reddit-data-1000-posts-processed.pickle
 1000-inverted_index.pickle
 1000-norms.pickle
 reddit-data-1000-posts-processed-top700.json
+*.pickle
+*.json
