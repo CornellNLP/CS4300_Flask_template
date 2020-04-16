@@ -36,3 +36,16 @@ border: none
 .step-links a{
 color: #4285F4;
 }
+
+/*output formatting i have no idea how bootstrap works and it scares me*/
+.result {
+  display: flex;
+}
+
+.char{
+  flex-grow: 1;
+}
+
+.ratings{
+  flex-grow: 1;
+}

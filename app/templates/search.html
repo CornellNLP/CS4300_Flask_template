@@ -13,23 +13,39 @@
         </div>
         <form class="form-inline global-search">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-              Charcrafter
-            </h1>
+              Charcrafter</h1>
 
             <br><br>
+            <!--blurb-->
+            <h2></h2>
+
 
             <div class="form-group">
                 <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <button type="submit" class="btn btn-info"> Get Builds </button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
             {% for d in data %}
-                <br>
-                <p>{{d}}</p>
+                <br> <!--I have no idea how the data is being output yet.
+                  if dict style, what I have below should be fine
+                  once I know the yeah.  so for d['class'] and so forth
+                I'm assuming it'll be in a list of dictionaries
+              each dict being a result-->
+                  <p>{{d}}</p>
+                  <div class = "result">
+                  <div class="char">
+                    <h2>{{d['class']}}</h2>
+                    <p>{{d['flavor']}}</p>
+                  </div>
+                  <div class="ratings">
+                    <h2>Build Rating</h2>
+                    <h3>{{d['rating']}}</h3>
+                  </div>
             {% endfor %}
+            </div>
         {% endif %}
         </form>
     </body>
