@@ -1,5 +1,5 @@
 # CS4300 - Flask Template
-This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience). 
+This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience).
 
 **We recommend you start with the quick start guide FIRST and then read the Flask Template Walk-through section.** Some may find the additional information about AWS and KUBERNETES deployment to be useful, but those are not vital to getting your project working.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 An aside note: In the above example, we created a virtualenv for a python3 environment. You will have python3.7.6 installed by default as we have used that version for assignments. This is what we will use for the application as well.
 
-**NOTE:** While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly. 
+**NOTE:** While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly.
 This will be important when you add new dependencies.
 
 To add any dependencies for future development just do this:
@@ -43,11 +43,11 @@ To add any dependencies for future development just do this:
 pip install <MODULE_NAME>
 pip freeze > requirements.txt
 ```
-### 3. Ensuring environment variables are present 
+### 3. Ensuring environment variables are present
 
-We will be using environment variables to manage configurations for our application. 
-This is a good practice to hide settings you want to keep out of your public code like passwords or machine-specific configurations. 
-We will maintain all of our environment variables in a file, and we will populate our environment with these settings before running the app. 
+We will be using environment variables to manage configurations for our application.
+This is a good practice to hide settings you want to keep out of your public code like passwords or machine-specific configurations.
+We will maintain all of our environment variables in a file, and we will populate our environment with these settings before running the app.
 We have provided you with starter environment files but remember to add them to your `.gitignore` if you add sensitive information to them.
 
 #### Unix - MacOSx, Linux, Git Bash on Windows
@@ -85,7 +85,7 @@ echo "source `which activate.sh`" >> ~/.bashrc
 # Reload your shell
 source ~/.bashrc
 
-# Check to see you have a .env file that exists and 
+# Check to see you have a .env file that exists and
 # has sets the appropriate APP_SETTINGS and DATABASE_URL variables;
 # else create a new file with those variables
 cat .env
@@ -123,7 +123,7 @@ We have included a Procfile (*process file*) that leverages gunicorn (which you 
 
 To set up heroku and push this app to it, you must do the following:
 
-1. Install the heroku-cli following the installation instructions found [here](https://devcenter.heroku.com/articles/heroku-cli) and create an account with heroku. 
+1. Install the heroku-cli following the installation instructions found [here](https://devcenter.heroku.com/articles/heroku-cli) and create an account with heroku. (Windows Subsystem for Linux users may find that the Ubuntu command will not work for them and should use the Windows installer instead.)
 After that, run the following commands to push to your heroku app into deployment using git from your command line!
 
 ``` bash
@@ -148,13 +148,13 @@ $ git push heroku master
 
 3. You need to modify your environment variables (remember your .env?) by navigating to
 `https://dashboard.heroku.com/apps/<YOUR_WEBSITE_NAME>/settings`, clicking `Reveal Config Vars` and in the left box below DATABASE_URL write:
-`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`. 
+`APP_SETTINGS` and in the box to the right write: `config.ProductionConfig`.
 
 (In essence you are writing `export APP_SETTINGS=config.ProductionConfig` in .env using Heroku's UI. You can also do this from the heroku-cli using the `heroku config:edit` command.)
 
 ![](img/app_settings_img.png)
 
-4. You lastly will run: `heroku ps:scale web=1`. 
+4. You lastly will run: `heroku ps:scale web=1`.
 You may now navigate to `https://<YOUR_WEBSITE_NAME>.herokuapp.com` and see your app in production. From now on, you can continue to push to Heroku and have a easy and well-managed dev flow into production. Hooray!
 
 You can check out the example herokuapp: [here](https://thawing-crag-43231.herokuapp.com/)
@@ -166,12 +166,12 @@ To begin customizing this boilerplate webapp to actually do something interestin
 
 If you plan on reading no further than this, please at least skim the section **[An Indepth Flask App Walk-through](#an-indepth-flask-app-walk-through)**, it will provide you a good background on how to interact and modify this template.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ## An Indepth Flask App Walk-through
 This will overview `Flask` development operations for setting up a new project with an emphasis on the `Model-View-Controller` design pattern. This guide will be utilizing `PostgreSQL` to drive persistent storage on the backend.  
 
-Some of the first few sections will mirror the steps you took in the quickstart guide but will be more in-depth. 
+Some of the first few sections will mirror the steps you took in the quickstart guide but will be more in-depth.
 
 ### Organization
 A `Flask` app has some utility scripts at the top-level, and has a modular organization when defining any sort of functionality.  Dividing up a `Flask` app into modules allows one to separate resource / logic concerns.  
@@ -361,7 +361,7 @@ Your server is now running!
 
 ## That's it, for now...
 
-This marks the end of project configuration for a well-constructed `Flask` app following `MVC`.  However, for additional development-related advice regarding project setup, keep reading. 
+This marks the end of project configuration for a well-constructed `Flask` app following `MVC`.  However, for additional development-related advice regarding project setup, keep reading.
 
 ### Accounts Blueprint
 
