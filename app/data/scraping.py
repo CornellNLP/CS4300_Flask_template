@@ -34,16 +34,7 @@ def get_debates(url):
     return debates
 
 
-# urls for the search pages
-election_2020_url = 'https://www.rev.com/blog/transcript-category/2020-election-transcripts'
-debates_url = 'https://www.rev.com/blog/transcript-category/debate-transcripts'
-
-debate_urls = get_debates(election_2020_url).union(get_debates(debates_url))
-bad_debates = {'https://www.rev.com/blog/transcripts/transcript-of-the-kamala-harris-and-joe-biden-heated-exchange', 'https://www.rev.com/blog/transcripts/transcript-from-first-night-of-democratic-debates'}
-debate_urls -= bad_debates
-
-# for each debate transcript url
-for debate_url in debate_urls:
+def scrape_url(debate_url, folder_name):
     debate = get_bs_request(debate_url)
 
     # background info for the debate
@@ -100,5 +91,24 @@ for debate_url in debate_urls:
         'parts': parts
     }
 
-    with open('output/' + debate_url.split('/')[-1] + '.txt', 'w') as f:
+    with open(folder_name + '/' + debate_url.split('/')[-1] + '.txt', 'w') as f:
         f.write(json.dumps(debate_info, default=str))
+
+
+# urls for the search pages
+election_2020_url = 'https://www.rev.com/blog/transcript-category/2020-election-transcripts'
+debates_url = 'https://www.rev.com/blog/transcript-category/debate-transcripts'
+
+# list of debate transcript urls
+debate_urls = get_debates(debates_url)
+election_2020_urls = get_debates(election_2020_url) - debate_urls
+
+bad_debates = {'https://www.rev.com/blog/transcripts/transcript-of-the-kamala-harris-and-joe-biden-heated-exchange', 'https://www.rev.com/blog/transcripts/transcript-from-first-night-of-democratic-debates'}
+debate_urls -= bad_debates
+
+# for each debate transcript url, get all info and save to a file
+for url in debate_urls:
+    scrape_url(url, 'debates')
+
+for url in election_2020_urls:
+    scrape_url(url, 'others')

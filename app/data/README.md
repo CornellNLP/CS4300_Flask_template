@@ -44,3 +44,6 @@ Debate Info Structure:
         },
     ]
 }
+
+
+Right now there are two folders: debates and others. I think we should focus on debates for the firs prototype.
