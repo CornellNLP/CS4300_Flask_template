@@ -87,15 +87,15 @@ for debate_url in debate_urls:
 
     # determine who are the candidates from the background info
     candidates = set(c for c in speakers if c in intro_text)
-    moderators = speakers.difference(candidates)
+    other_speakers = speakers.difference(candidates)
 
     # assemble all of the info in a dictionary
     debate_info = {
         'url': debate_url,
         'title': title,
         'date': date,
-        'candidates': candidates,
-        'moderators': moderators,
+        'candidates': list(candidates),
+        'other_speakers': list(other_speakers),
         'description': intro_text,
         'parts': parts
     }

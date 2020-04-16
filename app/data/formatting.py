@@ -1,14 +1,11 @@
 import json
+import os
+
 from nltk.tokenize import word_tokenize
 
 
-def get_debate(filename):
-    with open(filename) as f:
-        return json.load(f)
-
-
 def fix_addressing(debate):
-    speakers = eval(debate['candidates']).union(eval(debate['moderators']))
+    speakers = set(debate['candidates'] + debate['other_speakers'])
     speakers_dict = dict()
     for name in speakers:
         for name_part in name.lower().split(' '):
@@ -45,44 +42,38 @@ def combine_speakers(transcript):
     return new_transcript[1:]
 
 
-def exact_search(transcript, topic):
-    return [x for x in transcript if topic in x[2]]
+def annotate_question_response(debate):
+    speakers_dict, debate = fix_addressing(debate)
+    transcript = combine_speakers(debate['speaker_text'])
+
+    candidates = set(debate['candidates'])
+    other_speakers = set(debate['other_speakers'])
+    for i, line in enumerate(transcript):
+        if line['speaker'] in other_speakers:
+            line['question'] = '?' in line['text']
+            if line['question']:
+                r = []
+                for x in word_tokenize(line['text'].lower().replace('-', '')):
+                    if x in speakers_dict:
+                        r.append(speakers_dict[x])
+                if r:
+                    line['addressed_to'] = r[-1]
+                else:
+                    print()
+        else:
+            if 'question' and transcript[i-1]['question']:
+                if 'addressed_to' in transcript[i-1] and line['speaker'] == transcript[i-1]['addressed_to']:
+                    line['response_to'] = i-1
+                else:
+                    print()
 
 
-debate = get_debate('output/december-democratic-debate-transcript-sixth-debate-from-los-angeles.txt')
-speakers_dict, debate = fix_addressing(debate)
-transcript = combine_speakers(debate['speaker_text'])
+# debate = get_debate('output/december-democratic-debate-transcript-sixth-debate-from-los-angeles.txt')
+for file_name in os.listdir('output/'):
+    with open('output/' + file_name) as f:
+        debate = json.load(f)
 
-candidates = eval(debate['candidates'])
-moderators = eval(debate['moderators'])
-for i, line in enumerate(transcript):
-    if line['speaker'] in moderators:
-        line['question'] = '?' in line['text']
-        if line['question']:
-            r = []
-            for x in word_tokenize(line['text'].lower().replace('-', '')):
-                if x in speakers_dict:
-                    r.append(speakers_dict[x])
-            if r:
-                line['addressed_to'] = r[-1]
-            else:
-                print()
-    else:
-        if 'question' and transcript[i-1]['question']:
-            if 'addressed_to' in transcript[i-1] and line['speaker'] == transcript[i-1]['addressed_to']:
-                line['response_to'] = i-1
-            else:
-                print()
+    
 
-
-
-
-topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
-          'education', 'economy', 'immigration', 'abortion', 'federal deficit',
-          'climate change', 'environment', 'war', 'corona virus', 'covid 19']
-
-# for topic in topics:
-#     print(topic)
-#     for x in exact_search(transcript, topic):
-#         print(x)
-#     print()
+    with open('output/' + file_name, 'w') as f:
+        f.write(json.dumps(debate, default=str))

@@ -7,13 +7,40 @@ This file pulls all debate links from the 2020 election and debates categories. 
 2. Make sure scraping is final before starting step!! Now, the output is manually checked (can use the url):
     - the title is descriptive
     - the date is correct ("YYYY-MM-DD")
-    - the candidates and moderators are correctly classified
-    - any duplicates in candidates and moderators are removed and the correct (full, no title) name is inputted (ie. if there's E. Warren and Sen. Warren delete both and replace with Elizabeth Warren)
+    - the candidates and other_speakers are correctly classified
+    - any duplicates in candidates and other_speakers are removed and the correct (full, no title) name is inputted (ie. if there's E. Warren and Sen. Warren delete both and replace with Elizabeth Warren)
     - the description is helpful, remove any references to rev.com
     - there is text for all parts (list isn't empty)* 
-* If the list is empty, check the url b/c that may mean there are no timestamps or the formatting is weird in some other way. If so, delete the file and add the url to 'bad_debates' in scraping.py
+*If the list is empty, check the url b/c that may mean there are no timestamps or the formatting is weird in some other way. If so, delete the file and add the url to 'bad_debates' in scraping.py
 
 3. run formatting.py
 This is still under construction, but ideally it will:
     - replace all speakers in the text with the correct name from part 2
     - match all questions with responses
+    - random fixes to prevent rerunning scraping (ex. converting sets to lists)
+
+
+Debate Info Structure:
+{
+    "url": str, 
+    "title": str, 
+    "date": "YYYY-MM-DD", 
+    "candidates": list of str, 
+    "other_speakers": list of str, 
+    "description": str, 
+    "parts": [
+        {
+            "number": null (only one part) or int, 
+            "video": str (not the actual video link since that expires), 
+            "text": [
+                {
+                    "speaker": str, 
+                    "time": str?, 
+                    "text": str,
+                    "question": bool,
+                    "response": list of int (if question) or int
+                }, 
+            ]
+        },
+    ]
+}
