@@ -10,19 +10,19 @@ from comparison import find_subreddits
 import time
 
 #create the dataset from the pushshift api
-print("Looking at " + file_path_name)
-print("create dataset? this will make queries to the api and can take a long time y/n")
-ans = input()
-if ans == 'y':
-    create_dataset()
+# print("Looking at " + file_path_name)
+# print("create dataset? this will make queries to the api and can take a long time y/n")
+# ans = input()
+# if ans == 'y':
+#     create_dataset()
 
 
 #create the idf, inverted index, and norms
 
-print("create and store structures? y/n")
-ans = input()
-if ans == 'y':
-    create_and_store_structures()
+# print("create and store structures? y/n")
+# ans = input()
+# if ans == 'y':
+#     create_and_store_structures()
 
 
 def open_datastructures():

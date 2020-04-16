@@ -15,3 +15,4 @@ reddit-data-1000-posts-processed.pickle
 reddit-data-1000-posts-processed-top700.json
 *.pickle
 *.json
+.DS_Store

@@ -3,11 +3,11 @@ import csv
 import json
 import time
 from collections import Counter
-from shared_variables import num_posts
-from shared_variables import file_path
-from shared_variables import reddit_list
-from shared_variables import num_subreddits
-from processing import process_post
+from app.irsystem.models.shared_variables import num_posts
+from app.irsystem.models.shared_variables import file_path
+from app.irsystem.models.shared_variables import reddit_list
+from app.irsystem.models.shared_variables import num_subreddits
+from app.irsystem.models.processing import process_post
 
 """
 script is used to create a json of the top n posts for the top 100 subreddits

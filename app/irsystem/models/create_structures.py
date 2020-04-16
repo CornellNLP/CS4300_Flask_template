@@ -6,8 +6,9 @@ import string
 import pickle
 import time
 import numpy as np
-from shared_variables import file_path
-from shared_variables import file_path_name
+from app.irsystem.models.shared_variables import file_path
+from app.irsystem.models.shared_variables import file_path_name
+from app.irsystem.models.shared_variables import max_document_frequency
 """
 this file is to create datastructures. Currently creates:
 
@@ -101,7 +102,7 @@ def create_and_store_structures():
 
     post_lookup = make_post_lookup(data)
     inverted_index = make_inverted_index(data)
-    idf = get_idf(inverted_index, num_docs, 0.05)
+    idf = get_idf(inverted_index, num_docs, 0, max_document_frequency)
     norms = get_doc_norms(inverted_index, idf, num_docs)
     # store data in pickle files
     pickle.dump(post_lookup, open(file_path_name + "-post_lookup.pickle", 'wb'))

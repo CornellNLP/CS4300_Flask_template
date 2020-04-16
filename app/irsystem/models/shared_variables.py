@@ -2,6 +2,15 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
-num_posts = 100
-file_path_name = jar + 'reddit-data-' + str(num_posts) + '-posts-processed'
+num_posts = 1000
+num_subreddits = 10000
+min_words_per_post = 10
+max_document_frequency = 0.05
+"""
+DATASET NAMING CONVENTION
+""<num posts>p<num subreddits>s<min words per post>mwc.json"
+Example: 1000p700s10mwc.json
+"""
+file_path_name = jar + str(num_posts) + 'p' + str(num_subreddits) + 's' + str(min_words_per_post) + 'mwc'
 file_path = file_path_name + ".json"
+reddit_list = jar + 'subreddits.csv'

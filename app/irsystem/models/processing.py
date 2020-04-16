@@ -1,11 +1,11 @@
 import json
 import re
 import pickle
-from shared_variables import file_path
-from shared_variables import file_path_name
-from shared_variables import num_posts
-from shared_variables import min_words_per_post
-from create_structures import load_data
+from app.irsystem.models.shared_variables import file_path
+from app.irsystem.models.shared_variables import file_path_name
+from app.irsystem.models.shared_variables import num_posts
+from app.irsystem.models.shared_variables import min_words_per_post
+from app.irsystem.models.create_structures import load_data
 from collections import Counter
 
 """
