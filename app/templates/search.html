@@ -30,10 +30,27 @@
          </header>
 
          <main role="main" class="inner cover">
-            <p class="lead main-form text-justify">I wanna drink some [beer or wine]. I want it to have a [shit] flavour. Additionally, it should also [smell really bad].</p>
-            <p class="lead mt-5">
-               <a href="#" class="btn btn-lg btn-secondary">pick my poison</a>
-            </p>
+            <form class="main-form">
+
+               <p class="lead d-flex justify-content-between text-nowrap">
+                  <span>I wanna drink some </span>
+                  <label class="sr-only" for="inlineFormInputName2">Name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="beer">
+               </p>
+               <p class="lead d-flex justify-content-between text-nowrap">
+                  <span>It should taste like </span>
+                  <label class="sr-only" for="inlineFormInputName2">Name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="shit">
+               </p>
+               <p class="lead d-flex justify-content-between text-nowrap">
+                  <span>I also want it to </span>
+                  <label class="sr-only" for="inlineFormInputName2">Name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="smell really bad">
+               </p>
+               <p class="lead mt-5 mx-auto">
+                  <button type="submit" class="btn btn-lg btn-secondary">pick my poison</button>
+               </p>
+            </form>
          </main>
 
          <footer class="mastfoot mt-auto">
