@@ -1,6 +1,7 @@
 import pickle
 import json
 import re
+import math
 from collections import Counter
 from app.irsystem.models.shared_variables import file_path
 from app.irsystem.models.shared_variables import jar
@@ -51,10 +52,11 @@ def compare_string_to_posts(query, inverted_index, idf, norms):
     Top-level function, outputs list of subreddits for each post in
     post_ids (set of unique subreddit names)
 """
-def find_subreddits(top_x, post_ids, post_lookup):
+def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
     #need to group posts by subreddit
     subreddit_dict = {}
     subreddit_freq = {}
+
     for post_id, score in post_ids:
         #need to get the post associated with this post id
         subreddit = post_lookup[post_id]
@@ -65,5 +67,10 @@ def find_subreddits(top_x, post_ids, post_lookup):
         subreddit_freq[subreddit] += 1
 
     k = Counter(subreddit_dict)
-    normalized = [(x[0], x[1] / float(subreddit_freq[x[0]])) for x in k.most_common(top_x)]
+
+    for x in k.most_common(top_x):
+        print(x[0] + "    "  + str(subreddit_freq[x[0]]) + "   " + str(subreddit_lookup[x[0]]) + "   " + str(x[1]))
+
+    normalized = [(x[0], float(x[1]) * float(subreddit_freq[x[0]]) / float(subreddit_lookup[x[0]])) for x in k.most_common(top_x)]
+    print(normalized)
     return sorted(normalized, key=lambda x: x[1], reverse=True)

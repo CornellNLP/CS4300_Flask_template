@@ -89,23 +89,29 @@ def get_doc_norms(inv_index, idf, num_docs):
 
     return norms
 
-def make_post_lookup(data):
+def make_post_subreddit_lookup(data):
     post_lookup = {}
+    subreddit_lookup = {}
     for post in data:
         post_lookup[post['id']] = post['subreddit']
-    return post_lookup
+        if not post['subreddit'] in subreddit_lookup:
+            subreddit_lookup[post['subreddit']] = 0
+        subreddit_lookup[post['subreddit']] += 1
+    return post_lookup, subreddit_lookup
 
 def create_and_store_structures():
     print("...creating structures")
     data = load_data()
     num_docs = len(data)
 
-    post_lookup = make_post_lookup(data)
+    post_lookup, subreddit_lookup = make_post_subreddit_lookup(data)
     inverted_index = make_inverted_index(data)
     idf = get_idf(inverted_index, num_docs, 0, max_document_frequency)
     norms = get_doc_norms(inverted_index, idf, num_docs)
+
     # store data in pickle files
     pickle.dump(post_lookup, open(file_path_name + "-post_lookup.pickle", 'wb'))
+    pickle.dump(subreddit_lookup, open(file_path_name + "-subreddit_lookup.pickle", 'wb'))
     pickle.dump(inverted_index, open(file_path_name + "-inverted_index.pickle", 'wb'))
     pickle.dump(idf, open(file_path_name + "-idf.pickle", 'wb'))
     pickle.dump(norms, open(file_path_name + "-norms.pickle", 'wb'))

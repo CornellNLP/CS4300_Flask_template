@@ -9,23 +9,23 @@ from app.irsystem.models.shared_variables import file_path_name
 from app.irsystem.models.comparison import compare_string_to_posts
 from app.irsystem.models.comparison import find_subreddits
 
-#create the dataset from the pushshift api
+# #create the dataset from the pushshift api
 # print("Looking at " + file_path_name)
 # print("create dataset? this will make queries to the api and can take a long time y/n")
 # ans = input()
 # if ans == 'y':
 #     create_dataset()
-
-
-#create the idf, inverted index, and norms
-
-print("create and store structures? y/n")
-ans = input()
-if ans == 'y':
-    create_and_store_structures()
-
-print("delay end.")
-input()
+#
+#
+# #create the idf, inverted index, and norms
+#
+# print("create and store structures? y/n")
+# ans = 'y' #input()
+# if ans == 'y':
+#     create_and_store_structures()
+#
+# print("delay end.")
+# input()
 
 def open_datastructures():
     with open(file_path_name + "-inverted_index.pickle", 'rb') as file:
@@ -47,16 +47,22 @@ def open_datastructures():
         print("...loading posts")
         post_lookup = pickle.load(file)
         print("finished loading posts")
-    return inverted_index, idf, norms, post_lookup
 
-def run_tests(inverted_index, idf, norms, post_lookup):
+    with open(file_path_name + "-subreddit_lookup.pickle", 'rb') as file:
+        print("...loading posts")
+        subreddit_lookup = pickle.load(file)
+        print("finished loading posts")
+
+    return inverted_index, idf, norms, post_lookup, subreddit_lookup
+
+def run_tests(inverted_index, idf, norms, post_lookup, subreddit_lookup):
     while True:
         print("\nquery: ", "")
         ranks = compare_string_to_posts(input(), inverted_index, idf, norms)
-        print(find_subreddits(10, ranks, post_lookup))
+        print(find_subreddits(10, ranks, post_lookup, subreddit_lookup))
 
 def full_search(query):
     ranks = compare_string_to_posts(query, inverted_index, idf, norms)
-    return find_subreddits(10, ranks, post_lookup)
+    return find_subreddits(10, ranks, post_lookup, subreddit_lookup)
 
-inverted_index, idf, norms, post_lookup = open_datastructures()
+inverted_index, idf, norms, post_lookup, subreddit_lookup = open_datastructures()

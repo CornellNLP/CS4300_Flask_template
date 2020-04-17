@@ -3,9 +3,9 @@ import os
 this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
 num_posts = 1000
-num_subreddits = 10000
+num_subreddits = 1075
 min_words_per_post = 10
-max_document_frequency = 0.05
+max_document_frequency = 0.5
 """
 DATASET NAMING CONVENTION
 ""<num posts>p<num subreddits>s<min words per post>mwc.json"
