@@ -1,27 +1,36 @@
+import sys, os
+sys.path.append(os.getcwd())
 from gensim.models import Word2Vec
-from data_tools import get_descriptor, get_wine_data, get_beer_data, tokenize
+from nltk.tokenize import sent_tokenize, word_tokenize
+from data_tools import get_descriptor, get_wine_data, get_beer_data, normalize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from app.irsystem.models.database import add_drink_batch, Drink
 import numpy as np
 
 def main():
-    wine_data = tokenize(get_wine_data())
-    beer_data = tokenize(get_beer_data())
+    wine_data = get_wine_data(25000)
+    wine_desc = [str(x) for x in list(wine_data['description'])]
+    beer_data = get_beer_data(25000)
+    beer_desc = [str(x) for x in list(beer_data['review/text'])]
+    full_text = ' '.join(wine_desc) + ' ' + ' '.join(beer_desc)
+    sentences = sent_tokenize(full_text)
+    
+    norm_sentences = [normalize(s) for s in sentences]
 
     # TODO(@dana) List of word lists (lol) for each sentence in corpus after
     # removing stop words, normalizing tokens, and phrasing using n-grams
     sentences = []
 
     # Replace tokens with descriptors when possible
-    norm_sentences = []
+    final_sentences = []
     for s in sentences:
-        norm_s = []
+        final_s = []
         for w in s:
-            norm_w = get_descriptor(w)
-            norm_s.append(norm_w)
-        norm_sentences.append(norm_s)
+            desc_w = get_descriptor(w)
+            final_s.append(desc_w)
+        final_sentences.append(final_s)
 
-    model = Word2Vec(norm_sentences, size=300, min_count=5, iter=15)
+    model = Word2Vec(final_sentences, size=300, min_count=5, iter=15)
 
     # List of descriptor words for each drink description
     drink_descs = []

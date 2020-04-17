@@ -1,26 +1,29 @@
 import json
+import string
 import numpy as np
-import re
-from nltk.tokenize import TreebankWordTokenizer
+from nltk.tokenize import word_tokenize
+from nltk.stem import SnowballStemmer
+from nltk.corpus import stopwords
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 
-DATA_DIR = 'data/'
+DATA_DIR = 'embeddings/data/'
 DESC_MAP = pd.read_csv(DATA_DIR + 'descriptor_mapping.csv').set_index('raw descriptor')
-TOKENIZER = TreebankWordTokenizer()
+STEMMER = SnowballStemmer('english')
+PUNC_TABLE = str.maketrans({c: None for c in string.punctuation})
+STOP_WORDS = set(stopwords.words('english'))
 
-# Import wine data and extract reviews.
-def get_wine_data():
-    f=open(DATA_DIR+"winemag-data-130k-v2.json", "r")
-    transcripts = json.load(f)
-    transcripts = transcripts[0:25000]
-    return [t["description"] for t in transcripts]
+# Import wine data
+def get_wine_data(n=None):
+    transcripts = pd.read_json(DATA_DIR+"winemag-data-130k-v2.json")
+    return transcripts if n is None else transcripts[0:n]
+    # return [t["description"] for t in transcripts]
 
-# Import beer data and extract reviews.
-def get_beer_data():
-    transcripts = pd.read_csv(DATA_DIR+"beer_train.csv").to_numpy()
-    transcripts = transcripts[0:25000]
-    return [t[4] for t in transcripts]
+# Import beer data
+def get_beer_data(n=None):
+    transcripts = pd.read_csv(DATA_DIR+"beer_train.csv")
+    return transcripts if n is None else transcripts[0:n]
+    # return [t[4] for t in transcripts]
 
 def get_descriptor(word):
     if word in list(DESC_MAP.index):
@@ -28,18 +31,19 @@ def get_descriptor(word):
         return norm
     else:
         return word
-
-# Returns a list of tokens for each document where the index of the token list
-# is the document ID.
-def tokenize(data_list):
-    bev_tokens = []
-    descr_rgx = "[a-z]+"
-    num_docs = len(data_list)
-    for doc_ind in range(0, num_docs):
-        tokens = set(TOKENIZER.tokenize(data_list[doc_ind]))
-        fil_tokens = [x.lower() for x in tokens if re.match(descr_rgx, x.lower())]
-        bev_tokens.append(fil_tokens)
-    return bev_tokens
+    
+# Convert raw string into a list of lowercase, stemmed, punctuation-free tokens
+# TODO: Might need try/except block
+def normalize(text):
+    tokens = word_tokenize(text)
+    res = []
+    for t in tokens:
+        word = str.lower(str(t))
+        stem = STEMMER.stem(word)
+        norm = stem.translate(PUNC_TABLE)
+        if len(norm) > 1 and norm not in STOP_WORDS:
+            res.append(norm)
+    return res
 
 # Return a list of unique types found in entire corpus.
 def get_types(bev_tokens):
