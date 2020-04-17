@@ -15,7 +15,7 @@ class DebateItem extends React.Component {
             ></ResultItem>
         )
         return (
-            <div>
+            <div className = "debate-item-wrapper">
                 <DebateDescription
                     title={title}
                     date={date}
@@ -31,9 +31,9 @@ class DebateItem extends React.Component {
 function DebateDescription(props) {
     return (
         <div>
-            <h2>{props.title}</h2>
-            <h3>{props.date}</h3>
-            <p>{props.description}</p>
+            <div className="debate-title">{props.title}</div>
+            <div className="debate-date">{props.date}</div>
+            <div className="debate-description">{props.description}</div>
         </div>
     )
 }

@@ -1,0 +1,11 @@
+input[type=text] {
+    padding: 8px;
+    margin: 8px;
+    width: 15%;
+    font-size: 14px;
+}
+
+.input-message {
+    font-size: 10px; 
+    color: grey; 
+}

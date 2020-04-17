@@ -1,8 +1,10 @@
 .input-item_div_wrapper {
     display: flex; 
     flex-direction: row;
-    background-color: blue;
     border-radius: 6px;
+    margin: 5px;
+    color: white;
+    font-size: 12px;
 }
 
 .input-items {
@@ -16,7 +18,7 @@
 }
 
 .input-item_delete:hover {
-    background-color: lightblue;
+    background-color: rgba(255, 255, 255, 0.342);
     cursor: pointer;
 }
 

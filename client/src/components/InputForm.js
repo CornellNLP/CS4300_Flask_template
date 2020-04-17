@@ -22,16 +22,25 @@ class InputForm extends React.Component {
         event.preventDefault();
         const state = this.state
         this.props.onAddChange(state.topicValue, state.candidateValue, state.debateValue);
+        this.setState({
+            topicValue: '', 
+            candidateValue: '', 
+            debateValue: ''
+        })
         
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" name="topicValue" onChange = {this.handleChange}></input>
-                <input type="text" name="candidateValue" onChange = {this.handleChange}></input>
-                <input type="text" name="debateValue" onChange = {this.handleChange}></input>
-                <input type="submit" value="Add" ></input>
-            </form>
+            <div>
+                
+                <form onSubmit={this.handleSubmit}>
+                    <input value = {this.state.topicValue} placeholder="topic: climate change" className="input-topic" type="text" name="topicValue" onChange = {this.handleChange}></input>
+                    <input value = {this.state.candidateValue} placeholder="candidate: Bernie Sanders" className="input-candidate" type="text" name="candidateValue" onChange = {this.handleChange}></input>
+                    <input value = {this.state.debateValue} placeholder="debate: South Carolina Democratic Primary" className="input-debate" type="text" name="debateValue" onChange = {this.handleChange}></input>
+                    <input type="submit" value="Add" ></input>
+                </form>
+                <div className="input-message">Separate by commas for multiple topics, candidates, or debates</div>
+            </div>
         )
     }
 }

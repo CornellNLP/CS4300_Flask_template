@@ -1,0 +1,19 @@
+.debate-item-wrapper {
+    background-color: lightblue;
+    width: 900px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.debate-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.debate-date {
+    font-size: 14px;
+}
+
+.debate-description {
+    margin-top: 8px;
+    font-size: 16px;
+}
