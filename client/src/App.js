@@ -42,7 +42,8 @@ class App extends React.Component {
   render(){
     return (
     <div className="App">
-      <h1>Shortened Debates.</h1>
+      <h1 className="app-title">Shortened Debates.</h1>
+      <p className="app-description">watch the important moments on the issues you are care about.</p>
       <InputWrapper onInputChange={this.sendInputInformation} onClear={this.onClear}/>
       <OutputWrapper outputs={this.state.output}></OutputWrapper>
     </div>
@@ -51,96 +52,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-const dummyData = [
-  {
-    title: 'DEBATE 1', 
-    date: 'some date', 
-    description: 'some description',
-    results: [
-      {
-        video: 'some url', 
-        quotes: [
-          {
-            speaker: '', 
-            candidate: false, 
-            question: true, 
-            time: '', 
-            text: ''
-          }, 
-          {
-            speaker: '', 
-            candidate: true, 
-            question: false, 
-            time: '', 
-            text: '' 
-          }
-        ]
-      }, 
-      {
-        video: 'some url', 
-        quotes: [
-          {
-            speaker: '', 
-            candidate: false, 
-            question: true, 
-            time: '', 
-            text: ''
-          }, 
-          {
-            speaker: '', 
-            candidate: true, 
-            question: false, 
-            time: '', 
-            text: '' 
-          }
-        ]
-      }
-    ]
-  }, 
-  {
-    title: 'DEBATE 2', 
-    date: 'some date', 
-    description: 'some description',
-    results: [
-      {
-        video: 'some url', 
-        quotes: [
-          {
-            speaker: '', 
-            candidate: false, 
-            question: true, 
-            time: '', 
-            text: ''
-          }, 
-          {
-            speaker: '', 
-            candidate: true, 
-            question: false, 
-            time: '', 
-            text: '' 
-          }
-        ]
-      }, 
-      {
-        video: 'some url', 
-        quotes: [
-          {
-            speaker: '', 
-            candidate: false, 
-            question: true, 
-            time: '', 
-            text: ''
-          }, 
-          {
-            speaker: '', 
-            candidate: true, 
-            question: false, 
-            time: '', 
-            text: '' 
-          }
-        ]
-      }
-    ]
-  }
-]

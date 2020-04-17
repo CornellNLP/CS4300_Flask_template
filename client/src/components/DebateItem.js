@@ -5,6 +5,15 @@ import ResultItem from './ResultItem'
 class DebateItem extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            openItem: true
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+    handleClick() {
+        this.setState({
+            openItem: !this.state.openItem
+        })
     }
     render() {
         const { title, date, description, results } = this.props;
@@ -16,26 +25,16 @@ class DebateItem extends React.Component {
         )
         return (
             <div className = "debate-item-wrapper">
-                <DebateDescription
-                    title={title}
-                    date={date}
-                    description={description}
-                >
-                </DebateDescription>
-                {resultItems}
+                <div>
+                    <div className="debate-title" onClick={this.handleClick}>{title}</div>
+                    <div className="debate-date">{date}</div>
+                    {this.state.openItem && <div className="debate-description">{description}</div>}
+                </div>
+                {this.state.openItem && resultItems}
             </div>
         )
     }
 }
 
-function DebateDescription(props) {
-    return (
-        <div>
-            <div className="debate-title">{props.title}</div>
-            <div className="debate-date">{props.date}</div>
-            <div className="debate-description">{props.description}</div>
-        </div>
-    )
-}
 
 export default DebateItem;

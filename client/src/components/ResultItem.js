@@ -45,9 +45,11 @@ class ResultItem extends React.Component {
         )
         return (
             <div>
-                <video width="500" controls ref={this.setVideoElementRef}>
+                <div className="video-wrapper">
+                <video  width="500" controls ref={this.setVideoElementRef}>
                     <source src={video} type="video/mp4"></source>
                 </video>
+                </div>
                 {quoteItems}
             </div>
         )

@@ -1,5 +1,6 @@
 import React from 'react';
 import DebateItem from './DebateItem';
+import './OutputWrapper.css'
 
 class OutputWrapper extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class OutputWrapper extends React.Component {
             </DebateItem>
         )
         return (
-            <div>
+            <div className="output-wrapper">
                 {debateItems}
             </div>
         )

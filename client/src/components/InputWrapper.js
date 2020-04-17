@@ -1,6 +1,7 @@
 import React from 'react';
 import InputForm from './InputForm';
 import InputItems from './InputItems';
+import './InputWrapper.css';
 
 class InputWrapper extends React.Component {
     constructor(props) {
@@ -93,7 +94,7 @@ class InputWrapper extends React.Component {
 function ErrorMessage(props) {
     if (props.errorOn) {
         return (
-        <div>
+        <div className="error-message">
             Please insert atleast 1 topic!
         </div>
     )

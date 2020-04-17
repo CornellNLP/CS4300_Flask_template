@@ -1,8 +1,9 @@
 .debate-item-wrapper {
-    background-color: lightblue;
-    width: 900px;
-    padding: 20px;
-    margin: 20px;
+    background-color: rgba(173, 216, 230, 0.24);
+    width: 800px;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 5px;
 }
 
 .debate-title {
@@ -15,5 +16,11 @@
 
 .debate-description {
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+.debate-title:hover {
+    color: rgba(0, 0, 0, 0.411); 
+    cursor: pointer;
 }

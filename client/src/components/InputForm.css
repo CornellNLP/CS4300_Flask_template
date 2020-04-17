@@ -1,9 +1,29 @@
 input[type=text] {
     padding: 8px;
     margin: 8px;
-    width: 15%;
+    width: 300px;
     font-size: 14px;
 }
+
+.button-add {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-add:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 .input-message {
     font-size: 10px; 
