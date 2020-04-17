@@ -3,11 +3,16 @@ import numpy as np
 import re
 from nltk.tokenize import TreebankWordTokenizer
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
+from gensim.parsing.preprocessing import STOPWORDS
+from gensim.parsing.porter import PorterStemmer
+# from sklearn.preprocessing import MultiLabelBinarizer
+
 
 DATA_DIR = 'data/'
 DESC_MAP = pd.read_csv(DATA_DIR + 'descriptor_mapping.csv').set_index('raw descriptor')
 TOKENIZER = TreebankWordTokenizer()
+# MLB = MultiLabelBinarizer()
+STEMMER = PorterStemmer()
 
 # Import wine data and extract reviews.
 def get_wine_data():
@@ -35,16 +40,35 @@ def tokenize(data_list):
     bev_tokens = []
     descr_rgx = "[a-z]+"
     num_docs = len(data_list)
+    # Tokenize and filter
     for doc_ind in range(0, num_docs):
         tokens = set(TOKENIZER.tokenize(data_list[doc_ind]))
-        fil_tokens = [x.lower() for x in tokens if re.match(descr_rgx, x.lower())]
+        fil_tokens = []
+        for x in tokens:
+            match = re.match(descr_rgx, x.lower())
+            if match:
+                fil_tokens.append(match.group(0))
         bev_tokens.append(fil_tokens)
-    return bev_tokens
+
+    # Remove stop words
+    bev_tokens_fil = [[tok for tok in tok_list if tok not in STOPWORDS] for tok_list in bev_tokens]
+
+    # Normalize tokens
+    toks_stem = []
+    for tok_list in bev_tokens_fil:
+        toks_stem.append(list(set(STEMMER.stem_documents(tok_list))))
+        
+    # print(toks_stem[0:100])
+    return toks_stem
 
 # Return a list of unique types found in entire corpus.
 def get_types(bev_tokens):
     return list(set(token for token_list in bev_tokens for token in token_list))
 
+# def main():
+#     tokenize(get_wine_data())
+#
+# main()
 # Return a list of descriptors found in each wine's description where index of list
 # is the document ID
 # def get_doc_descriptors(data_list):
