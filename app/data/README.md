@@ -1,10 +1,10 @@
 This folder is for formatting all of the transcripts before they go in the database. Once it is working, it will be run once, the data put in the database, and it won't be run again. 
 How the files in this folder work:
 
-1. run scraping.py (done - the files are in output)
+1. run scraping.py (done - the files are in debates and others)
 This file pulls all debate links from the 2020 election and debates categories. It then makes sure there are no duplicates and removes bad transcripts (no times, etc.).
    
-2. Make sure scraping is final before starting step!! Now, the output is manually checked (can use the url):
+2. Make sure scraping is final before starting step!! Now, the files are manually checked (can use the url):
     - the title is descriptive
     - the date is correct ("YYYY-MM-DD")
     - the candidates and other_speakers are correctly classified
@@ -21,7 +21,9 @@ This is still under construction, but ideally it will:
 
 
 Debate Info Structure:
+
 {
+
     "url": str, 
     "title": str, 
     "date": "YYYY-MM-DD", 
@@ -35,7 +37,7 @@ Debate Info Structure:
             "text": [
                 {
                     "speaker": str, 
-                    "time": str?, 
+                    "time": str, 
                     "text": str,
                     "question": bool,
                     "response": list of int (if question) or int
