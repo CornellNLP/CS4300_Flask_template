@@ -15,37 +15,40 @@
 
         </h1>
     </div>
-    <div class="body-text">
-        Where Do I Post?
-    </div>
+    <div class="content">
+        <div class="body-text">
+            Where Do I Post?
+        </div>
 
-    <div class="blurb-text">
-        Welcome to the Subreddit Recommender! Have you ever wanted to post on Reddit, but didn’t know which subreddit to
-        post in? Enter your post below to see which subreddit it belongs in!
-    </div>
+        <div class="blurb-text">
+            Welcome to the Subreddit Recommender! Have you ever wanted to post on Reddit, but didn’t know which
+            subreddit to
+            post in? Enter your post below to see which subreddit it belongs in!
+        </div>
 
-    <div>
-        <form class="form-inline global-search">
-            <br><br>
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Ask me anything">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
+        <div>
+            <form class="form-inline global-search">
+                <br><br>
+                <div class="form-group">
+                    <input id="input" type="text" name="search" class="form-control" placeholder="Ask me anything">
+                </div>
+                <button type="submit" class="btn btn-info"> Go! </button>
+            </form>
 
-        <form class="form-inline global-search">
-            {% if data %}
-            <h2 class="outputmessage">
-                {{output_message}}
-            </h2>
-            {% for d in data %}
-            <br>
-            <a href="https://www.reddit.com/r/{{d[0]}}/submit" target="_blank">
-                r/{{d[0]}}
-            </a>
-            {% endfor %}
-            {% endif %}
-        </form>
+            <form class="form-inline global-search">
+                {% if data %}
+                <h2 class="outputmessage">
+                    {{output_message}}
+                </h2>
+                {% for d in data %}
+                <br>
+                <a href="https://www.reddit.com/r/{{d[0]}}/submit" target="_blank">
+                    r/{{d[0]}}
+                </a>
+                {% endfor %}
+                {% endif %}
+            </form>
+        </div>
     </div>
 </body>
 
