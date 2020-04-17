@@ -34,17 +34,20 @@
                         </h3>
                         <div class="form-group">
                             <textarea id="input" type="text" name="search" class="form-control"
-                                placeholder="Ask me anything" style="resize: none;"></textarea>
+                                placeholder="Ask me anything"
+                                style="resize: none;">{{query if query!= None else '' }}</textarea>
                         </div>
                         <button type="submit" class="btn btn-info"> Go! </button>
                     </form>
                 </th>
                 <th class="right-column">
                     <form class="form-inline global-search">
+                        <div id={{response}}>
+                            <h3 class="outputmessage">
+                                {{output_message}}
+                            </h3>
+                        </div>
                         {% if data %}
-                        <h3 class="outputmessage">
-                            {{output_message}}
-                        </h3>
                         <ul class="list-group">
                             {% for d in data %}
                             <li class="list-group-item">

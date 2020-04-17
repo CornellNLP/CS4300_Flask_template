@@ -13,8 +13,15 @@ def search():
     if not query:
         data = []
         output_message = ''
+        response = ''
     else:
-        # output_message = "Your search: " + query
-        output_message = "You might want to post in:"
         data = full_search(query)
-    return render_template('search.html', name=project_name, class_name=class_name, output_message=output_message, data=data)
+        if not data:
+            response = "response"
+            output_message = "Sorry, we can't make a good suggestion with that post.  Try adding some more detail to your post!"
+        else:
+            response = ""
+            output_message = "You might want to post in:"
+    return render_template('search.html', name=project_name,
+                           class_name=class_name, output_message=output_message,
+                           data=data, query=query, response=response)

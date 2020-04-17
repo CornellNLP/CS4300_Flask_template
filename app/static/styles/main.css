@@ -118,4 +118,10 @@
   font-family: 'Varela Round', sans-serif;
   font-size: 20px; 
 }
+
+div#response {
+    padding-top: 30%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
   
