@@ -74,15 +74,14 @@ def get_doc_norms(inv_index, idf, num_docs):
     norms = {}
 
     for k, v in inv_index.items():
-        if k in idf:
-            idf_i = idf[k]
-            for pair in v:
-                i = pair[0]
-                tf = pair[1]
-                if i not in norms:
-                    norms[i] = (tf*idf_i)**2
-                else:
-                    norms[i] += (tf*idf_i)**2
+        idf_i = idf[k]
+        for pair in v:
+            i = pair[0]
+            tf = pair[1]
+            if i not in norms:
+                norms[i] = (tf*idf_i)**2
+            else:
+                norms[i] += (tf*idf_i)**2
 
     for k, v in norms.items():
         norms[k] = v**(0.5)
@@ -101,18 +100,37 @@ def make_post_subreddit_lookup(data):
 
 def create_and_store_structures():
     print("...creating structures")
+
+    print("...loading data")
     data = load_data()
     num_docs = len(data)
 
+    print("...making subreddit lookup")
     post_lookup, subreddit_lookup = make_post_subreddit_lookup(data)
+
+    print("...making inverted index(will take a long time)")
     inverted_index = make_inverted_index(data)
+
+    print("...computing idf")
     idf = get_idf(inverted_index, num_docs, 0, max_document_frequency)
+
+    print("...pruning inverted index")
+    #remove values that were removed from the idf
+    inverted_index = {key: val for key, val in inverted_index.items() if key in idf}
+
+    print("...getting doc norms")
     norms = get_doc_norms(inverted_index, idf, num_docs)
 
     # store data in pickle files
+
+    print("...storing post lookup")
     pickle.dump(post_lookup, open(file_path_name + "-post_lookup.pickle", 'wb'))
+    print("...storing subreddit lookup")
     pickle.dump(subreddit_lookup, open(file_path_name + "-subreddit_lookup.pickle", 'wb'))
+    print("...storing inverted index")
     pickle.dump(inverted_index, open(file_path_name + "-inverted_index.pickle", 'wb'))
+    print("...storing idf")
     pickle.dump(idf, open(file_path_name + "-idf.pickle", 'wb'))
+    print("...storing doc norms")
     pickle.dump(norms, open(file_path_name + "-norms.pickle", 'wb'))
     print("completed creating and storing structures.")

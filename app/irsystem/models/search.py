@@ -1,6 +1,7 @@
 import pickle
 import json
 import time
+from collections import Counter
 from app.irsystem.models.create_dataset import create_dataset
 from app.irsystem.models.processing import process_data
 from app.irsystem.models.create_structures import create_and_store_structures
@@ -20,7 +21,7 @@ from app.irsystem.models.comparison import find_subreddits
 # #create the idf, inverted index, and norms
 #
 # print("create and store structures? y/n")
-# ans = 'y' #input()
+# ans = input()
 # if ans == 'y':
 #     create_and_store_structures()
 #
@@ -31,8 +32,12 @@ def open_datastructures():
     with open(file_path_name + "-inverted_index.pickle", 'rb') as file:
         print("...loading inverted index")
         inverted_index = pickle.load(file)
+        #print("word count: " + str(len(inverted_index.keys())))
+        # cnt = Counter()
+        # for word, doc_list in inverted_index.items():
+        #     cnt[word] += len(doc_list)
+        # print(cnt.most_common(1000))
         print("finished loading inverted index.")
-
     with open(file_path_name + "-idf.pickle", 'rb') as file:
         print("...loading idf")
         idf = pickle.load(file)
@@ -46,6 +51,7 @@ def open_datastructures():
     with open(file_path_name + "-post_lookup.pickle", 'rb') as file:
         print("...loading posts")
         post_lookup = pickle.load(file)
+        print("# of posts: " + str(len(post_lookup.keys())))
         print("finished loading posts")
 
     with open(file_path_name + "-subreddit_lookup.pickle", 'rb') as file:
