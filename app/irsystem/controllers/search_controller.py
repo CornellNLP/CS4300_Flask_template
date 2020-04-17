@@ -5,14 +5,17 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app import db
 from app.irsystem.models import (
     Recipe, 
-    Category,
-    RecipeCategorization
+    Category, 
+    # Ingredient, 
+    RecipeCategorization, 
+    # RecipeIngredient
 )
 
 project_name = "Fitness Dream Team"
 net_ids = "Genghis Shyy: gs484, Henri Clarke: hxc2, Alice Hu: ath84, Michael Pinelis: mdp93, Sam Vacura: smv66"
 
 
+import re
 @irsystem.route('/', methods=['GET'])
 def search():
     query = request.args.get('search')
@@ -21,7 +24,7 @@ def search():
         output_message = ''
     else:
         output_message = "Your search: " + query
-        data = range(5)
+        data = [x.strip() for x in re.split('[;,]',query)]
     return render_template('search.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
 
 
