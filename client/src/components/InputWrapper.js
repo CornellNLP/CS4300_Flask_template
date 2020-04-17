@@ -8,7 +8,8 @@ class InputWrapper extends React.Component {
         this.state = {
             topics: [],
             candidates: [],
-            debates: []
+            debates: [], 
+            errorOn: false
         }
         this.onAddChange = this.onAddChange.bind(this);
         this.removeItem = this.removeItem.bind(this);
@@ -18,6 +19,25 @@ class InputWrapper extends React.Component {
             topics: this.state.topics.filter(el => el !== item),
             candidates: this.state.candidates.filter(el => el !== item),
             debates: this.state.debates.filter(el => el !== item)
+        }, () => {
+            if (this.state.topics.length) {
+                this.setState({
+                    errorOn: false
+                })
+                this.props.onInputChange(
+                    { 
+                        topics: this.state.topics, 
+                        candidates: this.state.candidates, 
+                        debates: this.state.debates
+                    }
+                )
+            }
+            else {
+                this.setState({
+                    errorOn: true
+                })
+                this.props.onClear()
+            }
         })
         
     }
@@ -32,6 +52,25 @@ class InputWrapper extends React.Component {
             topics: [...new Set([...topics, ...newTopics])],
             candidates: [...new Set([...candidates, ...newCandidates])], 
             debates: [...new Set([...debates, ...newDebates])]
+        }, () => {
+            if (this.state.topics.length) {
+                this.setState({
+                    errorOn: false
+                })
+                this.props.onInputChange(
+                    { 
+                        topics: this.state.topics, 
+                        candidates: this.state.candidates, 
+                        debates: this.state.debates
+                    }
+                )
+            }
+            else {
+                this.setState({
+                    errorOn: true
+                })
+                this.props.onClear()
+            }
         });
     }
     render(){
@@ -44,10 +83,22 @@ class InputWrapper extends React.Component {
                 debates={this.state.debates}
                 removeItem={this.removeItem}
                 ></InputItems>
+            <ErrorMessage errorOn={this.state.errorOn}></ErrorMessage>
         </div>
         )
         
     }
+}
+
+function ErrorMessage(props) {
+    if (props.errorOn) {
+        return (
+        <div>
+            Please insert atleast 1 topic!
+        </div>
+    )
+    }
+    return null; 
 }
 
 export default InputWrapper;

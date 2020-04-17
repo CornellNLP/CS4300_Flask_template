@@ -1,0 +1,92 @@
+[
+    {
+      "title": "DEBATE 1", 
+      "date": "some date", 
+      "description": "some description",
+      "results": [
+        {
+          "video": "some url", 
+          "quotes": [
+            {
+              "speaker": "speaker1", 
+              "candidate": "false", 
+              "question": "true", 
+              "time": "time1", 
+              "text": "texttttt"
+            }, 
+            {
+                "speaker": "speaker1", 
+                "candidate": "false", 
+                "question": "true", 
+                "time": "time1", 
+                "text": "texttttt"
+              }
+          ]
+        }, 
+        {
+            "video": "some url", 
+            "quotes": [
+              {
+                "speaker": "speaker1", 
+                "candidate": "false", 
+                "question": "true", 
+                "time": "time1", 
+                "text": "texttttt"
+              }, 
+              {
+                  "speaker": "speaker1", 
+                  "candidate": "false", 
+                  "question": "true", 
+                  "time": "time1", 
+                  "text": "texttttt"
+                }
+            ]
+          }
+      ]
+    }, 
+    { 
+        "title": "DEBATE 2", 
+        "date": "some date", 
+        "description": "some description",
+        "results": [
+          {
+            "video": "some url", 
+            "quotes": [
+              {
+                "speaker": "speaker1", 
+                "candidate": "false", 
+                "question": "true", 
+                "time": "time1", 
+                "text": "texttttt"
+              }, 
+              {
+                  "speaker": "speaker1", 
+                  "candidate": "false", 
+                  "question": "true", 
+                  "time": "time1", 
+                  "text": "texttttt"
+                }
+            ]
+          }, 
+          {
+              "video": "some url", 
+              "quotes": [
+                {
+                  "speaker": "speaker1", 
+                  "candidate": "false", 
+                  "question": "true", 
+                  "time": "time1", 
+                  "text": "texttttt"
+                }, 
+                {
+                    "speaker": "speaker1", 
+                    "candidate": "false", 
+                    "question": "true", 
+                    "time": "time1", 
+                    "text": "texttttt"
+                  }
+              ]
+            }
+        ]
+      }
+  ]
