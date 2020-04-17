@@ -30,5 +30,6 @@ def search():
 		output_message = "Your search: " + query
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=results)
 
-
-
+@irsystem.route('/react', methods=['GET'])
+def sendhome():
+	return render_template('index.html')

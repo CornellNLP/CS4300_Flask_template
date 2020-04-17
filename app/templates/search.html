@@ -1,46 +1,48 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-        <link rel="stylesheet" href="/static/all.css">
 
-        <title>HahaFactory</title>
-    </head>
-    <body>
-        <div class="topcorner">
-            <p class="name">Project Name: {{ name }}</p>
-            <p class="name">Student Name: ({{ netid }})</p>
+<head>
+    <link rel="stylesheet" href="/static/legacy/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/legacy/main.css">
+    <link rel="stylesheet" href="/static/legacy/all.css">
+
+    <title>HahaFactory</title>
+</head>
+
+<body>
+    <div class="topcorner">
+        <p class="name">Project Name: {{ name }}</p>
+        <p class="name">Student Name: ({{ netid }})</p>
+    </div>
+    <form class="form-inline global-search" action="/" method="GET">
+        <h1>HahaFactory</h1>
+        <br>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+        <img src="/static/legacy/operator.png">
+        <br><br>
+        <div class="form-group">
+            <input id="search" type="text" name="search" class="form-control" placeholder="Key Words">
         </div>
-        <form class="form-inline global-search" action = "/" method = "GET">
-            <h1>HahaFactory</h1>
-            <br>
-            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-            <img src="/static/operator.png">
-            <br><br>
-            <div class="form-group">
-                <input id="search" type="text" name="search" class="form-control" placeholder="Key Words">
-            </div>
-            <br><br>
+        <br><br>
 
-            <div class = "form-group"> Minimum Score:
-                <input id="score" type="radio" name="score" value="1" /> 1
-                <input id="score" type="radio" name="score" value="2" /> 2
-                <input id="score" type="radio" name="score" value="3" /> 3
-                <input id="score" type="radio" name="score" value="4" /> 4
-                <input id="score" type="radio" name="score" value="5" /> 5
-            </div>
-            <br><br>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
+        <div class="form-group"> Minimum Score:
+            <input id="score" type="radio" name="score" value="1" /> 1
+            <input id="score" type="radio" name="score" value="2" /> 2
+            <input id="score" type="radio" name="score" value="3" /> 3
+            <input id="score" type="radio" name="score" value="4" /> 4
+            <input id="score" type="radio" name="score" value="5" /> 5
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-info"> Go! </button>
+    </form>
+    <form class="form-inline global-search">
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
+        <h1>{{output_message}}</h1>
+        {% for d in data %}
+        <br>
+        <p>{{d}}</p>
+        {% endfor %}
         {% endif %}
-        </form>
-    </body>
+    </form>
+</body>
 
 </html>
