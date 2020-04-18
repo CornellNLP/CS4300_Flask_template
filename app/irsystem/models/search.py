@@ -61,6 +61,9 @@ def open_datastructures():
 
     return inverted_index, idf, norms, post_lookup, subreddit_lookup
 
+if 'inverted_index' not in globals():
+    inverted_index, idf, norms, post_lookup, subreddit_lookup = open_datastructures()
+
 def run_tests(inverted_index, idf, norms, post_lookup, subreddit_lookup):
     while True:
         print("\nquery: ", "")
@@ -70,8 +73,3 @@ def run_tests(inverted_index, idf, norms, post_lookup, subreddit_lookup):
 def full_search(query):
     ranks = compare_string_to_posts(query, inverted_index, idf, norms)
     return find_subreddits(10, ranks, post_lookup, subreddit_lookup)
-
-s = 0
-if s is 0:
-    inverted_index, idf, norms, post_lookup, subreddit_lookup = open_datastructures()
-    s = 1
