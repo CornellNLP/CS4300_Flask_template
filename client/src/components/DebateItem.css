@@ -20,7 +20,15 @@
     padding-bottom: 16px;
 }
 
-.debate-title:hover {
+.debate-title-wrapper:hover {
     color: rgba(0, 0, 0, 0.411); 
     cursor: pointer;
 }
+
+.debate-title-wrapper {
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+

@@ -36,7 +36,7 @@ class InputForm extends React.Component {
                     <input value = {this.state.topicValue} placeholder="topic: climate change" className="input-topic" type="text" name="topicValue" onChange = {this.handleChange}></input>
                     <input value = {this.state.candidateValue} placeholder="candidate: Bernie Sanders" className="input-candidate" type="text" name="candidateValue" onChange = {this.handleChange}></input>
                     <input value = {this.state.debateValue} placeholder="debate: South Carolina Democratic Primary" className="input-debate" type="text" name="debateValue" onChange = {this.handleChange}></input>
-                    <input className="button-add" type="button" onClick={this.handleSubmit} value="Add" ></input>
+                    <input className="button-add" type="button" onClick={this.handleSubmit} value="Search" ></input>
                 </form>
                 <div className="input-message">Separate by commas for multiple topics, candidates, or debates</div>
             </div>

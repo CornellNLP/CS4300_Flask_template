@@ -29,6 +29,7 @@ class ResultItem extends React.Component {
             time = parseInt(a[0]*60) + parseInt(a[1])
         }
         this.videoElement.currentTime = time
+        if (!(inputTime === undefined)) this.videoElement.play();
         
     }
     render() {
