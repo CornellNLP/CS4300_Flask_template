@@ -1,6 +1,7 @@
 import sys, os
 sys.path.append(os.getcwd())
 from gensim.models import Word2Vec
+from gensim.models.phrases import Phrases, Phraser
 from nltk.tokenize import sent_tokenize, word_tokenize
 from data_tools import get_descriptor, get_wine_data, get_beer_data, normalize
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -8,29 +9,32 @@ from app.irsystem.models.database import add_drink_batch, Drink
 import numpy as np
 
 def main():
-    wine_data = get_wine_data(25000)
+    print('Fetching wine data...')
+    wine_data = get_wine_data(100)
     wine_desc = [str(x) for x in list(wine_data['description'])]
-    beer_data = get_beer_data(25000)
+    print('Fetching beer data...')
+    beer_data = get_beer_data(100)
     beer_desc = [str(x) for x in list(beer_data['review/text'])]
     full_text = ' '.join(wine_desc) + ' ' + ' '.join(beer_desc)
-    sentences = sent_tokenize(full_text)
-    
-    norm_sentences = [normalize(s) for s in sentences]
 
-    # TODO(@dana) List of word lists (lol) for each sentence in corpus after
-    # removing stop words, normalizing tokens, and phrasing using n-grams
-    sentences = []
+    print('Preprocessing data...')
+    # List of strings for each sentence in corpus
+    sentences = sent_tokenize(full_text)
+    norm_sentences = [normalize(s) for s in sentences]
+    bigram = Phrases(norm_sentences)
+    trigram = Phrases(bigram[norm_sentences])
+    ngram = Phraser(trigram)
+    # List of string lists for each sentence in corpus after normalizing and
+    # phrasing using n-grams
+    phr_sentences = [ngram[s] for s in norm_sentences]
 
     # Replace tokens with descriptors when possible
-    final_sentences = []
-    for s in sentences:
-        final_s = []
-        for w in s:
-            desc_w = get_descriptor(w)
-            final_s.append(desc_w)
-        final_sentences.append(final_s)
+    final_sentences = [[get_descriptor(w) for w in s] for s in phr_sentences]
 
+    print('Training model...')
     model = Word2Vec(final_sentences, size=300, min_count=5, iter=15)
+    # print(model.wv.similar_by_word('apple'))
+    # return
 
     # List of descriptor words for each drink description
     drink_descs = []
