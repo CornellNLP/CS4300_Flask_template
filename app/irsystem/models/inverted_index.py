@@ -48,6 +48,7 @@ class InvertedIndex():
         return "{}-inverted_index-{}.pickle".format(file_path_name, str(suffix))
 
     def load_file(self, file_suffix):
+        print("...loading " + self.create_file_name(file_suffix))
         with open(self.create_file_name(file_suffix), 'rb') as file:
             return pickle.load(file)
 
