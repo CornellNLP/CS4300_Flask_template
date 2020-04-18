@@ -2,8 +2,8 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
-num_posts = 1000
-num_subreddits = 1075
+num_posts = 1
+num_subreddits = 5
 min_words_per_post = 10
 max_document_frequency = 0.10
 """
