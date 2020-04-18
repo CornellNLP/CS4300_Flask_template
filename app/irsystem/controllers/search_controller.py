@@ -66,7 +66,8 @@ def search():
 				for rp in rezp:
 					ret[rp[0]]+=rp[1]
 		for rating in ret.values():
-			rating /= len(qtokens)
+			if(len(qtokens)!=0):
+				rating /= len(qtokens)
 		data = sorted(list(ret.items()),key=lambda x: x[1])
 		print(data)
 		data = list(reversed(data))
