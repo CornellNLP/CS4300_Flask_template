@@ -67,7 +67,6 @@ class SearchEngine():
         if ans == 'y':
             create_dataset()
 
-
         #create the idf, inverted index, and norms
 
         print("create and store structures? y/n")
