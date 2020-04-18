@@ -119,7 +119,6 @@ def create_and_store_structures():
     print("...storing subreddit lookup")
     pickle.dump(subreddit_lookup, open(file_path_name + "-subreddit_lookup.pickle", 'wb'))
     print("...storing inverted index")
-    print(str(inverted_index._inverted_index_helper) + "MY GOD")
     inverted_index.store()
     print("...storing idf")
     pickle.dump(idf, open(file_path_name + "-idf.pickle", 'wb'))
