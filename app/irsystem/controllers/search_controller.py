@@ -4,6 +4,10 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from os.path import dirname as up
 from collections import defaultdict
 from nltk.tokenize import TreebankWordTokenizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from scipy.sparse.linalg import svds
+from sklearn.preprocessing import normalize
+import scipy
 import numpy as np
 import math
 
@@ -61,9 +65,6 @@ def index_search(query, index, idf, doc_norms, tokenizer):
 			for doc_num, val in index[term]:
 				results[doc_num] += query_tf[term] * val * idf[term] * idf[term]
 
-	#     print(query_norms)
-	#     print(doc_norms)
-
 	for i in range(len(doc_norms)):
 		answer.append((results[i] / (math.sqrt(query_norms) * doc_norms[i]), i))
 	return sorted(answer, key=lambda x: x[0], reverse=True)
@@ -73,9 +74,7 @@ def get_key(search_dict, val):
 		if val == value:
 			return key
 
-
 @irsystem.route('/', methods=['GET'])
-
 def search():
 	query = request.args.get('search')
 	if not query:
@@ -85,42 +84,31 @@ def search():
 		output_message = "Your search: " + query
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
-			class_data = json.load(class_file)
-			class_data = class_data["classes"]
-			class_flavor = {}
-			class_subclass = {}
-			subclass_flavor = {}
-			for char_class in class_data:
-				class_flavor[char_class["class"]] = char_class["flavor"]
-				for subclass_dict in char_class["subclasses"]:
-					if char_class["class"] not in class_subclass:
-						class_subclass[char_class["class"]] = [subclass_dict["subclass"]]
-					else:
-						class_subclass[char_class["class"]].append(subclass_dict["subclass"])
-					subclass_flavor[subclass_dict["subclass"]] = subclass_dict["flavor"]
+			f = json.load(class_file)
 
-		treebank_tokenizer = TreebankWordTokenizer()
-		class_flavor_list = list(class_flavor.values())
-		inv_idx = defaultdict(list)
-		for i, m in enumerate(class_flavor_list):
-			toks = treebank_tokenizer.tokenize(m)
-			for w in set(toks):
-				inv_idx[w].append((i, toks.count(w)))
-		print(inv_idx)
-		idf = dict()
-		for entry in inv_idx.keys():
-			len_of_list = len(inv_idx[entry])
-			idf[entry] = np.log2(len(class_flavor_list)/(1+len_of_list))
-		doc_norms = np.zeros(len(class_flavor_list))
-		# print(doc_norms)
-		terms = list(idf.keys())
-		for t in terms:
-			t_idf = idf[t]
-			for doc_num,val in inv_idx[t]:
-				doc_norms[doc_num] += math.pow(val*t_idf,2)
-		doc_norms = np.sqrt(doc_norms)
-		search_results = index_search(query, inv_idx, idf, doc_norms, treebank_tokenizer)
-		print(search_results)
-		results = [list(class_flavor.keys())[i] for score,i in search_results]
-		data = results
+		docs = [(c["class"], c["flavor"])for c in f["classes"]]
+		np.random.shuffle(docs)
+		vectorizer = TfidfVectorizer(stop_words = 'english')
+		my_matrix = vectorizer.fit_transform([x[1] for x in docs]).transpose()
+		u, s, vt = svds(my_matrix,k=11)
+		# Most of our data is within 2 dimensions. Let's use 10
+		words_compressed, _, docs_compressed = svds(my_matrix, k=10)
+		docs_compressed = docs_compressed.transpose()
+		word_to_index = vectorizer.vocabulary_
+		index_to_word = {i:t for t,i in word_to_index.items()}
+		words_compressed = normalize(words_compressed, axis=1)
+		my_matrix_csr = normalize(scipy.sparse.csr_matrix(my_matrix))
+		docs_compressed = normalize(docs_compressed, axis = 1)
+		def closest_projects_to_word(word_in, word_to_index, k=15):
+		    if word_in not in word_to_index: return 'not in vocab'
+		    sims = docs_compressed.dot(words_compressed[word_to_index[word_in],:])
+		    ssort = np.argsort(-sims)[:k+1]
+		    return [(docs[i][0],sims[i]/sims[ssort[0]]) for i in ssort[1:]]
+		rez = closest_projects_to_word(query, word_to_index)
+
+		print(rez)
+		results = []
+		for t in rez:
+			results.append(rez[0])
+		data = rez
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
