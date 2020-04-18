@@ -28,7 +28,18 @@ from app.irsystem.models.comparison import find_subreddits
 # print("delay end.")
 # input()
 
+inverted_index = None
+idf = None
+norms = None
+post_lookup = None
+subreddit_lookup = None
+
 def open_datastructures():
+    global inverted_index, idf, norms, post_lookup, subreddit_lookup
+
+    if inverted_index is not None:
+        return None
+
     with open(file_path_name + "-inverted_index.pickle", 'rb') as file:
         print("...loading inverted index")
         inverted_index = pickle.load(file)
@@ -58,11 +69,6 @@ def open_datastructures():
         print("...loading posts")
         subreddit_lookup = pickle.load(file)
         print("finished loading posts")
-
-    return inverted_index, idf, norms, post_lookup, subreddit_lookup
-
-if 'inverted_index' not in locals():
-    inverted_index, idf, norms, post_lookup, subreddit_lookup = open_datastructures()
 
 def run_tests(inverted_index, idf, norms, post_lookup, subreddit_lookup):
     while True:

@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 print("importing search")
-from app.irsystem.models.search import full_search
+from app.irsystem.models.search import full_search, open_datastructures
 
 project_name = "Subreddit Recommender"
 class_name = "CS 4300 Spring 2020"
@@ -16,6 +16,7 @@ def search():
         output_message = ''
         response = ''
     else:
+        open_datastructures()
         data = full_search(query)
         if not data:
             response = "response"
