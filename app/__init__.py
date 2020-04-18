@@ -27,6 +27,11 @@ app.register_blueprint(irsystem)
 # Initialize app w/SocketIO
 socketio.init_app(app)
 
+from app.irsystem.models.search import open_datastructures
+@app.before_first_request
+def before_first_request():
+	open_datastructures()
+
 # HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
