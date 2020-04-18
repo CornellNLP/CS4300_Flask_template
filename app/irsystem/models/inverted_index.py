@@ -10,7 +10,7 @@ Attributes:
 """
 class InvertedIndex():
     def __init__(self):
-        self.inverted_indices = []
+        self.inverted_indices = [None for _ in range(num_partitions)]
         self._inverted_index_helper = {}
         print("initialized inverted index")
 
@@ -53,17 +53,25 @@ class InvertedIndex():
             return pickle.load(file)
 
     #will load based on information in shared_variables
+    #only load helper first, load everything else as needed
     def load(self):
-        for partition_index in range(num_partitions):
-            inverted_index = self.load_file(partition_index)
-            self.inverted_indices.append(inverted_index)
+        # for partition_index in range(num_partitions):
+        #     inverted_index = self.load_file(partition_index)
+        #     self.inverted_indices.append(inverted_index)
         self._inverted_index_helper = self.load_file("helper")
 
     def get_posts(self, token):
+        self.load_by_token(token)
         if token in self._inverted_index_helper:
             inverted_index = self._get_inverted_index(token)
             return inverted_index[token]
         raise KeyError()
+
+    def load_by_token(self, token):
+        if token in self._inverted_index_helper:
+            inverted_index_i = self._inverted_index_helper[token]
+            if self.inverted_indices[inverted_index_i] is None: #haven't loaded this index yet
+                self.inverted_indices[inverted_index_i] = self.load_file(inverted_index_i)
 
     def _get_inverted_index(self, token):
         return self.inverted_indices[self._inverted_index_helper[token]]
@@ -72,6 +80,7 @@ class InvertedIndex():
         return list(self._inverted_index_helper.keys())
 
     def remove_token(self, token):
+        self.load_by_token(token)
         inverted_index = self._get_inverted_index(token)
         del inverted_index[token]
         del self._inverted_index_helper[token]
