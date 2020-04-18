@@ -1,12 +1,11 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-print("importing search")
-from app.irsystem.models.search import full_search, open_datastructures
+from app.irsystem.models.search import SearchEngine
 
 project_name = "Subreddit Recommender"
 class_name = "CS 4300 Spring 2020"
-
+search_engine = SearchEngine(False)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -16,7 +15,7 @@ def search():
         output_message = ''
         response = ''
     else:
-        data = full_search(query)
+        data = search_engine.search(query)
         if not data:
             response = "response"
             output_message = "Sorry, we can't make a good suggestion with that post.  Try adding some more detail to your post!"

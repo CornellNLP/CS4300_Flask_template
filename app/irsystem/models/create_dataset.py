@@ -80,7 +80,7 @@ def create_dataset():
         #don't include subreddits with fewer than 10% of posts
         invalid_subreddits = set()
         for subreddit_name, freq in cnt.most_common():
-            if freq < num_posts * 0.1:
+            if freq < num_posts * 0.20:
                 invalid_subreddits.add(subreddit_name)
                 print("removing " + subreddit_name + " with a low count " + str(freq))
 

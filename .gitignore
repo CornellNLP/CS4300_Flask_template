@@ -6,5 +6,6 @@ vagrant/site.retry
 vagrant/a4keypair.pem
 .idea/
 *.iml
+unused-picklejar
 *.json
 .DS_Store

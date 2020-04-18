@@ -9,6 +9,7 @@ import numpy as np
 from app.irsystem.models.shared_variables import file_path
 from app.irsystem.models.shared_variables import file_path_name
 from app.irsystem.models.shared_variables import max_document_frequency
+from app.irsystem.models.inverted_index import InvertedIndex
 """
 this file is to create datastructures. Currently creates:
 
@@ -29,22 +30,10 @@ def load_data():
 """
 
 
-def make_inverted_index(file):
-    inv_index = {}
-
-    for i in range(0, len(file)):
-        temp_dict = {}
-        words = file[i]['tokens']
-        for w in words:
-            if w not in temp_dict:
-                temp_dict[w] = 1
-            else:
-                temp_dict[w] += 1
-        for k, v in temp_dict.items():
-            if k not in inv_index:
-                inv_index[k] = []
-            inv_index[k].append((file[i]['id'], temp_dict[k]))
-    return inv_index
+def make_inverted_index(data):
+    i = InvertedIndex()
+    i.create(data)
+    return i
 
 
 """
@@ -53,10 +42,9 @@ Returns: idf dictionary {term: idf value}
 """
 
 
-def get_idf(inv_index, num_docs, min_df=0, max_df=1):  # TODO: change these min/max in the future
+def get_idf(inv_index, num_docs, min_df=0, max_df=0.1):  # TODO: change these min/max in the future
     idf = {}
     max_rat = max_df * num_docs
-
     for k, v in inv_index.items():
         df = len(v)
         if df >= min_df and df <= max_rat:
@@ -116,7 +104,10 @@ def create_and_store_structures():
 
     print("...pruning inverted index")
     #remove values that were removed from the idf
-    inverted_index = {key: val for key, val in inverted_index.items() if key in idf}
+    tokens = inverted_index.keys()
+    for token in tokens:
+        if not token in idf:
+            inverted_index.remove_token(token)
 
     print("...getting doc norms")
     norms = get_doc_norms(inverted_index, idf, num_docs)
@@ -128,7 +119,7 @@ def create_and_store_structures():
     print("...storing subreddit lookup")
     pickle.dump(subreddit_lookup, open(file_path_name + "-subreddit_lookup.pickle", 'wb'))
     print("...storing inverted index")
-    pickle.dump(inverted_index, open(file_path_name + "-inverted_index.pickle", 'wb'))
+    inverted_index.store()
     print("...storing idf")
     pickle.dump(idf, open(file_path_name + "-idf.pickle", 'wb'))
     print("...storing doc norms")
