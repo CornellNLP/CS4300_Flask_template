@@ -2,9 +2,9 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
-num_posts = 500
-num_subreddits = 800
-min_words_per_post = 20
+num_posts = 400
+num_subreddits = 750
+min_words_per_post = 25
 max_document_frequency = 0.10
 """
 DATASET NAMING CONVENTION
