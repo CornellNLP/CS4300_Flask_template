@@ -2,10 +2,10 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
-num_posts = 500
-num_subreddits = 800
-min_words_per_post = 20
-num_partitions = 25 #for the inverted index
+num_posts = 1000
+num_subreddits = 1075
+min_words_per_post = 10
+num_partitions = 100 #for the inverted index
 max_document_frequency = 0.1
 """
 DATASET NAMING CONVENTION
