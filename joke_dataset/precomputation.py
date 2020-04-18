@@ -38,6 +38,10 @@ def build_inverted_indices(jokes):
 
 inv_idx, inv_idx_cat = build_inverted_indices(data)
 
+with open('inv_idx_free.json', 'w') as f:
+    json.dump(inv_idx, f, indent=4)
+with open('inv_idx_cat.json', 'w') as f:
+    json.dump(inv_idx_cat, f, indent=4)
 # def compute_cat_num(jokes):
 #     result = []
 #     for i in range(len(jokes)):
@@ -58,6 +62,8 @@ def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.90):
     return idf
 
 idf_dict = compute_idf(inv_idx, NUM_JOKES)
+with open('idf_dict.json', 'w') as f:
+    json.dump(idf_dict, f, indent=4)
 
 def compute_doc_norms(inv_idx, idf_dict, n_docs):
     result = np.zeros(n_docs)
@@ -73,16 +79,21 @@ def compute_doc_norms(inv_idx, idf_dict, n_docs):
     return result
 
 doc_norms_lst = compute_doc_norms(inv_idx, idf_dict, NUM_JOKES)
+with open('doc_norms_lst.json', 'w') as f:
+    json.dump(doc_norms_lst.tolist(), f, indent=4)
 
 def jaccard_sim(query, inv_idx, jokes):
     result = {}
     for cat in query:
-        doc_ids = inv_idx[cat]
-        for doc in doc_ids:
-            if doc not in result:
-                result[doc] = 0
-            result[doc] += 1
+        if cat in inv_idx:
+            doc_ids = inv_idx[cat]
+            for doc in doc_ids:
+                if doc not in result:
+                    result[doc] = 0
+                result[doc] += 1
     for doc in result:
         result[doc] /= (len(set(jokes[doc]['categories']).union(set(query))))
+    result = sorted(result.items(), key = lambda x : x[1], reverse = True)
+    return result
 
 jaccard = jaccard_sim(['Dad Jokes'], inv_idx_cat, data)
