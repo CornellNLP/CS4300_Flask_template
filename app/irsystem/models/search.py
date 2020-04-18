@@ -27,7 +27,6 @@ class SearchEngine():
             print("...loading idf")
             idf = pickle.load(file)
             print("finished loading idf.")
->>>>>>> 61a4b491217facf9f71b35b0b06c52a98f791330
 
         with open(file_path_name + "-norms.pickle", 'rb') as file:
             print("...loading norms")
