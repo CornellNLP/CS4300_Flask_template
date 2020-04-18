@@ -5,14 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import LegacyApp from './LegacyApp';
+// import LegacyApp from './LegacyApp';
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" component={App} />
-      <Route path="/legacy" component={LegacyApp} />
+      {/* <Route path="/sample" component={ReactSample} /> */}
     </Switch>
   </BrowserRouter>, document.getElementById('root')
 );
