@@ -1,39 +1,53 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
+
+<head>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+    <div class="topcorner">
+        <p>Project Name: {{ name }}</p>
+        <p>Student Name: ({{ netid }})</p>
+    </div>
+    <form class="form-inline global-search">
+        <h1 style="font-size: 55px; font-family:Futura">
+            <span style="color: rgb(15, 110, 35); ">S</span>
+            <span style="color: rgb(18, 119, 40); ">M</span>
+            <span style="color: rgb(12, 143, 40); ">A</span>
+            <span style="color: rgb(32, 165, 60)">R</span>
+            <span style="color: rgb(58, 184, 85)">T</span>
+            <span> 🔪 </span>
+            <span style="color: rgb(100, 189, 120)">C</span>
+            <span style="color: rgb(136, 197, 149); ">H</span>
+            <span style="color: rgb(158, 202, 168); ">E</span>
+            <span style="color: rgb(193, 218, 199); ">F</span>
+        </h1>
+
+        <br><br>
+
+        <p>
+            Start your fitness journey right!
+            Enter your favorite foods for a curated meal plan.
+        </p>
+
+        <br><br>
+
+        <div class="form-group">
+            <input id="input" type="text" name="search" class="form-control"
+                placeholder="e.g. 'watermelon, fish, cashews'">
         </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
+        <button type="submit" class="btn btn-info"> Make meal plan ! </button>
+    </form>
+    <form class="form-inline global-search">
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
+        <h1>{{output_message}}</h1>
+        {% for d in data %}
+        <br>
+        <p>{{d}}</p>
+        {% endfor %}
         {% endif %}
-        </form>
-    </body>
+    </form>
+</body>
 
 </html>
