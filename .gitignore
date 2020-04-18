@@ -8,3 +8,4 @@ vagrant/a4keypair.pem
 *.iml
 .env
 app/testdata.py
+app/full_format_recipes.json
