@@ -4,7 +4,7 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 jar = this_dir + "/picklejar/"
 num_posts = 500
 num_subreddits = 1075
-min_words_per_post = 15
+min_words_per_post = 20
 max_document_frequency = 0.09
 """
 DATASET NAMING CONVENTION
