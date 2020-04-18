@@ -1,0 +1,28 @@
+.input-item_div_wrapper {
+    display: flex; 
+    flex-direction: row;
+    border-radius: 6px;
+    margin: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.input-items {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input-item_delete {
+    padding: 6px 6px 6px 6px;
+    height: auto;
+}
+
+.input-item_delete:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+    cursor: pointer;
+}
+
+.input-item_name {
+    padding: 6px 6px 6px 6px;
+}

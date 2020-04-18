@@ -1,0 +1,34 @@
+.debate-item-wrapper {
+    background-color: rgba(173, 216, 230, 0.24);
+    width: 800px;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.debate-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.debate-date {
+    font-size: 14px;
+}
+
+.debate-description {
+    margin-top: 8px;
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+.debate-title-wrapper:hover {
+    color: rgba(0, 0, 0, 0.411); 
+    cursor: pointer;
+}
+
+.debate-title-wrapper {
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+

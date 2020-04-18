@@ -1,0 +1,10 @@
+.quote-wrapper:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.video-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
