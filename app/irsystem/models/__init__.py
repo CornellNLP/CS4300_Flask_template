@@ -7,9 +7,9 @@ from sqlalchemy import (
     Column,
     ForeignKey,
     DateTime,
-    Float,
-    JSON
+    Float
 )
+from marshmallow import fields, Schema
 from werkzeug import check_password_hash, generate_password_hash  # Hashing
 import hashlib  # For session_token generation (session-based auth. flow)
 import datetime  # For handling dates
@@ -18,7 +18,7 @@ import datetime  # For handling dates
 class Base(db.Model):
     """Base PostgreSQL model"""
     __abstract__ = True
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, default=db.func.current_timestamp())
 
@@ -26,8 +26,9 @@ class Base(db.Model):
 class Recipe(Base):
     # recipes table
     __tablename__ = "recipes"
-    id = Column(Integer, primary_key=True)
-    details = Column(JSON)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    directions = Column(String())
+    ingredients = Column(String())
     fat = Column(Float)
     date = Column(DateTime)
     calories = Column(Float)
@@ -40,15 +41,8 @@ class Recipe(Base):
 
 class Category(Base):
     __tablename__ = "categories"
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(40), unique=True)
-
-"""
-class Ingredient(Base):
-    __tablename__ = "ingredients"
-    id = Column(Integer, primary_key=True)
-    name = Column(String(800))
-"""
 
 
 class RecipeCategorization(Base):
@@ -56,9 +50,22 @@ class RecipeCategorization(Base):
     recipe_id = Column(Integer, ForeignKey("recipes.id"))
     category_id = Column(Integer, ForeignKey("categories.id"))
 
-"""
-class RecipeIngredient(Base):
-    __tablename__ = "recipe_ingredients"
-    recipe_id = Column(Integer, ForeignKey("recipes.id"))
-    ingredient_id = Column(Integer, ForeignKey("ingredients.id"))
-"""
+
+class RecipeSchema(Schema):
+    id = fields.Integer(dump_only=True)
+
+    class Meta:
+        ordered = False
+        fields = (
+            "id",
+            "directions",
+            "ingredients",
+            "fat",
+            "date",
+            "calories",
+            "description",
+            "protein",
+            "rating",
+            "title",
+            "sodium"
+        )
