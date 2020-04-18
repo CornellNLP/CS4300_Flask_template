@@ -15,18 +15,14 @@ class SearchEngine():
     def __init__(self, should_build_structures):
         if should_build_structures:
             self.create()
-        inverted_index, idf, norms, post_lookup, subreddit_lookup = self.open_datastructures()
-        self.inverted_index = inverted_index
+        idf, norms, post_lookup, subreddit_lookup = self.open_datastructures()
+        self.inverted_index = None
         self.idf = idf
         self.norms = norms
         self.post_lookup = post_lookup
         self.subreddit_lookup = subreddit_lookup
 
     def open_datastructures(self):
-        print("...loading inverted index")
-        inverted_index = InvertedIndex()
-        inverted_index.load()
-        print("finished loading inverted index.")
         with open(file_path_name + "-idf.pickle", 'rb') as file:
             print("...loading idf")
             idf = pickle.load(file)
@@ -48,7 +44,7 @@ class SearchEngine():
             subreddit_lookup = pickle.load(file)
             print("finished loading posts")
 
-        return inverted_index, idf, norms, post_lookup, subreddit_lookup
+        return idf, norms, post_lookup, subreddit_lookup
 
     def run_tests(self, inverted_index, idf, norms, post_lookup, subreddit_lookup):
         while True:
@@ -57,6 +53,8 @@ class SearchEngine():
             print(find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup))
 
     def search(self, query):
+        if self.inverted_index is None:
+            self.inverted_index.load()
         ranks = compare_string_to_posts(query, self.inverted_index, self.idf, self.norms)
         return find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup)
 
