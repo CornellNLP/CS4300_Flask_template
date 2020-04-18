@@ -34,12 +34,15 @@ def get_debates(url):
     return debates
 
 
-def scrape_url(debate_url, folder_name):
+def scrape_url(debate_url, folder_name, is_debate):
     debate = get_bs_request(debate_url)
 
     # background info for the debate
     intro_text = debate.find_all('div', class_='fl-rich-text')[1].text.strip()
     title = debate.find('h1', class_='fl-heading').text.strip()
+    tags = []
+    if is_debate:
+        tags.append("debate")
     # attempt to get the date from the background paragraph
     try:
         date = dateutil.parser.parse(intro_text, fuzzy=True, ignoretz=True).date()
@@ -84,6 +87,7 @@ def scrape_url(debate_url, folder_name):
     debate_info = {
         'url': debate_url,
         'title': title,
+        'tags': tags,
         'date': date,
         'candidates': list(candidates),
         'other_speakers': list(other_speakers),
@@ -91,7 +95,7 @@ def scrape_url(debate_url, folder_name):
         'parts': parts
     }
 
-    with open(folder_name + '/' + debate_url.split('/')[-1] + '.txt', 'w') as f:
+    with open(folder_name + '/' + debate_url.split('/')[-1] + '.json', 'w') as f:
         f.write(json.dumps(debate_info, default=str))
 
 
@@ -103,12 +107,12 @@ debates_url = 'https://www.rev.com/blog/transcript-category/debate-transcripts'
 debate_urls = get_debates(debates_url)
 election_2020_urls = get_debates(election_2020_url) - debate_urls
 
-bad_debates = {'https://www.rev.com/blog/transcripts/transcript-of-the-kamala-harris-and-joe-biden-heated-exchange', 'https://www.rev.com/blog/transcripts/transcript-from-first-night-of-democratic-debates'}
+bad_debates = {'https://www.rev.com/blog/transcripts/transcript-of-the-kamala-harris-and-joe-biden-heated-exchange', 'https://www.rev.com/blog/transcripts/transcript-from-first-night-of-democratic-debates', 'https://www.rev.com/blog/transcripts/transcript-donna-brazile-tells-ronna-mcdaniel-go-to-hell-on-fox-news', 'https://www.rev.com/blog/transcripts/transcript-joe-biden-mistakenly-says-hes-a-united-states-senate-candidate-in-south-carolina-speech'}
 debate_urls -= bad_debates
 
 # for each debate transcript url, get all info and save to a file
 for url in debate_urls:
-    scrape_url(url, 'debates')
+    scrape_url(url, 'debates', True)
 
 for url in election_2020_urls:
-    scrape_url(url, 'others')
+    scrape_url(url, 'others', False)

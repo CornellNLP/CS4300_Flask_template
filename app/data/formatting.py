@@ -27,7 +27,7 @@ def fix_addressing(debate, speakers_dict):
                         name = speakers_dict[name_part]
                         break
                 if name is None:
-                    raise Exception('Name ' + line['speaker'] + ' cannot be matched')
+                    raise Exception('Debate ' + debate['url'] + '\nName ' + line['speaker'] + ' cannot be matched')
                 line['speaker'] = name
 
     return speakers_dict, debate
@@ -107,7 +107,7 @@ def annotate_responses(debate):
                 line['response'] = []
 
 
-url = 'debates/december-democratic-debate-transcript-sixth-debate-from-los-angeles.txt'
+url = 'debates/december-democratic-debate-transcript-sixth-debate-from-los-angeles.json'
 with open(url) as f:
     debate = json.load(f)
 
