@@ -16,7 +16,6 @@ def search():
         output_message = ''
         response = ''
     else:
-        open_datastructures()
         data = full_search(query)
         if not data:
             response = "response"
