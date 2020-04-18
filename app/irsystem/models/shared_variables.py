@@ -5,7 +5,7 @@ jar = this_dir + "/picklejar/"
 num_posts = 1000
 num_subreddits = 1075
 min_words_per_post = 10
-max_document_frequency = 0.15
+max_document_frequency = 0.10
 """
 DATASET NAMING CONVENTION
 ""<num posts>p<num subreddits>s<min words per post>mwc.json"
