@@ -28,11 +28,12 @@ from app.irsystem.models.comparison import find_subreddits
 # print("delay end.")
 # input()
 
-inverted_index = None
-idf = None
-norms = None
-post_lookup = None
-subreddit_lookup = None
+if "inverted_index" not in globals():
+    inverted_index = None
+    idf = None
+    norms = None
+    post_lookup = None
+    subreddit_lookup = None
 
 def open_datastructures():
     global inverted_index, idf, norms, post_lookup, subreddit_lookup
