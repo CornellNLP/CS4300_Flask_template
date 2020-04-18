@@ -5,7 +5,7 @@ from app.irsystem.models.search import SearchEngine
 
 project_name = "Subreddit Recommender"
 class_name = "CS 4300 Spring 2020"
-search_engine = SearchEngine(False)
+search_engine = SearchEngine(True)
 
 @irsystem.route('/', methods=['GET'])
 def search():

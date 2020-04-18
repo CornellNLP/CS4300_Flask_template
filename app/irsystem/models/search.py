@@ -9,6 +9,7 @@ from app.irsystem.models.shared_variables import file_path
 from app.irsystem.models.shared_variables import file_path_name
 from app.irsystem.models.comparison import compare_string_to_posts
 from app.irsystem.models.comparison import find_subreddits
+from app.irsystem.models.inverted_index import InvertedIndex
 
 class SearchEngine():
     def __init__(self, should_build_structures):
@@ -22,10 +23,10 @@ class SearchEngine():
         self.subreddit_lookup = subreddit_lookup
 
     def open_datastructures(self):
-        with open(file_path_name + "-inverted_index.pickle", 'rb') as file:
-            print("...loading inverted index")
-            inverted_index = pickle.load(file)
-            print("finished loading inverted index.")
+        print("...loading inverted index")
+        inverted_index = InvertedIndex()
+        inverted_index.load()
+        print("finished loading inverted index.")
         with open(file_path_name + "-idf.pickle", 'rb') as file:
             print("...loading idf")
             idf = pickle.load(file)
@@ -70,7 +71,7 @@ class SearchEngine():
         #create the idf, inverted index, and norms
 
         print("create and store structures? y/n")
-        ans = "y" #input()
+        ans = input()
         if ans == 'y':
             create_and_store_structures()
 
