@@ -61,7 +61,7 @@ def open_datastructures():
 
     return inverted_index, idf, norms, post_lookup, subreddit_lookup
 
-if 'inverted_index' not in globals():
+if 'inverted_index' not in locals():
     inverted_index, idf, norms, post_lookup, subreddit_lookup = open_datastructures()
 
 def run_tests(inverted_index, idf, norms, post_lookup, subreddit_lookup):

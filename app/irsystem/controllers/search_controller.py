@@ -1,6 +1,7 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
+print("importing search")
 from app.irsystem.models.search import full_search
 
 project_name = "Subreddit Recommender"
