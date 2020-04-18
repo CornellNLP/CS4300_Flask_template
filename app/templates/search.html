@@ -14,11 +14,10 @@
         </div>
         <main>
           <!--style="font-size: 55px; font-family: Impact, fantasy; color: #4285F4"-->
-        <h1>
-          Charcrafter</h1>
+        <h1>CharCrafter</h1>
           <!--blurb-->
-          <h2>Welcome to Charcrafter, an easy tool for creating class and subclass
-            builds for DND 5th edition based on YOUR needs!</h2>
+          <h3>Welcome to Charcrafter, an easy tool for creating class and subclass
+            builds for DND 5th edition based on YOUR needs!</h3>
         </main>
         <form class="form-inline global-search">
 
@@ -33,18 +32,19 @@
         {% if data %}
           <h1>{{output_message}}</h1>
           <div class="output">
+            <!--I have no idea how the data is being output yet.
+              if dict style, what I have below should be fine
+              once I know the yeah.  so for d['class'] and so forth
+            I'm assuming it'll be in a list of dictionaries
+          each dict being a result-->
             {% for d in data %}
-                <!--I have no idea how the data is being output yet.
-                  if dict style, what I have below should be fine
-                  once I know the yeah.  so for d['class'] and so forth
-                I'm assuming it'll be in a list of dictionaries
-              each dict being a result-->
                   <!--<p>{{d}}</p>-->
                   <div class = "result">
                     <div class="char">
                       <h2>{{d['class']}}</h2>
                       <p>{{d['flavor']}}</p>
                     </div>
+                    <hr>
                     <div class="ratings">
                       <h2>Build Rating</h2>
                       <p>{{d['rating']}}</p>
