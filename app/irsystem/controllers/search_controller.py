@@ -3,7 +3,10 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from os.path import dirname as up
 from collections import defaultdict
-from nltk.tokenize import TreebankWordTokenizer
+import nltk
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+nltk.download('stopwords')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
@@ -51,7 +54,21 @@ def search():
 		    sims = docs_compressed.dot(words_compressed[word_to_index[word_in],:])
 		    ssort = np.argsort(-sims)[:k+1]
 		    return [(docs[i][0],sims[i]/sims[ssort[0]]) for i in ssort[0:]]
-		rez = closest_projects_to_word(query, word_to_index)
-		print(rez)
-		data = rez
+
+		qtokens = word_tokenize(query)
+		qtokens = [word for word in qtokens if not word in stopwords.words()]
+		ret = dict()
+		for c in f["classes"]:
+			ret[c["class"]]=0
+		for qt in qtokens:
+			rezp = closest_projects_to_word(qt, word_to_index)
+			if(rezp!='not in vocab'):
+				for rp in rezp:
+					ret[rp[0]]+=rp[1]
+		for rating in ret.values():
+			rating /= len(qtokens)
+		data = sorted(list(ret.items()),key=lambda x: x[1])
+		print(data)
+		data = list(reversed(data))
+		print(data)
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
