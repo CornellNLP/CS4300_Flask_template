@@ -5,7 +5,7 @@ jar = this_dir + "/picklejar/"
 num_posts = 500
 num_subreddits = 800
 min_words_per_post = 20
-num_partitions = 10 #for the inverted index
+num_partitions = 25 #for the inverted index
 max_document_frequency = 0.1
 """
 DATASET NAMING CONVENTION
