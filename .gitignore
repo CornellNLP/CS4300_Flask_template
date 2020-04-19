@@ -1,6 +1,5 @@
 *.pyc
  
-migrations
 vagrant/.vagrant
 vagrant/site.retry
 vagrant/a4keypair.pem
@@ -10,4 +9,4 @@ venv
 .env
 env.bat
 .ipynb_checkpoints
-
+migrations/
