@@ -68,9 +68,9 @@ def search():
 
 		for c in f["classes"]:
 			for s in c["subclasses"]:
-				cs_key = c["class"]+": "+s["subclass"]
+				cs_key = c["class"]+":"+s["subclass"]
 				ratings_with_subclasses[cs_key]=0
-			sdocs = [(c["class"]+": "+s["subclass"], s["flavor"]) for s in c["subclasses"]]
+			sdocs = [(c["class"]+":"+s["subclass"], s["flavor"]) for s in c["subclasses"]]
 			for qt in qtokens:
 				rezp = rank_doc_similarity_to_word(qt, sdocs, 1)
 				if(rezp!="not in vocab"):
@@ -81,7 +81,24 @@ def search():
 				base_class = k.split(":")[0] # because that's what we did
 				ratings_with_subclasses[k] = rating/float(len(qtokens))+base_ratings[base_class]
 
-		data = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
-		print(data)
-		data = list(reversed(data))[:10]
+		csc_rating_pairs = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
+		csc_rating_pairs = list(reversed(csc_rating_pairs))[:10]
+		ret = []
+		for cscr in csc_rating_pairs:
+			base_class = cscr[0].split(":")[0]
+			subclass = cscr[0].split(":")[1]
+			rating = cscr[1]
+			flavor_tot = ""
+			for c in f["classes"]:
+				if c["class"]==base_class:
+					flavor_tot+=(c["flavor"]+" ")
+					for s in c["subclasses"]:
+						if s["subclass"]==subclass:
+							flavor_tot+=(s["flavor"])
+			rdict = dict()
+			rdict["class"] = cscr[0]
+			rdict["flavor"] = flavor_tot
+			rdict["rating"] = rating
+			ret.append(rdict)
+		data = ret
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
