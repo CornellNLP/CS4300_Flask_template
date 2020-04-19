@@ -1,6 +1,6 @@
-def get_rel_jokes(query, inv_idx):
+def get_rel_jokes(inv_idx):
     """
-    Returns: dictionary mapping the joke id to its nuerator in jaccard sim
+    Returns: dictionary mapping the joke id to its numerator in jaccard sim
 
     Inputs:
         query: list of categories represented as strings
@@ -8,27 +8,29 @@ def get_rel_jokes(query, inv_idx):
             that category.
     """
     result = {}
-    for cat in query:
-        if cat in inv_idx:
-            doc_ids = inv_idx[cat]
-            for doc in doc_ids:
-                if doc not in result:
-                    result[doc] = 0
+    for cat, ls_ids in inv_idx.items():
+        for doc in ls_ids:
+            if doc not in result.keys():
+                result[doc] = 1
+            else:
                 result[doc] += 1
-    return result
+    return result 
 
-def jaccard_sim(num_dict, jokes):
+def jaccard_sim(query, num_dict, jokes):
     """
     Returns: a list of tuples where t[0] is the joke id and t[1] is
     the similarity measure.
 
     Inputs:
-        num_dict - dictionary that maps joke id to its numerator in jaccard
+        query: list of categories represented as strings
+        num_dict: dictionary that maps joke id to its numerator in jaccard
             similarity measure.
-        jokes - dictionary of jokes mapping the joke id to the joke
+        jokes: dictionary of jokes mapping the joke id to the categories of tha tjoke id
 
     """
-    for doc in num_dict:
-        result[doc] /= (len(set(jokes[doc]['categories']).union(set(query))))
-    result = sorted(result.items(), key = lambda x : x[1], reverse = True)
+    result = []
+    for doc in num_dict.keys():
+        jaccard_measure = num_dict[doc] / (len(set(jokes[doc].categories).union(set(query))))
+        result.append((doc, jaccard_measure))
+    result = sorted(result, key = lambda x : x[1], reverse = True)
     return result
