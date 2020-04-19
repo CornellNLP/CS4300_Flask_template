@@ -5,7 +5,7 @@ import csv
 def load_word_weight(lexicon_file):
     ## Create a mapping from words to numbers
     word_weights = {}
-    with open(lexicon_file) as lexicon_reader:
+    with open(lexicon_file, encoding='utf-8') as lexicon_reader:
         for line in lexicon_reader:
             weight, word = line.rstrip().split(",") ## split on comma
             word_weights[word] = float(weight) ## convert string to number
@@ -37,7 +37,7 @@ word_pattern = re.compile("[\w\-]+") #re looking for 1+ letters or numbers, squa
 
 #make list of states
 state_list = []
-with open("data_code/governors_twitter_info.csv") as info:
+with open("data_code/governors_twitter_info.csv", encoding='utf-8') as info:
     reader = csv.reader(info)
     next(reader)
 
@@ -49,7 +49,7 @@ def compile_comment_sent(state_list):
     all_states = {}
     for state in state_list:
         try:
-            with open("data_code/comment_data/" + str(state) + ".csv") as state_file:
+            with open("data_code/comment_data/" + str(state) + ".csv", encoding='utf-8') as state_file:
                 reader = csv.reader(state_file)
                 state_dict = {}
                 next(reader)
