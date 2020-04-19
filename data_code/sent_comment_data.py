@@ -13,7 +13,7 @@ def load_word_weight(lexicon_file):
     return word_weights
 
 #load sentiment weights
-word_weights = load_word_weight("syuzhet.csv")
+word_weights = load_word_weight("data_code/syuzhet.csv")
 
 ## This function applies the word weights to a list of word counts
 def score_counts(counter, word_weights):
@@ -37,7 +37,7 @@ word_pattern = re.compile("[\w\-]+") #re looking for 1+ letters or numbers, squa
 
 #make list of states
 state_list = []
-with open("governors_twitter_info.csv") as info:
+with open("data_code/governors_twitter_info.csv") as info:
     reader = csv.reader(info)
     next(reader)
 
@@ -49,7 +49,7 @@ def compile_comment_sent(state_list):
     all_states = {}
     for state in state_list:
         try:
-            with open("comment_data/" + str(state) + ".csv") as state_file:
+            with open("data_code/comment_data/" + str(state) + ".csv") as state_file:
                 reader = csv.reader(state_file)
                 state_dict = {}
                 next(reader)
