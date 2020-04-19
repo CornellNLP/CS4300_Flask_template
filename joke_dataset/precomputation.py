@@ -25,15 +25,15 @@ def build_inverted_indices(jokes):
             tmp[tok] += 1
         for key in tmp:
             if key not in result:
-                result[key] = [(joke, tmp[key])]
+                result[key] = [(joke+1, tmp[key])]
             else:
-                result[key].append((joke, tmp[key]))
+                result[key].append((joke+1, tmp[key]))
 
         for cat in cats:
             if cat not in result_cat:
-                result_cat[cat] = [joke]
+                result_cat[cat] = [joke+1]
             else:
-                result_cat[cat].append(joke)
+                result_cat[cat].append(joke+1)
     return result, result_cat
 
 inv_idx, inv_idx_cat = build_inverted_indices(data)
@@ -72,7 +72,7 @@ def compute_doc_norms(inv_idx, idf_dict, n_docs):
         if word in idf_dict:
             curr_idf = idf_dict[word]
             for t in inv_idx[word]:
-                doc = t[0]
+                doc = t[0]-1
                 tf = t[1]
                 result[doc] += math.pow(tf*curr_idf, 2)
     result = np.sqrt(result)
