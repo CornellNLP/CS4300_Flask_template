@@ -14,7 +14,7 @@ def search():
         categories = None # request.args.get('categories')
 
 	if min_score is not None: 
-		jokes = Joke.query.filter_by(score =  min_score).all()
+		jokes = Joke.query.filter(score >= min_score).all()
 		results = [
 			{
         "text": joke.text,
