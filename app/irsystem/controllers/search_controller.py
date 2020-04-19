@@ -221,7 +221,7 @@ def search():
                 data = []
             else:
                 output_message = "Your search: " + query
-                data = ranked_results
+                data = ranked_results[:10]
                 """
                 # hardcoding calorie limits; will replace after inputs for calorie limits are added
                 grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
