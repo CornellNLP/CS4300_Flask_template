@@ -1,10 +1,10 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-@import 'data_code/sent_comment_data.py';
+from data_code.sent_comment_data import comment_sentiment, state_list
 
 project_name = "NJ, Sophia, Jacob, & Haley's Project"
-net_id = "hcm58, sia9, ns633,"
+net_id = "hcm58, sia9, ns633, jvw6"
 
 # @irsystem.route('/', methods=['GET'])
 # def search():
@@ -23,13 +23,11 @@ def search():
 	query = request.args.get('search')
 	states = state_list
 	if query not in states:
-		output_message = query + ": Invalid State Name"
+		output_message = "Invalid State Name"
 	else:
-		sent_data = comment_sentiment
-		state_sentiment = sent_data[query]
-		output_message = state_sentiment
+		# state_sentiment = comment_sentiment[query]
+		output_message = comment_sentiment
 		# for tweet in state_sentiment:
 
 
-		data = range(5)
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message)
