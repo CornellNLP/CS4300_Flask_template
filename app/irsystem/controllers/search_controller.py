@@ -1,19 +1,25 @@
-from . import *
-from app.irsystem.models.helpers import *
-from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from os.path import dirname as up
-from collections import defaultdict
 import nltk
 from nltk import word_tokenize
 from nltk.corpus import stopwords
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+from app.irsystem.models.helpers import *
+from . import *
+
 nltk.download('stopwords')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 import scipy
 import numpy as np
-import math
-
+from app.irsystem.word_forms.word_forms import get_word_forms
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
@@ -53,6 +59,12 @@ def search():
 		cdocs = [(c["class"], c["flavor"])for c in f["classes"]]
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
+		inflecs = []
+		for w in qtokens:
+			inf = get_word_forms(w)
+			for k,v in inf.items():
+				inflecs.extend(list(v))
+		qtokens = list(set(inflecs))
 		base_ratings = dict()
 		ratings_with_subclasses = dict()
 		for c in f["classes"]:
