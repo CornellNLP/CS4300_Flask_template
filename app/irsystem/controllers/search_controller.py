@@ -3,7 +3,7 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from data_code.sent_comment_data import comment_sentiment, state_list
 
-project_name = "NJ, Sophia, Jacob, & Haley's Project"
+project_name = "Covid-19 Politicians"
 net_id = "hcm58, sia9, ns633, jvw6"
 
 # @irsystem.route('/', methods=['GET'])
