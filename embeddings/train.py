@@ -10,10 +10,10 @@ import numpy as np
 
 def main():
     print('Fetching wine data...')
-    wine_data = get_wine_data(100)
+    wine_data = get_wine_data(50000)
     wine_desc = [str(x) for x in list(wine_data['description'])]
     print('Fetching beer data...')
-    beer_data = get_beer_data(100)
+    beer_data = get_beer_data()
     beer_desc = [str(x) for x in list(beer_data['review/text'])]
     full_text = ' '.join(wine_desc) + ' ' + ' '.join(beer_desc)
 
@@ -33,7 +33,8 @@ def main():
 
     print('Training model...')
     model = Word2Vec(final_sentences, size=300, min_count=5, iter=15)
-    # print(model.wv.similar_by_word('apple'))
+    print(model.wv.similar_by_word('apple'))
+    model.save('trained_models/model_all.bin')
     # return
 
     # List of descriptor words for each drink description
