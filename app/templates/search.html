@@ -1,39 +1,66 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: {{ netid }}</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-        <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-    </body>
+<!-- Code references:
+https://stackoverflow.com/questions/29738787/filling-water-animation/29740828#29740828
+https://www.mkronenfeld.de/filling-liquid-animation/
+https://stackoverflow.com/questions/24210132/remove-border-radius-from-select-tag-in-bootstrap-3/24766039
+https://getbootstrap.com/docs/4.4/examples/cover/ -->
 
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>pick your poison</title>
+      <link rel="stylesheet" href="/static/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/style.css">      
+   </head>
+   <body class="text-center">
+
+      <!-- Wave Graphic -->
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
+         <symbol id="wave">
+            <path class="waveShape" d="M300 300V2.5s-.6-.1-1.1-.1c0 0-25.5-2.3-40.5-2.4-15 0-40.6 2.4-40.6 2.4-12.3 1.1-30.3 1.8-31.9 1.9-2-.1-19.7-.8-32-1.9 0 0-25.8-2.3-40.8-2.4-15 0-40.8 2.4-40.8 2.4-12.3 1.1-30.4 1.8-32 1.9-2-.1-20-.8-32.2-1.9 0 0-3.1-.3-8.1-.7V300h300z"/>
+         </symbol>
+      </svg>
+      <div class="liquid">
+         <svg viewBox="0 0 300 20" class="liquid__wave">
+            <use xlink:href="#wave"></use>
+         </svg>
+      </div>
+
+      <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+         <header class="masthead mb-auto">
+            <div class="inner">
+               <h3 class="masthead-brand"><a href="/">pick your poison</a></h3>
+            </div>
+         </header>
+
+         <main role="main" class="inner cover">
+            <form class="main-form" method="GET">
+               <p class="lead d-flex justify-content-between text-nowrap">
+                  <span>I wanna drink some </span>
+                  <label class="sr-only" for="inlineFormInputName2">drink type</label>
+                  <select name="type" class="form-control mb-2 mr-sm-2">
+                     <option>beer</option>
+                     <option>wine</option>
+                     <option>cocktail</option>
+                  </select>
+               </p>
+               <p class="lead d-flex justify-content-between text-nowrap">
+                  <span>It should taste </span>
+                  <label class="sr-only" for="inlineFormInputName2">descriptors</label>
+                  <input type="text" name="descriptors" class="form-control mb-2 mr-sm-2" placeholder="disgusting, gross, poopy">
+               </p>
+               <p class="lead mt-5 mx-auto">
+                  <button type="submit" class="btn btn-lg btn-secondary">pick my poison</button>
+               </p>
+            </form>
+         </main>
+
+         <footer class="mastfoot mt-auto">
+            <div class="inner">
+               <p>created by Derek Cheng, Collin Montag, DB Lee, Dana Luong, and Ishneet Sachar</p>
+            </div>
+         </footer>
+      </div>
+   </body>
 </html>
