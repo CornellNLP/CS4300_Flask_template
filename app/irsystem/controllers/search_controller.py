@@ -41,12 +41,13 @@ def search():
 			cat_jokes[cat] = doc_lst.joke_ids
 		
 		numer_dict = sl.get_rel_jokes(cat_jokes) #dictionary with key = joke_id and value = numerator
+		print(numer_dict)
 		
 		rel_jokes = {} #dictionary where key = joke_id, value = joke
 		for doc in numer_dict.keys():
 			rel_jokes[doc] = Joke.query.filter_by(id = doc).first()
 		
-		results_cat = sl.jaccard_sim(categories, numer_dict, rel_jokes)
+		results_cat = sl.jaccard_sim(categories_list, numer_dict, rel_jokes)
 
 		for element in results_cat: 
 			doc_id = element[0]

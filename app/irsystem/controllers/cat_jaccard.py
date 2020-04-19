@@ -3,7 +3,6 @@ def get_rel_jokes(inv_idx):
     Returns: dictionary mapping the joke id to its numerator in jaccard sim
 
     Inputs:
-        query: list of categories represented as strings
         inv_idx: dictionary mapping category to list of jokes ids that contain
             that category.
     """
