@@ -45,7 +45,7 @@ def search():
 		data = []
 		output_message = ''
 	else:
-		output_message = "Your search: " + query
+		output_message = "Play your game as: "
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
 			f = json.load(class_file)
@@ -82,5 +82,6 @@ def search():
 				ratings_with_subclasses[k] = rating/float(len(qtokens))+base_ratings[base_class]
 
 		data = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
+		print(data)
 		data = list(reversed(data))[:10]
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
