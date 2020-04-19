@@ -14,8 +14,8 @@ def scr(inv_idx):
         for t in inv_idx[i]:
             docs.append(t[0])
             tf.append(t[1])
-        temp['joke_id'] = docs
-        temp['tf'] = tf
+        temp['joke_ids'] = docs
+        temp['tfs'] = tf
         result.append(temp)
     return result 
 

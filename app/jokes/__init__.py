@@ -5,4 +5,4 @@ from flask import Blueprint
 jokes = Blueprint('jokes', __name__, url_prefix='/jokes')
 
 # Import all controllers
-from .controllers.jokes_controller import *
+from .controllers.jokes_controller import *     

@@ -48,17 +48,28 @@ def sep_tups(inv_idx):
         for t in inv_idx[i]:
             docs.append(t[0])
             tf.append(t[1])
-        temp['joke_id'] = docs
-        temp['tf'] = tf
+        temp['joke_ids'] = docs
+        temp['tfs'] = tf
         result.append(temp)
     return result 
 
 new_inv_idx = sep_tups(inv_idx)
 
+def edit_cats(inv_idex_cat):
+    result = []
+    for category, ls in inv_idx_cat.items():
+        temp = {}
+        temp['category'] = category
+        temp['joke_ids'] = ls
+        result.append(temp)
+    return result
+
+new_inv_idx_cat = edit_cats(inv_idx_cat)
+        
 with open('inv_idx_free.json', 'w') as f:
     json.dump(new_inv_idx, f, indent=4)
 with open('inv_idx_cat.json', 'w') as f:
-    json.dump(inv_idx_cat, f, indent=4)
+    json.dump(new_inv_idx_cat, f, indent=4)
 # def compute_cat_num(jokes):
 #     result = []
 #     for i in range(len(jokes)):
