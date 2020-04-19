@@ -4,4 +4,5 @@ from flask import Blueprint
 irsystem = Blueprint('irsystem', __name__, url_prefix='/',static_folder='static',template_folder='templates')
 
 # Import all controllers
+print("importing controllers")
 from .controllers.search_controller import *
