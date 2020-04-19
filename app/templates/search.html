@@ -18,8 +18,8 @@
           <!--blurb-->
           <h3>Welcome to Charcrafter, an easy tool for creating class and subclass
             builds for DND 5th edition based on YOUR needs!</h3>
-          <h3>Type in words describing your desired
-          character's abilities for class and subclass matches.</h3>
+          <h3>For class and subclass matches, describe your desired
+          character's abilities and affinities.</h3>
         </main>
         <form class="form-inline global-search">
 
@@ -30,7 +30,7 @@
         </form>
         <form class="form-inline global-search">
         {% if data %}
-          <h1>Play your game as:</h1><h2>{{output_message}}</h2>
+          <h1>Play your game as: </h1><h2> {{output_message}}</h2>
           <div class="output">
             <!--Data in dicts-->
             {% for d in data %}
