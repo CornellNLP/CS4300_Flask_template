@@ -1,3 +1,6 @@
+# run env.bat/.env; set PGUSER and PGPASSWORD
+# RUN ON CMD: heroku pg:push (local database name) DATABASE_URL --app hahafactory
+
 import psycopg2
 import json
 
