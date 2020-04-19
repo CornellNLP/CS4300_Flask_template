@@ -2,10 +2,11 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.jokes import *
-import app.irsystem.controllers.sim_lib as sl
+import app.irsystem.controllers.cat_jaccard as sl
 
 project_name = "Haha Factory"
 net_id = "Jason Jung: jj634, Suin Jung: sj575, Winice Hui: wh394, Cathy Xin: cyx5, Rachel Han: ryh25"
+search_params = {}
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -13,9 +14,13 @@ def search():
 	min_score = request.args.get('score')
 	categories = request.args.get('category')
 
+	search_params['min_score'] = min_score if min_score else ''
+	search_params['categories'] = categories if categories else ''
+	search_params['key_words'] = query if query else ''
+
 	results = []
 
-	if min_score is not None:
+	if min_score:
 		jokes = Joke.query.filter(Joke.score >= min_score).all()
 		results += [
 			{
@@ -24,13 +29,14 @@ def search():
         "score": str(joke.score),
         "maturity": joke.maturity,
 		} for joke in jokes]
+	
 
     # uncomment for jaccard sim on categories
-	if categories is not None:
-		categories = [el.strip() for el in categories.split(",")]
+	if categories:
+		categories_list = [el.strip() for el in categories.split(",")]
 		       
 		cat_jokes = {} #dictionary where key = category, value = array of doc_ids with that category
-		for cat in categories: #for every category
+		for cat in categories_list: #for every category
 			doc_lst = Categories.query.filter_by(category = cat).first() #get the record where category is equal to cat
 			cat_jokes[cat] = doc_lst.joke_ids
 		
@@ -57,12 +63,7 @@ def search():
 
 	Joke.testFunct()
 
-	if not query and not min_score and not categories:
-		results = []
-		output_message = ''
-	else:
-		output_message = "Your search: " + query
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=results)
+	return render_template('search.html', name=project_name, netid=net_id, output_message=search_params, data=results)
 
 @irsystem.route('/react', methods=['GET'])
 def sendhome():

@@ -41,7 +41,12 @@
     </form>
     <form class="form-inline global-search">
         {% if data %}
-        <h1>{{output_message}}</h1>
+        <h3>Keywords: {{output_message['key_words']}}</h3>
+        <br>
+        <h3>Categories: {{output_message['categories']}}</h3>
+        <br>
+        <h3>Minimum Score: {{output_message['min_score']}}</h3>
+        <br>
         {% for d in data %}
         <br>
         <p>{{d}}</p>
