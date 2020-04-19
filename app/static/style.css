@@ -71,6 +71,10 @@ body {
   margin-bottom: 0;
 }
 
+.masthead-brand a {
+   text-decoration: none;
+}
+
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
@@ -166,7 +170,9 @@ body {
    overflow: hidden;
 }
 
-.main-form input[type="text"] {
+.main-form input[type="text"],
+.main-form select,
+.main-form select:focus {
    margin-left: 1em;
    background: transparent;
    border: none;
@@ -177,13 +183,31 @@ body {
    font-size: 0.7em;
 }
 
+.main-form select,
+.main-form select:focus {
+   -webkit-appearance: none;
+   appearance: none;
+   background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='white' fill-opacity='0.5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+   background-position: 100% 50%;
+   background-repeat: no-repeat;
+}
+
 .main-form input:focus {
-   border-bottom: 1px solid rgba(255, 255, 255, 1);
+   border-bottom: 1px solid white;
 }
 
 .main-form input::placeholder {
    color: #fff;
    opacity: 0.5;
+}
+
+.main-form select {
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.main-form select:focus {
+   border-bottom: 1px solid white;
+   background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='white' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
 }
 
 .main-form p {
