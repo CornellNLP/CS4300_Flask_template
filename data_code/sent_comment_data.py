@@ -69,7 +69,7 @@ def compile_comment_sent(state_list):
             all_states[state] = state_dict
         except FileNotFoundError:
             continue
-        return all_states
+    return all_states
 
 #get dictionary of all comment sentiment data
 comment_sentiment = compile_comment_sent(state_list)
