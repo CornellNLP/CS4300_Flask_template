@@ -25,9 +25,9 @@ def search():
 	if query not in states:
 		output_message = "Invalid State Name"
 	else:
-		# state_sentiment = comment_sentiment[query]
-		output_message = comment_sentiment
+		state_name = query
+		output_message = comment_sentiment[state_name]
 		# for tweet in state_sentiment:
 
 
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message)
+	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=comment_sentiment)
