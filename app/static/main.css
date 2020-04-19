@@ -48,11 +48,14 @@ main{
 }
 
 main h1{
-  font-family: 'Almendra SC';
   font-size: 80px;
 }
 
-/*output formatting i have no idea how bootstrap works and it scares me*/
+h1{
+  font-family: 'Almendra SC', cursive;
+}
+
+/*output formatting. no bootstrap, i have no idea it works*/
 .output{
   display: inline;
 }
@@ -62,10 +65,26 @@ main h1{
   border-bottom: solid;
 }
 
+.result p{
+  font-size: larger;
+}
+
+h2{
+  padding-bottom: 10px;
+}
+
 .char{
-  flex: 1;
+  flex: 2;
+}
+
+.char p{
+  border-right: dashed;
+  padding-right: 15px;
 }
 
 .ratings{
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }

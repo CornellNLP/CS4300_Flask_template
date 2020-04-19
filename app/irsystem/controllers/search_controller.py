@@ -13,6 +13,7 @@ else:
 from app.irsystem.models.helpers import *
 from . import *
 
+nltk.download("punkt")
 nltk.download('stopwords')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse.linalg import svds
@@ -51,7 +52,7 @@ def search():
 		data = []
 		output_message = ''
 	else:
-		output_message = "Play your game as: "
+		output_message = query
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
 			f = json.load(class_file)
@@ -103,7 +104,7 @@ def search():
 			flavor_tot = ""
 			for c in f["classes"]:
 				if c["class"]==base_class:
-					flavor_tot+=(c["flavor"]+" ")
+					#flavor_tot+=(c["flavor"]+" ")
 					for s in c["subclasses"]:
 						if s["subclass"]==subclass:
 							flavor_tot+=(s["flavor"])

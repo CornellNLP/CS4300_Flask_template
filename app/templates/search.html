@@ -18,38 +18,33 @@
           <!--blurb-->
           <h3>Welcome to Charcrafter, an easy tool for creating class and subclass
             builds for DND 5th edition based on YOUR needs!</h3>
+          <h3>Type in words describing your desired
+          character's abilities for class and subclass matches.</h3>
         </main>
         <form class="form-inline global-search">
-
-
 
             <div class="form-group">
                 <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
             </div>
-            <button type="submit" class="btn btn-info"> Get Builds </button>
+            <button type="submit" class="btn btn-info">Get Builds</button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
-          <h1>{{output_message}}</h1>
+          <h1>Play your game as:</h1><h2>{{output_message}}</h2>
           <div class="output">
-            <!--I have no idea how the data is being output yet.
-              if dict style, what I have below should be fine
-              once I know the yeah.  so for d['class'] and so forth
-            I'm assuming it'll be in a list of dictionaries
-          each dict being a result-->
+            <!--Data in dicts-->
             {% for d in data %}
-                  <!--<p>{{d}}</p>-->
-                  <div class = "result">
-                    <div class="char">
-                      <h2>{{d['class']}}</h2>
-                      <p>{{d['flavor']}}</p>
-                    </div>
-                    <hr>
-                    <div class="ratings">
-                      <h2>Build Rating</h2>
-                      <p>{{d['rating']}}</p>
-                    </div>
-                  </div>
+              <!--<p>{{d}}</p>-->
+              <div class = "result">
+                <div class="char">
+                  <h2>{{d['class']}}</h2>
+                  <p>{{d['flavor']}}</p>
+                </div>
+                <div class="ratings">
+                  <h2>Build Rating</h2>
+                  <p>Score: {{d['rating']}}</p>
+                </div>
+              </div>
             {% endfor %}
               </div>
         {% endif %}
