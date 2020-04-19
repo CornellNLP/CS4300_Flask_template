@@ -18,7 +18,7 @@ def add_tokens(tokenizer, data):
     result = data
 
     for i in range(len(result)):
-        result[i]['toks'] = tokenizer.tokenize(result[i]['joke'])
+        result[i]['toks'] = tokenizer.tokenize(result[i]['joke'].lower())
 
     return result
 

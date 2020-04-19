@@ -38,8 +38,25 @@ def build_inverted_indices(jokes):
 
 inv_idx, inv_idx_cat = build_inverted_indices(data)
 
+def sep_tups(inv_idx):
+    result = [] 
+    for i in inv_idx:
+        temp = {}
+        temp['term'] = i
+        docs = []
+        tf = []
+        for t in inv_idx[i]:
+            docs.append(t[0])
+            tf.append(t[1])
+        temp['joke_id'] = docs
+        temp['tf'] = tf
+        result.append(temp)
+    return result 
+
+new_inv_idx = sep_tups(inv_idx)
+
 with open('inv_idx_free.json', 'w') as f:
-    json.dump(inv_idx, f, indent=4)
+    json.dump(new_inv_idx, f, indent=4)
 with open('inv_idx_cat.json', 'w') as f:
     json.dump(inv_idx_cat, f, indent=4)
 # def compute_cat_num(jokes):
@@ -62,6 +79,7 @@ def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.90):
     return idf
 
 idf_dict = compute_idf(inv_idx, NUM_JOKES)
+
 with open('idf_dict.json', 'w') as f:
     json.dump(idf_dict, f, indent=4)
 
@@ -79,8 +97,22 @@ def compute_doc_norms(inv_idx, idf_dict, n_docs):
     return result
 
 doc_norms_lst = compute_doc_norms(inv_idx, idf_dict, NUM_JOKES)
-with open('doc_norms_lst.json', 'w') as f:
-    json.dump(doc_norms_lst.tolist(), f, indent=4)
+
+def add_norms(jokes, norms):
+    result = [] 
+    for i in range(len(jokes)):
+        temp = {}
+        temp['joke'] = jokes[i]['joke']
+        temp['categories'] = jokes[i]['categories']
+        temp['score'] = jokes[i]['score']
+        temp['norm'] = norms[i]
+        result.append(temp)
+    return result
+   
+new_final = add_norms(data, doc_norms_lst)
+
+with open('final_norm.json', 'w') as f:
+    json.dump(new_final, f, indent=4)
 
 def jaccard_sim(query, inv_idx, jokes):
     result = {}
