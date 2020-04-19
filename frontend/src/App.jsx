@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
+import JokeResults from './components/JokeResults';
 
 class App extends React.Component {
 
@@ -18,7 +19,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       isLoaded: false,
-      items: []
+      jokes: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -27,16 +28,17 @@ class App extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('/jokes/api', {
+    fetch('http://0.0.0.0:5000/jokes/api', {
+      mode: 'no-cors',
       method: 'GET',
       // body: data,
     })
       .then(res => res.json())
       .then(
-        (result) => {
+        (data) => {
           this.setState({
             isLoaded: true,
-            items: result.items
+            jokes: data.jokes
           });
         },
         // Note: it's important to handle errors here
@@ -77,6 +79,11 @@ class App extends React.Component {
               <Button type="submit" class="btn btn-info">Go!</Button>
             </Form>
 
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <JokeResults jokes={this.state.jokes} />
           </Col>
         </Row>
       </Container >
