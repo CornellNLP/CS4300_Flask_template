@@ -8,7 +8,9 @@ import json
 from app.testdata import data
 from sqlalchemy.exc import IntegrityError
 
-
+"""
+Populate Postgres database with complete dataset, found in app/full_format_recipes.json.
+"""
 def populate_db():
   recipes_exist = db.session.query(Recipe).filter_by(id=1).first()
   if recipes_exist:
@@ -55,3 +57,31 @@ def populate_db():
           ))
           db.session.flush()
           db.session.commit()
+
+
+"""
+Update table to add recipe categories to recipes table and account for original 
+capitalizations.
+"""
+def update_table():
+  first_recipe = db.session.query(Recipe).filter_by(id=1).first()
+  if first_recipe.categories is not None:
+    return
+  with open("app/full_format_recipes.json") as f:
+    full_data = json.loads(f.readlines()[0])
+    for i in range(3, len(full_data) + 1):
+      d = full_data[i - 1]
+      if len(d) == 11:
+        directions = " ".join(d["directions"])
+        ingredients = " ".join(d["ingredients"])
+        categories = " ".join(d["categories"])
+        recipe = db.session.query(Recipe).filter_by(id=i).first()
+
+        # updating
+        recipe.directions = directions
+        recipe.ingredients = ingredients
+        recipe.description = d["desc"]
+        recipe.title = d["title"]
+        recipe.categories = categories
+        db.session.flush()
+        db.session.commit()

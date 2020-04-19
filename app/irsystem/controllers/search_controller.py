@@ -220,6 +220,9 @@ def search():
                 output_message = "No Results Found :(("
                 data = []
             else:
+                output_message = "Your search: " + query
+                data = ranked_results
+                """
                 # hardcoding calorie limits; will replace after inputs for calorie limits are added
                 grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
                 if len(grouped_results) == 0:
@@ -228,4 +231,5 @@ def search():
                 else:
                     output_message = "Your search: " + query
                     data = grouped_results
+                """
     return render_template('search.html', name=project_name, netid=net_ids, output_message=output_message, data=data)

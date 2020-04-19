@@ -37,6 +37,7 @@ class Recipe(Base):
     rating = Column(Float)
     title = Column(String())
     sodium = Column(Float)
+    categories = Column(String())
 
 
 class Category(Base):
