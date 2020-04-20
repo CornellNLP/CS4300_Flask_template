@@ -71,7 +71,6 @@ def search():
 	if min_score:
 		for joke in results_final:
 			if results_final[joke][0]['score'] == 'None':
-				print("None")
 				final.append((results_final[joke][0], "Similarity: " + str(results_final[joke][1]*0.67)))
 			else:
 				if float(results_final[joke][0]['score']) >= float(min_score):
@@ -80,7 +79,7 @@ def search():
 					final.append((results_final[joke][0], "Similarity: " + str(results_final[joke][1]*0.67 + (0.16/5*float(results_final[joke][0]['score'])))))
 		jokes = Joke.query.filter(Joke.score >= min_score).all()
 		blahblah = [
-			({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, 0.16/5*float(joke.score)) for joke in jokes
+			({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, "Similarity: " + str(0.16/5*float(joke.score))) for joke in jokes
 		]
 		final +=blahblah
 
