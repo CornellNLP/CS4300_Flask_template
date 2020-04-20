@@ -10,28 +10,51 @@ topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
 
 
 def exact_search(transcript, topic):
-    return set(x for x in transcript if topic in x['text'])
+    return [x for x in transcript if topic in x['text']]
 
 
 def search(topics, candidates, debate_name):
-    debate = debates.find({'title': debate_name})
+    debate = debates.find_one({'title': debate_name})
 
-    relevant = set()
+    relevant = []
     for topic in topics:
         for part in debate['parts']:
             for x in exact_search(part['text'], topic):
-                relevant = relevant.intersection(x)
-    return relevant
+                relevant.append((part['video'], x))
 
-
-# as the link is only good for a day, this must be done on demand
-def get_video_link(url):
     # setup for getting the video url since its javascript and needs to load
     # only needs to run once so restructure
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     driver = webdriver.Chrome(options=options)
 
+    relevant_transformed = []
+    videos = dict()
+    for video_link, quote in relevant:
+        if video_link not in videos:
+            videos[video_link] = get_video_link(driver, video_link)
+
+        relevant_transformed.append({
+            "video": videos[video_link],
+            "quotes": [{
+                "speaker": quote['speaker'],
+                "candidate": quote['speaker'] in debate['candidates'],
+                "question": quote['question'],
+                "time": quote['time'],
+                "text": quote['text']
+            }]
+        })
+
+    return [{
+        "title": debate['title'],
+        "date": debate['date'],
+        "description": debate['description'],
+        "results": relevant_transformed
+    }]
+
+
+# as the link is only good for a day, this must be done on demand
+def get_video_link(driver, url):
     # execute a webdriver request
     driver.get(url)
     video_page = BeautifulSoup(driver.page_source, 'html.parser')
