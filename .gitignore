@@ -1,9 +1,19 @@
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# mac
+.DS_Store
+
+# virtual environment
 server/venv
+
+# compiled files
 *.pyc
+
+# other
 server/migrations 
 server/server/vagrant/.vagrant
 server/vagrant/site.retry
 server/vagrant/a4keypair.pem
-.idea/
-*.iml
-.DS_Store
