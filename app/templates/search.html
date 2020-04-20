@@ -27,10 +27,11 @@
         <div class="form-group">
             <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Categories"> -->
             Categories:
-            <select id="category"> 
+            <select id="category" name = "category"> 
                 <option value = ""></otion>
+                <option value="Dad Jokes"> Dad Jokes </option>
                 {% for cat in cat_options %}
-                <option value = cat> {{cat}}</option>
+                <option name = "category" value = "{{cat}}"> {{cat}} </option>
                 {% endfor %}
             </select>
         </div>
