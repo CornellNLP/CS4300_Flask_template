@@ -2,7 +2,7 @@ from .database import query_drink, query_embeddings
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
-def search(descriptors, dtype=None, k=10):
+def search_drinks(descriptors, dtype=None, k=10):
     # Form query vector from word embeddings
     emb_dict = {e.word: np.frombuffer(e.vbytes, dtype=np.float32) for e in query_embeddings()}
     q_vectors = [emb_dict[d] for d in descriptors]
