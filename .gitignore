@@ -6,3 +6,4 @@ server/vagrant/site.retry
 server/vagrant/a4keypair.pem
 .idea/
 *.iml
+.DS_Store
