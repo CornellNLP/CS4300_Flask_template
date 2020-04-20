@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn app:app --log-level INFO --timeout 900
