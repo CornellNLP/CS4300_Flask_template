@@ -3,7 +3,8 @@ body{
   /* background-image: linear-gradient(to right, #F6F1B6 , #FEBA2C); */
   /* background-image: linear-gradient(to right, #B880BA , #B5CBFA); */
   background-image: linear-gradient(to right, #F69B41 , #E26061);
-  height:100vh;
+  width:100%;
+  height:100%;
   padding-top: 15vh;
 }
 
@@ -50,7 +51,9 @@ h1{
   text-align: right;
 }
 
-
+.jokes-col {
+  padding-bottom: 20px;
+}
 
 img{
   width: 300px;
