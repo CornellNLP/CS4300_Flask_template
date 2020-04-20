@@ -27,10 +27,6 @@ from app.irsystem import irsystem as irsystem
 app.register_blueprint(irsystem)
 app.logger.critical("registered")
 
-@app.route("/")
-def index():
-    return "ok"
-
 # Initialize app w/SocketIO
 socketio.init_app(app)
 
