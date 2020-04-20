@@ -1,13 +1,14 @@
 import sys, os
 sys.path.append(os.getcwd())
-from data_tools import get_wine_data, get_beer_data, get_descriptor, normalize, HEADERS
+from data_tools import get_wine_data, get_beer_data, get_descriptor, get_descriptors, normalize, HEADERS
 from nltk.tokenize import sent_tokenize
-from app.irsystem.models.database import Drink, add_drink_batch, query_drink
+from app.irsystem.models.database import Drink, Embedding, add_drink_batch, add_embedding_batch
 from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim.models import Word2Vec
 from gensim.models.phrases import Phrases, Phraser
 from math import isnan
 import numpy as np
+import pickle
 
 def train(norm_sentences, phraser):
     print('Phrasing data...')
@@ -34,6 +35,21 @@ def extract_desc(lst, phraser):
         descriptors.append(' '.join(final))
     return descriptors
 
+def make_embeddings(wv, tfidf_dict):
+    embeddings = []
+    for word in get_descriptors():
+        if word in tfidf_dict and word in wv.vocab:
+            weight = tfidf_dict[word]
+            vector = wv.get_vector(word)
+            vbytes = (vector * weight).tobytes()
+            embeddings.append(Embedding(
+                word=word,
+                vbytes=vbytes
+            ))
+        else:
+            print('Descriptor not seen in training: {}'.format(word))
+    return embeddings
+
 def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
     h = HEADERS[dtype]
     drinks = []
@@ -42,7 +58,7 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
         tokens = descriptors[i].split(' ')
         word_vectors = []
         for t in tokens:
-            if t in tfidf_dict.keys():
+            if t in tfidf_dict:
                 weight = tfidf_dict[t]
                 vector = wv.get_vector(t)
                 word_vectors.append(vector * weight)
@@ -65,7 +81,7 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
         drinks.append(drink)
     return drinks
 
-def main(model_file=None, phraser_file=None, wine_size=None, beer_size=None):
+def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None, beer_size=None):
     print('Fetching wine data...')
     wine_data = get_wine_data(wine_size)
     wine_desc = [str(x) for x in list(wine_data['description'])]
@@ -99,10 +115,21 @@ def main(model_file=None, phraser_file=None, wine_size=None, beer_size=None):
     wine_descriptors = extract_desc(wine_desc, phraser)
     beer_descriptors = extract_desc(beer_desc, phraser)
     
-    print('Calculating TF-IDF...')
-    vectorizer = TfidfVectorizer()
-    tfidf = vectorizer.fit(wine_descriptors + beer_descriptors)
-    tfidf_dict = dict(zip(tfidf.get_feature_names(), tfidf.idf_))
+    if tfidf_file is None:
+        print('Calculating TF-IDF...')
+        vectorizer = TfidfVectorizer()
+        tfidf = vectorizer.fit(wine_descriptors + beer_descriptors)
+        tfidf_dict = dict(zip(tfidf.get_feature_names(), tfidf.idf_))
+        with open('embeddings/trained/tfidf_50k.pkl', 'wb') as fp:
+            pickle.dump(tfidf_dict, fp)
+    else:
+        with open(tfidf_file, 'rb') as fp:
+            tfidf_dict = pickle.load(fp)
+
+    print('Creating Embedding objects...')
+    embeddings = make_embeddings(model.wv, tfidf_dict)
+    add_embedding_batch(embeddings)
+    print('{} Embeddings added to database!'.format(len(embeddings)))
 
     drinks = []
     print('Creating Drink objects...')
@@ -111,9 +138,10 @@ def main(model_file=None, phraser_file=None, wine_size=None, beer_size=None):
     add_drink_batch(drinks)
     print('{} Drinks added to database!'.format(len(drinks)))
 
-# main(
-#     model_file='embeddings/trained/model_50k.bin',
-#     phraser_file='embeddings/trained/trigram_50k.pkl',
-#     wine_size=5000,
-#     beer_size=5000
-# )
+main(
+    model_file='embeddings/trained/model_50k.bin',
+    phraser_file='embeddings/trained/trigram_50k.pkl',
+    tfidf_file='embeddings/trained/tfidf_50k.pkl',
+    wine_size=5000,
+    beer_size=5000
+)

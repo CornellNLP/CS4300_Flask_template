@@ -14,6 +14,14 @@ class Drink(db.Model):
     def __repr__(self):
         return '<Drink {}>'.format(self.name)
 
+class Embedding(db.Model):
+    __tablename__ = 'embedding'
+    word = db.Column(db.Text(), primary_key=True)
+    vbytes = db.Column(db.LargeBinary(), nullable=False)
+
+    def __repr__(self):
+        return '<Embedding {}>'.format(self.word)
+
 # Add a `Drink` object to database
 def add_drink(drink):
     db.session.add(drink)
@@ -22,8 +30,14 @@ def add_drink(drink):
 # Add a list of `Drink` objects to database
 def add_drink_batch(drinks):
     for d in drinks:
-        if not contains(d.name):
+        if not contains_drink(d.name):
             db.session.add(d)
+    db.session.commit()
+
+# Add a list of `Embedding` objects to database
+# Assumes unique set of words from 'embeddings/data/descriptor_mapping.csv'
+def add_embedding_batch(embeddings):
+    db.session.add_all(embeddings)
     db.session.commit()
     
 def query_drink(dtype=None):
@@ -31,6 +45,9 @@ def query_drink(dtype=None):
         return db.session.query(Drink)
     return db.session.query(Drink).filter(Drink.type == dtype)
 
-def contains(name):
+def query_embeddings():
+    return db.session.query(Embedding)
+
+def contains_drink(name):
     q = db.session.query(Drink).filter(Drink.name == name)
     return db.session.query(q.exists()).scalar()

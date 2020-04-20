@@ -50,6 +50,9 @@ def get_descriptor(word, strict):
         return norm
     elif not strict:
         return word
+
+def get_descriptors():
+    return set(word for word in DESC_MAP['level_3'])
     
 # Convert raw string into a list of lowercase, stemmed, punctuation-free tokens
 # TODO: Might need try/except block
