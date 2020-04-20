@@ -1,9 +1,9 @@
-import nltk
+# import nltk
 # nltk.download('punkt')
 # nltk.download('stopwords')
-from nltk import word_tokenize
-from nltk.corpus import stopwords
-import ssl
+# from nltk import word_tokenize
+# from nltk.corpus import stopwords
+# import ssl
 
 # try:
     # _create_unverified_https_context = ssl._create_unverified_context
@@ -14,34 +14,33 @@ import ssl
 
 from app.irsystem.models.helpers import *
 from . import *
-from sklearn.feature_extraction.text import TfidfVectorizer
-from scipy.sparse.linalg import svds
-from sklearn.preprocessing import normalize
-import scipy
-import numpy as np
-from app.irsystem.word_forms.word_forms import get_word_forms
+# from sklearn.feature_extraction.text import TfidfVectorizer
+# from scipy.sparse.linalg import svds
+# from sklearn.preprocessing import normalize
+# import scipy
+# import numpy as np
+# from app.irsystem.word_forms.word_forms import get_word_forms
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
 
-def rank_doc_similarity_to_word(word_in, docs, dims):
-	np.random.shuffle(docs)
-	vectorizer = TfidfVectorizer(stop_words = 'english')
-	my_matrix = vectorizer.fit_transform([x[1] for x in docs]).transpose()
-	# Most of our data is within 2 dimensions. Let's use 10
-	words_compressed, _, docs_compressed = svds(my_matrix, k=dims)
-	docs_compressed = docs_compressed.transpose()
-	word_to_index = vectorizer.vocabulary_
-	index_to_word = {i:t for t,i in word_to_index.items()}
-	words_compressed = normalize(words_compressed, axis=1)
-	my_matrix_csr = normalize(scipy.sparse.csr_matrix(my_matrix))
-	docs_compressed = normalize(docs_compressed, axis = 1)
-	def closest_projects_to_word(word_in, word_to_index, k=15):
-		if word_in not in word_to_index: return 'not in vocab'
-		sims = docs_compressed.dot(words_compressed[word_to_index[word_in],:])
-		ssort = np.argsort(-sims)[:k+1]
-		return [(docs[i][0],sims[i]/sims[ssort[0]]) for i in ssort[0:]]
-	return closest_projects_to_word(word_in, word_to_index)
+# def rank_doc_similarity_to_word(word_in, docs, dims):
+	# np.random.shuffle(docs)
+	# vectorizer = TfidfVectorizer(stop_words = 'english')
+	# my_matrix = vectorizer.fit_transform([x[1] for x in docs]).transpose()
+	# words_compressed, _, docs_compressed = svds(my_matrix, k=dims)
+	# docs_compressed = docs_compressed.transpose()
+	# word_to_index = vectorizer.vocabulary_
+	# index_to_word = {i:t for t,i in word_to_index.items()}
+	# words_compressed = normalize(words_compressed, axis=1)
+	# my_matrix_csr = normalize(scipy.sparse.csr_matrix(my_matrix))
+	# docs_compressed = normalize(docs_compressed, axis = 1)
+	# def closest_projects_to_word(word_in, word_to_index, k=15):
+		# if word_in not in word_to_index: return 'not in vocab'
+		# sims = docs_compressed.dot(words_compressed[word_to_index[word_in],:])
+		# ssort = np.argsort(-sims)[:k+1]
+		# return [(docs[i][0],sims[i]/sims[ssort[0]]) for i in ssort[0:]]
+	# return closest_projects_to_word(word_in, word_to_index)
 
 
 @irsystem.route('/', methods=['GET'])
