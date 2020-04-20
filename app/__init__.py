@@ -11,6 +11,7 @@ from flask_socketio import SocketIO
 # Configure app
 socketio = SocketIO()
 app = Flask(__name__)
+
 app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
@@ -18,10 +19,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 # Import + Register Blueprints
+app.logger.info("registering accounts")
 from app.accounts import accounts as accounts
 app.register_blueprint(accounts)
+app.logger.info("registering irsystem")
 from app.irsystem import irsystem as irsystem
 app.register_blueprint(irsystem)
+app.logger.info("registered")
 
 # Initialize app w/SocketIO
 socketio.init_app(app)
