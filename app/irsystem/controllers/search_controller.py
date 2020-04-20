@@ -1,25 +1,16 @@
-# import nltk
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# from nltk import word_tokenize
-# from nltk.corpus import stopwords
-# import ssl
-
-# try:
-    # _create_unverified_https_context = ssl._create_unverified_context
-# except AttributeError:
-    # pass
-# else:
-    # ssl._create_default_https_context = _create_unverified_https_context
-
 from app.irsystem.models.helpers import *
 from . import *
+# import nltk
+# from nltk import word_tokenize
+# from nltk.corpus import stopwords
+
+
 # from sklearn.feature_extraction.text import TfidfVectorizer
 # from scipy.sparse.linalg import svds
 # from sklearn.preprocessing import normalize
 # import scipy
 # import numpy as np
-# from app.irsystem.word_forms.word_forms import get_word_forms
+from app.irsystem.word_forms.word_forms import get_word_forms
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
