@@ -6,8 +6,7 @@ monkey.patch_all()
 import os
 import json
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
-from flask_socketio import SocketIO
+from pymongo import MongoClient
 
 # Configure app
 
@@ -17,7 +16,10 @@ app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # DB
-db = SQLAlchemy(app)
+client = MongoClient(app.config['MONGO_URI'])
+database = client[app.config['MONGO_DBNAME']]
+debates = database[app.config['MONGO_DBCOLLECTION']]
+
 
 # Import + Register Blueprints
 from app.accounts import accounts as accounts
@@ -32,12 +34,3 @@ app.register_blueprint(irsystem)
 @app.errorhandler(404)
 def not_found(error):
   return render_template("404.html"), 404
-
-
-with open('fake_data.json', 'r') as f:
-  fake_data = json.load(f)
-
-@socketio.on('input_change')
-def on_input_change(data):
-  print(data)
-  socketio.emit('output_sent', fake_data)
