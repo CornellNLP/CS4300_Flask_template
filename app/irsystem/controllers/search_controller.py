@@ -18,9 +18,10 @@ search_params = {}
 @irsystem.route('/', methods=['GET'])
 def search():
 	cat_options = [cat.category for cat in Categories.query.all()]
-	query = request.args.get('search')
+
+	query = request.args.get('search') #query = request.args.get('search', default= '')
 	min_score = request.args.get('score')
-	categories = request.args.get('category')
+	categories = request.args.getlist('category')
 	
 	search_params['min_score'] = min_score if min_score else ''
 	search_params['categories'] = categories if categories else ''
@@ -29,7 +30,7 @@ def search():
 	results_jac = {}  # dictionary key = joke_id, value = (joke_dict, jac_sim)
 	
 	if categories:
-		categories_list = [el.strip() for el in categories.split(",")]
+		categories_list = categories
 		
 		cat_jokes = {}  # dictionary where key = category, value = array of doc_ids with that category
 		for cat in categories_list:  # for every category

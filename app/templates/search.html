@@ -27,9 +27,8 @@
         <div class="form-group">
             <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Categories"> -->
             Categories:
-            <select id="category" name = "category"> 
+            <select multiple name = "category"> 
                 <option value = ""></otion>
-                <option value="Dad Jokes"> Dad Jokes </option>
                 {% for cat in cat_options %}
                 <option name = "category" value = "{{cat}}"> {{cat}} </option>
                 {% endfor %}
