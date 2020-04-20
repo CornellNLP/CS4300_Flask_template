@@ -8,7 +8,7 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 
-from flask_cors import CORS
+# from flask_cors import CORS
 
 # Configure app
 socketio = SocketIO()
