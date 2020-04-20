@@ -15,6 +15,10 @@ topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
           'climate change', 'environment', 'war', 'corona virus', 'covid 19']
 
 
+# save video links so we don't have to requery
+videos = dict()
+
+
 def exact_search(transcript, topic):
     return [x for x in transcript if topic in x['text']]
 
@@ -29,7 +33,6 @@ def search(topics, candidates, debate_name):
                 relevant.append((part['video'], x))
 
     relevant_transformed = []
-    videos = dict()
     for video_link, quote in relevant:
         if video_link not in videos:
             videos[video_link] = get_video_link(video_link)
