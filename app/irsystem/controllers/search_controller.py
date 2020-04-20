@@ -45,31 +45,26 @@ def search():
 			doc_id = element[0]
 			joke = rel_jokes[doc_id]
 			sim_measure = (element[1])
-			if doc_id not in result:
+			if doc_id not in results:
 				results[doc_id] = ({"text": joke.text,"categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure)
-
+	results2 = {}
 	if query:
 		results_query = cos.fast_cossim(query, inv_idx_free)
 		for element in results_query:
 			doc_id = element[0]
 			joke = Joke.query.filter_by(id = doc_id).first()
 			sim_measure = element[1]
-            if doc_id not in result:
-				results[doc_id] = ({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure))
-			else:
-				tmp = results[doc_id]
-				sim = tmp[1]*0.5 + sim_measure*0.5
-				results[doc_id] = (tmp[0], sim)
-
-        final = []
+			results[doc_id] = ({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure*0.5
+	 
+	final = []
 	if min_score:
 		for joke in results:
 			if joke[0]['score'] >= min_score:
-				final.append((joke[0], "Similarity: " + str(joke[1]*0.67 + (0.33*joke[0]['score']))))
+				final.append((joke[0], "Similarity: " + str(joke[1]*0.67 + (0.33*float(joke[0]['score'])))))
 			else:
-				final.append((joke[0], joke[1]*0.67 + (0.16*joke[0]['score'])))
-        else:
-			final = [(x[1][0], "Similarity: " + str(x[1][1])) for x in results.items()]
+				final.append((joke[0], "Similarity: " + str(joke[1]*0.67 + (0.16*float(joke[0]['score'])))))
+	else:
+		final = [(x[1][0], "Similarity: " + str(x[1][1])) for x in results.items()]
 
 	Joke.testFunct()
 
