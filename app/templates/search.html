@@ -25,7 +25,13 @@
         <br><br>
         
         <div class="form-group">
-            <input id="category" type="text" name="category" class="form-control" placeholder="Categories">
+            <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Categories"> -->
+            Categories:
+            <select id="category"> 
+                {% for cat in cat_options %}
+                <option value = cat> {{cat}}</option>
+                {% endfor %}
+            </select>
         </div>
         <br><br>
 
