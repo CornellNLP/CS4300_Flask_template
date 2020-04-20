@@ -44,7 +44,6 @@ def search():
 			cat_jokes[cat] = doc_lst.joke_ids
 		
 		numer_dict = sl.get_rel_jokes(cat_jokes) #dictionary with key = joke_id and value = numerator
-		print(numer_dict)
 		
 		rel_jokes = {} #dictionary where key = joke_id, value = joke
 		for doc in numer_dict.keys():
@@ -67,12 +66,10 @@ def search():
 	
 	if query: 
 		results_query = cos.fast_cossim(query, inv_idx_free)
-		print(results_query)
-
 		for element in results_query: 
 			doc_id = element[0]
-			joke = rel_jokes[doc_id]
-			sim_measure = "COSSIM: %s" % (element[1])
+			joke = Joke.query.filter_by(id = doc_id).first()
+			sim_measure = "COSINE SIM: %s" % (element[1])
 
 			results.append((
 			{
@@ -83,7 +80,7 @@ def search():
 			}, sim_measure))
 
 	Joke.testFunct()
-
+	
 	return render_template('search.html', name=project_name, netid=net_id, output_message=search_params, data=results)
 
 @irsystem.route('/react', methods=['GET'])
