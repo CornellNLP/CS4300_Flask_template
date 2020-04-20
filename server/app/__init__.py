@@ -13,7 +13,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 socketio = SocketIO(app,cors_allowed_origins='*')
-app.config.from_object(os.environ["APP_SETTINGS"])
+app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # DB
