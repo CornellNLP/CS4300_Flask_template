@@ -12,9 +12,6 @@ else:
 
 from app.irsystem.models.helpers import *
 from . import *
-
-nltk.download("punkt")
-nltk.download('stopwords')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
