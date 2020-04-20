@@ -5,13 +5,7 @@ from flask import request, render_template, \
 # For decorators around routes
 from functools import wraps 
 
-# Import for pass / encryption 
-from werkzeug import check_password_hash, generate_password_hash 
-
-# Import the db object from main app module
-from app import debates
-
-# Marshmallow 
+# Marshmallow
 from marshmallow import ValidationError
 
 # Import socketio for socket creation in this module 
