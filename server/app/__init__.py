@@ -6,6 +6,7 @@ monkey.patch_all()
 import os
 import json
 from flask import Flask, render_template
+from flask_socketio import SocketIO
 from pymongo import MongoClient
 
 # Configure app
@@ -17,13 +18,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # DB
 client = MongoClient(app.config['MONGO_URI'])
-database = client[app.config['MONGO_DBNAME']]
-debates = database[app.config['MONGO_DBCOLLECTION']]
+db = client[app.config['MONGO_DBNAME']]
+debates = db[app.config['MONGO_DBCOLLECTION']]
 
 
 # Import + Register Blueprints
-from app.accounts import accounts as accounts
-app.register_blueprint(accounts)
 from app.irsystem import irsystem as irsystem
 app.register_blueprint(irsystem)
 
