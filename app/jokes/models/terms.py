@@ -12,7 +12,8 @@ class Terms(Base):
 
   term          = db.Column(db.Text, nullable =False, primary_key = True)
   joke_ids      = db.Column(db.ARRAY(db.Integer), nullable = False)
-  tfs           = db.Column (db.ARRAY(db.Integer), nullable = False)
+  tfs           = db.Column(db.ARRAY(db.Integer), nullable = False)
+  idf           = db.Column(db.Numeric(9,4), nullable = True)
 #   documents     = db.Column(
 #                     CompositeArray(
 #                         CompositeType(
@@ -29,6 +30,7 @@ class Terms(Base):
     self.term        = kwargs.get('term')
     self.joke_ids    = kwargs.get('joke_ids')
     self.tfs         = kwargs.get('tfs')
+    self.idf         = kwargs.get('idf')
 
   def __repr__(self):
     """Define a base way to print models"""

@@ -3,16 +3,15 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.jokes import *
 import app.irsystem.controllers.cat_jaccard as sl
+import app.irsystem.controllers.cos_sim as cos
+import json
+
+with open('./inv_idx_free.json') as f:
+	inv_idx_free = json.load(f)
 
 project_name = "Haha Factory"
 net_id = "Jason Jung: jj634, Suin Jung: sj575, Winice Hui: wh394, Cathy Xin: cyx5, Rachel Han: ryh25"
 search_params = {}
-
-with open('inv_idx_free.json') as f:
-    inv_idx_free = json.load(f)
-
-with open('idf_dict.json') as f:
-    idf_dict = json.load(f)
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -36,8 +35,6 @@ def search():
         "maturity": joke.maturity,
 		} for joke in jokes]
 	
-
-    # uncomment for jaccard sim on categories
 	if categories:
 		categories_list = [el.strip() for el in categories.split(",")]
 		       
@@ -59,6 +56,23 @@ def search():
 			doc_id = element[0]
 			joke = rel_jokes[doc_id]
 			sim_measure = "JACCARD SIM: %s" % (element[1])
+
+			results.append((
+			{
+				"text": joke.text,
+        		"categories": joke.categories,
+       			 "score": str(joke.score),
+        		"maturity": joke.maturity,
+			}, sim_measure))
+	
+	if query: 
+		results_query = cos.fast_cossim(query, inv_idx_free)
+		print(results_query)
+
+		for element in results_query: 
+			doc_id = element[0]
+			joke = rel_jokes[doc_id]
+			sim_measure = "COSSIM: %s" % (element[1])
 
 			results.append((
 			{
