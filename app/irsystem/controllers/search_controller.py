@@ -8,6 +8,12 @@ project_name = "Haha Factory"
 net_id = "Jason Jung: jj634, Suin Jung: sj575, Winice Hui: wh394, Cathy Xin: cyx5, Rachel Han: ryh25"
 search_params = {}
 
+with open('inv_idx_free.json') as f:
+    inv_idx_free = json.load(f)
+
+with open('idf_dict.json') as f:
+    idf_dict = json.load(f)
+
 @irsystem.route('/', methods=['GET'])
 def search():
 	query = request.args.get('search')
