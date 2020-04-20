@@ -29,17 +29,18 @@ class App extends React.Component {
     const data = new FormData(event.target);
 
     fetch('http://0.0.0.0:5000/jokes/api', {
-      mode: 'no-cors',
       method: 'GET',
       // body: data,
     })
       .then(res => res.json())
       .then(
         (data) => {
+
           this.setState({
             isLoaded: true,
             jokes: data.jokes
           });
+
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -51,6 +52,7 @@ class App extends React.Component {
           });
         }
       )
+    // .then(console.log(this.jokes))
   }
 
   render() {
@@ -76,13 +78,13 @@ class App extends React.Component {
                 />
               </Form.Group>
 
-              <Button type="submit" class="btn btn-info">Go!</Button>
+              <Button type="submit" className="btn btn-info">Go!</Button>
             </Form>
 
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="jokes-col">
             <JokeResults jokes={this.state.jokes} />
           </Col>
         </Row>
