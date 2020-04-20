@@ -59,12 +59,14 @@ def search():
 		cdocs = [(c["class"], c["flavor"])for c in f["classes"]]
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
+		'''
 		inflecs = []
 		for w in qtokens:
 			inf = get_word_forms(w)
 			for k,v in inf.items():
 				inflecs.extend(list(v))
 		qtokens = list(set(inflecs))
+		'''
 		base_ratings = dict()
 		ratings_with_subclasses = dict()
 		for c in f["classes"]:
