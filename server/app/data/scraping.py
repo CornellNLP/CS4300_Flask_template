@@ -1,5 +1,4 @@
 import json
-import sys
 
 import dateutil.parser
 import requests
@@ -10,8 +9,7 @@ from bs4 import BeautifulSoup
 def get_bs_request(url):
     request_response = requests.get(url)
     if not request_response.ok:
-        print(request_response)
-        sys.exit()
+        raise Exception(request_response)
     return BeautifulSoup(request_response.text, 'html.parser')
 
 

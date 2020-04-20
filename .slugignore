@@ -1,0 +1,2 @@
+# ignore for heroku
+server/app/data/
