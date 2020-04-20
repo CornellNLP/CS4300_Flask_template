@@ -95,8 +95,8 @@ def scrape_url(debate_url, folder_name, is_debate):
         'parts': parts
     }
 
-    with open(folder_name + '/' + debate_url.split('/')[-1] + '.json', 'w') as f:
-        f.write(json.dumps(debate_info, default=str))
+    with open(folder_name + '/' + debate_url.split('/')[-1] + '.json', 'w', encoding='utf8') as f:
+        json.dump(debate_info, f, default=str, ensure_ascii=False)
 
 
 # urls for the search pages

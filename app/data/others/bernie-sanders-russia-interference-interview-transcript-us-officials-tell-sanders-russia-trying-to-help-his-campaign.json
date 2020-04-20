@@ -21,37 +21,57 @@
         {
           "speaker": "Bernie Sanders",
           "time": "00:01",
-          "text": "I\u2019ve seen Russia and other countries interfering in our elections. The intelligence community has been very clear about it. Whether Trump recognizes that or not or acknowledges or not, they did interfere in 2016. The intelligence community is telling us they are interfering in this campaign right now in 2020, and when I say to Mr. Putin if elected president, trust me, you are not going to be interfering in American elections."
+          "text": "I’ve seen Russia and other countries interfering in our elections. The intelligence community has been very clear about it. Whether Trump recognizes that or not or acknowledges or not, they did interfere in 2016. The intelligence community is telling us they are interfering in this campaign right now in 2020, and when I say to Mr. Putin if elected president, trust me, you are not going to be interfering in American elections.",
+          "question": false,
+          "response": -1
         },
         {
           "speaker": "Speaker 2",
           "time": "00:27",
-          "text": "Senator, when were you briefed on this?"
+          "text": "Senator, when were you briefed on this?",
+          "question": true,
+          "response": [
+            2
+          ]
         },
         {
           "speaker": "Bernie Sanders",
           "time": "00:29",
-          "text": "I\u2019m guessing about a month ago."
+          "text": "I’m guessing about a month ago.",
+          "question": false,
+          "response": 1
         },
         {
           "speaker": "Speaker 2",
           "time": "00:32",
-          "text": "And what are you going to do now that you know this?"
+          "text": "And what are you going to do now that you know this?",
+          "question": true,
+          "response": [
+            4
+          ]
         },
         {
           "speaker": "Bernie Sanders",
           "time": "00:35",
-          "text": "Well it was not clear what role they\u2019re going to play. We were told that Russia, maybe other countries are going to get involved in this campaign and look, here\u2019s the message to Russia. Stay out of American elections. And what they are doing by the way, the ugly thing that they are doing, and I\u2019ve seen some of the tweets and stuff, is they tried to divide us up. That\u2019s what they did in 2016. That is the ugliest thing they are doing is they are trying to cause chaos, they\u2019re trying to cause hatred in America. It\u2019s an ugly business and all of us have got to say, \u201cSorry, you\u2019re not going to do this in this election.\u201d And again, as president of the United States, Mr. Putin, you will not interfere in our elections."
+          "text": "Well it was not clear what role they’re going to play. We were told that Russia, maybe other countries are going to get involved in this campaign and look, here’s the message to Russia. Stay out of American elections. And what they are doing by the way, the ugly thing that they are doing, and I’ve seen some of the tweets and stuff, is they tried to divide us up. That’s what they did in 2016. That is the ugliest thing they are doing is they are trying to cause chaos, they’re trying to cause hatred in America. It’s an ugly business and all of us have got to say, “Sorry, you’re not going to do this in this election.” And again, as president of the United States, Mr. Putin, you will not interfere in our elections.",
+          "question": false,
+          "response": 3
         },
         {
           "speaker": "Speaker 2",
           "time": "01:14",
-          "text": "And if this came out a month ago, how did he think it came out now? If you had the briefing a month ago."
+          "text": "And if this came out a month ago, how did he think it came out now? If you had the briefing a month ago.",
+          "question": true,
+          "response": [
+            6
+          ]
         },
         {
           "speaker": "Bernie Sanders",
           "time": "01:18",
-          "text": "Well, I\u2019ll let you guess about Monday before the Nevada caucus. Why do you think it came out? It was the Washington Post. Good friends."
+          "text": "Well, I’ll let you guess about Monday before the Nevada caucus. Why do you think it came out? It was the Washington Post. Good friends.",
+          "question": false,
+          "response": 5
         }
       ]
     }

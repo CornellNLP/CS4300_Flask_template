@@ -13,7 +13,7 @@
     "Crowd",
     "Audience"
   ],
-  "description": "Bernie Sanders held a rally in St. Louis, MO today, just before tomorrow\u2019s March 10 primaries.",
+  "description": "Bernie Sanders held a rally in St. Louis, MO today, just before tomorrow’s March 10 primaries.",
   "parts": [
     {
       "number": null,
@@ -22,392 +22,34 @@
         {
           "speaker": "Crowd",
           "time": "00:05",
-          "text": "Bernie, Bernie, Bernie-"
+          "text": "Bernie, Bernie, Bernie-",
+          "question": false,
+          "response": [
+            1
+          ]
         },
         {
           "speaker": "Bernie Sanders",
           "time": "00:05",
-          "text": "Thank you."
+          "text": "Thank you.",
+          "question": false,
+          "response": 0
         },
         {
           "speaker": "Crowd",
           "time": "00:05",
-          "text": "Bernie, Bernie, Bernie-"
+          "text": "Bernie, Bernie, Bernie-",
+          "question": false,
+          "response": [
+            3
+          ]
         },
         {
           "speaker": "Bernie Sanders",
           "time": "00:09",
-          "text": "Whoa, thank you so much. What a great turnout. Thank you St. Louis."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "00:13",
-          "text": "(silence)."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "00:13",
-          "text": "And the band. Alderwoman Megan Green, union activist Sarah Katz, representative Rasheen Aldridge, Tashara Jones, and last, but certainly not least, Cori Bush."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "00:54",
-          "text": "Let me kind of pick up where Cori left off and that is to say all of you remember Nelson Mandela. And Nelson Mandela was one of the great freedom of fighters of the 20th centuries he spent a lot of his life in hard labor in South Africa fighting apartheid. And what he said, he said, in his lifetime, he made a statement, which to me was extraordinarily profound and relevant to this moment. He said, \u201cEverything seems impossible until it is done.\u201d"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "01:34",
-          "text": "You understand what I mean? Everything seems impossible until it is done. And what happens for a variety of reasons, and I don\u2019t know them all, but what happens is human beings end up accepting the status quo unnecessarily. We are told by Congress what our options are, we\u2019re told by the media what our options are, and sometimes we forget to take a hard look at what goes on around us and where we want to go as a nation and as a people"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "02:14",
-          "text": "What our campaign is about is asking people to take a hard look at America today, at the world today, and ask questions like, why are we where we are, where should we be going? And let me do what no other campaign will do, take a hard look at America today. In America, the richest country in the history of the world, you have three people owning more wealth than the bottom half of America."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "02:51",
-          "text": "In other words, we have more income and wealth inequality in America today than any time in the last 100. You got the top 1% who over the last 30 years has seen a $21 trillion increase in their wealth, top 1% owning more wealth than the bottom 92% Now, you don\u2019t hear about that much in the media. That\u2019s not what is going to be talked about because those are the guys who own media, they own the Congress."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "03:26",
-          "text": "Today in Missouri\u2026 Now am I saying Missouri, right? Or is it Missouri, Missouri? I know, it\u2019s a tough one. But here in Missouri and in my own state of Vermont, you got a lot of working people working two or three jobs. You\u2019ve got workers who are worried that they can\u2019t afford to send their kids to college. You\u2019ve got a half of the older workers in America, people put 55 or older. Do you know how much they have in the bank, saved for retirement? Nothing! Now, think about it. You\u2019re a 60 year old worker in the St. Louis or Kansas City. You work your whole life, you\u2019re worried about retirement. You got nothing in the bank. Maybe you\u2019ll have $15,000 a year social security, if they don\u2019t cut it. You\u2019re a working mommy in st Louis. Maybe you\u2019re a single mom. You\u2019re going to work today\u2026 And God bless the single moms in this country and how they survive. Don\u2019t know how they do it, but that mom, think of the mom, you\u2019re making 15 bucks an hour. Where are you going to find quality, affordable childcare for your kid? Virtually impossible. You\u2019re a young person coming from a working class family. You want to go to college, you want to go to a trade school, but you can\u2019t afford it. Your dreams being destroyed. Maybe you made it through college and you leave school 50, 80,000 bucks in debt. You went to graduate school, maybe you\u2019re a couple of hundred thousand dollars in debt. That is the reality. I grew up in a family, didn\u2019t have any money, lived paycheck to paycheck. I know a little bit about that and half of the American people in this richest country in the history of the world, half of our people today are living paycheck to paycheck. And if you are African American or Latino, then you got a whole bunch of additional hurdles that you\u2019ve got to overcome."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "05:42",
-          "text": "They got to deal with the racism that exists in the healthcare industry, the racism that exists in the financial sector, the racism that exists in education. So if you\u2019re black in St. Louis, if you\u2019re black all over America, the likelihood is, not always, but the likelihood is your kids are going to get an even worse education than white kids are going to get it."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "06:07",
-          "text": "You\u2019ve got all of that stuff out there. And what is our job today? It is not hard. It\u2019s to say that within a corrupt political system, where billionaires buy elections, our job is to reinvigorate democracy so we have one person, one vote, not billionaires buying elections."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "06:39",
-          "text": "And that means, as Cori was just saying, it means to reinvigorate democracy, we need to activate our people. A lot of people in this country, and this is a sign of a serious problem, have given up on the political process. They\u2019re out there working long hours for low wages, they\u2019re worried about their kids, they don\u2019t think anybody in Washington cares about them. And you know what, that\u2019s not totally untrue. What our job is is to bring people into the political process so that we can create a government that works for working families, not just the 1%."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "07:17",
-          "text": "Now, this is hard stuff. And again, getting back to what Mandela said, we\u2019re not supposed to be thinking about where we want to go. We\u2019re not supposed to be looking at countries around the world who have already made major gains, where we have\u2026 Give you an example. Question, how many major countries on earth do not guarantee healthcare to all people as a human right? Anyone know?"
-        },
-        {
-          "speaker": "Crowd",
-          "time": "07:54",
-          "text": "[inaudible 00:00:07:56]."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "07:56",
-          "text": "All right, take a step back now. I\u2019m going to end up off the stage here. How does that happen? I live 50 miles away from the Canadian border. In Canada for decades, every person, rich, poor, middle class, goes to any doctor they want, goes to any hospital they want. If you ended up in the hospital in Canada for a month, what is your bill when you leave the hospital?"
-        },
-        {
-          "speaker": "Crowd",
-          "time": "08:23",
-          "text": "Zero."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "08:25",
-          "text": "It is and by the way, in Canada, they spend half as much per capita on healthcare as we spend. You got it? We are spending $11,000, $11,000 for every man, woman and child by health care and yet, at the end of the day we got 87 million people uninsured or under insured."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "08:50",
-          "text": "We have conservatively 30, and this is very conservative, but at least 30,000 people dying every year because they don\u2019t get to a doctor when they should. We got a half a million people going because of medically related debt. You know what that means? Think about it. Think about a system which says, you go to the doctor, you\u2019re sick, you\u2019re diagnosed with cancer, you got enough to worry about, you\u2019re fighting for your life. And yet, now you\u2019re going to have to fight to prevent financial ruin and many people do not. To go bankrupt because you are dealing with cancer or heart disease should not be happening in America."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "09:40",
-          "text": "And just look at the insanity dealing with this Coronavirus, this very serious problem that we\u2019re dealing with in America, dealing with all over the world. Think about the insanity of a system where today somebody wakes up and maybe they think they have the symptoms of a Coronavirus, yet they cannot afford to go to a doctor. What does that mean? So they\u2019re going to go to work and make a serious epidemic even worse. We believe that healthcare is a human right for every man, woman, and child."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "10:38",
-          "text": "And we are prepared, uniquely in this campaign to take on a healthcare industry that last year made $100 billion in profits. We are uniquely prepared to take on a pharmaceutical industry, which in some cases charges us 10 times more for the same exact drug that\u2019s sold abroad. Give you an example of the [inaudible 00:11:09]. I want to get back to this Coronavirus, which is on many people\u2019s minds. Trump\u2019s people were saying just a little while ago, that, yeah, we\u2019re working on a vaccine. Hopefully, they are. But, this is how crazy it is. We couldn\u2019t guarantee that when that vaccine is developed, they couldn\u2019t guarantee that people would be able to afford it. This is how sick this system is. Let me tell you, if elected president, everybody in this country will get that vaccine, absolutely free."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "11:46",
-          "text": "Is that a radical statement?"
-        },
-        {
-          "speaker": "Crowd",
-          "time": "11:58",
-          "text": "No!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "11:58",
-          "text": "That is the most obvious statement that anybody can make, but you carry that a little bit step further. Last year, I went from Detroit to Windsor, Ontario to buy insulin for people who are diabetics. I went with a bus load of people that were dealing with diabetes. And as you know, diabetes, very serious problem. Do you know what the differential in price in Canada as opposed to the United States was for insulin, the same exact product? 10 to 1. We will tell the pharmaceutical industry, they\u2019re no longer going to charge our people 10 times more than others and we are prepared to manufacture that damn product to sell it to everybody at a price that is competitive."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "13:01",
-          "text": "Right now, I just learned a few moments ago, that in New York state, the government there is doing the right thing. They are manufacturing disinfectant for hand washing to make sure that everybody will be able to get their Purell or whatever they need and what they\u2019re saying is, they are telling the manufacturers today to stop the price gouging and they\u2019re manufacturing it. And we are prepared to say that to the pharmaceutical industry. Stop ripping off the American people."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "13:43",
-          "text": "We finally need a government that represents working people in the middle class, not just large multinational corporations. That\u2019s what this campaign is about."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "14:09",
-          "text": "Now, a lot of the media talks about, electability, which is an important issue. Everybody in this room, I assume, wants to see Donald Trump defeated."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "14:19",
-          "text": "And the truth is that every American should want to see Donald Trump defeated because he is the most dangerous president in the modern history of this country."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "14:41",
-          "text": "We cannot continue to have a president, you just can\u2019t have somebody in the White House who lies all of the time. Look, we can have differences of opinion on policy, but if you asked somebody who was a pathological liar, then nobody believes what you say, which is a very dangerous situation when you\u2019re president of the United States."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "15:12",
-          "text": "We cannot continue to have a president who runs a corrupt administration. And I would hope, I would truly hope that some conservatives take a look at this. Look, we disagree on policy, that\u2019s fine, but you can\u2019t have a president who has apparently never read the constitution of the United States of America."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "15:36",
-          "text": "A president who does not understand the separation of powers in America."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "15:49",
-          "text": "We are not an autocratic society. We\u2019re a democratic society. The founders of the constitution divided up power, which was the right thing to do. You can have a president who calls the media, enemy of the people. You can\u2019t have a president who attacks the judiciary, who attacks the Congress."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "16:22",
-          "text": "Now, Donald Trump may not understand democracy, but he\u2019s got to learn about what democracy is about in November when we defeat him."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "16:43",
-          "text": "And people talk a lot about unity, bringing people together, and that\u2019s right. Let me tell you how we\u2019re going to bring people together. We\u2019re going to bring people together around an agenda that works for all of us, not just wealthy campaign contributors. We\u2019re going to bring people together by raising the federal minimum wage to 15 bucks an hour. We\u2019re going to bring people together by fighting for equal pay for equal work. We\u2019re going to bring people together by making it easier for workers to join unions, not harder. We\u2019re going to bring people together by rebuilding our crumbling infrastructure, creating millions of good paying jobs. We\u2019re going to bring people together because you know and I know that when we have same priorities in America, we put education at the very top of that list."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "18:06",
-          "text": "That means that all of our children, black and white and Latino, Native American, Asian American are entitled to a high quality education. That is why we\u2019re going to triple funding for low-income Title 1 schools."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "18:32",
-          "text": "\u2026 in the history of the world. We got to school buildings all across this country that are crumbling. Kids can\u2019t even drink the water in some school buildings. We have teachers who have been great teachers for 10, 20 years, they\u2019re leaving the profession because they can\u2019t make a living. They\u2019re tired of taking money out of their own pockets to buy school supplies. All of that, when we know there is nothing more important than educating our kids for the future of this country."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "19:28",
-          "text": "What\u2019s important is not giving tax breaks to billionaires, it\u2019s making sure that teachers receive adequate compensation. That is why we believe that instead of giving tax breaks to the billionaires and spending more than the next 11 countries on the military, we will pay our teachers at least $60, 000 a year."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "20:01",
-          "text": "I\u2019ll tell you what else, when you talk about education, we have got to start with the premise that all of our people, not just young people, but all of our people, regardless of their income, are entitled as human beings in this country to get all of the education they need and that they want. Does anyone think that\u2019s a radical idea?"
-        },
-        {
-          "speaker": "Audience",
-          "time": "20:46",
-          "text": "No!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "20:47",
-          "text": "100, 150 years ago, brave people said that they wanted a system in which all kids could get at least that elementary school education, a high school education, free of charge. That was a major step forward a hundred years ago, but right now with a world changing, with technology changing, our position must be that we will make public colleges and universities tuition free. And if there are young people that are good with their hands, don\u2019t want to go to college, we\u2019ll make trade schools tuition free. Again, thinking outside of the box, if we could give tax breaks to billionaires, if 12 years ago we could bail out the crooks on Wall Street, we can cancel all student debt in America. Through a modest tax on Wall Street speculation and when we think about issues that face our country, unlike Donald Trump, we understand that climate change is not a hoax, but an existential threat to this country and to the world."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "22:30",
-          "text": "Whether it relates to the corona virus or whether it relates to climate change, we believe in science. We believe that the time is now to tell the fossil fuel industry that they cannot continue to destroy this planet and that we will transform our energy system away from fossil fuel to energy efficiency and sustainable energy. We will do that under the principles of a Green New Deal, which will create up to 20 million good paying jobs. So put it all together, put it all together. Think about a new America in which we have a government that works for all, not just the wealthy and not just the campaign contributors. What does it mean? It means that in the wealthiest country in the history of the world where there\u2019s so much work to be done, we childcare workers, we need teachers, we need more healthcare providers. We need to rebuild our crumbling infrastructure. We need to transform our energy system. We have an enormous amount of work to be done. It is not radical to say that all of those workers earn living wages, that all of our people get the education they need regardless of their income. Not radical."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "24:36",
-          "text": "That the United States do what every major country on earth is doing, guarantee healthcare to all as a right. That we do what the scientists are telling us we should do, aggressively combat climate change. What is so radical and extreme about those ideas?"
-        },
-        {
-          "speaker": "Audience",
-          "time": "25:10",
-          "text": "Nothing!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "25:10",
-          "text": "Not only are they not radical and extreme, they are exactly what the American people want. Go out on the street corners. That\u2019s our agenda, this is what the American people want. I\u2019ll tell you what Trump and his friends want, they want more tax breaks for billionaires and they want to cut social security, Medicare and Medicaid."
-        },
-        {
-          "speaker": "Audience",
-          "time": "25:37",
-          "text": "Boo!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "25:41",
-          "text": "That is a radical agenda."
-        },
-        {
-          "speaker": "Audience",
-          "time": "25:43",
-          "text": "Yes."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "25:45",
-          "text": "It is a radical agenda to suggest that we keep a situation going where a half a million people are homeless tonight. That\u2019s radical. Our job is to think outside of the box. Our job is also to understand. I know in Missouri you have dealt with this issue, that we need fundamental reforms the way broken and racist criminal justice system."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "26:28",
-          "text": "Again, think outside of the box. Ask yourself a simple question. Wealthiest country on earth, why do we have more people in jail, disproportionally African American, Latino, and Native American, than any other country on earth including China, a communist, authoritarian nation, four times our size. We have more people in jail today than China does. How does it happen? Let\u2019s think about it. How does it happen again? We don\u2019t talk about these issues. Today as we speak there are 400,000 people in jail who have not been convicted of anything. Anyone know why that\u2019s so? How do you get end up in jail if you\u2019re not convicted?"
-        },
-        {
-          "speaker": "Audience",
-          "time": "27:17",
-          "text": "They can\u2019t afford bail."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "27:19",
-          "text": "Okay, good. All right. This is why you are arrested, maybe you\u2019re guilty, maybe you\u2019re not, you\u2019re in jail. You cannot afford the $500 bucks that you need for bail, you\u2019re poor. So you stay in jail, you may have to negotiate a plea bargain, which gives you a criminal record. Maybe you\u2019re innocent, but you can\u2019t get out of jail. You don\u2019t have a decent lawyer because you can\u2019t afford a decent lawyer and the legal system is not providing you with a decent lawyer. 400,000 people in jail today not having been convicted of anything. Then you have a situation in America today where people are making money, locking up fellow Americans."
-        },
-        {
-          "speaker": "Audience",
-          "time": "28:09",
-          "text": "Boo!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "28:13",
-          "text": "Do we really think we should incentivize large corporations to lock up more and more people to make more and more money?"
-        },
-        {
-          "speaker": "Audience",
-          "time": "28:25",
-          "text": "No!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "28:25",
-          "text": "That\u2019s why we\u2019re going to end private prisons and detention centers in America. We understand. We understand that if kids fall through the cracks, if there\u2019s a kid in the St. Louis or Burlington, Vermont today who\u2019s dropping out of high school as a sophomore or junior in high school, kid has no education, kid has no job training, there is a strong likelihood that that kid is going to get into trouble or do self-destructive things. What we believe in is investing in our young people, making sure they don\u2019t fall through the cracks, not that hard to do."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "29:19",
-          "text": "So we make sure that our kids have decent jobs, decent job training, good education so they can go out into the world, make a living. Rather than investing in jobs and education, what we\u2019re doing now is investing in jails and incarceration, we\u2019re going to turn that around."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "29:48",
-          "text": "I\u2019ll tell you what else we\u2019re going to do. We are going to end the very destructive war on drugs. Turns out that through executive order, President of the United States can legalize the marijuana in every state in this country. That\u2019s what I will do. It also means that we\u2019ve got to work aggressively to expunge the records of those arrested."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "30:38",
-          "text": "All over America no matter what people\u2019s political point of view may be, people are horrified by the level of gun violence in America. My promise to you is that our administration will bring forth the strongest gun safety legislation ever proposed in the United States. We will fight for universal background checks. People who have violent histories should not own guns, including domestic violence. We\u2019re going to eliminate the gun show loophole and we\u2019re going to end the sale and distribution of assault weapons in this country."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "31:45",
-          "text": "As a US Senator, I hear a lot of speeches on the floor of the Senate from conservative Republicans who tell us they believe in small government and getting the government off the backs of the American people. I say to those hypocrites, if you believe in getting the government off the backs of the American people, please understand that it is women who have a right to control their own bodies, not the government."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "32:33",
-          "text": "My promise to you is that I will never nominate anybody to the Supreme Court or any federal court who is not 100% pro Roe v. Wade."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "32:54",
-          "text": "Trump and his friends want to cut funding for Planned Parenthood."
-        },
-        {
-          "speaker": "Audience",
-          "time": "32:58",
-          "text": "Boo!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "33:01",
-          "text": "Well, we\u2019ve got some bad news for them because we\u2019re going to substantially increase funding for Planned Parenthood."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "33:17",
-          "text": "So here we are, one day before the Missouri primary, and as Cori Bush said a moment ago, this is an historical time. People don\u2019t realize it, but this is an historic moment and it seems to me there are two broad issues that are on the minds of Democrats, Independents and some Republicans. Number one, which campaign is best able to defeat Donald Trump? Let me say without any hesitancy, any hesitancy, our campaign together is the campaign."
-        },
-        {
-          "speaker": "Audience",
-          "time": "33:50",
-          "text": "Bernie! Bernie! Bernie!"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "33:50",
-          "text": "Now why is that? Why is that? I\u2019m not trying to be self-serving here, I\u2019m trying to be thinking objectively, all right? I\u2019m serious, in order to defeat Trump, who will be a very formidable opponent, in order to defeat Trump, we need the largest voter turnout in history. That is just a fact and here is another fact. The other fact is that our campaign is the campaign of energy and excitement."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "34:47",
-          "text": "To defeat Trump, we need to bring what we call nontraditional voters into the political process. Now, I\u2019m not happy about the reality, nor should you, that in our country today, we have one of the lowest voter turnout rates of any major country on earth. It\u2019s very low and I want to change that, but right now that is where we are at. Now we need to attract people who often do not vote into the political process if we\u2019re going to beat Trump, that\u2019s just a simple political reality. Young people in America are today the most progressive young generation in the history of this country."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "35:47",
-          "text": "Now, that is the good news, that the great news, we should all be proud about that. Let me tell you the bad news, to be honest with you, young people vote in much lower rates than older people. All right? That is the fact. So I hope all of the old people-"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "36:03",
-          "text": "All right, that is the facts. I hope all of the old people vote. That\u2019s great, but I want young people to be voting at the same rates."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "36:17",
-          "text": "Now every poll, and polls, you can take them for whatever they\u2019re worth. Sometimes they\u2019re right, sometimes they\u2019re not. But what every poll suggests and whatever election suggests, we are overwhelmingly winning young people\u2019s votes."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "36:43",
-          "text": "Our campaign is the campaign that in the general election can bring millions of young people to the polls, which will not only impact the presidential election, it will impact Senate-"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "37:14",
-          "text": "On this issue, Joe Biden is a friend of mine, Joe and I have known each other for many years. What Joe has said, he will support me if I win the nomination. I have said I will support him because we want to be Trump, that goes without saying. But here is my point, if you are talking to working-class people all over this country, who is able, better able, to win their support?"
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "37:43",
-          "text": "Joe Biden voted for the war in Iraq. I voted against the war in Iraq. Joe Biden voted for the Wall Street bailout. I helped lead the effort against the Wall Street bailout. Joe voted for disastrous trade agreements, which have been horrific for the Midwest. Agreements like NAFTA and PNTR with China. I helped lead the effort against those terrible trade agreements. Over the years, for a variety of reasons, Joe Biden has been on the floor of the Senate talking about the need to cut Social Security benefits. I have been leading the fight to expand Social Security benefits. My point here is not to criticized Biden. My point here is to ask you to think that in a general election, which candidate can generate the enthusiasm and the excitement and the voter turnout we need? If you want to defeat Trump, which all Democrats do, a majority of Independents and some Republicans do, we are that campaign. But second of all, what we also understand is that while it is absolutely imperative that we beat Trump, we\u2019ve got to do more than that. You\u2019ve got to transform this country so that we have an economy that works for you and you and you, not just wealthy campaign contributors. A government which says that what we need is a multiracial, multi-generational working-class movement of people coming together for justice. A movement that says not only we\u2019re you going to reform a broken and racist criminal justice system, we\u2019re going to reform a broken and racist immigration system. We do not believe in the demonization of immigrants. We believe in comprehensive immigration reform and a path towards citizenship."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "41:19",
-          "text": "What this campaign is about is bringing the American people together, black and white and Latino, native American, Asian American, gay and straight. Bring people together. End the hatred and the divisiveness which Trump is promulgating."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "41:40",
-          "text": "It is about a campaign which not only defeats Trump, but tells Wall Street and the insurance industry and the drug companies and the fossil fuel industry and the prison industrial complex and the military industrial complex and the entire 1% that we will have a nation that works for all of us. We\u2019re not going to leave tens and tens of millions of people behind. We\u2019re not going to have veterans sleeping out on the street. We\u2019re not going to have kids with inadequate education. We\u2019re not going to have older people unable to survive on inadequate Social Security benefits. That instead of denying the reality of climate change, we are going to lead the world in transforming our energy system."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "42:46",
-          "text": "Tomorrow, there is a very important primary here in Missouri. I hope all of you will come out. I\u2019m here today to respectfully ask for your support. I am here to ask you to bring out your friends and family. Let\u2019s have one of the largest voter turnouts in the history of the Missouri primary. Let\u2019s go forward tomorrow. Let\u2019s win the primary. Let\u2019s win the nomination. Let\u2019s defeat Trump. Let\u2019s transform this country. Thank you, St. Louis."
-        },
-        {
-          "speaker": "Bernie Sanders",
-          "time": "43:27",
-          "text": "(silence)"
+          "text": "Whoa, thank you so much. What a great turnout. Thank you St. Louis. (silence). And the band. Alderwoman Megan Green, union activist Sarah Katz, representative Rasheen Aldridge, Tashara Jones, and last, but certainly not least, Cori Bush. Let me kind of pick up where Cori left off and that is to say all of you remember Nelson Mandela. And Nelson Mandela was one of the great freedom of fighters of the 20th centuries he spent a lot of his life in hard labor in South Africa fighting apartheid. And what he said, he said, in his lifetime, he made a statement, which to me was extraordinarily profound and relevant to this moment. He said, “Everything seems impossible until it is done.” You understand what I mean? Everything seems impossible until it is done. And what happens for a variety of reasons, and I don’t know them all, but what happens is human beings end up accepting the status quo unnecessarily. We are told by Congress what our options are, we’re told by the media what our options are, and sometimes we forget to take a hard look at what goes on around us and where we want to go as a nation and as a people What our campaign is about is asking people to take a hard look at America today, at the world today, and ask questions like, why are we where we are, where should we be going? And let me do what no other campaign will do, take a hard look at America today. In America, the richest country in the history of the world, you have three people owning more wealth than the bottom half of America. In other words, we have more income and wealth inequality in America today than any time in the last 100. You got the top 1% who over the last 30 years has seen a $21 trillion increase in their wealth, top 1% owning more wealth than the bottom 92% Now, you don’t hear about that much in the media. That’s not what is going to be talked about because those are the guys who own media, they own the Congress. Today in Missouri… Now am I saying Missouri, right? Or is it Missouri, Missouri? I know, it’s a tough one. But here in Missouri and in my own state of Vermont, you got a lot of working people working two or three jobs. You’ve got workers who are worried that they can’t afford to send their kids to college. You’ve got a half of the older workers in America, people put 55 or older. Do you know how much they have in the bank, saved for retirement? Nothing! Now, think about it. You’re a 60 year old worker in the St. Louis or Kansas City. You work your whole life, you’re worried about retirement. You got nothing in the bank. Maybe you’ll have $15,000 a year social security, if they don’t cut it. You’re a working mommy in st Louis. Maybe you’re a single mom. You’re going to work today… And God bless the single moms in this country and how they survive. Don’t know how they do it, but that mom, think of the mom, you’re making 15 bucks an hour. Where are you going to find quality, affordable childcare for your kid? Virtually impossible. You’re a young person coming from a working class family. You want to go to college, you want to go to a trade school, but you can’t afford it. Your dreams being destroyed. Maybe you made it through college and you leave school 50, 80,000 bucks in debt. You went to graduate school, maybe you’re a couple of hundred thousand dollars in debt. That is the reality. I grew up in a family, didn’t have any money, lived paycheck to paycheck. I know a little bit about that and half of the American people in this richest country in the history of the world, half of our people today are living paycheck to paycheck. And if you are African American or Latino, then you got a whole bunch of additional hurdles that you’ve got to overcome. They got to deal with the racism that exists in the healthcare industry, the racism that exists in the financial sector, the racism that exists in education. So if you’re black in St. Louis, if you’re black all over America, the likelihood is, not always, but the likelihood is your kids are going to get an even worse education than white kids are going to get it. You’ve got all of that stuff out there. And what is our job today? It is not hard. It’s to say that within a corrupt political system, where billionaires buy elections, our job is to reinvigorate democracy so we have one person, one vote, not billionaires buying elections. And that means, as Cori was just saying, it means to reinvigorate democracy, we need to activate our people. A lot of people in this country, and this is a sign of a serious problem, have given up on the political process. They’re out there working long hours for low wages, they’re worried about their kids, they don’t think anybody in Washington cares about them. And you know what, that’s not totally untrue. What our job is is to bring people into the political process so that we can create a government that works for working families, not just the 1%. Now, this is hard stuff. And again, getting back to what Mandela said, we’re not supposed to be thinking about where we want to go. We’re not supposed to be looking at countries around the world who have already made major gains, where we have… Give you an example. Question, how many major countries on earth do not guarantee healthcare to all people as a human right? Anyone know? All right, take a step back now. I’m going to end up off the stage here. How does that happen? I live 50 miles away from the Canadian border. In Canada for decades, every person, rich, poor, middle class, goes to any doctor they want, goes to any hospital they want. If you ended up in the hospital in Canada for a month, what is your bill when you leave the hospital? It is and by the way, in Canada, they spend half as much per capita on healthcare as we spend. You got it? We are spending $11,000, $11,000 for every man, woman and child by health care and yet, at the end of the day we got 87 million people uninsured or under insured. We have conservatively 30, and this is very conservative, but at least 30,000 people dying every year because they don’t get to a doctor when they should. We got a half a million people going because of medically related debt. You know what that means? Think about it. Think about a system which says, you go to the doctor, you’re sick, you’re diagnosed with cancer, you got enough to worry about, you’re fighting for your life. And yet, now you’re going to have to fight to prevent financial ruin and many people do not. To go bankrupt because you are dealing with cancer or heart disease should not be happening in America. And just look at the insanity dealing with this Coronavirus, this very serious problem that we’re dealing with in America, dealing with all over the world. Think about the insanity of a system where today somebody wakes up and maybe they think they have the symptoms of a Coronavirus, yet they cannot afford to go to a doctor. What does that mean? So they’re going to go to work and make a serious epidemic even worse. We believe that healthcare is a human right for every man, woman, and child. And we are prepared, uniquely in this campaign to take on a healthcare industry that last year made $100 billion in profits. We are uniquely prepared to take on a pharmaceutical industry, which in some cases charges us 10 times more for the same exact drug that’s sold abroad. Give you an example of the [inaudible 00:11:09]. I want to get back to this Coronavirus, which is on many people’s minds. Trump’s people were saying just a little while ago, that, yeah, we’re working on a vaccine. Hopefully, they are. But, this is how crazy it is. We couldn’t guarantee that when that vaccine is developed, they couldn’t guarantee that people would be able to afford it. This is how sick this system is. Let me tell you, if elected president, everybody in this country will get that vaccine, absolutely free. Is that a radical statement? That is the most obvious statement that anybody can make, but you carry that a little bit step further. Last year, I went from Detroit to Windsor, Ontario to buy insulin for people who are diabetics. I went with a bus load of people that were dealing with diabetes. And as you know, diabetes, very serious problem. Do you know what the differential in price in Canada as opposed to the United States was for insulin, the same exact product? 10 to 1. We will tell the pharmaceutical industry, they’re no longer going to charge our people 10 times more than others and we are prepared to manufacture that damn product to sell it to everybody at a price that is competitive. Right now, I just learned a few moments ago, that in New York state, the government there is doing the right thing. They are manufacturing disinfectant for hand washing to make sure that everybody will be able to get their Purell or whatever they need and what they’re saying is, they are telling the manufacturers today to stop the price gouging and they’re manufacturing it. And we are prepared to say that to the pharmaceutical industry. Stop ripping off the American people. We finally need a government that represents working people in the middle class, not just large multinational corporations. That’s what this campaign is about. Now, a lot of the media talks about, electability, which is an important issue. Everybody in this room, I assume, wants to see Donald Trump defeated. And the truth is that every American should want to see Donald Trump defeated because he is the most dangerous president in the modern history of this country. We cannot continue to have a president, you just can’t have somebody in the White House who lies all of the time. Look, we can have differences of opinion on policy, but if you asked somebody who was a pathological liar, then nobody believes what you say, which is a very dangerous situation when you’re president of the United States. We cannot continue to have a president who runs a corrupt administration. And I would hope, I would truly hope that some conservatives take a look at this. Look, we disagree on policy, that’s fine, but you can’t have a president who has apparently never read the constitution of the United States of America. A president who does not understand the separation of powers in America. We are not an autocratic society. We’re a democratic society. The founders of the constitution divided up power, which was the right thing to do. You can have a president who calls the media, enemy of the people. You can’t have a president who attacks the judiciary, who attacks the Congress. Now, Donald Trump may not understand democracy, but he’s got to learn about what democracy is about in November when we defeat him. And people talk a lot about unity, bringing people together, and that’s right. Let me tell you how we’re going to bring people together. We’re going to bring people together around an agenda that works for all of us, not just wealthy campaign contributors. We’re going to bring people together by raising the federal minimum wage to 15 bucks an hour. We’re going to bring people together by fighting for equal pay for equal work. We’re going to bring people together by making it easier for workers to join unions, not harder. We’re going to bring people together by rebuilding our crumbling infrastructure, creating millions of good paying jobs. We’re going to bring people together because you know and I know that when we have same priorities in America, we put education at the very top of that list. That means that all of our children, black and white and Latino, Native American, Asian American are entitled to a high quality education. That is why we’re going to triple funding for low-income Title 1 schools. … in the history of the world. We got to school buildings all across this country that are crumbling. Kids can’t even drink the water in some school buildings. We have teachers who have been great teachers for 10, 20 years, they’re leaving the profession because they can’t make a living. They’re tired of taking money out of their own pockets to buy school supplies. All of that, when we know there is nothing more important than educating our kids for the future of this country. What’s important is not giving tax breaks to billionaires, it’s making sure that teachers receive adequate compensation. That is why we believe that instead of giving tax breaks to the billionaires and spending more than the next 11 countries on the military, we will pay our teachers at least $60, 000 a year. I’ll tell you what else, when you talk about education, we have got to start with the premise that all of our people, not just young people, but all of our people, regardless of their income, are entitled as human beings in this country to get all of the education they need and that they want. Does anyone think that’s a radical idea? 100, 150 years ago, brave people said that they wanted a system in which all kids could get at least that elementary school education, a high school education, free of charge. That was a major step forward a hundred years ago, but right now with a world changing, with technology changing, our position must be that we will make public colleges and universities tuition free. And if there are young people that are good with their hands, don’t want to go to college, we’ll make trade schools tuition free. Again, thinking outside of the box, if we could give tax breaks to billionaires, if 12 years ago we could bail out the crooks on Wall Street, we can cancel all student debt in America. Through a modest tax on Wall Street speculation and when we think about issues that face our country, unlike Donald Trump, we understand that climate change is not a hoax, but an existential threat to this country and to the world. Whether it relates to the corona virus or whether it relates to climate change, we believe in science. We believe that the time is now to tell the fossil fuel industry that they cannot continue to destroy this planet and that we will transform our energy system away from fossil fuel to energy efficiency and sustainable energy. We will do that under the principles of a Green New Deal, which will create up to 20 million good paying jobs. So put it all together, put it all together. Think about a new America in which we have a government that works for all, not just the wealthy and not just the campaign contributors. What does it mean? It means that in the wealthiest country in the history of the world where there’s so much work to be done, we childcare workers, we need teachers, we need more healthcare providers. We need to rebuild our crumbling infrastructure. We need to transform our energy system. We have an enormous amount of work to be done. It is not radical to say that all of those workers earn living wages, that all of our people get the education they need regardless of their income. Not radical. That the United States do what every major country on earth is doing, guarantee healthcare to all as a right. That we do what the scientists are telling us we should do, aggressively combat climate change. What is so radical and extreme about those ideas? Not only are they not radical and extreme, they are exactly what the American people want. Go out on the street corners. That’s our agenda, this is what the American people want. I’ll tell you what Trump and his friends want, they want more tax breaks for billionaires and they want to cut social security, Medicare and Medicaid. That is a radical agenda. It is a radical agenda to suggest that we keep a situation going where a half a million people are homeless tonight. That’s radical. Our job is to think outside of the box. Our job is also to understand. I know in Missouri you have dealt with this issue, that we need fundamental reforms the way broken and racist criminal justice system. Again, think outside of the box. Ask yourself a simple question. Wealthiest country on earth, why do we have more people in jail, disproportionally African American, Latino, and Native American, than any other country on earth including China, a communist, authoritarian nation, four times our size. We have more people in jail today than China does. How does it happen? Let’s think about it. How does it happen again? We don’t talk about these issues. Today as we speak there are 400,000 people in jail who have not been convicted of anything. Anyone know why that’s so? How do you get end up in jail if you’re not convicted? Okay, good. All right. This is why you are arrested, maybe you’re guilty, maybe you’re not, you’re in jail. You cannot afford the $500 bucks that you need for bail, you’re poor. So you stay in jail, you may have to negotiate a plea bargain, which gives you a criminal record. Maybe you’re innocent, but you can’t get out of jail. You don’t have a decent lawyer because you can’t afford a decent lawyer and the legal system is not providing you with a decent lawyer. 400,000 people in jail today not having been convicted of anything. Then you have a situation in America today where people are making money, locking up fellow Americans. Do we really think we should incentivize large corporations to lock up more and more people to make more and more money? That’s why we’re going to end private prisons and detention centers in America. We understand. We understand that if kids fall through the cracks, if there’s a kid in the St. Louis or Burlington, Vermont today who’s dropping out of high school as a sophomore or junior in high school, kid has no education, kid has no job training, there is a strong likelihood that that kid is going to get into trouble or do self-destructive things. What we believe in is investing in our young people, making sure they don’t fall through the cracks, not that hard to do. So we make sure that our kids have decent jobs, decent job training, good education so they can go out into the world, make a living. Rather than investing in jobs and education, what we’re doing now is investing in jails and incarceration, we’re going to turn that around. I’ll tell you what else we’re going to do. We are going to end the very destructive war on drugs. Turns out that through executive order, President of the United States can legalize the marijuana in every state in this country. That’s what I will do. It also means that we’ve got to work aggressively to expunge the records of those arrested. All over America no matter what people’s political point of view may be, people are horrified by the level of gun violence in America. My promise to you is that our administration will bring forth the strongest gun safety legislation ever proposed in the United States. We will fight for universal background checks. People who have violent histories should not own guns, including domestic violence. We’re going to eliminate the gun show loophole and we’re going to end the sale and distribution of assault weapons in this country. As a US Senator, I hear a lot of speeches on the floor of the Senate from conservative Republicans who tell us they believe in small government and getting the government off the backs of the American people. I say to those hypocrites, if you believe in getting the government off the backs of the American people, please understand that it is women who have a right to control their own bodies, not the government. My promise to you is that I will never nominate anybody to the Supreme Court or any federal court who is not 100% pro Roe v. Wade. Trump and his friends want to cut funding for Planned Parenthood. Well, we’ve got some bad news for them because we’re going to substantially increase funding for Planned Parenthood. So here we are, one day before the Missouri primary, and as Cori Bush said a moment ago, this is an historical time. People don’t realize it, but this is an historic moment and it seems to me there are two broad issues that are on the minds of Democrats, Independents and some Republicans. Number one, which campaign is best able to defeat Donald Trump? Let me say without any hesitancy, any hesitancy, our campaign together is the campaign. Now why is that? Why is that? I’m not trying to be self-serving here, I’m trying to be thinking objectively, all right? I’m serious, in order to defeat Trump, who will be a very formidable opponent, in order to defeat Trump, we need the largest voter turnout in history. That is just a fact and here is another fact. The other fact is that our campaign is the campaign of energy and excitement. To defeat Trump, we need to bring what we call nontraditional voters into the political process. Now, I’m not happy about the reality, nor should you, that in our country today, we have one of the lowest voter turnout rates of any major country on earth. It’s very low and I want to change that, but right now that is where we are at. Now we need to attract people who often do not vote into the political process if we’re going to beat Trump, that’s just a simple political reality. Young people in America are today the most progressive young generation in the history of this country. Now, that is the good news, that the great news, we should all be proud about that. Let me tell you the bad news, to be honest with you, young people vote in much lower rates than older people. All right? That is the fact. So I hope all of the old people- All right, that is the facts. I hope all of the old people vote. That’s great, but I want young people to be voting at the same rates. Now every poll, and polls, you can take them for whatever they’re worth. Sometimes they’re right, sometimes they’re not. But what every poll suggests and whatever election suggests, we are overwhelmingly winning young people’s votes. Our campaign is the campaign that in the general election can bring millions of young people to the polls, which will not only impact the presidential election, it will impact Senate- On this issue, Joe Biden is a friend of mine, Joe and I have known each other for many years. What Joe has said, he will support me if I win the nomination. I have said I will support him because we want to be Trump, that goes without saying. But here is my point, if you are talking to working-class people all over this country, who is able, better able, to win their support? Joe Biden voted for the war in Iraq. I voted against the war in Iraq. Joe Biden voted for the Wall Street bailout. I helped lead the effort against the Wall Street bailout. Joe voted for disastrous trade agreements, which have been horrific for the Midwest. Agreements like NAFTA and PNTR with China. I helped lead the effort against those terrible trade agreements. Over the years, for a variety of reasons, Joe Biden has been on the floor of the Senate talking about the need to cut Social Security benefits. I have been leading the fight to expand Social Security benefits. My point here is not to criticized Biden. My point here is to ask you to think that in a general election, which candidate can generate the enthusiasm and the excitement and the voter turnout we need? If you want to defeat Trump, which all Democrats do, a majority of Independents and some Republicans do, we are that campaign. But second of all, what we also understand is that while it is absolutely imperative that we beat Trump, we’ve got to do more than that. You’ve got to transform this country so that we have an economy that works for you and you and you, not just wealthy campaign contributors. A government which says that what we need is a multiracial, multi-generational working-class movement of people coming together for justice. A movement that says not only we’re you going to reform a broken and racist criminal justice system, we’re going to reform a broken and racist immigration system. We do not believe in the demonization of immigrants. We believe in comprehensive immigration reform and a path towards citizenship. What this campaign is about is bringing the American people together, black and white and Latino, native American, Asian American, gay and straight. Bring people together. End the hatred and the divisiveness which Trump is promulgating. It is about a campaign which not only defeats Trump, but tells Wall Street and the insurance industry and the drug companies and the fossil fuel industry and the prison industrial complex and the military industrial complex and the entire 1% that we will have a nation that works for all of us. We’re not going to leave tens and tens of millions of people behind. We’re not going to have veterans sleeping out on the street. We’re not going to have kids with inadequate education. We’re not going to have older people unable to survive on inadequate Social Security benefits. That instead of denying the reality of climate change, we are going to lead the world in transforming our energy system. Tomorrow, there is a very important primary here in Missouri. I hope all of you will come out. I’m here today to respectfully ask for your support. I am here to ask you to bring out your friends and family. Let’s have one of the largest voter turnouts in the history of the Missouri primary. Let’s go forward tomorrow. Let’s win the primary. Let’s win the nomination. Let’s defeat Trump. Let’s transform this country. Thank you, St. Louis. (silence)",
+          "question": false,
+          "response": 2
         }
       ]
     }

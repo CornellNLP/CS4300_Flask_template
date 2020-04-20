@@ -29,167 +29,185 @@
         {
           "speaker": "Elizabeth Warren",
           "time": "00:02",
-          "text": "All right. So I announced this morning that I am suspending my campaign for president. I say this with a deep sense of gratitude for every single person who got in this fight, every single person who tried on a new idea, every single person who just moved a little in their notion of what a President of the United States should look like."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "00:33",
-          "text": "I will not be running for President in 2020, but I guarantee I will stay in the fight for the hardworking folks across this country who have gotten the short end of the stick over and over. That\u2019s been the fight of my life and it will continue to be so. So, does anyone have a question? [crosstalk 00:00:51]."
+          "text": "All right. So I announced this morning that I am suspending my campaign for president. I say this with a deep sense of gratitude for every single person who got in this fight, every single person who tried on a new idea, every single person who just moved a little in their notion of what a President of the United States should look like. I will not be running for President in 2020, but I guarantee I will stay in the fight for the hardworking folks across this country who have gotten the short end of the stick over and over. That’s been the fight of my life and it will continue to be so. So, does anyone have a question? [crosstalk 00:00:51].",
+          "question": false,
+          "response": -1
         },
         {
           "speaker": "Speaker 2",
           "time": "00:50",
-          "text": "What guidance would you give to your supporters who don\u2019t know who to support now?"
+          "text": "What guidance would you give to your supporters who don’t know who to support now?",
+          "question": true,
+          "response": [
+            2
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "00:57",
-          "text": "Well, let\u2019s take a deep breath and spend a little time on that. We don\u2019t have to decide that this minute."
+          "text": "Well, let’s take a deep breath and spend a little time on that. We don’t have to decide that this minute.",
+          "question": false,
+          "response": 1
         },
         {
           "speaker": "Speaker 3",
           "time": "01:01",
-          "text": "And I wonder what your message would be to the women and girls who feel like we\u2019re left with two white men to decide between?"
+          "text": "And I wonder what your message would be to the women and girls who feel like we’re left with two white men to decide between?",
+          "question": true,
+          "response": [
+            4
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "01:07",
-          "text": "I know. One of the hardest parts of this is all those pinky promises and all those little girls who are going to have to wait four more years. That\u2019s going to be hard."
+          "text": "I know. One of the hardest parts of this is all those pinky promises and all those little girls who are going to have to wait four more years. That’s going to be hard.",
+          "question": false,
+          "response": 3
         },
         {
           "speaker": "Speaker 4",
           "time": "01:24",
-          "text": "[crosstalk 00:01:24] Will you be making an endorsement today? We know that you spoke with both Joe Biden and Bernie Sanders yesterday."
+          "text": "[crosstalk 00:01:24] Will you be making an endorsement today? We know that you spoke with both Joe Biden and Bernie Sanders yesterday.",
+          "question": true,
+          "response": [
+            6
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "01:30",
-          "text": "Not today, not today. I some space around this and I want to take a little time to think a little more. I\u2019ve been spending a lot of time right now on the question of suspending and also making sure that this works as best we can for our staff, for our team, for our volunteers. [crosstalk 00:01:50] I\u2019m sorry?"
+          "text": "Not today, not today. I some space around this and I want to take a little time to think a little more. I’ve been spending a lot of time right now on the question of suspending and also making sure that this works as best we can for our staff, for our team, for our volunteers. [crosstalk 00:01:50] I’m sorry?",
+          "question": false,
+          "response": 5
         },
         {
           "speaker": "Speaker 4",
           "time": "01:50",
-          "text": "It could be coming, but just not right now?"
+          "text": "It could be coming, but just not right now?",
+          "question": true,
+          "response": [
+            8
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "01:52",
-          "text": "Not right now. [crosstalk 00:01:54]."
+          "text": "Not right now. [crosstalk 00:01:54].",
+          "question": false,
+          "response": 7
         },
         {
           "speaker": "Speaker 5",
           "time": "01:54",
-          "text": "I know that your campaign manager, Roger Lau said on the staff call today that he had no regrets. Do you feel the same way?"
+          "text": "I know that your campaign manager, Roger Lau said on the staff call today that he had no regrets. Do you feel the same way?",
+          "question": true,
+          "response": [
+            10
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "02:00",
-          "text": "Oh, I do. I have no regrets at all. This has been an honor of a lifetime. 10 years ago I was teaching a few blocks from here and talking about what was broken in America and ideas for how to fix it. And pretty much nobody wanted to hear it. And I\u2019ve had a chance to get out there and talk with millions of people and we have ideas now that we talk about that we just weren\u2019t talking about even a year ago, a 2 cent wealth tax and universal childcare that could be real. We could make it happen, and canceling student loan debt for 43 million Americans, and raising Social Security payments. Those are life changing events for people. And we could actually do this. So I\u2019m delighted to have been here and honored to have had this chance. [crosstalk 00:02:51]"
+          "text": "Oh, I do. I have no regrets at all. This has been an honor of a lifetime. 10 years ago I was teaching a few blocks from here and talking about what was broken in America and ideas for how to fix it. And pretty much nobody wanted to hear it. And I’ve had a chance to get out there and talk with millions of people and we have ideas now that we talk about that we just weren’t talking about even a year ago, a 2 cent wealth tax and universal childcare that could be real. We could make it happen, and canceling student loan debt for 43 million Americans, and raising Social Security payments. Those are life changing events for people. And we could actually do this. So I’m delighted to have been here and honored to have had this chance. [crosstalk 00:02:51]",
+          "question": false,
+          "response": 9
         },
         {
           "speaker": "Speaker 6",
           "time": "02:50",
-          "text": "Senator, what happened here in Massachusetts?"
+          "text": "Senator, what happened here in Massachusetts?",
+          "question": true,
+          "response": [
+            12
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "02:54",
-          "text": "I was told at the beginning of this whole undertaking that there are two lanes, a progressive lane that Bernie Sanders is the incumbent for and a moderate lane that Joe Biden is the incumbent for and there\u2019s no room for anyone else in this. I felt that wasn\u2019t right, but evidently I was wrong."
+          "text": "I was told at the beginning of this whole undertaking that there are two lanes, a progressive lane that Bernie Sanders is the incumbent for and a moderate lane that Joe Biden is the incumbent for and there’s no room for anyone else in this. I felt that wasn’t right, but evidently I was wrong.",
+          "question": false,
+          "response": 11
         },
         {
           "speaker": "Speaker 7",
           "time": "03:15",
-          "text": "Senator, why do you think you weren\u2019t able to resonate more with voters and win any states?"
+          "text": "Senator, why do you think you weren’t able to resonate more with voters and win any states?",
+          "question": true,
+          "response": [
+            14
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "03:20",
-          "text": "As I said, I think that I was told when I first got into this, there are two lanes. And I thought it was possible that that wasn\u2019t the case, that there was more room and more room to run another kind of campaign. But evidently that wasn\u2019t the case. [crosstalk 00:03:40]"
+          "text": "As I said, I think that I was told when I first got into this, there are two lanes. And I thought it was possible that that wasn’t the case, that there was more room and more room to run another kind of campaign. But evidently that wasn’t the case. [crosstalk 00:03:40]",
+          "question": false,
+          "response": 13
         },
         {
           "speaker": "Speaker 8",
           "time": "03:38",
-          "text": "Senator, was it especially difficult to lose your home state Massachusetts?"
+          "text": "Senator, was it especially difficult to lose your home state Massachusetts?",
+          "question": true,
+          "response": [
+            16
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "03:45",
-          "text": "No. I am deeply grateful to the people with Massachusetts. Look, back in 2012 they took a chance on someone who had never run for public office before. They ousted a very popular incumbent Republican Senator to give me a chance to stand up on a bigger platform and fight for their families. And I am deeply grateful for that."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "04:10",
-          "text": "They returned me to the Senate in 2018 and I\u2019m deeply grateful for that. They\u2019re the reason I\u2019m in this fight and they\u2019re the reason I am able to stand here today. No. [crosstalk 00:04:19]."
-        },
-        {
-          "speaker": "Speaker 8",
-          "time": "04:22",
-          "text": "Hi, Senator Warren, two questions for you."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "04:24",
-          "text": "Sure."
-        },
-        {
-          "speaker": "Speaker 8",
-          "time": "04:25",
-          "text": "I saw you vote two days ago for yourself."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "04:28",
-          "text": "I did."
+          "text": "No. I am deeply grateful to the people with Massachusetts. Look, back in 2012 they took a chance on someone who had never run for public office before. They ousted a very popular incumbent Republican Senator to give me a chance to stand up on a bigger platform and fight for their families. And I am deeply grateful for that. They returned me to the Senate in 2018 and I’m deeply grateful for that. They’re the reason I’m in this fight and they’re the reason I am able to stand here today. No. [crosstalk 00:04:19]. Sure. I did.",
+          "question": false,
+          "response": 15
         },
         {
           "speaker": "Speaker 8",
           "time": "04:28",
-          "text": "Could you two things, reflect a little bit about what that was like for you? And then the question is could you talk a little about the role that gender played in this campaign?"
+          "text": "Could you two things, reflect a little bit about what that was like for you? And then the question is could you talk a little about the role that gender played in this campaign?",
+          "question": true,
+          "response": [
+            18
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "04:41",
-          "text": "So it was \u2026 I stood at that voting booth and I looked down and I saw my name on the ballot. And I thought, \u201cWow kiddo, you\u2019re not in Oklahoma anymore.\u201d That it really was a moment of thinking about how my brother and dad, if they were still here, would feel about this."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "05:09",
-          "text": "I had gotten a long email from my nephew and how proud his dad, my brother is, and how they were all had their plans to vote and have met other people. And it is, it\u2019s these long ties, for that moment standing in the booth, I missed my mom and my dad. Gender in this race, that is the trap question for everyone. If you say, \u201cYeah. There was sexism in this race.\u201d Everyone says whiner. And if you say, \u201cNo, there was no sexism,\u201d about a bazillion women think, \u201cWhat planet do you live on?\u201d I promise you this, I\u2019ll have a lot more to say on that subject later on."
+          "text": "So it was … I stood at that voting booth and I looked down and I saw my name on the ballot. And I thought, “Wow kiddo, you’re not in Oklahoma anymore.” That it really was a moment of thinking about how my brother and dad, if they were still here, would feel about this. I had gotten a long email from my nephew and how proud his dad, my brother is, and how they were all had their plans to vote and have met other people. And it is, it’s these long ties, for that moment standing in the booth, I missed my mom and my dad. Gender in this race, that is the trap question for everyone. If you say, “Yeah. There was sexism in this race.” Everyone says whiner. And if you say, “No, there was no sexism,” about a bazillion women think, “What planet do you live on?” I promise you this, I’ll have a lot more to say on that subject later on.",
+          "question": false,
+          "response": 17
         },
         {
           "speaker": "Speaker 9",
           "time": "05:58",
-          "text": "Senator, advice to your supporters right now looking for a candidate, what is your advice to them? Obviously I know you\u2019re not endorsing anybody, but what is your advice to them?"
+          "text": "Senator, advice to your supporters right now looking for a candidate, what is your advice to them? Obviously I know you’re not endorsing anybody, but what is your advice to them?",
+          "question": true,
+          "response": [
+            20
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "06:05",
-          "text": "Let\u2019s take a deep breath and think about this for a little bit longer before we all settle in."
+          "text": "Let’s take a deep breath and think about this for a little bit longer before we all settle in.",
+          "question": false,
+          "response": 19
         },
         {
           "speaker": "Speaker 10",
           "time": "06:12",
-          "text": "Senator, it was a long two days for you, or multiple days to make this decision. What were you thinking about? What informed? What was the final straw?"
+          "text": "Senator, it was a long two days for you, or multiple days to make this decision. What were you thinking about? What informed? What was the final straw?",
+          "question": true,
+          "response": [
+            22
+          ]
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "06:21",
-          "text": "A big part of it is to think about all the people who turned their lives upside down to be part of this campaign. All of the staffers who moved and worked long hours, gave up jobs to be here, took leaves from school to think about what works for them. This isn\u2019t just about me, this is a whole lot of people who were a big part of this."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "06:47",
-          "text": "And also our volunteers, to try to think through for all those people who already have invested so many hours and so much of their heart and the phone calls and the door knocks and the coming to the office and help clean things up and keep it all going. And thinking about all those pinky promises, I take those pinky promises seriously. So those were the things I needed to think through and to how we make all those pieces work at least as best we can for everyone."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "07:23",
-          "text": "And one last thing, it\u2019s about all the people who are affected by all the issues I\u2019ve talked about, whether they got involved in my fight or someone else\u2019s fight or even not at all. But however we talk about this, there still is a trillion and a half dollars of student loan debt outstanding. There are still tens of millions of people across this country who one bad medical diagnosis and they\u2019re upside down financially. There are still mommies and daddies all across this country who can\u2019t finish their education, can\u2019t take on jobs, because they can\u2019t find access to decent childcare that they can afford."
-        },
-        {
-          "speaker": "Elizabeth Warren",
-          "time": "08:09",
-          "text": "And I had to think a lot about where is the best place for me to go to keep fighting those fights, because those problems don\u2019t disappear when I stand here in front of you. Those problems go on. And my job is to keep fighting and to fight this smartly and effectively as I can. [crosstalk 00:08:30] Thank you."
+          "text": "A big part of it is to think about all the people who turned their lives upside down to be part of this campaign. All of the staffers who moved and worked long hours, gave up jobs to be here, took leaves from school to think about what works for them. This isn’t just about me, this is a whole lot of people who were a big part of this. And also our volunteers, to try to think through for all those people who already have invested so many hours and so much of their heart and the phone calls and the door knocks and the coming to the office and help clean things up and keep it all going. And thinking about all those pinky promises, I take those pinky promises seriously. So those were the things I needed to think through and to how we make all those pieces work at least as best we can for everyone. And one last thing, it’s about all the people who are affected by all the issues I’ve talked about, whether they got involved in my fight or someone else’s fight or even not at all. But however we talk about this, there still is a trillion and a half dollars of student loan debt outstanding. There are still tens of millions of people across this country who one bad medical diagnosis and they’re upside down financially. There are still mommies and daddies all across this country who can’t finish their education, can’t take on jobs, because they can’t find access to decent childcare that they can afford. And I had to think a lot about where is the best place for me to go to keep fighting those fights, because those problems don’t disappear when I stand here in front of you. Those problems go on. And my job is to keep fighting and to fight this smartly and effectively as I can. [crosstalk 00:08:30] Thank you.",
+          "question": false,
+          "response": 21
         }
       ]
     }
