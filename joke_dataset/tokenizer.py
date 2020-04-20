@@ -1,3 +1,7 @@
+# Reads final.json
+# For each joke, generates tokens and adds the token list to each joke object, with atribute "toks"
+# Write to final_toks.json 
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 from numpy import linalg as LA

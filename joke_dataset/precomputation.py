@@ -12,6 +12,15 @@ print("Each joke has the following keys:")
 print(data[0].keys())
 
 def build_inverted_indices(jokes):
+    """
+    Builds inverted indexes from input data.
+    Returns: 
+        result: inverse index (terms), represented as a dictionary mapping term to list of tuples where tuple = (joke_id, tf)
+        result_cat: inverse index (categeries), represented as a dictionary mapping category to a list of joke_ids that fall under the category
+
+    Inputs:
+        jokes: list of joke objects/dictionaries
+    """
     result = {}
     result_cat = {}
     for joke in range(len(jokes)):
@@ -38,7 +47,50 @@ def build_inverted_indices(jokes):
 
 inv_idx, inv_idx_cat = build_inverted_indices(data)
 
+def compute_idf(inv_idx, n_docs, min_df = 0, max_df_ratio=0.35):
+    """ 
+    Computes term IDF values from the inverted index.
+    Words that are too frequent or too infrequent get pruned.
+
+    Returns:
+        idf: dictionary mapping term to idf value
+    
+    Inputs: 
+        inv_idx: an inverted index
+        n_docs: the number of total jokes
+        
+    min_df: the minimum number of jokes a term must occur in.
+        Less frequent words get ignored; currently set to 0.
+        Documents that appear min_df number of times should be included.
+    
+    max_df_ratio: the maximum ratio of documents a term can occur in.
+        More frequent words get ignored.
+
+    """
+    idf = {}
+
+    for word in inv_idx:
+        wrd_lst = inv_idx[word]
+        lst_len = len(wrd_lst)
+        if lst_len >= min_df and (lst_len/n_docs) <= max_df_ratio:
+            idf[word] = math.log2(n_docs/(1+lst_len))
+
+    return idf
+
+idf_dict = compute_idf(inv_idx, NUM_JOKES)
+
+with open('idf_dict.json', 'w') as f:
+    json.dump(idf_dict, f, indent=4)
+
 def sep_tups(inv_idx):
+    """
+    Separates tuples in inverse index into lists of joke_ids and tfs, and adds idf of term.
+    Returns: list of dictionaries where each dictionary maps 'term' to term, 'joke_ids' to list of joke_ids that have term, and 'tfs' to list of tfs corresponding to same indexed joke_id
+                i.e. just separates tuples of inv_idx
+
+    Inputs:
+        inv_idx: inverted index, represented as a dictionary mapping term to list of tuples where tuple = (joke_id, tf)
+    """
     result = [] 
     for i in inv_idx:
         temp = {}
@@ -50,12 +102,21 @@ def sep_tups(inv_idx):
             tf.append(t[1])
         temp['joke_ids'] = docs
         temp['tfs'] = tf
+        if i in idf_dict.keys(): 
+            temp['idf'] = idf_dict[i]
         result.append(temp)
     return result 
 
 new_inv_idx = sep_tups(inv_idx)
 
 def edit_cats(inv_idex_cat):
+    """
+    Converts to list of objects for easy read for json file.
+    Returns: list of dictionaries where each dictionary maps 'category' to category, 'joke_ids' to list of joke_ids that have category
+
+    Inputs:
+        inv_idx_cat: inverted index (categories), represented as a dictionary mapping category to list of joke_ids that have category
+    """
     result = []
     for category, ls in inv_idx_cat.items():
         temp = {}
@@ -78,23 +139,17 @@ with open('inv_idx_cat.json', 'w') as f:
 #
 # cat_num = compute_cat_num(data)
 
-def compute_idf(inv_idx, n_docs, min_df=10, max_df_ratio=0.90):
-    idf = {}
-
-    for word in inv_idx:
-        wrd_lst = inv_idx[word]
-        lst_len = len(wrd_lst)
-        if lst_len >= min_df and (lst_len/n_docs) <= max_df_ratio:
-            idf[word] = math.log2(n_docs/(1+lst_len))
-
-    return idf
-
-idf_dict = compute_idf(inv_idx, NUM_JOKES)
-
-with open('idf_dict.json', 'w') as f:
-    json.dump(idf_dict, f, indent=4)
-
 def compute_doc_norms(inv_idx, idf_dict, n_docs):
+    """ Precompute the euclidean norm of each document.
+    
+    Returns:
+        norms: array of size n_docs where norms[i] = the norm of joke i
+    
+    Inputs:
+        index: inverted index
+        idf: dictionary mapping term to precomputed idf values
+        n_docs: the total number of jokes
+    """
     result = np.zeros(n_docs)
 
     for word in inv_idx:
@@ -110,6 +165,9 @@ def compute_doc_norms(inv_idx, idf_dict, n_docs):
 doc_norms_lst = compute_doc_norms(inv_idx, idf_dict, NUM_JOKES)
 
 def add_norms(jokes, norms):
+    """ 
+    Adds norms to corresponding jokes.
+    """
     result = [] 
     for i in range(len(jokes)):
         temp = {}
@@ -125,18 +183,18 @@ new_final = add_norms(data, doc_norms_lst)
 with open('final_norm.json', 'w') as f:
     json.dump(new_final, f, indent=4)
 
-def jaccard_sim(query, inv_idx, jokes):
-    result = {}
-    for cat in query:
-        if cat in inv_idx:
-            doc_ids = inv_idx[cat]
-            for doc in doc_ids:
-                if doc not in result:
-                    result[doc] = 0
-                result[doc] += 1
-    for doc in result:
-        result[doc] /= (len(set(jokes[doc]['categories']).union(set(query))))
-    result = sorted(result.items(), key = lambda x : x[1], reverse = True)
-    return result
+# def jaccard_sim(query, inv_idx, jokes):
+#     result = {}
+#     for cat in query:
+#         if cat in inv_idx:
+#             doc_ids = inv_idx[cat]
+#             for doc in doc_ids:
+#                 if doc not in result:
+#                     result[doc] = 0
+#                 result[doc] += 1
+#     for doc in result:
+#         result[doc] /= (len(set(jokes[doc]['categories']).union(set(query))))
+#     result = sorted(result.items(), key = lambda x : x[1], reverse = True)
+#     return result
 
-jaccard = jaccard_sim(['Dad Jokes'], inv_idx_cat, data)
+# jaccard = jaccard_sim(['Dad Jokes'], inv_idx_cat, data)

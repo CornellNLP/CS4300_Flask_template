@@ -8,8 +8,8 @@ import json
 
 try:
    connection = psycopg2.connect( 
-                                #   user = "winice",
-                                #   password = "password",
+                                  user = "winice",
+                                  password = "password",
                                   host="localhost",
                                   port="5432",
                                   database="hahadata")
@@ -27,7 +27,7 @@ try:
    with open ('./inv_idx_free.json') as f:
        data = json.load(f)
        string = "\'" + json.dumps(data) + "\'"
-       postgres_insert_query = "Insert into terms (term, joke_ids, tfs) select term, joke_ids, tfs from json_populate_recordset(null::terms, " + string + ");"
+       postgres_insert_query = "Insert into terms (term, joke_ids, tfs, idf) select term, joke_ids, tfs, idf from json_populate_recordset(null::terms, " + string + ");"
    cursor.execute(postgres_insert_query)
    
    connection.commit()
