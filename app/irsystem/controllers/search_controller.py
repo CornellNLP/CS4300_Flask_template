@@ -1,6 +1,6 @@
 import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import ssl
