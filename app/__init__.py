@@ -19,13 +19,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 # Import + Register Blueprints
-app.logger.info("registering accounts")
+app.logger.critical("registering accounts")
 from app.accounts import accounts as accounts
 app.register_blueprint(accounts)
-app.logger.info("registering irsystem")
+app.logger.critical("registering irsystem")
 from app.irsystem import irsystem as irsystem
 app.register_blueprint(irsystem)
-app.logger.info("registered")
+app.logger.critical("registered")
 
 @app.route("/")
 def index():
