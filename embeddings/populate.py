@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.getcwd())
-from data_tools import get_wine_data, get_beer_data, get_descriptor, get_descriptors, normalize, HEADERS
+from .data_tools import get_wine_data, get_beer_data, get_descriptor, get_descriptors, normalize, HEADERS
 from nltk.tokenize import sent_tokenize
 from app.irsystem.models.database import Drink, Embedding, add_drink_batch, add_embedding_batch
 from sklearn.feature_extraction.text import TfidfVectorizer

@@ -1,4 +1,4 @@
-from database import query_drink, query_embeddings
+from .database import query_drink, query_embeddings
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
