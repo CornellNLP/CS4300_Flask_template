@@ -47,15 +47,26 @@ def search():
 			sim_measure = (element[1])
 			if doc_id not in results:
 				results[doc_id] = ({"text": joke.text,"categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure)
-	results2 = {}
+	
+	results_cos = {}
+
 	if query:
 		results_query = cos.fast_cossim(query, inv_idx_free)
 		for element in results_query:
 			doc_id = element[0]
 			joke = Joke.query.filter_by(id = doc_id).first()
 			sim_measure = element[1]
-			results[doc_id] = ({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure*0.5
-	 
+			results_cos[doc_id] = ({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure*0.5
+	
+	results = {}
+	for i in range(6408):
+		if i in results_cat and results_cos:
+			results[i] = results_cat[i][0], results_cat[i][1]*0.5 + results_cos[i][1]*0.5
+		elif i in results_cat:
+			results[i] = results_cat[i][0], results_cat[i][1] * 0.5
+		elif i in results_cos:
+			results[i] = results_cos[i][0], results_cos[i][1] * 0.5
+
 	final = []
 	if min_score:
 		for joke in results:
