@@ -3,6 +3,12 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 
 
+# setup for getting the video url since its javascript and needs to load
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+driver = webdriver.Chrome(options=options)
+
+
 # test topics
 topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
           'education', 'economy', 'immigration', 'abortion', 'federal deficit',
@@ -22,17 +28,11 @@ def search(topics, candidates, debate_name):
             for x in exact_search(part['text'], topic):
                 relevant.append((part['video'], x))
 
-    # setup for getting the video url since its javascript and needs to load
-    # only needs to run once so restructure
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    driver = webdriver.Chrome(options=options)
-
     relevant_transformed = []
     videos = dict()
     for video_link, quote in relevant:
         if video_link not in videos:
-            videos[video_link] = get_video_link(driver, video_link)
+            videos[video_link] = get_video_link(video_link)
 
         relevant_transformed.append({
             "video": videos[video_link],
@@ -54,7 +54,7 @@ def search(topics, candidates, debate_name):
 
 
 # as the link is only good for a day, this must be done on demand
-def get_video_link(driver, url):
+def get_video_link(url):
     # execute a webdriver request
     driver.get(url)
     video_page = BeautifulSoup(driver.page_source, 'html.parser')
