@@ -65,7 +65,7 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
         try:
             drink_vector = sum(word_vectors) / len(word_vectors)
         except:
-            drink_vector = np.array([])
+            continue
         # Required fields
         name = row[h.name]
         desc = row[h.desc]
@@ -138,10 +138,10 @@ def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None, be
     add_drink_batch(drinks)
     print('{} Drinks added to database!'.format(len(drinks)))
 
-main(
-    model_file='embeddings/trained/model_50k.bin',
-    phraser_file='embeddings/trained/trigram_50k.pkl',
-    tfidf_file='embeddings/trained/tfidf_50k.pkl',
-    wine_size=5000,
-    beer_size=5000
-)
+# main(
+#     model_file='embeddings/trained/model_50k.bin',
+#     phraser_file='embeddings/trained/trigram_50k.pkl',
+#     tfidf_file='embeddings/trained/tfidf_50k.pkl',
+#     wine_size=5000,
+#     beer_size=5000
+# )
