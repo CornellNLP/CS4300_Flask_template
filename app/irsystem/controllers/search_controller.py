@@ -23,65 +23,57 @@ def search():
 	search_params['categories'] = categories if categories else ''
 	search_params['key_words'] = query if query else ''
 
-	results = []
+	results = {}
 
-	if min_score:
-		jokes = Joke.query.filter(Joke.score >= min_score).all()
-		results += [
-			{
-        "text": joke.text,
-        "categories": joke.categories,
-        "score": str(joke.score),
-        "maturity": joke.maturity,
-		} for joke in jokes]
-	
 	if categories:
 		categories_list = [el.strip() for el in categories.split(",")]
-		       
+
 		cat_jokes = {} #dictionary where key = category, value = array of doc_ids with that category
 		for cat in categories_list: #for every category
 			doc_lst = Categories.query.filter_by(category = cat).first() #get the record where category is equal to cat
 			cat_jokes[cat] = doc_lst.joke_ids
-		
+
 		numer_dict = sl.get_rel_jokes(cat_jokes) #dictionary with key = joke_id and value = numerator
-		
+
 		rel_jokes = {} #dictionary where key = joke_id, value = joke
 		for doc in numer_dict.keys():
 			rel_jokes[doc] = Joke.query.filter_by(id = doc).first()
-		
+
 		results_cat = sl.jaccard_sim(categories_list, numer_dict, rel_jokes)
 
-		for element in results_cat: 
+		for element in results_cat:
 			doc_id = element[0]
 			joke = rel_jokes[doc_id]
-			sim_measure = "JACCARD SIM: %s" % (element[1])
+			sim_measure = (element[1])
+			if doc_id not in result:
+				results[doc_id] = ({"text": joke.text,"categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure)
 
-			results.append((
-			{
-				"text": joke.text,
-        		"categories": joke.categories,
-       			 "score": str(joke.score),
-        		"maturity": joke.maturity,
-			}, sim_measure))
-	
-	if query: 
+	if query:
 		results_query = cos.fast_cossim(query, inv_idx_free)
-		for element in results_query: 
+		for element in results_query:
 			doc_id = element[0]
 			joke = Joke.query.filter_by(id = doc_id).first()
-			sim_measure = "COSINE SIM: %s" % (element[1])
+			sim_measure = element[1]
+            if doc_id not in result:
+				results[doc_id] = ({"text": joke.text, "categories": joke.categories,"score": str(joke.score),"maturity": joke.maturity}, sim_measure))
+			else:
+				tmp = results[doc_id]
+				sim = tmp[1]*0.5 + sim_measure*0.5
+				results[doc_id] = (tmp[0], sim)
 
-			results.append((
-			{
-				"text": joke.text,
-        		"categories": joke.categories,
-       			 "score": str(joke.score),
-        		"maturity": joke.maturity,
-			}, sim_measure))
+        final = []
+	if min_score:
+		for joke in results:
+			if joke[0]['score'] >= min_score:
+				final.append((joke[0], "Similarity: " + str(joke[1]*0.67 + (0.33*joke[0]['score']))))
+			else:
+				final.append((joke[0], joke[1]*0.67 + (0.16*joke[0]['score'])))
+        else:
+			final = [(x[1][0], "Similarity: " + str(x[1][1])) for x in results.items()]
 
 	Joke.testFunct()
-	
-	return render_template('search.html', name=project_name, netid=net_id, output_message=search_params, data=results)
+
+	return render_template('search.html', name=project_name, netid=net_id, output_message=search_params, data=final)
 
 @irsystem.route('/react', methods=['GET'])
 def sendhome():
