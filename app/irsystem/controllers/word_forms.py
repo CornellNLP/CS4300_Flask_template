@@ -6,7 +6,7 @@ except LookupError:
     nltk.download("wordnet")
 import inflect
 
-from app.irsystem.word_forms.constants import (ALL_WORDNET_WORDS, CONJUGATED_VERB_LIST,
+from app.irsystem.controllers.constants import (ALL_WORDNET_WORDS, CONJUGATED_VERB_LIST,
                         ADJECTIVE_TO_ADVERB)
 
 def belongs(lemma, lemma_list):
