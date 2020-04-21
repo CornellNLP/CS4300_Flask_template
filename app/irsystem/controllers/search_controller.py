@@ -25,13 +25,15 @@ def search():
 			drink_type = None
 		results = search_drinks(desc_lst, dtype=drink_type, k=10)
 
-		# for drink in results:
-		# 	print(drink[0].name)
-		# 	print(drink[0].description)
-		# 	print(drink[0].price)
-		# 	print(drink[0].origin)
-		# 	print(drink[0].type)
+		if results is not None:
 
-		return render_template('results.html', results=results)
+			# for drink in results:
+			# 	print(drink[0].name)
+			# 	print(drink[0].description)
+			# 	print(drink[0].price)
+			# 	print(drink[0].origin)
+			# 	print(drink[0].type)
+
+			return render_template('results.html', results=results)
 
 	return render_template('search.html')

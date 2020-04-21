@@ -5,9 +5,11 @@ import numpy as np
 def search_drinks(descriptors, dtype=None, k=10):
     # Form query vector from word embeddings
     emb_dict = {e.word: np.frombuffer(e.vbytes, dtype=np.float32) for e in query_embeddings()}
-    q_vectors = [emb_dict[d] for d in descriptors]
+    q_vectors = [emb_dict[d] for d in descriptors if d in emb_dict]
+    if len(q_vectors) == 0:
+        return None
     query = sum(q_vectors) / len(q_vectors)
-
+    
     # Search database for k nearest neighbors
     drinks = query_drink(dtype)
     d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
