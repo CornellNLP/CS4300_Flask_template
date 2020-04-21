@@ -73,9 +73,41 @@ class App extends React.Component {
                   name="name"
                   // value={this.state.newRequest.contactinfo.name}
                   // onChange={this.handleInput_contact}
-                  placeholder="Enter key words..."
+                  placeholder="Enter Key Words..."
                   required
                 />
+              </Form.Group>
+
+              <Form.Group controlId="category" className="formGroupCenter">
+                {/* <Form.Label>Category:</Form.Label> */}
+                <Form.Control as="select">
+                  <option>Enter Category...</option>
+                  <option>1</option>
+                  <option>2</option>
+                </Form.Control>
+              </Form.Group>
+
+              <Form.Group controlId="min_score" className="formGroupCenter">
+                <Form.Label>Minimum Score:</Form.Label>
+                {['radio'].map((type) => (
+                  <div key={`inline-${type}`} className="score_options">
+                    <Form.Check inline label="1" type={type} id={`inline-${type}-1`} />
+                    <Form.Check inline label="2" type={type} id={`inline-${type}-2`} />
+                    <Form.Check inline label="3" type={type} id={`inline-${type}-3`} />
+                    <Form.Check inline label="4" type={type} id={`inline-${type}-4`} />
+                    <Form.Check inline label="5" type={type} id={`inline-${type}-5`} />
+                  </div>
+                ))}
+              </Form.Group>
+              
+              <Form.Group controlId="maturity_rating" className="formGroupCenter">
+                {/* <Form.Label>Maturity Rating:</Form.Label> */}
+                <Form.Control as="select">
+                  <option>Enter Maturity Rating...</option>
+                  <option>PG</option>
+                  <option>PG-13</option>
+                  <option>R</option>
+                </Form.Control>
               </Form.Group>
 
               <Button type="submit" className="btn btn-info">Go!</Button>

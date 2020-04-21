@@ -58,3 +58,22 @@ h1{
 img{
   width: 300px;
 }
+
+.form-label{
+  font-size: 18px;
+  padding-top: 3px;
+  flex: 0 0 160px;
+}
+
+.score_options{
+  font-size: 18px;
+  padding-top: 3px;
+}
+
+input[type=radio] {
+  position: absolute;
+}
+
+.form-control {
+  border-radius: .5rem;
+}
