@@ -32,7 +32,7 @@
                 <!-- <option value = ""></otion> -->
                 {% for cat in cat_options %}
                 <!-- <option name = "category" value = "{{cat}}"> {{cat}} </option> -->
-                {{cat}} <input type="checkbox" id="category" name="category" value="{{cat}}"> {{cat}}
+                <div> <input type="checkbox" id="category" name="category" value="{{cat}}"> {{cat}} </div>
                 {% endfor %}
             <!-- </select> -->
         </div>
@@ -49,14 +49,14 @@
 
         <div class="form-group"> Maturity Rating:
             <!-- <label for="cars">Maturity Rating:</label> -->
-                <select id="maturity_rating">
-                    <option value="pg">PG</option>
-                    <option value="pg13">PG-13</option>
-                    <option value="r">R</option>
-                </select>
+            <select id="maturity_rating">
+                <option value="pg">PG</option>
+                <option value="pg13">PG-13</option>
+                <option value="r">R</option>
+            </select>
         </div>
         <br><br>
-        
+
         <button type="submit" class="btn btn-info"> Go! </button>
     </form>
     <form class="form-inline global-search">
