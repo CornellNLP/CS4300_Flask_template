@@ -4,9 +4,9 @@ from selenium import webdriver
 
 
 # setup for getting the video url since its javascript and needs to load
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-driver = webdriver.Chrome(options=options)
+# options = webdriver.ChromeOptions()
+# options.add_argument('headless')
+# driver = webdriver.Chrome(options=options)
 
 
 # test topics
@@ -19,8 +19,8 @@ topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
 videos = dict()
 
 
-def exact_search(transcript, topic):
-    return [x for x in transcript if topic in x['text']]
+def exact_search(transcript, topic, candidates):
+    return [x for x in transcript if topic in x['text'] and (x['speaker'] in candidates or len(candidates) == 0)]
 
 
 def search(topics, candidates, debate_name):
@@ -29,13 +29,13 @@ def search(topics, candidates, debate_name):
     relevant = []
     for topic in topics:
         for part in debate['parts']:
-            for x in exact_search(part['text'], topic):
+            for x in exact_search(part['text'], topic, candidates):
                 relevant.append((part['video'], x))
 
     relevant_transformed = []
     for video_link, quote in relevant:
         if video_link not in videos:
-            videos[video_link] = get_video_link(video_link)
+            videos[video_link] = video_link
 
         relevant_transformed.append({
             "video": videos[video_link],
@@ -57,11 +57,11 @@ def search(topics, candidates, debate_name):
 
 
 # as the link is only good for a day, this must be done on demand
-def get_video_link(url):
-    # execute a webdriver request
-    driver.get(url)
-    video_page = BeautifulSoup(driver.page_source, 'html.parser')
-    return video_page.find('video').attrs['src']
+# def get_video_link(url):
+#     # execute a webdriver request
+#     driver.get(url)
+#     video_page = BeautifulSoup(driver.page_source, 'html.parser')
+#     return video_page.find('video').attrs['src']
 
 
 # tags are:
