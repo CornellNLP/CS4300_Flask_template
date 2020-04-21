@@ -55,9 +55,10 @@ class InvertedIndex():
     #will load based on information in shared_variables
     #only load helper first, load everything else as needed
     def load(self):
-        # for partition_index in range(num_partitions):
-        #     inverted_index = self.load_file(partition_index)
-        #     self.inverted_indices.append(inverted_index)
+        for partition_index in range(num_partitions):
+            print(partition_index )
+            inverted_index = self.load_file(partition_index)
+            self.inverted_indices.append(inverted_index)
         self._inverted_index_helper = self.load_file("helper")
 
     def get_posts(self, token):
