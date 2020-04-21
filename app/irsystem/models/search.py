@@ -17,8 +17,7 @@ class SearchEngine():
             self.create()
         idf, norms, post_lookup, subreddit_lookup = self.open_datastructures()
 
-        self.inverted_index = InvertedIndex()
-        self.inverted_index.load()
+        self.inverted_index = None
         self.idf = idf
         self.norms = norms
         self.post_lookup = post_lookup
