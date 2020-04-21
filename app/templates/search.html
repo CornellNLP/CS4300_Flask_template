@@ -24,15 +24,17 @@
         </div>
         <br><br>
         
-        <div class="form-group">
+        <div class="form-group" style = "width: 50%">
             <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Categories"> -->
             Categories:
-            <select multiple name = "category"> 
-                <option value = ""></otion>
+            <br> <br>
+            <!-- <select multiple name = "category">  -->
+                <!-- <option value = ""></otion> -->
                 {% for cat in cat_options %}
-                <option name = "category" value = "{{cat}}"> {{cat}} </option>
+                <!-- <option name = "category" value = "{{cat}}"> {{cat}} </option> -->
+                {{cat}} <input type="checkbox" id="category" name="category" value="{{cat}}"> {{cat}}
                 {% endfor %}
-            </select>
+            <!-- </select> -->
         </div>
         <br><br>
 
