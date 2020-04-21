@@ -70,14 +70,6 @@ def search():
 				joke.score), "maturity": joke.maturity}, sim_measure)
 	
 	results = ressy.weight(results_jac, results_cos)
-
-    # for i in range(6408):
-    # 	if i in results and i in results_cos:
-    # 		results[i] = results_jac[i][0], results_jac[i][1]*0.5 + results_cos[i][1]*0.5
-    # 	elif i in results:
-    # 		results[i] = results_jac[i][0], results_jac[i][1] * 0.5
-    # 	elif i in results_cos:
-    # 		results[i] = results_cos[i][0], results_cos[i][1] * 0.5
 	
 	final = None
 	if min_score:

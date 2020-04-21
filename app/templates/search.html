@@ -23,14 +23,16 @@
             <input id="search" type="text" name="search" class="form-control" placeholder="Key Words">
         </div>
         <br><br>
-        
-        <div class="form-group">
+
+        <div class="form-group" style='width:750px'>
             <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Categories"> -->
             Categories:
-            <select multiple name = "category"> 
-                <option value = ""></otion>
+            <select multiple name="category"
+                style='width:100%; overflow:scroll; vertical-align:middle;max-height:200px;white-space: normal'
+                size='5'>
+                <option selected value="">[none]</option>
                 {% for cat in cat_options %}
-                <option name = "category" value = "{{cat}}"> {{cat}} </option>
+                <option name="category" value="{{cat}}"> {{cat}} </option>
                 {% endfor %}
             </select>
         </div>
@@ -47,14 +49,14 @@
 
         <div class="form-group"> Maturity Rating:
             <!-- <label for="cars">Maturity Rating:</label> -->
-                <select id="maturity_rating">
-                    <option value="pg">PG</option>
-                    <option value="pg13">PG-13</option>
-                    <option value="r">R</option>
-                </select>
+            <select id="maturity_rating">
+                <option value="pg">PG</option>
+                <option value="pg13">PG-13</option>
+                <option value="r">R</option>
+            </select>
         </div>
         <br><br>
-        
+
         <button type="submit" class="btn btn-info"> Go! </button>
     </form>
     <form class="form-inline global-search">
