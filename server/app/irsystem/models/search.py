@@ -2,6 +2,7 @@ import re
 
 import requests
 from bs4 import BeautifulSoup
+from app import debates
 
 # setup for getting the video url since its javascript and needs to load
 # options = webdriver.ChromeOptions()
