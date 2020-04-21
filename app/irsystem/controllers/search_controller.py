@@ -18,7 +18,7 @@ def search():
 	descriptors = request.args.get('descriptors')
 	
 	if drink_type and descriptors:
-		desc_lst = [d.strip() for d in descriptors.split(',')]
+		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
 		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
 
 		if drink_type == 'anything':
