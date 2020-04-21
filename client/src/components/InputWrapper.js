@@ -95,7 +95,7 @@ function ErrorMessage(props) {
     if (props.errorOn) {
         return (
         <div className="error-message">
-            Please insert atleast 1 topic!
+            Please insert at least 1 topic!
         </div>
     )
     }
