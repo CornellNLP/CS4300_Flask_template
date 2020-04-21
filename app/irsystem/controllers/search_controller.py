@@ -2,6 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.search import search_drinks
+from app.irsystem.models.database import query_embeddings
 
 project_name = "Pick Your Poison"
 net_id = """
@@ -11,6 +12,12 @@ DB Lee (dl654),
 Dana Luong (dl697),
 Ishneet Sachar (iks23)
 """
+
+@irsystem.route('/descriptors', methods=['GET'])
+def serve_desc():
+	descriptors = sorted([e.word for e in query_embeddings()])
+	descriptors = [d.replace('_', ' ') for d in descriptors]
+	return render_template('desc_list.html', descriptors=descriptors)
 
 @irsystem.route('/', methods=['GET'])
 def search():
