@@ -1,13 +1,13 @@
 import json
 import os
 
-from app import debates
+from app import debates_table
 
 
 def insert_many(replace, folders=None):
     if replace:
         # delete everything in the database
-        debates.delete_many({})
+        debates_table.delete_many({})
 
     if folders is None:
         folders = ['debates/', 'others/']
@@ -18,9 +18,9 @@ def insert_many(replace, folders=None):
                 debate = json.load(f)
 
                 # delete any debates with same url (redundant if replace)
-                debates.delete_many({'url': debate['url']})
+                debates_table.delete_many({'url': debate['url']})
                 # and insert them
-                debates.insert_one(debate)
+                debates_table.insert_one(debate)
 
 
 def insert_one(file_name):
@@ -29,11 +29,11 @@ def insert_one(file_name):
         debate = json.load(f)
 
     # delete any debates with same url
-    debates.delete_many({'url': debate['url']})
+    debates_table.delete_many({'url': debate['url']})
     # insert new one
-    debates.insert_one(debate)
+    debates_table.insert_one(debate)
 
 
 def delete_one(url):
     # delete any debates with same url
-    debates.delete_many({'url': url})
+    debates_table.delete_many({'url': url})

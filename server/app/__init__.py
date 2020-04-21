@@ -19,7 +19,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # DB
 client = MongoClient(app.config['MONGO_URI'])
 db = client[app.config['MONGO_DBNAME']]
-debates = db[app.config['MONGO_DBCOLLECTION']]
+debates_table = db[app.config['MONGO_DBCOLLECTION']]
 
 
 # Import + Register Blueprints

@@ -98,36 +98,39 @@ def annotate_responses(debate):
     other_speakers = set(debate['other_speakers'])
     for part in debate['parts']:
         for i, line in enumerate(part['text']):
-            prev_quote = part['text'][i-1]
-            # if candidate, need to find what quote responding to
-            if line['speaker'] in candidates and not line['question']:
-                # if responding to another candidate
-                if prev_quote['speaker'] in candidates and len(prev_quote['text']) > IRRELEVANT_TEXT_BLOCK:
-                    line['response'] = i-1
-                # TODO: more advanced response to another candidate
-                # elif part['text'][i-2]['speaker'] in candidates and [x for x in name_to_parts[line['speaker']] if x in part['text'][i-2]['text'].lower()]:
-                else:
-                    # otherwise find the last question asked
-                    for x in range(i-1, -1, -1):
-                        if part['text'][x]['question']:
-                            line['response'] = x
-                            part['text'][x]['response'].append(i)
-                            break
-
-                # if couldn't identify response, find the last other speaker
-                if 'response' not in line:
-                    for x in range(i-1, -1, -1):
-                        if part['text'][x]['speaker'] in other_speakers:
-                            line['response'] = x
-                            part['text'][x]['response'].append(i)
-                            break
-
-                # if really can't match, put something
-                if 'response' not in line:
-                    line['response'] = max(i - 1, 0)
+            if i == 0 and line['speaker'] in candidates and not line['question']:
+                raise Exception('Debate ' + debate['url'] + '\nText has no response: ' + line['text'])
             else:
-                # initialize list of responses to be filled in
-                line['response'] = []
+                prev_quote = part['text'][i-1]
+                # if candidate, need to find what quote responding to
+                if line['speaker'] in candidates and not line['question']:
+                    # if responding to another candidate
+                    if prev_quote['speaker'] in candidates and len(prev_quote['text']) > IRRELEVANT_TEXT_BLOCK:
+                        line['response'] = i-1
+                    # TODO: more advanced response to another candidate
+                    # elif part['text'][i-2]['speaker'] in candidates and [x for x in name_to_parts[line['speaker']] if x in part['text'][i-2]['text'].lower()]:
+                    else:
+                        # otherwise find the last question asked
+                        for x in range(i-1, -1, -1):
+                            if part['text'][x]['question']:
+                                line['response'] = x
+                                part['text'][x]['response'].append(i)
+                                break
+
+                    # if couldn't identify response, find the last other speaker
+                    if 'response' not in line:
+                        for x in range(i-1, -1, -1):
+                            if part['text'][x]['speaker'] in other_speakers:
+                                line['response'] = x
+                                part['text'][x]['response'].append(i)
+                                break
+
+                    # if really can't match
+                    if 'response' not in line:
+                        raise Exception('Debate ' + debate['url'] + '\nText has no response: ' + line['text'])
+                else:
+                    # initialize list of responses to be filled in
+                    line['response'] = []
 
 
 def format_and_annotate(debate):

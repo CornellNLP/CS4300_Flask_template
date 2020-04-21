@@ -1600,29 +1600,24 @@
           "text": "Well, you’re not going to go to war with them. You have to negotiate with them and try to … and we’ve seen how well that works with tariffs that are hurting us. What you have to do is convince the Chinese that is in their interest as well. Their people are going to die just as our people are going to die and we work together. In all fairness, the Chinese have slowed down. It’s India that is even bigger problem, but it is an enormous problem, nobody’s doing anything about it. We could right here in America make a big difference. We’re closing the coal-fired power plants. If we enforced some of the rules on fracking so that they don’t release methane into the air and into the water, you’ll make a big difference. But we’re not going to get rid of fracking for while and we frack incidentally not just natural gas, you frack oil as well. It is a technique and when it’s done poorly, like they’re doing it in too many places where the methane gets out into the air, it is very damaging. But it’s a transition fuel, I think the Senator said it right. We want to go to all renewables, but that’s still many years from now. And before, I think the Senator mentioned 2050 for some data. No scientist thinks the numbers for 2050 or 2050 anymore. They’re 2040, 2035. The world is coming apart faster than any scientific study had predicted. We just got to do something now [crosstalk 01:04:46].",
           "question": false,
           "response": 204
-        },
-        {
-          "speaker": "Lester Holt",
-          "time": "01:04:46",
-          "text": "Mayor Buttigieg, your thoughts.",
-          "question": false,
-          "response": []
         }
       ]
     },
     {
       "number": 2,
-      "video": null,
-      "text": []
-    },
-    {
-      "number": 3,
       "video": "https://www.rev.com/transcript-editor/Edit?token=PJlGg7aNhYBMo09IdzdA3y738m-4IIcdN0wZUPSFzA0aJOZKFYGuwWi4PWGyWEwiGt5Ujms0yP-SsXrPIC1gQ-LVJTc&loadFrom=PastedDeeplink",
       "text": [
         {
+          "speaker": "Lester Holt",
+          "time": "00:22",
+          "text": "Mayor Buttigieg, your thoughts.",
+          "question": true,
+          "response": [1]
+        },
+        {
           "speaker": "Pete Buttigieg",
           "time": "00:24",
-          "text": "Let’s be real about the deadline. It’s not 2050. It’s not 2040. It’s not 2030. It’s 2020, because if we don’t elect a president who actually believes in climate science now, we will never meet any of the other scientific or policy deadlines that we need to. So first of all, let’s make sure we’re actually positioned to win. Which once again, if we put forward two of the most polarizing figures on this stage as the only option, it’s going to be a real struggle. Now I’ve got a plan to get us carbon neutral by 2050. And I think everybody up here has a plan that more or less does the same. So the real question is how are we going to actually get it done? We need leadership to make this a national project that breaks down the partisan and political tug of war that prevents anything from getting done. How do you do it? Well, first of all, making sure that those jobs are available quickly. Secondly, ensuring that we are pulling in those very sectors who have been made to feel like they’re part of the problem, from farming to industry, and fund as well as urge them to do the right thing. And then global climate diplomacy, I’m a little skeptical of the idea that convincing is going to do the trick when it comes to working with China. America has repeatedly overestimated our ability to shape Chinese ambitions, but what we can do is ensure that we use the hard tools [crosstalk 00:01:46].",
+          "text": "Let’s be real about the deadline. It’s not 2050. It’s not 2040. It’s not 2030. It’s 2020, because if we don’t elect a president who actually believes in climate science now, we will never meet any of the other scientific or policy deadlines that we need to. So first of all, let’s make sure we’re actually positioned to win. Which once again, if we put forward two of the most polarizing figures on this stage as the only option, it’s going to be a real struggle. Now I’ve got a plan to get us carbon neutral by 2050. And I think everybody up here has a plan that more or less does the same. So the real question is how are we going to actually get it done? We need leadership to make this a national project that breaks down the partisan and political tug of war that prevents anything from getting done. How do you do it? Well, first of all, making sure that those jobs are available quickly. Secondly, ensuring that we are pulling in those very sectors who have been made to feel like they’re part of the problem, from farming to industry, and fund as well as urge them to do the right thing. And then global climate diplomacy, I’m a little skeptical of the idea that convincing is going to do the trick when it comes to working with China. America has repeatedly overestimated our ability to shape Chinese ambitions, but what we can do is ensure that we use the hard tools to enforce what has to happen.",
           "question": false,
           "response": 0
         },
@@ -1632,23 +1627,15 @@
           "text": "Hold here for a second. Senator Warren?",
           "question": true,
           "response": [
-            2,
             3
           ]
-        },
-        {
-          "speaker": "Pete Buttigieg",
-          "time": "01:45",
-          "text": "-policy, to enforce what has to happen.",
-          "question": false,
-          "response": 1
         },
         {
           "speaker": "Elizabeth Warren",
           "time": "01:51",
           "text": "Yes. I want to make sure that the question of environmental justice gets more than a glancing blow in this debate, because for generations now in this country, toxic waste dumps, polluting factories have been located in or near communities of color over and over and over. And the consequences are felt in the health of young African American babies. It’s felt in the health of seniors, people with compromised immune systems. It’s also felt economically. Who wants to move into an area where the air smells bad or you can’t drink the water. I have a commitment of $1 trillion to repair the damage that this nation has permitted to inflict on communities of color for generations now. We have to own up to our responsibility. We cannot simply talk about climate change in big global terms. We need to talk about it in terms of rescuing the communities that have been damaged.",
           "question": false,
-          "response": 1
+          "response": 2
         },
         {
           "speaker": "Chuck Todd",

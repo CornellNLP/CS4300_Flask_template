@@ -7,12 +7,9 @@ from app.irsystem.models.search import search
 @socketio.on('input_change')
 def on_input_change(data):
     # data format: {'results': {'topics': [], 'candidates': [], 'debates': []}}
+    topics = data['results']['topics']
+    candidates = data['results']['candidates']
+    debate_filters = data['results']['debates']
 
-    # TODO: actually pick the relevant debates
-    if not data['results']['debates']:
-        debate_name = "Sixth Democratic Debate from Los Angeles"
-    else:
-        debate_name = data['results']['debates'][0]
-
-    results = search(data['results']['topics'], data['results']['candidates'], debate_name)
+    results = search(topics, candidates, debate_filters)
     socketio.emit('output_sent', results)
