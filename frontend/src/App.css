@@ -65,6 +65,10 @@ img{
   flex: 0 0 160px;
 }
 
+.category_label {
+  flex: 0 0 100px;
+}
+
 .score_options{
   font-size: 18px;
   padding-top: 3px;
@@ -76,4 +80,9 @@ input[type=radio] {
 
 .form-control {
   border-radius: .5rem;
+  color: #6D757D;
+}
+
+.App-Component {
+  width: 300px;
 }

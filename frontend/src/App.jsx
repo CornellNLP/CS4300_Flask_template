@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.css';
 import './App.css';
+import AutoCompleteText from './AutoCompleteText';
+import categories from './categories';
 
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
@@ -78,14 +80,26 @@ class App extends React.Component {
                 />
               </Form.Group>
 
-              <Form.Group controlId="category" className="formGroupCenter">
-                {/* <Form.Label>Category:</Form.Label> */}
+              {/* <Form.Group controlId="category" className="formGroupCenter">
+                <Form.Label>Category:</Form.Label>
                 <Form.Control as="select">
                   <option>Enter Category...</option>
                   <option>1</option>
                   <option>2</option>
                 </Form.Control>
+              </Form.Group> */}
+
+              <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+                <Form.Label className="category_label">Category:</Form.Label> 
+                <div className="App">
+                  <div className="App-Component">
+                    <div className="App-Component">
+                      <AutoCompleteText items ={categories}/>
+                    </div>
+                  </div>
+                </div>
               </Form.Group>
+
 
               <Form.Group controlId="min_score" className="formGroupCenter">
                 <Form.Label>Minimum Score:</Form.Label>
