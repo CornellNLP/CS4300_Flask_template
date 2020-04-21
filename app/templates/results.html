@@ -34,27 +34,32 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
             </div>
          </header>
 
-         <main role="main" class="inner cover">
-            <form class="main-form" method="GET">
-               <p class="lead d-flex justify-content-between text-nowrap">
-                  <span>I would like to drink </span>
-                  <label class="sr-only" for="inlineFormInputName2">drink type</label>
-                  <select name="type" class="form-control mb-2 mr-sm-2">
-                     <option>beer</option>
-                     <option>wine</option>
-                     <option>cocktail</option>
-                     <option>anything</option>
-                  </select>
-               </p>
-               <p class="lead d-flex justify-content-between text-nowrap">
-                  <span>It should taste </span>
-                  <label class="sr-only" for="inlineFormInputName2">descriptors</label>
-                  <input type="text" name="descriptors" class="form-control mb-2 mr-sm-2" placeholder="disgusting, gross, poopy">
-               </p>
-               <p class="lead mt-5 mx-auto">
-                  <button type="submit" class="btn btn-lg btn-secondary">pick my poison</button>
-               </p>
-            </form>
+         <main role="main" class="inner cover results-list">
+            <div class="accordion text-left text-dark">
+               {% for message in get_flashed_messages() %}
+                  <div class="flash">{{ message }}</div>
+               {% endfor %}
+         
+               {% for drink in results %}
+               <div class="card">
+                  <div class="card-header" id="heading{{ loop.index }}">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-controls="collapse{{ loop.index }}">
+                        {{ loop.index }}. {{ drink[0].name }}
+                        </button>
+                     </h2>
+                  </div>
+               
+                  <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}">
+                     <div class="card-body">
+                        <p>{{ drink[0].description }}</p>
+                        <p>Price: ${{ drink[0].price }}.00</p>
+                        <p>Origin: {{ drink[0].origin }}</p>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
          </main>
 
          <footer class="mastfoot mt-auto">

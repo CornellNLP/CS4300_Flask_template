@@ -2,20 +2,27 @@
  * Globals
  */
 
-/* Text fade in */
-h1, h3, p, a {
+/* Everything fade in */
+.cover-container {
    animation: fadein 4s;
 }
 
 @keyframes fadein {
    0% {
       opacity: 0;
+      height: 0;
+   }
+   79% {
+      opacity: 0;
+      height: 0;
    }
    80% {
       opacity: 0;
+      height: 100%;
    }
    100% {
       opacity: 1;
+      height: 100%;
    }
 }
 
@@ -42,9 +49,7 @@ a:hover {
 
 html,
 body {
-  height: 100%;
   background-color: #fff;
-  overflow: hidden;
 }
 
 body {
@@ -52,6 +57,28 @@ body {
   display: flex;
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+
+body.search {
+   height: 100vh;
+}
+
+body.results {
+   /* animation: fix-wave-fill-results 4s; */
+   height: 100vh;
+}
+
+@keyframes fix-wave-fill-results {
+   0% {
+      height: 100vh;
+   }
+   99% {
+      height: 100vh;
+   }
+   100% {
+      height: auto;
+   }
 }
 
 .cover-container {
@@ -128,7 +155,8 @@ body {
 .liquid {
    margin-top: 15vw;
    background-color: #663333;
-   height: calc(100vh - 15vw);
+   /* height: calc(100vh - 15vw); */
+   height: 100%;
    position: absolute;
    transform: translate(0, 100%);
    width: 100%;
@@ -212,4 +240,12 @@ body {
 
 .main-form p {
    font-size: 2em;
+}
+
+/* Results List */
+
+.results-list {
+   text-shadow: none;
+   height: 75%;
+   overflow: scroll;
 }
