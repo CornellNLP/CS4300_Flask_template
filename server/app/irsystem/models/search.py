@@ -5,6 +5,11 @@ from bs4 import BeautifulSoup
 
 from . import *
 
+# setup for getting the video url since its javascript and needs to load
+# options = webdriver.ChromeOptions()
+# options.add_argument('headless')
+# driver = webdriver.Chrome(options=options)
+
 
 # test topics
 # 'healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
@@ -31,12 +36,12 @@ def get_exchange(i, transcript, added, result):
         return result[i]
 
 
-def exact_search(transcript, topic):
+def exact_search(transcript, topic, candidates):
     topic = topic.lower()
     added = set()
     result = dict()
     for i, quote in enumerate(transcript):
-        if i not in added and topic in quote['text'].lower():
+        if i not in added and topic in quote['text'].lower() and (quote['speaker'].lower() in candidates or len(candidates) == 0):
             # if in questions, then add question and all responses
             if quote['question'] and quote['response']:
                 exchange = [quote]
@@ -56,6 +61,8 @@ def exact_search(transcript, topic):
 
 
 def search(topics, candidates, debate_filters):
+    candidates = [candidate.lower() for candidate in candidates]
+
     # TODO: add in candidate filtering
     # filter debates by title, tags, date, and description
     # right now filter by debate
@@ -80,7 +87,7 @@ def search(topics, candidates, debate_filters):
         relevant = []
         for topic in topics:
             for part in debate['parts']:
-                for x in exact_search(part['text'], topic):
+                for x in exact_search(part['text'], topic, candidates):
                     relevant.append((part['video'], x))
 
         if relevant:
@@ -131,4 +138,3 @@ def get_video_link(url):
 #                                                   [year] election
 #                           [year] presidential election         etc
 # [year] democratic presidential primary       [year] republican presidential primary   [year] presidential general election
-
