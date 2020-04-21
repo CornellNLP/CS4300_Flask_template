@@ -31,6 +31,7 @@ def search():
 	
 	if categories:
 		categories_list = categories
+		# categories_list = [el.strip() for el in categories.split(",")]
 		
 		cat_jokes = {}  # dictionary where key = category, value = array of doc_ids with that category
 		for cat in categories_list:  # for every category
