@@ -22,6 +22,7 @@ def search():
 	query = request.args.get('search') #query = request.args.get('search', default= '')
 	min_score = request.args.get('score')
 	categories = request.args.getlist('category')
+	print(categories)
 	
 	search_params['min_score'] = min_score if min_score else ''
 	search_params['categories'] = categories if categories else ''
@@ -35,6 +36,8 @@ def search():
 		cat_jokes = {}  # dictionary where key = category, value = array of doc_ids with that category
 		for cat in categories_list:  # for every category
 			 # get the record where category is equal to cat
+			if cat == '':
+				continue
 			doc_lst = Categories.query.filter_by(category=cat).first()
 			cat_jokes[cat] = doc_lst.joke_ids
 
