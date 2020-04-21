@@ -1,7 +1,7 @@
-from . import *
-from bs4 import BeautifulSoup
-from selenium import webdriver
+import re
 
+import requests
+from bs4 import BeautifulSoup
 
 # setup for getting the video url since its javascript and needs to load
 # options = webdriver.ChromeOptions()
@@ -16,6 +16,7 @@ topics = ['healthcare', 'terrorism', 'national security', 'gun policy', 'taxes',
 
 
 # save video links so we don't have to requery
+# TODO: this should go in a database
 videos = dict()
 
 
@@ -34,8 +35,8 @@ def search(topics, candidates, debate_name):
 
     relevant_transformed = []
     for video_link, quote in relevant:
-        if video_link not in videos:
-            videos[video_link] = video_link
+        if video_link not in videos or videos[video_link] is None:
+            videos[video_link] = get_video_link(video_link)
 
         relevant_transformed.append({
             "video": videos[video_link],
@@ -57,11 +58,18 @@ def search(topics, candidates, debate_name):
 
 
 # as the link is only good for a day, this must be done on demand
-# def get_video_link(url):
-#     # execute a webdriver request
-#     driver.get(url)
-#     video_page = BeautifulSoup(driver.page_source, 'html.parser')
-#     return video_page.find('video').attrs['src']
+def get_video_link(url):
+    request_response = requests.get(url)
+    if request_response.ok:
+        pattern = re.compile('(?<="mediaUrl":").+?(?=")')
+
+        soup = BeautifulSoup(request_response.text, 'html.parser')
+        script = soup.find('script', text=pattern)
+        if script:
+            match = pattern.search(str(script))
+            if match:
+                return match.group(0)
+    return None
 
 
 # tags are:
