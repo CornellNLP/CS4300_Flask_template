@@ -5,16 +5,32 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import SnowballStemmer
 from nltk.corpus import stopwords
 import pandas as pd
-from gensim.parsing.preprocessing import STOPWORDS
-from gensim.parsing.porter import PorterStemmer
-# from sklearn.preprocessing import MultiLabelBinarizer
-
 
 DATA_DIR = 'embeddings/data/'
 DESC_MAP = pd.read_csv(DATA_DIR + 'descriptor_mapping.csv').set_index('raw descriptor')
 STEMMER = SnowballStemmer('english')
 PUNC_TABLE = str.maketrans({c: None for c in string.punctuation})
 STOP_WORDS = set(stopwords.words('english'))
+
+class Headers:
+    def __init__(self, name, desc, price=None, origin=None):
+        self.name = name
+        self.desc = desc
+        self.price = price
+        self.origin = origin
+
+HEADERS = {
+    'wine': Headers(
+        name='title',
+        desc='description',
+        price='price',
+        origin='country'
+    ),
+    'beer': Headers(
+        name='beer/name',
+        desc='review/text'
+    )
+}
 
 # Import wine data
 def get_wine_data(n=None):
@@ -28,12 +44,15 @@ def get_beer_data(n=None):
     return transcripts if n is None else transcripts[0:n]
     # return [t[4] for t in transcripts]
 
-def get_descriptor(word):
+def get_descriptor(word, strict):
     if word in list(DESC_MAP.index):
         norm = DESC_MAP['level_3'][word]
         return norm
-    else:
+    elif not strict:
         return word
+
+def get_descriptors():
+    return set(word for word in DESC_MAP['level_3'])
     
 # Convert raw string into a list of lowercase, stemmed, punctuation-free tokens
 # TODO: Might need try/except block

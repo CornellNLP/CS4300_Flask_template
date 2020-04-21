@@ -10,3 +10,4 @@ vagrant/a4keypair.pem
 *.iml
 .vscode
 **/__pycache__
+.DS_Store

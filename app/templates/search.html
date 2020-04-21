@@ -13,7 +13,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       <link rel="stylesheet" href="/static/bootstrap.min.css">
       <link rel="stylesheet" href="/static/style.css">      
    </head>
-   <body class="text-center">
+   <body class="text-center search">
 
       <!-- Wave Graphic -->
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
@@ -37,18 +37,19 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
          <main role="main" class="inner cover">
             <form class="main-form" method="GET">
                <p class="lead d-flex justify-content-between text-nowrap">
-                  <span>I wanna drink some </span>
+                  <span>I would like to drink </span>
                   <label class="sr-only" for="inlineFormInputName2">drink type</label>
                   <select name="type" class="form-control mb-2 mr-sm-2">
                      <option>beer</option>
                      <option>wine</option>
                      <option>cocktail</option>
+                     <option>anything</option>
                   </select>
                </p>
                <p class="lead d-flex justify-content-between text-nowrap">
-                  <span>It should taste </span>
+                  <span>It should be </span>
                   <label class="sr-only" for="inlineFormInputName2">descriptors</label>
-                  <input type="text" name="descriptors" class="form-control mb-2 mr-sm-2" placeholder="disgusting, gross, poopy">
+                  <input type="text" name="descriptors" class="form-control mb-2 mr-sm-2" placeholder="light bodied, luminous, lush">
                </p>
                <p class="lead mt-5 mx-auto">
                   <button type="submit" class="btn btn-lg btn-secondary">pick my poison</button>
@@ -62,5 +63,11 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
             </div>
          </footer>
       </div>
+   
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
    </body>
 </html>
