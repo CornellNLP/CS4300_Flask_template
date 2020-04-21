@@ -53,8 +53,10 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}">
                      <div class="card-body">
                         <p>{{ drink[0].description }}</p>
-                        <p>Price: ${{ drink[0].price }}.00</p>
-                        <p>Origin: {{ drink[0].origin }}</p>
+                        {% if drink[0].type == 'wine' %}
+                           <p>Price: ${{ drink[0].price }}.00</p>
+                           <p>Origin: {{ drink[0].origin }}</p>
+                        {% endif %}
                      </div>
                   </div>
                </div>
