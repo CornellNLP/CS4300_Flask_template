@@ -40,10 +40,11 @@ classes_test = all_classes[test_idx]
 def get_features(jokes):
     """
     Features include:
+    toks
     length of joke
     POS distribution
-    use of Proper Nouns
-    monosyllabic words
+    use of Proper Nouns (none)
+    monosyllabic words (none)
     """
     features = set()
     for joke in jokes:
@@ -54,6 +55,7 @@ def get_features(jokes):
         tag_fd = tag_fd.most_common()
         for t in tag_fd:
             features.add(t[0])
+    features.add('len')
     
     features = sorted(features)
     word_to_idx= {}
@@ -77,6 +79,9 @@ def create_mtrx(jokes, feas, fea_to_idx):
         for t in joke_feas:
             if t[0] in fea_to_idx:
                 result[i][fea_to_idx[t[0]]] += t[1]
+        # more weight on jokes less than 30 tokens
+        if len(joke_toks) <= 30:
+            result[i][fea_to_idx['len']] = 15
     return np.asarray(result)
 
 mtrx_train = create_mtrx(jokes_train, feas, word_to_idx)
