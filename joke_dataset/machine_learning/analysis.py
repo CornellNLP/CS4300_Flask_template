@@ -3,6 +3,7 @@ import prob_lib1 as pl
 from nltk.tokenize import TreebankWordTokenizer
 import numpy as np
 import matplotlib.pyplot as plt
+import nltk
 
 
 with open('dataset_raw.json') as f:
@@ -45,6 +46,7 @@ def create_term_doc_mtrx(jokes):
     return np.asarray(result)
 
 term_doc_mtrx_fun = create_term_doc_mtrx(funny_jokes)
+term_doc_mtrx_notfun = create_term_doc_mtrx(notfunny_jokes)
 
 def avg_leng(joke_mtrx):
     acc = []
@@ -59,9 +61,43 @@ def avg_leng(joke_mtrx):
     acc = [int(i) for i in acc]
     print('freq: ', np.bincount(acc).argmax())
 
-def createScoreHistogram(data):
-    plt.hist(data, density=False, bins = 50)
+def createScoreHistogram(mtrx):
+    data = []
+    for i in range(len(mtrx)):
+        sum = np.sum(mtrx[i])
+        data.append(np.sum(mtrx[i]))
+    data = np.asarray(data)
+    plt.hist(data, bins = 50)
     plt.ylabel('num')
     plt.xlabel('num tokens')
+    plt.show()
 
-avg_leng(term_doc_mtrx_fun)
+def show_histograms():
+    createScoreHistogram(term_doc_mtrx_fun)
+    createScoreHistogram(term_doc_mtrx_notfun) # 40 good cut-off
+
+def show_leng():
+    avg_leng(term_doc_mtrx_fun)
+
+def pos_analysis(jokes):
+    pos_dict = {}
+    for j in jokes:
+        pos_lst = nltk.pos_tag(tokenizer.tokenize(j.lower()))
+        tag_fd = nltk.FreqDist(tag for (word, tag) in pos_lst)
+        tag_fd = tag_fd.most_common()
+        for t in tag_fd:
+            if t[0] not in pos_dict:
+                pos_dict[t[0]] = []
+            pos_dict[t[0]].append(t[1])
+    return pos_dict
+
+def show_pos(jokes):
+    pos_dict = pos_analysis(jokes)
+    for i in pos_dict:
+        plt.hist(pos_dict[i], bins = 10)
+        plt.ylabel('num')
+        plt.xlabel('num ' + i)
+        plt.show()
+
+show_pos(funny_jokes)
+        
