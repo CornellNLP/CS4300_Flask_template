@@ -1,92 +1,127 @@
 @media (min-width: 1200px) {
-.container {
-    max-width: 970px;
+  .container {
+  max-width: 970px;
+  }
 }
-}
+
 @media (min-width:400px){
-.global-search {
-padding: 20px 0;
-text-align:center;
-}
-
-body {
-padding-top: 15%;
-padding-bottom: 15px;
-background-color: #dae0e6;
-}
-.global-search {
-font-family: normal verdana, arial, helvetica, sans-serif;;
-text-align:center;
-padding:10px;
-}
-.global-search .form-control {
-width:500px;
-}
-
-.global-search * {
-display:inline-block;
-margin-bottom:0;
-}
-}
-
-.topcorner {
-position:absolute;
-top:2%;
-right:2%;
-}
-
-.btn {
-background-color: #ff4600; 
-border: none
-}
-
-.step-links a {
-color: #4285F4;
+  .global-search {
+  padding: 20px 0;
+  text-align:center;
+  }
 }
 
 .header {
     background: white;
+    color: #222222;
     width: 100%;
-    height: 200px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    
 }
 
-h1 {
-    font-size: 55px; 
-    font-family: 'Varela Round', sans-serif;
-    color: black;
-    text-align: center;
-    line-height: 155px;
+.body {
+  padding-bottom: 15px;
+  background-color: #dae0e6;
+  color: #222222;
 }
 
-.body-text {
-    margin-top: 50px;
-    font-size: 30px; 
-    font-family: normal verdana, arial, helvetica, sans-serif;
-    color: black;
-    text-align: center;
-    
+.jumbotron {
+  background-color: #f5a7a7b7;
+  margin-bottom: 0px;
+  padding: 30px 15px;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.1;
+  background-image: url("../images/reddit-planet.png");
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron p {
+  font-size: 16px;
+}
+
+.jumbotron-item {
+  z-index: 2;
+  position: relative;
 }
 
 .blurb-text {
-    margin-top: 50px;
-    font-size: 14px; 
-    font-family: normal verdana, arial, helvetica, sans-serif;
-    color: purple;
-    text-align: center;
-    
+  font-size: 14px; 
+}
+
+.global-search {
+  font-family: normal verdana, arial, helvetica, sans-serif;;
+  text-align:center;
+  padding:10px;
+}
+
+.global-search .form-control {
+  height: 350px;
+  width: 550px;
+}
+
+.left-column {
+  float: left;
+  width: 50%;
+  column-fill: auto;
+}
+
+.right-column {
+  float: left;
+  width: 50%;
+  column-fill: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.row {
+  width: 100%;
+  margin: 0px;
+}
+
+.btn {
+  background-color: #ff4600; 
+  border: none;
+  width: 550px;
+}
+
+#title {
+  font-size: 55px; 
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  line-height: 155px;
 }
 
 .outputmessage {
-    font-size: 25px; 
-    font-family: normal verdana, arial, helvetica, sans-serif;;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px; 
 }
 
-a {
-    font-size: 20px; 
-    font-family: normal verdana, arial, helvetica, sans-serif;; 
-    fill: "#ff4600";
+div#response {
+    padding-top: 30%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+  

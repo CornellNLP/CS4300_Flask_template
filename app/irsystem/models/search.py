@@ -1,37 +1,78 @@
 import pickle
 import json
-from app.irsystem.models.shared_variables import num_posts
-from app.irsystem.models.shared_variables import jar
+import time
+from collections import Counter
+from app.irsystem.models.create_dataset import create_dataset
+from app.irsystem.models.processing import process_data
+from app.irsystem.models.create_structures import create_and_store_structures
 from app.irsystem.models.shared_variables import file_path
+from app.irsystem.models.shared_variables import file_path_name
 from app.irsystem.models.comparison import compare_string_to_posts
 from app.irsystem.models.comparison import find_subreddits
+from app.irsystem.models.inverted_index import InvertedIndex
 
-#create the dataset from the pushshift api
-#create_dataset()
+class SearchEngine():
+    def __init__(self, should_build_structures):
+        if should_build_structures:
+            self.create()
+        idf, norms, post_lookup, subreddit_lookup = self.open_datastructures()
+        self.inverted_index = None
+        self.idf = idf
+        self.norms = norms
+        self.post_lookup = post_lookup
+        self.subreddit_lookup = subreddit_lookup
 
-#process the raw data taken from the api
-#process_data()
+    def open_datastructures(self):
+        with open(file_path_name + "-idf.pickle", 'rb') as file:
+            print("...loading idf")
+            idf = pickle.load(file)
+            print("finished loading idf.")
 
-#create the idf, inverted index, and norms
-#create_and_store_structures()
+        with open(file_path_name + "-norms.pickle", 'rb') as file:
+            print("...loading norms")
+            norms = pickle.load(file)
+            print("finished loading norms")
 
+        with open(file_path_name + "-post_lookup.pickle", 'rb') as file:
+            print("...loading posts")
+            post_lookup = pickle.load(file)
+            print("# of posts: " + str(len(post_lookup.keys())))
+            print("finished loading posts")
 
-def open_datastructures():
-    with open(jar + str(num_posts) + "-inverted_index.pickle", 'rb') as file:
-        inverted_index = pickle.load(file)
+        with open(file_path_name + "-subreddit_lookup.pickle", 'rb') as file:
+            print("...loading posts")
+            subreddit_lookup = pickle.load(file)
+            print("finished loading posts")
 
-    with open(jar + str(num_posts) + "-idf.pickle", 'rb') as file:
-        idf = pickle.load(file)
+        return idf, norms, post_lookup, subreddit_lookup
 
-    with open(jar + str(num_posts) + "-norms.pickle", 'rb') as file:
-        norms = pickle.load(file)
+    def run_tests(self, inverted_index, idf, norms, post_lookup, subreddit_lookup):
+        while True:
+            print("\nquery: ", "")
+            ranks = compare_string_to_posts(input(), self.inverted_index, self.idf, self.norms)
+            print(find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup))
 
-    with open(file_path) as file:
-        post_list = json.load(file)
+    def search(self, query):
+        if self.inverted_index is None:
+            self.inverted_index = InvertedIndex()
+            self.inverted_index.load()
+        ranks = compare_string_to_posts(query, self.inverted_index, self.idf, self.norms)
+        return find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup)
 
-    return inverted_index, idf, norms, post_list
+    def create(self):
+        #create the dataset from the pushshift api
+        print("Looking at " + file_path_name)
+        print("create dataset? this will make queries to the api and can take a long time y/n")
+        ans = input()
+        if ans == 'y':
+            create_dataset()
 
-def full_search(query):
-    inverted_index, idf, norms, post_list = open_datastructures()
-    ranks = compare_string_to_posts(query, inverted_index, idf, norms)
-    return find_subreddits(10, ranks, post_list)
+        #create the idf, inverted index, and norms
+
+        print("create and store structures? y/n")
+        ans = input()
+        if ans == 'y':
+            create_and_store_structures()
+
+        print("delay end.")
+        input()

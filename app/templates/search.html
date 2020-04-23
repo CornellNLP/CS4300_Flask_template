@@ -8,44 +8,60 @@
 
 <body>
     <div class="header">
-        <h1>
-
-            <img src="static/images/reddit-logo-no-text.png" height="100">
+        <h1 class="header-item" id="title">
+            <img class="header-item" src="static/images/reddit-logo.png" height="100">
             Subreddit Recommender
-
         </h1>
     </div>
-    <div class="body-text">
-        Where Do I Post?
-    </div>
+    <div class="body">
+        <div class="jumbotron">
+            <h2 class="jumbotron-item">Where do I post?</h2>
+            <p class="jumbotron-item"> Welcome to the Subreddit Recommender! Have you ever wanted to post on Reddit, but
+                didn’t know which subreddit to post in? Enter your post below to see which subreddit it belongs in!</p>
+            <!-- TODO: add link showing list of supported subreddits -->
+            <!-- <hr class="my-4">
+                <p>Currently supporting the 7,000 most popular subreddits
+                </p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">View list</a> -->
+        </div>
 
-    <div class="blurb-text">
-        Welcome to the Subreddit Recommender! Have you ever wanted to post on Reddit, but didn’t know which subreddit to
-        post in? Enter your post below to see which subreddit it belongs in!
-    </div>
-
-    <div>
-        <form class="form-inline global-search">
-            <br><br>
-            <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Ask me anything">
-            </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
-        </form>
-
-        <form class="form-inline global-search">
-            {% if data %}
-            <h2 class="outputmessage">
-                {{output_message}}
-            </h2>
-            {% for d in data %}
-            <br>
-            <a href="https://www.reddit.com/r/{{d[0]}}/submit" target="_blank">
-                r/{{d[0]}}
-            </a>
-            {% endfor %}
-            {% endif %}
-        </form>
+        <table class="row">
+            <tr>
+                <th class="left-column">
+                    <form class="form-inline global-search">
+                        <h3 class="outputmessage">
+                            Draft your post:
+                        </h3>
+                        <div class="form-group">
+                            <textarea id="input" type="text" name="search" class="form-control"
+                                placeholder="Ask me anything"
+                                style="resize: none;">{{query if query!= None else '' }}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info"> Go! </button>
+                    </form>
+                </th>
+                <th class="right-column">
+                    <form class="form-inline global-search">
+                        <div id={{response}}>
+                            <h3 class="outputmessage">
+                                {{output_message}}
+                            </h3>
+                        </div>
+                        {% if data %}
+                        <ul class="list-group">
+                            {% for d in data %}
+                            <li class="list-group-item">
+                                <a href="https://www.reddit.com/r/{{d[0]}}/submit" target="_blank">
+                                    r/{{d[0]}}
+                                </a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </form>
+                </th>
+            </tr>
+        </table>
     </div>
 </body>
 

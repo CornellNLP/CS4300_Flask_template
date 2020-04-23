@@ -1,10 +1,12 @@
 import pickle
 import json
 import re
+import math
 from collections import Counter
 from app.irsystem.models.shared_variables import file_path
 from app.irsystem.models.shared_variables import jar
-from app.irsystem.models.helpers import tokenize
+from app.irsystem.models.shared_variables import max_document_frequency
+from app.irsystem.models.processing import tokenize
 
 """
     Computes cosine similarity between the given query and all the posts
@@ -19,9 +21,8 @@ def get_cossim(query, inv_index, idf, norms):
             query_tf[token] = wordcount
     dot_prod = {}
     for token in set(query):
-        if token in inv_index:
+        if token in inv_index and token in idf:
             posts = inv_index[token]
-        # if token in idf:              do we need this if statement
             for index, tf in posts:
                 if index not in dot_prod:
                     dot_prod[index] = 0
@@ -51,19 +52,25 @@ def compare_string_to_posts(query, inverted_index, idf, norms):
     Top-level function, outputs list of subreddits for each post in
     post_ids (set of unique subreddit names)
 """
-def find_subreddits(top_x, post_ids, post_list):
+def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
     #need to group posts by subreddit
     subreddit_dict = {}
     subreddit_freq = {}
-    for post, score in post_ids:
-        subreddit = post_list[post]['subreddit']
+
+    for post_id, score in post_ids:
+        #need to get the post associated with this post id
+        subreddit = post_lookup[post_id]
         if subreddit not in subreddit_dict:
             subreddit_dict[subreddit] = 0
             subreddit_freq[subreddit] = 0
         subreddit_dict[subreddit] += score
         subreddit_freq[subreddit] += 1
-    #TODO: normalize based on # of posts in the subreddit
 
     k = Counter(subreddit_dict)
-    normalized = [(x[0], x[1] / float(subreddit_freq[x[0]])) for x in k.most_common(top_x)]
+
+    for x in k.most_common(top_x):
+        print(x[0] + "    "  + str(subreddit_freq[x[0]]) + "   " + str(subreddit_lookup[x[0]]) + "   " + str(x[1]))
+
+    normalized = [(x[0], float(x[1]) * float(subreddit_freq[x[0]]) / float(subreddit_lookup[x[0]])) for x in k.most_common(top_x)]
+    print(normalized)
     return sorted(normalized, key=lambda x: x[1], reverse=True)

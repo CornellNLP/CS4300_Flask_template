@@ -6,10 +6,6 @@ vagrant/site.retry
 vagrant/a4keypair.pem
 .idea/
 *.iml
-reddit-data-1000-posts.json
-reddit-data-1000-posts-processed.json
-reddit-data-1000-posts-processed.pickle
-1000-idf.pickle
-1000-inverted_index.pickle
-1000-norms.pickle
-reddit-data-1000-posts-processed-top700.json
+unused-picklejar
+*.json
+.DS_Store

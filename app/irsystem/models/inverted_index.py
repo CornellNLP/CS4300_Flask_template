@@ -39,12 +39,11 @@ class InvertedIndex():
                 if not word in inverted_index_helper:
                     inverted_index_helper[word] = next_inverted_index
                     next_inverted_index = (next_inverted_index + 1)  % num_partitions
-                    inverted_indices[inverted_index_helper[word]][word] = [] 
+                    inverted_indices[inverted_index_helper[word]][word] = []
                 inverted_index = inverted_indices[inverted_index_helper[word]]
                 inverted_index[word].append((post['id'], frequency))
         self.inverted_indices = inverted_indices
         self._inverted_index_helper = inverted_index_helper
-        
 
     def store(self):
         for i in range(len(self.inverted_indices)):
