@@ -7,6 +7,7 @@ from app.irsystem.models.shared_variables import file_path
 from app.irsystem.models.shared_variables import jar
 from app.irsystem.models.shared_variables import max_document_frequency
 from app.irsystem.models.processing import tokenize
+from app.irsystem.models.inverted_index import InvertedIndex
 
 """
     Computes cosine similarity between the given query and all the posts
@@ -46,7 +47,7 @@ def comparison(query, inverted_index, idf, norms):
     return Counter(top_dict).most_common()
 
 def compare_string_to_posts(query, inverted_index, idf, norms):
-    return comparison(tokenize(query), inverted_index, idf, norms)
+    return comparison(inverted_index.getStem(tokenize(query)), inverted_index, idf, norms)
 
 """
     Top-level function, outputs list of subreddits for each post in
