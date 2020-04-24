@@ -9,6 +9,12 @@ from sklearn.naive_bayes import BernoulliNB
 
 from sklearn.metrics import classification_report
 
+"""
+Probability model of ML based on "bag of words" approach.
+ Takes complete advantage of libraries to tokenize and perform Multinomial Naive
+ Bayes.
+"""
+
 with open('dataset_raw.json') as f:
     data = json.load(f)
 

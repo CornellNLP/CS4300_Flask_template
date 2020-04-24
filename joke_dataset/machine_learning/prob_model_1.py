@@ -5,6 +5,14 @@ import math
 from sklearn.model_selection import ShuffleSplit
 import prob_lib1 as pl
 
+"""
+Probability model of ML based on "bag of words" approach. Performs a 
+Bernoulli Naive Bayes computation to predict funny vs. not funny.
+
+Also based on custom tokenizer.
+"""
+
+
 with open("dataset_raw.json") as f:
     data = json.load(f)
 
