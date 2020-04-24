@@ -1,5 +1,5 @@
 import React from 'react';
-import './AutoCompleteText.css';
+import '../css/AutoCompleteText.css';
 
 export default class AutoCompleteText extends React.Component {
     constructor (props) {

@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './operator.png';
+import logo from './images/operator.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './main.css';
-import './App.css';
-import AutoCompleteText from './AutoCompleteText';
-import categories from './categories';
+import './css/main.css';
+import './css/App.css';
+import AutoCompleteText from './components/AutoCompleteText';
+import categories from './images/categories';
+import scores from './images/scores';
 
+// import Form from 'semantic-ui-react'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -16,22 +18,39 @@ import Button from 'react-bootstrap/Button'
 import JokeResults from './components/JokeResults';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
       isLoaded: false,
-      jokes: []
+      jokes: [],
+      cat_options: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    fetch('http://0.0.0.0:5000/api/cat-options', {
+      method: 'GET',
+      })
+      .then(res => res.json())
+      .then(
+        (data) => {
+          this.setState({
+            cat_options: data.categories
+          })
+        }
+      )
+  }
+  
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('http://0.0.0.0:5000/jokes/api', {
+    const URLParams = new URLSearchParams(this.state.params)
+
+    fetch('http://0.0.0.0:5000/api', {
       method: 'GET',
+      params: URLParams
       // body: data,
     })
       .then(res => res.json())
@@ -58,8 +77,16 @@ class App extends React.Component {
   }
 
   render() {
-    return (
 
+    const categoryList = categories.map((cat) =>
+      <option value={cat}>{cat}</option>
+    );
+
+    const scoreList = scores.map((score) =>
+      <option value={score}>{score}</option>
+    );
+
+    return (
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -67,7 +94,32 @@ class App extends React.Component {
               <h1>HahaFactory</h1>
               <img src={logo} className="App-logo" alt="logo" />
             </header>
-            <Form className="global-search" onSubmit={this.handleSubmit}>
+
+            <form class="ui form">
+              <div class="field">
+                <label>Keywords</label>
+                <input type="text" name="search" placeholder="Search"/> 
+              </div>
+
+              <div class="field">
+                 <label>Category</label>
+                  <select multiple = "" class="ui fluid search dropdown" name="category" >
+                    <option value="">Select Categories</option>
+                    {categoryList}
+                  </select>
+              </div>
+
+              <div class="field">
+                  <label>Minimum Score</label>
+                  <select multiple="" class="ui search dropdown" name = "score">
+                    <option value = "">Select Score</option>
+                    {scoreList}
+                  </select>
+              </div>
+
+              <button class="ui button" type="submit">Go</button>
+              </form>
+            {/* <Form className="global-search" onSubmit={this.handleSubmit}>
 
               <Form.Group controlId="Key Words" className="formGroupCenter">
                 <Form.Control
@@ -78,7 +130,7 @@ class App extends React.Component {
                   placeholder="Enter Key Words..."
                   required
                 />
-              </Form.Group>
+              </Form.Group> */}
 
               {/* <Form.Group controlId="category" className="formGroupCenter">
                 <Form.Label>Category:</Form.Label>
@@ -89,7 +141,7 @@ class App extends React.Component {
                 </Form.Control>
               </Form.Group> */}
 
-              <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
                 <Form.Label className="category_label">Category:</Form.Label> 
                 <div className="App">
                   <div className="App-Component">
@@ -115,7 +167,7 @@ class App extends React.Component {
               </Form.Group>
               
               <Form.Group controlId="maturity_rating" className="formGroupCenter">
-                {/* <Form.Label>Maturity Rating:</Form.Label> */}
+                <Form.Label>Maturity Rating:</Form.Label>
                 <Form.Control as="select">
                   <option>Enter Maturity Rating...</option>
                   <option>PG</option>
@@ -125,7 +177,7 @@ class App extends React.Component {
               </Form.Group>
 
               <Button type="submit" className="btn btn-info">Go!</Button>
-            </Form>
+            </Form> */}
 
           </Col>
         </Row>

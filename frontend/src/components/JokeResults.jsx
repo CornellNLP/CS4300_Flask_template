@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-
-
 const JokeResults = ({ jokes }) => {
   if (jokes.length == 0) {
     return (
