@@ -40,3 +40,22 @@ class ShackBeerSpider(scrapy.Spider):
             'rating': rating,
             'url': response.request.url
         }
+
+class ConnoBeerSpider(scrapy.Spider):
+    name = 'conno-beer'
+    start_urls = [
+        'https://beerconnoisseur.com/search-beer?page={}'.format(i) for i in range(134)
+    ]
+
+    def parse(self, response):
+        yield from response.follow_all(css='div.views-field-view-node a', callback=self.parse_product)
+
+    def parse_product(self, response):
+        yield {
+            'name': response.css('div.field-name-title-field h1::text').get(),
+            'price': None,
+            'abv': response.css('div.field-name-field-abv div.even::text').get()[:-1],
+            'description': response.css('div.field-name-body p::text').get(),
+            'rating': response.css('div.views-field-field-judges-rating div::text').get(),
+            'url': response.request.url
+        }
