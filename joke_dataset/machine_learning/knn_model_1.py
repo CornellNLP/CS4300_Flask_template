@@ -52,6 +52,7 @@ def choosing_k(k):
     predicted_classes_test = classifier.predict(mtrx_test)
 
     print(classifier.predict_proba(mtrx_test))
+    print(predicted_classes_test[0])
     print("Accuracy for k = {}: {:.2f}%".format(i, np.mean(predicted_classes_test == classes_test) * 100))
     i += 2
 

@@ -40,12 +40,12 @@ for filename in glob('./json/data_nopreprocess/*.json'):
         f.close()
 
 # Combine all files in  './raw/data_nopreprocess' into '.final/json' w/ standardized Scores
-with open('./final.json', 'w') as f:
+with open('./final_score.json', 'w') as f:
     json.dump(final, f, indent=4)
     f.close()
 
 # Normalize scores in './final.json'
-with open ('./final.json') as f:
+with open ('./final_score.json') as f:
     data = json.load(f)
     scores_train = [obj['score'] for obj in data]
     scores_train = np.array_split(scores_train, len(scores_train))
@@ -55,7 +55,7 @@ with open ('./final.json') as f:
         data[i]['score'] = scores_normalized[i][0]
     f.close()
 
-with open ('./final.json', "w") as f:
+with open ('./final_score.json', "w") as f:
     json.dump(data, f, indent = 4)
 
 #relevant link: https://scikit-learn.org/stable/modules/preprocessing.html
