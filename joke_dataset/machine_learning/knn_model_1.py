@@ -57,6 +57,11 @@ def choosing_k(k):
     i += 2
 
 def get_scoring(jokes):
+    """
+    Returns a matrix nxm where n = number of jokes and m = 2. mtrx[i][0] is the
+    probability that joke i is not funny and mtrx[i][1] is the probability that
+    the joke is funny. Because it's knn, mtrx[i][1] + mtrx[i][0] = 1.
+    """
 
     mtrx_unlabeled = pl.create_mtrx(jokes, feas, word_to_idx, tokenizer)
 
