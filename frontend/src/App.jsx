@@ -146,7 +146,7 @@ class App extends React.Component {
                 <div className="App">
                   <div className="App-Component">
                     <div className="App-Component">
-                      <AutoCompleteText items ={categories}/>
+                      <AutoCompleteText items={categories} />
                     </div>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ class App extends React.Component {
                   </div>
                 ))}
               </Form.Group>
-              
+
               <Form.Group controlId="maturity_rating" className="formGroupCenter">
                 <Form.Label>Maturity Rating:</Form.Label>
                 <Form.Control as="select">
