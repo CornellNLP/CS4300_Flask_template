@@ -45,17 +45,41 @@ def closest_words(word_in, k = 10):
 
 tsne = TSNE(verbose = 1)
 projected_docs = tsne.fit_transform(docs_compressed)
-# plt.figure(figsize = (15, 15))
-# plt.scatter(projected_docs[:,0],projected_docs[:,1])
-# plt.show()
+plt.figure(figsize = (15, 15))
+plt.scatter(projected_docs[:,0],projected_docs[:,1])
+plt.show()
 
 cats = Counter([i for x in data for i in x['categories']])
 print(cats)
 cat_to_color = defaultdict(lambda: 'k')
-cat_to_color.update({'Biology': 'g',
-                    'Heaven and Hell': 'c',
-                    'Pun': 'r',
-                    'Pick-up Line': 'b'})
+cat_to_color.update({'Pun': 'g',
+                    'Pick-up Line': 'c',
+                    'Insults': 'r',
+                    'Men': 'b',
+                    'Computers': 'm',
+                    'Dad Jokes': 'y',
+                    'Religious': 'pink',
+                    'Women': 'indigo',
+                    'Political': 'navy',
+                    'Yo Mama': 'lightsteelblue',
+                    'Animals': 'springgreen',
+                    'Light Bulbs': 'teal',
+                    'Biology': 'darkslategray',
+                    'Blonde Jokes': 'orange',
+                    'Business': 'tan',
+                    'Chemistry': 'maroon',
+                    'Medical': 'deeppink',
+                    'Family, Parents': 'peru',
+                    'Heaven and Hell': 'rosybrown',
+                    'Bar Jokes': 'moccasin',
+                    'Children': 'aquamarine',
+                    'Money': 'darkkhaki',
+                    'Sex': 'mediumaquamarine',
+                    'Love & Romance': 'mediumvioletred',
+                    'Physics': 'powderblue',
+                    'Marriage': 'brown',
+                    'Science':'silver' 
+                    })
 color_to_project = defaultdict(list)
 for i in range(projected_docs.shape[0]):
   if data[i]['categories'] != []:
