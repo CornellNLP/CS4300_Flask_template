@@ -41,6 +41,7 @@ feas, word_to_idx = pl.get_features(jokes_train, tokenizer)
 mtrx_train = pl.create_mtrx(jokes_train, feas, word_to_idx, tokenizer)
 mtrx_test = pl.create_mtrx(jokes_test, feas, word_to_idx, tokenizer)
 
+# determined that k = 27 the best
 def choosing_k(k):
   i = 1
   while i <= 2*k+1:
@@ -54,5 +55,12 @@ def choosing_k(k):
     print("Accuracy for k = {}: {:.2f}%".format(i, np.mean(predicted_classes_test == classes_test) * 100))
     i += 2
 
-choosing_k(20)
+def get_scoring(jokes):
 
+    mtrx_unlabeled = pl.create_mtrx(jokes, feas, word_to_idx, tokenizer)
+
+    classifier = KNeighborsClassifier(n_neighbors=27)
+    
+    classifier.fit(mtrx_train, classes_train)
+
+    return classifier.predict_proba(mtrx_unlabeled)
