@@ -1,37 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Almendra SC' rel='stylesheet'>
+        <title>Charcrafter</title>
     </head>
     <body>
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
         </div>
+        <main>
+          <!--style="font-size: 55px; font-family: Impact, fantasy; color: #4285F4"-->
+        <h1>CharCrafter</h1>
+          <!--blurb-->
+          <h3>Welcome to Charcrafter, an easy tool for creating class and subclass
+            builds for DND 5th edition based on YOUR needs!</h3>
+          <h3>For class and subclass matches, describe your desired
+          character's abilities and affinities.</h3>
+        </main>
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
             <div class="form-group">
                 <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <button type="submit" class="btn btn-info">Get Builds</button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
+          <h1>Play your game as: </h1><h2> {{output_message}}</h2>
+          <div class="output">
+            <!--Data in dicts-->
+            {% for d in data %}
+              <!--<p>{{d}}</p>-->
+              <div class = "result">
+                <div class="char">
+                  <h2>{{d['class']}}</h2>
+                  <p>{{d['flavor']}}</p>
+                </div>
+                <div class="ratings">
+                  <h2>Build Rating</h2>
+                  <p>Score: {{d['rating']}}</p>
+                </div>
+              </div>
             {% endfor %}
+              </div>
         {% endif %}
         </form>
     </body>
