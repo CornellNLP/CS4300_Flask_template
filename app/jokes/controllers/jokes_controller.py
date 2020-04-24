@@ -49,6 +49,7 @@ def search():
 	query = request.args.get('search') #query = request.args.get('search', default= '')
 	min_score = request.args.get('score')
 	categories = request.args.getlist('category')
+	print("cat")
 	print(categories)
 
 	search_params = {}
@@ -75,7 +76,7 @@ def search():
 		
 		rel_jokes = {}  # dictionary where key = joke_id, value = joke
 		for doc in numer_dict.keys():
-			rel_jokes[doc] = Joke.query.filter_by(id=doc).first()
+			rel_jokes[doc] = Joke.query.filter_by(id = doc).first()
 		
 		results_cat = jac.jaccard_sim(categories_list, numer_dict, rel_jokes)
 		
@@ -113,9 +114,9 @@ def search():
   # sort results by decreasing sim
 	final = sorted(final, key=lambda x: (x[1]), reverse=True)
 	cat_options = sorted(cat_options)
+	return {"jokes": final}
 
   # Joke.testFunct()
-	return {final}
 
 @jokes.route('/cat-options', methods=['GET'])
 def cat_options():

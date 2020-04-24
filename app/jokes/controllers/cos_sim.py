@@ -1,5 +1,5 @@
 from nltk.tokenize import TreebankWordTokenizer
-from app.jokes import *
+from . import *
 import math
 
 treebank_tokenizer = TreebankWordTokenizer()

@@ -7,17 +7,14 @@ import './css/main.css';
 import './css/App.css';
 import AutoCompleteText from './components/AutoCompleteText';
 import categories from './images/categories';
-import scores from './images/scores';
 
-import Form from 'semantic-ui-react'
-// import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import JokeResults from './components/JokeResults';
-import {CircularProgress} from '@material-ui/core'
 
 class App extends React.Component {
   constructor(props) {
@@ -25,39 +22,9 @@ class App extends React.Component {
     this.state = {
       isLoaded: false,
       jokes: [],
-      cat_options: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  componentDidMount() {
-    const URLParams = new URLSearchParams(this.props.location.search)
-
-    axios.all([
-      axios({
-        method: 'GET',
-        url: `http://localhost:5000/api/search`,
-        params: URLParams
-      }),
-      axios({
-        method: 'GET',
-        url: `http://localhost:5000/api/cat-options`
-      })
-    ])
-      .then(axios.spread((response1, response2) => {
-        console.log('response1: ', response1.data);
-        console.log('response2 ', response2.data);
-        this.setState({
-          isLoaded:true,
-          jokes: response1.data.jokes,
-          cat_options: response2.data.categories
-        })
-      }))
-      .catch(err =>
-        console.log(err)
-      );
-  }
-
   
   handleSubmit(event) {
     console.log("submit")
@@ -102,8 +69,7 @@ class App extends React.Component {
       <option value={score}>{score}</option>
     );
 
-    // if (this.state.isLoaded){
-    return (
+        return (
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -112,31 +78,8 @@ class App extends React.Component {
               <img src={logo} className="App-logo" alt="logo" />
             </header>
 
-            <form class="ui form" onSubmit={this.handleSubmit}>
-              <div class="field">
-                <label>Keywords</label>
-                <input type="text" name="search" placeholder="Search"/> 
-              </div>
-
-              <div class="field">
-                 <label>Category</label>
-                  <select multiple = "" class="ui fluid search dropdown" name="category" >
-                    <option value="">Select Categories</option>
-                    {categoryList}
-                  </select>
-              </div>
-
-              <div class="field">
-                  <label>Minimum Score</label>
-                  <select multiple="" class="ui search dropdown" name = "score">
-                    <option value = "">Select Score</option>
-                    {scoreList}
-                  </select>
-              </div>
-
-              <button class="ui button" type="submit">Go</button>
-              </form>
-            {/* <Form className="global-search" onSubmit={this.handleSubmit}>
+            
+            <Form className="global-search" onSubmit={this.handleSubmit}>
 
               <Form.Group controlId="Key Words" className="formGroupCenter">
                 <Form.Control
@@ -147,7 +90,7 @@ class App extends React.Component {
                   placeholder="Enter Key Words..."
                   required
                 />
-              </Form.Group> */}
+              </Form.Group>
 
               {/* <Form.Group controlId="category" className="formGroupCenter">
                 <Form.Label>Category:</Form.Label>
@@ -158,7 +101,7 @@ class App extends React.Component {
                 </Form.Control>
               </Form.Group> */}
 
-              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+              <Form.Group controlId="category_autocomplete" className="formGroupCenter">
                 <Form.Label className="category_label">Category:</Form.Label> 
                 <div className="App">
                   <div className="App-Component">
@@ -194,7 +137,7 @@ class App extends React.Component {
               </Form.Group>
 
               <Button type="submit" className="btn btn-info">Go!</Button>
-            </Form> */}
+            </Form>
 
           </Col>
         </Row>
@@ -207,13 +150,7 @@ class App extends React.Component {
 
 
       )
-    //   ; else {
-    //   return <div style={{ display: 'flex', position: 'absolute', left: '50%', top: '50%' }}>
-    //     <CircularProgress disableShrink />
-    //   </div>
-    // }
   }
-
 }
 
 export default App;
