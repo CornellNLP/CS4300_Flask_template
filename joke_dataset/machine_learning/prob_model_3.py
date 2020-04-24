@@ -6,8 +6,14 @@ from sklearn.model_selection import ShuffleSplit
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import BernoulliNB
-
 from sklearn.metrics import classification_report
+
+"""
+Probability model of ML based on "bag of words" approach.
+ Takes complete advantage of libraries to tokenize and perform Bernoulli Naive
+ Bayes.
+"""
+
 
 with open('dataset_raw.json') as f:
     data = json.load(f)

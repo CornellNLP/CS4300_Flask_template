@@ -5,6 +5,14 @@ import math
 from sklearn.model_selection import ShuffleSplit
 import prob_lib1 as pl
 
+"""
+Probability model of ML based on "bag of words" approach, but only using the
+top 20% common tokens in the respective categories of funny vs. not funny.
+
+Based on custom tokenizer.
+"""
+
+
 with open('dataset_raw.json') as f:
     data = json.load(f)
 
@@ -20,7 +28,7 @@ all_classes = np.array(funny_classes + notfunny_classes)
 
 num_all_jokes = len(all_jokes)
 
-shuffle_split = ShuffleSplit(n_splits = 1, test_size=0.5, random_state=1)
+shuffle_split = ShuffleSplit(n_splits = 1, test_size=0.5, random_state=25)
 train_idx, test_idx = next(iter(shuffle_split.split(all_jokes)))
 
 jokes_train = all_jokes[train_idx] # jokes to train on

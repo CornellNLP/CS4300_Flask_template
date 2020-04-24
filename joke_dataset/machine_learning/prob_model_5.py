@@ -8,6 +8,13 @@ from sklearn.naive_bayes import MultinomialNB
 import json
 from sklearn.metrics import classification_report
 
+"""
+Probability model of ML using libraries to tokenize and perform BernoulliNB.
+
+This model incorporates POS composition of the joke, in addition to the tokens
+and the length of the joke.
+"""
+
 with open('dataset_raw.json') as f:
     data = json.load(f)
 
@@ -37,55 +44,10 @@ classes_train = all_classes[train_idx]
 # corresponding classification for testing
 classes_test = all_classes[test_idx]
 
-def get_features(jokes):
-    """
-    Features include:
-    toks
-    length of joke
-    POS distribution
-    use of Proper Nouns (none)
-    monosyllabic words (none)
-    """
-    features = set()
-    for joke in jokes:
-        toks = tokenizer.tokenize(joke.lower())
-        features = features.union(set(toks))
-        tag_fd = nltk.pos_tag(toks)
-        tag_fd = nltk.FreqDist(tag for (word, tag) in tag_fd)
-        tag_fd = tag_fd.most_common()
-        for t in tag_fd:
-            features.add(t[0])
-    features.add('len')
-    
-    features = sorted(features)
-    word_to_idx= {}
-    for i in range(len(features)):
-        word_to_idx[features[i]] = i
-    
-    return features, word_to_idx
+feas, word_to_idx = pl.get_features(jokes_train, tokenizer)
 
-feas, word_to_idx = get_features(jokes_train)
-
-def create_mtrx(jokes, feas, fea_to_idx):
-    result = np.zeros((len(jokes), len(feas)))
-    for i in range(len(jokes)):
-        joke_toks = tokenizer.tokenize(jokes[i].lower())
-        joke_feas = nltk.pos_tag(joke_toks)
-        joke_feas = nltk.FreqDist(tag for (word, tag) in joke_feas)
-        joke_feas = joke_feas.most_common()
-        for t in joke_toks:
-            if t in fea_to_idx:
-                result[i][fea_to_idx[t]] += 1
-        for t in joke_feas:
-            if t[0] in fea_to_idx:
-                result[i][fea_to_idx[t[0]]] += t[1]
-        # more weight on jokes less than 30 tokens
-        if len(joke_toks) <= 30:
-            result[i][fea_to_idx['len']] = 15
-    return np.asarray(result)
-
-mtrx_train = create_mtrx(jokes_train, feas, word_to_idx)
-mtrx_test = create_mtrx(jokes_test, feas, word_to_idx)
+mtrx_train = pl.create_mtrx(jokes_train, feas, word_to_idx, tokenizer)
+mtrx_test = pl.create_mtrx(jokes_test, feas, word_to_idx, tokenizer)
 
 classifier = MultinomialNB(alpha = 1)
 

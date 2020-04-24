@@ -1,4 +1,5 @@
 import numpy as np
+import nltk
 
 def get_toks(jokes):
     result = set()
@@ -104,3 +105,64 @@ def test_ml(pr_dict, jk_lst, cl_lst, tk_lst, pr_funny, pr_notfunny):
             num_correct += 1
         total += 1
     return num_correct/total
+
+def get_features(jokes, tokenizer):
+    """
+    Returns a tuple of ([features], [word_to_idx]) where [features] is a set of
+    features for the jokes and [word_to_idx] is a dictionary mapping a feature
+    to a corresponding index that it will be in the doc-feature matrix.
+
+    Features include the tokens, the POS composition of the joke, and the
+    length of the joke. Using analysis.py the length of the funnier jokes
+    seemed to be noticeably concentrated at the lower end compared to the not
+    funny jokes.
+
+    Inputs:
+        jokes - list of strings where the string is a joke.
+        tokenizer - a tokenizer
+    """
+    features = set()
+    for joke in jokes:
+        toks = tokenizer.tokenize(joke.lower())
+        features = features.union(set(toks))
+        tag_fd = nltk.pos_tag(toks)
+        tag_fd = nltk.FreqDist(tag for (word, tag) in tag_fd)
+        tag_fd = tag_fd.most_common()
+        for t in tag_fd:
+            features.add(t[0])
+    features.add('len')
+    
+    features = sorted(features)
+    word_to_idx= {}
+    for i in range(len(features)):
+        word_to_idx[features[i]] = i
+    
+    return features, word_to_idx
+
+def create_mtrx(jokes, feas, fea_to_idx, tokenizer):
+    """
+    Returns an nxm matrix where n = number of jokes and m = number of features.
+
+    Inputs:
+        jokes - list of strings where a string is a joke
+        feas - set of features
+        fea_to_idx - dictionary mapping a feature to its corresponding index
+        in the resulting matrix
+        tokenizer - a tokenizer
+    """
+    result = np.zeros((len(jokes), len(feas)))
+    for i in range(len(jokes)):
+        joke_toks = tokenizer.tokenize(jokes[i].lower())
+        joke_feas = nltk.pos_tag(joke_toks)
+        joke_feas = nltk.FreqDist(tag for (word, tag) in joke_feas)
+        joke_feas = joke_feas.most_common()
+        for t in joke_toks:
+            if t in fea_to_idx:
+                result[i][fea_to_idx[t]] += 1
+        for t in joke_feas:
+            if t[0] in fea_to_idx:
+                result[i][fea_to_idx[t[0]]] += t[1]
+        # more weight on jokes less than 30 tokens
+        if len(joke_toks) <=30:
+          result[i][fea_to_idx['len']] = 15
+    return np.asarray(result)    
