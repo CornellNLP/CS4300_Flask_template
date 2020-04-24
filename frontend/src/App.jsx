@@ -30,7 +30,7 @@ class App extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('http://0.0.0.0:5000/jokes/api', {
+    fetch('http://0.0.0.0:5000/api/jokes', {
       method: 'GET',
       // body: data,
     })
@@ -90,11 +90,11 @@ class App extends React.Component {
               </Form.Group> */}
 
               <Form.Group controlId="category_autocomplete" className="formGroupCenter">
-                <Form.Label className="category_label">Category:</Form.Label> 
+                <Form.Label className="category_label">Category:</Form.Label>
                 <div className="App">
                   <div className="App-Component">
                     <div className="App-Component">
-                      <AutoCompleteText items ={categories}/>
+                      <AutoCompleteText items={categories} />
                     </div>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ class App extends React.Component {
                   </div>
                 ))}
               </Form.Group>
-              
+
               <Form.Group controlId="maturity_rating" className="formGroupCenter">
                 {/* <Form.Label>Maturity Rating:</Form.Label> */}
                 <Form.Control as="select">
