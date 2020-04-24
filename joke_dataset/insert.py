@@ -8,8 +8,8 @@ import json
 
 try:
    connection = psycopg2.connect( 
-                                  user = "winice",
-                                  password = "password",
+                                #   user = "winice",
+                                #   password = "password",
                                   host="localhost",
                                   port="5432",
                                   database="hahadata")
@@ -23,16 +23,6 @@ try:
    connection.commit()
    count = cursor.rowcount
    print (count, "Records inserted successfully into Jokes table")
-   
-   with open ('./inv_idx_free.json') as f:
-       data = json.load(f)
-       string = "\'" + json.dumps(data) + "\'"
-       postgres_insert_query = "Insert into terms (term, joke_ids, tfs, idf) select term, joke_ids, tfs, idf from json_populate_recordset(null::terms, " + string + ");"
-   cursor.execute(postgres_insert_query)
-   
-   connection.commit()
-   count = cursor.rowcount
-   print (count, "Records inserted successfully into Terms table")
    
    with open ('./inv_idx_cat.json') as f: 
        data = json.load(f)
