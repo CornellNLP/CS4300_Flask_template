@@ -120,4 +120,4 @@ def search():
 
 @jokes.route('/cat-options', methods=['GET'])
 def cat_options():
-  return {"categories" : [cat.category for cat in Categories.query.all()]}
+  return {"categories" : sorted([cat.category for cat in Categories.query.all()])}

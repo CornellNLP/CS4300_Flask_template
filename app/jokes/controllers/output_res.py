@@ -1,6 +1,5 @@
 from . import *
 
-
 def weight(jac_res, cos_res):
     results = {}
     jacky = set(jac_res.keys())  # haha get it? jac_key -> jacky

@@ -9,12 +9,10 @@ import AutoCompleteText from './components/AutoCompleteText';
 import categories from './images/categories';
 import scores from './images/scores';
 
-import Form from 'semantic-ui-react'
-// import Form from 'react-bootstrap/Form'
+import { Button, Checkbox, Form } from 'semantic-ui-react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
 
 import JokeResults from './components/JokeResults';
 import {CircularProgress} from '@material-ui/core'
@@ -25,8 +23,11 @@ class App extends React.Component {
     this.state = {
       isLoaded: false,
       jokes: [],
-      cat_options: []
-    }
+      cat_options: [],
+
+      category: '',
+      score: '',
+      search: ''    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -45,8 +46,6 @@ class App extends React.Component {
       })
     ])
       .then(axios.spread((response1, response2) => {
-        console.log('response1: ', response1.data);
-        console.log('response2 ', response2.data);
         this.setState({
           isLoaded:true,
           jokes: response1.data.jokes,
@@ -58,15 +57,24 @@ class App extends React.Component {
       );
   }
 
+  handleChange = (e, { name, value }) => this.setState({ [name]: value })
   
   handleSubmit(event) {
     console.log("submit")
-    // event.preventDefault();
-    const data = new FormData(event.target);
+    console.log(this.state)
+    event.preventDefault();
 
-    fetch('http://localhost:5000/api/jokes', {
+    const { search, category, score} = this.state
+    const data = new FormData(event.target);
+    console.log(data)
+
+    fetch('http://localhost:5000/api/search', {
       method: 'GET',
-      // body: data,
+      body: {
+        "search": search, 
+        "cateory": category,
+        "score": score
+      }
     })
       .then(res => res.json())
       .then(
@@ -92,17 +100,19 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("hi")
-    console.log(this.state.cat_options)
+    console.log(this.state.jokes)
     const categoryList = this.state.cat_options.map((cat) =>
-      <option value={cat}>{cat}</option>
+        ({key: cat,
+        text: cat,
+        value: cat})        
     );
 
     const scoreList = scores.map((score) =>
-      <option value={score}>{score}</option>
+      ({key: score, 
+      text: score, 
+      value: score})
     );
 
-    // if (this.state.isLoaded){
     return (
       <Container>
         <Row className="justify-content-md-center">
@@ -112,89 +122,36 @@ class App extends React.Component {
               <img src={logo} className="App-logo" alt="logo" />
             </header>
 
-            <form class="ui form" onSubmit={this.handleSubmit}>
-              <div class="field">
-                <label>Keywords</label>
-                <input type="text" name="search" placeholder="Search"/> 
-              </div>
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Input
+                placeholder="Search"
+                name="search"
+                label = "Keywords" 
+                type = "text"
+                onChange={this.handleChange}/>
 
-              <div class="field">
-                 <label>Category</label>
-                  <select multiple = "" class="ui fluid search dropdown" name="category" >
-                    <option value="">Select Categories</option>
-                    {categoryList}
-                  </select>
-              </div>
+              <Form.Dropdown
+                placeholder = "Select Categories"
+                name = "category"
+                label = "Categories"
+                multiple
+                search
+                selection
+                options = {categoryList}
+                onChange={this.handleChange}
+              />
 
-              <div class="field">
-                  <label>Minimum Score</label>
-                  <select multiple="" class="ui search dropdown" name = "score">
-                    <option value = "">Select Score</option>
-                    {scoreList}
-                  </select>
-              </div>
+              <Form.Dropdown
+                placeholder="Select Minimum Score"
+                name="score"
+                label="Minimum Score"
+                selection
+                options={scoreList}
+                onChange={this.handleChange}
+              />
 
               <button class="ui button" type="submit">Go</button>
-              </form>
-            {/* <Form className="global-search" onSubmit={this.handleSubmit}>
-
-              <Form.Group controlId="Key Words" className="formGroupCenter">
-                <Form.Control
-                  type="text"
-                  name="name"
-                  // value={this.state.newRequest.contactinfo.name}
-                  // onChange={this.handleInput_contact}
-                  placeholder="Enter Key Words..."
-                  required
-                />
-              </Form.Group> */}
-
-              {/* <Form.Group controlId="category" className="formGroupCenter">
-                <Form.Label>Category:</Form.Label>
-                <Form.Control as="select">
-                  <option>Enter Category...</option>
-                  <option>1</option>
-                  <option>2</option>
-                </Form.Control>
-              </Form.Group> */}
-
-              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
-                <Form.Label className="category_label">Category:</Form.Label> 
-                <div className="App">
-                  <div className="App-Component">
-                    <div className="App-Component">
-                      <AutoCompleteText items={categories} />
-                    </div>
-                  </div>
-                </div>
-              </Form.Group>
-
-
-              <Form.Group controlId="min_score" className="formGroupCenter">
-                <Form.Label>Minimum Score:</Form.Label>
-                {['radio'].map((type) => (
-                  <div key={`inline-${type}`} className="score_options">
-                    <Form.Check inline label="1" type={type} id={`inline-${type}-1`} />
-                    <Form.Check inline label="2" type={type} id={`inline-${type}-2`} />
-                    <Form.Check inline label="3" type={type} id={`inline-${type}-3`} />
-                    <Form.Check inline label="4" type={type} id={`inline-${type}-4`} />
-                    <Form.Check inline label="5" type={type} id={`inline-${type}-5`} />
-                  </div>
-                ))}
-              </Form.Group>
-
-              <Form.Group controlId="maturity_rating" className="formGroupCenter">
-                <Form.Label>Maturity Rating:</Form.Label>
-                <Form.Control as="select">
-                  <option>Enter Maturity Rating...</option>
-                  <option>PG</option>
-                  <option>PG-13</option>
-                  <option>R</option>
-                </Form.Control>
-              </Form.Group>
-
-              <Button type="submit" className="btn btn-info">Go!</Button>
-            </Form> */}
+            </Form>
 
           </Col>
         </Row>
@@ -207,7 +164,7 @@ class App extends React.Component {
 
 
       )
-    //   ; else {
+    //   {
     //   return <div style={{ display: 'flex', position: 'absolute', left: '50%', top: '50%' }}>
     //     <CircularProgress disableShrink />
     //   </div>
