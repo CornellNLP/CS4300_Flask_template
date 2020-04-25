@@ -12,7 +12,7 @@ for synset in list(wn.all_synsets()):
     for lemma in synset.lemmas():
         ALL_WORDNET_WORDS.add(lemma.name())
 
-verbs_fh =  open("app/data/en-verbs.txt")
+verbs_fh =  open("../../data/en-verbs.txt", "r+")
 lines = verbs_fh.readlines()
 verbs_fh.close()
 CONJUGATED_VERB_LIST = []
@@ -34,3 +34,5 @@ for ss in wn.all_synsets(pos = "r"):
         matches = get_close_matches(word, pertainyms)
         if len(matches) > 0:
             ADJECTIVE_TO_ADVERB[matches[0]] = word
+
+print(CONJUGATED_VERB_LIST)
