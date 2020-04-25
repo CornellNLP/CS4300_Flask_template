@@ -27,6 +27,7 @@ class Recipe(Base):
     # recipes table
     __tablename__ = "recipes"
     id = Column(Integer, primary_key=True, autoincrement=True)
+    meal_type = Column(String())
     directions = Column(String())
     ingredients = Column(String())
     fat = Column(Float)
@@ -59,6 +60,7 @@ class RecipeSchema(Schema):
         ordered = False
         fields = (
             "id",
+            "meal_type",
             "directions",
             "ingredients",
             "fat",
@@ -68,5 +70,6 @@ class RecipeSchema(Schema):
             "protein",
             "rating",
             "title",
-            "sodium"
+            "sodium",
+            "categories"
         )
