@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/main.css';
 import './css/App.css';
 import AutoCompleteText from './components/AutoCompleteText';
-import categories from './images/categories';
 import scores from './images/scores';
 
 import { Button, Checkbox, Form } from 'semantic-ui-react'
@@ -60,47 +59,39 @@ class App extends React.Component {
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
   
   handleSubmit(event) {
-    console.log("submit")
-    console.log(this.state)
     event.preventDefault();
 
     const { search, category, score} = this.state
     const data = new FormData(event.target);
-    console.log(data)
-
-    fetch('http://localhost:5000/api/search', {
-      method: 'GET',
-      body: {
-        "search": search, 
-        "cateory": category,
-        "score": score
-      }
+    const params = new URLSearchParams()
+    console.log(this.state)
+    params.append("search", search)
+    
+    category.forEach(cat => {
+      params.append("category", cat);
     })
-      .then(res => res.json())
-      .then(
-        (data) => {
+   
+    params.append("score", score)
+    this.props.history.push({
+      //something but too tired rn 
+    })
 
-          this.setState({
-            isLoaded: true,
-            jokes: data.jokes
-          });
-
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-    // .then(console.log(this.jokes))
+    axios({
+      method: 'GET',
+      url: `http://localhost:5000/api/search`,
+      params: params
+    })
+    .then (response => {
+      this.setState({
+        jokes: response.data.jokes
+      })
+    })
+    .catch(err => 
+      console.log(err));
+    
   }
 
   render() {
-    console.log(this.state.jokes)
     const categoryList = this.state.cat_options.map((cat) =>
         ({key: cat,
         text: cat,
