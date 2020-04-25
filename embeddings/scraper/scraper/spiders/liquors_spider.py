@@ -38,3 +38,85 @@ class KWLiquorSpider(scrapy.Spider):
         'type' : type,
         'url' : response.request.url
         }
+
+class TLSLiquorSpider(scrapy.Spider):
+    name = 'tls-liquor'
+    def start_requests(self):
+            urls = [
+                "https://www.theliquorstorejacksonhole.com/spirits/?page={}&sortby=sort_item_order&item_type=spirits".format(i) for i in range(32)
+            ]
+            for url in urls:
+                yield scrapy.Request(url=url, callback=self.parse)
+
+    def parse(self, response):
+        yield from response.follow_all(css='a[class="rebl15"]', callback=self.parse_product)
+
+    def parse_product(self, response):
+        prod_data = response.css('a[class="prodlink"]::text').getall()
+        # Extract origin and liquor type
+        if len(prod_data) >= 3:
+            type = prod_data[2]
+        elif len(prod_data) >= 2:
+            type = prod_data[1]
+        else:
+            type = None
+        regex = r"\d+.*\d*%"
+        # Extract abv if present
+        raw_abv_data = response.css('td[class="prodata_txt"]::text').getall()
+        abv = None
+        for data in raw_abv_data:
+            match = re.search(regex, data)
+            abv = match.group(0) if match is not None else None
+        # Extract price
+        sale_re = r"Sale price:\s*(\$\d+.\d*)"
+        sale_price = response.css('h2[itemprop="price"]::text').get()
+        reg_price = response.css('span[itemprop*="price"]::text').get()
+        if reg_price is not None:
+            price = "$"+reg_price
+        elif sale_price is not None:
+            sale_match = re.search(sale_re, sale_price)
+            price = sale_match.group(1) if sale_match is not None else None
+        else:
+            price = None
+        yield {
+        'name' : response.css('h1::text').get(),
+        'price' : price,
+        'abv' : abv,
+        'description' : " ".join(response.css('p span::text').getall()[:-3]),
+        'rating' : None,
+        'origin' : prod_data[0],
+        'type' : type,
+        'url' : response.request.url
+        }
+
+# https://www.proof66.com/ good data but they have anti-crawling function
+# class P66LiquorSpider(scrapy.Spider):
+#     name = 'p66-liquor'
+#     def start_requests(self):
+#         yield scrapy.Request(url="https://www.proof66.com/", callback=self.parse_category)
+#
+#     def parse_category(self, response):
+#         yield from response.follow_all(css='li[class*="panel dropdown mobilenav mb0"] a', callback=self.parse_collection)
+#         # urls = response.css('li[class*="panel dropdown mobilenav mb0"] a').getall()[0:112]
+#         # for url in urls:
+#         #     yield scrapy.Request(url=response.urljoin(url), callback=self.parse_collection)
+#
+#     def parse_collection(self, response):
+#         urls = response.css('section[id*="categorygrid"] a::attr(href)').getall()
+#         for url in urls:
+#             yield scrapy.Request(url=response.urljoin(url), meta = {'dont_redirect': True,'handle_httpstatus_list': [302]}, callback=self.parse_product)
+#
+#     def parse_product(self, response):
+#         name = response.css('span[itemprop*="name"]::text').get()
+#         if name is None:
+#             return
+#         yield {
+#         'name' : name,
+#         'price' : response.css('span[itemprop*="price"]::text').get(),
+#         'abv' : response.css('span[class*="font16 fontRatingInfos320"]::text').getall()[2],
+#         'description' : response.css('div[id*="notesDiv"] p::text').get(),
+#         'rating' : response.css('span[itemprop="ratingValue"]::text').get() + " / " + response.css('span[itemprop="bestValue"]::text').get(),
+#         'origin' : response.css('span[class*="font15 fontRatingInfos320"] a::text').getall()[1],
+#         'type' : None,
+#         'url' : response.request.url
+#         }
