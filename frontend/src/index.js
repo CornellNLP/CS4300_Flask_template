@@ -11,7 +11,7 @@ import SampleFetch from './components/SampleFetch';
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={App} />
+      <Route exact path="/" component={App} />
       {/* <Route path="/sample" component={SampleFetch} /> */}
     </Switch>
   </BrowserRouter>, document.getElementById('root')

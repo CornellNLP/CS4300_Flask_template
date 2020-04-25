@@ -1,19 +1,22 @@
 import React from 'react';
 import axios from 'axios';
-import logo from './images/operator.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
+// css files 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/main.css';
 import './css/App.css';
-import AutoCompleteText from './components/AutoCompleteText';
+
+// images, lists
+import logo from './images/operator.png';
 import scores from './images/scores';
 
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-
+// components
+import Form from './components/Form'
 import JokeResults from './components/JokeResults';
+import AutoCompleteText from './components/AutoCompleteText';
+
+// import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Row, Col, Container } from 'react-bootstrap'
 import {CircularProgress} from '@material-ui/core'
 
 class App extends React.Component {
@@ -22,90 +25,42 @@ class App extends React.Component {
     this.state = {
       isLoaded: false,
       jokes: [],
-      cat_options: [],
 
       category: '',
       score: '',
       search: ''    }
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     const URLParams = new URLSearchParams(this.props.location.search)
 
-    axios.all([
-      axios({
+    console.log(URLParams)
+    const category_param = URLParams.getAll("category")
+    const score_param = URLParams.get("score")
+    const search_param = URLParams.get("search")
+
+    axios({
         method: 'GET',
         url: `http://localhost:5000/api/search`,
         params: URLParams
-      }),
-      axios({
-        method: 'GET',
-        url: `http://localhost:5000/api/cat-options`
       })
-    ])
-      .then(axios.spread((response1, response2) => {
+      .then((response) => {
         this.setState({
           isLoaded:true,
-          jokes: response1.data.jokes,
-          cat_options: response2.data.categories
+          jokes: response.data.jokes,
+          
+          category: category_param,
+          score: score_param,
+          search : search_param
         })
-      }))
+      })
       .catch(err =>
         console.log(err)
       );
   }
 
-  handleChange = (e, { name, value }) => this.setState({ [name]: value })
-  
-  handleSubmit(event) {
-    event.preventDefault();
-
-    const { search, category, score} = this.state
-    const data = new FormData(event.target);
-    const old_params = new URLSearchParams(this.props.location.search)
-    const params = new URLSearchParams()
-    console.log(this.state)
-    params.append("search", search)
-    
-    category.forEach(cat => {
-      params.append("category", cat);
-    })
-   
-    params.append("score", score)
-    this.props.history.push(old_params.toString()
-      //something but too tiold_params.toString()
-    )
-
-    axios({
-      method: 'GET',
-      url: `http://localhost:5000/api/search`,
-      params: params
-    })
-    .then (response => {
-      this.setState({
-        jokes: response.data.jokes
-      })
-    })
-    .catch(err => 
-      console.log(err));
-    
-  }
-
   render() {
-    const categoryList = this.state.cat_options.map((cat) =>
-        ({key: cat,
-        text: cat,
-        value: cat})        
-    );
-
-    const scoreList = scores.map((score) =>
-      ({key: score, 
-      text: score, 
-      value: score})
-    );
-
-    return (
+    if (this.state.isLoaded) return (
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -114,36 +69,7 @@ class App extends React.Component {
               <img src={logo} className="App-logo" alt="logo" />
             </header>
 
-            <Form onSubmit={this.handleSubmit}>
-              <Form.Input
-                placeholder="Search"
-                name="search"
-                label = "Keywords" 
-                type = "text"
-                onChange={this.handleChange}/>
-
-              <Form.Dropdown
-                placeholder = "Select Categories"
-                name = "category"
-                label = "Categories"
-                multiple
-                search
-                selection
-                options = {categoryList}
-                onChange={this.handleChange}
-              />
-
-              <Form.Dropdown
-                placeholder="Select Minimum Score"
-                name="score"
-                label="Minimum Score"
-                selection
-                options={scoreList}
-                onChange={this.handleChange}
-              />
-
-              <button class="ui button" type="submit">Go</button>
-            </Form>
+          <Form score = {this.state.score} categories = {this.state.category} search = {this.state.search} />
 
           </Col>
         </Row>
@@ -153,16 +79,11 @@ class App extends React.Component {
           </Col>
         </Row>
       </Container >
-
-
       )
-    //   {
-    //   return <div style={{ display: 'flex', position: 'absolute', left: '50%', top: '50%' }}>
-    //     <CircularProgress disableShrink />
-    //   </div>
-    // }
+      else return (
+       <p> loading ...</p>
+      )
   }
-
 }
 
 export default App;
