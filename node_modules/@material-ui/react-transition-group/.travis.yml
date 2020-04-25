@@ -1,0 +1,14 @@
+sudo: false
+language: node_js
+node_js:
+  - "11.10"
+cache: yarn
+script:
+  - yarn test
+
+after_success:
+  - npm run build
+  - npm run semantic-release
+branches:
+  only:
+    - master

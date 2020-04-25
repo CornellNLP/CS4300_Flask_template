@@ -86,3 +86,9 @@ input[type=radio] {
 .App-Component {
   width: 300px;
 }
+
+#combo-box-demo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}

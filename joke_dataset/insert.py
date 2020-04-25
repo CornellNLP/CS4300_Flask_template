@@ -8,8 +8,8 @@ import json
 
 try:
    connection = psycopg2.connect( 
-                                  user = "winice",
-                                  password = "password",
+                                #   user = "winice",
+                                #   password = "password",
                                   host="localhost",
                                   port="5432",
                                   database="hahadata")

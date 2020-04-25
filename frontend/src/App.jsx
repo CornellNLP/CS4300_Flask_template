@@ -1,11 +1,13 @@
 import React from 'react';
 import logo from './operator.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 
 import './main.css';
 import './App.css';
 import AutoCompleteText from './AutoCompleteText';
-import categories from './categories';
+// import categories from './categories';
 
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
@@ -14,6 +16,58 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import JokeResults from './components/JokeResults';
+
+//category list
+const categories = [
+{ category: 'Animals' },
+{ category: 'Aviation' },
+{ category: 'Bar Jokes' },
+{ category: 'Biology' },
+{ category: 'Blind Jokes' },
+{ category: 'Blonde Jokes' },
+{ category: 'Business' },
+{ category: 'Chemistry' },
+{ category: 'Children' },
+{ category: 'Computers' },
+{ category: 'Crazy Jokes' },
+{ category: 'Dad Jokes' },
+{ category: 'Deep Thoughts' },
+{ category: 'English' },
+{ category: 'Ethnic Jokes' },
+{ category: 'Family, Parents' },
+{ category: 'Farmers' },
+{ category: 'Food Jokes' },
+{ category: 'Heaven and Hell' },
+{ category: 'Holidays' },
+{ category: 'Idiots' },
+{ category: 'Insults' },
+{ category: 'Lawyers' },
+{ category: 'Light Bulbs' },
+{ category: 'Love & Romance' },
+{ category: 'Marriage' },
+{ category: 'Medical' },
+{ category: 'Men' },
+{ category: 'Military' },
+{ category: 'Money' },
+{ category: 'Music' },
+{ category: 'Office Jokes' },
+{ category: 'Old Age' },
+{ category: 'One Liners' },
+{ category: 'Physics' },
+{ category: 'Pick-up Line' },
+{ category: 'Police Jokes' },
+{ category: 'Political' },
+{ category: 'Pun' },
+{ category: 'Redneck' },
+{ category: 'Religious' },
+{ category: 'School' },
+{ category: 'Science' },
+{ category: 'Sex' },
+{ category: 'Sports' },
+{ category: 'State Jokes' },
+{ category: 'Women' },
+{ category: 'Yo Mama' }
+];
 
 class App extends React.Component {
 
@@ -89,7 +143,7 @@ class App extends React.Component {
                 </Form.Control>
               </Form.Group> */}
 
-              <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
                 <Form.Label className="category_label">Category:</Form.Label> 
                 <div className="App">
                   <div className="App-Component">
@@ -98,8 +152,17 @@ class App extends React.Component {
                     </div>
                   </div>
                 </div>
-              </Form.Group>
+              </Form.Group> */}
 
+              <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+                <Autocomplete
+                  id="combo-box-demo"
+                  options={categories}
+                  getOptionLabel={(option) => option.category}
+                  style={{ width: 300 }}
+                  renderInput={(params) => <TextField {...params} label="Categories" variant="outlined" />}
+                />
+              </Form.Group>
 
               <Form.Group controlId="min_score" className="formGroupCenter">
                 <Form.Label>Minimum Score:</Form.Label>

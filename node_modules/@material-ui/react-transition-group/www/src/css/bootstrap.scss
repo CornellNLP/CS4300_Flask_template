@@ -1,0 +1,39 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import 'variables.scss';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: $syntax-bg;
+  font-size: 1rem;
+}
+
+pre {
+  border: 0;
+  background: transparent;
+}
+
+code {
+  padding: 0;
+  background: transparent;
+  color: $hue-3;
+  a & {
+    padding: 0;
+    color: inherit !important;
+  }
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 2rem;
+
+  & > a,
+  & > a:hover {
+    color: inherit;
+  }
+}
