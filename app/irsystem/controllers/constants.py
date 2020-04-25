@@ -6,7 +6,6 @@ try:
 except LookupError:
     import nltk
     nltk.download("wordnet")
-from unipath import Path
 
 ALL_WORDNET_WORDS = set()
 for synset in list(wn.all_synsets()):
