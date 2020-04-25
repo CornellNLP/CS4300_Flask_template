@@ -5,10 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-import './main.css';
-import './App.css';
-import AutoCompleteText from './AutoCompleteText';
-// import categories from './categories';
+// import './main.css';
+// import './App.css';
+import './css/main.css';
+import './css/App.css';
+import AutoCompleteText from './components/AutoCompleteText';
+// import categories from './images/categories';
+import scores from './images/scores';
 
 // import Form from 'semantic-ui-react'
 import Form from 'react-bootstrap/Form'
