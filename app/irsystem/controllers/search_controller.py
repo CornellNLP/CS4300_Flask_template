@@ -75,7 +75,7 @@ def search():
 				ratings_with_subclasses[cs_key]=0
 			sdocs = [(c["class"]+":"+s["subclass"], s["flavor"]) for s in c["subclasses"]]
 			for qt in qtokens:
-				rezp = rank_doc_similarity_to_word(qt, sdocs, 1)
+				rezp = rank_doc_similarity_to_word(qt, sdocs, 3)
 				if(rezp!="not in vocab"):
 					for rp in rezp:
 						ratings_with_subclasses[rp[0]]+=rp[1]
