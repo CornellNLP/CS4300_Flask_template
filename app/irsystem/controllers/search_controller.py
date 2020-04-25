@@ -9,7 +9,7 @@ from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 import scipy
 import numpy as np
-# from app.irsystem.controllers.word_forms import get_word_forms
+from app.irsystem.controllers.word_forms import get_word_forms
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
@@ -49,12 +49,12 @@ def search():
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
 
-		# inflecs = []
-		# for w in qtokens:
-			# inf = get_word_forms(w)
-			# for k,v in inf.items():
-				# inflecs.extend(list(v))
-		# qtokens = list(set(inflecs))
+		inflecs = []
+		for w in qtokens:
+			inf = get_word_forms(w)
+			for k,v in inf.items():
+				inflecs.extend(list(v))
+		qtokens = list(set(inflecs))
 
 		base_ratings = dict()
 		ratings_with_subclasses = dict()
