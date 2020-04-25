@@ -1,4 +1,5 @@
 from difflib import get_close_matches
+import os
 
 try:
     from nltk.corpus import wordnet as wn
@@ -12,6 +13,7 @@ for synset in list(wn.all_synsets()):
     for lemma in synset.lemmas():
         ALL_WORDNET_WORDS.add(lemma.name())
 
+print(os.getcwd())
 verbs_fh =  open("../../data/en-verbs.txt", "r+")
 lines = verbs_fh.readlines()
 verbs_fh.close()
