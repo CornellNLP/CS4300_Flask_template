@@ -92,7 +92,7 @@ class TLSLiquorSpider(scrapy.Spider):
 class WcomLiquorSpider(scrapy.Spider):
     name = 'wcom-liquor'
     start_urls = [
-        'https://www.wine.com/list/spirits/7157/{}'.format(i) for i in range(1, 36)
+        'https://www.wine.com/list/spirits/7157/{}'.format(i) for i in range(1, 86)
     ]
 
     def parse(self, response):
