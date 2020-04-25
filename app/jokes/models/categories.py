@@ -4,7 +4,7 @@ class Categories(Base):
   """Model for the categories table"""
   __tablename__ = 'categories'
 
-  category      = db.Column(db.Text, nullable =False, primary_key = True)
+  category      = db.Column(db.Text, nullable = False, primary_key = True)
   joke_ids      = db.Column(db.ARRAY(db.Integer), nullable = False)
 
   def __init__(self, **kwargs):

@@ -49,14 +49,27 @@ def search():
 	query = request.args.get('search') #query = request.args.get('search', default= '')
 	min_score = request.args.get('score')
 	categories = request.args.getlist('category')
+	req_size = request.args.getlist('size') or ""
+
+	size = 1000000
+	if req_size == "s":
+		size = 10
+	elif req_size == "m":
+		size = 100
+	elif req_size == "l":
+		size = 1000
+	elif req_size == "1":
+		size = 0 # figure out later
+
 	print("cat")
 	print(categories)
 
 	search_params = {}
+	search_params['key_words'] = query if query else ''
 	search_params['min_score'] = min_score if min_score else ''
 	search_params['categories'] = categories if categories else ''
-	search_params['key_words'] = query if query else ''
-	
+	search_params['size'] = size
+
   # dictionary key = joke_id, value = (joke_dict, jac_sim)
 	results_jac = {}  
 	

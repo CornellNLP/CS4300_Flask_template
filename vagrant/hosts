@@ -1,2 +1,0 @@
-[webservers]
-34.208.181.241 ansible_ssh_user=ubuntu ansible_python_interpreter=/usr/bin/python3

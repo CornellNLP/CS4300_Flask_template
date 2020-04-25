@@ -171,7 +171,7 @@ def add_norms(jokes, norms):
     result = [] 
     for i in range(len(jokes)):
         temp = {}
-        temp['joke'] = jokes[i]['joke']
+        temp['text'] = jokes[i]['joke']
         temp['categories'] = jokes[i]['categories']
         temp['score'] = jokes[i]['score']
         temp['norm'] = norms[i]
@@ -198,3 +198,35 @@ with open('final_norm.json', 'w') as f:
 #     return result
 
 # jaccard = jaccard_sim(['Dad Jokes'], inv_idx_cat, data)
+
+
+import re
+
+def tokenize_words(text):
+    """
+    [from a1 and https://stackoverflow.com/questions/45060441/python-regex-to-match-whole-words-minus-contractions-and-possessives]
+    Returns a list of words that make up the text.
+    
+    Note: for simplicity, lowercase everything.
+    Requirement: Use Regex to satisfy this function
+    
+    Params: {text: String}
+    Returns: List
+    """
+    return re.findall(r"(?<![\w'])\w+?(?=\b|n't)",text.lower())
+
+def compute_doc_sizes(jokes):
+    result = []
+    for i in range(len(jokes)):
+        temp = {}
+        temp['text'] = jokes[i]['text']
+        temp['categories'] = jokes[i]['categories']
+        temp['score'] = jokes[i]['score']
+        temp['norm'] = jokes[i]['norm']
+        temp['size'] = len(tokenize_words(jokes[i]['text']))
+        result.append(temp)
+    return result
+
+actual_new_final = compute_doc_sizes(new_final)
+with open('final_sizes.json', 'w') as f:
+    json.dump(actual_new_final, f, indent=4)
