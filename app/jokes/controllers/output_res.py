@@ -32,7 +32,7 @@ def adj_minscore(min_score, results):
             else:
                 final.append((results[joke][0], "Similarity: " +
                               str(results[joke][1]*0.67 + (0.16/5*score_num))))
-    jokes = Joke.query.filter( Joke.score >= min_score). all()
+    jokes = Joke.query.filter(Joke.score >= min_score).all()
     blahblah = [
         ({"text": joke.text, "categories": joke.categories, "score": str(joke.score), "maturity": joke.maturity}, "Similarity: " + str(0.16/5*float(joke.score))) for joke in jokes
     ]
