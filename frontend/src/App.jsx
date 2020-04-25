@@ -9,15 +9,22 @@ import AutoCompleteText from './components/AutoCompleteText';
 import categories from './images/categories';
 import scores from './images/scores';
 
-import Form from 'semantic-ui-react'
-// import Form from 'react-bootstrap/Form'
+// import Form from 'semantic-ui-react'
+import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
+// import React, { useState } from 'react';
+// import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+// import RangeSlider from 'react-bootstrap-range-slider';
+
 import JokeResults from './components/JokeResults';
-import {CircularProgress} from '@material-ui/core'
+import { CircularProgress } from '@material-ui/core'
+
+// import 'mdbreact/dist/css/mdb.css';
+// import { MDBRangeInput, MDBRow, MDBContainer } from "mdbreact";
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +55,7 @@ class App extends React.Component {
         console.log('response1: ', response1.data);
         console.log('response2 ', response2.data);
         this.setState({
-          isLoaded:true,
+          isLoaded: true,
           jokes: response1.data.jokes,
           cat_options: response2.data.categories
         })
@@ -58,7 +65,7 @@ class App extends React.Component {
       );
   }
 
-  
+
   handleSubmit(event) {
     console.log("submit")
     // event.preventDefault();
@@ -115,27 +122,77 @@ class App extends React.Component {
             <form class="ui form" onSubmit={this.handleSubmit}>
               <div class="field">
                 <label>Keywords</label>
-                <input type="text" name="search" placeholder="Search"/> 
+                <input type="text" name="search" placeholder="Search" />
               </div>
 
               <div class="field">
-                 <label>Category</label>
-                  <select multiple = "" class="ui fluid search dropdown" name="category" >
-                    <option value="">Select Categories</option>
-                    {categoryList}
-                  </select>
+                <label>Category</label>
+                <select multiple="" class="ui fluid search dropdown" name="category" >
+                  <option value="">Select Categories</option>
+                  {categoryList}
+                </select>
               </div>
 
               <div class="field">
-                  <label>Minimum Score</label>
-                  <select multiple="" class="ui search dropdown" name = "score">
-                    <option value = "">Select Score</option>
-                    {scoreList}
-                  </select>
+                <label>Relevance --- Qualitative </label>
+                <Form>
+                  <Form.Group controlId="formBasicRange">
+                    <Form.Control type="range" />
+                  </Form.Group>
+                </Form>
+              </div>
+
+
+              {/* <div class="field">const SliderPage = () => {
+                <MDBContainer>
+                  <MDBRow center>
+                    <span className="font-weight-bold indigo-text mr-2">0</span>
+                    <MDBRangeInput
+                      min={0}
+                      max={100}
+                      value={50}
+                      formClassName="w-25"
+                    />
+                    <span className="font-weight-bold indigo-text ml-2">100</span>
+                  </MDBRow>
+                  <MDBRow center>
+                    <span className="font-weight-bold blue-text mr-2">0</span>
+                    <MDBRangeInput
+                      min={0}
+                      max={100}
+                      value={50}
+                      formClassName="w-50"
+                    />
+                    <span className="font-weight-bold blue-text ml-2">100</span>
+                  </MDBRow>
+                  <MDBRow center>
+                    <span className="font-weight-bold purple-text mr-2">0</span>
+                    <MDBRangeInput
+                      min={0}
+                      max={100}
+                      value={50}
+                      formClassName="w-75"
+                    />
+                    <span className="font-weight-bold purple-text ml-2">100</span>
+                  </MDBRow>
+                </MDBContainer>}
+
+                export default SliderPage;</div> */}
+
+
+
+
+
+              <div class="field">
+                <label>Minimum Score</label>
+                <select multiple="" class="ui search dropdown" name="score">
+                  <option value="">Select Score</option>
+                  {scoreList}
+                </select>
               </div>
 
               <button class="ui button" type="submit">Go</button>
-              </form>
+            </form>
             {/* <Form className="global-search" onSubmit={this.handleSubmit}>
 
               <Form.Group controlId="Key Words" className="formGroupCenter">
@@ -149,7 +206,7 @@ class App extends React.Component {
                 />
               </Form.Group> */}
 
-              {/* <Form.Group controlId="category" className="formGroupCenter">
+            {/* <Form.Group controlId="category" className="formGroupCenter">
                 <Form.Label>Category:</Form.Label>
                 <Form.Control as="select">
                   <option>Enter Category...</option>
@@ -158,7 +215,7 @@ class App extends React.Component {
                 </Form.Control>
               </Form.Group> */}
 
-              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+            {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
                 <Form.Label className="category_label">Category:</Form.Label> 
                 <div className="App">
                   <div className="App-Component">
@@ -206,7 +263,7 @@ class App extends React.Component {
       </Container >
 
 
-      )
+    )
     //   ; else {
     //   return <div style={{ display: 'flex', position: 'absolute', left: '50%', top: '50%' }}>
     //     <CircularProgress disableShrink />
