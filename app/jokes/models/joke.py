@@ -10,6 +10,7 @@ class Joke(Base):
   score         = db.Column(db.Numeric(5,4), nullable = True)
   maturity      = db.Column(db.Integer, nullable = True)
   norm          = db.Column(db.Numeric(9,4), nullable = True)
+  size          = db.Column(db.Integer, nullable = False)
 
   def __init__(self, **kwargs):
     self.text           = kwargs.get('text')
@@ -17,6 +18,7 @@ class Joke(Base):
     self.score          = kwargs.get('score', None)
     self.maturity       = kwargs.get('maturity', None)
     self.norm           = kwargs.get('norm', None)
+    self.size           = kwargs.get('size', None)
 
   def __repr__(self):
     """Define a base way to print models"""
