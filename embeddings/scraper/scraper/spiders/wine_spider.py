@@ -3,7 +3,7 @@ import scrapy
 class WcomWineSpider(scrapy.Spider):
     name = 'wcom-wine'
     start_urls = [
-        'https://wine.com/list/wine/7155/{}'.format(i) for i in range(1, 204)
+        'https://www.wine.com/list/wine/7155/{}'.format(i) for i in range(1, 204)
     ]
 
     def parse(self, response):
