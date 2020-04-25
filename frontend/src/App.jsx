@@ -63,6 +63,7 @@ class App extends React.Component {
 
     const { search, category, score} = this.state
     const data = new FormData(event.target);
+    const old_params = new URLSearchParams(this.props.location.search)
     const params = new URLSearchParams()
     console.log(this.state)
     params.append("search", search)
@@ -72,9 +73,9 @@ class App extends React.Component {
     })
    
     params.append("score", score)
-    this.props.history.push({
-      //something but too tired rn 
-    })
+    this.props.history.push(old_params.toString()
+      //something but too tiold_params.toString()
+    )
 
     axios({
       method: 'GET',
