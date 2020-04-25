@@ -191,45 +191,88 @@ net_ids = "Henri Clarke: hxc2, Alice Hu: ath84, Michael Pinelis: mdp93, Genghis 
 @irsystem.route('/', methods=['GET'])
 def search():
     query = request.args.get('search')
+    version = request.args.get('version')
     output_message = ''
     data = []
-    if query:
-        query = query.lower()
-        query_words = query.split(",")
-        query_words = [word.strip() for word in query_words]
-        if len(query_words) == 1:
-            query_words = query_words[0].split(";")
-        recipes = Recipe.query.filter(
-            or_(
-                or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
-                or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
-                or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
-                or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
-            )
-        ).all()
-        if not recipes:
-            output_message = "No Results Found :("
-            data = []
-        else:
-            recipes_out = recipe_schema.dump(recipes)
-            inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
-
-            # hardcoding []; will replace after input for "foods to omit" is added
-            ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
-            if len(ranked_results) == 0:
-                output_message = "No Results Found :(("
+    if version is not None and int(version) == 1:
+        if query:
+            query = query.lower()
+            query_words = query.split(",")
+            query_words = [word.strip() for word in query_words]
+            if len(query_words) == 1:
+                query_words = query_words[0].split(";")
+            recipes = Recipe.query.filter(
+                or_(
+                    or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
+                )
+            ).all()
+            if not recipes:
+                output_message = "No Results Found :("
                 data = []
             else:
-                output_message = "Your search: " + query
-                data = ranked_results[:10]
-                """
-                # hardcoding calorie limits; will replace after inputs for calorie limits are added
-                grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
-                if len(grouped_results) == 0:
-                    output_message = "No Results Found :((("
+                recipes_out = recipe_schema.dump(recipes)
+                inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+
+                # hardcoding []; will replace after input for "foods to omit" is added
+                ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
+                if len(ranked_results) == 0:
+                    output_message = "No Results Found :(("
                     data = []
                 else:
                     output_message = "Your search: " + query
-                    data = grouped_results
-                """
-    return render_template('search.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
+                    data = ranked_results[:10]
+                    """
+                    # hardcoding calorie limits; will replace after inputs for calorie limits are added
+                    grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
+                    if len(grouped_results) == 0:
+                        output_message = "No Results Found :((("
+                        data = []
+                    else:
+                        output_message = "Your search: " + query
+                        data = grouped_results
+                    """
+        return render_template('search-v1.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
+    else:
+        if query:
+            query = query.lower()
+            query_words = query.split(",")
+            query_words = [word.strip() for word in query_words]
+            if len(query_words) == 1:
+                query_words = query_words[0].split(";")
+            recipes = Recipe.query.filter(
+                or_(
+                    or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                    or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
+                )
+            ).all()
+            if not recipes:
+                output_message = "No Results Found :("
+                data = []
+            else:
+                recipes_out = recipe_schema.dump(recipes)
+                inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+
+                # hardcoding []; will replace after input for "foods to omit" is added
+                ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
+                if len(ranked_results) == 0:
+                    output_message = "No Results Found :(("
+                    data = []
+                else:
+                    output_message = "Your search: " + query
+                    data = ranked_results[:10]
+                    """
+                    # hardcoding calorie limits; will replace after inputs for calorie limits are added
+                    grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
+                    if len(grouped_results) == 0:
+                        output_message = "No Results Found :((("
+                        data = []
+                    else:
+                        output_message = "Your search: " + query
+                        data = grouped_results
+                    """
+        return render_template('search-v2.html', name=project_name, netid=net_ids, output_message=output_message, data=data)

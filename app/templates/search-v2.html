@@ -1,0 +1,123 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/main.css">
+  <style>
+    .results-table {
+      margin-left: auto;
+      margin-right: auto;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    .results-table td {
+      padding: 0px 25px 0px 25px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .normal-title {
+      font-size: 140%;
+      font-weight: bold;
+      padding-bottom: 10px;
+      color: #0d4194;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .results-div {
+      align-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    <div class="topcorner">
+        <p>Project Name: {{ name }}</p>
+        <p>Student Names: ({{ netid }})</p>
+    </div>
+    -->
+  <form class="form-inline global-search">
+    <h1 style="font-size: 55px; font-family:Futura">
+      <span style="color: rgb(15, 110, 35); ">S</span>
+      <span style="color: rgb(18, 119, 40); ">M</span>
+      <span style="color: rgb(12, 143, 40); ">A</span>
+      <span style="color: rgb(32, 165, 60)">R</span>
+      <span style="color: rgb(58, 184, 85)">T</span>
+      <span> 🔪 </span>
+      <span style="color: rgb(100, 189, 120)">C</span>
+      <span style="color: rgb(136, 197, 149); ">H</span>
+      <span style="color: rgb(158, 202, 168); ">E</span>
+      <span style="color: rgb(193, 218, 199); ">F</span>
+    </h1>
+
+    <br><br>
+
+    <p>
+      Start your fitness journey right!!
+      Enter your favorite foods for a curated meal plan.
+    </p>
+
+    <br><br>
+
+    <div class="form-group">
+      <input id="input" type="text" name="search" class="form-control" placeholder="e.g. 'watermelon, fish, cashews'">
+      <input type="hidden" name="version" value="2">
+    </div>
+    <button type="submit" class="btn btn-info"> Make meal plan ! </button>
+  </form>
+  <div class="results-div">
+    <h1>{{output_message}}</h1>
+    {% if data %}
+    <br><br>
+    {% for i in range(data|length) %}
+    <p class="normal-title">{{i + 1}}. {{data[i]["title"]}}</p>
+    {% if data[i]["description"] is not none %}
+    <p><i>{{data[i]["description"]}}</i></p>
+    {% endif %}
+    {% if data[i]["calories"] is not none %}
+    <p><strong>Calories:</strong> {{data[i]["calories"]}}</p>
+    {% endif %}
+    {% if data[i]["fat"] is not none %}
+    <p><strong>Fat:</strong> {{data[i]["fat"]}} g</p>
+    {% endif %}
+    {% if data[i]["rating"] is not none %}
+    <p>
+      {% for i in range(data[i]["rating"] | int) %}
+      &#9733
+      {% endfor %}
+      {% for i in range(5 - data[i]["rating"] | int) %}
+      &#9734
+      {% endfor %}
+    </p>
+    <br>
+    {% endif %}
+    {% endfor %}
+
+    <!--
+        <table class="results-table">
+            {% for recipe_set in data %}
+            <tr>
+                {% for recipe in recipe_set %}
+                <td>
+                    <ul>
+                        <li class="normal-title">{{recipe["title"]}}</li>
+                        <li>Calories: {{recipe["calories"]}}</li>
+                        <li>Rating: {{recipe["rating"]}}</li>
+                    </ul>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    -->
+    {% endif %}
+  </div>
+</body>
+
+</html>
