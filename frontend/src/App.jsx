@@ -142,44 +142,27 @@ class App extends React.Component {
                 </Form>
               </div>
 
+              <div class="field">
+                <label>Length of Joke</label>
+                <Form>
+                  {['checkbox'].map((type) => (
+                    <div key={`inline-${type}`} className="mb-3">
+                      <Form.Check inline label="Short" type={type} id={`inline-${type}-Short`} />
+                      <Form.Check inline label="Medium" type={type} id={`inline-${type}-Medium`} />
+                      <Form.Check inline label="Long" type={type} id={`inline-${type}-Long`} />
+                    </div>
+                  ))}
+                </Form>
+              </div>
 
-              {/* <div class="field">const SliderPage = () => {
-                <MDBContainer>
-                  <MDBRow center>
-                    <span className="font-weight-bold indigo-text mr-2">0</span>
-                    <MDBRangeInput
-                      min={0}
-                      max={100}
-                      value={50}
-                      formClassName="w-25"
-                    />
-                    <span className="font-weight-bold indigo-text ml-2">100</span>
-                  </MDBRow>
-                  <MDBRow center>
-                    <span className="font-weight-bold blue-text mr-2">0</span>
-                    <MDBRangeInput
-                      min={0}
-                      max={100}
-                      value={50}
-                      formClassName="w-50"
-                    />
-                    <span className="font-weight-bold blue-text ml-2">100</span>
-                  </MDBRow>
-                  <MDBRow center>
-                    <span className="font-weight-bold purple-text mr-2">0</span>
-                    <MDBRangeInput
-                      min={0}
-                      max={100}
-                      value={50}
-                      formClassName="w-75"
-                    />
-                    <span className="font-weight-bold purple-text ml-2">100</span>
-                  </MDBRow>
-                </MDBContainer>}
-
-                export default SliderPage;</div> */}
-
-
+              {/* <Form>
+                {['checkbox', 'radio'].map((type) => (
+    <div key={`inline-${type}`} className="mb-3">
+                  <Form.Check inline label="Short" type={type} id={`inline-${type}-Short`} />
+                  <Form.Check inline label="Medium" type={type} id={`inline-${type}-Medium`} />
+                  <Form.Check inline label="Long" type={type} id={`inline-${type}-Long`} />
+                  <Form.Check />
+                </Form> */}
 
 
 
