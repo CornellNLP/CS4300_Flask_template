@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './operator.png';
+import axios from 'axios';
+import logo from './images/operator.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -9,13 +10,19 @@ import './App.css';
 import AutoCompleteText from './AutoCompleteText';
 // import categories from './categories';
 
+// import Form from 'semantic-ui-react'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
+// import React, { useState } from 'react';
+// import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+// import RangeSlider from 'react-bootstrap-range-slider';
+
 import JokeResults from './components/JokeResults';
+import { CircularProgress } from '@material-ui/core'
 
 //category list
 const categories = [
@@ -69,22 +76,54 @@ const categories = [
 { category: 'Yo Mama' }
 ];
 
-class App extends React.Component {
+// class App extends React.Component {
 
+class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isLoaded: false,
-      jokes: []
+      jokes: [],
+      cat_options: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    const URLParams = new URLSearchParams(this.props.location.search)
+
+    axios.all([
+      axios({
+        method: 'GET',
+        url: `http://localhost:5000/api/search`,
+        params: URLParams
+      }),
+      axios({
+        method: 'GET',
+        url: `http://localhost:5000/api/cat-options`
+      })
+    ])
+      .then(axios.spread((response1, response2) => {
+        console.log('response1: ', response1.data);
+        console.log('response2 ', response2.data);
+        this.setState({
+          isLoaded: true,
+          jokes: response1.data.jokes,
+          cat_options: response2.data.categories
+        })
+      }))
+      .catch(err =>
+        console.log(err)
+      );
+  }
+
+
   handleSubmit(event) {
-    event.preventDefault();
+    console.log("submit")
+    // event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('http://0.0.0.0:5000/jokes/api', {
+    fetch('http://localhost:5000/api/jokes', {
       method: 'GET',
       // body: data,
     })
@@ -112,8 +151,18 @@ class App extends React.Component {
   }
 
   render() {
-    return (
+    console.log("hi")
+    console.log(this.state.cat_options)
+    const categoryList = this.state.cat_options.map((cat) =>
+      <option value={cat}>{cat}</option>
+    );
 
+    const scoreList = scores.map((score) =>
+      <option value={score}>{score}</option>
+    );
+
+    // if (this.state.isLoaded){
+    return (
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -121,7 +170,65 @@ class App extends React.Component {
               <h1>HahaFactory</h1>
               <img src={logo} className="App-logo" alt="logo" />
             </header>
-            <Form className="global-search" onSubmit={this.handleSubmit}>
+
+            <form class="ui form" onSubmit={this.handleSubmit}>
+              <div class="field">
+                <label>Keywords</label>
+                <input type="text" name="search" placeholder="Search" />
+              </div>
+
+              <div class="field">
+                <label>Category</label>
+                <select multiple="" class="ui fluid search dropdown" name="category" >
+                  <option value="">Select Categories</option>
+                  {categoryList}
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Relevance --- Qualitative </label>
+                <Form>
+                  <Form.Group controlId="formBasicRange">
+                    <Form.Control type="range" />
+                  </Form.Group>
+                </Form>
+              </div>
+
+              <div class="field">
+                <label>Length of Joke</label>
+                <Form>
+                  {['checkbox'].map((type) => (
+                    <div key={`inline-${type}`} className="mb-3">
+                      <Form.Check inline label="Short" type={type} id={`inline-${type}-Short`} />
+                      <Form.Check inline label="Medium" type={type} id={`inline-${type}-Medium`} />
+                      <Form.Check inline label="Long" type={type} id={`inline-${type}-Long`} />
+                    </div>
+                  ))}
+                </Form>
+              </div>
+
+              {/* <Form>
+                {['checkbox', 'radio'].map((type) => (
+    <div key={`inline-${type}`} className="mb-3">
+                  <Form.Check inline label="Short" type={type} id={`inline-${type}-Short`} />
+                  <Form.Check inline label="Medium" type={type} id={`inline-${type}-Medium`} />
+                  <Form.Check inline label="Long" type={type} id={`inline-${type}-Long`} />
+                  <Form.Check />
+                </Form> */}
+
+
+
+              <div class="field">
+                <label>Minimum Score</label>
+                <select multiple="" class="ui search dropdown" name="score">
+                  <option value="">Select Score</option>
+                  {scoreList}
+                </select>
+              </div>
+
+              <button class="ui button" type="submit">Go</button>
+            </form>
+            {/* <Form className="global-search" onSubmit={this.handleSubmit}>
 
               <Form.Group controlId="Key Words" className="formGroupCenter">
                 <Form.Control
@@ -132,9 +239,9 @@ class App extends React.Component {
                   placeholder="Enter Key Words..."
                   required
                 />
-              </Form.Group>
+              </Form.Group> */}
 
-              {/* <Form.Group controlId="category" className="formGroupCenter">
+            {/* <Form.Group controlId="category" className="formGroupCenter">
                 <Form.Label>Category:</Form.Label>
                 <Form.Control as="select">
                   <option>Enter Category...</option>
@@ -143,12 +250,12 @@ class App extends React.Component {
                 </Form.Control>
               </Form.Group> */}
 
-              {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
+            {/* <Form.Group controlId="category_autocomplete" className="formGroupCenter">
                 <Form.Label className="category_label">Category:</Form.Label> 
                 <div className="App">
                   <div className="App-Component">
                     <div className="App-Component">
-                      <AutoCompleteText items ={categories}/>
+                      <AutoCompleteText items={categories} />
                     </div>
                   </div>
                 </div>
@@ -176,9 +283,9 @@ class App extends React.Component {
                   </div>
                 ))}
               </Form.Group>
-              
+
               <Form.Group controlId="maturity_rating" className="formGroupCenter">
-                {/* <Form.Label>Maturity Rating:</Form.Label> */}
+                <Form.Label>Maturity Rating:</Form.Label>
                 <Form.Control as="select">
                   <option>Enter Maturity Rating...</option>
                   <option>PG</option>
@@ -188,7 +295,7 @@ class App extends React.Component {
               </Form.Group>
 
               <Button type="submit" className="btn btn-info">Go!</Button>
-            </Form>
+            {/* </Form> } */}
 
           </Col>
         </Row>
@@ -200,7 +307,12 @@ class App extends React.Component {
       </Container >
 
 
-    );
+    )
+    //   ; else {
+    //   return <div style={{ display: 'flex', position: 'absolute', left: '50%', top: '50%' }}>
+    //     <CircularProgress disableShrink />
+    //   </div>
+    // }
   }
 
 }

@@ -7,21 +7,32 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "build": "^0.1.4",
     "html-to-react": "^1.4.2",
+    "material-ui": "^0.20.2",
+    "mdbreact": "^4.25.6",
+    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-bootstrap-range-slider": "^0.3.2",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build_mac": "npm run build & npm run copy",
+    "build_windows": "npm run build & npm run remove_wind & npm run copy_wind",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "copy": "rm -rf ../app/static/css && rm -rf ../app/static/js && rm -rf ../app/static/media && rm -f ../app/static/manifest.json && rm -f ../app/templates/index.html && cp -r build/static/* ../app/static/ && cp build/manifest.json ../app/static/ && cp build/index.html ../app/templates/",
-    "copy2": "copy -r build/static/* ../app/static/ && copy build/manifest.json ../app/static/ && copy build/index.html ../app/templates/"
+    "remove_wind": "rmdir /s /q ..\\app\\static\\css && rmdir /s /q ..\\app\\static\\js && rmdir /s /q ..\\app\\static\\media && del /q ..\\app\\static\\manifest.json && del /q ..\\app\\templates\\index.html",
+    "copy_wind": "xcopy /s .\\build\\static\\* ..\\app\\static\\ && xcopy /s build\\manifest.json ..\\app\\static\\ && xcopy /s build\\index.html ..\\app\\templates\\ && xcopy /s build\\operator.png ..\\app\\static\\"
   },
   "eslintConfig": {
     "extends": "react-app"

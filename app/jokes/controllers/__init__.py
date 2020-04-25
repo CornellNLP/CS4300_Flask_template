@@ -17,7 +17,6 @@ from app import socketio
 # Import module models 
 from ..models.joke import *
 from ..models.categories import * 
-from ..models.terms import *
 
 # IMPORT THE BLUEPRINT APP OBJECT 
 from app.jokes import jokes 

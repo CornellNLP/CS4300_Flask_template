@@ -2,9 +2,11 @@ import psycopg2
 import json
 
 # INSERTS: 
-# 1. FINAL_NORM.JSON
-# 2. INV_IDX_FREE.JSON
-# 3. INV_IDX_CAT.JSON
+# 1. final_sizes.json
+# 2. inv_idx_cat.json
+
+# NOTE: you have to go to the final_sizes and replace all ' with '' (that is two apostrophes)
+# this is because postgres is annoying
 
 try:
    connection = psycopg2.connect( 
@@ -14,25 +16,15 @@ try:
                                   port="5432",
                                   database="hahadata")
    cursor = connection.cursor()
-   with open ('./final_norm.json') as f: 
+   with open ('./final_sizes.json') as f: 
        data = json.load(f)
        string = "\'" + json.dumps(data) + "\'"
-       postgres_insert_query = "Insert into jokes (text, score, categories, norm) select text, score, categories, norm from json_populate_recordset(null::jokes, " + string + ");"
+       postgres_insert_query = "Insert into jokes (text, score, categories, norm, size) select text, score, categories, norm, size from json_populate_recordset(null::jokes, " + string + ");"
    cursor.execute(postgres_insert_query)
 
    connection.commit()
    count = cursor.rowcount
    print (count, "Records inserted successfully into Jokes table")
-   
-   with open ('./inv_idx_free.json') as f:
-       data = json.load(f)
-       string = "\'" + json.dumps(data) + "\'"
-       postgres_insert_query = "Insert into terms (term, joke_ids, tfs, idf) select term, joke_ids, tfs, idf from json_populate_recordset(null::terms, " + string + ");"
-   cursor.execute(postgres_insert_query)
-   
-   connection.commit()
-   count = cursor.rowcount
-   print (count, "Records inserted successfully into Terms table")
    
    with open ('./inv_idx_cat.json') as f: 
        data = json.load(f)
