@@ -13,8 +13,7 @@ for synset in list(wn.all_synsets()):
     for lemma in synset.lemmas():
         ALL_WORDNET_WORDS.add(lemma.name())
 
-print(os.getcwd())
-verbs_fh =  open("../../data/en-verbs.txt", "r+")
+verbs_fh =  open("en-verbs.txt", "r+")
 lines = verbs_fh.readlines()
 verbs_fh.close()
 CONJUGATED_VERB_LIST = []
