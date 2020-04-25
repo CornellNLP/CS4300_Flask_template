@@ -27,6 +27,7 @@ class WcomWineSpider(scrapy.Spider):
         rating = sum(ratings) / len(ratings)
         yield {
             'name': response.css('h1.pipName::text').get(),
+            'origin': response.css('span.prodItemInfo_originText a::text').get(),
             'price': price,
             'abv': abv,
             'description': desc,

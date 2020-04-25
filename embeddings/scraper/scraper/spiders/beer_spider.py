@@ -34,9 +34,11 @@ class ShackBeerSpider(scrapy.Spider):
         desc = match.group(1) if match is not None else None
         yield {
             'name': remove_tags(product['title']),
+            'origin': None,
             'price': product['price'] / 100,
             'abv': abv,
             'description': desc,
+            'reviews': None,
             'rating': rating,
             'url': response.request.url
         }
@@ -51,11 +53,18 @@ class ConnoBeerSpider(scrapy.Spider):
         yield from response.follow_all(css='div.views-field-view-node a', callback=self.parse_product)
 
     def parse_product(self, response):
+        state = response.css('div.field-name-field-state div.even::text').get()
+        country = response.css('div.field-name-field-country div.even::text').get()
+        origin = state + ', ' + country if state is not None and state != '' else country
+        reviews_raw = response.css('div.view-judges-review-listing-on-beer-page div.views-field-body div::text').getall()
+        reviews = re.sub(r"\s+", ' ', ' '.join([s.strip() for s in reviews_raw]).replace('\xa0', ''))
         yield {
             'name': response.css('div.field-name-title-field h1::text').get(),
+            'origin': origin,
             'price': None,
             'abv': response.css('div.field-name-field-abv div.even::text').get()[:-1],
             'description': response.css('div.field-name-body p::text').get(),
+            'reviews': reviews,
             'rating': response.css('div.views-field-field-judges-rating div::text').get(),
             'url': response.request.url
         }
