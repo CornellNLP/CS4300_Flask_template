@@ -66,9 +66,9 @@ def search():
 			if(rezp!='not in vocab'):
 				for rp in rezp:
 					base_ratings[rp[0]]+=rp[1]
-		for rating in base_ratings.values():
-			if(len(qtokens)!=0):
-				rating /= len(qtokens)
+		if(len(qtokens)!=0):
+			for k, rating in base_ratings.items():
+				base_ratings[k] = rating/len(qtokens)
 
 		for c in f["classes"]:
 			for s in c["subclasses"]:
@@ -83,7 +83,7 @@ def search():
 		if(len(qtokens)!=0):
 			for k, rating in ratings_with_subclasses.items():
 				base_class = k.split(":")[0] # because that's what we did
-				ratings_with_subclasses[k] = rating/float(len(qtokens))+base_ratings[base_class]
+				ratings_with_subclasses[k] = (rating/float(len(qtokens))+base_ratings[base_class])/2
 
 		csc_rating_pairs = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
 		csc_rating_pairs = list(reversed(csc_rating_pairs))[:10]
