@@ -10,6 +10,7 @@ from sklearn.preprocessing import normalize
 import scipy
 import numpy as np
 from app.irsystem.controllers.word_forms import get_word_forms
+from flask import json
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
@@ -102,7 +103,8 @@ def search():
 			rdict = dict()
 			rdict["class"] = cscr[0]
 			rdict["flavor"] = flavor_tot
-			rdict["rating"] = rating
+			rdict["rating"] = rating*5/2
+			rdict["match"] = round(rating*5,2)
 			ret.append(rdict)
 
 		data = ret
