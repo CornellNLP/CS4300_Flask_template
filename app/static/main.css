@@ -9,10 +9,14 @@
   text-align:center;
   }
   body {
+    color: tan;
     padding-top: 15px;
     padding-bottom: 15px;
     padding: 30px;
-    background-color: tan;
+    background: url('4d20.jpg'), white;
+    background-size: contain;
+    background-attachment: fixed;
+    /*image source:wallpapertag.com*/
   }
   .global-search {
     text-align:center;
@@ -61,8 +65,9 @@ h1{
 }
 .result {
   display: flex;
-  padding: 15px;
+  margin: 15px;
   border-bottom: solid;
+  background-color: black;
 }
 
 .result p{
