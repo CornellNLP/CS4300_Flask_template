@@ -51,8 +51,8 @@
                         <ul class="list-group">
                             {% for d in data %}
                             <li class="list-group-item">
-                                <a href="https://www.reddit.com/r/{{d[0]}}/submit" target="_blank">
-                                    r/{{d[0]}}
+                                <a href="https://www.reddit.com/r/{{d['subreddit']}}/submit" target="_blank">
+                                    r/{{d['subreddit']}}
                                 </a>
                             </li>
                             {% endfor %}

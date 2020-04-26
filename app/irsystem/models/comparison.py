@@ -53,8 +53,10 @@ def compare_string_to_posts(query, inverted_index, idf, norms):
     Top-level function, outputs list of subreddits for each post in
     post_ids (set of unique subreddit names)
 """
-def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
-    #need to group posts by subreddit
+
+
+def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup, descriptions):
+    # need to group posts by subreddit
     subreddit_dict = {}
     subreddit_freq = {}
 
@@ -69,9 +71,14 @@ def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
 
     k = Counter(subreddit_dict)
 
-    for x in k.most_common(top_x):
-        print(x[0] + "    "  + str(subreddit_freq[x[0]]) + "   " + str(subreddit_lookup[x[0]]) + "   " + str(x[1]))
+    for x in k.most_common():
+        print(x[0] + "    " + str(subreddit_freq[x[0]]) + "   " +
+              str(subreddit_lookup[x[0]]) + "   " + str(x[1]))
 
-    normalized = [(x[0], float(x[1]) * float(subreddit_freq[x[0]]) / float(subreddit_lookup[x[0]])) for x in k.most_common(top_x)]
+    normalized = [(x[0], float(x[1]) * float(subreddit_freq[x[0]]) /
+                   float(subreddit_lookup[x[0]])) for x in k.most_common(top_x)]
     print(normalized)
-    return sorted(normalized, key=lambda x: x[1], reverse=True)
+    sorted_list = sorted(normalized, key=lambda x: x[1], reverse=True)
+    final_list = [{'subreddit': sub, 'description': descriptions[sub.lower()], 'score': score}
+                  for (sub, score) in sorted_list]
+    return final_list
