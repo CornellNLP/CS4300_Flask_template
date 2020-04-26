@@ -9,7 +9,7 @@ from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 import scipy
 import numpy as np
-# from app.irsystem.controllers.word_forms import get_word_forms
+from app.irsystem.controllers.word_forms import get_word_forms
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
@@ -40,6 +40,7 @@ def search():
 		data = []
 		output_message = ''
 	else:
+		query = query.lower()
 		output_message = query
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
@@ -49,12 +50,12 @@ def search():
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
 
-		# inflecs = []
-		# for w in qtokens:
-			# inf = get_word_forms(w)
-			# for k,v in inf.items():
-				# inflecs.extend(list(v))
-		# qtokens = list(set(inflecs))
+		inflecs = []
+		for w in qtokens:
+			inf = get_word_forms(w)
+			for k,v in inf.items():
+				inflecs.extend(list(v))
+		qtokens = list(set(inflecs))
 
 		base_ratings = dict()
 		ratings_with_subclasses = dict()
@@ -75,7 +76,7 @@ def search():
 				ratings_with_subclasses[cs_key]=0
 			sdocs = [(c["class"]+":"+s["subclass"], s["flavor"]) for s in c["subclasses"]]
 			for qt in qtokens:
-				rezp = rank_doc_similarity_to_word(qt, sdocs, 1)
+				rezp = rank_doc_similarity_to_word(qt, sdocs, 3)
 				if(rezp!="not in vocab"):
 					for rp in rezp:
 						ratings_with_subclasses[rp[0]]+=rp[1]
