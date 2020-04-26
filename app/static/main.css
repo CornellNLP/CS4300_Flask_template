@@ -90,3 +90,15 @@ h2{
   flex-direction: column;
   padding: 10px;
 }
+
+/*user ratings*/
+.rates{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 75px;
+}
+
+#starcolor{
+  color: gold;
+}
