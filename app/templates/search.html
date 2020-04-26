@@ -28,10 +28,9 @@
           <!--blurb-->
           <h3>Welcome to Character Crafter, an easy tool for finding class and subclass
             builds for the fantasy game DND 5th edition based on YOUR needs! </h3>
-          <h3>Normally, to create a character, you would have to laboriously search through a guidebook to 
-            find the right character type to play as.  A character's strengths and weaknesses are largely defined by their class.
+          <h3>A character's strengths and weaknesses are largely defined by their class.
             This tool searches for you with just a few keywords. 
-            For  matches, describe the character you want to play in a few words.</h3>
+            For matches, describe the character you want to play in a few words.</h3>
         </main>
         <form class="form-inline global-search">
             <div class="form-group">
@@ -59,7 +58,9 @@
               <div class = "result">
                 <div class="score_breakdown">                    
                   <h2>Social Score</h2>
+                  <h3>{{d["social"]}}TBD</h3>
                   <h2>Match Score</h2>
+                  <h3>{{d["match"]}}TBD</h3>
                 </div>
 
                 <div class="char">
@@ -70,9 +71,8 @@
                   
                 <div class="ratings">
                   <h2>Build Score</h2>
-                  <h2>(Out of 5)</h2>
-                  <p>Score: {{d["rating"]}}</p>
-                  <p>How was this result?</p>                  
+                  <p>Score: {{d["rating"]|round(2)}} out of 5</p>
+                  <h3>How was this result?</h3>                  
                   <div class="rates">
                   {% for n in range(1,6)%}
                     <div class="star" id = "star-{{n}}">&#8902;</div>
