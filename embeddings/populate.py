@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.getcwd())
-from data_tools import *
+from .data_tools import *
 from nltk.tokenize import sent_tokenize
 from app.irsystem.models.database import *
 from sklearn.feature_extraction.text import TfidfVectorizer
