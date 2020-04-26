@@ -25,7 +25,6 @@ class JokeForm extends React.Component {
     }
 
     componentDidMount() {
-        console.log("FORM COMPDIDMOUNT")
             axios({
                 method: 'GET',
                 url: `http://localhost:5000/api/cat-options`

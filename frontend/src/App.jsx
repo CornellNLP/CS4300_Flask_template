@@ -15,7 +15,7 @@ import JokeResults from './components/JokeResults';
 
 // import { Button, Checkbox, Form } from 'semantic-ui-react'
 import { Row, Col, Container } from 'react-bootstrap'
-import {CircularProgress} from '@material-ui/core'
+import { Dimmer, Loader} from 'semantic-ui-react'
 
 class App extends React.Component {
   constructor(props) {
@@ -26,7 +26,8 @@ class App extends React.Component {
 
       category: [],
       score: '',
-      search: ''    }
+      search: ''    
+    }
   }
 
   componentDidMount() {
@@ -80,10 +81,7 @@ class App extends React.Component {
   }
 
   render() {
-
-   
-      return (
-      
+    if (this.state.isLoaded) {return (
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -98,13 +96,18 @@ class App extends React.Component {
         </Row>
         <Row>
           <Col className="jokes-col">
-              {this.state.isLoaded ? <JokeResults jokes={this.state.jokes} /> : <p> Loading... </p>}
+             <JokeResults jokes={this.state.jokes}/>
           </Col>
         </Row>
       </Container >
       )
-  }
+   }
+   else return (
+      <Dimmer active inverted>
+        <Loader>Loading</Loader>
+      </Dimmer>
+      )
+   }
 }
-
 
 export default App;
