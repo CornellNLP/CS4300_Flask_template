@@ -29,7 +29,7 @@
           <h3>Welcome to Character Crafter, an easy tool for finding class and subclass
             builds for the fantasy game DND 5th edition based on YOUR needs! </h3>
           <h3>A character's strengths and weaknesses are largely defined by their class.
-            This tool searches for you with just a few keywords. 
+            This tool searches for you with just a few keywords.
             For matches, describe the character you want to play in a few words.</h3>
         </main>
         <form class="form-inline global-search">
@@ -44,7 +44,7 @@
           <div class="backing">
             <h1>Play your game as: </h1><h2> {{output_message}}</h2>
           </div>
-          
+
           {% if data[0]["rating"] <= 0.12%}
           <div class="backing">
             <h2>Sorry, we didn't find any meaningful results.</h2>
@@ -56,11 +56,11 @@
             {% for d in data %}
               <!--<p>{{d}}</p>-->
               <div class = "result">
-                <div class="score_breakdown">                    
+                <div class="score_breakdown">
                   <h2>Social Score</h2>
                   <h3>{{d["social"]}}TBD</h3>
                   <h2>Match Score</h2>
-                  <h3>{{d["match"]}}TBD</h3>
+                  <h3>{{d["match"]}}/5</h3>
                 </div>
 
                 <div class="char">
@@ -68,11 +68,11 @@
                   <p>{{d["flavor"]}}</p>
                   <!--this should be shorter, so even though it has less width, won't look like a block-->
                 </div>
-                  
+
                 <div class="ratings">
                   <h2>Build Score</h2>
                   <p>Score: {{d["rating"]|round(2)}} out of 5</p>
-                  <h3>How was this result?</h3>                  
+                  <h3>How was this result?</h3>
                   <div class="rates">
                   {% for n in range(1,6)%}
                     <div class="star" id = "star-{{n}}">&#8902;</div>
@@ -83,7 +83,7 @@
               {% endfor %}
             </div>
             {% endif %}
-          
+
         {% endif %}
         </form>
     </body>

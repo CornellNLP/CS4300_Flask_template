@@ -103,7 +103,8 @@ def search():
 			rdict = dict()
 			rdict["class"] = cscr[0]
 			rdict["flavor"] = flavor_tot
-			rdict["rating"] = rating
+			rdict["rating"] = rating*5/2
+			rdict["match"] = round(rating*5,2)
 			ret.append(rdict)
 
 		data = ret
