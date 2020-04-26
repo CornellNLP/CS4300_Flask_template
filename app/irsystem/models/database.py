@@ -5,11 +5,16 @@ from app import db
 class Drink(db.Model):
     __tablename__ = 'drink'
     name = db.Column(db.Text(), primary_key=True)
-    description = db.Column(db.Text(), nullable=False)
+    description = db.Column(db.Text(), nullable=True)
     vbytes = db.Column(db.LargeBinary(), nullable=False)
     type = db.Column(db.Text(), nullable=False)
-    price = db.Column(db.Integer(), nullable=True)
+    price = db.Column(db.Float(), nullable=True)
     origin = db.Column(db.Text(), nullable=True)
+    abv = db.Column(db.Float(), nullable=True)
+    rating = db.Column(db.Text(), nullable=True)
+    reviews = db.Column(db.Text(), nullable=True)
+    url = db.Column(db.Text(), nullable=True)
+    base = db.Column(db.Text(), nullable=True)
 
     def __repr__(self):
         return '<Drink {}>'.format(self.name)
