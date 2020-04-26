@@ -40,6 +40,7 @@ def search():
 		data = []
 		output_message = ''
 	else:
+		query = query.lower()
 		output_message = query
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
