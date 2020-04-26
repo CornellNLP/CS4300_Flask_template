@@ -51,9 +51,13 @@
                         <ul class="list-group">
                             {% for d in data %}
                             <li class="list-group-item">
-                                <a href="https://www.reddit.com/r/{{d['subreddit']}}/submit" target="_blank">
-                                    r/{{d['subreddit']}}
-                                </a>
+                                <div class="tooltip-container">
+                                    <a href="https://www.reddit.com/r/{{d['subreddit']}}/submit" target="_blank">
+                                        r/{{d['subreddit']}}
+                                    </a>
+                                    <span class="tooltip-text">{{d['description']}}<br><br>Similarity:
+                                        {{d['score']}}</span>
+                                </div>
                             </li>
                             {% endfor %}
                             {% endif %}
