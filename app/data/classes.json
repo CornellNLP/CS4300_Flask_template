@@ -13,6 +13,26 @@
             "subclass":"Path of the Totem Warrior",
             "source":"phb",
             "flavor":"The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage. Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist. "
+          },
+          {
+            "subclass":"Path of the Battlerager",
+            "source":"scag",
+            "flavor":"Known as Kuldjargh (literally \"axe idiot\") in Dwarvish, battleragers are dwarf followers of the gods of war and take the Path of the Battlerager. They specialize in wearing bulky, spiked armor and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle ."
+          },
+          {
+            "subclass":"Path of the Storm Herald",
+            "source":"xgte",
+            "flavor":"All barbarians harbor a fury within. Their rage grants them superior strength, durability, and speed. Barbarians who follow the Path of the Storm Herald learn to trans form that rage into a mantle of primal magic, which swirls around them. When in a fury, a barbarian of this path taps into the forces of nature to create powerful magical effects. Storm heralds a re typically elite champions who train alongside druids, rangers, and others sworn to protect nature. Other storm heralds hone their craft in lodges in regions wracked by storms, in the frozen reaches at the world's end, or deep in the hottest deserts."
+          },
+          {
+            "subclass":"Path of the Zealot",
+            "source":"xgte",
+            "flavor":"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots - warriors who channel their rage into powerful displays of divine power."
+          },
+          {
+            "subclass":"Path of the Ancestral Guardian",
+            "source":"xgte",
+            "flavor":"Some barbarians hail from cultures that revere their ancestors. These tribes teach that the warriors of the past linger in the world as mighty spirits, who can guide and protect the living. When a barbarian who follows this path rages, the barbarian contacts the spirit world and calls on these guardian spirits for aid. Barbarians who draw on their ancestral guardians can better fight to protect their tribes and their allies. In order to cement ties to their ancestral guardians, barbarians who follow this path cover themselves in elaborate tattoos that celebrate their ancestors' deeds. These tattoos tell sagas of victories against terrible monsters and other fearsome rivals."
           }
         ]
     },
@@ -29,6 +49,21 @@
             "subclass":"College of Valor",
             "source":"phb",
             "flavor":"Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn't pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old. "
+          },
+          {
+            "subclass":"College of Glamour",
+            "source":"xgte",
+            "flavor":"The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards a re so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, misusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors."
+          },
+          {
+            "subclass":"College of Swords",
+            "source":"xgte",
+            "flavor":"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. Though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right."
+          },
+          {
+            "subclass":"College of Whispers",
+            "source":"xgte",
+            "flavor":"Most folk are happy to welcome a bard into their midst. Bards of the College of Whispers use this to their advantage. They appear to be like other bards , sharing news, singing songs, and telling tales to the audiences they gather. In truth, the College of Whispers teaches its students that they are wolves among sheep. These bards use their knowledge and magic to uncover secrets and turn them against others through extortion and threats . "
           }
       ]
     },
@@ -75,6 +110,21 @@
           "subclass":"War Domain",
           "source":"phb",
           "flavor":"War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as Torm, Heironeous, and Kiri-Jolith) as well as gods of destruction and pillage (such as Erythnul, the Fury, Gruumsh, and Ares) and gods of conquest and domination (such as Bane, Hextor, and Maglubiyet). Other war gods (such as Tempus, Nike, and Nuada) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance. "
+        },
+        {
+          "subclass":"Arcana Domain",
+          "source":"scag",
+          "flavor":"Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility that comes with a special understanding of the nature of reality. Other gods of Arcana see magic as pure power, to be used as its wielder sees fit. The gods of this domain are often associated with knowledge, as learning and arcane power tend to go hand-in-hand. In the Realms, deities of this domain include Azuth and Mystra , as well as Corellon Larethian of the elven pantheon. In other worlds, this domain includes Hecate, Math Mathonwy, and Isis; the triple moon gods of Solinari , Lunitari, and Nuitari of Krynn; and Boccob, Vecna, and WeeJas of Greyhawk."
+        },
+        {
+          "subclass":"Forge Domain",
+          "source":"xgte",
+          "flavor":"The gods of the forge are patrons of artisans who work with metal, from a humble blacksmith who keeps a village in horseshoes and plow blades to the mighty elf artisan whose diamond-tipped arrows of mithral have felled demon lords. The gods of the forge teach that, with patience and hard work, eve n the most intractable meta l can be transformed from a lump of ore to a beautifully wrought object. Clerics of these deities search for objects lost to the forces of darkness, liberate mines overrun by ores, and uncover rare and wondrous mater ia ls necessary to create potent magic items. Followers of these gods take great pride in their work, and they are willing to craft and use heavy armor and powerful weapons to protect them. Deities of this domain include Gond , Reorx, Onatar, Moradin, Hephaestus, and Goibhniu."
+        },
+        {
+          "subclass":"Grave Domain",
+          "source":"xgte",
+          "flavor":"Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse. To desecrate the peace of the dead is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Os iris . Followers of these deities seek to put wandering spirits to rest, destroy the undead, and ease the suffering of the dying. Their magic also allows them to stave off death for a time, particularly for a person w ho still has some great work to accomplish in the world. This is a delay of death, not a denial of it, for death will eventually get its due."
         }
       ]
     },
@@ -91,6 +141,16 @@
           "subclass":"Circle of the Moon",
           "source":"phb",
           "flavor":"Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood. "
+        },
+        {
+          "subclass":"Circle of Dreams",
+          "source":"xgte",
+          "flavor":"Druids who are members of the Circle of Dreams hail from regions that have strong ties to the Feywild and its dreamlike realms. The druids' guardianship of the natural world makes for a natural alliance between them and good-aligned fey. These druids seek to fill the world with dreamy wonder. Their magic mends wounds and brings joy to downcast hearts, and the realms they protect are gleaming, fruitful places, where dream and reality blur together and where the weary can find rest."
+        },
+        {
+          "subclass":"Circle of the Shepherd",
+          "source":"xgte",
+          "flavor":"Druids of the Circle of the Shepherd commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid . These druids recognize that all living things play a role in the natural world, yet they focus on protecting animals and fey creatures that have difficulty defending themselves. Shepherds, as they are known, see such creatures as their charges. They ward off monsters that threaten them, rebuke hunters w ho kill more prey than necessary, and prevent civilization from encroaching on rare animal habitats and on sites sacred to the fey. Many of these druids are happiest far from cities and towns, content to spend their days in the company of animals and the fey creatures of the wilds."
         }
       ]
     },
@@ -112,6 +172,26 @@
           "subclass":"Eldritch Knight",
           "source":"phb",
           "flavor": "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook. "
+        },
+        {
+          "subclass":"Purple Dragon Knight",
+          "source":"scag",
+          "flavor": "Purple Dragon knights are warriors who hail from the kingdom of Cormyr. Pledged to protect the crown, they take the fight against evil beyond their kingdom's borders. They are tasked with wandering the land as knights errant, relying on their judgment, bravery, and fidelity to the code of chivalry to guide them in defeating evildoers. A Purple Dragon knight inspires greatness in others by committing brave deeds in battle. The mere presence of a knight in a hamlet is enough to cause some ores and bandits to seek easier prey. A lone knight is a skilled warrior, but a knight leading a band of allies can transform even the most poorly equipped militia into a ferocious war band. A knight prefers to lead through deeds, not words. As a knight spearheads an attack, the knight's actions can awaken reserves of courage and conviction in allies that they never suspected they had."
+        },
+        {
+          "subclass":"Arcane Archer",
+          "source":"xgte",
+          "flavor":"An Arcane Archer studies a unique elven method of archery that weaves magic into attacks to produce supernatural effects. Arcane Archers are some of the most elite warriors among the elves. They stand watch over the fringes of elven domains, keeping a keen eye out for trespassers and using magic-infused arrows to defeat monsters and invade rs before they can reach elven settlements . Over the centuries, the methods of these elf archers have been learned by members of other races who can also balance arcane aptitude with archery."
+        },
+        {
+          "subclass":"Cavalier",
+          "source":"xgte",
+          "flavor":"The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure."
+        },
+        {
+          "subclass":"Samurai",
+          "source":"xgte",
+          "flavor":"The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A Samurai's resolve is nearly unbreakable, and the enemies in a Samurai's path have two choices: yield or die fighting."
         }
       ]
     },
@@ -133,6 +213,26 @@
           "subclass":"Way of the Four Elements",
           "source":"phb",
           "flavor":"You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together. Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves. "
+        },
+        {
+          "subclass":"Way of the Long Death",
+          "source":"scag",
+          "flavor":"Monks of the Way of the Long Death are obsessed with the meaning and mechanics of dying. They capture creatures and prepare elaborate experiments to capture, record, and understand the moments of their demise. They then use this knowledge to guide their understanding of martial arts, yielding a deadly fighting style."
+        },
+        {
+          "subclass":"Way of the Sun Soul",
+          "source":"scag",
+          "flavor":"Monks of the Way of the Sun Soul learn to channel their own life energy into searing bolts of light. They teach that meditation can unlock the ability to unleash the indomitable light shed by the soul of every living creature."
+        },
+        {
+          "subclass":"Way of the Kensei",
+          "source":"xgte",
+          "flavor":"Monks of the Way of the Kensei train relentlessly with their weapons, to the point where the weapon becomes an extension of the body. Founded on a mastery of sword fighting, the tradition has expanded to include many different weapons. A kensei sees a weapon in much the same way a calligrapher or painter regards a pen or brush. Whatever the weapon, the kensei views it as a tool used to express the beauty and precis ion of the martial arts. That such mastery makes a kensei a peerless warrior is but a side effect of intense devotion , practice, and study."
+        },
+        {
+          "subclass":"Way of the Drunken Master",
+          "source":"xgte",
+          "flavor":"The Way of the Drunken Master teaches its students to move with the jerky, unpredictable movements of a drunkard. A drunken master sways, tottering on unsteady feet, to present what seems like an incompetent combatant who proves frustrating to engage. The drunken master's erratic s tumbles conceal a carefully executed dance of blocks, parries, advances, attacks, and retreats. A drunken master often enjoys playing the fool to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the drunken master can be a maddening, masterful foe."
         }
       ]
     },
@@ -159,6 +259,21 @@
           "subclass":"Oathbreaker",
           "source":"dmg",
           "flavor":"An Oathbreaker is a paladin who breaks his or her sacred oaths to pursue some dark ambition or serve an evil power. Whatever light burned in the paladin's heart has been extinguished. Only darkness remains. A paladin must be evil and at least 3rd level to become an Oathbreaker. The paladin replaces the features specific to his or her Sacred Oath with Oathbreaker features."
+        },
+        {
+          "subclass":"Oath of the Crown",
+          "source":"scag",
+          "flavor":"The Oath of the Crown is sworn to the ideals of civilization, be it the spirit of a nation, fealty to a sovereign, or service to a deity of law and rulership. The paladins who swear this oath dedicate themselves to serving society and, in particular, the just laws that hold society together. These paladins are the watchful guardians on the walls, standing against the chaotic tides of barbarism that threaten to tear down all that civilization has built, and are commonly known as guardians, exemplars, or sentinels. Often, paladins who swear this oath are members of an order of knighthood in service to a nation or a sovereign, and undergo their oath as part of their admission to the order's ranks. The tenets of the Oath of the Crown are often set by the sovereign to which their oath is sworn, but generally emphasize the following tenets. Law. The law is paramount. It is the mortar that holds the stones of civilization together, and it must be respected. Loyalty. Your word is your bond. Without loyalty, oaths and laws are meaningless. Courage. You must be willing to do what needs to be done for the sake of order, even in the face of overwhelming odds. If you don't act, then who will? Responsibility. You must deal with the consequences of your actions, and you are responsible for fulfilling your duties and obligations."
+        },
+        {
+          "subclass":"Oath of Conquest",
+          "source":"xgte",
+          "flavor":"The Oath of Conquest calls to paladins who seek glory in battle and the subjugation of their enemies. It isn't enough for these paladins to establish order. They must crush the forces of chaos. Sometimes called knight tyrants or iron mongers, those who swear this oath gather into grim orders that serve gods or philosophies of war and well-ordered might. Some of these paladins go so far as to consort with the powers of the Nine Hells, valuing the rule of law over the balm of mercy. The archdevil Bel, warlord of Avernus, counts many of these paladins- called hell knights- as his most ardent supporters. Hell knights cover their armor with trophies taken from fallen enemies, a grim-warning to any w ho dare oppose them and the decrees of their lords. These knights are often most fiercely resisted by other paladins of this oath, who believe that the hell knights have wandered too far into darkness. A paladin who takes this oath has the tenets of conquest seared on the upper arm. Douse the Flame of Hope. It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies' will to fight is shattered forever. A blade can end a life. Fear can end an empire. Rule with an Iron Fist. Once you have conquered, tolerate no dissent. Your word is law. Those who obey it shall be favored. Those who defy it shall be punished as an example to all who might follow. Strength Above All. You shall rule until a stronger one arises. Then you must grow mightier and meet the challenge, or fall to your own ruin."
+        },
+        {
+          "subclass":"Oath of Redemption",
+          "source":"xgte",
+          "flavor":"The Oath of Redemption sets a paladin on a difficult path, one that requires a holy warrior to use violence only as a last resort. Paladins who dedicate themselves to this oath believe that any person can be redeemed and that the path of benevolence and justice is one that anyone can walk. These paladins face evil creatures in the hope of turning their foes to the light, and they slay their enemies only when such a deed will clearly save other lives. Paladins w ho follow this path are known as redeemers. While redeemers are idealists, they are no fools. Redeemers know that undead, demons, devils, and other supernatural threats can be inherently evil. Against such foes, paladins who swear this oath bring the full wrath of their weapons and spells to bear. Yet the redeemers s till pray that, one day, even creatures of wickedness will invite their own redemption. The tenets of the Oath of Redemption hold a paladin to a high standard of peace and justice. Peace. Violence is a weapon of last resort. Diplomacy and understanding are the path s to long-lasting peace. Innocence. All people begin life in a n innocent state, and it is their environment or the influence of dark forces that drives them to evil. By setting the proper example, and working to heal the wounds of a deeply flawed world, you can set anyone o n a righteous path. Patience. Change takes time. Those who have walked the path of the wicked must be given reminders to keep them honest and true. Once you have planted the seed of righteousness in a creature, you must work day after day to allow that seed to survive and flourish. Wisdom. Your heart and mind must stay clear, for eventually you will be forced to admit defeat. While every creature can be redeemed, some are so far along the path of evil that you have no choice but to end their lives for the greater good. Any such action must be carefully weighed and the consequences fully understood, but once you have made the decision, follow through with it knowing your path is just."
         }
       ]
     },
@@ -175,6 +290,21 @@
           "subclass":"Beast Master",
           "source":"phb",
           "flavor":"The Beast Master archetype embodies an extraordinary friendship between the ranger and a special beast. "
+        },
+        {
+          "subclass":"Horizon Walker",
+          "source":"xgte",
+          "flavor":"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse-especially benevolent dragons, fey, and elementals- that work to preserve life and the order of the planes."
+        },
+        {
+          "subclass":"Monster Slayer",
+          "source":"xgte",
+          "flavor":"You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes."
+        },
+        {
+          "subclass":"Gloom Stalker",
+          "source":"xgte",
+          "flavor":"Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims . Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows."
         }
       ]
     },
@@ -196,6 +326,26 @@
           "subclass":"Arcane Trickster",
           "source":"phb",
           "flavor":"Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers. "
+        },
+        {
+          "subclass":"Mastermind",
+          "source":"scag",
+          "flavor":"Your focus is on people and on the influence and secrets they have. Many spies, courtiers, and schemers follow this archetype, leading lives of intrigue. Words are your weapons as often as knives or poison, and secrets and favors are some of your favorite treasures. "
+        },
+        {
+          "subclass":"Swashbuckler",
+          "source":"scag",
+          "flavor":"You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype. A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent."
+        },
+        {
+          "subclass":"Inquisitive",
+          "source":"xgte",
+          "flavor":"As an archetypal Inquisitive, you excel at rooting out secrets and unraveling mysteries. You rely on your sharp eye for detail, but also on your finely honed ability to read the words and deeds of other creatures to determine their true intent. You excel at defeating creatures that hide among and prey upon ordinary folk, and your mastery of lore and your keen deductions make you well equipped to expose and end hidden evils."
+        },
+        {
+          "subclass":"Scout",
+          "source":"xgte",
+          "flavor":"You are skilled in stealth and surviving far from the streets of a city, allowing you to scout ahead of your companions during expeditions. Rogues who embrace this archetype are at home in the wilderness and among barbarians and rangers, and many Scouts serve as t he eyes and ears of war bands. Ambusher, spy, bounty hunter- these are just a few of the roles that Scouts assume as they range the world."
         }
       ]
     },
@@ -212,6 +362,21 @@
           "subclass":"Wild Magic",
           "source":"phb",
           "flavor":"Your innate magic comes from the forces of chaos that underlie the order of creation. You might have endured exposure to raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the Far Realm. Perhaps you were blessed by a fey being or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause. However it came to be, this magic churns within you, waiting for any outlet "
+        },
+        {
+          "subclass":"Storm Sorcery",
+          "source":"phb",
+          "flavor":"Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as vaati or djinn. Whatever the case, the magic of the storm permeates your being. Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats."
+        },
+        {
+          "subclass":"Divine Soul",
+          "source":"xgte",
+          "flavor":"Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and sent to fight in a god's name. Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen vessel of divine magic."
+        },
+        {
+          "subclass":"Shadow Sorcerer",
+          "source":"xgte",
+          "flavor":"You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it."
         }
       ]
     },
@@ -233,6 +398,21 @@
           "subclass":"Great Old One",
           "source":"phb",
           "flavor":"Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to draw your magic from it. Entities of this type include Ghaunadar, called That Which Lurks; Tharizdun, the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable beings. "
+        },
+        {
+          "subclass":"Undying",
+          "source":"scag",
+          "flavor":"Death holds no sway over your patron, who has unlocked the secrets of everlasting life, although such a prize- like all power- comes at a price. Once mortal, the Undying has seen mortal lifetimes pass like the seasons, like the flicker of endless days and nights. It has the secrets of the ages to share, secrets of life and death. Beings of this sort include Vecna, Lord of the Hand and the Eye; the dread Iuz; the lich-queen Vol; the Undying Court of Aerenal; Vlaakith, lich-queen of the githyanki; and the deathless wizard Fistandantalus."
+        },
+        {
+          "subclass":"Celestial",
+          "source":"xgte",
+          "flavor":"Your patron is a powerful being of the Upper Planes. You have bound yourself to an ancient empyrean, solar, ki-rin, unicorn, or other entity that resides in the planes of everlasting bliss. Your pact with that being allows you to experience the barest touch of the holy light that illuminates the multiverse."
+        },
+        {
+          "subclass":"Hexblade",
+          "source":"xgte",
+          "flavor":"You have made your pact with a mysterious entity from the Shadowfell - a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting."
         }
       ]
     },
@@ -279,6 +459,16 @@
           "subclass":"Necromancy",
           "source":"phb",
           "flavor":"The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies. "
+        },
+        {
+          "subclass":"Bladesinging",
+          "source":"phb",
+          "flavor":"Bladesingers are elves who bravely defend their people and lands. They are elf wizards who master a school of sword fighting grounded in a tradition of arcane magic. In combat, a bladesinger uses a series of intricate, elegant maneuvers that fend off harm and allow the bladesinger to channel magic into devastating attacks and a cunning defense. "
+        },
+        {
+          "subclass":"War Magic",
+          "source":"xgte",
+          "flavor":"A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster's spells , while also providing methods for wizards to bolster their own defenses. Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents' attempts to counterattack. War mages are also adept at turning other spellcasters magical energy against them."
         }
       ]
     }
