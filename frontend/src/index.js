@@ -5,14 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import SampleFetch from './components/SampleFetch';
-
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={App} />
-      {/* <Route path="/sample" component={SampleFetch} /> */}
+      <Route path="/" component={App} />  
     </Switch>
   </BrowserRouter>, document.getElementById('root')
 );

@@ -7,6 +7,7 @@ import './css/main.css';
 import './css/App.css';
 import AutoCompleteText from './components/AutoCompleteText';
 import categories from './images/categories';
+import scores from './images/scores'
 
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'

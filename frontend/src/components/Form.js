@@ -14,14 +14,18 @@ class JokeForm extends React.Component {
             isLoaded: false,
             cat_options: [],         
 
-            categories: [], 
-            search: null, 
-            score: null, 
+            categories: this.props.categories, 
+            search: this.props.search, 
+            score: this.props.score, 
+            
+            clickSubmit: false, 
+            query: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
+        console.log("FORM COMPDIDMOUNT")
             axios({
                 method: 'GET',
                 url: `http://localhost:5000/api/cat-options`
@@ -44,7 +48,6 @@ class JokeForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-
         const { search, categories, score } = this.state
 
         const params = new URLSearchParams()
@@ -54,15 +57,15 @@ class JokeForm extends React.Component {
         categories.forEach(cat => {
             params.append("category", cat);
         })
-    }
+        }
 
         if (this.state.score != null) params.append("score", score)
 
         console.log(params.toString())
-        const url = '/?'+params.toString()
+        const url = '?'+params.toString()
         this.props.history.push({
             pathname: '/',
-            search: '?search=Bar'
+            search: url
         })
     }
 
@@ -82,10 +85,6 @@ class JokeForm extends React.Component {
                 value: score
             })
         );
-
-        console.log(this.props.search)
-        console.log(this.props.categories)
-
         return (
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Input

@@ -8,12 +8,10 @@ import './css/App.css';
 
 // images, lists
 import logo from './images/operator.png';
-import scores from './images/scores';
 
 // components
 import Form from './components/Form'
 import JokeResults from './components/JokeResults';
-import AutoCompleteText from './components/AutoCompleteText';
 
 // import { Button, Checkbox, Form } from 'semantic-ui-react'
 import { Row, Col, Container } from 'react-bootstrap'
@@ -26,32 +24,35 @@ class App extends React.Component {
       isLoaded: false,
       jokes: [],
 
-      category: '',
+      category: [],
       score: '',
       search: ''    }
   }
 
   componentDidMount() {
-    const URLParams = new URLSearchParams(this.props.location.search)
+    this.fetchResults()
+  }
 
-    console.log(URLParams)
+  fetchResults(){ 
+    const URLParams = new URLSearchParams(window.location.search)
+
     const category_param = URLParams.getAll("category")
     const score_param = URLParams.get("score")
     const search_param = URLParams.get("search")
 
     axios({
-        method: 'GET',
-        url: `http://localhost:5000/api/search`,
-        params: URLParams
-      })
+      method: 'GET',
+      url: `http://localhost:5000/api/search`,
+      params: URLParams
+    })
       .then((response) => {
         this.setState({
-          isLoaded:true,
+          isLoaded: true,
           jokes: response.data.jokes,
-          
+
           category: category_param,
           score: score_param,
-          search : search_param
+          search: search_param
         })
       })
       .catch(err =>
@@ -59,8 +60,30 @@ class App extends React.Component {
       );
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const URLParams = new URLSearchParams(nextProps.location.search)
+
+    const category_param = URLParams.getAll("category")
+    const score_param = URLParams.get("score")
+    const search_param = URLParams.get("search")
+
+    const cat_bool = category_param.sort().toString() !== (prevState.category).sort().toString()
+    return cat_bool || score_param !== prevState.score || search_param !== prevState.search 
+      ? { isLoaded: false }
+      : null
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.state.isLoaded === false) {
+      this.fetchResults();
+    }
+  }
+
   render() {
-    if (this.state.isLoaded) return (
+
+   
+      return (
+      
       <Container>
         <Row className="justify-content-md-center">
           <Col>
@@ -75,15 +98,13 @@ class App extends React.Component {
         </Row>
         <Row>
           <Col className="jokes-col">
-            <JokeResults jokes={this.state.jokes} />
+              {this.state.isLoaded ? <JokeResults jokes={this.state.jokes} /> : <p> Loading... </p>}
           </Col>
         </Row>
       </Container >
       )
-      else return (
-       <p> loading ...</p>
-      )
   }
 }
+
 
 export default App;
