@@ -46,7 +46,7 @@ def search():
 		with open(p) as class_file:
 			f = json.load(class_file)
 
-		cdocs = [(c["class"], c["flavor"])for c in f["classes"]]
+		cdocs = [(c["class"], (c["flavor"]+c["advice"]))for c in f["classes"]]
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
 
@@ -74,7 +74,7 @@ def search():
 			for s in c["subclasses"]:
 				cs_key = c["class"]+":"+s["subclass"]
 				ratings_with_subclasses[cs_key]=0
-			sdocs = [(c["class"]+":"+s["subclass"], s["flavor"]) for s in c["subclasses"]]
+			sdocs = [(c["class"]+":"+s["subclass"], (s["flavor"]+s["advice"])) for s in c["subclasses"]]
 			for qt in qtokens:
 				rezp = rank_doc_similarity_to_word(qt, sdocs, 3)
 				if(rezp!="not in vocab"):
@@ -95,9 +95,10 @@ def search():
 			flavor_tot = ""
 			for c in f["classes"]:
 				if c["class"]==base_class:
+					flavor_tot+=c["advice"]
 					for s in c["subclasses"]:
 						if s["subclass"]==subclass:
-							flavor_tot+=(s["flavor"])
+							flavor_tot+=(s["advice"])
 			rdict = dict()
 			rdict["class"] = cscr[0]
 			rdict["flavor"] = flavor_tot
