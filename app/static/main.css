@@ -15,7 +15,7 @@
     padding: 30px;
     background: url('4d20.jpg'), white;
     background-size: contain;
-    background-attachment: fixed;
+    background-attachment: fixed;                                    
     /*image source:wallpapertag.com*/
   }
   .global-search {
@@ -31,9 +31,6 @@
   }
 }
 .topcorner{
-  /*position:absolute;
-  top:2%;
-  right:2%;*/
   text-align: right;
 }
 .btn{
@@ -42,6 +39,21 @@
 }
 .step-links a{
   color: #4285F4;
+}
+
+.backing{
+  background-color: #14032f;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.backing h2{
+  padding: 0px;
+}
+
+.back_div{
+  display: flex;
+  flex-direction: column;
 }
 
 /*general formatting*/
@@ -60,8 +72,10 @@ h1{
 }
 
 /*output formatting. no bootstrap, i have no idea it works*/
+
 .output{
-  display: inline;
+  display: flex;
+  flex-direction: column;
 }
 .result {
   display: flex;
@@ -86,15 +100,18 @@ h2{
 
 .char p{
   border-right: dashed;
+  border-left: dashed;
   padding-right: 15px;
+  padding-left: 15px;
 }
 
-.ratings{
+.ratings, .score_breakdown{
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
+
 
 /*user ratings*/
 .rates{
@@ -105,5 +122,9 @@ h2{
 }
 
 #starcolor{
+  color: gold;
+}
+
+#star:hover{
   color: gold;
 }

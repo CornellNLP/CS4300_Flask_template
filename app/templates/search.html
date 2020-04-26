@@ -29,8 +29,9 @@
           <h3>Welcome to Character Crafter, an easy tool for finding class and subclass
             builds for the fantasy game DND 5th edition based on YOUR needs! </h3>
           <h3>Normally, to create a character, you would have to laboriously search through a guidebook to 
-            find the right character type to play as. This tool searches for you with just a few keywords. 
-            For class and subclass matches, describe the character you want to play in a few words.</h3>
+            find the right character type to play as.  A character's strengths and weaknesses are largely defined by their class.
+            This tool searches for you with just a few keywords. 
+            For  matches, describe the character you want to play in a few words.</h3>
         </main>
         <form class="form-inline global-search">
             <div class="form-group">
@@ -40,34 +41,49 @@
         </form>
         <form class="form-inline global-search">
         {% if data %}
-          <h1>Play your game as: </h1><h2> {{output_message}}</h2>
-          <div class="output">
-            {% if data[0]["rating"] <= 0.12%}
+          <div class="back_div">
+          <div class="backing">
+            <h1>Play your game as: </h1><h2> {{output_message}}</h2>
+          </div>
+          
+          {% if data[0]["rating"] <= 0.12%}
+          <div class="backing">
             <h2>Sorry, we didn't find any meaningful results.</h2>
-            
-            {% else %}
+          </div>
+          </div>
+          {% else %}
+          </div>
+          <div class="output">
+            {% for d in data %}
+              <!--<p>{{d}}</p>-->
+              <div class = "result">
+                <div class="score_breakdown">                    
+                  <h2>Social Score</h2>
+                  <h2>Match Score</h2>
+                </div>
 
-              {% for d in data %}
-                <!--<p>{{d}}</p>-->
-                <div class = "result">
-                  <div class="char">
-                    <h2>{{d["class"]}}</h2>
-                    <p>{{d["flavor"]}}</p>
-                  </div>
-                  <div class="ratings">
-                    <h2>Build Score (Out of 5)</h2>
-                    <p>Score: {{d["rating"]}}</p>
-                    <p>How was this result?</p>
-                    <div class="rates">
-                    {% for n in range(1,6)%}
-                      <div id = "star-{{n}}">&#8902;</div>
-                    {% endfor %}
-                    </div>
+                <div class="char">
+                  <h2>{{d["class"]}}</h2>
+                  <p>{{d["flavor"]}}</p>
+                  <!--this should be shorter, so even though it has less width, won't look like a block-->
+                </div>
+                  
+                <div class="ratings">
+                  <h2>Build Score</h2>
+                  <h2>(Out of 5)</h2>
+                  <p>Score: {{d["rating"]}}</p>
+                  <p>How was this result?</p>                  
+                  <div class="rates">
+                  {% for n in range(1,6)%}
+                    <div class="star" id = "star-{{n}}">&#8902;</div>
+                  {% endfor %}
                   </div>
                 </div>
+              </div>
               {% endfor %}
-            {% endif %}
             </div>
+            {% endif %}
+          
         {% endif %}
         </form>
     </body>
