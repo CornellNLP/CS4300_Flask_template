@@ -20,11 +20,6 @@
             <h2 class="jumbotron-item">Where do I post?</h2>
             <p class="jumbotron-item"> Welcome to the Subreddit Recommender! Have you ever wanted to post on Reddit, but
                 didn’t know which subreddit to post in? Enter your post below to see which subreddit it belongs in!</p>
-            <!-- TODO: add link showing list of supported subreddits -->
-            <!-- <hr class="my-4">
-                <p>Currently supporting the 7,000 most popular subreddits
-                </p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">View list</a> -->
         </div>
         <div class="flex-container">
             <div class="column left-column">
@@ -38,43 +33,51 @@
                     </div>
                 </form>
             </div>
+            {% if data %}
             <div class="column middle-column">
                 <div id={{response}}>
-                    <h3 class="outputmessage">
-                        {{output_message}}
-                    </h3>
+                    <h3 class="outputmessage">{{result_header_message}}</h3>
                 </div>
-                {% if data %}
                 <ul class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action active" data-toggle="tab"
-                        href="#sub-{{data[0]['subreddit']}}">r/{{data[0]['subreddit']}}</a>
-                    {% for d in data[1:] %}
-                    <a class="list-group-item list-group-item-action" data-toggle="tab"
+                    <!-- <a class="list-group-item list-group-item-action active" data-toggle="tab"
+                        href="#sub-{{data[0]['subreddit']}}">r/{{data[0]['subreddit']}}</a> -->
+                    {% for d in data %}
+                    <a class="list-group-item list-group-item-action" id="list-{{d['subreddit']}}" data-toggle="tab"
                         href="#sub-{{d['subreddit']}}">r/{{d['subreddit']}}</a>
                     {% endfor %}
-                    {% endif %}
                 </ul>
             </div>
             <div class="column right-column">
-                {% if data %}
                 <div class="tab-content">
-                    <div id="sub-{{data[0]['subreddit']}}" class="tab-pane fade-in active">
-                        <h3 class="outputmessage" style="text-decoration: underline;"><a
-                                href="https://www.reddit.com/r/{{data[0]['subreddit']}}/submit" target="_blank">
-                                r/{{data[0]['subreddit']}}</a></h3>
-                        <p>{{data[0]['description']}}</p>
-                    </div>
-                    {% for d in data[1:] %}
+                    {% for d in data %}
                     <div id="sub-{{d['subreddit']}}" class="tab-pane fade-in">
                         <h3 class="outputmessage" style="text-decoration: underline;"><a
                                 href="https://www.reddit.com/r/{{d['subreddit']}}/submit" target="_blank">
                                 r/{{d['subreddit']}}</a></h3>
-                        <p>{{d['description']}}</p>
+                        <p>
+                            {% if d['description'] != '' %}
+                            {{d['description']}}
+                            {% else %}
+                            This subreddit doesn't have a description. How mysterious!
+                            {% endif %}
+                        </p>
                     </div>
                     {% endfor %}
-                    {% endif %}
                 </div>
             </div>
+            <script>
+                $("#sub-{{data[0]['subreddit']}}").addClass("active");
+                $("#list-{{data[0]['subreddit']}}").addClass("active");
+            </script>
+            {% else %}
+            {% if query %}
+            <div class="column error-column">
+                <h1 style="padding-top: 10px;">Oops!</h1>
+                <p style="padding: 20px;">{{error_message}}</p>
+                <img src="static/images/error.gif" style="width: 350px; height: auto;">
+            </div>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
 </body>

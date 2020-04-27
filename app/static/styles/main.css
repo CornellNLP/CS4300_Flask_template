@@ -15,9 +15,11 @@
     background: white;
     color: #222222;
     width: 100%;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .body {
+  font-family: 'Varela Round', sans-serif;
   padding-bottom: 15px;
   background-color: #dae0e6;
   color: #222222;
@@ -27,7 +29,6 @@
   background-color: #f5a7a7b7;
   margin-bottom: 0px;
   padding: 30px 15px;
-  font-family: 'Varela Round', sans-serif;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -107,6 +108,11 @@
   padding: 10px; 
 }
 
+.error-column {
+  width: 50%;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
@@ -121,15 +127,14 @@
 
 #title {
   font-size: 55px; 
-  font-family: 'Varela Round', sans-serif;
   text-align: center;
   line-height: 155px;
 }
 
 .outputmessage {
-  font-family: 'Varela Round', sans-serif;
   font-size: 20px; 
   text-align: left;
+  font-family: 'Varela Round', sans-serif;
 }
 
 div#response {
