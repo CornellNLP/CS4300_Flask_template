@@ -9,7 +9,8 @@ from scipy.sparse.linalg import svds
 from sklearn.preprocessing import normalize
 import scipy
 import numpy as np
-# from app.irsystem.controllers.word_forms import get_word_forms
+from app.irsystem.controllers.word_forms import get_word_forms
+from flask import json
 
 project_name = "Character Crafter: Turn DnD Concepts to DnD Characters"
 net_id = "Vineet Parikh (vap43), Matthew Shih (ms2628), Eli Schmidt (es797), Eric Sunderland(evs37), Eric Chen(ebc48)"
@@ -44,21 +45,22 @@ def search():
 		
 
 	else:
+		query = query.lower()
 		output_message = query
 		p = 'app/data/classes.json'
 		with open(p) as class_file:
 			f = json.load(class_file)
 
-		cdocs = [(c["class"], c["flavor"])for c in f["classes"]]
+		cdocs = [(c["class"], (c["flavor"]+c["advice"]))for c in f["classes"]]
 		qtokens = word_tokenize(query)
 		qtokens = [word for word in qtokens if not word in stopwords.words()]
 
-		# inflecs = []
-		# for w in qtokens:
-			# inf = get_word_forms(w)
-			# for k,v in inf.items():
-				# inflecs.extend(list(v))
-		# qtokens = list(set(inflecs))
+		inflecs = []
+		for w in qtokens:
+			inf = get_word_forms(w)
+			for k,v in inf.items():
+				inflecs.extend(list(v))
+		qtokens = list(set(inflecs))
 
 		base_ratings = dict()
 		ratings_with_subclasses = dict()
@@ -69,24 +71,24 @@ def search():
 			if(rezp!='not in vocab'):
 				for rp in rezp:
 					base_ratings[rp[0]]+=rp[1]
-		for rating in base_ratings.values():
-			if(len(qtokens)!=0):
-				rating /= len(qtokens)
+		if(len(qtokens)!=0):
+			for k, rating in base_ratings.items():
+				base_ratings[k] = rating/len(qtokens)
 
 		for c in f["classes"]:
 			for s in c["subclasses"]:
 				cs_key = c["class"]+":"+s["subclass"]
 				ratings_with_subclasses[cs_key]=0
-			sdocs = [(c["class"]+":"+s["subclass"], s["flavor"]) for s in c["subclasses"]]
+			sdocs = [(c["class"]+":"+s["subclass"], (s["flavor"]+s["advice"])) for s in c["subclasses"]]
 			for qt in qtokens:
-				rezp = rank_doc_similarity_to_word(qt, sdocs, 1)
+				rezp = rank_doc_similarity_to_word(qt, sdocs, 3)
 				if(rezp!="not in vocab"):
 					for rp in rezp:
 						ratings_with_subclasses[rp[0]]+=rp[1]
 		if(len(qtokens)!=0):
 			for k, rating in ratings_with_subclasses.items():
 				base_class = k.split(":")[0] # because that's what we did
-				ratings_with_subclasses[k] = rating/float(len(qtokens))+base_ratings[base_class]
+				ratings_with_subclasses[k] = (rating/float(len(qtokens))+base_ratings[base_class])/2
 
 		csc_rating_pairs = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
 		csc_rating_pairs = list(reversed(csc_rating_pairs))[:10]
@@ -98,13 +100,15 @@ def search():
 			flavor_tot = ""
 			for c in f["classes"]:
 				if c["class"]==base_class:
+					flavor_tot+=c["advice"]
 					for s in c["subclasses"]:
 						if s["subclass"]==subclass:
-							flavor_tot+=(s["flavor"])
+							flavor_tot+=(s["advice"])
 			rdict = dict()
 			rdict["class"] = cscr[0]
 			rdict["flavor"] = flavor_tot
-			rdict["rating"] = rating
+			rdict["rating"] = rating*5/2
+			rdict["match"] = round(rating*5,2)
 			ret.append(rdict)
 
 		data = ret
