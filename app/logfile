@@ -1,0 +1,24 @@
+2020-04-25 15:39:29.514 EDT [5356] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-25 15:39:29.518 EDT [5356] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-25 15:39:29.518 EDT [5356] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:39:29.519 EDT [5356] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-25 15:39:29.519 EDT [5356] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:39:29.519 EDT [5356] WARNING:  could not create listen socket for "localhost"
+2020-04-25 15:39:29.519 EDT [5356] FATAL:  could not create any TCP/IP sockets
+2020-04-25 15:39:29.520 EDT [5356] LOG:  database system is shut down
+2020-04-25 15:39:35.673 EDT [8576] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-25 15:39:35.677 EDT [8576] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-25 15:39:35.677 EDT [8576] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:39:35.677 EDT [8576] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-25 15:39:35.677 EDT [8576] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:39:35.678 EDT [8576] WARNING:  could not create listen socket for "localhost"
+2020-04-25 15:39:35.678 EDT [8576] FATAL:  could not create any TCP/IP sockets
+2020-04-25 15:39:35.678 EDT [8576] LOG:  database system is shut down
+2020-04-25 15:40:38.155 EDT [4080] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-25 15:40:38.159 EDT [4080] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-25 15:40:38.159 EDT [4080] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:40:38.160 EDT [4080] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-25 15:40:38.160 EDT [4080] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-25 15:40:38.160 EDT [4080] WARNING:  could not create listen socket for "localhost"
+2020-04-25 15:40:38.160 EDT [4080] FATAL:  could not create any TCP/IP sockets
+2020-04-25 15:40:38.160 EDT [4080] LOG:  database system is shut down

@@ -38,7 +38,11 @@ def search():
 	query = request.args.get('search')
 	if not query:
 		data = []
-		output_message = ''
+		'test'
+		output_message = [r[0] for r in(db.engine.execute("SELECT combinedrating FROM fullsubclassratings WHERE subclass IN ('Hexblade')"))]
+		print(output_message)
+		
+
 	else:
 		output_message = query
 		p = 'app/data/classes.json'

@@ -1,0 +1,112 @@
+2020-04-26 12:28:19.579 EDT [1260] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-26 12:28:19.583 EDT [1260] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-26 12:28:19.583 EDT [1260] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:28:19.584 EDT [1260] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-26 12:28:19.584 EDT [1260] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:28:19.584 EDT [1260] WARNING:  could not create listen socket for "localhost"
+2020-04-26 12:28:19.584 EDT [1260] FATAL:  could not create any TCP/IP sockets
+2020-04-26 12:28:19.585 EDT [1260] LOG:  database system is shut down
+2020-04-26 12:33:20.887 EDT [1020] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-26 12:33:20.891 EDT [1020] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-26 12:33:20.891 EDT [1020] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:33:20.892 EDT [1020] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-26 12:33:20.892 EDT [1020] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:33:20.892 EDT [1020] WARNING:  could not create listen socket for "localhost"
+2020-04-26 12:33:20.892 EDT [1020] FATAL:  could not create any TCP/IP sockets
+2020-04-26 12:33:20.892 EDT [1020] LOG:  database system is shut down
+2020-04-26 12:38:07.083 EDT [14816] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-26 12:38:07.087 EDT [14816] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-26 12:38:07.087 EDT [14816] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:38:07.088 EDT [14816] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-26 12:38:07.088 EDT [14816] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 12:38:07.088 EDT [14816] WARNING:  could not create listen socket for "localhost"
+2020-04-26 12:38:07.088 EDT [14816] FATAL:  could not create any TCP/IP sockets
+2020-04-26 12:38:07.089 EDT [14816] LOG:  database system is shut down
+2020-04-26 12:44:52.602 EDT [16176] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-26 12:44:52.606 EDT [16176] LOG:  listening on IPv6 address "::1", port 5432
+2020-04-26 12:44:52.606 EDT [16176] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-04-26 12:44:52.638 EDT [13880] LOG:  database system was shut down at 2020-04-26 12:44:44 EDT
+2020-04-26 12:44:52.660 EDT [16176] LOG:  database system is ready to accept connections
+2020-04-26 12:44:53.235 EDT [11100] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:54.359 EDT [7144] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:55.264 EDT [13972] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:56.278 EDT [2120] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:57.270 EDT [2476] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:58.251 EDT [9424] FATAL:  role "postgres" does not exist
+2020-04-26 12:44:59.273 EDT [13888] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:00.356 EDT [1740] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:01.263 EDT [8612] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:02.268 EDT [2924] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:03.249 EDT [15884] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:04.326 EDT [13512] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:05.217 EDT [15288] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:06.321 EDT [896] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:07.221 EDT [14148] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:08.257 EDT [13424] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:09.244 EDT [10748] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:10.259 EDT [2708] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:11.220 EDT [13796] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:12.265 EDT [15052] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:13.264 EDT [16232] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:14.253 EDT [12500] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:15.237 EDT [13520] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:16.263 EDT [3364] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:17.063 EDT [13448] FATAL:  database "erics" does not exist
+2020-04-26 12:45:17.263 EDT [13584] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:18.272 EDT [3636] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:19.261 EDT [3840] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:20.363 EDT [4396] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:21.358 EDT [6056] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:22.256 EDT [992] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:23.268 EDT [1148] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:24.271 EDT [6820] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:25.240 EDT [4160] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:26.282 EDT [11796] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:27.270 EDT [10404] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:28.296 EDT [1484] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:29.258 EDT [3504] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:30.270 EDT [9736] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:31.255 EDT [4560] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:32.257 EDT [13508] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:33.318 EDT [4148] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:34.205 EDT [12444] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:36.091 EDT [1552] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:36.181 EDT [15976] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:38.597 EDT [12212] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:38.680 EDT [1320] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:38.753 EDT [16252] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:38.790 EDT [13204] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:43.479 EDT [8732] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:43.504 EDT [2720] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:45.488 EDT [5860] FATAL:  role "postgres" does not exist
+2020-04-26 12:45:45.513 EDT [480] FATAL:  role "postgres" does not exist
+2020-04-26 12:46:06.312 EDT [12660] FATAL:  role "postgres" does not exist
+2020-04-26 12:46:55.015 EDT [11268] FATAL:  role "postgres" does not exist
+2020-04-26 12:47:59.400 EDT [13920] FATAL:  database "erics" does not exist
+2020-04-26 12:48:11.597 EDT [8136] FATAL:  role "postgres" does not exist
+2020-04-26 12:49:08.633 EDT [1920] FATAL:  role "postgres" does not exist
+2020-04-26 12:49:15.986 EDT [3248] FATAL:  role "postgres" does not exist
+2020-04-26 12:50:21.646 EDT [14440] FATAL:  role "postgres" does not exist
+2020-04-26 12:50:31.902 EDT [7816] FATAL:  role "postgres" does not exist
+2020-04-26 12:50:31.980 EDT [8680] FATAL:  role "postgres" does not exist
+2020-04-26 12:50:32.059 EDT [14856] FATAL:  role "postgres" does not exist
+2020-04-26 12:50:32.081 EDT [2260] FATAL:  role "postgres" does not exist
+2020-04-26 12:54:16.753 EDT [16176] LOG:  background worker "logical replication launcher" (PID 2856) was terminated by exception 0xC000013A
+2020-04-26 12:54:16.753 EDT [16176] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-04-26 12:54:16.754 EDT [16176] LOG:  terminating any other active server processes
+2020-04-26 12:54:16.756 EDT [16176] LOG:  statistics collector process (PID 15812) was terminated by exception 0xC000013A
+2020-04-26 12:54:16.756 EDT [16176] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-04-26 12:54:16.770 EDT [16176] LOG:  all server processes terminated; reinitializing
+2020-04-26 12:54:16.799 EDT [1720] LOG:  database system was interrupted; last known up at 2020-04-26 12:49:52 EDT
+2020-04-26 12:54:16.982 EDT [1720] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-04-26 12:54:16.985 EDT [1720] LOG:  redo starts at 0/1636970
+2020-04-26 12:54:16.985 EDT [1720] LOG:  invalid record length at 0/1636A58: wanted 24, got 0
+2020-04-26 12:54:16.985 EDT [1720] LOG:  redo done at 0/1636A20
+^C2020-04-26 13:02:26.763 EDT [15484] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1914, 64-bit
+2020-04-26 13:02:26.768 EDT [15484] LOG:  could not bind IPv6 address "::1": Permission denied
+2020-04-26 13:02:26.768 EDT [15484] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 13:02:26.768 EDT [15484] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2020-04-26 13:02:26.768 EDT [15484] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-04-26 13:02:26.769 EDT [15484] WARNING:  could not create listen socket for "localhost"
+2020-04-26 13:02:26.769 EDT [15484] FATAL:  could not create any TCP/IP sockets
+2020-04-26 13:02:26.769 EDT [15484] LOG:  database system is shut down
