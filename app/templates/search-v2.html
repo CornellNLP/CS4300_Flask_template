@@ -13,7 +13,7 @@
     }
 
     .background_img {
-      background-image: url(/static/background.jpg);
+      background-image: url(/static/board.jpg);
       position: fixed;
       left: 0;
       right: 0;
@@ -22,9 +22,10 @@
       background-attachment: fixed;
       background-size: cover;
       z-index: -100;
-      filter: blur(2px);
+      filter: blur(1px);
     }
 
+    /* 
     .results-table {
       margin-left: auto;
       margin-right: auto;
@@ -36,7 +37,8 @@
       padding: 0px 25px 0px 25px;
       text-align: center;
       vertical-align: middle;
-    }
+    } 
+    */
 
     .normal-title {
       font-size: 140%;
@@ -55,9 +57,23 @@
       margin: 0px 20px;
     }
 
+    /* this is meant for each category div; haven't tested yet */
+    .category {
+      align-content: center;
+      text-align: center;
+      padding: 20px;
+      margin: 0px 10px;
+      background-color: rgba(236, 187, 122, 0.8);
+      width: 100%;
+    }
+
     .form-group {
       margin: 20px;
       width: 90%;
+    }
+
+    .global-search .form-control {
+      margin: 0px 0px 0px 2px;
     }
 
     .global-search .form-text {
@@ -69,7 +85,7 @@
     }
 
     .global-search .form-box {
-      margin: 0px;
+      margin: 0px 2px 0px 15px;
       padding: 0px;
       width: 15px;
       height: 15px;
@@ -119,8 +135,27 @@
       </div>
 
       <div class="form-group">
+        <label id="res-input">Diet restrictions: </label>
+        <input id="res-input" type="text" name="res-foods" class="form-control form-text"
+          placeholder="e.g. 'nuts, milk, shrimp'">
+        <input type="hidden" name="version" value="2">
+      </div>
+
+      <div class="form-group">
         <label id="cal-input">Calorie limit: </label>
         <input id="cal-input" type="number" name="cal-limit" min=0 max=20000 class="form-control form-num">
+      </div>
+
+      <div class="form-group">
+        <label>Meal recommendations by category: </label>
+        <input type="checkbox" class="form-control form-box form-category" id="b-toggle">
+        <label id="b-toggle">Breakfast</label>
+
+        <input type="checkbox" class="form-control form-box form-category" id="l-toggle">
+        <label id="l-toggle">Lunch</label>
+
+        <input type="checkbox" class="form-control form-box form-category" id="d-toggle">
+        <label id="d-toggle">Dinner</label>
       </div>
 
       <div class="form-group">
@@ -129,12 +164,62 @@
       </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-info"> Make meal plan ! </button>
+        <button id="submit" type="submit" class="btn btn-info"> Make meal plan ! </button>
       </div>
 
     </form>
-    <div class="results-div">
+    <div id="results" class="results-div">
       <h1>{{output_message}}</h1>
+
+      <!-- CATEGORY GENERATION
+      <script>
+        $("#submit").click(function () {
+          var result = "#results";
+          var catHtml = '#catHtml';
+          var resultHtml = '';
+
+          if ($('.form-category:checkbox:checked').length > 0) {
+            for (c in checked) {
+              resultHtml += [catHtml].join("\n");
+            }
+          } else {
+            resultHtml += [catHtml].join("\n") + [catHtml].join("\n") + [catHtml].join("\n");
+          }
+
+          result.html(resultHtml);
+          return false;
+        });
+      </script>
+
+      SINGLE CATEGORY HTML
+      <div id="catHtml" class="category">
+        {% for i in range(data|length) %}
+        <p class="normal-title">{{i + 1}}. {{data[i]["title"]}}</p>
+        {% if data[i]["description"] is not none %}
+        <p><i>{{data[i]["description"]}}</i></p>
+        {% endif %}
+        {% if data[i]["calories"] is not none %}
+        <p><strong>Calories:</strong> {{data[i]["calories"]}}</p>
+        {% endif %}
+        {% if data[i]["fat"] is not none %}
+        <p><strong>Fat:</strong> {{data[i]["fat"]}} g</p>
+        {% endif %}
+        {% if data[i]["rating"] is not none %}
+        <p>
+          {% for i in range(data[i]["rating"] | int) %}
+          &#9733
+          {% endfor %}
+          {% for i in range(5 - data[i]["rating"] | int) %}
+          &#9734
+          {% endfor %}
+        </p>
+        <br>
+        {% endif %}
+        {% endfor %}
+      </div> 
+      -->
+
+      <!-- this is the original result display -->
       {% if data %}
       <br><br>
       {% for i in range(data|length) %}
@@ -161,23 +246,6 @@
       {% endif %}
       {% endfor %}
 
-      <!--
-        <table class="results-table">
-            {% for recipe_set in data %}
-            <tr>
-                {% for recipe in recipe_set %}
-                <td>
-                    <ul>
-                        <li class="normal-title">{{recipe["title"]}}</li>
-                        <li>Calories: {{recipe["calories"]}}</li>
-                        <li>Rating: {{recipe["rating"]}}</li>
-                    </ul>
-                </td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </table>
-    -->
       {% endif %}
     </div>
   </main>
