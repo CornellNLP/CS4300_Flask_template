@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="/static/bootstrap.min.css">
   <link rel="stylesheet" href="/static/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
     body {
       padding-top: 0px;
@@ -90,6 +91,14 @@
       width: 15px;
       height: 15px;
     }
+
+    .hidden {
+      display: none;
+    }
+
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -148,13 +157,13 @@
 
       <div class="form-group">
         <label>Meal recommendations by category: </label>
-        <input type="checkbox" class="form-control form-box form-category" id="b-toggle">
+        <input type="checkbox" class="form-control form-box form-category" id="b-toggle" name="breakfast">
         <label id="b-toggle">Breakfast</label>
 
-        <input type="checkbox" class="form-control form-box form-category" id="l-toggle">
+        <input type="checkbox" class="form-control form-box form-category" id="l-toggle" name="lunch">
         <label id="l-toggle">Lunch</label>
 
-        <input type="checkbox" class="form-control form-box form-category" id="d-toggle">
+        <input type="checkbox" class="form-control form-box form-category" id="d-toggle" name="dinner">
         <label id="d-toggle">Dinner</label>
       </div>
 
@@ -168,17 +177,129 @@
       </div>
 
     </form>
-    <div id="results" class="results-div">
-      <h1>{{output_message}}</h1>
+    <script>
+      function displayData() {
+        var resultDiv = $("#results");
+        var breakfast_data = JSON.parse($("#breakfast_data").text());
+        var lunch_data = JSON.parse($("#lunch_data").text());
+        var dinner_data = JSON.parse($("#dinner_data").text());
 
-      <!-- CATEGORY GENERATION
+        var resultHTML = "";
+
+        if (breakfast_data) resultHTML += $('#breakfastHtml').html();
+        if (lunch_data) resultHTML += $('#lunchHtml').html();
+        if (dinner_data) resultHTML += $('#dinnerHtml').html();
+
+        resultDiv.html(resultHTML);
+      }
+    </script>
+    <h1>{{output_message}}</h1>
+    <div id="results" class="results-div">
+      {% if breakfast_data or lunch_data or dinner_data %}
+      {% if breakfast_data %}
+      <div id="breakfastHtml" class="hidden">
+        <div class="category">
+          {% for i in range(breakfast_data|length) %}
+          <p class="normal-title">{{i + 1}}. {{breakfast_data[i]["title"]}}</p>
+          {% if breakfast_data[i]["description"] is not none %}
+          <p><i>{{breakfast_data[i]["description"]}}</i></p>
+          {% endif %}
+          {% if breakfast_data[i]["calories"] is not none %}
+          <p><strong>Calories:</strong> {{breakfast_data[i]["calories"]}}</p>
+          {% endif %}
+          {% if breakfast_data[i]["fat"] is not none %}
+          <p><strong>Fat:</strong> {{breakfast_data[i]["fat"]}} g</p>
+          {% endif %}
+          {% if breakfast_data[i]["rating"] is not none %}
+          <p>
+            {% for i in range(breakfast_data[i]["rating"] | int) %}
+            &#9733
+            {% endfor %}
+            {% for i in range(5 - breakfast_data[i]["rating"] | int) %}
+            &#9734
+            {% endfor %}
+          </p>
+          <br>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if lunch_data %}
+      <div id="lunchHtml" class="hidden">
+        <div class="category">
+          {% for i in range(lunch_data|length) %}
+          <p class="normal-title">{{i + 1}}. {{lunch_data[i]["title"]}}</p>
+          {% if lunch_data[i]["description"] is not none %}
+          <p><i>{{lunch_data[i]["description"]}}</i></p>
+          {% endif %}
+          {% if lunch_data[i]["calories"] is not none %}
+          <p><strong>Calories:</strong> {{lunch_data[i]["calories"]}}</p>
+          {% endif %}
+          {% if lunch_data[i]["fat"] is not none %}
+          <p><strong>Fat:</strong> {{lunch_data[i]["fat"]}} g</p>
+          {% endif %}
+          {% if lunch_data[i]["rating"] is not none %}
+          <p>
+            {% for i in range(lunch_data[i]["rating"] | int) %}
+            &#9733
+            {% endfor %}
+            {% for i in range(5 - lunch_data[i]["rating"] | int) %}
+            &#9734
+            {% endfor %}
+          </p>
+          <br>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if dinner_data %}
+      <div id="dinnerHtml" class="hidden">
+        <div class="category">
+          {% for i in range(dinner_data|length) %}
+          <p class="normal-title">{{i + 1}}. {{dinner_data[i]["title"]}}</p>
+          {% if dinner_data[i]["description"] is not none %}
+          <p><i>{{dinner_data[i]["description"]}}</i></p>
+          {% endif %}
+          {% if dinner_data[i]["calories"] is not none %}
+          <p><strong>Calories:</strong> {{dinner_data[i]["calories"]}}</p>
+          {% endif %}
+          {% if dinner_data[i]["fat"] is not none %}
+          <p><strong>Fat:</strong> {{dinner_data[i]["fat"]}} g</p>
+          {% endif %}
+          {% if dinner_data[i]["rating"] is not none %}
+          <p>
+            {% for i in range(dinner_data[i]["rating"] | int) %}
+            &#9733
+            {% endfor %}
+            {% for i in range(5 - dinner_data[i]["rating"] | int) %}
+            &#9734
+            {% endfor %}
+          </p>
+          <br>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <p id="breakfast_data" class="hidden">{{ breakfast_data | tojson }}</p>
+      <p id="lunch_data" class="hidden">{{ lunch_data | tojson }}</p>
+      <p id="dinner_data" class="hidden">{{ dinner_data | tojson }}</p>
+      <script>
+        displayData();
+      </script>
+
+      <!--
       <script>
         $("#submit").click(function () {
-          var result = "#results";
-          var catHtml = '#catHtml';
+          var result = $("#results");
+          var catHtml = $('#catHtml').html();
           var resultHtml = '';
+          var checked = $('.form-category:checkbox:checked');
 
-          if ($('.form-category:checkbox:checked').length > 0) {
+          if (checked.length > 0) {
             for (c in checked) {
               resultHtml += [catHtml].join("\n");
             }
@@ -190,36 +311,11 @@
           return false;
         });
       </script>
+    -->
 
-      SINGLE CATEGORY HTML
-      <div id="catHtml" class="category">
-        {% for i in range(data|length) %}
-        <p class="normal-title">{{i + 1}}. {{data[i]["title"]}}</p>
-        {% if data[i]["description"] is not none %}
-        <p><i>{{data[i]["description"]}}</i></p>
-        {% endif %}
-        {% if data[i]["calories"] is not none %}
-        <p><strong>Calories:</strong> {{data[i]["calories"]}}</p>
-        {% endif %}
-        {% if data[i]["fat"] is not none %}
-        <p><strong>Fat:</strong> {{data[i]["fat"]}} g</p>
-        {% endif %}
-        {% if data[i]["rating"] is not none %}
-        <p>
-          {% for i in range(data[i]["rating"] | int) %}
-          &#9733
-          {% endfor %}
-          {% for i in range(5 - data[i]["rating"] | int) %}
-          &#9734
-          {% endfor %}
-        </p>
-        <br>
-        {% endif %}
-        {% endfor %}
-      </div> 
-      -->
-
+      {% endif %}
       <!-- this is the original result display -->
+      <!--
       {% if data %}
       <br><br>
       {% for i in range(data|length) %}
@@ -247,6 +343,7 @@
       {% endfor %}
 
       {% endif %}
+    -->
     </div>
   </main>
 </body>

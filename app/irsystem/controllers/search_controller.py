@@ -2,9 +2,11 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from flask import request, jsonify
-from sqlalchemy import and_, or_
+from sqlalchemy import and_, or_, func
 from itertools import combinations
 import re
+import math
+from collections import Counter
 
 from app import db
 from app.irsystem.models import (
@@ -37,7 +39,7 @@ def tokenize(text):
 def build_inverted_index(rcps,field):
     """ Builds an inverted index from the recipe field.
     Field can be "title", "desc", "categories", "ingredients", or
-    "directions".
+    "directions", "meal_type".
     Arguments
     =========
     rcps: list of dicts.
@@ -50,14 +52,17 @@ def build_inverted_index(rcps,field):
         such that tuples with smaller doc_ids appear first:
         inverted_index[term] = [(d1, tf1), (d2, tf2), ...]
     """
-    # get list of unique tokens
     bofw = set()
-    for rec in rcps:
-        if rec:
-            if rec[field] is not None:
-                words = tokenize(rec[field])
-                for w in words:
-                    bofw.add(w)
+    # handling set case of meal_type
+    if field == "meal_type":
+        bofw = {"breakfast", "lunch", "dinner"}
+    else:
+        for rec in rcps:
+            if rec:
+                if rec[field] is not None:
+                    words = tokenize(rec[field])
+                    for w in words:
+                        bofw.add(w)
     
     # initialize inverted index
     inverted_index = dict.fromkeys(bofw,list())
@@ -185,94 +190,355 @@ def group_recipes(recipe_list,rsps,cal_lowbound,cal_upbound):
     return recipe_groups
 
 
+# cosine similarity
+# min_freq and max_freq don't seem to work right: 
+# min_freq excludes too many and max_freq excludes too few
+def compute_idf(inv_idx, doc_num, min_freq, max_freq):
+    """
+    creates a dict of doc-idf pairs
+    idf is calculated by:
+    log(n / (1+df)), where n is number of documents and df is document frequency
+    
+    params: { inv_idx: an inverted index, type Dict
+              doc_num: number of documents, type int
+              min_freq: minimum frequency to appear in idf, type float
+              max_freq: maximum frequency to appear in idf, type float
+            }
+    
+    returns: dict
+    """
+    idf_dict = dict()
+    for word in inv_idx.keys():
+        df = len(inv_idx[word])
+
+        #excludes too-common or not-common-enough terms
+        if (df / doc_num) >= min_freq and (df / doc_num) <= max_freq:
+            idf_dict[word] = math.log2(doc_num / (1 + df))
+    return idf_dict
+
+
+def compute_norms(idf_dict, inv_idx, doc_num):
+    """
+    returns a np array of document norms such that:
+    array[i] = the norm of document i
+    
+    params: { idf_dict: a dictionary of doc-idf pairings, type Dict
+              inv_idx: an inverted index, type Dict
+              doc_num: number of documents, type int
+            }
+            
+    returns: type np.array
+    """
+    norm_array = np.zeros(doc_num)
+    
+    #calculates sigma (tf*idf) ** 2
+    for word in idf_dict.keys():
+        for doc_id, tf in inv_idx[word]:
+            norm_array[doc_id] += (tf * idf_dict[word]) ** 2
+    return norm_array ** (1 / 2)
+
+
+def cosine_sim(query_words, inv_idx, norms, idf_dict, recipes):
+    """
+    returns a list of results by cosine similarity
+    performs a cosine search:
+    cossim = (q*d) / (||q||*||d||)
+    
+    params: { query: the user's search query, type string
+              inv_idx: an inverted index, type dict
+              norms: document norms as calculated above, type dict
+              idf_dict: term idf scores as calculated above, type dict
+              recipes: list of all recipes being considered
+            }
+            
+    returns: a list
+    """
+    # query vector and norm construction
+    q_vector = {}
+    q_norm = 0
+    
+    for word in query_words:
+        q_vector[word] = query_words.count(word)
+        q_norm += (q_vector[word] * (idf_dict[word] if word in idf_dict.keys() else 0)) ** 2
+        
+    q_norm = math.sqrt(q_norm)
+    
+    # intermediate dictionary used for calculating numerator (tf(q)*idf(q)*tf(d)*idf(d))
+    # key is doc id, value is numerator
+    inter_dict = {}
+    
+    # loops over words and documents
+    for word in set(query_words):
+        # filters out terms without idf scores
+        if word in idf_dict.keys():
+            for tup in inv_idx[word]:
+                if tup[0] in inter_dict.keys():
+                    inter_dict[tup[0]] += tup[1] * q_vector[word] * (idf_dict[word] ** 2)
+                else:
+                    inter_dict[tup[0]] = tup[1] * q_vector[word] * (idf_dict[word] ** 2)
+    # divides by denominator and constructs results list
+    results = []
+    for doc in inter_dict.keys():
+        num = inter_dict[doc]
+        results.append((doc, num / q_norm*norms[doc]))
+    
+    results.sort(key=lambda t: t[1], reverse=True)
+    recipe_ids = [id for id, _ in results[:10]]
+    recipes = [recipes[i] for i in recipe_ids]
+    return recipes
+
+
+def query_split(query, inv_idx_meal_types, inv_idx_ingrds):
+    """ Assumes query is at least three words.
+        If a query word is not in the ingredients, returns None.
+        
+        Returns: list with length query
+    """
+
+    query_words = tokenize(query)
+
+    qword_meal_counts = {} # query word : [# breakfast recipes, # lunch recipes, # dinner recipes]
+        
+    postings_brk = [tup[0] for tup in inv_idx_meal_types["breakfast"] ]
+    postings_lun = [tup[0] for tup in inv_idx_meal_types["lunch"] ]
+    postings_din = [tup[0] for tup in inv_idx_meal_types["dinner"] ]
+
+    # compute probabilties
+    for w in query_words:
+        if w not in inv_idx_ingrds:
+            return None
+        postings_qword = [tup[0] for tup in inv_idx_ingrds[w] ]
+        qword_meal_counts[w] = [ len( merge_postings_ANDAND(postings_qword, postings_brk) ) ,
+                                len( merge_postings_ANDAND(postings_qword, postings_lun) ) ,
+                                len( merge_postings_ANDAND(postings_qword, postings_din) ) ]
+        tot = sum(qword_meal_counts[w])
+        qword_meal_counts[w] = [count/tot for count in qword_meal_counts[w] ] # normalize by number recipes
+    
+    # get most probable meal type assignments to query words
+    assignments = ["breakfast","lunch","dinner"]
+    start_p = dict.fromkeys(assignments,1/len(assignments))
+    trans_p = dict.fromkeys(assignments,start_p)
+    emit_p = {}
+    for a in assignments:
+        emis = {}
+        for w in query_words:
+            emis[w] = qword_meal_counts[w][assignments.index(a)]
+        tot = sum(emis.values())
+        for k,v in emis.items():
+            emis[k] = v/tot
+        emit_p[a] = emis
+    opt_assign = viterbi(query_words,assignments,start_p,trans_p,emit_p)
+        
+    # if there a meal type is excluded from the optimal assignment, coerce
+    counts = Counter(opt_assign)
+    if "breakfast" not in opt_assign:
+        meal_most = max(counts, key=counts.get)
+        opt_assign[opt_assign.index(meal_most)] = "breakfast"
+    if "lunch" not in opt_assign:
+        meal_most = max(counts, key=counts.get)
+        opt_assign[opt_assign.index(meal_most)] = "lunch"
+    if "dinner" not in opt_assign:
+        meal_most = max(counts, key=counts.get)
+        opt_assign[opt_assign.index(meal_most)] = "dinner"
+    return opt_assign
+
+
+
+def viterbi(obs, states, start_p, trans_p, emit_p):
+    V = [{}]
+    for st in states:
+        V[0][st] = {"prob": start_p[st] * emit_p[st][obs[0]], "prev": None}
+    # Run Viterbi when t > 0
+    for t in range(1, len(obs)):
+        V.append({})
+        for st in states:
+            max_tr_prob = V[t-1][states[0]]["prob"]*trans_p[states[0]][st]
+            prev_st_selected = states[0]
+            for prev_st in states[1:]:
+                tr_prob = V[t-1][prev_st]["prob"]*trans_p[prev_st][st]
+                if tr_prob > max_tr_prob:
+                    max_tr_prob = tr_prob
+                    prev_st_selected = prev_st
+                    
+            max_prob = max_tr_prob * emit_p[st][obs[t]]
+            V[t][st] = {"prob": max_prob, "prev": prev_st_selected}
+                    
+    opt = []
+    max_prob = 0.0
+    previous = None
+    # Get most probable state and its backtrack
+    for st, data in V[-1].items():
+        if data["prob"] > max_prob:
+            max_prob = data["prob"]
+            best_st = st
+    opt.append(best_st)
+    previous = best_st
+    
+    # Follow the backtrack till the first observation
+    for t in range(len(V) - 2, -1, -1):
+        opt.insert(0, V[t + 1][previous]["prev"])
+        previous = V[t + 1][previous]["prev"]
+    
+    return opt
+
+
+def sort_recipes(recipes):
+    breakfast = []
+    lunch = []
+    dinner = []
+    for r in recipes:
+        if r["meal_type"] == "breakfast":
+            breakfast.append(r)
+        elif r["meal_type"] == "lunch":
+            lunch.append(r)
+        else:
+            dinner.append(r)
+    return breakfast, lunch, dinner
+
+
 project_name = "Fitness Dream Team"
 net_ids = "Henri Clarke: hxc2, Alice Hu: ath84, Michael Pinelis: mdp93, Genghis Shyy: gs484, Sam Vacura: smv66"
 
+def version_1_search(query, output_message, data):
+    if query:
+        query = query.lower()
+        query_words = query.split(",")
+        query_words = [word.strip() for word in query_words]
+        if len(query_words) == 1:
+            query_words = query_words[0].split(";")
+        recipes = Recipe.query.filter(
+            or_(
+                or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
+            )
+        ).all()
+        if not recipes:
+            output_message = "No Results Found :("
+            data = []
+        else:
+            recipes_out = recipe_schema.dump(recipes)
+            inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+
+            # hardcoding []; will replace after input for "foods to omit" is added
+            ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
+            if len(ranked_results) == 0:
+                output_message = "No Results Found :(("
+                data = []
+            else:
+                output_message = "Your search: " + query
+                data = ranked_results[:10]
+    return output_message, data
+
+
+def version_2_search(query_words, omit_words, recipes):
+    all_data = []
+    if not recipes:
+        # cosine similarity 
+        recipes_out = recipe_schema.dump(Recipe.query.all())
+        num_recipes = len(recipes_out)
+        inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+        idf_dict = compute_idf(inv_idx_ingredients, num_recipes, 0.1, 0.9)
+        norms = compute_norms(idf_dict, inv_idx_ingredients, num_recipes)
+        ranked_results = cosine_sim(query_words, inv_idx_ingredients, norms, idf_dict, recipes_out)
+        if len(ranked_results) == 0:
+            all_data = []
+        else:
+            all_data = ranked_results
+    else:
+        # boolean search
+        recipes_out = recipe_schema.dump(recipes)
+        inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+        ranked_results = rank_recipes_boolean(query_words, omit_words, inv_idx_ingredients, recipes_out)
+        if len(ranked_results) == 0:
+            all_data = []
+        else:
+            all_data = ranked_results[:10]
+    return all_data
+
+
 @irsystem.route('/', methods=['GET'])
 def search():
-    query = request.args.get('search')
+    # obtaining query inputs
+    query = request.args.get('search') # for version 1 only
+    fav_foods = request.args.get('fav-foods')
+    omit_foods = request.args.get('res-foods')
+    cal_limit = request.args.get('cal-limit')
     version = request.args.get('version')
-    output_message = ''
-    data = []
-    if version is not None and int(version) == 1:
-        if query:
-            query = query.lower()
-            query_words = query.split(",")
-            query_words = [word.strip() for word in query_words]
-            if len(query_words) == 1:
-                query_words = query_words[0].split(";")
-            recipes = Recipe.query.filter(
-                or_(
-                    or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
-                )
-            ).all()
-            if not recipes:
-                output_message = "No Results Found :("
-                data = []
-            else:
-                recipes_out = recipe_schema.dump(recipes)
-                inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+    breakfast_selected = request.args.get('breakfast')
+    lunch_selected = request.args.get('lunch')
+    dinner_selected = request.args.get('dinner')
 
-                # hardcoding []; will replace after input for "foods to omit" is added
-                ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
-                if len(ranked_results) == 0:
-                    output_message = "No Results Found :(("
-                    data = []
-                else:
-                    output_message = "Your search: " + query
-                    data = ranked_results[:10]
-                    """
-                    # hardcoding calorie limits; will replace after inputs for calorie limits are added
-                    grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
-                    if len(grouped_results) == 0:
-                        output_message = "No Results Found :((("
-                        data = []
-                    else:
-                        output_message = "Your search: " + query
-                        data = grouped_results
-                    """
+    # default initialization
+    output_message = ''
+    breakfast_data = None
+    lunch_data = None
+    dinner_data = None
+
+    if version is not None and int(version) == 1:
+        output_message, data = version_1_search(query, output_message, [])
         return render_template('search-v1.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
     else:
-        if query:
-            query = query.lower()
-            query_words = query.split(",")
+        if fav_foods:
+            output_message = "Your search: " + fav_foods
+
+            # basic query cleaning/splitting 
+            # (TODO: data validation to check SQL injection and possibly input type)
+            fav_foods = fav_foods.lower()
+            query_words = fav_foods.split(",")
             query_words = [word.strip() for word in query_words]
             if len(query_words) == 1:
                 query_words = query_words[0].split(";")
-            recipes = Recipe.query.filter(
-                or_(
-                    or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
-                    or_(Recipe.directions.like("%{}%".format(word)) for word in query_words)
-                )
-            ).all()
-            if not recipes:
-                output_message = "No Results Found :("
-                data = []
-            else:
-                recipes_out = recipe_schema.dump(recipes)
-                inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+            omit_words = omit_foods.split(",")
+            omit_words = [word.strip() for word in omit_words]
+            if len(omit_words) == 1:
+                omit_words = omit_words[0].split(";")
 
-                # hardcoding []; will replace after input for "foods to omit" is added
-                ranked_results = rank_recipes_boolean(query_words, [], inv_idx_ingredients, recipes_out)
-                if len(ranked_results) == 0:
-                    output_message = "No Results Found :(("
-                    data = []
-                else:
-                    output_message = "Your search: " + query
-                    data = ranked_results[:10]
-                    """
-                    # hardcoding calorie limits; will replace after inputs for calorie limits are added
-                    grouped_results = group_recipes(ranked_results, recipes_out, 100, 2000)
-                    if len(grouped_results) == 0:
-                        output_message = "No Results Found :((("
-                        data = []
-                    else:
-                        output_message = "Your search: " + query
-                        data = grouped_results
-                    """
-        return render_template('search-v2.html', name=project_name, netid=net_ids, output_message=output_message, data=data)
+            if breakfast_selected is None and lunch_selected is None and dinner_selected is None:
+                breakfast_selected = "on"
+                lunch_selected = "on"
+                dinner_selected = "on"
+            if breakfast_selected:
+                breakfast_recipes = Recipe.query.filter(
+                    or_(
+                        or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.directions.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.categories.like("%{}%".format(word)) for word in query_words),
+                    )
+                ).filter_by(meal_type="breakfast").all()
+                breakfast_data = version_2_search(query_words, omit_words, breakfast_recipes)
+            if lunch_selected:
+                lunch_recipes = Recipe.query.filter(
+                    or_(
+                        or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.directions.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.categories.like("%{}%".format(word)) for word in query_words),
+                    )
+                ).filter_by(meal_type="lunch").all()
+                lunch_data = version_2_search(query_words, omit_words, lunch_recipes)
+            if dinner_selected:
+                dinner_recipes = Recipe.query.filter(
+                    or_(
+                        or_(Recipe.title.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.description.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.ingredients.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.directions.like("%{}%".format(word)) for word in query_words),
+                        or_(Recipe.categories.like("%{}%".format(word)) for word in query_words),
+                    )
+                ).filter_by(meal_type="dinner").all()
+                dinner_data = version_2_search(query_words, omit_words, dinner_recipes)
+            result_success = False
+            for data in [breakfast_data, lunch_data, dinner_data]:
+                if data is not None and len(data) > 0:
+                    result_success = True
+                    break
+            if not result_success:
+                output_message = "No Results Found:("
+        return render_template('search-v2.html', name=project_name, 
+            netid=net_ids, output_message=output_message, breakfast_data=breakfast_data, 
+            lunch_data=lunch_data, dinner_data=dinner_data)
