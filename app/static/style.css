@@ -277,9 +277,13 @@ main .lead {
    
 .results-list .card-header button::after {
    content: "\f107";
-   right: 0px;
+   top: 0;
+   right: 0;
    position: absolute;
-   font-family: "FontAwesome"
+   font-family: "FontAwesome";
+   height: 100%;
+   display: flex;
+   align-items: center;
 }
  
 .results-list .card-header button[aria-expanded="true"]::after {
