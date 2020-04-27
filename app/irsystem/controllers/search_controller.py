@@ -40,8 +40,7 @@ def search():
 	if not query:
 		data = []
 		'test'
-		output_message = [r[0] for r in(db.engine.execute("SELECT combinedrating FROM fullsubclassratings WHERE subclass IN ('Hexblade')"))]
-		print(output_message)
+		output_message =[]
 		
 
 	else:
@@ -93,10 +92,19 @@ def search():
 		csc_rating_pairs = sorted(list(ratings_with_subclasses.items()),key = lambda x: x[1])
 		csc_rating_pairs = list(reversed(csc_rating_pairs))[:10]
 		ret = []
+		
 		for cscr in csc_rating_pairs:
 			base_class = cscr[0].split(":")[0]
 			subclass = cscr[0].split(":")[1]
 			rating = cscr[1]
+			sqlquery="SELECT combinedrating FROM fullsubclassratings WHERE subclass IN ('"
+			sqlquery2=subclass
+			sqlquery3="')"
+			fullquery=sqlquery+sqlquery2+sqlquery3
+			socialrating = [r[0] for r in(db.engine.execute(fullquery))]
+			if(len(socialrating)==0):
+				socialrating=[0]
+			
 			flavor_tot = ""
 			for c in f["classes"]:
 				if c["class"]==base_class:
@@ -109,6 +117,7 @@ def search():
 			rdict["flavor"] = flavor_tot
 			rdict["rating"] = rating*5/2
 			rdict["match"] = round(rating*5,2)
+			rdict["social"] =socialrating[0]
 			ret.append(rdict)
 
 		data = ret
