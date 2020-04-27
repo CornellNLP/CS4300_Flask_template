@@ -21,6 +21,11 @@ def serve_desc():
 
 @irsystem.route('/', methods=['GET'])
 def search():
+
+	# FOR TESTING PURPOSES #
+	if request.args.get('test'):
+		return render_template('test.html')
+
 	drink_type = request.args.get('type')
 	descriptors = request.args.get('descriptors')
 	
@@ -43,4 +48,7 @@ def search():
 
 			return render_template('results.html', results=results)
 
-	return render_template('search.html')
+	# TODO: fetch actual descriptors from db
+	descriptors = ['light bodied', 'luminous', 'lush']
+
+	return render_template('search.html', descriptors=descriptors)
