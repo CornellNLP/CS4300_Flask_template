@@ -2,8 +2,11 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="static/styles/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="static/styles/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -27,42 +30,59 @@
 
         <table class="row">
             <tr>
-                <th class="left-column">
+                <th class="left-column column">
                     <form class="form-inline global-search">
-                        <h3 class="outputmessage">
-                            Draft your post:
-                        </h3>
+                        <h3 class="outputmessage">Draft your post:</h3>
                         <div class="form-group">
                             <textarea id="input" type="text" name="search" class="form-control"
                                 placeholder="Ask me anything"
                                 style="resize: none;">{{query if query!= None else '' }}</textarea>
+                            <button type="submit" class="btn btn-info"> Go! </button>
                         </div>
-                        <button type="submit" class="btn btn-info"> Go! </button>
                     </form>
                 </th>
-                <th class="right-column">
-                    <form class="form-inline global-search">
-                        <div id={{response}}>
-                            <h3 class="outputmessage">
-                                {{output_message}}
-                            </h3>
-                        </div>
+                <th class="middle-column column">
+                    <div id={{response}}>
+                        <h3 class="outputmessage">
+                            {{output_message}}
+                        </h3>
+                    </div>
+                    {% if data %}
+                    <ul class="list-group list-group-flush">
+                        <!-- <li class="active list-group-item"> -->
+                        <a class="list-group-item list-group-item-action active" data-toggle="tab"
+                            href="#sub-{{data[0]['subreddit']}}">r/{{data[0]['subreddit']}}</a>
+                        <!-- </li> -->
+                        {% for d in data[1:] %}
+                        <!-- <li class="list-group-item"> -->
+                        <a class="list-group-item list-group-item-action" data-toggle="tab"
+                            href="#sub-{{d['subreddit']}}">r/{{d['subreddit']}}</a>
+                        <!-- </li> -->
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </th>
+                <th class="right-column column">
+                    <div class="col-9">
                         {% if data %}
-                        <ul class="list-group">
-                            {% for d in data %}
-                            <li class="list-group-item">
-                                <div class="tooltip-container">
-                                    <a href="https://www.reddit.com/r/{{d['subreddit']}}/submit" target="_blank">
-                                        r/{{d['subreddit']}}
-                                    </a>
-                                    <span class="tooltip-text">{{d['description']}}<br><br>Similarity:
-                                        {{d['score']}}</span>
-                                </div>
-                            </li>
+                        <div class="tab-content">
+                            <div id="sub-{{data[0]['subreddit']}}" class="tab-pane fade-in active">
+                                <h3 class="outputmessage"><a
+                                        href="https://www.reddit.com/r/{{data[0]['subreddit']}}/submit" target="_blank">
+                                        r/{{data[0]['subreddit']}}</a></h3>
+                                <p>{{data[0]['description']}}<br><br>Similarity: {{data[0]['score']}}</p>
+                            </div>
+                            {% for d in data[1:] %}
+                            <div id="sub-{{d['subreddit']}}" class="tab-pane fade-in">
+                                <h3 class="outputmessage"><a href="https://www.reddit.com/r/{{d['subreddit']}}/submit"
+                                        target="_blank">
+                                        r/{{d['subreddit']}}</a></h3>
+                                <p>{{d['description']}}<br><br>Similarity: {{d['score']}}</p>
+                            </div>
                             {% endfor %}
                             {% endif %}
-                        </ul>
-                    </form>
+                        </div>
+                    </div>
                 </th>
             </tr>
         </table>

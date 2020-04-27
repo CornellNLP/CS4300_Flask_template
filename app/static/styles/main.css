@@ -73,21 +73,29 @@
   padding:10px;
 }
 
-.global-search .form-control {
-  height: 350px;
-  width: 550px;
+#input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 375px;
+}
+
+.column {
+  column-fill: auto;
+  vertical-align: top;
 }
 
 .left-column {
   float: left;
   width: 50%;
-  column-fill: auto;
+}
+
+.middle-column {
+  width: 20%;
 }
 
 .right-column {
-  float: left;
-  width: 50%;
-  column-fill: auto;
+  width: 30%;
+  padding: 10px;  
 }
 
 @media screen and (max-width: 600px) {
@@ -104,7 +112,7 @@
 .btn {
   background-color: #ff4600; 
   border: none;
-  width: 550px;
+  width: 600px;
 }
 
 #title {
@@ -117,37 +125,32 @@
 .outputmessage {
   font-family: 'Varela Round', sans-serif;
   font-size: 20px; 
+  text-align: left;
 }
 
 div#response {
-    padding-top: 30%;
+    /* padding-top: 30%; */
     padding-left: 50px;
     padding-right: 50px;
 }
   
-.tooltip-container {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+a.list-group-item.active {
+  background-color: #ff4600;
+  color: white;
+  border: none!important;
 }
 
-.tooltip-container .tooltip-text {
-  visibility: hidden;
-  width: 500px;
-  background-color: #f0b9b2;
+a.list-group-item:focus {
+  background-color: #ff4600;
+  color: white;
+  border: none!important;
+}
+
+a.list-group-item{
   color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  margin-left: -200px;
+  font-family: 'Varela Round', sans-serif;
 }
 
-.tooltip-container:hover .tooltip-text {
-  visibility: visible;
+.tab-content p {
+  font-family: 'Varela Round', sans-serif;
 }
