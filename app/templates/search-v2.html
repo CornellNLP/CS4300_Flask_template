@@ -168,7 +168,7 @@
       </div>
 
       <div class="form-group">
-        <input type="checkbox" class="form-control form-box" id="drink-toggle">
+        <input type="checkbox" class="form-control form-box" id="drink-toggle" name="include-drink">
         <label id="drink-toggle">Include drinks</label>
       </div>
 
@@ -210,6 +210,12 @@
           {% if breakfast_data[i]["fat"] is not none %}
           <p><strong>Fat:</strong> {{breakfast_data[i]["fat"]}} g</p>
           {% endif %}
+          {% if breakfast_data[i]["protein"] is not none %}
+          <p><strong>Protein:</strong> {{breakfast_data[i]["protein"]}} g</p>
+          {% endif %}
+          {% if breakfast_data[i]["sodium"] is not none %}
+          <p><strong>Sodium:</strong> {{breakfast_data[i]["sodium"]}} mg</p>
+          {% endif %}
           {% if breakfast_data[i]["rating"] is not none %}
           <p>
             {% for i in range(breakfast_data[i]["rating"] | int) %}
@@ -239,6 +245,12 @@
           {% if lunch_data[i]["fat"] is not none %}
           <p><strong>Fat:</strong> {{lunch_data[i]["fat"]}} g</p>
           {% endif %}
+          {% if lunch_data[i]["protein"] is not none %}
+          <p><strong>Protein:</strong> {{lunch_data[i]["protein"]}} g</p>
+          {% endif %}
+          {% if lunch_data[i]["sodium"] is not none %}
+          <p><strong>Sodium:</strong> {{lunch_data[i]["sodium"]}} mg</p>
+          {% endif %}
           {% if lunch_data[i]["rating"] is not none %}
           <p>
             {% for i in range(lunch_data[i]["rating"] | int) %}
@@ -267,6 +279,12 @@
           {% endif %}
           {% if dinner_data[i]["fat"] is not none %}
           <p><strong>Fat:</strong> {{dinner_data[i]["fat"]}} g</p>
+          {% endif %}
+          {% if dinner_data[i]["protein"] is not none %}
+          <p><strong>Protein:</strong> {{dinner_data[i]["protein"]}} g</p>
+          {% endif %}
+          {% if dinner_data[i]["sodium"] is not none %}
+          <p><strong>Sodium:</strong> {{dinner_data[i]["sodium"]}} mg</p>
           {% endif %}
           {% if dinner_data[i]["rating"] is not none %}
           <p>
