@@ -73,10 +73,18 @@
   padding:10px;
 }
 
+.form-group {
+  width: 100%;
+}
+
 #input {
   box-sizing: border-box;
-  width: 100%;
   height: 375px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
 }
 
 .column {
@@ -91,11 +99,12 @@
 
 .middle-column {
   width: 20%;
+  padding: 10px; 
 }
 
 .right-column {
   width: 30%;
-  padding: 10px;  
+  padding: 10px; 
 }
 
 @media screen and (max-width: 600px) {
@@ -104,15 +113,10 @@
     }
 }
 
-.row {
-  width: 100%;
-  margin: 0px;
-}
-
 .btn {
   background-color: #ff4600; 
   border: none;
-  width: 600px;
+  width: 100%;
 }
 
 #title {
