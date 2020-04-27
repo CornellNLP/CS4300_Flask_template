@@ -50,14 +50,14 @@ class SearchEngine():
     def run_tests(self, inverted_index, idf, norms, post_lookup, subreddit_lookup):
         while True:
             print("\nquery: ", "")
-            ranks = compare_string_to_posts(input(), self.inverted_index, self.idf, self.norms)
+            ranks = compare_string_to_posts(input(), self.inverted_index, self.idf, self.norms, self.post_lookup)
             print(find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup))
 
     def search(self, query):
         if self.inverted_index is None:
             self.inverted_index = InvertedIndex()
             self.inverted_index.load()
-        ranks = compare_string_to_posts(query, self.inverted_index, self.idf, self.norms)
+        ranks = compare_string_to_posts(query, self.inverted_index, self.idf, self.norms, self.post_lookup)
         return find_subreddits(10, ranks, self.post_lookup, self.subreddit_lookup)
 
     def create(self):

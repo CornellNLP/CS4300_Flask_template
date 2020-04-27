@@ -1,4 +1,4 @@
-venv
+projectvenv
 *.pyc
 migrations
 vagrant/.vagrant

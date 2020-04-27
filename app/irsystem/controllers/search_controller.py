@@ -2,10 +2,10 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.search import SearchEngine
-
+from app.irsystem.models.shared_variables import create_dataset_or_structures
 project_name = "Subreddit Recommender"
 class_name = "CS 4300 Spring 2020"
-search_engine = SearchEngine(False)
+search_engine = SearchEngine(create_dataset_or_structures)
 
 @irsystem.route('/', methods=['GET'])
 def search():

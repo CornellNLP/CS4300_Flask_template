@@ -7,6 +7,9 @@ num_subreddits = 1075
 min_words_per_post = 15
 num_partitions = 100 #for the inverted index
 max_document_frequency = 0.1
+create_dataset_or_structures = False
+pseudo_relevance_rocchio_top_posts = 25
+pseudo_relevance_rocchio_lowest_posts = 50
 """
 DATASET NAMING CONVENTION
 ""<num posts>p<num subreddits>s<min words per post>mwc.json"

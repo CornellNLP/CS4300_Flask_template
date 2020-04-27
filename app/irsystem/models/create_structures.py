@@ -76,11 +76,17 @@ def get_doc_norms(inv_index, idf, num_docs):
 
     return norms
 
-def make_post_subreddit_lookup(data):
+def make_post_subreddit_lookup(data, inverted_index):
     post_lookup = {}
     subreddit_lookup = {}
     for post in data:
-        post_lookup[post['id']] = post['subreddit']
+        post_lookup[post['id']] = {}
+        post_lookup[post['id']]['subreddit'] = post['subreddit']
+        cnt = Counter()
+        for token in post['tokens']:
+            if token in inverted_index:
+                cnt[token] += 1
+        post_lookup[post['id']]['word_count'] = cnt.most_common()
         if not post['subreddit'] in subreddit_lookup:
             subreddit_lookup[post['subreddit']] = 0
         subreddit_lookup[post['subreddit']] += 1
@@ -92,9 +98,6 @@ def create_and_store_structures():
     print("...loading data")
     data = load_data()
     num_docs = len(data)
-
-    print("...making subreddit lookup")
-    post_lookup, subreddit_lookup = make_post_subreddit_lookup(data)
 
     print("...making inverted index(will take a long time)")
     inverted_index = make_inverted_index(data)
@@ -108,6 +111,9 @@ def create_and_store_structures():
     for token in tokens:
         if not token in idf:
             inverted_index.remove_token(token)
+
+    print("...making subreddit lookup")
+    post_lookup, subreddit_lookup = make_post_subreddit_lookup(data, inverted_index)
 
     print("...getting doc norms")
     norms = get_doc_norms(inverted_index, idf, num_docs)

@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: flask
@@ -13,12 +13,12 @@ spec:
         app: flask
     spec:
       containers:
-      - name: flask
-        image: <YOUR DOCKER USERNAME>/flask-template:v1
-        env:
-        - name: APP_SETTINGS
-          value: config.DevelopmentConfig
-        - name: DATABASE_URL
-          value: postgresql://localhost/my_app_db
-        ports:
-        - containerPort: 5000
+        - name: flask
+          image: navinr13/flask-template:v2
+          env:
+            - name: APP_SETTINGS
+              value: config.DevelopmentConfig
+            - name: DATABASE_URL
+              value: postgresql://localhost/my_app_db
+          ports:
+            - containerPort: 5000

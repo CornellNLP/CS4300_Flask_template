@@ -2,6 +2,8 @@ from collections import Counter
 import pickle
 from app.irsystem.models.shared_variables import file_path_name
 from app.irsystem.models.shared_variables import num_partitions
+from nltk.stem import PorterStemmer
+stemmer=PorterStemmer()
 
 """
 create a class to handle inverted indices (creation & execution)
@@ -14,6 +16,12 @@ class InvertedIndex():
         self._inverted_index_helper = {}
         print("initialized inverted index")
 
+    def get_stem_of_words(self,tokens):
+        return [self.get_stem_of_word(word) for word in tokens]
+
+    def get_stem_of_word(self, token):
+        return stemmer.stem(token)
+
     def create(self, data):
         print("...creating inverted index")
         inverted_indices = [{} for _ in range(num_partitions)] #create <partitions> inverted indices
@@ -21,10 +29,12 @@ class InvertedIndex():
         inverted_index_helper = {} #tells me which inverted index the item is in
 
         num_posts = len(data)
-
+        print("num posts: {}".format(num_posts))
+        i = 0
         for post in data:
-            words = post['tokens']
-
+            i += 1
+            print(i)
+            words = self.get_stem_of_words(post['tokens'])
             count = Counter(words) #count frequency of each word
             for word, frequency in count.most_common():
                 if not word in inverted_index_helper:
@@ -35,6 +45,8 @@ class InvertedIndex():
                 inverted_index[word].append((post['id'], frequency))
         self.inverted_indices = inverted_indices
         self._inverted_index_helper = inverted_index_helper
+        print(len(self.inverted_indices))
+        print(len(self._inverted_index_helper))
 
     def store(self):
         for i in range(len(self.inverted_indices)):
@@ -62,6 +74,7 @@ class InvertedIndex():
         self._inverted_index_helper = self.load_file("helper")
 
     def get_posts(self, token):
+        # token = self.getSingleStem(token)
         self.load_by_token(token)
         if token in self._inverted_index_helper:
             inverted_index = self._get_inverted_index(token)
@@ -75,18 +88,21 @@ class InvertedIndex():
                 self.inverted_indices[inverted_index_i] = self.load_file(inverted_index_i)
 
     def _get_inverted_index(self, token):
+        # token = self.getSingleStem(token)
         return self.inverted_indices[self._inverted_index_helper[token]]
 
     def keys(self):
         return list(self._inverted_index_helper.keys())
 
     def remove_token(self, token):
+        # token = self.getSingleStem(token)
         self.load_by_token(token)
         inverted_index = self._get_inverted_index(token)
         del inverted_index[token]
         del self._inverted_index_helper[token]
 
     def __contains__(self, key):
+        # key = self.getSingleStem(key)
         return key in self._inverted_index_helper
 
     def __getitem__(self, key):
