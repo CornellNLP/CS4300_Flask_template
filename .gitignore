@@ -7,6 +7,5 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 unused-picklejar
-picklejar
 *.json
 .DS_Store
