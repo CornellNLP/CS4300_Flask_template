@@ -15,9 +15,11 @@
     background: white;
     color: #222222;
     width: 100%;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .body {
+  font-family: 'Varela Round', sans-serif;
   padding-bottom: 15px;
   background-color: #dae0e6;
   color: #222222;
@@ -27,7 +29,6 @@
   background-color: #f5a7a7b7;
   margin-bottom: 0px;
   padding: 30px 15px;
-  font-family: 'Varela Round', sans-serif;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -73,21 +74,43 @@
   padding:10px;
 }
 
-.global-search .form-control {
-  height: 350px;
-  width: 550px;
+.form-group {
+  width: 100%;
+}
+
+#input {
+  box-sizing: border-box;
+  height: 375px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.column {
+  column-fill: auto;
+  vertical-align: top;
 }
 
 .left-column {
   float: left;
   width: 50%;
-  column-fill: auto;
+}
+
+.middle-column {
+  width: 20%;
+  padding: 10px; 
 }
 
 .right-column {
-  float: left;
+  width: 30%;
+  padding: 10px; 
+}
+
+.error-column {
   width: 50%;
-  column-fill: auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -96,32 +119,47 @@
     }
 }
 
-.row {
-  width: 100%;
-  margin: 0px;
-}
-
 .btn {
   background-color: #ff4600; 
   border: none;
-  width: 550px;
+  width: 100%;
 }
 
 #title {
   font-size: 55px; 
-  font-family: 'Varela Round', sans-serif;
   text-align: center;
   line-height: 155px;
 }
 
 .outputmessage {
-  font-family: 'Varela Round', sans-serif;
   font-size: 20px; 
+  text-align: left;
+  font-family: 'Varela Round', sans-serif;
 }
 
 div#response {
-    padding-top: 30%;
+    /* padding-top: 30%; */
     padding-left: 50px;
     padding-right: 50px;
 }
   
+a.list-group-item.active {
+  background-color: #ff4600;
+  color: white;
+  border: none!important;
+}
+
+a.list-group-item:focus {
+  background-color: #ff4600;
+  color: white;
+  border: none!important;
+}
+
+a.list-group-item{
+  color: black;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.tab-content p {
+  font-family: 'Varela Round', sans-serif;
+}

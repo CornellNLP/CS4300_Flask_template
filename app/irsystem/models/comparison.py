@@ -124,8 +124,10 @@ def rocchio(original_tokenized_query, sim_scores, post_lookup):
     Top-level function, outputs list of subreddits for each post in
     post_ids (set of unique subreddit names)
 """
-def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
-    #need to group posts by subreddit
+
+
+def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup, descriptions):
+    # need to group posts by subreddit
     subreddit_dict = {}
     subreddit_freq = {}
 
@@ -145,4 +147,8 @@ def find_subreddits(top_x, post_ids, post_lookup, subreddit_lookup):
 
     normalized = [(x[0], float(x[1]) * float(subreddit_freq[x[0]]) / float(subreddit_lookup[x[0]])) for x in k.most_common()]
     # print(normalized[:10])
-    return sort_similarity_scores(normalized)[:10]
+
+    sorted_list = sort_similarity_scores(normalized)
+    final_list = [{'subreddit': sub, 'description': descriptions[sub.lower()], 'score': score}
+                  for (sub, score) in sorted_list][:10]
+    return final_list
