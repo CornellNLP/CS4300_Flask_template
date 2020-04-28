@@ -25,7 +25,6 @@ def serve_desc():
 
 @irsystem.route('/search', methods=['GET'])
 def search():
-
 	page_number = request.args.get('page')
 	page_number = int(page_number) if arg_exists(page_number) else 1
 	drink_type = request.args.get('type')
@@ -44,7 +43,7 @@ def search():
 
 	if drink_name:
 		print("User searched for drinks similar to {}".format(drink_name))
-		results = search_drinks(
+		results, count = search_drinks(
 			data=drink_name,
 			k=10,
 			page=page_number,
@@ -56,15 +55,13 @@ def search():
 		)
 		
 		if results is not None:
-			for i in range(len(results)):
-				results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
-			return render_template('results.html', results=results, page_number=page_number, drink_name=drink_name)
+			return render_template('results.html', results=results, count=count, page_number=page_number, drink_name=drink_name)
 	
 	if drink_type and descriptors:
 		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
 		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
 
-		results = search_drinks(
+		results, count = search_drinks(
 			data=desc_lst,
 			dtype=None if drink_type == 'anything' else drink_type,
 			k=10,
@@ -77,9 +74,7 @@ def search():
 		)
 
 		if results is not None:
-			for i in range(len(results)):
-				results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
-			return render_template('results.html', results=results, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
+			return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
 @irsystem.route('/', methods=['GET'])
 def home():
