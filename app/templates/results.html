@@ -128,23 +128,21 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
          body.style.height = '100vh';
          body.style.overflow = 'hidden';
          
-         const liquidElement = document.getElementsByClassName('liquid')[0];
-         const maxPercent = 100;
-         var percent = 0;
-         setTimeout(() => {
+         const fillAnimation = document.querySelector('.liquid');
+         fillAnimation.onanimationend = () => {
             body.style.height = '100%';
             body.style.overflow = 'visible';
-         }, 4000);
 
-         if (body.clientHeight == document.documentElement.clientHeight) {
-            const footer = document.getElementsByTagName('footer')[0];
-            const main = document.getElementsByTagName('main')[0];
-            footer.style.position = 'absolute';
-            footer.style.bottom = '0';
-            footer.style.left = '0';
-            footer.style.right = '0';
-            main.style.marginBottom = '1.5rem';
-         }
+            if (body.clientHeight == document.documentElement.clientHeight) {
+               const footer = document.getElementsByClassName('mastfoot')[0];
+               const main = document.getElementsByTagName('main')[0];
+               footer.style.position = 'absolute';
+               footer.style.bottom = '0';
+               footer.style.left = '0';
+               footer.style.right = '0';
+               main.style.marginBottom = '1.5rem';
+            }
+         };
       </script>
    
       <!-- Bootstrap JS -->
