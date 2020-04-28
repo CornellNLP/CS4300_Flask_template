@@ -46,7 +46,7 @@ def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=Non
         Result(
             drink=drinks[i],
             dist=dst,
-            reviews=json.loads(drinks[i].reviews)
+            reviews=json.loads(drinks[i].reviews) if drinks[i].reviews is not None else []
         ) for (i, dst) in zip(ind_lst, dst_lst)
     ]
     return (res_drinks, count)

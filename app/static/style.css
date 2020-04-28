@@ -55,17 +55,18 @@ a:hover {
 
 html,
 body {
-  background-color: #fff;
-  position: relative;
-  overflow-x: hidden;
+   background-color: #fff;
+   position: relative;
+   overflow-x: hidden;
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  overflow: hidden;
+   display: -ms-flexbox;
+   display: flex;
+   color: #fff;
+   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+   overflow: hidden;
+   min-height: 100vh;
 }
 
 body.search {
@@ -73,20 +74,20 @@ body.search {
 }
 
 .cover-container {
-  max-width: 42em;
-  z-index: 1;
-  padding-top: 7%;
+   max-width: 42em;
+   z-index: 1;
+   padding-top: 7%;
 }
 
 /*
  * Header
  */
 .masthead {
-  margin-bottom: 2rem;
+   margin-bottom: 2rem;
 }
 
 .masthead-brand {
-  margin-bottom: 0;
+   margin-bottom: 0;
 }
 
 .masthead-brand a {
@@ -94,45 +95,45 @@ body.search {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
+   padding: .25rem 0;
+   font-weight: 700;
+   color: rgba(255, 255, 255, .5);
+   background-color: transparent;
+   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+   margin-left: 1rem;
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+   color: #fff;
+   border-bottom-color: #fff;
 }
 
 @media (min-width: 48em) {
-  .masthead-brand {
-    float: center;
-  }
-  .nav-masthead {
-    float: right;
-  }
+   .masthead-brand {
+      float: center;
+   }
+   .nav-masthead {
+      float: right;
+   }
 }
 
 /*
  * Cover
  */
 .cover {
-  padding: 0 1.5rem;
+   padding: 0 1.5rem;
 }
 .cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
+   padding: .75rem 1.25rem;
+   font-weight: 700;
 }
 
 main .lead {
@@ -144,7 +145,7 @@ main .lead {
  */
 .mastfoot {
    margin-top: 1.5rem;
-  color: rgba(255, 255, 255, .5);
+   color: rgba(255, 255, 255, .5);
 }
 
 /* Background */

@@ -23,9 +23,8 @@ def serve_desc():
 	descriptors = [d.replace('_', ' ') for d in descriptors]
 	return render_template('desc_list.html', descriptors=descriptors)
 
-@irsystem.route('/', methods=['GET'])
+@irsystem.route('/search', methods=['GET'])
 def search():
-
 	page_number = request.args.get('page')
 	page_number = int(page_number) if arg_exists(page_number) else 1
 	drink_type = request.args.get('type')
@@ -56,7 +55,7 @@ def search():
 		)
 		
 		if results is not None:
-			return render_template('results.html', results=results, page_number=page_number, drink_name=drink_name)
+			return render_template('results.html', results=results, count=count, page_number=page_number, drink_name=drink_name)
 	
 	if drink_type and descriptors:
 		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
@@ -75,8 +74,9 @@ def search():
 		)
 
 		if results is not None:
-			return render_template('results.html', results=results, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
+			return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
+@irsystem.route('/', methods=['GET'])
+def homepage():
 	descriptors = [e.word.replace('_', ' ') for e in query_embeddings()]
-
 	return render_template('search.html', descriptors=descriptors)
