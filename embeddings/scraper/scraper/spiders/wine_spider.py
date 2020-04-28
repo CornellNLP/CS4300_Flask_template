@@ -17,9 +17,17 @@ class WcomWineSpider(scrapy.Spider):
         abv = response.css('span.prodAlcoholPercent_percent::text').get()
         if abv == '0':
             return None
-        desc_lst = response.css('div.pipWineNotes div.viewMoreModule_text').xpath('.//text()').getall()
+        desc_lst = response.css('div.pipWineNotes div.viewMoreModule_text *::text').getall()
         desc = ' '.join([s.strip() for s in desc_lst])
-        reviews = ' '.join(response.css('div.pipProfessionalReviews_review').xpath('.//text()').getall())
+        raw_reviews = response.css('div.pipProfessionalReviews_list')
+        reviews = []
+        for r in raw_reviews:
+            reviews.append({
+                'date': None,
+                'author': r.css('div.pipProfessionalReviews_authorName::text').get(),
+                'rating': r.css('span.wineRatings_rating::text').get() + '/100',
+                'body': r.css('div.pipProfessionalReviews_review *::text').get()
+            })
         raw_ratings = response.css('ul.wineRatings_list span.wineRatings_rating::text').getall()
         ratings = [int(r) for r in raw_ratings]
         if len(ratings) == 0:
@@ -32,6 +40,6 @@ class WcomWineSpider(scrapy.Spider):
             'abv': abv,
             'description': desc,
             'reviews': reviews,
-            'rating': str(rating),
+            'rating': str(rating) + '/100',
             'url': response.request.url
         }

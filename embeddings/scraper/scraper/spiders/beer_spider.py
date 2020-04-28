@@ -24,22 +24,31 @@ class ShackBeerSpider(scrapy.Spider):
 
     def parse_product(self, response):
         payload = response.xpath('//script[@id="tfx-product"]').get()
-        rating = response.css('span.stamped-badge::attr(data-rating)').get()
         match = re.search(r"\{.*\}", payload)
         product = json.loads(match.group())
         raw_desc = remove_tags(product['description'])
-        match = re.search(r"(\d*\.?\d*%) ABV", raw_desc)
+        match = re.search(r"(\d*\.?\d*)% ABV", raw_desc)
         abv = match.group(1) if match is not None else None
         match = re.search(r"Commercial Description:\n*(.*)", raw_desc)
         desc = match.group(1) if match is not None else None
+        raw_reviews = response.css('div.stamped-review')
+        raw_rating = response.css('span.stamped-badge::attr(data-rating)').get()
+        reviews = []
+        for r in raw_reviews:
+            reviews.append({
+                'date': r.css('div.created::text').get(),
+                'author': r.css('strong.author::text').get(),
+                'rating': r.css('span.stamped-starratings::attr(data-rating)').get() + '/5',
+                'body': r.css('p::text').get()
+            })
         yield {
             'name': remove_tags(product['title']),
             'origin': None,
             'price': product['price'] / 100,
             'abv': abv,
             'description': desc,
-            'reviews': None,
-            'rating': rating,
+            'reviews': reviews,
+            'rating': raw_rating + '/5' if raw_rating is not None else None,
             'url': response.request.url
         }
 
@@ -56,8 +65,17 @@ class ConnoBeerSpider(scrapy.Spider):
         state = response.css('div.field-name-field-state div.even::text').get()
         country = response.css('div.field-name-field-country div.even::text').get()
         origin = state + ', ' + country if state is not None and state != '' else country
-        reviews_raw = response.css('div.view-judges-review-listing-on-beer-page div.views-field-body div::text').getall()
-        reviews = re.sub(r"\s+", ' ', ' '.join([s.strip() for s in reviews_raw]).replace('\xa0', ''))
+        raw_reviews = response.css('div.view-judges-review-listing-on-beer-page')
+        reviews = []
+        for r in raw_reviews:
+            raw_body_lst = r.css('div.views-field-body *::text').getall()
+            raw_body = ' '.join([prgh.strip() for prgh in raw_body_lst if prgh.strip() != ''])
+            reviews.append({
+                'date': None,
+                'author': r.css('a.username::text').get(),
+                'rating': r.css('div.views-field-field-judges-rating div::text').get() + '/100',
+                'body': raw_body.replace('\xa0', '')
+            })
         yield {
             'name': response.css('div.field-name-title-field h1::text').get(),
             'origin': origin,
@@ -65,6 +83,6 @@ class ConnoBeerSpider(scrapy.Spider):
             'abv': response.css('div.field-name-field-abv div.even::text').get()[:-1],
             'description': response.css('div.field-name-body p::text').get(),
             'reviews': reviews,
-            'rating': response.css('div.views-field-field-judges-rating div::text').get(),
+            'rating': response.css('div.views-field-field-judges-rating div::text').get() + '/100',
             'url': response.request.url
         }
