@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.getcwd())
-from .data_tools import *
+from data_tools import *
 from nltk.tokenize import sent_tokenize
 from app.irsystem.models.database import *
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -183,17 +183,17 @@ def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None,
     if add_drinks:
         drinks = []
         print('Creating Drink objects...')
-        drinks += make_drinks(wines, wine_descriptors, 'wine', model.wv, tfidf_dict)
-        drinks += make_drinks(beers, beer_descriptors, 'beer', model.wv, tfidf_dict)
-        drinks += make_drinks(liquors, liquor_descriptors, 'liquor', model.wv, tfidf_dict)
-        drinks += make_drinks(cocktails, cocktail_descriptors, 'cocktail', model.wv, tfidf_dict)
+        drinks += make_drinks(wines, wine_descriptors, 'wine', model.wv, tfidf_dict, min_desc)
+        drinks += make_drinks(beers, beer_descriptors, 'beer', model.wv, tfidf_dict, min_desc)
+        drinks += make_drinks(liquors, liquor_descriptors, 'liquor', model.wv, tfidf_dict, min_desc)
+        drinks += make_drinks(cocktails, cocktail_descriptors, 'cocktail', model.wv, tfidf_dict, min_desc)
         add_drink_batch(drinks)
         print('{} Drinks added to database!'.format(len(drinks)))
 
-# main(
-#     model_file='embeddings/trained/model_50k.bin',
-#     phraser_file='embeddings/trained/trigram_50k.pkl',
-#     tfidf_file='embeddings/trained/tfidf_p4.pkl',
-#     # add_embeddings=False,
-#     # add_drinks=False,
-# )
+main(
+    model_file='embeddings/trained/model_50k.bin',
+    phraser_file='embeddings/trained/trigram_50k.pkl',
+    tfidf_file='embeddings/trained/tfidf_p4.pkl',
+    # add_embeddings=False,
+    # add_drinks=False,
+)
