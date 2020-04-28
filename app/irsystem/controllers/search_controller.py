@@ -30,6 +30,7 @@ def search():
 	page_number = int(page_number) if arg_exists(page_number) else 1
 	drink_type = request.args.get('type')
 	base = request.args.get('base')
+	base = base if arg_exists(base) else None
 	descriptors = request.args.get('descriptors')
 	min_price = request.args.get('minprice')
 	min_price = float(min_price) if arg_exists(min_price) else None
@@ -53,10 +54,10 @@ def search():
 			amax=max_abv,
 			base=base
 		)
-		for i in range(len(results)):
-			results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
 		
 		if results is not None:
+			for i in range(len(results)):
+				results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
 			return render_template('results.html', results=results, page_number=page_number, drink_name=drink_name)
 	
 	if drink_type and descriptors:
