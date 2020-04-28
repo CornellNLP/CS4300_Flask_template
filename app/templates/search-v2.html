@@ -204,12 +204,14 @@
         var breakfast_data = JSON.parse($("#breakfast_data").text());
         var lunch_data = JSON.parse($("#lunch_data").text());
         var dinner_data = JSON.parse($("#dinner_data").text());
+        console.log(lunch_data);
+        console.log(dinner_data);
 
         var resultHTML = "";
 
-        if (breakfast_data) resultHTML += $('#breakfastHtml').html();
-        if (lunch_data) resultHTML += $('#lunchHtml').html();
-        if (dinner_data) resultHTML += $('#dinnerHtml').html();
+        if (breakfast_data.length > 0) resultHTML += $('#breakfastHtml').html();
+        if (lunch_data.length > 0) resultHTML += $('#lunchHtml').html();
+        if (dinner_data.length > 0) resultHTML += $('#dinnerHtml').html();
 
         resultDiv.html(resultHTML);
       }

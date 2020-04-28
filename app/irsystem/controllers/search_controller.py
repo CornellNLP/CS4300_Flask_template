@@ -453,9 +453,14 @@ def version_2_search(query_words, omit_words, recipes):
         # boolean search
         recipes_out = recipe_schema.dump(recipes)
         inv_idx_ingredients = build_inverted_index(recipes_out, "ingredients")
+        inv_idx_title = build_inverted_index(recipes_out, "title")
         ranked_results = rank_recipes_boolean(query_words, omit_words, inv_idx_ingredients, recipes_out)
         if len(ranked_results) == 0:
-            all_data = []
+            ranked_results = rank_recipes_boolean(query_words, omit_words, inv_idx_title, recipes_out)
+            if len(ranked_results) == 0:
+                all_data = []
+            else:
+                all_data = ranked_results[:10]
         else:
             all_data = ranked_results[:10]
     return all_data
