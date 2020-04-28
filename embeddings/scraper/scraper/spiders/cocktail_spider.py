@@ -34,6 +34,6 @@ class SpruceCocktailSpider(scrapy.Spider):
             'name': name,
             'base': base,
             'description': desc,
-            'rating': rating,
+            'rating': rating + '/5' if rating is not None else None,
             'url': response.request.url
         }
