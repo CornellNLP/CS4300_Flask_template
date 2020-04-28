@@ -10,8 +10,12 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>pick your poison</title>
+
       <link rel="stylesheet" href="/static/bootstrap.min.css">
-      <link rel="stylesheet" href="/static/style.css">      
+      <link rel="stylesheet" href="/static/style.css">
+      <link rel="stylesheet" type="text/css" href="/static/jquery.tagsinput-revisited.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
    </head>
    <body class="text-center search">
 
@@ -36,20 +40,43 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
 
          <main role="main" class="inner cover">
             <form class="main-form" method="GET">
+               <input type="hidden" name="page" value="1" />
                <p class="lead d-flex justify-content-between text-nowrap">
                   <span>I would like to drink </span>
-                  <label class="sr-only" for="inlineFormInputName2">drink type</label>
-                  <select name="type" class="form-control mb-2 mr-sm-2">
+                  <label class="sr-only" for="type-input">drink type</label>
+                  <select id="type-input" name="type" class="form-control mb-2" onchange="checkCocktail(this);">
                      <option>anything</option>
                      <option>wine</option>
                      <option>beer</option>
-                     <!-- <option>cocktail</option> -->
+                     <option>liquor</option>
+                     <option>cocktail</option>
                   </select>
+               </p>
+               <p id="base-line" class="lead justify-content-between text-nowrap" style="display: none;">
+                  <span>I want the base to be </span>
+                  <label class="sr-only" for="base-input">base</label>
+                  <input id="base-input" type="text" name="base" class="form-control mb-2" placeholder="any base">
                </p>
                <p class="lead d-flex justify-content-between text-nowrap">
                   <span>It should be </span>
-                  <label class="sr-only" for="inlineFormInputName2">descriptors</label>
-                  <input type="text" name="descriptors" class="form-control mb-2 mr-sm-2" placeholder="light bodied, luminous, lush">
+                  <label class="sr-only" for="descriptors-input">descriptors</label>
+                  <input id="descriptors-input" type="text" name="descriptors" class="form-control mb-2 tagsinput">
+               </p>
+               <p id="price-line" class="lead justify-content-between text-nowrap" style="display: flex;">
+                  <span>It costs between </span>
+                  <label class="sr-only" for="minprice-input">minimum price</label>
+                  <input id="minprice-input" type="text" name="minprice" class="form-control mb-2 mr-3" placeholder="any price">
+                  <span> and</span>
+                  <label class="sr-only" for="maxprice-input">maximum price</label>
+                  <input id="maxprice-input" type="text" name="maxprice" class="form-control mb-2" placeholder="any price">
+               </p>
+               <p id="abv-line" class="lead justify-content-between text-nowrap" style="display: flex;">
+                  <span>Its ABV is between </span>
+                  <label class="sr-only" for="minabv-input">minimum abv</label>
+                  <input id="minabv-input" type="text" name="minabv" class="form-control mb-2 mr-3" placeholder="any ABV">
+                  <span> and</span>
+                  <label class="sr-only" for="maxprice-input">maximum price</label>
+                  <input id="maxabv-input" type="text" name="maxabv" class="form-control mb-2" placeholder="any ABV">
                </p>
                <p class="lead mt-5 mx-auto">
                   <button type="submit" class="btn btn-lg btn-secondary">pick my poison</button>
@@ -65,9 +92,44 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       </div>
    
       <!-- Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.0.min.js" crossorigin="anonymous"></script>
+      <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      <!-- <script src="/static/tagsinput.js"></script>
+      <script src="/static/typeahead.bundle.min.js"></script> -->
+      <script src="/static/jquery.tagsinput-revisited.js"></script>
       
+      <script>
+         const descriptors = {{descriptors|tojson}};
+         $('.tagsinput').tagsInput({
+            'width': '100%',
+            'placeholder': 'eg. "light bodied, luminous, lush"',
+            'autocomplete': {
+               source: descriptors
+            },
+            'values': descriptors
+         });
+
+         function checkCocktail(select) {
+            if (select.value == 'cocktail') {
+               document.getElementById('base-line').style.display = 'flex';
+               document.getElementById('price-line').style.display = 'none';
+               document.getElementById('abv-line').style.display = 'none';
+            } else {
+               document.getElementById('base-line').style.display = 'none';
+               document.getElementById('price-line').style.display = 'flex';
+               document.getElementById('abv-line').style.display = 'flex';
+            }
+         }
+
+         $( function() {
+            var availableTags = ['vodka', 'Midori', 'sloe', 'lychee', 'Chambord', 'Averna', 'beer', 'Campari', 'coffee', 'banana', 'sherry', 'Champagne', 'Mekhong', 'Jagermeister', 'Irish', 'Pimm', 'sake', 'nonalcoholic', 'RumChata', 'peach', 'absinthe', 'rum', 'Galliano', 'Southern', 'melon', 'Benedictine', 'brandy', 'tequila', 'pisco', 'shooter', 'chocolate', 'gin', 'Cointreau', 'whiskey', 'cachaca', 'Strega', 'vermouth', 'wine', 'cachaça', 'Frangelico', 'Grand', 'TyKu', 'Agavero'];
+            $( "#base-input" ).autocomplete({
+               source: availableTags
+            });
+         } );
+      </script>
    </body>
 </html>

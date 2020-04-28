@@ -13,36 +13,68 @@ PUNC_TABLE = str.maketrans({c: None for c in string.punctuation})
 STOP_WORDS = set(stopwords.words('english'))
 
 class Headers:
-    def __init__(self, name, desc, price=None, origin=None):
+    def __init__(self, name, desc, url, price=None, origin=None, abv=None, reviews=None, rating=None, base=None):
         self.name = name
         self.desc = desc
         self.price = price
         self.origin = origin
+        self.abv = abv
+        self.reviews = reviews
+        self.rating = rating
+        self.url = url
+        self.base = base
+
+STD_HDR = Headers(
+    name='name',
+    desc='description',
+    price='price',
+    origin='origin',
+    abv='abv',
+    reviews='reviews',
+    rating='rating',
+    url='url'
+)
 
 HEADERS = {
-    'wine': Headers(
-        name='title',
+    'wine': STD_HDR,
+    'beer': STD_HDR,
+    'liquor': STD_HDR,
+    'cocktail': Headers(
+        name='name',
         desc='description',
-        price='price',
-        origin='country'
-    ),
-    'beer': Headers(
-        name='beer/name',
-        desc='review/text'
+        base='base',
+        rating='rating',
+        url='url'
     )
 }
 
-# Import wine data
-def get_wine_data(n=None):
+# Import wine training data
+def get_wine_train_data(n=None):
     transcripts = pd.read_json(DATA_DIR+"winemag-data-130k-v2.json")
     return transcripts if n is None else transcripts[0:n]
     # return [t["description"] for t in transcripts]
 
-# Import beer data
-def get_beer_data(n=None):
+# Import beer training data
+def get_beer_train_data(n=None):
     transcripts = pd.read_csv(DATA_DIR+"beer_train.csv")
     return transcripts if n is None else transcripts[0:n]
     # return [t[4] for t in transcripts]
+
+def get_beers():
+    frames = [
+        pd.read_json(DATA_DIR + "conno-beer.json"),
+        pd.read_json(DATA_DIR + "shack-beer.json")
+    ]
+    return pd.concat(frames)
+
+def get_wines():
+    return pd.read_json(DATA_DIR + "wcom-wine.json")
+
+def get_liquors():
+    return pd.read_json(DATA_DIR + "wcom-liquor.json")
+
+def get_cocktails():
+    return pd.read_json(DATA_DIR + "spruce-cocktail.json")
 
 def get_descriptor(word, strict):
     if word in list(DESC_MAP.index):

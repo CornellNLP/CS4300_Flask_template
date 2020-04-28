@@ -26,6 +26,12 @@
    }
 }
 
+hr.fancy {
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
 /* Links */
 a,
 a:focus,
@@ -50,6 +56,8 @@ a:hover {
 html,
 body {
   background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -62,23 +70,6 @@ body {
 
 body.search {
    height: 100vh;
-}
-
-body.results {
-   /* animation: fix-wave-fill-results 4s; */
-   height: 100vh;
-}
-
-@keyframes fix-wave-fill-results {
-   0% {
-      height: 100vh;
-   }
-   99% {
-      height: 100vh;
-   }
-   100% {
-      height: auto;
-   }
 }
 
 .cover-container {
@@ -144,10 +135,15 @@ body.results {
   font-weight: 700;
 }
 
+main .lead {
+   font-size: 2em;
+}
+
 /*
  * Footer
  */
 .mastfoot {
+   margin-top: 1.5rem;
   color: rgba(255, 255, 255, .5);
 }
 
@@ -155,8 +151,8 @@ body.results {
 .liquid {
    margin-top: 15vw;
    background-color: #663333;
-   /* height: calc(100vh - 15vw); */
-   height: 100%;
+   height: calc(100% - 15vw);
+   /* height: 100%; */
    position: absolute;
    transform: translate(0, 100%);
    width: 100%;
@@ -168,7 +164,7 @@ body.results {
    bottom: 100%;
    position: absolute;
    width: 200%;
-   animation: wave-action 1s infinite linear;
+   animation: wave-action 2s infinite linear;
    fill: #663333;
    left: 0;
    margin-bottom: -0.0625rem;
@@ -205,7 +201,6 @@ body.results {
    background: transparent;
    border: none;
    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-   color: #fff;
    box-shadow: none;
    border-radius: 0;
    font-size: 0.7em;
@@ -213,6 +208,7 @@ body.results {
 
 .main-form select,
 .main-form select:focus {
+   color: #fff;
    -webkit-appearance: none;
    appearance: none;
    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='white' fill-opacity='0.5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
@@ -220,17 +216,15 @@ body.results {
    background-repeat: no-repeat;
 }
 
-.main-form input:focus {
-   border-bottom: 1px solid white;
-}
-
-.main-form input::placeholder {
-   color: #fff;
-   opacity: 0.5;
-}
-
+.main-form input,
+.main-form input::placeholder,
 .main-form select {
    color: rgba(255, 255, 255, 0.5);
+}
+
+.main-form input:focus {
+   color: #fff;
+   border-bottom: 1px solid white;
 }
 
 .main-form select:focus {
@@ -238,14 +232,99 @@ body.results {
    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='white' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
 }
 
-.main-form p {
-   font-size: 2em;
+.ui-autocomplete {
+   text-align: left;
+   text-shadow: none;
+   max-height: 100px;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+.main-form .tagsinput input:focus {
+   border: none;
 }
 
 /* Results List */
 
 .results-list {
    text-shadow: none;
-   height: 75%;
-   overflow: scroll;
+}
+
+.results-list .card {
+   background-color: rgba(255, 255, 255, 0.3);
+   color: #fff;
+   margin-bottom: 2rem;
+   border: none;
+}
+
+.results-list .card.last {
+   margin-bottom: 0;
+}
+
+.results-list .card .btn-link {
+   color: #fff;
+   text-decoration: none;
+}
+
+.results-list .card-header {
+   border: none;
+}
+
+.results-list .card-header i {
+   margin: auto 0;
+   font-size: 1.5em;
+}
+
+.results-list .card-header button {
+   position: relative;
+   width: 100%;
+}
+   
+.results-list .card-header button::after {
+   content: "\f107";
+   top: 0;
+   right: 0;
+   position: absolute;
+   font-family: "FontAwesome";
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+ 
+.results-list .card-header button[aria-expanded="true"]::after {
+   content: "\f106";
+}
+
+.results-list .card-body {
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.results-list .card-body.no-reviews {
+   border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.results-list .nav-tabs {
+   border-bottom: transparent;
+}
+
+.results-list .nav-tabs > li {
+   float: left;
+}
+
+.results-list .nav-tabs > li > a {
+   border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.results-list .nav-tabs .nav-link.active,
+.results-list .nav-tabs .nav-link.active:hover,
+.results-list .nav-tabs .nav-link.active:focus {
+   color: #555555;
+   background-color: rgba(255, 255, 255, 0.8);
+   border: none;
+   cursor: default;
+   font-weight: bold;
+}
+
+.reviews blockquote {
+   font-size: 1em;
 }

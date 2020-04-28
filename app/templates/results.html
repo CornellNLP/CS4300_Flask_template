@@ -11,9 +11,10 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>pick your poison</title>
       <link rel="stylesheet" href="/static/bootstrap.min.css">
-      <link rel="stylesheet" href="/static/style.css">      
+      <link rel="stylesheet" href="/static/style.css">
+      <script src="https://kit.fontawesome.com/3798c5de2c.js" crossorigin="anonymous"></script>  
    </head>
-   <body class="text-center search">
+   <body>
 
       <!-- Wave Graphic -->
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
@@ -28,48 +29,110 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       </div>
 
       <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
-         <header class="masthead mb-auto">
+
+         <header class="masthead text-center">
             <div class="inner">
                <h3 class="masthead-brand"><a href="/">pick your poison</a></h3>
             </div>
          </header>
 
-         <main role="main" class="inner cover results-list">
-            <div class="accordion text-left text-dark">
-               {% for message in get_flashed_messages() %}
-                  <div class="flash">{{ message }}</div>
-               {% endfor %}
-         
-               {% for drink in results %}
-               <div class="card">
-                  <div class="card-header" id="heading{{ loop.index }}">
-                     <h2 class="mb-0">
+         <main role="main" class="inner cover">
+            <p class="lead text-center">here's what we've picked for you</p><hr class="fancy mt-4 mb-5" />
+            <div class="text-left text-dark results-list">
+               {% for (drink, dist) in results %}
+               <div class="card{% if loop.length == loop.index %} last{% endif %}">
+                  <div class="card-header d-flex" id="heading{{ loop.index }}">
+                     {% if drink.type == 'beer' %}
+                        <i class="fas fa-beer fa-fw align-middle"></i>
+                     {% elif drink.type == 'wine' %}
+                        <i class="fas fa-wine-glass-alt fa-fw align-middle"></i>
+                     {% elif drink.type == 'liquor' %}
+                        <i class="fas fa-wine-bottle fa-fw align-middle"></i>
+                     {% elif drink.type == 'cocktail' %}
+                        <i class="fas fa-cocktail fa-fw align-middle"></i>
+                     {% endif %}
+                     <h2 class="mb-0 flex-grow-1">
                         <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-controls="collapse{{ loop.index }}">
-                        {{ loop.index }}. {{ drink[0].name }}
+                           <strong>{{ (page_number|int - 1) * 10 + loop.index }}.</strong> {{ drink.name }}
                         </button>
                      </h2>
                   </div>
                
                   <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}">
-                     <div class="card-body">
-                        <p>{{ drink[0].description }}</p>
-                        {% if drink[0].type == 'wine' %}
-                           <p>Price: ${{ drink[0].price }}.00</p>
-                           <p>Origin: {{ drink[0].origin }}</p>
+                     {% if dist != [] %}<div class="tab-content">{% endif %}
+                        {% if dist != [] %}<div id="info-{{ loop.index }}" class="tab-pane active show">{% endif %}
+                           <div class="card-body text-dark{% if dist == [] %} no-reviews{% endif %}">
+                              <h4>About this {{ drink.type }}</h4>
+                              <p>{{ drink.description }}</p>
+                              {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}</p>{% endif %}
+                              {% if drink.abv != None %}<p><strong>ABV:</strong> {{ drink.abv }}%</p>{% endif %}
+                              {% if drink.price != None %}<p><strong>Price:</strong> ${{ drink.price }}</p>{% endif %}
+                              {% if drink.origin != '' %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
+                              <a href="/?page=1&drink={{ drink.name }}" class="btn btn-outline-primary">Find similar drinks</a>
+                              <a href="{{ drink.url }}" class="btn btn-outline-primary">Buy this {{ drink.type }}</a>
+                           </div>
+                        {% if dist != [] %}</div>{% endif %}
+                        {% if dist != [] %}
+                           <div id="reviews-{{ loop.index }}" class="tab-pane">
+                              <div class="card-body text-dark reviews">
+                                 <h4>Reviews</h4>
+                                 {% for review in dist %}
+                                    {% if review.body != None %}
+                                       <blockquote class="blockquote">
+                                          <p class="mb-0">{{ review.body }}</p>
+                                          <footer class="blockquote-footer">Reviewed by <cite>{{ review.author }}</cite>{% if review.date != None %} on {{ review.date }}{% endif %} (Rating: {{ review.rating }})</footer>
+                                       </blockquote>
+                                    {% endif %}
+                                 {% endfor %}
+                                 <!-- <p>{{ dist }}</p> -->
+                              </div>
+                           </div>
                         {% endif %}
-                     </div>
+                     {% if dist != [] %}</div>{% endif %}
+                     {% if dist != [] %}
+                        <ul class="nav nav-tabs">
+                           <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#info-{{ loop.index }}">Information</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#reviews-{{ loop.index }}">Reviews</a>
+                           </li>
+                        </ul>
+                     {% endif %}
                   </div>
                </div>
                {% endfor %}
             </div>
+            <div class="text-center mt-5">
+               <!-- TODO: remove previous button and implement infinite scrolling results -->
+               {% if page_number|int > 1 %}
+                  <a class="btn btn-lg btn-secondary mr-3" href="/?page={{ page_number|int - 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">previous results</a>
+               {% endif %}
+               <a class="btn btn-lg btn-secondary" href="/?page={{ page_number|int + 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">more results</a>
+            </div>
          </main>
 
-         <footer class="mastfoot mt-auto">
+         <footer class="mastfoot text-center">
             <div class="inner">
                <p>created by Derek Cheng, Collin Montag, DB Lee, Dana Luong, and Ishneet Sachar</p>
             </div>
          </footer>
+
       </div>
+
+      <script>
+         const body = document.getElementsByTagName('body')[0];
+         body.style.height = `100vh`;
+         body.style.overflow = `hidden`;
+         
+         const liquidElement = document.getElementsByClassName('liquid')[0];
+         const maxPercent = 100;
+         var percent = 0;
+         setTimeout(() => {
+            body.style.height = `100%`;
+            body.style.overflow = `visible`;
+         }, 4000);
+      </script>
    
       <!-- Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
