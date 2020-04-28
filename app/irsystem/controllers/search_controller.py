@@ -23,7 +23,7 @@ def serve_desc():
 	descriptors = [d.replace('_', ' ') for d in descriptors]
 	return render_template('desc_list.html', descriptors=descriptors)
 
-@irsystem.route('/', methods=['GET'])
+@irsystem.route('/search', methods=['GET'])
 def search():
 
 	page_number = request.args.get('page')
@@ -81,6 +81,7 @@ def search():
 				results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
 			return render_template('results.html', results=results, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
+@irsystem.route('/', methods=['GET'])
+def home():
 	descriptors = [e.word.replace('_', ' ') for e in query_embeddings()]
-
 	return render_template('search.html', descriptors=descriptors)
