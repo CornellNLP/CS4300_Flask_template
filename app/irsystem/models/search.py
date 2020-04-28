@@ -2,7 +2,7 @@ from .database import query_drink, query_embeddings, query_drink_vbytes
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
-def search_drinks(data, dtype=None, k=10, page=1):
+def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=None, amax=None, base=None):
     # Fetch query vector from drink name
     if type(data) == str:
         vbytes = query_drink_vbytes(data)
@@ -18,8 +18,10 @@ def search_drinks(data, dtype=None, k=10, page=1):
         query = sum(q_vectors) / len(q_vectors)
     
     # Search database for k nearest neighbors
-    drinks = query_drink(dtype)
+    drinks = query_drink(dtype, pmin, pmax, amin, amax, base)
     d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
+    if len(d_vectors) == 0:
+        return None
     knn_data = np.array(d_vectors).reshape(drinks.count(), -1)
     knn = NearestNeighbors(n_neighbors=k*page, algorithm='auto', metric='cosine')
     model = knn.fit(knn_data)

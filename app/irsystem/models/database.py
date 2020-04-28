@@ -45,10 +45,21 @@ def add_embedding_batch(embeddings):
     db.session.add_all(embeddings)
     db.session.commit()
     
-def query_drink(dtype=None):
-    if dtype is None:
-        return db.session.query(Drink)
-    return db.session.query(Drink).filter(Drink.type == dtype)
+def query_drink(dtype=None, pmin=None, pmax=None, amin=None, amax=None, base=None):
+    q = db.session.query(Drink)
+    if dtype is not None:
+        q = q.filter(Drink.type == dtype)
+    if pmin is not None:
+        q = q.filter(Drink.price >= pmin)
+    if pmax is not None:
+        q = q.filter(Drink.price <= pmax)
+    if amin is not None:
+        q = q.filter(Drink.abv >= amin)
+    if amax is not None:
+        q = q.filter(Drink.abv <= amax)
+    if base is not None:
+        q = q.filter(Drink.base == base)
+    return q
 
 def query_embeddings():
     return db.session.query(Embedding)

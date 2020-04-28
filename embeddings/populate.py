@@ -10,6 +10,7 @@ from math import isnan
 import numpy as np
 import pickle
 import re
+import json
 
 def train(norm_sentences, phraser):
     print('Phrasing data...')
@@ -51,23 +52,21 @@ def make_embeddings(wv, tfidf_dict):
             print('Descriptor not seen in training: {}'.format(word))
     return embeddings
 
-def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
+def make_drinks(df, descriptors, dtype, wv, tfidf_dict, min_desc):
     h = HEADERS[dtype]
     drinks = []
     for i in range(len(df)):
         row = df.iloc[i]
         tokens = descriptors[i].split(' ')
+        if len(tokens) < min_desc:
+            continue
         word_vectors = []
         for t in tokens:
             if t in tfidf_dict:
                 weight = tfidf_dict[t]
                 vector = wv.get_vector(t)
                 word_vectors.append(vector * weight)
-        try:
-            drink_vector = sum(word_vectors) / len(word_vectors)
-        except:
-            # Skip entry if description contains no descriptors
-            continue
+        drink_vector = sum(word_vectors) / len(word_vectors)
         # Required/expected fields
         name = row[h.name]
         desc = row[h.desc]
@@ -93,7 +92,7 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
             else:
                 drink.abv = raw_abv
         if h.reviews is not None:
-            drink.reviews = row[h.reviews]
+            drink.reviews = json.dumps(row[h.reviews])
         if h.rating is not None:
             drink.rating = row[h.rating]
         if h.base is not None:
@@ -102,7 +101,8 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict):
     return drinks
 
 def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None,
-         beer_size=None, add_embeddings=True, add_drinks=True, use_reviews=True):
+         beer_size=None, add_embeddings=True, add_drinks=True, use_reviews=True,
+         min_desc=4):
     if model_file is None or phraser_file is None:
         print('Fetching wine training data...')
         wine_train_data = get_wine_train_data(wine_size)
@@ -137,14 +137,14 @@ def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None,
     cocktails = get_cocktails()
     cocktail_desc = list(cocktails['description'])
     if use_reviews:
-        wine_desc = [d + r for d, r in zip(
-            wines['description'].fillna(''), wines['reviews'].fillna('')
+        wine_desc = [d + ' '.join([rev['body'] for rev in r if rev['body'] is not None]) for d, r in zip(
+            wines['description'].fillna(''), wines['reviews']
         )]
-        beer_desc = [d + r for d, r in zip(
-            beers['description'].fillna(''), beers['reviews'].fillna('')
+        beer_desc = [d + ' '.join([rev['body'] for rev in r if rev['body'] is not None]) for d, r in zip(
+            beers['description'].fillna(''), beers['reviews']
         )]
-        liquor_desc = [d + r for d, r in zip(
-            liquors['description'].fillna(''), liquors['reviews'].fillna('')
+        liquor_desc = [d + ' '.join([rev['body'] for rev in r if rev['body'] is not None]) for d, r in zip(
+            liquors['description'].fillna(''), liquors['reviews']
         )]
     else:
         wine_desc = list(wines['description'].fillna(''))
@@ -194,6 +194,6 @@ def main(model_file=None, phraser_file=None, tfidf_file=None, wine_size=None,
 #     model_file='embeddings/trained/model_50k.bin',
 #     phraser_file='embeddings/trained/trigram_50k.pkl',
 #     tfidf_file='embeddings/trained/tfidf_p4.pkl',
-#     add_embeddings=False,
-#     adddrinks=False,
+#     # add_embeddings=False,
+#     # add_drinks=False,
 # )
