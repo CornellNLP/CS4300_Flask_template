@@ -48,7 +48,6 @@ def search():
 
 			return render_template('results.html', results=results)
 
-	# TODO: fetch actual descriptors from db
-	descriptors = ['light bodied', 'luminous', 'lush']
+	descriptors = [e.word.replace('_', ' ') for e in query_embeddings()]
 
 	return render_template('search.html', descriptors=descriptors)

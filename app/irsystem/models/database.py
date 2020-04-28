@@ -56,3 +56,7 @@ def query_embeddings():
 def contains_drink(name):
     q = db.session.query(Drink).filter(Drink.name == name)
     return db.session.query(q.exists()).scalar()
+
+def query_drink_vbytes(name):
+    d = db.session.query(Drink).get(name)
+    return d.vbytes if d is not None else d
