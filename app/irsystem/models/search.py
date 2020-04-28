@@ -22,6 +22,10 @@ def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=Non
     d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
     if len(d_vectors) == 0:
         return None
+    if len(d_vectors) < k:
+        k = len(d_vectors)
+        if page > 1:
+            return None
     knn_data = np.array(d_vectors).reshape(drinks.count(), -1)
     knn = NearestNeighbors(n_neighbors=k*page, algorithm='auto', metric='cosine')
     model = knn.fit(knn_data)
