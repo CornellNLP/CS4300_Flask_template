@@ -68,7 +68,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                                  {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}</p>{% endif %}
                                  {% if drink.abv != None %}<p><strong>ABV:</strong> {{ drink.abv }}%</p>{% endif %}
                                  {% if drink.price != None %}<p><strong>Price:</strong> ${{ drink.price }}</p>{% endif %}
-                                 {% if drink.origin != '' %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
+                                 {% if drink.origin != None %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
                                  <a href="/search?page=1&drink={{ drink.name }}" class="btn btn-outline-primary">Find similar drinks</a>
                                  <a href="{{ drink.url }}" class="btn btn-outline-primary">Buy this {{ drink.type }}</a>
                               </div>
