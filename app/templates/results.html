@@ -74,17 +74,17 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                         {% if dist != [] %}</div>{% endif %}
                         {% if dist != [] %}
                            <div id="reviews-{{ loop.index }}" class="tab-pane">
-                              <div class="card-body text-dark">
+                              <div class="card-body text-dark reviews">
                                  <h4>Reviews</h4>
                                  {% for review in dist %}
-                                    {% if review.body != '' %}
+                                    {% if review.body != None %}
                                        <blockquote class="blockquote">
                                           <p class="mb-0">{{ review.body }}</p>
-                                          <footer class="blockquote-footer">Reviewed by <cite>{{ review.author }}</cite>{% if review.date != '' %} on {{ review.date }}{% endif %} (Rating: {{ review.rating }})</footer>
+                                          <footer class="blockquote-footer">Reviewed by <cite>{{ review.author }}</cite>{% if review.date != None %} on {{ review.date }}{% endif %} (Rating: {{ review.rating }})</footer>
                                        </blockquote>
                                     {% endif %}
                                  {% endfor %}
-                                 <p>{{ dist }}</p>
+                                 <!-- <p>{{ dist }}</p> -->
                               </div>
                            </div>
                         {% endif %}

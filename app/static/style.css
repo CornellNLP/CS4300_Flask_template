@@ -324,3 +324,7 @@ main .lead {
    cursor: default;
    font-weight: bold;
 }
+
+.reviews blockquote {
+   font-size: 1em;
+}
