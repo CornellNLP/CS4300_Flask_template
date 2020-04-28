@@ -77,6 +77,6 @@ def search():
 			return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
 @irsystem.route('/', methods=['GET'])
-def homepage():
+def home():
 	descriptors = [e.word.replace('_', ' ') for e in query_embeddings()]
 	return render_template('search.html', descriptors=descriptors)
