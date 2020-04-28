@@ -45,7 +45,7 @@
       font-size: 140%;
       font-weight: bold;
       padding-bottom: 10px;
-      color: #0d4194;
+      color: rgb(46, 110, 58);
     }
 
     ul li {
@@ -53,12 +53,28 @@
     }
 
     .results-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 10px;
+    }
+
+    .category {
+      text-align: center;
+      padding: 20px;
+      margin: 0px 15px;
+      background-color: rgba(199, 181, 163, 0.8);
+      width: 100%;
+    }
+
+    /*
+    .results-div {
       align-content: center;
       text-align: center;
       margin: 0px 20px;
     }
 
-    /* this is meant for each category div; haven't tested yet */
+    // this is meant for each category div; haven't tested yet
     .category {
       align-content: center;
       text-align: center;
@@ -67,6 +83,7 @@
       background-color: rgba(236, 187, 122, 0.8);
       width: 100%;
     }
+    */
 
     .form-group {
       margin: 20px;
@@ -98,6 +115,10 @@
 
     h1 {
       text-align: center;
+    }
+
+    h5 {
+      line-height: 0px;
     }
   </style>
 </head>
@@ -194,11 +215,15 @@
       }
     </script>
     <h1>{{output_message}}</h1>
+    <br><br>
     <div id="results" class="results-div">
       {% if breakfast_data or lunch_data or dinner_data %}
       {% if breakfast_data %}
       <div id="breakfastHtml" class="hidden">
         <div class="category">
+          <h2>Breakfast</h2>
+          <h5>___________________________</h5>
+          <br>
           {% for i in range(breakfast_data|length) %}
           <p class="normal-title">{{i + 1}}. {{breakfast_data[i]["title"]}}</p>
           {% if breakfast_data[i]["description"] is not none %}
@@ -234,6 +259,9 @@
       {% if lunch_data %}
       <div id="lunchHtml" class="hidden">
         <div class="category">
+          <h2>Lunch</h2>
+          <h5>______________________</h5>
+          <br>
           {% for i in range(lunch_data|length) %}
           <p class="normal-title">{{i + 1}}. {{lunch_data[i]["title"]}}</p>
           {% if lunch_data[i]["description"] is not none %}
@@ -269,6 +297,9 @@
       {% if dinner_data %}
       <div id="dinnerHtml" class="hidden">
         <div class="category">
+          <h2>Dinner</h2>
+          <h5>________________________</h5>
+          <br>
           {% for i in range(dinner_data|length) %}
           <p class="normal-title">{{i + 1}}. {{dinner_data[i]["title"]}}</p>
           {% if dinner_data[i]["description"] is not none %}
