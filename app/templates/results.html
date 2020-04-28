@@ -59,9 +59,9 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   </div>
                
                   <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}">
-                     {% if drink.reviews != '' %}<div class="tab-content">{% endif %}
-                        {% if drink.reviews != '' %}<div id="info-{{ loop.index }}" class="tab-pane active show">{% endif %}
-                           <div class="card-body text-dark{% if drink.reviews == '' %} no-reviews{% endif %}">
+                     {% if dist != [] %}<div class="tab-content">{% endif %}
+                        {% if dist != [] %}<div id="info-{{ loop.index }}" class="tab-pane active show">{% endif %}
+                           <div class="card-body text-dark{% if dist == [] %} no-reviews{% endif %}">
                               <h4>About this {{ drink.type }}</h4>
                               <p>{{ drink.description }}</p>
                               {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}</p>{% endif %}
@@ -71,12 +71,12 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                               <a href="/?page=1&drink={{ drink.name }}" class="btn btn-outline-primary">Find similar drinks</a>
                               <a href="{{ drink.url }}" class="btn btn-outline-primary">Buy this {{ drink.type }}</a>
                            </div>
-                        {% if drink.reviews != '' %}</div>{% endif %}
-                        {% if drink.reviews != '' %}
+                        {% if dist != [] %}</div>{% endif %}
+                        {% if dist != [] %}
                            <div id="reviews-{{ loop.index }}" class="tab-pane">
                               <div class="card-body text-dark">
                                  <h4>Reviews</h4>
-                                 {% for review in drink.reviews %}
+                                 {% for review in dist %}
                                     {% if review.body != '' %}
                                        <blockquote class="blockquote">
                                           <p class="mb-0">{{ review.body }}</p>
@@ -84,12 +84,12 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                                        </blockquote>
                                     {% endif %}
                                  {% endfor %}
-                                 <p>{{ drink.reviews }}</p>
+                                 <p>{{ dist }}</p>
                               </div>
                            </div>
                         {% endif %}
-                     {% if drink.reviews != '' %}</div>{% endif %}
-                     {% if drink.reviews != '' %}
+                     {% if dist != [] %}</div>{% endif %}
+                     {% if dist != [] %}
                         <ul class="nav nav-tabs">
                            <li class="nav-item">
                               <a class="nav-link active" data-toggle="tab" href="#info-{{ loop.index }}">Information</a>

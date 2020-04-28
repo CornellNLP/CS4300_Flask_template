@@ -3,6 +3,7 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.search import search_drinks
 from app.irsystem.models.database import query_embeddings
+import json
 
 project_name = "Pick Your Poison"
 net_id = """
@@ -44,6 +45,8 @@ def search():
 		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
 
 		results = search_drinks(desc_lst, dtype=None if drink_type == 'anything' else drink_type, k=10)
+		for i in range(len(results)):
+			results[i][1] = json.loads(results[i][0].reviews) if results[i][0].reviews is not None else []
 
 		if results is not None:
 			return render_template('results.html', results=results, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
