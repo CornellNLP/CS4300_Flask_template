@@ -479,6 +479,9 @@ def search():
     dinner_selected = request.args.get('dinner')
     drink_included = request.args.get('include-drink')
 
+    if not cal_limit:
+        cal_limit = db.session.query(func.max(Recipe.calories)).one()
+
     # default initialization
     output_message = ''
     breakfast_data = None
@@ -523,7 +526,7 @@ def search():
                             or_(Recipe.directions.like("%{}%".format(word)) for word in query_words),
                             or_(Recipe.categories.like("%{}%".format(word)) for word in query_words),
                         )
-                    ).filter_by(meal_type="breakfast").all()
+                    ).filter_by(calories<cal_limit).filter_by(meal_type="breakfast").all()
                 else:
                     breakfast_recipes = Recipe.query.filter(
                         or_(
@@ -533,7 +536,7 @@ def search():
                             or_(Recipe.directions.like("%{}%".format(word)) for word in query_words),
                             or_(Recipe.categories.like("%{}%".format(word)) for word in query_words),
                         )
-                    ).filter(~Recipe.categories.like("%Drink%")).filter_by(meal_type="breakfast").all()
+                    ).filter(Recipe.calories < cal_limit).filter(~Recipe.categories.like("%Drink%")).filter_by(meal_type="breakfast").all()
                 breakfast_data = version_2_search(query_words, omit_words, breakfast_recipes)
             if lunch_selected:
                 lunch_recipes = None # placeholder initialization
