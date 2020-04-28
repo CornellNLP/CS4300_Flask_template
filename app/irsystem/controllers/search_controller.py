@@ -22,31 +22,31 @@ def serve_desc():
 @irsystem.route('/', methods=['GET'])
 def search():
 
-	# FOR TESTING PURPOSES #
-	if request.args.get('test'):
-		return render_template('test.html')
-
+	page_number = request.args.get('page')
 	drink_type = request.args.get('type')
+	base = request.args.get('base')
 	descriptors = request.args.get('descriptors')
+	min_price = request.args.get('min-price')
+	max_price = request.args.get('max-price')
+	min_abv = request.args.get('min-abv')
+	max_abv = request.args.get('max-abv')
+	drink_name = request.args.get('drink') # for searching for similar drinks
+
+	if drink_name:
+		print("User searched for drinks similar to {}".format(drink_name))
+		results = search_drinks(drink_name, k=10)
+
+		if results is not None:
+			return render_template('results.html', results=results, page_number=page_number, drink_name=drink_name)
 	
 	if drink_type and descriptors:
 		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
 		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
 
-		if drink_type == 'anything':
-			drink_type = None
-		results = search_drinks(desc_lst, dtype=drink_type, k=10)
+		results = search_drinks(desc_lst, dtype=None if drink_type == 'anything' else drink_type, k=10)
 
 		if results is not None:
-
-			# for drink in results:
-			# 	print(drink[0].name)
-			# 	print(drink[0].description)
-			# 	print(drink[0].price)
-			# 	print(drink[0].origin)
-			# 	print(drink[0].type)
-
-			return render_template('results.html', results=results)
+			return render_template('results.html', results=results, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
 	descriptors = [e.word.replace('_', ' ') for e in query_embeddings()]
 

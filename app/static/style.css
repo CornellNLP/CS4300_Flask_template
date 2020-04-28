@@ -201,7 +201,6 @@ main .lead {
    background: transparent;
    border: none;
    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-   color: #fff;
    box-shadow: none;
    border-radius: 0;
    font-size: 0.7em;
@@ -209,6 +208,7 @@ main .lead {
 
 .main-form select,
 .main-form select:focus {
+   color: #fff;
    -webkit-appearance: none;
    appearance: none;
    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='white' fill-opacity='0.5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
@@ -216,13 +216,15 @@ main .lead {
    background-repeat: no-repeat;
 }
 
-.main-form input::placeholder {
-   color: #fff;
-   opacity: 0.5;
-}
-
+.main-form input,
+.main-form input::placeholder,
 .main-form select {
    color: rgba(255, 255, 255, 0.5);
+}
+
+.main-form input:focus {
+   color: #fff;
+   border-bottom: 1px solid white;
 }
 
 .main-form select:focus {
@@ -235,9 +237,12 @@ main .lead {
    text-shadow: none;
    max-height: 100px;
    overflow-y: auto;
-   /* prevent horizontal scrollbar */
    overflow-x: hidden;
- }
+}
+
+.main-form .tagsinput input:focus {
+   border: none;
+}
 
 /* Results List */
 

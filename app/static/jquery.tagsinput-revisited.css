@@ -92,11 +92,8 @@
 	background: transparent;
 	display: inline-block;
 	width: 100%;
-	/* font-size: 14px; */
-	/* line-height: 20px; */
-	padding: 5px;
+	padding: 0.375rem 0.75rem;
 	border: 0 none;
-	margin: 0 5px 5px 0;
 	color: #fff;
 	outline: none;
 }
