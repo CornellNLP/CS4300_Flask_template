@@ -53,35 +53,43 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                      {% endif %}
                      <h2 class="mb-0 flex-grow-1">
                         <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-controls="collapse{{ loop.index }}">
-                           <strong>{{ loop.index }}.</strong> {{ drink.name }}
+                           <strong>{{ (page_number|int - 1) * 10 + loop.index }}.</strong> {{ drink.name }}
                         </button>
                      </h2>
                   </div>
                
                   <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}">
-                     {% if drink.reviews != '' %}<div class="tab-content">{% endif %}
-                        {% if drink.reviews != '' %}<div id="info-{{ loop.index }}" class="tab-pane active show">{% endif %}
-                           <div class="card-body text-dark{% if drink.reviews == '' %} no-reviews{% endif %}">
+                     {% if dist != [] %}<div class="tab-content">{% endif %}
+                        {% if dist != [] %}<div id="info-{{ loop.index }}" class="tab-pane active show">{% endif %}
+                           <div class="card-body text-dark{% if dist == [] %} no-reviews{% endif %}">
                               <h4>About this {{ drink.type }}</h4>
                               <p>{{ drink.description }}</p>
-                              {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}/100</p>{% endif %}
+                              {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}</p>{% endif %}
                               {% if drink.abv != None %}<p><strong>ABV:</strong> {{ drink.abv }}%</p>{% endif %}
                               {% if drink.price != None %}<p><strong>Price:</strong> ${{ drink.price }}</p>{% endif %}
                               {% if drink.origin != '' %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
-                              <a href="#" class="btn btn-outline-primary">Find similar drinks</a>
+                              <a href="/?page=1&drink={{ drink.name }}" class="btn btn-outline-primary">Find similar drinks</a>
                               <a href="{{ drink.url }}" class="btn btn-outline-primary">Buy this {{ drink.type }}</a>
                            </div>
-                        {% if drink.reviews != '' %}</div>{% endif %}
-                        {% if drink.reviews != '' %}
+                        {% if dist != [] %}</div>{% endif %}
+                        {% if dist != [] %}
                            <div id="reviews-{{ loop.index }}" class="tab-pane">
-                              <div class="card-body text-dark">
+                              <div class="card-body text-dark reviews">
                                  <h4>Reviews</h4>
-                                 <p>{{ drink.reviews }}</p>
+                                 {% for review in dist %}
+                                    {% if review.body != None %}
+                                       <blockquote class="blockquote">
+                                          <p class="mb-0">{{ review.body }}</p>
+                                          <footer class="blockquote-footer">Reviewed by <cite>{{ review.author }}</cite>{% if review.date != None %} on {{ review.date }}{% endif %} (Rating: {{ review.rating }})</footer>
+                                       </blockquote>
+                                    {% endif %}
+                                 {% endfor %}
+                                 <!-- <p>{{ dist }}</p> -->
                               </div>
                            </div>
                         {% endif %}
-                     {% if drink.reviews != '' %}</div>{% endif %}
-                     {% if drink.reviews != '' %}
+                     {% if dist != [] %}</div>{% endif %}
+                     {% if dist != [] %}
                         <ul class="nav nav-tabs">
                            <li class="nav-item">
                               <a class="nav-link active" data-toggle="tab" href="#info-{{ loop.index }}">Information</a>
@@ -96,7 +104,11 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                {% endfor %}
             </div>
             <div class="text-center mt-5">
-               <a class="btn btn-lg btn-secondary" href="#">show more results</a>
+               <!-- TODO: remove previous button and implement infinite scrolling results -->
+               {% if page_number|int > 1 %}
+                  <a class="btn btn-lg btn-secondary mr-3" href="/?page={{ page_number|int - 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">previous results</a>
+               {% endif %}
+               <a class="btn btn-lg btn-secondary" href="/?page={{ page_number|int + 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">more results</a>
             </div>
          </main>
 

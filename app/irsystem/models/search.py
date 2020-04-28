@@ -28,4 +28,4 @@ def search_drinks(data, dtype=None, k=10, page=1):
     # Return list of `(drink, distance)` tuples
     dst_lst = dst[0].tolist()[(page-1)*k:]
     ind_lst = ind[0].tolist()[(page-1)*k:]
-    return [(drinks[i], dst) for (i, dst) in zip(ind_lst, dst_lst)]
+    return [[drinks[i], dst] for (i, dst) in zip(ind_lst, dst_lst)]
