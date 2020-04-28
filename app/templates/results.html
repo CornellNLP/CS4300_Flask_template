@@ -64,7 +64,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                            <div class="card-body text-dark{% if drink.reviews == '' %} no-reviews{% endif %}">
                               <h4>About this {{ drink.type }}</h4>
                               <p>{{ drink.description }}</p>
-                              {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}/100</p>{% endif %}
+                              {% if drink.rating != None %}<p><strong>Rating:</strong> {{ drink.rating }}</p>{% endif %}
                               {% if drink.abv != None %}<p><strong>ABV:</strong> {{ drink.abv }}%</p>{% endif %}
                               {% if drink.price != None %}<p><strong>Price:</strong> ${{ drink.price }}</p>{% endif %}
                               {% if drink.origin != '' %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
@@ -76,6 +76,14 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                            <div id="reviews-{{ loop.index }}" class="tab-pane">
                               <div class="card-body text-dark">
                                  <h4>Reviews</h4>
+                                 {% for review in drink.reviews %}
+                                    {% if review.body != '' %}
+                                       <blockquote class="blockquote">
+                                          <p class="mb-0">{{ review.body }}</p>
+                                          <footer class="blockquote-footer">Reviewed by <cite>{{ review.author }}</cite>{% if review.date != '' %} on {{ review.date }}{% endif %} (Rating: {{ review.rating }})</footer>
+                                       </blockquote>
+                                    {% endif %}
+                                 {% endfor %}
                                  <p>{{ drink.reviews }}</p>
                               </div>
                            </div>
