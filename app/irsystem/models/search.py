@@ -10,6 +10,7 @@ class Result:
         self.reviews = reviews
 
 def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=None, amax=None, base=None):
+    query = None
     # Fetch query vector from drink name
     if type(data) == str:
         vbytes = query_drink_vbytes(data)
@@ -20,8 +21,6 @@ def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=Non
     if type(data) == list:
         emb_dict = {e.word: np.frombuffer(e.vbytes, dtype=np.float32) for e in query_embeddings()}
         q_vectors = [emb_dict[d] for d in data if d in emb_dict]
-        if len(q_vectors) == 0:
-            return None, 0
         query = sum(q_vectors) / len(q_vectors)
     
     # Search database for k nearest neighbors
@@ -34,6 +33,17 @@ def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=Non
         if page > 1:
             return None, count
     d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
+
+    if query is None:
+        res_drinks = [
+            Result(
+                drink=d,
+                dist=0,
+                reviews=json.loads(d.reviews) if d.reviews is not None else []
+            ) for d in drinks[:10]
+        ]
+        return (res_drinks, count)
+
     knn_data = np.array(d_vectors).reshape(drinks.count(), -1)
     knn = NearestNeighbors(n_neighbors=k*page, algorithm='auto', metric='cosine')
     model = knn.fit(knn_data)

@@ -54,10 +54,11 @@ def search():
 			base=base
 		)
 		
-		if results is not None:
-			return render_template('results.html', results=results, count=count, page_number=page_number, drink_name=drink_name)
+		if results is None:
+			results = []
+		return render_template('results.html', results=results, count=count, page_number=page_number, drink_name=drink_name)
 	
-	if drink_type and descriptors:
+	if type(descriptors) == list:
 		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
 		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
 
@@ -73,8 +74,25 @@ def search():
 			base=base
 		)
 
-		if results is not None:
-			return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
+		if results is None:
+			results = []
+		return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
+
+	results, count = search_drinks(
+		data=None,
+		dtype=None if drink_type == 'anything' else drink_type,
+		k=10,
+		page=page_number,
+		pmin=min_price,
+		pmax=max_price,
+		amin=min_abv,
+		amax=max_abv,
+		base=base
+	)
+
+	if results is None:
+		results = []
+	return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
 @irsystem.route('/', methods=['GET'])
 def home():
