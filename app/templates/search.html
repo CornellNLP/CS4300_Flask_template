@@ -15,7 +15,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       <link rel="stylesheet" href="/static/style.css">
       <link rel="stylesheet" type="text/css" href="/static/jquery.tagsinput-revisited.css">
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+      <script src="https://kit.fontawesome.com/3798c5de2c.js" crossorigin="anonymous"></script>
    </head>
    <body class="text-center search">
 
@@ -61,6 +61,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   <span>It should be </span>
                   <label class="sr-only" for="descriptors-input">descriptors</label>
                   <input id="descriptors-input" type="text" name="descriptors" class="form-control mb-2 tagsinput">
+                  <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="right" title="I am a tooltip"></i>
                </p>
                <p id="price-line" class="lead justify-content-between text-nowrap" style="display: flex;">
                   <span>It costs between </span>
@@ -71,7 +72,9 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   <input id="maxprice-input" type="text" name="maxprice" class="form-control mb-2" placeholder="any price">
                </p>
                <p id="abv-line" class="lead justify-content-between text-nowrap" style="display: flex;">
-                  <span>Its ABV is between </span>
+                  <span>Its ABV</span>
+                  <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="I am a tooltip"></i>
+                  <span>is between</span>
                   <label class="sr-only" for="minabv-input">minimum abv</label>
                   <input id="minabv-input" type="text" name="minabv" class="form-control mb-2 mr-3" placeholder="any ABV">
                   <span> and</span>
@@ -94,14 +97,17 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
       <!-- Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.0.min.js" crossorigin="anonymous"></script>
       <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
       <!-- <script src="/static/tagsinput.js"></script>
       <script src="/static/typeahead.bundle.min.js"></script> -->
       <script src="/static/jquery.tagsinput-revisited.js"></script>
       
       <script>
+         $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+         })
+         
          const descriptors = {{descriptors|tojson}};
          $('.tagsinput').tagsInput({
             'width': '100%',
