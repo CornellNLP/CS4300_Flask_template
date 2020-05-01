@@ -17,6 +17,8 @@ from marshmallow import ValidationError
 # Import socketio for socket creation in this module 
 from app import socketio
 
+from app import cache
+
 # Import module models 
 # from app.irsystem import search
 
