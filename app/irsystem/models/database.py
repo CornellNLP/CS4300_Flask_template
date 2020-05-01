@@ -59,10 +59,10 @@ def query_drink(dtype=None, pmin=None, pmax=None, amin=None, amax=None, base=Non
         q = q.filter(Drink.abv <= amax)
     if base is not None:
         q = q.filter(Drink.base == base)
-    return q
+    return q.all()
 
 def query_embeddings():
-    return db.session.query(Embedding)
+    return db.session.query(Embedding).all()
 
 def contains_drink(name):
     q = db.session.query(Drink).filter(Drink.name == name)

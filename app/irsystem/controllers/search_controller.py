@@ -1,8 +1,8 @@
-from . import *  
+from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from app.irsystem.models.search import search_drinks
-from app.irsystem.models.database import query_embeddings
+from app.irsystem.models.search import search_drinks, Args, Result
+from app.irsystem.models.database import query_embeddings, query_drink
 import json
 
 project_name = "Pick Your Poison"
@@ -14,8 +14,25 @@ Dana Luong (dl697),
 Ishneet Sachar (iks23)
 """
 
-def arg_exists(arg):
-	return arg is not None and arg != ''
+PAGE_K = 10
+
+def conv_arg(arg, conv):
+	return conv(arg) if arg is not None and arg != '' else None
+
+def make_args(args):
+	dname = conv_arg(args.get('drink'), str)
+	descriptors = conv_arg(args.get('descriptors'), str)
+	desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')] if descriptors is not None else None
+	dtype = conv_arg(args.get('type'), str)
+	return Args(
+		data=dname if dname is not None else desc_lst,
+		dtype=dtype if dtype != 'anything' else None,
+		pmin=conv_arg(args.get('minprice'), float),
+		pmax=conv_arg(args.get('maxprice'), float),
+		amin=conv_arg(args.get('minabv'), float),
+		amax=conv_arg(args.get('maxabv'), float),
+		base=conv_arg(args.get('base'), str)
+	)
 
 @irsystem.route('/descriptors', methods=['GET'])
 def serve_desc():
@@ -25,74 +42,43 @@ def serve_desc():
 
 @irsystem.route('/search', methods=['GET'])
 def search():
-	page_number = request.args.get('page')
-	page_number = int(page_number) if arg_exists(page_number) else 1
-	drink_type = request.args.get('type')
-	base = request.args.get('base')
-	base = base if arg_exists(base) else None
-	descriptors = request.args.get('descriptors')
-	min_price = request.args.get('minprice')
-	min_price = float(min_price) if arg_exists(min_price) else None
-	max_price = request.args.get('maxprice')
-	max_price = float(max_price) if arg_exists(max_price) else None
-	min_abv = request.args.get('minabv')
-	min_abv = float(min_abv) if arg_exists(min_abv) else None
-	max_abv = request.args.get('maxabv')
-	max_abv = float(max_abv) if arg_exists(max_abv) else None
-	drink_name = request.args.get('drink') # for searching for similar drinks
+	args = make_args(request.args)
+	page = conv_arg(request.args.get('page'), int)
+	drinks = cache.get('drinks')
+	# New client request (excluding page changes)
+	if args != cache.get('args'):
+		cache.set('args', args)
+		drinks = None # Drinks are stale if new args
+	if drinks is None:
+		drinks = query_drink(args.dtype, args.pmin, args.pmax, args.amin, args.amax, args.base)
+		cache.set('drinks', drinks)
+	results = []
+	if len(drinks) > 0:
+		ranking = search_drinks(drinks, args)
+		ind1 = (page - 1) * PAGE_K
+		ind2 = ind1 + PAGE_K
+		for i, d in ranking[ind1:ind2]:
+			reviews = drinks[i].reviews
+			results.append(Result(
+				drink=drinks[i],
+				dist=d,
+				reviews=json.loads(reviews) if reviews is not None else []
+			))
 
-	if drink_name:
-		print("User searched for drinks similar to {}".format(drink_name))
-		results, count = search_drinks(
-			data=drink_name,
-			k=10,
-			page=page_number,
-			pmin=min_price,
-			pmax=max_price,
-			amin=min_abv,
-			amax=max_abv,
-			base=base
-		)
-		
-		if results is None:
-			results = []
-		return render_template('results.html', results=results, count=count, page_number=page_number, drink_name=drink_name)
-	
-	if type(descriptors) == list:
-		desc_lst = [d.strip().lower().replace(' ', '_') for d in descriptors.split(',')]
-		print("User searched for a {} with descriptors: {}".format(drink_type, descriptors))
-
-		results, count = search_drinks(
-			data=desc_lst,
-			dtype=None if drink_type == 'anything' else drink_type,
-			k=10,
-			page=page_number,
-			pmin=min_price,
-			pmax=max_price,
-			amin=min_abv,
-			amax=max_abv,
-			base=base
-		)
-
-		if results is None:
-			results = []
-		return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
-
-	results, count = search_drinks(
-		data=None,
-		dtype=None if drink_type == 'anything' else drink_type,
-		k=10,
-		page=page_number,
-		pmin=min_price,
-		pmax=max_price,
-		amin=min_abv,
-		amax=max_abv,
-		base=base
+	return render_template(
+		'results.html',
+		results=results,
+		count=len(drinks),
+		page_number=page,
+		drink_type=args.dtype,
+		base=args.base,
+		descriptors=','.join(args.data) if type(args.data) == list else None,
+		drink_name=args.data if type(args.data) == str else None,
+		min_price=args.pmin,
+		max_price=args.pmax,
+		min_abv=args.amin,
+		max_abv=args.amax
 	)
-
-	if results is None:
-		results = []
-	return render_template('results.html', results=results, count=count, page_number=page_number, drink_type=drink_type, base=base, descriptors=descriptors, min_price=min_price, max_price=max_price)
 
 @irsystem.route('/', methods=['GET'])
 def home():
