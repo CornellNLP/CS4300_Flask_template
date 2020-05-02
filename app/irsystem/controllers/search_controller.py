@@ -4,6 +4,7 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.search import search_drinks, Args, Result
 from app.irsystem.models.database import query_embeddings, query_drink
 import json
+from flask import jsonify
 
 project_name = "Pick Your Poison"
 net_id = """
@@ -42,6 +43,9 @@ def serve_desc():
 
 @irsystem.route('/search', methods=['GET'])
 def search():
+	# indicates if async ajax request
+	more = request.args.get('more')
+
 	args = make_args(request.args)
 	page = conv_arg(request.args.get('page'), int)
 	drinks = cache.get('drinks')
@@ -65,15 +69,30 @@ def search():
 				reviews=json.loads(reviews) if reviews is not None else []
 			))
 
+	if more:
+		return jsonify(
+			results=results,
+			count=len(drinks),
+			page_number=page,
+			drink_name=args.data if type(args.data) == str else None,
+			drink_type=args.dtype,
+			base=args.base,
+			descriptors=','.join(args.data) if type(args.data) == list else None,
+			min_price=args.pmin,
+			max_price=args.pmax,
+			min_abv=args.amin,
+			max_abv=args.amax
+		)
+
 	return render_template(
 		'results.html',
 		results=results,
 		count=len(drinks),
 		page_number=page,
+		drink_name=args.data if type(args.data) == str else None,
 		drink_type=args.dtype,
 		base=args.base,
 		descriptors=','.join(args.data) if type(args.data) == list else None,
-		drink_name=args.data if type(args.data) == str else None,
 		min_price=args.pmin,
 		max_price=args.pmax,
 		min_abv=args.amin,

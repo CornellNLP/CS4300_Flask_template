@@ -110,7 +110,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   <a class="btn btn-lg btn-secondary mr-3" href="/search?page={{ page_number|int - 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">previous results</a>
                {% endif %}
                {% if count|int - ((page_number|int - 1) * 10 + results|count) > 1 %}
-                  <a class="btn btn-lg btn-secondary" href="/search?page={{ page_number|int + 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">more results</a>
+                  <a id="more-results" class="btn btn-lg btn-secondary" href="">more results</a>
                {% endif %}
             </div>
          </main>
@@ -123,7 +123,24 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
 
       </div>
 
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+      <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
       <script>
+         var urlParams = new URLSearchParams(window.location.search);
+         page = parseInt(urlParams.get('page'))
+         drink = urlParams.get('drink')
+         type = urlParams.get('type')
+         base = urlParams.get('base')
+         descriptors = urlParams.get('descriptors')
+         minprice = urlParams.get('minprice')
+         maxprice = urlParams.get('maxprice')
+         minabv = urlParams.get('minabv')
+         maxabv = urlParams.get('maxabv')
+
          const body = document.getElementsByTagName('body')[0];
          body.style.height = '100vh';
          body.style.overflow = 'hidden';
@@ -143,12 +160,127 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                main.style.marginBottom = '1.5rem';
             }
          };
+
+         $(function() {
+            $('#more-results').bind('click', function() {
+               // TODO add loading animation in place of button while results loading
+               $.getJSON(
+                  '/search', {
+                     more: 'true',
+                     page: page + 1,
+                     drink: drink,
+                     type: type,
+                     base: base,
+                     descriptors: descriptors,
+                     minprice: minprice,
+                     maxprice: maxprice,
+                     minabv: minabv,
+                     maxabv: maxabv
+                  }, function(data) {
+                     var results = data.results;
+                     page = data.page_number;
+                     drink = data.drink_name;
+                     type = data.drink_type;
+                     base = data.base;
+                     descriptors = data.descriptors;
+                     minprice = data.min_price;
+                     maxprice = data.max_price;
+                     minabv = data.min_abv;
+                     maxabv = data.max_abv;
+                     // TODO add new results
+                     // TODO remove .class from old last card
+                     $('.card').removeClass('last');
+                     
+                     for (let i = 0; i < results.length; i++) {
+                        var card_index = toString((page_number - 1) * 10 + i + 1);
+
+                        var card = i == results.length - 1 ? $('<div class="card last"></div>') : $('<div class="card"></div>');
+
+                        var header = $('<div class="card-header d-flex" id="heading ' + card_index + '"></div>');
+                        var icon = $('<i class="fas fa-fw align-middle"></i>');
+                        if (type == 'beer') {
+                           icon.addClass('fa-beer');
+                        } else if (type == 'wine') {
+                           icon.addClass('fa-wine-glass-alt');
+                        } else if (type == 'liquor') {
+                           icon.addClass('fa-wine-bottle');
+                        } else if (type == 'cocktail') {
+                           icon.addClass('fa-cocktail');
+                        }
+                        header.append(icon);
+                        var header_heading = $('<h2 class="mb-0 flex-grow-1"></h2>');
+                        var header_heading_button = $('<button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse' + card_index + '" aria-controls="collapse' + card_index + '"></button>');
+                        header_heading_button.append($('<strong>' + card_index + '.</strong> ' + results[i].drink.name));
+                        header_heading.append(header_heading_button)
+                        header.append(header_heading)
+                        card.append(header);
+
+                        var content = $('<div id="collapse' + card_index + '" class="collapse" aria-labelledby="heading' + card_index + '"></div>');
+                        var info_body = $('<div class="card-body text-dark"></div>');
+                        info_body.append($('<h4>About this ' + type + '</h4>'));
+                        info_body.append($('<p>' + results[i].drink.description + '</p>'));
+                        if (results[i].drink.rating != null) {
+                           info_body.append($('<p><strong>Rating:</strong> ' + results[i].drink.rating + '</p>'));
+                        }
+                        if (results[i].drink.abv != null) {
+                           info_body.append($('<p><strong>ABV:</strong> ' + results[i].drink.abv + '</p>'));
+                        }
+                        if (results[i].drink.price != null) {
+                           info_body.append($('<p><strong>Price:</strong> ' + results[i].drink.price + '</p>'));
+                        }
+                        if (results[i].drink.origin != null) {
+                           info_body.append($('<p><strong>Origin:</strong> ' + results[i].drink.origin + '</p>'));
+                        }
+                        info_body.append($('<a href="/search?page=1&drink=' + drink + '" class="btn btn-outline-primary">Find similar drinks</a>'));
+                        info_body.append($('<a href="' + results[i].drink.url + '" class="btn btn-outline-primary">Buy this ' + results[i].drink.type + '</a>'));
+
+                        // add reviews tab if there are reviews
+                        if (results[i].reviews.length != 0) {
+                           var tab_content = $('<div class="tab-content"></div>');
+                           var info_pane = $('<div id="info-' + card_index + '" class="tab-pane active show"></div>');
+                           info_pane.append(info_body);
+                           tab_content.append(info_pane);
+
+                           var review_pane = $('<div id="reviews-' + card_index + '" class="tab-pane"></div>');
+                           var review_body = $('<div class="card-body text-dark reviews"></div>');
+                           review_body.append($('<h4>Reviews</h4>'));
+                           results[i].reviews.forEach(review => {
+                              if (review.body != null) {
+                                 var review_quote = $('<blockquote class="blockquote"></blockquote>');
+                                 review_quote.append($('<p class="mb-0">' + review.body + '</p>'));
+                                 review_quote.append($('<footer class="blockquote-footer">Reviewed by <cite>' + review.author + '</cite>' + review.date != null ? 'on' : '' + ' (Rating: ' + review.rating + ')</footer>'));
+                                 review_body.append(review_quote);
+                              }
+                           });
+                           review_pane.append(review_body);
+                           tab_content.append(review_pane);
+
+                           var tabs_ul = $('<ul class="nav nav-tabs"></ul>');
+                           var info_li = $('<li class="nav-item"></li>');
+                           info_li.append($('<a class="nav-link active" data-toggle="tab" href="#info-' + card_index + '">Information</a>'));
+                           tabs_ul.append(info_li);
+                           var reviews_li = $('<li class="nav-item"></li>');
+                           reviews_li.append($('<a class="nav-link" data-toggle="tab" href="#reviews-' + card_index + '">Reviews</a>'));
+                           
+                           content.append(tab_content);
+                           content.append(tabs_ul);
+                        } else {
+                           content.append(info_body);
+                        }
+                        card.append(content);
+
+                        $('.results-list').append(card);
+                        const element = results[i];
+                        
+                     }
+                     
+                     $("#result").text(data.result);
+                  }
+               );
+               return false;
+            });
+         });
       </script>
-   
-      <!-- Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       
    </body>
 </html>
