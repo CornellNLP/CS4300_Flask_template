@@ -241,6 +241,11 @@ main .lead {
    border: none;
 }
 
+.tooltip-underline {
+   border-bottom: 1px dashed #fff;
+   padding-bottom: 0.2rem;
+}
+
 /* Results List */
 
 .results-list {
