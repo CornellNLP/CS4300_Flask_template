@@ -1,7 +1,22 @@
 from .database import query_drink, query_embeddings, query_drink_vbytes
-from sklearn.neighbors import NearestNeighbors
+from scipy.spatial.distance import cdist
 import numpy as np
 import json
+
+class Args:
+    def __init__(self, data, dtype, pmin, pmax, amin, amax, base):
+        self.data = data # str or list
+        self.dtype = dtype # str
+        self.pmin = pmin # float
+        self.pmax = pmax # float
+        self.amin = amin # float
+        self.amax = amax # float
+        self.base = base # str
+
+    def __eq__(self, value):
+        if isinstance(value, Args):
+            return self.__dict__ == value.__dict__
+        return NotImplemented
 
 class Result:
     def __init__(self, drink, dist, reviews):
@@ -9,54 +24,29 @@ class Result:
         self.dist = dist
         self.reviews = reviews
 
-def search_drinks(data, dtype=None, k=10, page=1, pmin=None, pmax=None, amin=None, amax=None, base=None):
+def search_drinks(drinks, args):
     query = None
+    count = len(drinks)
+
     # Fetch query vector from drink name
-    if type(data) == str:
-        vbytes = query_drink_vbytes(data)
+    if type(args.data) == str:
+        vbytes = query_drink_vbytes(args.data)
         if vbytes is None:
-            return None, 0
+            return []
         query = np.frombuffer(vbytes, dtype=np.float32)
     # Form query vector from word embeddings
-    if type(data) == list:
+    if type(args.data) == list:
         emb_dict = {e.word: np.frombuffer(e.vbytes, dtype=np.float32) for e in query_embeddings()}
-        q_vectors = [emb_dict[d] for d in data if d in emb_dict]
+        q_vectors = [emb_dict[d] for d in args.data if d in emb_dict]
         query = sum(q_vectors) / len(q_vectors)
-    
-    # Search database for k nearest neighbors
-    drinks = query_drink(dtype, pmin, pmax, amin, amax, base)
-    count = drinks.count()
-    if count == 0:
-        return None, 0
-    if count < k:
-        k = count
-        if page > 1:
-            return None, count
-    d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
 
     if query is None:
-        res_drinks = [
-            Result(
-                drink=d,
-                dist=0,
-                reviews=json.loads(d.reviews) if d.reviews is not None else []
-            ) for d in drinks[:10]
-        ]
-        return (res_drinks, count)
+        return [(i, 0) for i in range(count)]
 
-    knn_data = np.array(d_vectors).reshape(drinks.count(), -1)
-    knn = NearestNeighbors(n_neighbors=k*page, algorithm='auto', metric='cosine')
-    model = knn.fit(knn_data)
-    dst, ind = model.kneighbors([query])
-
-    # Return list of `(drink, distance)` tuples
-    dst_lst = dst[0].tolist()[(page-1)*k:]
-    ind_lst = ind[0].tolist()[(page-1)*k:]
-    res_drinks = [
-        Result(
-            drink=drinks[i],
-            dist=dst,
-            reviews=json.loads(drinks[i].reviews) if drinks[i].reviews is not None else []
-        ) for (i, dst) in zip(ind_lst, dst_lst)
-    ]
-    return (res_drinks, count)
+    # Search database results for k nearest neighbors
+    d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
+    knn_data = np.array(d_vectors).reshape(count, -1)
+    dst_vec = cdist([query], knn_data, 'cosine')[0]
+    ind_vec = np.argsort(dst_vec)
+    
+    return list(zip(ind_vec, dst_vec))
