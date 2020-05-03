@@ -79,7 +79,7 @@ def search():
 		results=results,
 		count=len(drinks),
 		page_number=page,
-		drink_name=args.data if type(args.data) == str else None,
+		drink_name=args.data if type(args.data) == str else None
 	)
 
 @irsystem.route('/', methods=['GET'])
