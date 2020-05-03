@@ -24,14 +24,6 @@ class Result:
         self.dist = dist
         self.reviews = reviews
 
-class ResultEncoder(json.JSONEncoder):
-    def default(self, o):
-        if isinstance(o, Result):
-            return {
-                'something': 'something'
-            }
-        return o.__dict__
-
 def search_drinks(drinks, args):
     query = None
     count = len(drinks)

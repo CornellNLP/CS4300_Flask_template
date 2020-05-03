@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app.irsystem.models.search import search_drinks, Args, Result
-from app.irsystem.models.database import query_embeddings, query_drink
+from app.irsystem.models.database import query_embeddings, query_drink, Drink
 import json
 from flask import jsonify
 
@@ -16,6 +16,16 @@ Ishneet Sachar (iks23)
 """
 
 PAGE_K = 10
+
+class CustomEncoder(json.JSONEncoder):
+   def default(self, o):
+      if isinstance(o, Result) or isinstance(o, Drink):
+         return o.__dict__
+      print('is not result')
+      print(type(o))
+      return json.JSONEncoder.default(self, o)
+
+irsystem.json_encoder = CustomEncoder
 
 def conv_arg(arg, conv):
 	return conv(arg) if arg is not None and arg != '' else None
@@ -71,7 +81,7 @@ def search():
 
 	if more:
 		return jsonify(
-			results=results,
+			results=[{'drink': result.drink.serialize, 'dist': result.dist, 'reviews': result.reviews} for result in results],
 			count=len(drinks),
 			page_number=page,
 			drink_name=args.data if type(args.data) == str else None,

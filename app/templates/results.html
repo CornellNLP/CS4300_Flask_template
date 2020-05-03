@@ -69,7 +69,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                                  {% if drink.abv != None %}<p><strong>ABV:</strong> {{ drink.abv }}%</p>{% endif %}
                                  {% if drink.price != None %}<p><strong>Price:</strong> ${{ drink.price }}</p>{% endif %}
                                  {% if drink.origin != None %}<p><strong>Origin:</strong> {{ drink.origin }}</p>{% endif %}
-                                 <a href="/search?page=1&drink={{ drink.name }}" class="btn btn-outline-primary">Find similar drinks</a>
+                                 <a href="/search?page=1&drink={{ drink.name }}" class="btn btn-outline-primary mr-1">Find similar drinks</a>
                                  <a href="{{ drink.url }}" class="btn btn-outline-primary">Buy this {{ drink.type }}</a>
                               </div>
                            {% if result.reviews != [] %}</div>{% endif %}
@@ -85,7 +85,6 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                                           </blockquote>
                                        {% endif %}
                                     {% endfor %}
-                                    <!-- <p>{{ result.reviews }}</p> -->
                                  </div>
                               </div>
                            {% endif %}
@@ -104,13 +103,26 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   </div>
                {% endfor %}
             </div>
-            <div class="text-center mt-5">
-               <!-- TODO: remove previous button and implement infinite scrolling results -->
-               {% if page_number|int > 1 %}
-                  <a class="btn btn-lg btn-secondary mr-3" href="/search?page={{ page_number|int - 1 }}{% if drink_name != None %}&drink={{ drink_name }}{% endif %}{% if drink_type != None %}&type={{ drink_type }}{% endif %}{% if base != None %}&base={{ base }}{% endif %}{% if descriptors != None %}&descriptors={{ descriptors }}{% endif %}{% if min_price != None %}&minprice={{ min_price }}{% endif %}{% if max_price != None %}&maxprice={{ max_price }}{% endif %}{% if min_abv != None %}&minabv={{ min_abv }}{% endif %}{% if max_abv != None %}&maxabv={{ max_abv }}{% endif %}">previous results</a>
-               {% endif %}
+            <div id="prefooter" class="text-center mt-5">
+               <div id="loading-animation" class="sk-fading-circle" style="display: none;">
+                  <div class="sk-circle1 sk-circle"></div>
+                  <div class="sk-circle2 sk-circle"></div>
+                  <div class="sk-circle3 sk-circle"></div>
+                  <div class="sk-circle4 sk-circle"></div>
+                  <div class="sk-circle5 sk-circle"></div>
+                  <div class="sk-circle6 sk-circle"></div>
+                  <div class="sk-circle7 sk-circle"></div>
+                  <div class="sk-circle8 sk-circle"></div>
+                  <div class="sk-circle9 sk-circle"></div>
+                  <div class="sk-circle10 sk-circle"></div>
+                  <div class="sk-circle11 sk-circle"></div>
+                  <div class="sk-circle12 sk-circle"></div>
+                </div>
                {% if count|int - ((page_number|int - 1) * 10 + results|count) > 1 %}
                   <a id="more-results" class="btn btn-lg btn-secondary" href="">more results</a>
+               {% else %}
+                  <hr id="all-results-divider" class="fancy mt-5 mb-4" />
+                  <p id="all-results-text">all results loaded</p>
                {% endif %}
             </div>
          </main>
@@ -163,7 +175,10 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
 
          $(function() {
             $('#more-results').bind('click', function() {
-               // TODO add loading animation in place of button while results loading
+               // add loading animation in place of button while results loading
+               $('#more-results').css('display', 'none');
+               $('#loading-animation').css('display', 'inline-block');
+
                $.getJSON(
                   '/search', {
                      more: 'true',
@@ -179,6 +194,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   }, function(data) {
                      var results = data.results;
                      page = data.page_number;
+                     count = data.count;
                      drink = data.drink_name;
                      type = data.drink_type;
                      base = data.base;
@@ -187,55 +203,65 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                      maxprice = data.max_price;
                      minabv = data.min_abv;
                      maxabv = data.max_abv;
-                     // TODO add new results
-                     // TODO remove .class from old last card
+
                      $('.card').removeClass('last');
+
+                     // remove loading animation and display more results button if appropriate
+                     $('#loading-animation').css('display', 'none');
+                     if (count - ((page - 1) * 10 + results.length) > 1) {
+                        $('#more-results').css('display', 'inline-block');
+                     } else {
+                        $('#prefooter').append($('<hr id="all-results-divider" class="fancy mt-5 mb-4" />'));
+                        $('#prefooter').append($('<p id="all-results-text">all results loaded</p>'));                        
+                     }
                      
                      for (let i = 0; i < results.length; i++) {
-                        var card_index = toString((page_number - 1) * 10 + i + 1);
+                        var card_index = ((page - 1) * 10 + i + 1).toString();
 
                         var card = i == results.length - 1 ? $('<div class="card last"></div>') : $('<div class="card"></div>');
 
                         var header = $('<div class="card-header d-flex" id="heading ' + card_index + '"></div>');
                         var icon = $('<i class="fas fa-fw align-middle"></i>');
-                        if (type == 'beer') {
+                        if (results[i].drink.type == 'beer') {
                            icon.addClass('fa-beer');
-                        } else if (type == 'wine') {
+                        } else if (results[i].drink.type == 'wine') {
                            icon.addClass('fa-wine-glass-alt');
-                        } else if (type == 'liquor') {
+                        } else if (results[i].drink.type == 'liquor') {
                            icon.addClass('fa-wine-bottle');
-                        } else if (type == 'cocktail') {
+                        } else if (results[i].drink.type == 'cocktail') {
                            icon.addClass('fa-cocktail');
                         }
                         header.append(icon);
                         var header_heading = $('<h2 class="mb-0 flex-grow-1"></h2>');
                         var header_heading_button = $('<button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse' + card_index + '" aria-controls="collapse' + card_index + '"></button>');
-                        header_heading_button.append($('<strong>' + card_index + '.</strong> ' + results[i].drink.name));
-                        header_heading.append(header_heading_button)
-                        header.append(header_heading)
+                        header_heading_button.append('<strong>' + card_index + '.</strong> ' + results[i].drink.name);
+                        header_heading.append(header_heading_button);
+                        header.append(header_heading);
                         card.append(header);
 
                         var content = $('<div id="collapse' + card_index + '" class="collapse" aria-labelledby="heading' + card_index + '"></div>');
-                        var info_body = $('<div class="card-body text-dark"></div>');
-                        info_body.append($('<h4>About this ' + type + '</h4>'));
+                        var info_body = $('<div class="card-body text-dark no-reviews"></div>');
+                        info_body.append($('<h4>About this ' + results[i].drink.type + '</h4>'));
                         info_body.append($('<p>' + results[i].drink.description + '</p>'));
                         if (results[i].drink.rating != null) {
                            info_body.append($('<p><strong>Rating:</strong> ' + results[i].drink.rating + '</p>'));
                         }
                         if (results[i].drink.abv != null) {
-                           info_body.append($('<p><strong>ABV:</strong> ' + results[i].drink.abv + '</p>'));
+                           info_body.append($('<p><strong>ABV:</strong> ' + results[i].drink.abv + '%</p>'));
                         }
                         if (results[i].drink.price != null) {
-                           info_body.append($('<p><strong>Price:</strong> ' + results[i].drink.price + '</p>'));
+                           info_body.append($('<p><strong>Price:</strong> $' + results[i].drink.price + '</p>'));
                         }
                         if (results[i].drink.origin != null) {
                            info_body.append($('<p><strong>Origin:</strong> ' + results[i].drink.origin + '</p>'));
                         }
-                        info_body.append($('<a href="/search?page=1&drink=' + drink + '" class="btn btn-outline-primary">Find similar drinks</a>'));
+                        info_body.append($('<a href="/search?page=1&drink=' + results[i].drink.name + '" class="btn btn-outline-primary mr-1">Find similar drinks</a>'));
+                        info_body.append('\n');
                         info_body.append($('<a href="' + results[i].drink.url + '" class="btn btn-outline-primary">Buy this ' + results[i].drink.type + '</a>'));
 
                         // add reviews tab if there are reviews
                         if (results[i].reviews.length != 0) {
+                           info_body.removeClass('no-reviews');
                            var tab_content = $('<div class="tab-content"></div>');
                            var info_pane = $('<div id="info-' + card_index + '" class="tab-pane active show"></div>');
                            info_pane.append(info_body);
@@ -248,7 +274,9 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                               if (review.body != null) {
                                  var review_quote = $('<blockquote class="blockquote"></blockquote>');
                                  review_quote.append($('<p class="mb-0">' + review.body + '</p>'));
-                                 review_quote.append($('<footer class="blockquote-footer">Reviewed by <cite>' + review.author + '</cite>' + review.date != null ? 'on' : '' + ' (Rating: ' + review.rating + ')</footer>'));
+                                 var review_footer = $('<footer class="blockquote-footer"></footer>');
+                                 review_footer.append('Reviewed by <cite>' + review.author + '</cite>' + (review.date != null ? 'on' : '') + ' (Rating: ' + review.rating + ')');
+                                 review_quote.append(review_footer);
                                  review_body.append(review_quote);
                               }
                            });
@@ -261,6 +289,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                            tabs_ul.append(info_li);
                            var reviews_li = $('<li class="nav-item"></li>');
                            reviews_li.append($('<a class="nav-link" data-toggle="tab" href="#reviews-' + card_index + '">Reviews</a>'));
+                           tabs_ul.append(reviews_li);
                            
                            content.append(tab_content);
                            content.append(tabs_ul);
