@@ -1,32 +1,14 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from app.irsystem.models.search import search_drinks, Args, Result
+from app.irsystem.models.search import search_drinks, Args
 from app.irsystem.models.database import query_embeddings, query_drink, Drink
-import json
 from flask import jsonify
 from uuid import uuid4
-
-project_name = "Pick Your Poison"
-net_id = """
-Collin Montag (cm759),
-Derek Cheng (dsc252),
-DB Lee (dl654),
-Dana Luong (dl697),
-Ishneet Sachar (iks23)
-"""
+import json
 
 PAGE_K = 10
 
-class CustomEncoder(json.JSONEncoder):
-   def default(self, o):
-      if isinstance(o, Result) or isinstance(o, Drink):
-         return o.__dict__
-      print('is not result')
-      print(type(o))
-      return json.JSONEncoder.default(self, o)
-
-irsystem.json_encoder = CustomEncoder
 def get_sid():
 	if session.get('sid', None) is None:
 		session['sid'] = uuid4()
@@ -58,13 +40,11 @@ def serve_desc():
 
 @irsystem.route('/search', methods=['GET'])
 def search():
-	# indicates if async ajax request
-	more = request.args.get('more')
-
 	sid = get_sid()
 	drinks_key = '{}-drinks'.format(sid.hex)
 	args_key = '{}-args'.format(sid.hex)
 	args = make_args(request.args)
+	more = conv_arg(request.args.get('more'), str) # Populated if AJAX request
 	page = conv_arg(request.args.get('page'), int)
 	drinks = cache.get(drinks_key)
 	# New client request (excluding page changes)
@@ -76,6 +56,11 @@ def search():
 		drinks = query_drink(args.dtype, args.pmin, args.pmax, args.amin, args.amax, args.base)
 		cache.set(drinks_key, drinks)
 		# print('New drinks!')
+
+	# Load empty page initially
+	if more is None:
+		return render_template('results.html', count=len(drinks), page_number=page)
+	
 	results = []
 	if len(drinks) > 0:
 		ranking = search_drinks(drinks, args)
@@ -83,40 +68,18 @@ def search():
 		ind2 = ind1 + PAGE_K
 		for i, d in ranking[ind1:ind2]:
 			reviews = drinks[i].reviews
-			results.append(Result(
-				drink=drinks[i],
-				dist=d,
-				reviews=json.loads(reviews) if reviews is not None else []
-			))
+			results.append({
+				'drink': drinks[i].serialize,
+				'dist': d,
+				'reviews': json.loads(reviews) if reviews is not None else []
+			})
 
-	if more:
-		return jsonify(
-			results=[{'drink': result.drink.serialize, 'dist': result.dist, 'reviews': result.reviews} for result in results],
-			count=len(drinks),
-			page_number=page,
-			drink_name=args.data if type(args.data) == str else None,
-			drink_type=args.dtype,
-			base=args.base,
-			descriptors=','.join(args.data) if type(args.data) == list else None,
-			min_price=args.pmin,
-			max_price=args.pmax,
-			min_abv=args.amin,
-			max_abv=args.amax
-		)
-
-	return render_template(
-		'results.html',
+	# Populate loaded page with results
+	return jsonify(
 		results=results,
 		count=len(drinks),
 		page_number=page,
 		drink_name=args.data if type(args.data) == str else None,
-		drink_type=args.dtype,
-		base=args.base,
-		descriptors=','.join(args.data) if type(args.data) == list else None,
-		min_price=args.pmin,
-		max_price=args.pmax,
-		min_abv=args.amin,
-		max_abv=args.amax
 	)
 
 @irsystem.route('/', methods=['GET'])

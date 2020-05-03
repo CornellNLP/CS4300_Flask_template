@@ -1,7 +1,6 @@
 from .database import query_drink, query_embeddings, query_drink_vbytes
 from scipy.spatial.distance import cdist
 import numpy as np
-import json
 
 class Args:
     def __init__(self, data, dtype, pmin, pmax, amin, amax, base):
@@ -17,12 +16,6 @@ class Args:
         if isinstance(value, Args):
             return self.__dict__ == value.__dict__
         return NotImplemented
-
-class Result:
-    def __init__(self, drink, dist, reviews):
-        self.drink = drink
-        self.dist = dist
-        self.reviews = reviews
 
 def search_drinks(drinks, args):
     query = None
