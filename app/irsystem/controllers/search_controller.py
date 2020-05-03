@@ -5,6 +5,7 @@ from app.irsystem.models.search import search_drinks, Args, Result
 from app.irsystem.models.database import query_embeddings, query_drink, Drink
 import json
 from flask import jsonify
+from uuid import uuid4
 
 project_name = "Pick Your Poison"
 net_id = """
@@ -26,6 +27,10 @@ class CustomEncoder(json.JSONEncoder):
       return json.JSONEncoder.default(self, o)
 
 irsystem.json_encoder = CustomEncoder
+def get_sid():
+	if session.get('sid', None) is None:
+		session['sid'] = uuid4()
+	return session['sid']
 
 def conv_arg(arg, conv):
 	return conv(arg) if arg is not None and arg != '' else None
@@ -56,16 +61,21 @@ def search():
 	# indicates if async ajax request
 	more = request.args.get('more')
 
+	sid = get_sid()
+	drinks_key = '{}-drinks'.format(sid.hex)
+	args_key = '{}-args'.format(sid.hex)
 	args = make_args(request.args)
 	page = conv_arg(request.args.get('page'), int)
-	drinks = cache.get('drinks')
+	drinks = cache.get(drinks_key)
 	# New client request (excluding page changes)
-	if args != cache.get('args'):
-		cache.set('args', args)
+	if args != cache.get(args_key):
+		cache.set(args_key, args)
 		drinks = None # Drinks are stale if new args
+		# print('New args!')
 	if drinks is None:
 		drinks = query_drink(args.dtype, args.pmin, args.pmax, args.amin, args.amax, args.base)
-		cache.set('drinks', drinks)
+		cache.set(drinks_key, drinks)
+		# print('New drinks!')
 	results = []
 	if len(drinks) > 0:
 		ranking = search_drinks(drinks, args)
