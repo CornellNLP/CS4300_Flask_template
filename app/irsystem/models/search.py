@@ -49,4 +49,4 @@ def search_drinks(drinks, args):
     dst_vec = cdist([query], knn_data, 'cosine')[0]
     ind_vec = np.argsort(dst_vec)
     
-    return list(zip(ind_vec, dst_vec))
+    return [(i, d) for (i, d) in zip(ind_vec, dst_vec) if d <= 0.5]
