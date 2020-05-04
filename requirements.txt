@@ -42,6 +42,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.1
 jmespath==0.9.5
 joblib==0.14.1
+libmc==1.4.1
 lxml==4.5.0
 Mako==1.1.1
 MarkupSafe==1.1.1
