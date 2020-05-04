@@ -6,7 +6,7 @@ class Drink(db.Model):
     __tablename__ = 'drink'
     name = db.Column(db.Text(), primary_key=True)
     description = db.Column(db.Text(), nullable=True)
-    vbytes = db.Column(db.LargeBinary(), nullable=False)
+    vbytes = db.Column(db.Text(), nullable=False)
     type = db.Column(db.Text(), nullable=False)
     price = db.Column(db.Float(), nullable=True)
     origin = db.Column(db.Text(), nullable=True)
@@ -22,7 +22,7 @@ class Drink(db.Model):
 class Embedding(db.Model):
     __tablename__ = 'embedding'
     word = db.Column(db.Text(), primary_key=True)
-    vbytes = db.Column(db.LargeBinary(), nullable=False)
+    vbytes = db.Column(db.Text(), nullable=False)
 
     def __repr__(self):
         return '<Embedding {}>'.format(self.word)
