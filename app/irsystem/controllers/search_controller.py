@@ -40,30 +40,30 @@ def serve_desc():
 
 @irsystem.route('/search', methods=['GET'])
 def search():
+	more = conv_arg(request.args.get('more'), str) # Populated if AJAX request
+	# Load empty page initially
+	if more is None:
+		return render_template('results.html')
+
 	sid = get_sid()
 	drinks_key = '{}-drinks'.format(sid.hex)
 	args_key = '{}-args'.format(sid.hex)
 	args = make_args(request.args)
-	more = conv_arg(request.args.get('more'), str) # Populated if AJAX request
 	page = conv_arg(request.args.get('page'), int)
-	drinks = cache.get(drinks_key)
 	# New client request (excluding page changes)
 	if args != cache.get(args_key):
+		cache.delete(drinks_key) # Drinks are stale if new args
 		cache.set(args_key, args)
-		drinks = None # Drinks are stale if new args
 		# print('New args!')
+	drinks = cache.get(drinks_key)
 	if drinks is None:
 		drinks = query_drink(args.dtype, args.pmin, args.pmax, args.amin, args.amax, args.base)
-		cache.set(drinks_key, drinks)
+		print(cache.set(drinks_key, drinks))
 		# print('New drinks!')
-
-	# Load empty page initially
-	if more is None:
-		return render_template('results.html', count=len(drinks), page_number=page)
 	
 	results = []
 	if len(drinks) > 0:
-		ranking = search_drinks(drinks, args)
+		ranking = search_drinks([d.vbytes for d in drinks], args)
 		ind1 = (page - 1) * PAGE_K
 		ind2 = ind1 + PAGE_K
 		for i, d in ranking[ind1:ind2]:

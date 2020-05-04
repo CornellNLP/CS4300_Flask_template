@@ -31,7 +31,7 @@ class Drink(db.Model):
             'origin': self.origin,
             'abv': self.abv,
             'rating': self.rating,
-            'reviews': self.rating,
+            # 'reviews': self.reviews,
             'url': self.url,
             'base': self.base
         }

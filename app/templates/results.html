@@ -54,12 +54,7 @@ https://getbootstrap.com/docs/4.4/examples/cover/ -->
                   <div class="sk-circle11 sk-circle"></div>
                   <div class="sk-circle12 sk-circle"></div>
                 </div>
-               {% if count|int - ((page_number|int - 1) * 10 + results|count) > 1 %}
-                  <a id="more-results" class="btn btn-lg btn-secondary" href="">more results</a>
-               {% else %}
-                  <hr id="all-results-divider" class="fancy mt-5 mb-4" />
-                  <p id="all-results-text">all results loaded</p>
-               {% endif %}
+               <a id="more-results" class="btn btn-lg btn-secondary" href="" style="display: none;">more results</a>
             </div>
          </main>
 
