@@ -18,9 +18,9 @@ class Args:
             return self.__dict__ == value.__dict__
         return NotImplemented
 
-def search_drinks(vbyte_lst, args):
+def search_drinks(drinks, args):
     query = None
-    count = len(vbyte_lst)
+    count = len(drinks)
 
     # Fetch query vector from drink name
     if type(args.data) == str:
@@ -35,12 +35,12 @@ def search_drinks(vbyte_lst, args):
         query = sum(q_vectors) / len(q_vectors)
 
     if query is None:
-        return [(i, 0) for i in range(count)]
+        return [(d, 0) for d in drinks]
 
     # Search database results for k nearest neighbors
-    d_vectors = [np.array(json.loads(v)) for v in vbyte_lst]
+    d_vectors = [np.array(json.loads(d.vbytes)) for d in drinks]
     knn_data = np.array(d_vectors).reshape(count, -1)
     dst_vec = cdist([query], knn_data, 'cosine')[0]
     ind_vec = np.argsort(dst_vec)
     
-    return [(i, d) for (i, d) in zip(ind_vec, dst_vec) if d <= 0.5]
+    return [(drinks[i], dst_vec[i]) for i in ind_vec if dst_vec[i] <= 0.3]

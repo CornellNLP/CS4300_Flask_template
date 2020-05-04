@@ -7,7 +7,8 @@ from flask import jsonify
 from uuid import uuid4
 import json
 
-PAGE_K = 10
+PAGE_K = 10 # Number of results displayed per page
+CACHE_SIZE = 100 # Number of results held in cache
 
 def get_sid():
 	if session.get('sid', None) is None:
@@ -46,38 +47,36 @@ def search():
 		return render_template('results.html')
 
 	sid = get_sid()
-	drinks_key = '{}-drinks'.format(sid.hex)
+	rank_key = '{}-rank'.format(sid.hex)
 	args_key = '{}-args'.format(sid.hex)
 	args = make_args(request.args)
 	page = conv_arg(request.args.get('page'), int)
 	# New client request (excluding page changes)
 	if args != cache.get(args_key):
-		cache.delete(drinks_key) # Drinks are stale if new args
+		cache.delete(rank_key) # Drinks are stale if new args
 		cache.set(args_key, args)
 		# print('New args!')
-	drinks = cache.get(drinks_key)
-	if drinks is None:
+	ranking = cache.get(rank_key)
+	if ranking is None:
 		drinks = query_drink(args.dtype, args.pmin, args.pmax, args.amin, args.amax, args.base)
-		print(cache.set(drinks_key, drinks))
 		# print('New drinks!')
+		ranking = search_drinks(drinks, args) if len(drinks) > 0 else []
+		cache.set(rank_key, ranking[:CACHE_SIZE])
 	
 	results = []
-	if len(drinks) > 0:
-		ranking = search_drinks([d.vbytes for d in drinks], args)
-		ind1 = (page - 1) * PAGE_K
-		ind2 = ind1 + PAGE_K
-		for i, d in ranking[ind1:ind2]:
-			reviews = drinks[i].reviews
-			results.append({
-				'drink': drinks[i].serialize,
-				'dist': d,
-				'reviews': json.loads(reviews) if reviews is not None else []
-			})
+	ind1 = (page - 1) * PAGE_K
+	ind2 = ind1 + PAGE_K
+	for drink, dist in ranking[ind1:ind2]:
+		results.append({
+			'drink': drink.serialize,
+			'dist': dist,
+			'reviews': json.loads(drink.reviews) if drink.reviews is not None else []
+		})
 
 	# Populate loaded page with results
 	return jsonify(
 		results=results,
-		count=len(drinks),
+		count=len(ranking),
 		page_number=page,
 		drink_name=args.data if type(args.data) == str else None
 	)

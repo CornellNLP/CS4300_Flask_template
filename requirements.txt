@@ -4,6 +4,7 @@ appdirs==1.4.3
 attrs==19.3.0
 autoenv==1.0.0
 Automat==20.2.0
+autopep8==1.5.2
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 boto==2.49.0
@@ -19,6 +20,7 @@ cssselect==1.1.0
 docutils==0.15.2
 Flask==1.1.1
 Flask-Bcrypt==0.7.1
+Flask-Caching==1.8.0
 Flask-HTTPAuth==3.3.0
 Flask-JWT==0.3.2
 flask-marshmallow==0.11.0
@@ -55,10 +57,12 @@ Protego==0.1.16
 psycopg2==2.8.5
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+pycodestyle==2.5.0
 pycparser==2.19
 PyDispatcher==2.0.5
 PyHamcrest==2.0.2
 PyJWT==1.4.0
+pylibmc==1.6.1
 pyOpenSSL==19.1.0
 pyparsing==2.4.6
 python-binary-memcached==0.29.0
