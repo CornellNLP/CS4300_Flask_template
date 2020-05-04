@@ -43,7 +43,7 @@ def make_embeddings(wv, tfidf_dict):
         if word in tfidf_dict and word in wv.vocab:
             weight = tfidf_dict[word]
             vector = wv.get_vector(word)
-            vbytes = (vector * weight).tobytes()
+            vbytes = json.dumps((vector * weight).tolist())
             embeddings.append(Embedding(
                 word=word,
                 vbytes=vbytes
@@ -70,7 +70,7 @@ def make_drinks(df, descriptors, dtype, wv, tfidf_dict, min_desc):
         # Required/expected fields
         name = row[h.name]
         desc = row[h.desc]
-        vbytes = drink_vector.tobytes()
+        vbytes = json.dumps(drink_vector.tolist())
         url = row[h.url]
         drink = Drink(name=name, description=desc, vbytes=vbytes, type=dtype, url=url)
         # Optional fields
