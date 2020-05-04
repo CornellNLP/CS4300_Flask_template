@@ -18,6 +18,23 @@ class Drink(db.Model):
 
     def __repr__(self):
         return '<Drink {}>'.format(self.name)
+    
+    # from here https://stackoverflow.com/questions/7102754/jsonify-a-sqlalchemy-result-set-in-flask
+    @property
+    def serialize(self):
+        """Return object data in easily serializable format"""
+        return {
+            'name': self.name,
+            'description': self.description,
+            'type': self.type,
+            'price': self.price,
+            'origin': self.origin,
+            'abv': self.abv,
+            'rating': self.rating,
+            # 'reviews': self.reviews,
+            'url': self.url,
+            'base': self.base
+        }
 
 class Embedding(db.Model):
     __tablename__ = 'embedding'

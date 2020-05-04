@@ -18,12 +18,6 @@ class Args:
             return self.__dict__ == value.__dict__
         return NotImplemented
 
-class Result:
-    def __init__(self, drink, dist, reviews):
-        self.drink = drink
-        self.dist = dist
-        self.reviews = reviews
-
 def search_drinks(drinks, args):
     query = None
     count = len(drinks)
@@ -33,20 +27,20 @@ def search_drinks(drinks, args):
         vbytes = query_drink_vbytes(args.data)
         if vbytes is None:
             return []
-        query = np.frombuffer(vbytes, dtype=np.float32)
+        query = np.array(json.loads(vbytes))
     # Form query vector from word embeddings
     if type(args.data) == list:
-        emb_dict = {e.word: np.frombuffer(e.vbytes, dtype=np.float32) for e in query_embeddings()}
+        emb_dict = {e.word: np.array(json.loads(e.vbytes)) for e in query_embeddings()}
         q_vectors = [emb_dict[d] for d in args.data if d in emb_dict]
         query = sum(q_vectors) / len(q_vectors)
 
     if query is None:
-        return [(i, 0) for i in range(count)]
+        return [(d, 0) for d in drinks]
 
     # Search database results for k nearest neighbors
-    d_vectors = [np.frombuffer(d.vbytes, dtype=np.float32) for d in drinks]
+    d_vectors = [np.array(json.loads(d.vbytes)) for d in drinks]
     knn_data = np.array(d_vectors).reshape(count, -1)
     dst_vec = cdist([query], knn_data, 'cosine')[0]
     ind_vec = np.argsort(dst_vec)
     
-    return [(i, d) for (i, d) in zip(ind_vec, dst_vec) if d <= 0.5]
+    return [(drinks[i], dst_vec[i]) for i in ind_vec if dst_vec[i] <= 0.3]
