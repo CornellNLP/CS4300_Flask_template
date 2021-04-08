@@ -8,3 +8,4 @@ vagrant/a4keypair.pem
 *.iml
 !**/__pycache__/
 __pycache__/
+.vscode/
