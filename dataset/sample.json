@@ -1,0 +1,37 @@
+{
+  "dcid_to_city_name": {
+    "geoId/4260000": "Philadelphia",
+    "geoId/0666000": "San Diego",
+    "geoId/1714000": "Chicago",
+    "geoId/1245000": "Miami",
+    "geoId/0644000": "Los Angeles",
+    "geoId/0455000": "Phoenix",
+    "geoId/1304000": "Atlanta",
+    "geoId/2622000": "Detroit",
+    "geoId/3712000": "Charlotte",
+    "geoId/3651000": "New York"
+  },
+  "category_name_to_field_name": {
+    "Population by Age (5-17)": "Count_Person_5To17Years",
+    "Population by Age (18-24)": "Count_Person_18To24Years",
+    "Population by Age (25-34)": "Count_Person_25To34Years",
+    "Population by Age (35-44)": "Count_Person_35To44Years",
+    "Population by Age (45-54)": "Count_Person_45To54Years",
+    "Population by Age (55-64)": "Count_Person_55To64Years",
+    "Population by Age (65-74)": "Count_Person_65To74Years",
+    "Population by Age (75+)": "Count_Person_75OrMoreYears",
+    "Population by Gender - Male": "Count_Person_Male",
+    "Population by Gender - Female": "Count_Person_Female",
+    "Population by Race - White Alone": "Count_Person_WhiteAlone",
+    "Population by Race - American Indian or Alaska Native": "Count_Person_AmericanIndianAndAlaskaNativeAlone",
+    "Population by Race - Asian Alone": "Count_Person_AsianAlone",
+    "Population by Race - Black or African American": "Count_Person_BlackOrAfricanAmericanAlone",
+    "Population by Race - Hispanic or Latino": "Count_Person_HispanicOrLatino",
+    "Population by Race - Native Hawaiian or Pacific Islander": "Count_Person_NativeHawaiianAndOtherPacificIslanderAlone",
+    "Population by Race - Some Other Race": "Count_Person_SomeOtherRaceAlone",
+    "Population by Race - Two or More Races": "Count_Person_TwoOrMoreRaces",
+    "Total Crime": "Count_CriminalActivities_CombinedCrime",
+    "Unemployment Rate": "UnemploymentRate_Person",
+    "Median Individual Income": "Median_Income_Person"
+  }
+}
