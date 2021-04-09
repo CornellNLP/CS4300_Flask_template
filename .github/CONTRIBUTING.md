@@ -9,10 +9,10 @@
 
 ## Working on Your Assignment
 
-1. Create a branch and name it with the feature. _Example: `data-preproces`_
+1. Create a branch and name it with the feature. _Example: `data-preproces`_<br/>
     `git checkout -b <branch-name>`
 2. Complete your work and commit changes to your branch.
-3. When you're done, push to the branch.
+3. When you're done, push to the branch.<br/>
     `git push origin <branch-name>`
 4. Open a pull request and fill out the template.
 5. Another contributer will review your work and request for any changes if needed.
