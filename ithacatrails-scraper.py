@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-# TRAIL_ID_INTERVAL = 1000, 1394
-TRAIL_ID_INTERVAL = 1000, 1001
+TRAIL_ID_INTERVAL = 1000, 1394
 START_URL = "https://ithacatrails.org/trail/"
 def scrape_trail(section):
     trail = {}
@@ -70,6 +69,6 @@ def get_trail_names():
         section = soup.find(True, {"class": "trail-info two-thirds column"})
         if section:
             names.add(section.find('h1').get_text())
-    return names
+    return sorted(names)
 
-print(scrape_all_trails())
+print(get_trail_names())
