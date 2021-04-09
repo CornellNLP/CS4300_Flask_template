@@ -4,7 +4,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import os
+
+## REPLACE THIS WITH THE DIRECTORY YOU WANT THE SCRIPTS TO BE DOWNLOADED TO
 SCRIPTS_DIR = 'C:/Users/showg/Documents/Scripts'
+
 headers = {"Accept-Language": "en-US, en;q=0.5"}
 
 baseurl = "https://imsdb.com/scripts/"
