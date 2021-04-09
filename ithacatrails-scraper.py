@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 
 # TRAIL_ID_INTERVAL = 1000, 1394
-TRAIL_ID_INTERVAL = 1000, 1002
+TRAIL_ID_INTERVAL = 1000, 1001
 START_URL = "https://ithacatrails.org/trail/"
 def scrape_trail(section):
     trail = {}
@@ -16,7 +16,12 @@ def scrape_trail(section):
         elif text.startswith('Difficulty'):
             trail['Difficulty'] = text.split(": ")[1].split('\n')[0]
 
-    #TODO: get description
+    #get description
+    description_link = section.find(text = 'Part of the ').findNext('a').get('href')
+    r = requests.get(description_link)
+    soup = BeautifulSoup(r.content, "html5lib")
+    description_section = soup.find(True, {"class": "trail-info two-thirds column"})
+    trail['Description'] = description_section.find_all('p', limit=5)[4].get_text()
     #get gps coords
     coords = section.findNext('h3').findNext('p').get_text()
     trail['GPS'] = [float(coord) for coord in re.findall(r"[-+]?\d*\.\d+|\d+", coords)] 
@@ -66,3 +71,5 @@ def get_trail_names():
         if section:
             names.add(section.find('h1').get_text())
     return names
+
+print(scrape_all_trails())
