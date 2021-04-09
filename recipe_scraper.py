@@ -1,58 +1,66 @@
 from recipe_scrapers import scrape_me
 import pandas as pd
+import random
 
-# give the url as a string, it can be url from any site listed below
-# scraper = scrape_me('https://www.allrecipes.com/recipe/158968/spinach-and-feta-turkey-burgers/')
-
-# Q: What if the recipe site I want to extract information from is not listed below?
-# A: You can give it a try with the wild_mode option! If there is Schema/Recipe available it will work just fine.
-# scraper = scrape_me('https://www.feastingathome.com/tomato-risotto/', wild_mode=True)
-
-# print("Title: \n", scraper.title())
-# print("Total Time: \n", scraper.total_time())
-# print("Yield: \n", scraper.yields())
-# print("Ingredients: \n", scraper.ingredients())
-# print("Instructions: \n", scraper.instructions())
-# print("Image: \n", scraper.image())
-# print("Host: \n", scraper.host())
-# # print(scraper.links())
-# print("Nutrients: \n", scraper.nutrients())  # if available
-
-# initiate data storage
+authors = []
 titles = []
 total_times = []
 yields = []
 ingredients = []
+instructions = []
 images = []
 host = []
-links = []
 nutrients = []
+ratings = []
 
-# scrape all
-for i in range(1, 101):
-    try:
-        scraper = scrape_me("https://www.allrecipes.com/recipe/" + i + "/")
-        titles.append(scraper.title())
-        total_times.append(scraper.total_time())
-        yields.append(scraper.yields())
-        ingredients.append(scraper.ingredients())
-        images.append(scraper.instructions())
-        host.append(scraper.host())
-        nutrients.append(scraper.nutrients())
-    except:
+# scraper = scrape_me(
+#     "https://www.allrecipes.com/recipe/" + str() + "/")
+# print(scraper)
+# random sample
+# do we include things with empty fields?
+count = 0
+while count < 100:
+    i = random.randint(0, 500000)
+    print(i)
+    # try:
+    scraper = scrape_me(
+        "https://www.allrecipes.com/recipe/" + str(i) + "/")
+    title = scraper.title()
+    if title == "" or title in titles:
+        # i += 1
         continue
+    titles.append(title)
+    authors.append(scraper.author() if scraper.author() else "")
+    total_times.append(scraper.total_time() if scraper.total_time() else "")
+    yields.append(scraper.yields() if scraper.yields() else "")
+    ingredients.append(scraper.ingredients() if scraper.ingredients() else "")
+    instructions.append(scraper.instructions() if scraper.instructions() else "")
+    images.append(scraper.image() if scraper.image() else "")
+    host.append(scraper.host() if scraper.host() else "")
+    nutrients.append(scraper.nutrients() if scraper.nutrients() else "")
+    ratings.append(scraper.ratings() if scraper.ratings() else "")
+    # i += 1
+    count += 1
+    # except:
+    # i += 1
+    # continue
+    # print(titles)
 
+print(titles)
+#remove duplicates?
 
-# to_csv
 recipes = pd.DataFrame({
     'title': titles,
+    'authors': authors,
     'total time': total_times,
     'yields': yields,
     'ingredients': ingredients,
+    'instructions': instructions,
     'images': images,
     'host': host,
-    'links': links,
-    'nutrients': nutrients
+    'nutrients': nutrients,
+    'ratings': ratings
 })
 
 recipes.to_csv('p02_recipes.csv')
+
