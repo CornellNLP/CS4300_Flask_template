@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
 
-# TRAIL_ID_INTERVAL = 1000, 1394
-TRAIL_ID_INTERVAL = 1000, 1001
+TRAIL_ID_INTERVAL = 1000, 1394
 START_URL = "https://ithacatrails.org/trail/"
 def scrape_trail(section):
     trail = {}
@@ -50,6 +50,7 @@ def scrape_all_trails():
     trails = []
     names = set()
     for id in range(TRAIL_ID_INTERVAL[0], TRAIL_ID_INTERVAL[1]):
+        print(id)
         trail_url = START_URL + str(id)
         r = requests.get(trail_url)
         soup = BeautifulSoup(r.content, "html5lib")
@@ -59,6 +60,8 @@ def scrape_all_trails():
             if name not in names:
                 names.add(name)
                 trails.append(scrape_trail(section))
+    with open('ithacatrails.json', 'w') as fout:
+        json.dump(trails , fout, indent=4)
     return trails
 
 def get_trail_names():
@@ -72,4 +75,4 @@ def get_trail_names():
             names.add(section.find('h1').get_text())
     return names
 
-print(scrape_all_trails())
+scrape_all_trails()
