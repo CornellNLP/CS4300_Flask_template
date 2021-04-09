@@ -17,7 +17,6 @@ movielist = soup.find_all("p")
 
 for p in movielist:
     t = p.findChild("a")
-    t = s.findChild("a")
     title = t.get("title")
     script_title = title.replace(" ", "-")
     script_title = script_title[0:-7]
