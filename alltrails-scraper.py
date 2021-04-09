@@ -7,6 +7,21 @@ import time
 # from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 
+"""
+Dictionary mapping Ithaca Trails trail names to AllTrails IDs.
+Last updated 4/9/21
+"""
+ITHACA_TO_ALL_IDS = {
+    "Abbott Loop East": 10023212,
+    "Abbott Loop West": 10023212,
+    "Bald Hill Natural Area": None,
+    "Beebe Lake Natural Area": None,
+    "Black Diamond Trail": None,
+    "Bob Cameron Loop": 10032387,
+    "Bock-Harvey Nature Preserve": 10675801,
+}
+
+
 # Potentially useful API routes:
 # https://www.alltrails.com/api/alltrails/trails/10354904/nearby_trails?page=1&per_page=24
 
@@ -18,7 +33,7 @@ def test_use_api():
     # Retrieved from request -> headers -> query string parameters -> "key"
     API_KEY = "3p0t5s6b5g4g0e8k3c1j3w7y5c3m4t8i"
     # Buttermilk Falls Gorge and Rim Trail Loop
-    REVIEWS_URL = "https://www.alltrails.com/api/alltrails/trails/10354904/reviews"
+    REVIEWS_URL = "https://www.alltrails.com/api/alltrails/v2/trails/10354904/reviews"
     HEADERS = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
     }
