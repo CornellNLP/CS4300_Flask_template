@@ -8,3 +8,4 @@ vagrant/a4keypair.pem
 *.iml
 .env
 .envrc
+.DS_Store
