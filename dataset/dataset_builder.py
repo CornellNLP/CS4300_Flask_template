@@ -1,137 +1,86 @@
-import math
-import json
-import os
-import random
 import requests
-import datacommons as dc
-import datacommons_pandas as dcp
+from bs4 import BeautifulSoup
+import json
+
+# def get_headers(url):
+#     page = requests.get(url)
+#     soup = BeautifulSoup(page.content, 'html.parser')
+#     return soup.find_all("span", "mw-headline")
 
 
-def handle55To64(dcid):
-    x1 = dc.get_stat_value(dcid, "Count_Person_55To59Years")
-    x2 = dc.get_stat_value(dcid, "Count_Person_60To61Years")
-    x3 = dc.get_stat_value(dcid, "Count_Person_62To64Years")
-    return x1+x2+x3
+def buildUrl(wiki):
+    return "https://en.wikipedia.org" + wiki
 
 
-class Handler:
-    def __init__(self):
-        self.not_supported_fields = {"Count_Person_55To64Years": handle55To64}
-        self.not_supported_city_fields = {
-            # ("geoId/3712000", "Count_CriminalActivities_CombinedCrime"): handleCharlotteCrime
-        }
-
-    def not_supported(self, dcid, fieldName):
-        b1 = fieldName in self.not_supported_fields
-        b2 = (dcid, fieldName) in self.not_supported_city_fields
-        if b1:
-            return (b1, self.not_supported_fields[fieldName])
-        elif b2:
-            return (b2, self.not_supported_city_fields[(dcid, fieldName)])
-        else:
-            return (False, None)
-
-    def handle55To64(self, dcid):
-        x1 = dc.get_stat_value(dcid, "Count_Person_55To59Years")
-        x2 = dc.get_stat_value(dcid, "Count_Person_60To61Years")
-        x3 = dc.get_stat_value(dcid, "Count_Person_62To64Years")
-        return x1+x2+x3
+def writeToJson(data, filename):
+    with open(filename, "w") as f:
+        json.dump(data, f)
+    return
 
 
-class DatasetBuilder:
-    def __init__(self):
-        self.dataset = {}
-        self.handler = Handler()
-        self.dcid_to_city_name = {}
-        self.category_name_to_field_name = {}
-
-    def __addNameCol(self, df):
-        df['name'] = df.index.map(dc.get_property_values(df.index, 'name'))
-        df['name'] = df['name'].str[0]
-
-    def writeDatasetToJsonFile(self, outfile):
-        with open(outfile, "w") as f:
-            json.dump(self.dataset, f)
-            print("\n\nWrote data to", outfile)
-        return
-
-    def __getDcidsToNameForTopNCities(self, n=100):
-        allcities = dcp.get_places_in(["country/USA"], "City")["country/USA"]
-        df = dcp.build_multivariate_dataframe(allcities, ["Count_Person"])
-        self.__addNameCol(df)
-        df = df.sort_values("Count_Person", ascending=False)[:100]
-        return df["name"].to_dict()
-
-    def __loadSchema(self, schema_file="schema.json"):
-        print("loading schema")
-        with open(schema_file, "r") as f:
-            schema = json.load(f)
-            self.category_name_to_field_name = schema["category_name_to_field_name"]
-        try:
-            # see if schema has dcid_to_city_name
-            # if not, get it and add it, then reload schema
-            self.dcid_to_city_name = schema["dcid_to_city_name"]
-            print("found dcid to city name")
-        except KeyError:
-            print("got key error")
-            with open(schema_file, "w") as f:
-                schema = {}
-                dcidToName = self.__getDcidsToNameForTopNCities()
-                print(dcidToName)
-                schema["dcid_to_city_name"] = dcidToName
-                schema["category_name_to_field_name"] = self.category_name_to_field_name
-                json.dump(schema, f)
-            self.__loadSchema(schema_file)
-        return
-
-    def __buildJsonDataFromSchema(self, dcid_to_city_name=None, category_name_to_field_name=None, outfile="dataset.json", verbose=False):
-        if dcid_to_city_name is None:
-            if self.dcid_to_city_name == {}:
-                self.__loadSchema()
-            dcids = self.dcid_to_city_name
-        else:
-            dcids = dcid_to_city_name
-
-        if category_name_to_field_name is None:
-            if self.category_name_to_field_name == {}:
-                self.__loadSchema()
-            category_names = self.category_name_to_field_name
-        else:
-            category_names = category_name_to_field_name
-
-        for dcid, city_name in dcids.items():
-            self.dataset[dcid] = {}
-            self.dataset[dcid]["city_name"] = city_name
-            if verbose:
-                print("##############   ", city_name,
-                      "   ##############", "\n\n")
-            for cat_name, stat_name in category_names.items():
-                # if stat_name in self.handler.not_supported:
-                ns = self.handler.not_supported(dcid, stat_name)
-                if ns[0]:
-                    f = ns[1]
-                    x = f(dcid)
-                else:
-                    x = dc.get_stat_value(dcid, stat_name)
-                if verbose:
-                    print(cat_name, ":", x)
-                if math.isnan(x):
-                    print("***Got NaN for", city_name, ",", cat_name)
-                self.dataset[dcid][cat_name] = x
-
-            print("Finished data collection for", city_name)
-        self.writeDatasetToJsonFile(outfile)
-        return
-
-    def buildSampleDataset(self, sample_file="sample.json"):
-        with open("sample.json", "r") as f:
-            schema = json.load(f)
-            self.__buildJsonDataFromSchema(
-                schema["dcid_to_city_name"], schema["category_name_to_field_name"], outfile="dataset_sample.json")
-
-    def buildFullDataset(self):
-        self.__buildJsonDataFromSchema()
+def getAllCitiesTable():
+    wiki_all_cities = "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
+    table_class = "wikitable"
+    page = requests.get(wiki_all_cities)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    all_tables = soup.find_all('table', attrs={'class': table_class})
+    return all_tables[1]
 
 
-dsb = DatasetBuilder()
-dsb.buildSampleDataset()
+def getLinkAndCityName(tds):
+    i = len(tds) - 10
+    city_cell = tds[i]
+    link = city_cell.find('a')
+    url = buildUrl(link['href'])
+    city_name = link['title']
+    return url, city_name
+
+
+def getPopulationAndPopDensity(tds):
+    i = len(tds) - 10
+    pop_cell = tds[i+2]
+    pop = int(pop_cell.text.strip().replace(',', ''))
+    pop_density_cell = tds[i+7]
+    pop_density = int(pop_density_cell.text.strip().replace(
+        '/sq\xa0mi', '').replace(',', ''))
+    return pop, pop_density
+
+
+def buildBasicDatasetStructure(sample=False):
+    table = getAllCitiesTable()
+    trs = table.find_all('tr')
+    db = {}
+    j = 10 if sample else len(trs)
+    for tr in trs[1:j]:
+        tds = tr.find_all('td')
+        url, city_name = getLinkAndCityName(tds)
+        pop, pop_density = getPopulationAndPopDensity(tds)
+        db[url] = {"city_name": city_name, "population": pop,
+                   "population_density": pop_density}
+    return db
+
+
+def clean(s):
+    # todo: remove all the \u____ characters
+    # remove all the citations [xx]
+    return s.strip()
+
+
+def getParagraphTextForUrl(url):
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    main_text = soup.find('div', attrs={'id': 'mw-content-text'})
+    pars = main_text.find_all('p')
+    return [clean(p.text) for p in pars]
+
+
+def addTextToDataset(db):
+    for url, info in db.items():
+        paragraphs = getParagraphTextForUrl(url)
+        info["text"] = paragraphs
+    return
+
+
+db = buildBasicDatasetStructure(sample=True)
+addTextToDataset(db)
+writeToJson(db, "db.json")
