@@ -2,3 +2,5 @@
 SET APP_SETTINGS=config.DevelopmentConfig
 :: Set the DB url to a local database for development
 SET DATABASE_URL=postgresql://localhost/my_app_db
+:: Fill in
+SET ALLTRAILS_API_KEY=placeholder
