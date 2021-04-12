@@ -194,7 +194,7 @@ NAME_TO_ID = {
 def retrieve_review_data_by_trail_id(trail_id):
     """
     Grabs review information through a direct call to AllTrail's API.
-    :returns Tuple (trail_id, [Review Dict]) or None if no reviews found
+    :returns [ {review} ] or None if no reviews found
     """
     API_KEY = os.environ.get('ALLTRAILS_API_KEY')
     REVIEWS_URL = f"https://www.alltrails.com/api/alltrails/v2/trails/{str(trail_id)}/reviews"
@@ -214,12 +214,13 @@ def retrieve_review_data_by_trail_id(trail_id):
     for d in data:
         review = {}
         review['activity'] = None if d['activity'] is None else d['activity']['name']
-        review['comment'] = d['comment'].replace("\n", " ").strip() if d['comment'] else ""
+        review['comment'] = d['comment'].replace(
+            "\n", " ").strip() if d['comment'] else ""
         review['obstacles'] = [o['uid'] for o in d['obstacles']]
         review['rating'] = d['rating']
         reviews.append(review)
 
-    return (trail_id, reviews)
+    return reviews
     # return (data[0]['trailName'], reviews) # (TrailName, [ReviewDict])
 
 
@@ -229,23 +230,18 @@ def reviews_to_json(trail_ids, output_file):
     """
     out = {}
     for trail_id in trail_ids:
-        data = retrieve_review_data_by_trail_id(trail_id)
-        if data is None:
+        reviews = retrieve_review_data_by_trail_id(trail_id)
+        if reviews is None:
             continue
-        trail_name, review = data
-        out[trail_name] = review
+        out[trail_id] = reviews
 
     with open(output_file, "w") as f:
         json.dump(out, f)
 
 
-def main():
+if __name__ == "__main__":
     trail_ids = set(NAME_TO_ID.values())
     reviews_to_json(trail_ids, "alltrails_reviews.json")
-
-
-if __name__ == "__main__":
-    main()
 
 ############ WEB SCRAPING TOOLS ############
 
