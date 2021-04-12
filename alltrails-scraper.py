@@ -1,4 +1,5 @@
 import json
+import os
 import pprint
 import requests
 import time
@@ -136,12 +137,12 @@ NAME_TO_ID = {
     'Robert H. Treman Swim Area': 10290032,
     'Robert H. Treman Swim Area Connector': None,
     'Robert H. Treman Unnamed Trail': None,
-    'Robert H. Treman Upper Gorge Trail': None, # TODO
+    'Robert H. Treman Upper Gorge Trail': None,  # TODO
     'Roy H. Park Preserve Blue trail': 10288307,
     'Roy H. Park Preserve Orange trail': 10288307,
     'Roy H. Park Preserve Park Boardwalk': 10288307,
     'Roy H. Park Preserve Park path to Boardwalk': 10288307,
-    'Roy H. Park Preserve Park to Hammond Hill': None, # TODO
+    'Roy H. Park Preserve Park to Hammond Hill': None,  # TODO
     'Roy H. Park Preserve Red trail': 10288307,
     'Shindagin Hollow B1': 10017694,
     'Shindagin Hollow B2': 10017694,
@@ -179,7 +180,7 @@ NAME_TO_ID = {
     'Stewart Park': 10042562,
     'Sweedler Blue trail': None,
     'Taughannock Falls Gorge Trail': 10021346,
-    'Taughannock Falls Multi-use Trail': None, # TODO
+    'Taughannock Falls Multi-use Trail': None,  # TODO
     'Taughannock Falls North Rim Trail': 10297152,
     'Taughannock Falls South Rim Trail': 10297152,
     'Thayer Blue trail': None,
@@ -190,32 +191,60 @@ NAME_TO_ID = {
 # https://www.alltrails.com/api/alltrails/trails/10354904/nearby_trails?page=1&per_page=24
 
 
-def test_use_api():
+def retrieve_review_data_by_trail_id(trail_id):
     """
     Grabs review information through a direct call to AllTrail's API.
+    :returns Tuple (TrailName, [Review Dict]) or None if no reviews found
     """
-    # Retrieved from request -> headers -> query string parameters -> "key"
-    API_KEY = "3p0t5s6b5g4g0e8k3c1j3w7y5c3m4t8i"
-    # Buttermilk Falls Gorge and Rim Trail Loop
-    REVIEWS_URL = "https://www.alltrails.com/api/alltrails/v2/trails/10354904/reviews"
+    API_KEY = os.environ.get('ALLTRAILS_API_KEY')
+    REVIEWS_URL = f"https://www.alltrails.com/api/alltrails/v2/trails/{str(trail_id)}/reviews"
     HEADERS = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
     }
     URL = REVIEWS_URL + "?key=" + API_KEY
+    reviews = []
 
     r = requests.get(URL, headers=HEADERS)
     res = r.json()
-    return [
-        {
-            "activity": None if d['activity'] is None else d['activity']['name'],
-            "comment": d['comment'],
-            "obstacles": d['obstacles'],
-            "rating": d['rating'],
-        }
-        for d in res['trail_reviews']]
+
+    data = res.get('trail_reviews')
+    if data is None:
+        return None
+
+    for d in data:
+        review = {}
+        review['activity'] = None if d['activity'] is None else d['activity']['name']
+        review['comment'] = d['comment'].replace("\n", " ").strip() if d['comment'] else ""
+        review['obstacles'] = [o['uid'] for o in d['obstacles']]
+        review['rating'] = d['rating']
+        reviews.append(review)
+
+    return (data[0]['trailName'], reviews)
 
 
-pprint.pprint(test_use_api())
+def reviews_to_json(trail_ids, output_file):
+    """
+    Given a list of AllTrails trail ids, will output review data per trail into a JSON file.
+    """
+    out = {}
+    for trail_id in trail_ids:
+        data = retrieve_review_data_by_trail_id(trail_id)
+        if data is None:
+            continue
+        trail_name, review = data
+        out[trail_name] = review
+
+    with open(output_file, "w") as f:
+        json.dump(out, f)
+
+
+def main():
+    trail_ids = set(NAME_TO_ID.values())
+    reviews_to_json(trail_ids, "alltrails_reviews.json")
+
+
+if __name__ == "__main__":
+    main()
 
 ############ WEB SCRAPING TOOLS ############
 
