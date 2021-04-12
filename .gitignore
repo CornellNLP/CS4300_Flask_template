@@ -1,5 +1,6 @@
 venv
 *.pyc
+*.DS_STORE
 migrations 
 vagrant/.vagrant
 vagrant/site.retry
@@ -9,3 +10,5 @@ vagrant/a4keypair.pem
 !**/__pycache__/
 __pycache__/
 .vscode/
+movie_scripts/
+.ipynb_checkpoints/

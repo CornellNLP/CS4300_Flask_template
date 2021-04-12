@@ -59,6 +59,7 @@ rdflib-jsonld==0.5.0
 recipe-scrapers==12.2.2
 redis==3.4.1
 requests==2.23.0
+tqdm==4.60.0
 scikit-learn==0.22.1
 scipy==1.4.1
 singledispatch==3.4.0.3

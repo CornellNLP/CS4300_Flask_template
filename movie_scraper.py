@@ -4,9 +4,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import os
+from tqdm import tqdm
 
 ## REPLACE THIS WITH THE DIRECTORY YOU WANT THE SCRIPTS TO BE DOWNLOADED TO
-SCRIPTS_DIR = 'C:/Users/showg/Documents/Scripts'
+SCRIPTS_DIR = 'movie_scripts'
 
 headers = {"Accept-Language": "en-US, en;q=0.5"}
 
@@ -33,7 +34,7 @@ top.location.href=location.href
 ''', '')
     return text.replace(r'\r', '')
 
-for p in movielist:
+for p in tqdm(movielist):
     t = p.findChild("a")
     title = t.get("title")
     script_title = title.replace(" ", "-")
