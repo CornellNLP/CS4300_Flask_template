@@ -26,6 +26,10 @@ idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.3
 joblib==0.14.1
+jupyter==1.0.0
+jupyter-client==6.1.2
+jupyter-console==6.2.0
+jupyter-core==4.6.0
 Mako==1.1.1
 MarkupSafe==1.1.1
 marshmallow==3.5.0
