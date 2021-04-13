@@ -23,59 +23,72 @@ json_merge = {}
 #filter business file
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
-  
-  #to do: check if it's a restaurant (look at categories (a list) and see if "restaurant"
-  #is in there), if it's in the US, and if it has >= 5 reviews.
-  #if all are true, make a new dic (id_dic) with name, city, state, zip code,
-  #and attributes. add a "reviews" field and initialize as a list
-  #add to json_merge this business_id as a key and the new dic as the value
-  id_dic = {}
-  bus_id = current_json["business_id"]
-  current_json[bus_id] = id_dic
+  #print(current_json)
+  #categories = current_json["categories"]
+  num_reviews = current_json["review_count"]
+  #check it's a restaurant and has >= 5 reviews
+  categories = current_json["categories"]
+  if not categories is None and "Restaurants" in categories and num_reviews >= 5:
+    id_dic = {}
+    bus_id = current_json["business_id"]
+    name = current_json["name"]
+    city = current_json["city"]
+    state = current_json["state"]
+    attributes = current_json["attributes"]
+    #get name, city, state, and attributes into the dic
+    id_dic["name"] = name
+    id_dic["city"] = city
+    id_dic["state"] = state
+    id_dic["attributes"] = attributes
+    id_dic["reviews"] = [] #initialize reviews as an empty list--these will be put in later
+    json_merge[bus_id] = id_dic #add to the merge json
+
+print("after business")
 
 for line in review_file:
   current_json = json.loads(line)
-
-  #to do: check the business_id key of the current_json. if this id is a key in 
-  #json_merge:
   review_dic = {}
   bus_id = current_json["business_id"]
+  #only look at restaurants from json_merge dic
   if bus_id in json_merge:
-    bus_dic = json_merge[bus_id]
-    #to do: add stars, useful, and text part of the review
-    
-    #adds the new dic to the corresponding "review" list in json_merge
+    bus_dic = json_merge[bus_id] #dictionary of the current restaurant
+    stars = current_json["stars"]
+    useful = current_json["useful"]
+    text = current_json["text"]
+    #add stars, useful, and text part of the review to the review dic
+    review_dic["stars"] = stars
+    review_dic["useful"] = useful
+    review_dic["text"] = text
+    #add the new dic to the corresponding "review" list in json_merge
     bus_dic["reviews"].append(review_dic)
 
+print("after review")
 json_to_write = {}
 for key in json_merge:
-  city_dic = {}
-  #create a new entry in the json_to_write dic. the key is the loc variable 
+  #create the location key from the city/state
   city = json_merge[key]["city"]
   state = json_merge[key]["state"]
-  loc = city.upper() + state.upper()business name 
+  loc = city.upper() + state.upper() 
   loc.replace(" ","") #remove spaces
   #for example, new york city will have a loc variable of NEWYORKNY
 
-  #the value will be another dic where the keys are the restaurant names
+  #the value in the json_to_write dic is  another dic where the keys are the restaurant names
   #and the values are the info/reviews of the restaurants
   name = json_merge[key]["name"]
   name.replace(" ","")
   name.upper()
 
   if not loc in json_to_write:
-    info_dic = {} #dic representing info/reviews about the restaurant
-    #to do: add info to info_dic
-    #adds new city/state and restaurant info to the json
-    json_to_write[loc][name] = info_dic
-  else:
-    info_dic = {}
-    #to do: add info to info_dic
-    json_to_write[loc] = {} #initialize entry in json for new city/state
-    json_to_write[loc][name] = info_dic
+    json_to_write[loc] = {} #initialize entry in json for a new city/state
+  info_dic = {} #dic representing info/reviews about the restaurant
+  reviews = json_merge[key]["reviews"]
+  attributes = json_merge[key]["attributes"]
+  info_dic["reviews"] = reviews
+  #if dataset still too large: sort the reviews based on "useful" rating and only include the top 10 (?)
+  info_dic["attributes"] = attributes
+  #adds restaurant info to the json
+  json_to_write[loc][name] = info_dic
 
-
-
-
+print("after merge")
 #put new json/dataset into output file
-json.dump(json_to_write, output_file)
+output_file.write(json.dumps(json_to_write) + "\n")
