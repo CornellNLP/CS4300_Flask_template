@@ -2,7 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 
-project_name = "City Recommendations"
+project_name = "Ski Resort Recommendations"
 net_id = "Ava Anderson: aca76, Michael Behrens: mcb273, Cameron Haarmann: cmh332, Nicholas Mohan: nhm39, Megan Tormey: mt664"
 
 
