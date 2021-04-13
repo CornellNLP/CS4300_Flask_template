@@ -1,4 +1,5 @@
 venv
+4300venv
 *.pyc
 *.DS_STORE
 migrations 
@@ -12,3 +13,4 @@ __pycache__/
 .vscode/
 movie_scripts/
 .ipynb_checkpoints/
+.python-version
