@@ -12,31 +12,33 @@
             Sami: ss2698 </p>
     </div>
     <form>
-        <div class="form_group">
-            <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
-            <input type="text" name="fav_name" id="fav_name" required>
-        </div>
-        <div class="form_group">
-            <label class="form_label" for="fav_city">City of favorite restaurant:</label>
-            <input type="text" name="fav_city" id="fav_city" required>
-        </div>
-        <div class="form_group">
-            <p class="checkbox_label">Top favorite things about above restaurant:</p>
-            <div class="checkboxes">
-                <input type="checkbox" id="reason1" name="reason1" value="ambiance">
-                <label for="reason1">Ambiance</label><br>
-                <input type="checkbox" id="reason2" name="reason2" value="friendliness">
-                <label for="reason2">Friendliness of staff</label><br>
-                <input type="checkbox" id="reason3" name="reason3" value="cleanliness">
-                <label for="reason3">Cleanliness of space</label><br>
+        <div>
+            <div class="form_group">
+                <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
+                <input type="text" name="fav_name" id="fav_name" required>
             </div>
-        </div>
-        <div class="form_group">
-            <label class="form_label" for="new_city">New city:</label>
-            <input type="text" name="new_city" id="new_city" required>
-        </div>
+            <div class="form_group">
+                <label class="form_label" for="fav_city">City of favorite restaurant:</label>
+                <input type="text" name="fav_city" id="fav_city" required>
+            </div>
+            <div class="form_group">
+                <p class="checkbox_label">Top favorite things about above restaurant:</p>
+                <div class="checkboxes">
+                    <input type="checkbox" id="reason1" name="reason1" value="ambiance">
+                    <label for="reason1">Ambiance</label><br>
+                    <input type="checkbox" id="reason2" name="reason2" value="friendliness">
+                    <label for="reason2">Friendliness of staff</label><br>
+                    <input type="checkbox" id="reason3" name="reason3" value="cleanliness">
+                    <label for="reason3">Cleanliness of space</label><br>
+                </div>
+            </div>
+            <div class="form_group">
+                <label class="form_label" for="new_city">New city:</label>
+                <input type="text" name="new_city" id="new_city" required>
+            </div>
 
-        <button type="submit">Find your new favorite restaurants!</button>
+            <button type="submit">Find your new favorite restaurants!</button>
+        </div>
     </form>
     <form class="form-inline global-search">
         {% if data %}
