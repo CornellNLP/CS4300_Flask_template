@@ -4,24 +4,25 @@ from nltk.tokenize import TreebankWordTokenizer
 
 class Tokens:
     tokens = []
-    _tokens_to_idx = {}
+    tokens_to_idx = None
     
     def __init__(self, token_type='reviews'):
         assert token_type in ['reviews and descriptions', 
                               'reviews', 
                               'attributes', 
                               'descriptions']
-        print(token_type)
+        # print(token_type)
         if token_type == 'reviews and descriptions':
-            self.tokens = self.get_tokens(descriptions = True)
+            self.tokens = self._get_tokens(descriptions = True)
         elif token_type == 'reviews':
-            self.tokens = self.get_tokens()
+            self.tokens = self._get_tokens()
         elif token_type == 'descriptions':
-            self.tokens = self.get_tokens(reviews = False, descriptions = True)
+            self.tokens = self._get_tokens(reviews = False, descriptions = True)
         else:
-            self.tokens = self.get_tokens_attributes()
+            self.tokens = self._get_tokens_attributes()
+        self.tokens_to_idx = self._build_tokens_to_idx()
         
-    def get_tokens(self, reviews = True, descriptions = False):
+    def _get_tokens(self, reviews = True, descriptions = False):
         tokens = set()
         # tokens2 = set()
         tokenize = TreebankWordTokenizer().tokenize
@@ -35,7 +36,7 @@ class Tokens:
                 tokens.update(tokenize(data[trail]['Description'].lower()))
         return list(tokens)
 
-    def get_tokens_attributes(self):
+    def _get_tokens_attributes(self):
         tokens = set()
         for trail in data:
             tokens.update(data[trail]['Trail Attributes'])
@@ -44,14 +45,13 @@ class Tokens:
     def _build_tokens_to_idx(self):
         tokens_to_index = {}
         for i in range(len(self.tokens)):
+            print(self.tokens[i])
             tokens_to_index[self.tokens[i]] = i
-        self._tokens_to_idx = tokens_to_index
+        print(tokens_to_index)
+        return tokens_to_index
 
-    def idx(self, token):
-        if self._tokens_to_idx is None:
-            self._build_tokens_to_idx()
-        return self._tokens_to_idx[token]
+## TEST CODE
+# token = Tokens(token_type ='attributes')
+# tokens = token.tokens
+# print(token.tokens_to_idx['Restrooms available'])
 
-tokens = Tokens(token_type ='attributes').tokens
-print(tokens)
-print(len(tokens))
