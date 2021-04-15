@@ -153,5 +153,7 @@ def display(query, sim_list, reviews, num):
             dup_list.append(title)
             score = round(sim_list[i][0]*100, 2)
             desc = reviews["description"][idx]
-            print(str(score) + "% : " + desc)
+            print("[" + str(score) + "%] " + title)
+            print(desc)
+            print()
         i += 1
