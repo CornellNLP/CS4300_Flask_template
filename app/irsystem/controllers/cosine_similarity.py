@@ -157,3 +157,27 @@ def display(query, sim_list, reviews, num):
             print(desc)
             print()
         i += 1
+
+def compute_outputs(query, sim_list, reviews, num):
+    """
+    Returns a list of wine results to return
+    """
+    result = []
+    i = 0
+    dup_list = []
+    try:
+        while len(dup_list) < num:
+            idx = sim_list[i][1]
+            title = reviews["title"][idx]
+            if title not in dup_list:
+                # print(title)
+                dup_list.append(title)
+                score = round(sim_list[i][0]*100, 2)
+                desc = reviews["description"][idx]
+                wine = "[" + str(score) + "%] " + title + desc
+                result.append(wine)
+            i += 1
+        return result
+    except:
+        return ["No Results Found"]
+
