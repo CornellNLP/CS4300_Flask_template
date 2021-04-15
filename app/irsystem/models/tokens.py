@@ -9,6 +9,7 @@ class Tokens:
     token_object = Tokens(token_type = 'attributes)
     list of tokens -> token_object.tokens
     dictionary of tokens to index -> token_object.tokens_to_idx
+    list of tokens per trail id -> token_object.tokens_per_trail
     """
 
     tokens = []
