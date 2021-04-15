@@ -21,6 +21,7 @@ EXAMPLE:
 """
 json_merge = {}
 #filter business file
+ne = ["BOSTON","ATLANTA","ORLANDO"]
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
   #print(current_json)
@@ -28,12 +29,14 @@ for line in business_file:
   num_reviews = current_json["review_count"]
   #check it's a restaurant and has >= 5 reviews
   categories = current_json["categories"]
-  if not categories is None and "Restaurants" in categories and num_reviews >= 5:
+  state = current_json["state"]
+  city = current_json["city"]
+  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) :
     id_dic = {}
     bus_id = current_json["business_id"]
     name = current_json["name"]
-    city = current_json["city"]
-    state = current_json["state"]
+    # city = current_json["city"]
+    # state = current_json["state"]
     attributes = current_json["attributes"]
     #get name, city, state, and attributes into the dic
     id_dic["name"] = name
@@ -81,7 +84,9 @@ for key in json_merge:
   if not loc in json_to_write:
     json_to_write[loc] = {} #initialize entry in json for a new city/state
   info_dic = {} #dic representing info/reviews about the restaurant
-  reviews = json_merge[key]["reviews"]
+  reviews = sorted(json_merge[key]["reviews"],key = lambda i: i['useful'],reverse=True)
+  reviews = reviews[:11]
+
   attributes = json_merge[key]["attributes"]
   info_dic["reviews"] = reviews
   #if dataset still too large: sort the reviews based on "useful" rating and only include the top 10 (?)
@@ -91,4 +96,5 @@ for key in json_merge:
 
 print("after merge")
 #put new json/dataset into output file
-output_file.write(json.dumps(json_to_write) + "\n")
+output_file.write(json.dumps(json_to_write)+'\n')
+
