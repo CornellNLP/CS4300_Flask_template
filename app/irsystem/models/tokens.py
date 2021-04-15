@@ -50,37 +50,13 @@ class Tokens:
         for i, trail in enumerate(data):
             tokens_per_trail[i] = list(set(data[trail]['Trail Attributes']))
         return tokens_per_trail
-        # for i, trail in enumerate(data):
-
-        # tokens = set()
-        # for trail in data:
-        #     tokens.update(data[trail]['Trail Attributes'])
-        # return list(tokens)
 
     def _get_tokens(self, reviews = True, descriptions = False):
-        # tokens = set()
-        # # tokens2 = set()
-        # tokenize = TreebankWordTokenizer().tokenize
-        # for trail in data:
-        #     if reviews:
-        #         for review in data[trail]['Reviews']:
-        #             tokens.update(tokenize(review['comment'].lower()))
-        #             # tokens2.update(re.findall('[a-z]+', review['comment'].lower()))
-        #     if descriptions:
-        #         # tokens2.update(re.findall('[a-z]+', data[trail]['Description'].lower()))
-        #         tokens.update(tokenize(data[trail]['Description'].lower()))
-        # return list(tokens)
         tokens = set()
         for trail in self.tokens_per_trail:
             tokens_of_trail = self.tokens_per_trail[trail]
             tokens.update(tokens_of_trail)
         return list(tokens)
-
-    # def _get_tokens_attributes(self):
-    #     tokens = set()
-    #     for trail in data:
-    #         tokens.update(data[trail]['Trail Attributes'])
-    #     return list(tokens)
 
     def _build_tokens_to_idx(self):
         tokens_to_index = {}
@@ -89,8 +65,8 @@ class Tokens:
         return tokens_to_index
 
 ## TEST CODE
-tokens_obj = Tokens(token_type='attributes')
-tokens_per_trail = tokens_obj.tokens_per_trail
+# tokens_obj = Tokens(token_type='attributes')
+# tokens_per_trail = tokens_obj.tokens_per_trail
 # print(trail_to_idx)
 # print(token._get_tokens_per_trail()[1])
 # print(tokens_per_trail[trail_to_idx['Ellis Hollow Red trail']] == tokens_per_trail[1])
