@@ -1,7 +1,7 @@
 from . import *  
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-import app.irsystem.controllers.data_loaders as data_loaders
+from app import app as data_pool
 
 project_name = "Book Club"
 net_id = "Caroline Lui: cel243, Elisabeth Finkel: esf76, Janie Walter: jjw249, Kurt Huebner: krh57, Taixiang(Max) Zeng: tz376"
@@ -39,8 +39,7 @@ def get_book_from_partial():
 	partial = request.args.get('partial')
 	if not partial:
 		return json.dumps([])
-	data_loaders.load_works()
-	return json.dumps(_get_book_from_partial(g.works, partial))
+	return json.dumps(_get_book_from_partial(data_pool.works, partial))
 	
 	
 ### html endpoints ###
@@ -50,8 +49,7 @@ def get_reccs():
 	req = json.loads(request.data)
 	liked_works = req.get('liked_works')
 
-	data_loaders.load_works()
-	results = _get_reccs(g.works, liked_works)
+	results = _get_reccs(data_pool.works, liked_works)
 	# return render_template('result.html', results=results)
 
 
@@ -65,7 +63,4 @@ def search():
 		output_message = "Your search: " + query
 		data = range(5)
 	
-	data_loaders.load_works()
-	# data = _get_book_from_partial(g.works, "harry") 
-
 	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
