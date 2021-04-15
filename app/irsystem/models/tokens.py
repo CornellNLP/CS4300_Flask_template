@@ -3,6 +3,14 @@ import re
 from nltk.tokenize import TreebankWordTokenizer
 
 class Tokens:
+    """
+    Given the token type (default is reviews) it tokenizes the data
+    token_type can be either 'reviews and descriptions', 'reviews', 'attributes', or 'descriptions'
+    token_object = Token(token_type = 'attributes)
+    list of tokens -> token_object.tokens
+    dictionary of tokens to index -> token_object.tokens_to_idx
+    """
+
     tokens = []
     tokens_to_idx = None
     
