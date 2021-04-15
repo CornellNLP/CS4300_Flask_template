@@ -7,3 +7,5 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 .env
+.DS_Store
+__pycache__
