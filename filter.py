@@ -21,7 +21,7 @@ EXAMPLE:
 """
 json_merge = {}
 #filter business file
-ne = ["BOSTON","ATLANTA","ORLANDO"]
+ne = ["MA"]
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
   #print(current_json)
@@ -31,18 +31,18 @@ for line in business_file:
   categories = current_json["categories"]
   state = current_json["state"]
   city = current_json["city"]
-  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) :
+  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (state.upper() in ne) :
     id_dic = {}
     bus_id = current_json["business_id"]
     name = current_json["name"]
     # city = current_json["city"]
     # state = current_json["state"]
-    attributes = current_json["attributes"]
+    #attributes = current_json["attributes"]
     #get name, city, state, and attributes into the dic
     id_dic["name"] = name
     id_dic["city"] = city
     id_dic["state"] = state
-    id_dic["attributes"] = attributes
+    #id_dic["attributes"] = attributes
     id_dic["reviews"] = [] #initialize reviews as an empty list--these will be put in later
     json_merge[bus_id] = id_dic #add to the merge json
 
@@ -70,15 +70,15 @@ json_to_write = {}
 for key in json_merge:
   #create the location key from the city/state
   city = json_merge[key]["city"]
-  state = json_merge[key]["state"]
-  loc = city.upper() + state.upper() 
-  loc.replace(" ","") #remove spaces
+  # state = json_merge[key]["state"]
+  loc = city.upper()
+  #loc.replace(" ","") #remove spaces
   #for example, new york city will have a loc variable of NEWYORKNY
 
   #the value in the json_to_write dic is  another dic where the keys are the restaurant names
   #and the values are the info/reviews of the restaurants
   name = json_merge[key]["name"]
-  name.replace(" ","")
+  #name.replace(" ","")
   name.upper()
 
   if not loc in json_to_write:
@@ -87,10 +87,10 @@ for key in json_merge:
   reviews = sorted(json_merge[key]["reviews"],key = lambda i: i['useful'],reverse=True)
   reviews = reviews[:11]
 
-  attributes = json_merge[key]["attributes"]
+  #attributes = json_merge[key]["attributes"]
   info_dic["reviews"] = reviews
   #if dataset still too large: sort the reviews based on "useful" rating and only include the top 10 (?)
-  info_dic["attributes"] = attributes
+  #info_dic["attributes"] = attributes
   #adds restaurant info to the json
   json_to_write[loc][name] = info_dic
 
