@@ -15,6 +15,7 @@ OVERALL OUTPUT:
 """
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
+import pandas as pd
 
 # tokenize recipe titles
 # output: [{'toks': ['a', 'b']}, {'toks': ['a', 'b']}]
@@ -37,6 +38,7 @@ def tokenize_titles(recipe_list):
     for recipe in recipe_list:
         res.append(tokenize(recipe))
     return res
+
 
 def build_vectorizer(recipe_list):
     """Returns a TfidfVectorizer object with certain preprocessing properties.
@@ -74,7 +76,7 @@ def get_movie_tfidfs(movie_food_words, vectorizer):
 def get_cos_sim(recipe_mat, movie_mat):
     """Returns the cosine similarity of two movie scripts.
     Modified code from Assignment 5
-    
+
     Params: {mov1: String,
              mov2: String,
              input_doc_mat: np.ndarray,
@@ -105,7 +107,9 @@ def main():
     recipe_mat, vectorizer = build_vectorizer(recipe_list)
     movie_mat = get_movie_tfidfs(movie_list, vectorizer)
     res = get_cos_sim(recipe_mat, movie_mat)
-    print(res)
+    df = pd.DataFrame(res, index=movie_list.keys(), columns=recipe_list)
+
+    print(df)
     return res
 
 
