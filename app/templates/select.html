@@ -92,7 +92,13 @@
 
             let books = new Array();
             $.get("/booknames", {partial: newInput}).done(function(value) {
-                books = jQuery.parseJSON(value);
+                booksMap = jQuery.parseJSON(value);
+                books = new Array();
+                // booksMap.each(books.add())
+                for (let i = 0; i < booksMap.length; i++) {
+                    books.push(booksMap[i]["string"]);
+                };
+                // console.log(booksMap[0]["string"]);
                 $("#candidate-column").html("");
                 let candidates_column = $("<ul>");
                 for (let i = 0; i < books.length; i++) {
@@ -108,7 +114,7 @@
 
             let userBookList = []
             $(".user-section").eq(currentUser).children("ul").children("li").children(".item").each(function() {
-                userBookList.push($(this).html()); 
+                userBookList.push($(this).html());
             });
 
             console.log(userBookList);
