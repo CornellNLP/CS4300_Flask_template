@@ -6,19 +6,18 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>To Do List</title>
+	<title>BookClub</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/select.css">
-	<script src="logic.js"></script>
 </head>
 <body class="container" id="main-container">
 	<div id="list-container" class="container-fluid row">
 		<!-- List title -->
         <section class="col col-10 col-md-10 col-lg-4">
-            <a href="">
-                <button type="submit" class="btn btn-primary">Back</button>
-            </a>
+            <form action="/" method="get">
+                <input type="submit" class="btn btn-primary" value="Back"></button>
+            </form>
             <div id="candidate-column"></div>
         </section>
         <section id="user-block" class="col-10 col-md-10 col-lg-6">
@@ -56,14 +55,24 @@
             </section> -->
         </section>
         <section class="col" align="right">
-            <button type="submit" class="btn btn-primary">Next</button>
+
+            <button type="submit" class="btn btn-primary" id="next-button">Next</button>
         </section>
 	</div>
 
 	<script>
 
-        // Initial setup -  add number of user fields according to input
-        let num_users = 3;
+        // Extract number of user from url
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null) {
+            return null;
+            }
+            return decodeURI(results[1]) || 0;
+        }
+
+        // Initial setup - add number of user fields according to input
+        let num_users = $.urlParam('num_users');
         for (let i = 0; i < num_users; i++){
             var new_user = $("<section class=\"user-section\">");
             new_user.append($("<div id=\"list-title\">").html("<strong>User</strong>"));
@@ -75,42 +84,74 @@
         // index of current user searching
         let currentUser = -1; 
 
-        // List of books matching user input
-        let books = new Array("Harry Potter", "Game of Thrones", "Lord of the rings", "c++ design");
-
         // Adding list of matching book into candidate column on the left
         $(document).on("input", ".new-input", function() {
             var newInput = $(this).val().trim();
             currentUser = $(this).parent().index();
-            console.log(currentUser);
-            $("#candidate-column").html("");
-            let candidates_column = $("<ul>");
-            for (let i = 0; i < books.length; i++) {
-                candidates_column.append($("<li class=\"candidate\">").html(books[i]));
-            }
-            $("#candidate-column").append(candidates_column);
+            console.log("Current User: " + currentUser);
+
+            let books = new Array();
+            $.get("/booknames", {partial: newInput}).done(function(value) {
+                books = jQuery.parseJSON(value);
+                $("#candidate-column").html("");
+                let candidates_column = $("<ul>");
+                for (let i = 0; i < books.length; i++) {
+                    candidates_column.append($("<li class=\"candidate\">").html(books[i]));
+                }
+                $("#candidate-column").append(candidates_column);
+            });
         });
 
         // Add selected book into the last user's book list
         $(document).on("click", "#candidate-column li", function() {
-            var newInput = $(this).html();
-            let li_input = $("<li>");
-            li_input.append($("<span class='check-box'>").html("<i class=\"fa fa-close delete-button\"></i>"));
-            li_input.append($("<span class='item'> ").append(newInput));
-            var user_section = $(".user-section").eq(currentUser);
-            console.log(user_section.children("ul"));
-            $(".user-section").eq(currentUser).children("ul").append(li_input);
+            let newInput = $(this).html();
+
+            let userBookList = []
+            $(".user-section").eq(currentUser).children("ul").children("li").children(".item").each(function() {
+                userBookList.push($(this).html()); 
+            });
+
+            console.log(userBookList);
+
+            if (!userBookList.includes(newInput)){
+                let li_input = $("<li>");
+                li_input.append($("<span class='check-box'>").html("<i class=\"fa fa-close delete-button\"></i>"));
+                li_input.append($("<span class='item'> ").append(newInput));
+                var user_section = $(".user-section").eq(currentUser);
+                $(".user-section").eq(currentUser).children("ul").append(li_input);
+            } else {
+                alert("Book already in list");
+            }
         });
 
         // Remove book from book list
 		$(document).on("click", ".check-box", function() {
-			//console.log($(this));
 			$(this).next().addClass("item-toggle");
 			$(this).parent().fadeToggle(500, function() {
 				$(this).toggleClass("item-toggle");
 				$(this).remove();
 			});
 		});
+
+        $("#next-button").on("click", function() {
+            var bookList = {"liked_works" : []};
+
+            $('.item').each(function() {
+                bookList["liked_works"].push($(this).html()); 
+            });
+
+            $.ajax({
+                type: 'post',
+                url: '/result',
+                data: JSON.stringify(bookList),
+                contentType: "application/json; charset=utf-8",
+                traditional: true,
+                success: function (data) {
+                    console.log(data);
+                    window.location.href = "/result";
+                }
+            });
+        });
 
         // $(document).on("submit", ".add-form", function(){
         //     event.preventDefault();
