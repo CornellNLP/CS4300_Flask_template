@@ -1,5 +1,4 @@
 from get_data import data, trail_to_idx
-import re
 from nltk.tokenize import TreebankWordTokenizer
 
 class Tokens:
@@ -36,13 +35,13 @@ class Tokens:
         tokens_per_trail = {}
         tokenize = TreebankWordTokenizer().tokenize
         for i, trail in enumerate(data):
-            tokens = set()
+            tokens = []
             if reviews:
                 for review in data[trail]['Reviews']:
-                    tokens.update(tokenize(review['comment'].lower()))
+                    tokens.extend(tokenize(review['comment'].lower()))
             if descriptions:
-                tokens.update(tokenize(data[trail]['Description'].lower()))
-            tokens_per_trail[i] = list(tokens)
+                tokens.extend(tokenize(data[trail]['Description'].lower()))
+            tokens_per_trail[i] = tokens
         return tokens_per_trail
     
     def _get_tokens_per_trail_attributes(self):
