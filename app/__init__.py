@@ -8,11 +8,17 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 
+# custom imports
+import data_loaders
+
 # Configure app
 socketio = SocketIO()
 app = Flask(__name__)
 app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+# load read-only data
+app.works = data_loaders.load_works() # etc
 
 # DB
 db = SQLAlchemy(app)
