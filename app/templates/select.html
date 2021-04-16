@@ -147,6 +147,7 @@
                 contentType: "application/json; charset=utf-8",
                 traditional: true,
                 success: function (data) {
+                    sessionStorage.setItem('result',data);
                     console.log(data);
                     window.location.href = "/result";
                 }
