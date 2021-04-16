@@ -101,8 +101,8 @@
                 // console.log(booksMap[0]["string"]);
                 $("#candidate-column").html("");
                 let candidates_column = $("<ul>");
-                for (let i = 0; i < books.length; i++) {
-                    candidates_column.append($("<li class=\"candidate\">").html(books[i]));
+                for (let i = 0; i < booksMap.length; i++) {
+                    candidates_column.append($("<li class=\"candidate\" id=\"booksMap[i][\"work_id\"]\">").html(booksMap[i]["string"]));
                 }
                 $("#candidate-column").append(candidates_column);
             });
@@ -143,6 +143,7 @@
             var bookList = {"liked_works" : []};
 
             $('.item').each(function() {
+                console.log($(this).html());
                 bookList["liked_works"].push($(this).html()); 
             });
 

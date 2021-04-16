@@ -89,3 +89,7 @@ ul li:hover {
 #candidate-column {
     height: 300px;
 }
+
+.candidate {
+    text-overflow: ellipsis;
+}
