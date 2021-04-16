@@ -15,7 +15,7 @@ EXAMPLE:
 "NEWYORKNY: {...},
 "BOSTONMA: {...}}
 
-#initialize new json, this will be one large json where the keys are the 
+#initialize new json, this will be one large json where the keys are the
 #business_ids and the values are another dic of everything else
 #i think this will make it easier to merge the reviews json and the business one
 """
@@ -97,4 +97,3 @@ for key in json_merge:
 print("after merge")
 #put new json/dataset into output file
 output_file.write(json.dumps(json_to_write)+'\n')
-
