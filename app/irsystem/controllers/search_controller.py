@@ -3,6 +3,8 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app import app as data_pool
 import json
+from app.irsystem.models.search import get_doc_rankings
+# import app.irsystem.models.search as search
 
 project_name = "Book Club"
 net_id = "Caroline Lui: cel243, Elisabeth Finkel: esf76, Janie Walter: jjw249, Kurt Huebner: krh57, Taixiang(Max) Zeng: tz376"
@@ -31,8 +33,15 @@ def _get_book_from_partial(works, book_str):
 	return relv_books
 
 
-def _get_reccs(works, selected_books):
-	return ["harry potter is pretty good", "book2", "book3"]
+def _get_reccs(work_ids):
+	# return search.get_doc_rankings(
+	return get_doc_rankings(
+		work_ids,
+		data_pool.data['tfidf'],
+		data_pool.data['inverted_index'],
+		data_pool.data['works']
+	)
+	# return ["harry potter is pretty good", "book2", "book3"]
 
 
 ### ajax endpoints ###
@@ -43,23 +52,24 @@ def get_book_from_partial():
 	partial = request.args.get('partial')
 	if not partial:
 		return json.dumps([])
-	return json.dumps(_get_book_from_partial(data_pool.works, partial))
+	return json.dumps(_get_book_from_partial(data_pool.data['works'], partial))
 
 
 ### html endpoints ###
 
-# Endpoint that receives preferences and displays result
+# Endpoint that receives preferences
 @irsystem.route('/result', methods=['POST'])
 def get_reccs():
 	req = json.loads(request.data)
-	liked_works = req.get('liked_works')
+	liked_work_ids = req.get('liked_works')
 
 	print("="*50)
 	print(request.data)
 	print("="*50)
 
-	results = _get_reccs(data_pool.works, liked_works)
-	return "Result (template TBD): "+str(results)
+	results = _get_reccs(liked_work_ids)
+	return json.dumps(results)
+	# return "Result (template TBD): "+str(results)
 	# return render_template('result.html', results=results), 200
 
 
