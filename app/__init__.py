@@ -18,7 +18,7 @@ app.config.from_object(os.environ["APP_SETTINGS"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # load read-only data
-app.works = data_loaders.load_works() # etc
+app.data = data_loaders.load_data()
 
 # DB
 db = SQLAlchemy(app)
