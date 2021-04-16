@@ -21,7 +21,8 @@ EXAMPLE:
 """
 json_merge = {}
 #filter business file
-ne = ["MA"]
+#ne = ["MA"]
+ne = ["BOSTON"]
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
   #print(current_json)
@@ -31,7 +32,7 @@ for line in business_file:
   categories = current_json["categories"]
   state = current_json["state"]
   city = current_json["city"]
-  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (state.upper() in ne) :
+  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) :
     id_dic = {}
     bus_id = current_json["business_id"]
     name = current_json["name"]
