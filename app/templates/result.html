@@ -2,11 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>BookClub</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/result.css">
 </head>
 <body>
-    <h1>Result page</h1>
+    <h1>Here's what you should read next!</h1>
+    <div id="bookDisplay">
+    </div>
+
+    <script>
+        $(function() {
+            var data = sessionStorage.getItem("result");
+            if(data) {
+                console.log("Results found: ");
+                console.log(data);
+                var book_data = $("<div class=\"book-data\">");
+                book_data.append(data);
+                $("#bookDisplay").append(book_data.clone());
+            }
+            else {
+                console.log("No results found!");
+                console.log(data);
+            }
+        });
+    </script>
 </body>
 </html>
