@@ -2,6 +2,7 @@ from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app import app as data_pool
+import json
 
 project_name = "Book Club"
 net_id = "Caroline Lui: cel243, Elisabeth Finkel: esf76, Janie Walter: jjw249, Kurt Huebner: krh57, Taixiang(Max) Zeng: tz376"
@@ -23,13 +24,15 @@ def _get_book_from_partial(works, book_str):
 			authors = works[work_id].get("author_names", ["(unknown)"])
 			authors = ", ".join(authors)
 			string = f'"{title}" by {authors}'
-			relv_books.append((string, work_id, works[work_id].get("image")))
+			relv_books.append(
+				{"string": string, "work_id": work_id, "image": works[work_id].get("image")}
+			)
 			# relv_books.append((title, works[work_id]['url']))
 	return relv_books
 
 
 def _get_reccs(works, selected_books):
-	return []
+	return ["harry potter is pretty good"]
 
 
 ### ajax endpoints ###
@@ -40,27 +43,55 @@ def get_book_from_partial():
 	if not partial:
 		return json.dumps([])
 	return json.dumps(_get_book_from_partial(data_pool.works, partial))
+
+# @irsystem.route('/booknames', methods=['GET'])
+# def get_book_from_partial():
+# 	partial = request.args.get('partial')
+# 	if not partial:
+# 		return json.dumps([])
+# 	return json.dumps(["book title"])
 	
 	
 ### html endpoints ###
 
-@irsystem.route('/recommendations', methods=['POST'])
+@irsystem.route('/result', methods=['POST'])
 def get_reccs():
 	req = json.loads(request.data)
 	liked_works = req.get('liked_works')
 
 	results = _get_reccs(data_pool.works, liked_works)
+	return "Result (template TBD): "+str(results)
 	# return render_template('result.html', results=results)
 
+# @irsystem.route('/result', methods=['POST'])
+# def get_reccs():
+# 	req = json.loads(request.data)
+# 	liked_works = req.get('liked_works')
+
+# 	results = ["abc", "def"]
+# 	return "Result (template TBD): "+str(results)
+# 	# return render_template('result.html', results=results)
+
+
+@irsystem.route('/select', methods=['GET'])
+def select():
+	query = request.args.get('num_users')
+	# if not query:
+	# 	return render_template('index.html')
+	try:
+		num_users = int(query)
+		return render_template('select.html', users=num_users), 200 #, name=project_name, netid=net_id, output_message=output_message, data=data)
+	except:
+		return render_template('index.html')
 
 @irsystem.route('/', methods=['GET'])
 def search():
-	query = request.args.get('search')
-	if not query:
-		data = []
-		output_message = ''
-	else:
-		output_message = "Your search: " + query
-		data = range(5)
+	# query = request.args.get('search')
+	# if not query:
+	# 	data = []
+	# 	output_message = ''
+	# else:
+	# 	output_message = "Your search: " + query
+	# 	data = range(5)
 	
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+	return render_template('index.html'), 200 #, name=project_name, netid=net_id, output_message=output_message, data=data)

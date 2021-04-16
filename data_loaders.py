@@ -2,6 +2,6 @@
 import pickle
 
 def load_works():
-    with open('../data/Prototype_Data/workid_to_book_info', 'rb') as f:
+    with open('./data/workid_to_book_info', 'rb') as f:
         data = pickle.load(f)
     return data
