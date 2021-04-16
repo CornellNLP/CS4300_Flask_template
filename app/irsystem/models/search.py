@@ -1,4 +1,5 @@
-
+import math
+import json
 def cosine_similarity(joined_queries, inverted_index, tf_idf_vectors):
     """Returns a list of work ids ranked by similarity to a query. Does not use formal cosine similarity due to the omission of normalizing by the doc norm. 
 
