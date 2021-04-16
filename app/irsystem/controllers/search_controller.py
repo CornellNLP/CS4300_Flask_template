@@ -45,14 +45,7 @@ def get_book_from_partial():
 		return json.dumps([])
 	return json.dumps(_get_book_from_partial(data_pool.works, partial))
 
-# @irsystem.route('/booknames', methods=['GET'])
-# def get_book_from_partial():
-# 	partial = request.args.get('partial')
-# 	if not partial:
-# 		return json.dumps([])
-# 	return json.dumps(["book title"])
-	
-	
+
 ### html endpoints ###
 
 # Endpoint that receives preferences and displays result
@@ -61,18 +54,20 @@ def get_reccs():
 	req = json.loads(request.data)
 	liked_works = req.get('liked_works')
 
+	print("="*50)
+	print(request.data)
+	print("="*50)
+
 	results = _get_reccs(data_pool.works, liked_works)
 	return "Result (template TBD): "+str(results)
 	# return render_template('result.html', results=results), 200
 
-# @irsystem.route('/result', methods=['POST'])
-# def get_reccs():
-# 	req = json.loads(request.data)
-# 	liked_works = req.get('liked_works')
 
-# 	results = ["abc", "def"]
-# 	return "Result (template TBD): "+str(results)
-# 	# return render_template('result.html', results=results)
+# Endpoint to redirect to result page
+@irsystem.route('/result', methods=['GET'])
+def get_result():
+	return render_template('result.html')
+
 
 # Route to select.html with num_users as parameter
 @irsystem.route('/select', methods=['GET'])
@@ -80,19 +75,12 @@ def select():
 	query = request.args.get('num_users')
 	try:
 		num_users = int(query)
-		return render_template('select.html', users=num_users), 200 #, name=project_name, netid=net_id, output_message=output_message, data=data)
+		return render_template('select.html', users=num_users), 200
 	except:
 		return render_template('index.html'), 200
+
 
 # Initial route to index.html
 @irsystem.route('/', methods=['GET'])
 def search():
-	# query = request.args.get('search')
-	# if not query:
-	# 	data = []
-	# 	output_message = ''
-	# else:
-	# 	output_message = "Your search: " + query
-	# 	data = range(5)
-	
-	return render_template('index.html'), 200 #, name=project_name, netid=net_id, output_message=output_message, data=data)
+	return render_template('index.html'), 200
