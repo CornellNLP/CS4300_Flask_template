@@ -21,9 +21,78 @@
             <br><br>
             
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <label for = "name"> What is your name? </label>
+                <input name = "name" placeholder = "Jane Doe">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <br><br>
+            <div class="form-group">
+                <label for = "personality1"> How would your friends describe your personality? </label>
+                <input list="adjectives" name = "personality1">
+                <datalist id="adjectives" class = "hidden">
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist> 
+            </div>
+            <br><br>
+            <div class="form-group">
+                <input list="adjectives" name = "personality2"> 
+                <datalist id="adjectives"> 
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <input list="adjectives" name = "personality3">
+                <datalist id="adjectives">
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for = "personality1"> How would you describe your own personality? </label>
+                <input list="adjectives" name = "personality4">
+                <datalist id="adjectives" class = "hidden">
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist> 
+            </div>
+            <br><br>
+            <div class="form-group">
+                <input list="adjectives" name = "personality5"> 
+                <datalist id="adjectives"> 
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <input list="adjectives" name = "personality6">
+                <datalist id="adjectives">
+                    {% for a in adjectives %}  
+                        <option value="{{ a }}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for = "flavor"> Describe your favorite drink (can be non-alcoholic)! </label>
+                <textarea name = "flavor" rows="10" cols="50" placeholder = "Really cold coca-cola during the summer..."></textarea>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for = "scent"> Describe your favorite scent </label>
+                <textarea name = "scent" rows="10" cols="50" placeholder = "idk an example for this lol"></textarea>
+            </div>
+            <br><br>
+                <!-- <input id="input" type="text" name="search" class="form-control" placeholder="Your Input"> -->
+            <button type="submit" class="btn btn-info"> Find your match! </button>
         </form>
         <form class="form-inline global-search">
         {% if data %}
@@ -33,6 +102,15 @@
                 <p>{{d}}</p>
             {% endfor %}
         {% endif %}
+        </form>
+        <form class="form-inline global-search">
+            {% if personality_only %}
+                <h2>Based only on your personality...</h2>
+                {% for d in personality_only %}  
+                    <br>
+                    <p>{{d}}</p>
+                {% endfor %}
+            {% endif %}
         </form>
     </body>
 
