@@ -11,8 +11,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
 from pathlib import Path
+import itertools
+from textblob import TextBlob
 
-with open("finalData.json", "r") as f:
+with open("finalData2.json", "r") as f:
     data = json.load(f)
 
 #code from a5
@@ -37,19 +39,31 @@ def getwords(sent):
 
 tfidf_vec = build_vectorizer()
 stemmer=PorterStemmer()
-if Path("reviewslist.json").exists():
-  with open("reviewslist.json") as fp:
+if Path("reviewslist2.json").exists():
+  with open("reviewslist2.json") as fp:
     reviews = json.load(fp)
 else:
   reviews = []
+  counter = 0
+  review_idx_for_restaurant = dict()
   for city, city_dic in data.items():
       for restaurant, restaurant_dic in city_dic.items():
+          indices = []
           for review in restaurant_dic['reviews']:
-              all_words = getwords(review['text'])
-              stem_text = [stemmer.stem(t.lower()) for t in all_words]
-              reviews.append(" ".join(stem_text))
-  with open("reviewslist.json", 'w') as fp:
+            text = review['text']
+            text = ''.join(''.join(s)[:2] for _, s in itertools.groupby(text))
+            textb = TextBlob(text)
+            textCorrected = textb.correct() 
+            all_words = getwords(text)
+            stem_text = [stemmer.stem(t.lower()) for t in all_words if bool(re.match(r"^[a-zA-Z]+$", t))]
+            reviews.append(" ".join(stem_text))
+            indices.append(counter)
+            counter += 1
+          review_idx_for_restaurant[restaurant] = indices
+  with open("reviewslist2.json", 'w') as fp:
     json.dump(reviews, fp, indent=2)
+  with open("reviewidx.json", 'w') as fp2:
+    json.dump(review_idx_for_restaurant, fp2, indent=2)
 
 print("after building reviews")
 
@@ -102,5 +116,5 @@ print(len(reviews))
 cos_sim = build_movie_sims_cos(len(reviews), cos_sim, tfidf_mat, norms)
 print("after build cos sim")
 
-np.save('cossim2', cos_sim)
+np.save('cossim3', cos_sim)
 

@@ -86,10 +86,11 @@ for key in json_merge:
     json_to_write[loc] = {} #initialize entry in json for a new city/state
   info_dic = {} #dic representing info/reviews about the restaurant
   reviews = sorted(json_merge[key]["reviews"],key = lambda i: i['useful'],reverse=True)
-  reviews = reviews[:11]
+  reviews2 = reviews[:1]
+  print(len(reviews2))
 
   #attributes = json_merge[key]["attributes"]
-  info_dic["reviews"] = reviews
+  info_dic["reviews"] = reviews2
   #if dataset still too large: sort the reviews based on "useful" rating and only include the top 10 (?)
   #info_dic["attributes"] = attributes
   #adds restaurant info to the json
