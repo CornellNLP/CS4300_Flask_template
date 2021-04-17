@@ -15,6 +15,7 @@ ul li {
 	padding-top: 5px;
 	padding-left: 20px;
 	background-color: lightgrey;
+    overflow: hidden;
 }
 
 ul li:hover {
@@ -41,6 +42,10 @@ ul li:hover {
     width: 100%;
     align-items: space-between;
 }
+
+/* .candidate-column ul li {
+    overflow: hidden;    
+} */
 
 /* #user-block {
 	box-shadow: 1px 2px 10px #888888;
@@ -84,12 +89,4 @@ ul li:hover {
 .plus-button {
 	position: relative;
     cursor: pointer;
-}
-
-#candidate-column {
-    height: 300px;
-}
-
-.candidate {
-    text-overflow: ellipsis;
 }

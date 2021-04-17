@@ -11,10 +11,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/select.css">
 </head>
-<body class="container" id="main-container">
+<body class="container" id="main-container" style="margin: 0;">
 	<div id="list-container" class="container-fluid row">
 		<!-- List title -->
-        <section class="col col-10 col-md-10 col-lg-4">
+        <section class="col col-10 col-md-10 col-lg-5">
             <form action="/" method="get">
                 <input type="submit" class="btn btn-primary" value="Back"></button>
             </form>
@@ -54,8 +54,7 @@
                 </ul>
             </section> -->
         </section>
-        <section class="col" align="right">
-
+        <section class="" align="right">
             <button type="submit" class="btn btn-primary" id="next-button">Next</button>
         </section>
 	</div>
@@ -82,7 +81,7 @@
         }
 
         // index of current user searching
-        let currentUser = -1; 
+        let currentUser = -1;
 
         // Adding list of matching book into candidate column on the left
         $(document).on("input", ".new-input", function() {
@@ -102,7 +101,7 @@
                 $("#candidate-column").html("");
                 let candidates_column = $("<ul>");
                 for (let i = 0; i < booksMap.length; i++) {
-                    candidates_column.append($("<li class=\"candidate\" id=\"booksMap[i][\"work_id\"]\">").html(booksMap[i]["string"]));
+                    candidates_column.append($("<li class=\"candidate\" id=\"" + booksMap[i]['work_id'] + "\">").html(booksMap[i]["string"]));
                 }
                 $("#candidate-column").append(candidates_column);
             });
@@ -110,19 +109,18 @@
 
         // Add selected book into the last user's book list
         $(document).on("click", "#candidate-column li", function() {
-            let newInput = $(this).html();
+            let bookName = $(this).html();
+            let bookWorkID = $(this).attr("id");
 
-            let userBookList = []
+            let userBookList = new Array();
             $(".user-section").eq(currentUser).children("ul").children("li").children(".item").each(function() {
-                userBookList.push($(this).html());
+                userBookList.push($(this).attr("id"));
             });
 
-            console.log(userBookList);
-
-            if (!userBookList.includes(newInput)){
+            if (!userBookList.includes(bookWorkID)){
                 let li_input = $("<li>");
                 li_input.append($("<span class='check-box'>").html("<i class=\"fa fa-close delete-button\"></i>"));
-                li_input.append($("<span class='item'> ").append(newInput));
+                li_input.append($("<span class='item' id=\'" + bookWorkID + "\'> ").append(bookName));
                 var user_section = $(".user-section").eq(currentUser);
                 $(".user-section").eq(currentUser).children("ul").append(li_input);
             } else {
@@ -143,8 +141,7 @@
             var bookList = {"liked_works" : []};
 
             $('.item').each(function() {
-                console.log($(this).html());
-                bookList["liked_works"].push($(this).html()); 
+                bookList["liked_works"].push($(this).attr("id"));
             });
 
             $.ajax({
