@@ -1,4 +1,4 @@
-.DS_Store
+**/.DS_Store
 venv
 *.pyc
 migrations 
@@ -7,3 +7,4 @@ vagrant/site.retry
 vagrant/a4keypair.pem
 .idea/
 *.iml
+*.log
