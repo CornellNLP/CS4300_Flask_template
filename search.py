@@ -2,7 +2,7 @@
 Searches for recipes similar to movie and returns top ten. 
 """
 import sim
- 
+
 """
 Given a query (movie name), a dict of movies to food words, and a list of recipes
 Step 1: generate or access similarity matrix
