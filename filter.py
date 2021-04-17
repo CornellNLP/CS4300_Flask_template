@@ -15,13 +15,14 @@ EXAMPLE:
 "NEWYORKNY: {...},
 "BOSTONMA: {...}}
 
-#initialize new json, this will be one large json where the keys are the 
+#initialize new json, this will be one large json where the keys are the
 #business_ids and the values are another dic of everything else
 #i think this will make it easier to merge the reviews json and the business one
 """
 json_merge = {}
 #filter business file
-ne = ["MA"]
+#ne = ["MA"]
+ne = ["BOSTON"]
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
   #print(current_json)
@@ -31,7 +32,7 @@ for line in business_file:
   categories = current_json["categories"]
   state = current_json["state"]
   city = current_json["city"]
-  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (state.upper() in ne) :
+  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) :
     id_dic = {}
     bus_id = current_json["business_id"]
     name = current_json["name"]
@@ -97,4 +98,3 @@ for key in json_merge:
 print("after merge")
 #put new json/dataset into output file
 output_file.write(json.dumps(json_to_write)+'\n')
-

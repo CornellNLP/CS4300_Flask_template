@@ -27,7 +27,7 @@
 .topcorner{
     position:absolute;
     top:2%;
-    right:2%;
+    right:20%;
 }
 .btn{
     background-color: #4285F4;
@@ -39,6 +39,7 @@
 
 .form_group {
     display: flex;
+    padding-bottom: 10px;
 }
 
 .form_label{
@@ -48,4 +49,9 @@
 
 .checkboxes label{
     text-align: left;
+}
+
+.checkbox_label{
+    width: 300px;
+    text-align: right;
 }
