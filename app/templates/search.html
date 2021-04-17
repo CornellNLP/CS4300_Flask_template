@@ -2,6 +2,22 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <link rel="stylesheet" href="/static/map.css">
+
+        <!--Leaflet library for heatmap-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+        <!--D3 library-->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </head>
     <body>
         <div class="topcorner">
@@ -25,6 +41,9 @@
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
+
+        <div id="mapDiv"></div>
+
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
@@ -35,5 +54,28 @@
         {% endif %}
         </form>
     </body>
+
+    <script>
+        // create map
+        var map = L.map('mapDiv').setView([40.738, -73.98], 13);
+
+        const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                    subdomains: 'abcd'
+                }).addTo(map);
+
+        // load data asynchronously
+        const requestData = async _ => {
+
+            // shape file
+            var shapeData = await d3.json('/static/modzcta.json');
+
+            // add shape file to map
+            L.geoJson(shapeData).addTo(map);
+        }
+
+        requestData();
+        
+    </script>
 
 </html>
