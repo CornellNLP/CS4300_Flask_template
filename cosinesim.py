@@ -60,7 +60,7 @@ print(tfidf_mat.shape)
 print("after build tf idf matrix")
 
 #code from a5
-def build_movie_sims_cos(num_reviews, cos_sim, input_doc_mat):
+def build_movie_sims_cos(num_reviews, cos_sim, input_doc_mat, norms):
   """Returns a matrix of size num_movies x num_movies where for (i,j), entry [i,j]
       should be the cosine similarity between the movie with index i and the movie with index j
       
@@ -74,20 +74,33 @@ def build_movie_sims_cos(num_reviews, cos_sim, input_doc_mat):
   Returns: Numpy Array 
   """
   #cos_sim = np.zeros((num_movies, num_movies))
+  print("here1")
+  #cos_sim = np.dot(input_doc_mat, np.transpose(input_doc_mat))
+  #denom = np.dot(norms, norms)
+  #return cos_sim/denom
   for i in range(num_reviews):
-      norm_i = np.linalg.norm(input_doc_mat[i])
-      for j in range(num_reviews):
-        cos_sim[i][j] = np.dot(input_doc_mat[i], input_doc_mat[j])/(norm_i* np.linalg.norm(input_doc_mat[j]))
+    norm_i = norms[i]
+    #norm_i = np.linalg.norm(input_doc_mat[i])
+    for j in range(num_reviews):
+      norm_j = norms[j]
+      #cos_sim = np.dot(input_doc_mat, input_doc_mat.transpose)
+      cos_sim[i][j] = np.dot(input_doc_mat[i], input_doc_mat[j])/(norm_i* norm_j)#np.linalg.norm(input_doc_mat[j]))
   return cos_sim
 
 #sims_cos = build_movie_sims_cos(len(reviews), tfidf_mat)
 
-print("before build initial")
+print("before build norms")
 
-#norms = np.linalg.norm(tfidf_mat, axis=1)
+norms = np.linalg.norm(tfidf_mat, axis=1)
+
+print("after build norms")
 cos_sim = np.zeros((len(reviews), len(reviews)), dtype=np.float16)
+print("after create zeros")
 
-cos_sim = build_movie_sims_cos(len(reviews), cos_sim, tfidf_mat)
+print(len(reviews))
 
-np.savetxt('cossim.csv', cos_sim, delimiter = ',')
+cos_sim = build_movie_sims_cos(len(reviews), cos_sim, tfidf_mat, norms)
+print("after build cos sim")
+
+np.save('cossim2', cos_sim)
 
