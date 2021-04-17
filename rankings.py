@@ -49,6 +49,7 @@ def get_ranked_restaurants(in_restaurant, sim_matrix):
 def main():
   #get the restaurant name
   top_restaurants = get_ranked_restaurants("Boloco", cos_sim_matrix)
+  print(len(top_restaurants))
   for restaurant in top_restaurants[:3]:
     name = restaurant[0]
     print("RESTAURANT: ", name)
@@ -63,5 +64,5 @@ def get_top(restaurant):
 
 # def get_restaurant_to_index():
 #   return restaurant_to_index
-# if __name__ == '__main__':
-#   main()
+if __name__ == '__main__':
+  main()

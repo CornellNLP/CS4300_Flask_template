@@ -11,8 +11,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
 from pathlib import Path
-import itertools
-from textblob import TextBlob
 
 with open("finalData2.json", "r") as f:
     data = json.load(f)
@@ -51,9 +49,9 @@ else:
           indices = []
           for review in restaurant_dic['reviews']:
             text = review['text']
-            text = ''.join(''.join(s)[:2] for _, s in itertools.groupby(text))
-            textb = TextBlob(text)
-            textCorrected = textb.correct() 
+            # text = ''.join(''.join(s)[:2] for _, s in itertools.groupby(text))
+            # textb = TextBlob(text)
+            # textCorrected = textb.correct() 
             all_words = getwords(text)
             stem_text = [stemmer.stem(t.lower()) for t in all_words if bool(re.match(r"^[a-zA-Z]+$", t))]
             reviews.append(" ".join(stem_text))
@@ -62,7 +60,7 @@ else:
           review_idx_for_restaurant[restaurant] = indices
   with open("reviewslist2.json", 'w') as fp:
     json.dump(reviews, fp, indent=2)
-  with open("reviewidx.json", 'w') as fp2:
+  with open("reviewidx2.json", 'w') as fp2:
     json.dump(review_idx_for_restaurant, fp2, indent=2)
 
 print("after building reviews")
@@ -116,5 +114,5 @@ print(len(reviews))
 cos_sim = build_movie_sims_cos(len(reviews), cos_sim, tfidf_mat, norms)
 print("after build cos sim")
 
-np.save('cossim3', cos_sim)
+np.save('cossim4', cos_sim)
 

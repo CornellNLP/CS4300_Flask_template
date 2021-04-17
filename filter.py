@@ -23,16 +23,19 @@ json_merge = {}
 #filter business file
 #ne = ["MA"]
 ne = ["BOSTON"]
+star_range = [3.0,3.5,4.0,4.5,5.0]
 for line in business_file:
   current_json = json.loads(line) #turns each individual json line into a dic
   #print(current_json)
   #categories = current_json["categories"]
   num_reviews = current_json["review_count"]
+  star = current_json["stars"]
   #check it's a restaurant and has >= 5 reviews
   categories = current_json["categories"]
   state = current_json["state"]
   city = current_json["city"]
-  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) :
+
+  if (not categories is None) and ("Restaurants" in categories) and (num_reviews >= 5) and (city.upper() in ne) and (star in star_range) :
     id_dic = {}
     bus_id = current_json["business_id"]
     name = current_json["name"]
@@ -44,6 +47,16 @@ for line in business_file:
     id_dic["city"] = city
     id_dic["state"] = state
     #id_dic["attributes"] = attributes
+    attribute = current_json["attributes"]
+    if attribute is None:
+      pricerange = 3
+    else:
+      if "RestaurantsPriceRange2" not in attribute:
+        pricerange = 3
+      else:
+          pricerange = attribute["RestaurantsPriceRange2"]
+    id_dic["price"] = pricerange
+    id_dic["categories"] = categories
     id_dic["reviews"] = [] #initialize reviews as an empty list--these will be put in later
     json_merge[bus_id] = id_dic #add to the merge json
 
@@ -86,7 +99,7 @@ for key in json_merge:
     json_to_write[loc] = {} #initialize entry in json for a new city/state
   info_dic = {} #dic representing info/reviews about the restaurant
   reviews = sorted(json_merge[key]["reviews"],key = lambda i: i['useful'],reverse=True)
-  reviews2 = reviews[:1]
+  reviews2 = reviews[:2]
   print(len(reviews2))
 
   #attributes = json_merge[key]["attributes"]
