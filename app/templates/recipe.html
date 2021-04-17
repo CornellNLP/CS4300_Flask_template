@@ -1,0 +1,32 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1>Title</h1>
+    <p id="description">Recipe Description</p>
+    <p id="author">Author Name</p>
+
+    <!-- image -->
+    <div id="ingredients">
+      <h3>Ingredients</h3>
+      <ul>
+      {% for ingredient in ingredients %}
+        <li>{{ingredient}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+
+    <div id="steps">
+      <h3>Steps</h3>
+      <ol>
+      {% for step in steps %}
+        <li>{{step}}</li>
+      {% endfor %}
+      </ol>
+    </div>
+
+
+
+  </body>
+</html>
