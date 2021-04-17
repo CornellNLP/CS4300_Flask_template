@@ -12,7 +12,7 @@ from nltk.stem import PorterStemmer
 import re
 from pathlib import Path
 
-with open("finalData.json", "r") as f:
+with open("finalData2.json", "r") as f:
     data = json.load(f)
 
 #code from a5
@@ -37,8 +37,8 @@ def getwords(sent):
 
 tfidf_vec = build_vectorizer()
 stemmer=PorterStemmer()
-if Path("reviewslist.json").exists():
-  with open("reviewslist.json") as fp:
+if Path("reviewslist2.json").exists():
+  with open("reviewslist2.json") as fp:
     reviews = json.load(fp)
 else:
   reviews = []
@@ -48,7 +48,7 @@ else:
               all_words = getwords(review['text'])
               stem_text = [stemmer.stem(t.lower()) for t in all_words]
               reviews.append(" ".join(stem_text))
-  with open("reviewslist.json", 'w') as fp:
+  with open("reviewslist2.json", 'w') as fp:
     json.dump(reviews, fp, indent=2)
 
 print("after building reviews")
@@ -102,5 +102,5 @@ print(len(reviews))
 cos_sim = build_movie_sims_cos(len(reviews), cos_sim, tfidf_mat, norms)
 print("after build cos sim")
 
-np.save('cossim2', cos_sim)
+np.save('cossim3', cos_sim)
 
