@@ -6,10 +6,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
   <link rel="stylesheet" href="style.css" />
   <title>Hello, world!</title>
 </head>
@@ -21,7 +17,13 @@
       <div class="row">
         <div class="col-md-7 px-3">
           <div class="card-block px-6">
-            <h4 class="card-title">Recipe title</h4>
+            <h4>Recipe title</h4>
+            <div class="py-1">
+              <div>
+                <span class="get-rating">98</span><span class="font-weight-bold">/100</span>
+              </div>
+            </div>
+
             <p class="card-text">
               Insert recipe description here
             </p>
@@ -31,16 +33,26 @@
             </a>
           </div>
         </div>
-        <!-- Carousel start -->
         <div class="col-md-5">
-          <img
-            src="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/5:7/w_2445,h_3423,c_limit/pantry-pasta.jpg"
-            class="squareimg" />
+          <div class="squareimg-container">
+            <img
+              src="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/5:7/w_2445,h_3423,c_limit/pantry-pasta.jpg"
+              class="squareimg" />
+          </div>
         </div>
-        <!-- End of carousel -->
       </div>
       <!-- End of card -->
     </div>
+  </div>
+  <!-- Carousel start -->
+  <div class="col-md-5">
+    <img src="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/5:7/w_2445,h_3423,c_limit/pantry-pasta.jpg"
+      class="squareimg" />
+  </div>
+  <!-- End of carousel -->
+  </div>
+  <!-- End of card -->
+  </div>
   </div>
 
   <!-- Optional JavaScript -->

@@ -16,7 +16,6 @@ OVERALL OUTPUT:
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 import pandas as pd
-
 # tokenize recipe titles
 # output: [{'toks': ['a', 'b']}, {'toks': ['a', 'b']}]
 # We have attached a tokenize method that you should use below:

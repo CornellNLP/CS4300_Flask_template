@@ -2,11 +2,6 @@ body {
     background-color: #eee;
 }
 
-.title {
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-
 .card-block {
     font-size: 1em;
     position: relative;
@@ -26,10 +21,26 @@ body {
     margin-top: 20px;
 }
 
+.squareimg-container {
+    position: relative;
+}
+
+.squareimg-container::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
 .squareimg {
-    object-fit: cover;
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.get-rating {
+    font-size: 3em;
+    font-weight: 700;
 }
 
 .btn {
