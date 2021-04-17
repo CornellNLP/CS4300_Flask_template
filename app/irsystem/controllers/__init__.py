@@ -3,25 +3,25 @@ from flask import request, render_template, \
 	flash, g, session, redirect, url_for, jsonify, abort
 
 # For decorators around routes
-from functools import wraps 
+from functools import wraps
 
-# Import for pass / encryption 
-from werkzeug import check_password_hash, generate_password_hash 
+# Import for pass / encryption
+from werkzeug import check_password_hash, generate_password_hash
 
 # Import the db object from main app module
-from app import db 
+from app import db
 
-# Marshmallow 
+# Marshmallow
 from marshmallow import ValidationError
 
-# Import socketio for socket creation in this module 
+# Import socketio for socket creation in this module
 from app import socketio
 
-# Import module models 
+# Import module models
 # from app.irsystem import search
 
-# IMPORT THE BLUEPRINT APP OBJECT 
-from app.irsystem import irsystem 
+# IMPORT THE BLUEPRINT APP OBJECT
+from app.irsystem import irsystem
 
 # Import module models
 from app.accounts.models.user import *
