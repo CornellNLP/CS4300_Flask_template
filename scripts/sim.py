@@ -92,7 +92,10 @@ def get_cos_sim(recipe_mat, movie_mat):
             d = recipe_mat[j]
             numerator = np.dot(q, d)
             denominator = np.dot(np.linalg.norm(q), np.linalg.norm(d))
-            res[i, j] = numerator/denominator
+            if denominator > 1e-10:
+                res[i, j] = numerator/denominator
+            else:
+                res[i,j] = 0
     return res
 
 
