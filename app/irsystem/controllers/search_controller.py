@@ -1,50 +1,51 @@
 from . import *  
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-import sim
+import scripts.sim 
+from scripts.search import run_search
 project_name = "Screen to Table"
 net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(klw242), Elizabeth Healy(eah255)"
 
+#toy dataset
+recipe_list = ["Double Cheeseburger", "Cheeseburger Sliders", "Pop-Tarts",
+								"Blueberry Pancakes", "Shrimp and Catfish Gumbo", "Cajun Shrimp", "Shrimp Burgers"]
+movie_list = {"Pulp Fiction": [
+				"burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
+
+@irsystem.route('/')
+def home():
+	query = request.args.get('search')
+	if not query:
+		data = []
+		output_message = ''
+		return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+	else:
+		output_message = "Your search: " + query
+		data = run_search(recipe_list, movie_list, query)
+		return redirect(url_for('irsystem.get_results', data=data))
+
 @irsystem.route('/', methods=['GET'])
 def search():
-
-	recipe_list = ["Double Cheeseburger", "Cheeseburger Sliders", "Pop-Tarts",
-										"Blueberry Pancakes", "Shrimp and Catfish Gumbo", "Cajun Shrimp", "Shrimp Burgers"]
-	movie_list = {"Pulp Fiction": [
-					"burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
-	recipe_mat, vectorizer = sim.build_vectorizer(recipe_list)
-	movie_mat = sim.get_movie_tfidfs(movie_list, vectorizer)
-	sim_mat = sim.get_cos_sim(recipe_mat, movie_mat)
-
-	def movie_to_index_maker(m_dict):
-			m_to_i = {}
-			m_list = [m for m in m_dict.keys()]
-			for i in range(len(m_list)):
-					m_to_i[m_list[i]] = i
-			return m_to_i
-
-	movie_to_index = movie_to_index_maker(movie_list)
-
-
-	def mat_search(query, sim_mat, movie_to_index, recipe_list):
-			if query not in movie_to_index:
-					return "Sorry! Movie not found."
-			query_index = movie_to_index[query]
-			recipe_scores = sim_mat[query_index]
-			recipe_tuples = []
-			for i in range(len(recipe_list)):
-					recipe_tuples.append((recipe_scores[i], recipe_list[i]))
-			results = [(r[1], r[0]) for r in sorted(recipe_tuples, reverse=True)]
-			return results[:10]
-
 	query = request.args.get('search')
 	if not query:
 		data = []
 		output_message = ''
 	else:
 		output_message = "Your search: " + query
-		data = mat_search(query, sim_mat, movie_to_index, recipe_list)
-	return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+		data = run_search(recipe_list, movie_list, query)
+		# data = mat_search(query, sim_mat, movie_to_index, recipe_list)
+	# return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+	return redirect(url_for('irsystem.get_results', data=data))
 
+@irsystem.route('/results/<data>')
+def get_results(data):
+	return render_template('results.html')
+
+@irsystem.route('/recipe/<title>')
+def get_recipe(title):
+	title = title
+	ingredients = ["apples", "oranges"]
+	steps = ["cook", "clean"]
+	return render_template('recipe.html', ingredients=ingredients, steps=steps)
 
 
