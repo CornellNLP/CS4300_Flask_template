@@ -16,30 +16,31 @@ def movie_to_index_maker(m_dict):
     m_to_i = {}
     m_list = [m for m in m_dict.keys()]
     for i in range(len(m_list)):
-        m_to_i[m_list[i]] = i
+        m_to_i[m_list[i]] = i + 1
     return m_to_i
 
 
 def mat_search(query, sim_mat, movie_to_index, recipe_list):
+    print(sim_mat)
     if query not in movie_to_index:
         return "Sorry! Movie not found."
     query_index = movie_to_index[query]
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(len(recipe_list)):
-        recipe_tuples.append((recipe_scores[i], recipe_list[i]))
+        recipe_tuples.append((recipe_scores[i], recipe_list[i]['Recipe Name']))
     results = [(r[1], r[0]) for r in sorted(recipe_tuples, reverse=True)]
     return results[:10]
 
 
-def run_search(sim_mat, movie_list, query):
+def run_search(sim_mat, movie_list, query, recipes):
     # recipe_mat, vectorizer = sim.build_vectorizer(recipe_list)
     # movie_mat = sim.get_movie_tfidfs(movie_list, vectorizer)
     # sim_mat = sim.get_cos_sim(recipe_mat, movie_mat)
 
     movie_to_index = movie_to_index_maker(movie_list)
 
-    res = mat_search(query, sim_mat, movie_to_index, recipe_list)
+    res = mat_search(query, sim_mat, movie_to_index, recipes)
 
     print(res)
     return res

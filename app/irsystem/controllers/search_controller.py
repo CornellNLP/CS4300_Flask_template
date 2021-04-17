@@ -14,12 +14,14 @@ net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(k
 # movie_list = {"Pulp Fiction": [
 # 				"burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
 
-with open('movie_food_words_from_wordnets.json') as f:
-    movie_list = json.loads(f)
-with open('data/clean_recipes.csv') as f:
+with open('./data/movie_food_words_from_wordnets.json') as f:
+    movie_list = json.load(f)
+with open('./data/recipe_data/clean_recipes.csv') as f:
     recipes = pd.DataFrame(f)
-
-sim_mat = sim.get_cos_sim
+with open('./data/movie_recipe_mat.csv') as f:
+    movie_recipe_mat = pd.DataFrame(f)
+# print(recipes)
+print(movie_recipe_mat)
 
 
 @irsystem.route('/', methods=['GET'])
@@ -31,7 +33,7 @@ def home():
         return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
     else:
         output_message = "Your search: " + query
-        data = run_search(sim_mat, movie_list, query)
+        data = run_search(movie_recipe_mat, movie_list, query, recipes)
         return redirect(url_for('irsystem.get_results', data=data))
 
 
