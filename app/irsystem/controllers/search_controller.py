@@ -3,6 +3,7 @@ from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import json
 import pandas as pd
+import csv
 import scripts.sim as sim
 from scripts.search import run_search
 project_name = "Screen to Table"
@@ -17,11 +18,19 @@ net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(k
 with open('./data/movie_food_words_from_wordnets.json') as f:
     movie_list = json.load(f)
 with open('./data/recipe_data/clean_recipes.csv') as f:
-    recipes = pd.DataFrame(f)
+    csvreader = csv.DictReader(f, delimiter=';')
+    recipes = []
+    for row in csvreader:
+        recipes.append(row)
 with open('./data/movie_recipe_mat.csv') as f:
-    movie_recipe_mat = pd.DataFrame(f)
+    csvreader = csv.reader(f, delimiter=',')
+    movie_recipe_mat = []
+    for row in csvreader:
+        movie_recipe_mat.append(row)
+# recipes = pd.read_csv('./data/recipe_data/clean_recipes.csv', sep=';')
+# movie_recipe_mat = pd.read_csv('./data/movie_recipe_mat.csv')
 # print(recipes)
-print(movie_recipe_mat)
+# print(movie_recipe_mat)
 
 
 @irsystem.route('/', methods=['GET'])
@@ -33,7 +42,8 @@ def home():
         return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
     else:
         output_message = "Your search: " + query
-        data = run_search(movie_recipe_mat, movie_list, query, recipes)
+        data = json.dumps(run_search(movie_recipe_mat,
+                          movie_list, query, recipes))
         return redirect(url_for('irsystem.get_results', data=data))
 
 
@@ -53,12 +63,25 @@ def home():
 
 @irsystem.route('/results/<data>')
 def get_results(data):
-    return render_template('results.html')
+    res = []
+    print(data)
+    data = json.loads(data)
+    for d in data:
+        idx = int(d[0])
+        r = recipes[idx]
+        print(r)
+        res.append((idx, r))
+    return render_template('results.html', res=res)
 
 
-@irsystem.route('/recipe/<title>')
-def get_recipe(title):
-    title = title
-    ingredients = ["apples", "oranges"]
-    steps = ["cook", "clean"]
-    return render_template('recipe.html', ingredients=ingredients, steps=steps)
+@irsystem.route('/recipe/<idx>')
+def get_recipe(idx):
+    idx = int(idx)
+    recipe = recipes[idx]
+    title = recipe['Recipe Name']
+    ingredients = recipe['Ingredients']
+    steps = recipe['Directions']
+    # title = 'Recipe Name'
+    # ingredients = 'Ingredients'
+    # steps = 'Directions'
+    return render_template('recipe.html', title=title, ingredients=ingredients, steps=steps)

@@ -1,7 +1,9 @@
 """
 Searches for recipes similar to movie and returns top ten. 
 """
-import scripts.sim as sim
+import scripts.sim
+import json
+import pandas as pd
 
 """
 Given a query (movie name), a dict of movies to food words, and a list of recipes
@@ -21,15 +23,17 @@ def movie_to_index_maker(m_dict):
 
 
 def mat_search(query, sim_mat, movie_to_index, recipe_list):
-    print(sim_mat)
+
     if query not in movie_to_index:
         return "Sorry! Movie not found."
     query_index = movie_to_index[query]
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(len(recipe_list)):
-        recipe_tuples.append((recipe_scores[i], recipe_list[i]['Recipe Name']))
-    results = [(r[1], r[0]) for r in sorted(recipe_tuples, reverse=True)]
+        # print(recipe_list[i])
+        recipe_tuples.append((i, recipe_scores[i]))
+    results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
+    # results = [(r[1], r[0]) for r in sorted(recipe_tuples, reverse=True)]
     return results[:10]
 
 
@@ -42,15 +46,20 @@ def run_search(sim_mat, movie_list, query, recipes):
 
     res = mat_search(query, sim_mat, movie_to_index, recipes)
 
-    print(res)
     return res
 
 
 if __name__ == "__main__":
-    recipe_list = ["Double Cheeseburger", "Cheeseburger Sliders", "Pop-Tarts",
-                   "Blueberry Pancakes", "Shrimp and Catfish Gumbo", "Cajun Shrimp", "Shrimp Burgers"]
-    movie_list = {"Pulp Fiction": [
-        "burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
+    # recipe_list = ["Double Cheeseburger", "Cheeseburger Sliders", "Pop-Tarts",
+    #                "Blueberry Pancakes", "Shrimp and Catfish Gumbo", "Cajun Shrimp", "Shrimp Burgers"]
+    # movie_list = {"Pulp Fiction": [
+    #     "burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
     query = "Forrest Gump"
 
-    run_search(recipe_list, movie_list, query)
+    with open('./data/movie_food_words_from_wordnets.json') as f:
+        movie_list = json.load(f)
+
+    recipes = pd.read_csv('./data/recipe_data/clean_recipes.csv')
+    movie_recipe_mat = pd.read_csv('./data/movie_recipe_mat.csv')
+
+    run_search(movie_recipe_mat, movie_list, query, recipes)

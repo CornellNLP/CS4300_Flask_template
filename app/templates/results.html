@@ -13,11 +13,12 @@
 <body>
   <div class="container py-3">
     <!-- Card Start -->
+    {% for (idx, recipe) in res %}
     <div class="card">
       <div class="row">
         <div class="col-md-7 px-3">
           <div class="card-block px-6">
-            <h4>Recipe title</h4>
+            <h4>{{recipe['Recipe Name']}}</h4>
             <div class="py-1">
               <div>
                 <span class="get-rating">98</span><span class="font-weight-bold">/100</span>
@@ -28,7 +29,7 @@
               Insert recipe description here
             </p>
             <br />
-            <a href="#" class="mt-auto btn btn-primary">
+            <a href="{{url_for('irsystem.get_recipe', idx=idx)}}" class="mt-auto btn btn-primary">
               Recipe Link
             </a>
           </div>
@@ -42,6 +43,7 @@
         </div>
       </div>
       <!-- End of card -->
+      {% endfor %}
     </div>
   </div>
   <!-- Carousel start -->
