@@ -57,5 +57,11 @@ def main():
         #print("///////")
     print("")
 
-if __name__ == '__main__':
-  main()
+def get_top(restaurant):
+  #get the restaurant name
+  return get_ranked_restaurants(restaurant, cos_sim_matrix)
+
+# def get_restaurant_to_index():
+#   return restaurant_to_index
+# if __name__ == '__main__':
+#   main()

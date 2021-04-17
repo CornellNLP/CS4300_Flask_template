@@ -41,17 +41,15 @@
                 <input type="text" name="new_city" id="new_city" required>
             </div> -->
 
-            <button type="submit">Find your new favorite restaurants in Boston!</button>
+            <button type="submit">Find your new favorite restaurant in Boston!</button>
         </div>
     </form>
     <form class="form-inline global-search">
-        {% if data %}
         <h1>{{output_message}}</h1>
         {% for d in data %}
         <br>
         <p>{{d}}</p>
         {% endfor %}
-        {% endif %}
     </form>
 </body>
 
