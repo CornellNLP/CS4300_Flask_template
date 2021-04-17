@@ -25,7 +25,7 @@ def movie_to_index_maker(m_dict):
 def mat_search(query, sim_mat, movie_to_index, recipe_list):
 
     if query not in movie_to_index:
-        return "Sorry! Movie not found."
+        return None
     query_index = movie_to_index[query]
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []

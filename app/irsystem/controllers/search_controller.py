@@ -42,9 +42,15 @@ def home():
         return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
     else:
         output_message = "Your search: " + query
-        data = json.dumps(run_search(movie_recipe_mat,
-                          movie_list, query, recipes))
-        return redirect(url_for('irsystem.get_results', data=data))
+        res = run_search(movie_recipe_mat, movie_list, query, recipes)
+        print(res)
+        print(type(res))
+        if res == None:
+            output_message = res
+            return render_template('search.html', name=project_name, netid=net_id, output_message=output_message)
+        else:
+            data = json.dumps(res)
+            return redirect(url_for('irsystem.get_results', data=data))
 
 
 # @irsystem.route('/', methods=['GET'])
@@ -69,7 +75,6 @@ def get_results(data):
     for d in data:
         idx = int(d[0])
         r = recipes[idx]
-        print(r)
         res.append((idx, r))
     return render_template('results.html', res=res)
 
