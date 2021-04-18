@@ -43,10 +43,10 @@
         </form>
 
         <div class="row" id="plotsDiv">
-            <div class="col-lg-7 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <div id="mapDiv"></div>
             </div>
-            <div class="col-lg-5 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <div id="casePlotDiv">
                     <h4>Predicted Trend of COVID-19 Cases in the NYC</h4>
                     <img src="/static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
@@ -114,7 +114,7 @@
 
     <script>
         // create map
-        var map = L.map('mapDiv').setView([40.745, -73.98], 12);
+        var map = L.map('mapDiv').setView([40.748, -73.98], 12);
 
         const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
