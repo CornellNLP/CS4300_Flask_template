@@ -28,9 +28,48 @@
         <form class="form-inline global-search">
         {% if data %}
             <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
+
+            <table>
+                <thead>
+                  <tr>
+                    <th>Result</th>
+                    <th>Address</th>
+                    <th>Distance</th>
+                    <th>Google Rating</th>
+                    <th>Positive Cases</th>
+                    <th>Percentage of Vaccined Population</th>
+                    <th>Recommendation Score</th>
+                    <!-- <th>Risk Level</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+            {% for d in data.name.keys() %}  
+            <tr>
+                <td>
+                    {{data.name[d]}}
+                </td>
+                <td>
+                    {{data.address[d]}}
+                </td>
+                <td>
+                    {{data.distance[d]}} m
+                </td>
+                <td>
+                    {{data.rating[d]}}
+                </td>
+                <td>
+                    {{'%0.2f'| format(100*data.percent_positive[d]|float)}}%
+                </td>
+                <td>
+                    {{'%0.2f'| format(100*data.full_vax[d]|float)}}%
+                </td>
+                <td>
+                    {{'%0.1f'| format(data.score[d]|float)}}
+                  </td>
+                <!-- <td>
+                  {{d.risk}}
+                </td> -->
+            </tr>
             {% endfor %}
         {% endif %}
         </form>
