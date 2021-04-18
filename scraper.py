@@ -93,17 +93,35 @@ for num in range(1,  203805, 50):
 
         if title.lower() in check_shows:
             print(title)
-            genre = tag_contents(str(show.find_all('span', class_ = "genre")[0]), 'span').strip()
+            gen = show.find_all('span', class_ = "genre")
+            if len(gen) > 0:
+                genre = tag_contents(str(gen[0]), 'span').strip()
+            else:
+                genre = "N/A"
 
             run = show.find_all('span', class_ = "runtime")
             if len(run)> 0:
                 runtime = tag_contents(str(run[0]), 'span').strip()
+            else:
+                runtime = "N/A"
             
-            age = tag_contents(str(show.find_all('span', class_ = "certificate")[0]), 'span').strip()
+            temp_age = show.find_all('span', class_ = "certificate")
+            if len(temp_age)> 0:
+                age = tag_contents(str(temp_age[0]), 'span').strip()
+            else:
+                age = "N/A"
 
-            rating = tag_contents(str(show.find_all('strong')[0]), 'strong').strip()
+            rate = show.find_all('strong')
+            if len(rate)>0:
+                rating = tag_contents(str(rate[0]), 'strong').strip()
+            else:
+                rating = "N/A"
 
-            years = tag_contents(str(show.find_all('span', class_ = "lister-item-year text-muted unbold")[0]), 'span').strip().replace("‚Äì", ",")
+            y = show.find_all('span', class_ = "lister-item-year text-muted unbold")
+            if len(y) > 0:
+                years = tag_contents(str(y[0]), 'span').strip().replace("‚Äì", "-")
+            else:
+                years = "N/A"
 
 
             link = link[link_si+1: link_ei]
