@@ -22,9 +22,29 @@
             if(data) {
                 console.log("Results found: ");
                 console.log(data);
-                var book_data = $("<div class=\"book-data\">");
-                book_data.append(data);
-                $("#bookDisplay").append(book_data.clone());
+                var data_string = JSON.parse(data);
+                var book_data = JSON.parse(data_string);
+                console.log(book_data);
+                var all_books = $("<div class=\"all-books\">");
+                for(var i = 0; i < 10; i++) {
+                    var book = book_data[i];
+                    console.log(book);
+                    var book_display = $("<div class=\"book\">");
+                    var img = $("<img src=\"" + book.image_url + "\">");
+                    book_display.append(img.clone());
+                    var title = $("<h2 class=\"book-title\">");
+                    title.append(book.title);
+                    book_display.append(title.clone());
+                    var author = $("<h3 class=\"book-author\">");
+                    author.append(book.author ? book.author[0] : "Author Not Found");
+                    book_display.append(author.clone());
+                    var summary = $("<p class=\"book-summary\">");
+                    summary.append(book.description.slice(0,150) + "...");
+                    book_display.append(summary.clone());
+
+                    all_books.append(book_display.clone());
+                }
+                $("#bookDisplay").append(all_books.clone());
             }
             else {
                 console.log("No results found!");

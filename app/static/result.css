@@ -1,0 +1,23 @@
+.all-books {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 250px;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-top: 15px;
+    background-color: antiquewhite;
+    text-align: center;
+
+}
+
+.book-title {
+    font-size: larger;
+}
+
+.book-author {
+    font-size: large;
+}
