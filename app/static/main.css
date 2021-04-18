@@ -81,9 +81,9 @@ color: #4285F4;
     padding: 1.5%;
   }
 
-  .container {
-    /* padding: 2px 16px; */
-  }
+  /* .container {
+    padding: 2px 16px;
+  } */
   
 #search-result-container table {
     justify-content: center;
@@ -113,6 +113,8 @@ color: #4285F4;
 #casePlot{
     max-width: 90%;
     max-height: 90%;
+}
+
 .output {
     text-align: center;
     margin-bottom: 2%;
