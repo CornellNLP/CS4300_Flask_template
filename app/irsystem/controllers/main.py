@@ -24,10 +24,13 @@ print()
 
 quit = False
 while not quit:
-    print("What is your name?")
+    print("What is your name? \"quit to exit\"")
     name = input("> ")
+    if name == "quit":
+        quit = True
+        break
     # personality=input("How would your friends describe your personality? ")
-    personality = generate_personality_vec()
+    personality = generate_personality_vec(legend)
     print("Describe your favorite drink (can be non-alcoholic!).")
     flavor = input("> ")
     print("Describe your favorite scent.")
