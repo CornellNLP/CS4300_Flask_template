@@ -124,16 +124,22 @@ def mgs_cossim_list(app):
     return cossim 
 
 
-    def mgs_get_rankings(score_list):
-        return sorted(score_list, key=lambda x: x[1], reverse=True)
+def mgs_get_rankings(score_list):
+    return sorted(score_list, key=lambda x: x[1], reverse=True)
 
 
-    print('jaccard')
-    output_jaccard = steam_get_rankings(steam_jaccard_list(steam_df['appid'][0]))
-    for i in range(50):
-        print(output_jaccard[i])
 
-    print('cossim')
-    output_cossim = steam_cossim_list(1069460)
-    for i in range(50):
-        print(output_cossim[i])
+test_app = mgs['App'][0]
+
+print('jaccard')
+jaccard_scores = mgs_jaccard_list(test_app)
+output_jaccard = mgs_get_rankings(jaccard_scores)
+for i in range(50):
+    print(output_jaccard[i])
+
+print('cossim')
+output_cossim = steam_cossim_list(test_app)
+for i in range(50):
+    print(output_cossim[i])
+
+    
