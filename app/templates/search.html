@@ -14,9 +14,27 @@
     <form>
         <div>
             <div class="form_group">
-                <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
+                <label class="form_label" for="fav_name">Name of favorite restaurant (required):</label>
                 <input type="text" name="fav_name" id="fav_name" required>
             </div>
+            <div class="form_group">
+                <label for="max_price">Maximum price point:</label>
+                <select name="max_price" id="max_price">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="cuisine">Category:</label>
+                <select name="cuisine" id="cuisine">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                </select>
+            </div>
+
+
             <!-- <div class="form_group">
                 <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
                 <input type="text" name="fav_name" id="fav_name" required>

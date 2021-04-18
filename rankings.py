@@ -58,9 +58,25 @@ def main():
         #print("///////")
     print("")
 
-def get_top(restaurant):
-  #get the restaurant name
-  return get_ranked_restaurants(restaurant, cos_sim_matrix)
+def get_top(restaurant, max_price, n):
+  recs = []
+  ranked = get_ranked_restaurants(restaurant, cos_sim_matrix)
+  for restaurant_info in ranked: # restaurant_info = (name, sim score)
+    if len(recs) == n:
+      break
+    name = restaurant_info[0] # name of restaurant
+    price = int(data["BOSTON"][name]["price"])
+    if (max_price == "low") and (price <= 1):
+      recs.append(name)
+    if (max_price == "medium") and (price <= 3):
+      recs.append(name)
+    if (max_price == "high") and (price <= 5):
+      recs.append(name)
+  return recs
+
+# def get_top(restaurant):
+#   #get the restaurant name
+#   return get_ranked_restaurants(restaurant, cos_sim_matrix)
 
 # def get_restaurant_to_index():
 #   return restaurant_to_index

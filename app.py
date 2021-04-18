@@ -1,6 +1,6 @@
 from app import app, socketio
 from flask import *
-
+import string
 from rankings import get_top, restaurant_to_index
 
 app = Flask(__name__, template_folder='app/templates')
@@ -12,17 +12,19 @@ def query():
   output_message = ''
 
   restaurant_query = request.args.get('fav_name')
+  price_query = request.args.get('max_price')
   # if there is an input
   if restaurant_query:
+    restaurant_query = string.capwords(restaurant_query)
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
-      top_restaurants = get_top(restaurant_query)
-      top_names = []
-      for restaurant in top_restaurants[:3]:
-        name = restaurant[0]
-        top_names.append(name)
+      top_restaurants = get_top(restaurant_query, price_query, 3)
+      # top_names = []
+      # for restaurant in top_restaurants[:3]:
+      #   name = restaurant[0]
+      #   top_names.append(name)
       output_message = "Your search: " + restaurant_query
-      data = top_names
+      data = top_restaurants
     # restaurant_query is not in the data
     else:
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
