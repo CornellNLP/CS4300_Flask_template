@@ -44,15 +44,48 @@
 
         <div id="mapDiv"></div>
 
-        <form class="form-inline global-search">
         {% if data %}
+        <div id='search-result-container'>
             <h1>{{output_message}}</h1>
+
+            <table>
+                <thead>
+                  <tr>
+                    <th>Result</th>
+                    <th>Google Rating</th>
+                    <th>Recommendation Score</th>
+                    <th>Positive Cases</th>
+                    <th>Percentage of Vaccined Population</th>
+                    <th>Risk Level</th>
+                  </tr>
+                </thead>
+                <tbody>
             {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
+            <tr>
+                <td>
+                  {{d.result}}
+                </td>
+                <td>
+                  {{d.rating}}
+                </td>
+                <td>
+                  {{d.score}}
+                </td>
+                <td>
+                  {{d.cases}}
+                </td>
+                <td>
+                  {{d.vaccinePercentage}}
+                </td>
+                <td>
+                  {{d.risk}}
+                </td>
+            </tr>
             {% endfor %}
+            </tbody>
+        </table>
         {% endif %}
-        </form>
+        </div>
     </body>
 
     <script>
