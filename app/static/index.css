@@ -19,7 +19,8 @@ input {
 
 #submit-button {
     position: absolute;
-    top: 40px
+    top: 40px;
+    right: 0;
 }
 
 #main-container {
