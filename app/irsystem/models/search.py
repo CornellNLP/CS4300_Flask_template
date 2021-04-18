@@ -59,7 +59,7 @@ def combine_queries(work_ids, tf_idf_vectors):
     for work in work_ids:
         for term in tf_idf_vectors[work].keys():
             if term != "NORM":
-                query[term] += tf_idf_vectors[work][term]
+                query[term] += tf_idf_vectors[work][term]/tf_idf_vectors[work]["NORM"]
     return(dict(query))
 
 
