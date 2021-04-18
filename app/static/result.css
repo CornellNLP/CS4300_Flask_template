@@ -1,3 +1,8 @@
+body {
+	background-color: #f3f2e7;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
 .all-books {
     display:flex;
     flex-direction: row;
@@ -7,14 +12,14 @@
 
 .book {
     width: 250px;
-    margin-left: 50px;
     margin-top: 10px;
     padding: 15px;
-    background-color: antiquewhite;
+    background-color: white;
     text-align: center;
     height: 400px;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 2px 10px #888888;
 }
 
 .book-cover {
@@ -22,6 +27,7 @@
 }
 
 .book-title {
+    font-weight: bolder;
     font-size: larger;
 }
 
@@ -41,4 +47,8 @@ a:hover {
 .book-link {
     color: inherit;
     text-decoration: inherit;
+}
+
+.book-inspect {
+    z-index: 2;
 }
