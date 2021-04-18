@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/select.css">
 </head>
-<body class="container" id="main-container" style="margin: 0;">
+<body class="container" id="main-container">
 	<div id="list-container" class="container-fluid row">
 		<!-- List title -->
         <section class="col col-10 col-md-10 col-lg-5">
@@ -123,6 +123,8 @@
                 li_input.append($("<span class='item' id=\'" + bookWorkID + "\'> ").append(bookName));
                 var user_section = $(".user-section").eq(currentUser);
                 $(".user-section").eq(currentUser).children("ul").append(li_input);
+                $(".user-section").eq(currentUser).children("input").val("");
+                $("#candidate-column").children("ul").html("");
             } else {
                 alert("Book already in list");
             }
