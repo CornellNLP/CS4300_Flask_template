@@ -25,16 +25,20 @@ columnDict = {
 }
 columns = ['%_positive', '%_full_vax']
 
-# Todo: filter for Manhattan
+# Filter for manhattan and populate relevant data
+featuresL = []
+result = {"type":"FeatureCollection", "features": featuresL}
 for geom in shapeData['features']:
     modzcta = geom['properties']['modzcta']
-    if modzcta in covidDict:
+    isManhattan = False
+    for zipCode in geom['properties']['zcta'].split(", "):
+        # zip code of manhattan is below 10300
+        if int(zipCode) < 10300:
+            isManhattan = True
+    if isManhattan and modzcta in covidDict:
         row = covidDict[modzcta]
         for c in columns:
             geom['properties'][c] = row[columnDict[c]]
-    else:
-        for c in columns:
-            geom['properties'][c] = None
 
     
 with open('shapeData.json', 'w') as outfile:
