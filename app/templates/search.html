@@ -42,7 +42,23 @@
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
 
-        <div id="mapDiv"></div>
+        <div class="row" id="plotsDiv">
+            <div class="col-lg-7 col-sm-12">
+                <div id="mapDiv"></div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div id="casePlotDiv">
+                    <h4>Predicted Trend of COVID-19 Cases in the NYC</h4>
+                    <img src="/static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
+                    <br>
+                    <br>
+                    <p>Note: The <span style="color: blue; font-weight: bold;">blue curve</span>, <span style="color: black; font-weight: bold;">black curve</span> and <span style="color: purple; font-weight: bold;">purple curve</span> are the training, validation, and testing daily cases of NYC.
+                        The <span style="color: gold; font-weight: bold;">yellow curve</span> is the 15-day moving average of daily cases and deaths. The <span style="color: red; font-weight: bold;">red curve</span> and <span style="color: green; font-weight: bold;">green curve</span> are
+                        the upper and lower Bollinger Band, which are 2 standard deviations from the moving average. The <span style="color: red; font-weight: bold;">red dots</span> and
+                        <span style="color: green; font-weight: bold;">green dots</span> indicate observed counts exceeding the upper and lower limit.</p>
+                </div>
+            </div>
+        </div>
 
         {% if data %}
         <div id='search-result-container'>

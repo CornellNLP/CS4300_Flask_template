@@ -38,8 +38,8 @@ color: #4285F4;
 }
 
 #search-result-container {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
     margin-top: 3em;
 }
   
@@ -63,4 +63,16 @@ color: #4285F4;
 
 #search-result-container  h1 {
     text-align: center;
+}
+
+#plotsDiv{
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+#casePlot{
+    max-width: 80%;
+    max-height: 80%;
 }
