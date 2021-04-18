@@ -1,0 +1,253 @@
+{
+  "legend": [
+    "Charm",
+    "Social",
+    "Idealistic",
+    "Sophistication",
+    "Drive",
+    "Adaptability",
+    "Kindness"
+  ],
+  "data": [
+    {
+      "variety": "Merlot",
+      "personality_vector": [
+        2,
+        5,
+        2,
+        1,
+        4,
+        5,
+        4
+      ]
+    },
+    {
+      "variety": "Sauvignon Blanc",
+      "personality_vector": [
+        5,
+        5,
+        3,
+        5,
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "variety": "White Zinfandel",
+      "personality_vector": [
+        5,
+        5,
+        1,
+        3,
+        2,
+        5,
+        2
+      ]
+    },
+    {
+      "variety": "Malbec",
+      "personality_vector": [
+        2,
+        1,
+        1,
+        4,
+        3,
+        5,
+        5
+      ]
+    },
+    {
+      "variety": "Rosé",
+      "personality_vector": [
+        5,
+        4,
+        4,
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "variety": "Reisling",
+      "personality_vector": [
+        2,
+        3,
+        2,
+        4,
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "variety": "Chardonnay",
+      "personality_vector": [
+        5,
+        3,
+        2,
+        5,
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "variety": "Cabernet Sauvignon",
+      "personality_vector": [
+        5,
+        2,
+        1,
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "variety": "Pinot Grigio",
+      "personality_vector": [
+        5,
+        5,
+        4,
+        1,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "variety": "Pinot Noir",
+      "personality_vector": [
+        1,
+        3,
+        2,
+        5,
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "variety": "Champagne",
+      "personality_vector": [
+        4,
+        5,
+        5,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "variety": "Moscato",
+      "personality_vector": [
+        5,
+        3,
+        4,
+        1,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "variety": "Carmenere",
+      "personality_vector": [
+        2,
+        4,
+        5,
+        2,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "variety": "Sangiovese",
+      "personality_vector": [
+        4,
+        5,
+        2,
+        3,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "variety": "Tempranillo",
+      "personality_vector": [
+        2,
+        5,
+        1,
+        5,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "variety": "Grenache",
+      "personality_vector": [
+        4,
+        5,
+        3,
+        2,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "variety": "Nebbiolo",
+      "personality_vector": [
+        2,
+        1,
+        1,
+        3,
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "variety": "Syrah",
+      "personality_vector": [
+        2,
+        3,
+        2,
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "variety": "Cabernet Franc",
+      "personality_vector": [
+        2,
+        2,
+        4,
+        3,
+        4,
+        5,
+        5
+      ]
+    },
+    {
+      "variety": "Mourvedre",
+      "personality_vector": [
+        1,
+        2,
+        1,
+        3,
+        5,
+        4,
+        5
+      ]
+    }
+  ]
+}

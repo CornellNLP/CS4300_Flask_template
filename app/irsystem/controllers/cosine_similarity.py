@@ -1,13 +1,14 @@
 # Module for cosine similarity and dependent functions
 
+import math
+import numpy as np
 import nltk
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.corpus import stopwords
 nltk.download('stopwords')
-import numpy as np
-import math
 
 stopwords = set(stopwords.words('english'))
+
 
 def tokenizer(query):
     """
@@ -16,6 +17,7 @@ def tokenizer(query):
     if query is None:
         query = ""
     return TreebankWordTokenizer().tokenize(query)
+
 
 def tokenizer_personality_data(json):
     """
@@ -28,6 +30,7 @@ def tokenizer_personality_data(json):
         result.append(output)
     return result
 
+
 def tokenizer_personality_variety(json):
     """
     Returns a dictionary where the key is the string index of the personality
@@ -39,6 +42,7 @@ def tokenizer_personality_variety(json):
         result[count] = TreebankWordTokenizer().tokenize(variety)
     return result
 
+
 def flat_tokenizer_personality_variety(json):
     """
     Returns a list of the tokenized variety types in personality-wine data
@@ -48,7 +52,8 @@ def flat_tokenizer_personality_variety(json):
         tokenized = TreebankWordTokenizer().tokenize(variety)
         result.extend(tokenized)
     return result
-        
+
+
 def build_inverted_index(reviews):
     """
     Takes a list of token lists and returns an inverted index. A dictionary that
@@ -91,6 +96,7 @@ def compute_idf(inv_idx, n_docs, min_df, max_df_ratio):
             idf[word] = val
     return idf
 
+
 def compute_doc_norms(index, idf, n_docs):
     """
     Compute euclidean doc norms. Takes an inverted index and number of documents
@@ -111,9 +117,9 @@ def compute_doc_norms(index, idf, n_docs):
 
 def cossim(query, index, idf, doc_norms):
     """
-    Computes cosine similarity between query and all documents in index. Uses idf
-    and doc_norms to help with precomputing values for efficiency. Returns sorted
-    tuple list of (score, doc_id), ranked by score in descending order.
+    Computes cosine similarity between query and all documents in index. Uses
+    idf and doc_norms to help with precomputing values for efficiency. Returns
+    sorted tuple list of (score, doc_id), ranked by score in descending order.
     """
     query = tokenizer(query.lower())
     q_tf = {}
@@ -153,11 +159,12 @@ def cossim(query, index, idf, doc_norms):
 
     return output
 
+
 def cossim_dict(query, index, idf, doc_norms):
     """
-    Computes cosine similarity between query and all documents in index. Uses idf
-    and doc_norms to help with precomputing values for efficiency. Returns a
-    dictionary where key is the [doc_id] and value is the score.
+    Computes cosine similarity between query and all documents in index. Uses
+    idf and doc_norms to help with precomputing values for efficiency. Returns
+    a dictionary where key is the [doc_id] and value is the score.
     """
     query = tokenizer(query.lower())
     q_tf = {}
@@ -194,44 +201,21 @@ def cossim_dict(query, index, idf, doc_norms):
         output[doc] = num[doc]/denom[doc]
     return output
 
-def total_score(dict1, dict2, personality_dict, reviews, variety_dict, flat_variety):
+
+def total_score(dict1, dict2):
     """
     Returns a sorted list of (score, doc_id) ranked by score in descending order
     where score is the total score between dict1, dict2, dict3
 
     [dict#] is a dictionary where key is [doc_id] and value is [score]
-
-    [personality_dict] is a dictionary where the key is [doc_id] of personality docs 
-    and value is its corresponding [score]
-
-    [reviews] is the wine dataset
-
-    [variety_dict] is a dictionary where key is [doc_id] of personality data
-    and value is tokenized variety name of the wine
-
-    [flat_variety] is a flat list of all the tokenized varieties in the personality
-    wine dataset
     """
     result_dict = dict()
     all_data = [dict1, dict2]
     for dictionary in all_data:
         for key, value in dictionary.items():
             if key not in result_dict:
-                result_dict[key] = 0 
-            result_dict[key] += value 
-
-    # Here, we go through the total scores of flavor and scent, and add  
-    # the personality scores to the wine if the wine variety matches. 
-    # We check if the wine variety matches if the tokenized wine variety in the
-    # wine dataset matches the tokenized wine variety in the personality-wine 
-    # dataset. 
-    for key, value in result_dict.items():
-        tokenized_variety = tokenizer(reviews["variety"][key])
-        if any(word in tokenized_variety for word in flat_variety):
-            for doc_id, score in personality_dict.items():
-                if any(word in tokenized_variety for word in variety_dict[doc_id]):
-                    result_dict[key]+=score 
-                    break 
+                result_dict[key] = 0
+            result_dict[key] += value
 
     result = []
     for key, value in result_dict.items():
@@ -239,6 +223,7 @@ def total_score(dict1, dict2, personality_dict, reviews, variety_dict, flat_vari
     result.sort(key=lambda x: x[1])
     result.sort(key=lambda x: x[0], reverse=True)
     return result
+
 
 def precompute(reviews):
     """
@@ -253,6 +238,7 @@ def precompute(reviews):
     norms = compute_doc_norms(inv_ind, idf, n_docs)
     return inv_ind, idf, norms
 
+
 def precompute_personality(reviews):
     """
     Precomputes for personality dataset
@@ -262,6 +248,7 @@ def precompute_personality(reviews):
     idf = compute_idf(inv_ind, n_docs, 0, .5)
     norms = compute_doc_norms(inv_ind, idf, n_docs)
     return inv_ind, idf, norms
+
 
 def display(query, sim_list, reviews, num):
     """
@@ -287,6 +274,7 @@ def display(query, sim_list, reviews, num):
             print(desc)
             print()
         i += 1
+
 
 def display_personality(query, sim_list, reviews):
     """
@@ -334,6 +322,7 @@ def compute_outputs(query, sim_list, reviews, num):
     except:
         return ["No Results Found"]
 
+
 def compute_outputs_personality(sim_list, reviews):
     """
     Returns a list of wine variety results based on personality
@@ -356,4 +345,3 @@ def compute_outputs_personality(sim_list, reviews):
         return result
     except:
         return ["No Results Found"]
-
