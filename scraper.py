@@ -68,7 +68,7 @@ info_age = []
 info_years = []
 info_votes = []
 
-for num in range(1,  203805, 50):
+for num in range(1,  10000, 50):
     print(num)
     sleep(randint(1,3))
     TV_shows = get('https://www.imdb.com/search/title/?title_type=tv_series&start=' + str(num) + '&ref_=adv_nxt',
