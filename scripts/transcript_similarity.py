@@ -1,4 +1,7 @@
 def readTranscript (filePath):
+    """
+    given a file path, return the relevant part of the transcript file
+    """
     file = open(filePath)
     fileContents = file.read()
     file.close()
