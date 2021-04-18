@@ -29,8 +29,9 @@
                 for(var i = 0; i < 10; i++) {
                     var book = book_data[i];
                     console.log(book);
+                    var book_link = $("<a class=\"book-link\" href=\"" + book.book_url + "\"" + "target=\"_blank\">");
                     var book_display = $("<div class=\"book\">");
-                    var img = $("<img src=\"" + book.image_url + "\">");
+                    var img = $("<img class=\"book-cover\"src=\"" + book.image_url + "\">");
                     book_display.append(img.clone());
                     var title = $("<h2 class=\"book-title\">");
                     title.append(book.title);
@@ -38,11 +39,12 @@
                     var author = $("<h3 class=\"book-author\">");
                     author.append(book.author ? book.author[0] : "Author Not Found");
                     book_display.append(author.clone());
-                    var summary = $("<p class=\"book-summary\">");
-                    summary.append(book.description.slice(0,150) + "...");
+                    var summary = $("<div class=\"book-summary\">");
+                    summary.append(book.description);
                     book_display.append(summary.clone());
 
-                    all_books.append(book_display.clone());
+                    book_link.append(book_display.clone());
+                    all_books.append(book_link.clone());
                 }
                 $("#bookDisplay").append(all_books.clone());
             }
