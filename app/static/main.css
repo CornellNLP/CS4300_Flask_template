@@ -11,6 +11,7 @@ text-align:center;
 body {
 padding-top: 15%;
 padding-bottom: 15px;
+font-family: Lato
 }
 .global-search {
 text-align:center;
@@ -61,7 +62,7 @@ color: #4285F4;
     background-color: #dddddd;
 }
 
-#search-result-container  h1 {
+#search-result-container  h3 {
     text-align: center;
 }
 

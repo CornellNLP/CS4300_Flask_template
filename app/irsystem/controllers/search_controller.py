@@ -13,7 +13,7 @@ def search():
     data = []
     output_message = ''
   else:
-    output_message = "Your search: " + query
+    output_message = "Search Result for: " + query
 
     # Todo: get data from scripts
     with open('app/static/exampleOutput.json', encoding='utf-8') as f:
