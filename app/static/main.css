@@ -18,8 +18,35 @@ text-align:center;
 padding:10px;
 }
 .global-search .form-control {
-width:500px;
+width:300px;
 }
+
+.distance {
+    margin-left: 10%;
+    color: gray;
+}
+
+.pos, .rec {
+    margin-left: 7%;
+}
+
+.rec {
+    font-size: 15px;
+}
+
+.color {
+    color: orange;
+    font-weight: bold;
+}
+
+.firstrow {
+    margin-top: 2%;
+}
+
+.secondrow {
+    margin-top: 2%;
+}
+
 .global-search * {
 display:inline-block;
 margin-bottom:0;
@@ -43,6 +70,20 @@ color: #4285F4;
     padding-right: 5em;
     margin-top: 3em;
 }
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+    padding: 1.5%;
+  }
+
+  .container {
+    /* padding: 2px 16px; */
+  }
   
 #search-result-container table {
     justify-content: center;
@@ -62,10 +103,6 @@ color: #4285F4;
     background-color: #dddddd;
 }
 
-#search-result-container  h3 {
-    text-align: center;
-}
-
 #plotsDiv{
     padding-left: 5em;
     padding-right: 5em;
@@ -76,4 +113,7 @@ color: #4285F4;
 #casePlot{
     max-width: 90%;
     max-height: 90%;
+.output {
+    text-align: center;
+    margin-bottom: 2%;
 }

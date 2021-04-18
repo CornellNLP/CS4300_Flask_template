@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
+        <link rel="stylesheet" href="/static/main.css?version=52">
         <link rel="stylesheet" href="/static/map.css">
 
         <!--Leaflet library for heatmap-->
@@ -23,6 +23,7 @@
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
+            {{ res }}
         </div>
         <form class="form-inline global-search">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
@@ -37,11 +38,18 @@
             <br><br>
             
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="search_loc" class="form-control" placeholder="Location (Address)">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <div class="form-group">
+                <input id="input" type="text" name="search_int" class="form-control" placeholder="Point of Interest">
+            </div>
+            <div class="form-group">
+                <input id="input" type="number" name="search_rad" class="form-control" placeholder="Radius (in meters)">
+            </div>
+            <button type="submit" class="btn btn-info"> Go!</button>
         </form>
 
+        <h4 class="output">{{output_message}}</h4>
         <div class="row" id="plotsDiv">
             <div class="col-lg-6 col-sm-12">
                 <div id="mapDiv"></div>
@@ -60,54 +68,26 @@
             </div>
         </div>
 
-        {% if data %}
+        {% if exists %}
         <div id='search-result-container'>
-            <h3>{{output_message}}</h3>
-
-            <table>
-                <thead>
-                  <tr>
-                    <th>Result</th>
-                    <th>Address</th>
-                    <th>Walking Duration</th>
-                    <th>Google Rating</th>
-                    <th>Percentage of Positive Cases</th>
-                    <th>Percentage of Vaccined Population</th>
-                    <th>Recommendation Score</th>
-                    <!-- <th>Risk Level</th> -->
-                  </tr>
-                </thead>
-                <tbody>
-            {% for d in data.name.keys() %}  
-            <tr>
-                <td>
-                    {{data.name[d]}}
-                </td>
-                <td>
-                    {{data.address[d]}}
-                </td>
-                <td>
-                    {{data.duration[d]}}
-                </td>
-                <td>
-                    {{data.rating[d]}}
-                </td>
-                <td>
-                    {{'%0.2f'| format(100*data.percent_positive[d]|float)}}%
-                </td>
-                <td>
-                    {{'%0.2f'| format(100*data.full_vax[d]|float)}}%
-                </td>
-                <td>
-                    {{'%0.1f'| format(data.score[d]|float)}}
-                  </td>
-                <!-- <td>
-                  {{d.risk}}
-                </td> -->
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        {% for d in data.name %}
+        <div class="card">
+            <div class="container">
+              <h4><b>{{data.name[d]}}</b></h4>
+              <p class="firstrow">
+                  <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
+                  <span class="distance">{{data.duration[d]}} away</span>
+              </p>
+              <p class="secondrow">
+                  Rating: {{data.rating[d]}}
+                  <span class="pos">Positive Cases: {{data.positive_cases[d]}}</span>
+                  <span class="rec">
+                      <span class="color">Recommendation Score:</span> 
+                      {{data.score[d]}}
+                  </span></p>
+            </div>
+        </div>
+        {% endfor %}
         {% endif %}
         </div>
     </body>
