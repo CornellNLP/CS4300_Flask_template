@@ -1,5 +1,5 @@
 body {
-	background-color: #F7F7F7;
+	background-color: #f3f2e7;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -28,14 +28,14 @@ ul li:hover {
 }
 
 #list-container{
-	margin-top: 15%;
+	margin-top: 5%;
 }
 
 #list-title {
-	background-color: #B31B1B;
+	background-color: #ebdc87;
 	height: 70px;
 	font-size: 25pt;
-	color: #F2F2F2;
+	color: #222222;
 	padding-left: 3%;
 	padding-top: 1%;
     flex-direction: row;
@@ -89,4 +89,9 @@ ul li:hover {
 .plus-button {
 	position: relative;
     cursor: pointer;
+}
+
+#next-button {
+    position: absolute;
+    top: 0;
 }

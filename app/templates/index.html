@@ -18,16 +18,16 @@
 		<!-- List title -->
 		<div class="row">
 			<section class="col"></section>
-			<section class="col-10 col-md-10 col-lg-8">
-                <h1>Welcome!</h1>
+			<section class="col-10" id="main-container">
+                <h1>Welcome to the BookClub!</h1>
                 <form action="/select" method="get">
-                    <div class="row">
+                    <div class="row" id="input-label">
                         <label for="number-input">We have</label>
                         <input type="number" id="number-input" name="num_users"
                             min="2" max="100">
                         <p>users</p>
                     </div>
-                    <input type="submit" class="btn btn-primary"></button>
+                    <input type="submit" class="btn btn-primary" id="submit-button"></input>
                 </form>
 			</section>
 			<section class="col" align="right"></section>
