@@ -28,7 +28,7 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     if query not in movie_to_index:
         return None
     query_index = movie_to_index[query]
-    print(query_index)
+    #print(query_index)
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(1,len(recipe_list)+1):
