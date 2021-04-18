@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import statistics
 import re
 import numpy as np
@@ -63,6 +64,10 @@ def load_data(debug=False):
     nump_data = dataframe.to_numpy()
 
     dict_ski = {}
+    num_states = 0
+    num_locs = 0
+
+    for data in nump_data:
     num_states = 0
     num_locs = 0
 
@@ -249,9 +254,35 @@ def average_sim_vect_by_area(result, index_to_area_name):
 
 def get_results_from_sim_vector(sim_vect, index_to_area_name):
     result = [(sim, index_to_area_name[i]) for i, sim in enumerate(sim_vect)]
-    print(np.sum([tup[0] == 0 for tup in result]))
+    # print(np.sum([tup[0] == 0 for tup in result]))
     # return sorted(result, key=lambda x: x[0], reverse=True)
     replace = replace_nans_with_zero(result)
-    print(np.sum([tup[0] == 0 for tup in replace]))
+    # print(np.sum([tup[0] == 0 for tup in replace]))
     avg = average_sim_vect_by_area(replace, index_to_area_name)
     return sorted(avg, key=lambda x: x[1], reverse=True)
+
+
+def most_sim(sim_mat, ski_index_to_site):
+    most_sim = sim_mat[0]
+    sim = []
+    count = 0
+    for i in most_sim:
+        sim.append((i, ski_index_to_site[count]))
+        count += 1
+
+    x = sorted(sim, key=lambda x: x[0], reverse=True)
+    top_4_rankings = x[1:5]
+
+    return top_4_rankings
+
+
+def search(query, ski_dict):
+    vectorizer = build_vectorizer()
+    reviews_by_loc = pre_vectorize(query, dict_ski)
+    ski_site_to_index = ski_site_to_index(reviews_by_loc)
+    ski_index_to_site = ski_index_to_site(reviews_by_loc)
+    tfidf_mat, index_to_vocab, vocab_to_index = vectorize(
+        reviews_by_loc, vectorizer)
+    sim_mat = build_sims_cos(tfidf_mat)
+    results = most_sim(sim_mat, ski_index_to_site)
+    return results
