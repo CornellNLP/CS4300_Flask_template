@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
+        <link rel="stylesheet" href="/static/main.css?version=52">
         <link rel="stylesheet" href="/static/map.css">
 
         <!--Leaflet library for heatmap-->
@@ -23,6 +23,7 @@
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
+            {{ res }}
         </div>
         <form class="form-inline global-search">
             <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
@@ -37,53 +38,41 @@
             <br><br>
             
             <div class="form-group">
-                <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+                <input id="input" type="text" name="search_loc" class="form-control" placeholder="Location (Address)">
             </div>
-            <button type="submit" class="btn btn-info"> Go! </button>
+            <div class="form-group">
+                <input id="input" type="text" name="search_int" class="form-control" placeholder="Point of Interest">
+            </div>
+            <div class="form-group">
+                <input id="input" type="number" name="search_rad" class="form-control" placeholder="Radius (in meters)">
+            </div>
+            <button type="submit" class="btn btn-info"> Go!</button>
         </form>
+
+        <h4 class="output">{{output_message}}</h4>
 
         <div id="mapDiv"></div>
 
-        {% if data %}
+        {% if exists %}
         <div id='search-result-container'>
-            <h1>{{output_message}}</h1>
-
-            <table>
-                <thead>
-                  <tr>
-                    <th>Result</th>
-                    <th>Google Rating</th>
-                    <th>Recommendation Score</th>
-                    <th>Positive Cases</th>
-                    <th>Percentage of Vaccined Population</th>
-                    <th>Risk Level</th>
-                  </tr>
-                </thead>
-                <tbody>
-            {% for d in data %}  
-            <tr>
-                <td>
-                  {{d.result}}
-                </td>
-                <td>
-                  {{d.rating}}
-                </td>
-                <td>
-                  {{d.score}}
-                </td>
-                <td>
-                  {{d.cases}}
-                </td>
-                <td>
-                  {{d.vaccinePercentage}}
-                </td>
-                <td>
-                  {{d.risk}}
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        {% for d in data.name %}
+        <div class="card">
+            <div class="container">
+              <h4><b>{{data.name[d]}}</b></h4>
+              <p class="firstrow">
+                  <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
+                  <span class="distance">{{data.distance[d]}} m away</span>
+              </p>
+              <p class="secondrow">
+                  Rating: {{data.rating[d]}}
+                  <span class="pos">Positive Cases: {{data.positive_cases[d]}}</span>
+                  <span class="rec">
+                      <span class="color">Recommendation Score:</span> 
+                      {{data.score[d]}}
+                  </span></p>
+            </div>
+        </div>
+        {% endfor %}
         {% endif %}
         </div>
     </body>
