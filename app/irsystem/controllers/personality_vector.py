@@ -1,4 +1,6 @@
+from json_reader import json_read_vector
 import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def inv(x):
@@ -7,6 +9,22 @@ def inv(x):
     etc.
     """
     return 6-x
+
+
+def prompt():
+    """
+    Continuously prompts until the user enters a string number between 1 and 5
+    inclusive.
+    """
+    x = input("> ")
+    try:
+        a = int(x)
+        if a < 1 or a > 5:
+            raise ValueError("Bad value.")
+    except ValueError:
+        return prompt()
+    else:
+        return a
 
 
 def generate_personality_vec(legend):
@@ -24,7 +42,7 @@ def generate_personality_vec(legend):
 
     # charm, social
     print("You are the life of a party.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Charm"]] += response
     p_vec[lookup_dict["Social"]] += response
     p_vec_count[lookup_dict["Charm"]] += 1
@@ -32,7 +50,7 @@ def generate_personality_vec(legend):
 
     # social, drive
     print("People near you often rally around you.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Social"]] += response
     p_vec[lookup_dict["Drive"]] += response
     p_vec_count[lookup_dict["Social"]] += 1
@@ -40,7 +58,7 @@ def generate_personality_vec(legend):
 
     # drive, adapt, pragmatic
     print("You will do whatever it takes to succeed, no matter what.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Drive"]] += response
     p_vec[lookup_dict["Adaptability"]] += response
     p_vec[lookup_dict["Idealistic"]] += inv(response)
@@ -50,7 +68,7 @@ def generate_personality_vec(legend):
 
     # sophistication, charm
     print("Your friends come to you for fashion advice.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Sophistication"]] += response
     p_vec[lookup_dict["Charm"]] += response
     p_vec_count[lookup_dict["Sophistication"]] += 1
@@ -58,7 +76,7 @@ def generate_personality_vec(legend):
 
     # prag, kindness
     print("Life is not fair, and that means you have to look out for yourself first and foremost.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Idealistic"]] += inv(response)
     p_vec[lookup_dict["Kindness"]] += inv(response)
     p_vec_count[lookup_dict["Idealistic"]] += 1
@@ -66,13 +84,13 @@ def generate_personality_vec(legend):
 
     # adapt
     print("You don't like making a plan because you often end up deviating from it anyways.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Adaptability"]] += response
     p_vec_count[lookup_dict["Adaptability"]] += 1
 
     # kindness, prag
     print("You see many relationships in your life as transactional.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Idealistic"]] += inv(response)
     p_vec[lookup_dict["Kindness"]] += inv(response)
     p_vec_count[lookup_dict["Idealistic"]] += 1
@@ -80,7 +98,7 @@ def generate_personality_vec(legend):
 
     # sophistication, adapt
     print("You have high standards of living, and you'll go the extra mile to attain that.")
-    response = int(input("> "))
+    response = prompt()
     p_vec[lookup_dict["Sophistication"]] += response
     p_vec[lookup_dict["Adaptability"]] += inv(response)
     p_vec_count[lookup_dict["Sophistication"]] += 1
@@ -89,16 +107,19 @@ def generate_personality_vec(legend):
     for i in range(len(p_vec)):
         p_vec[i] = p_vec[i]/p_vec_count[i]
 
-    print(p_vec)
-    return p_vec
+    return np.array(p_vec)
 
 
-# generate_personality_vec([
-#    "Charm",
-#    "Social",
-#    "Idealistic",
-#    "Sophistication",
-#    "Drive",
-#    "Adaptability",
-#    "Kindness"
-# ])
+def similar_varieties(legend, index, mat):
+    """
+    Takes legend, index, mat, and then prompts user for user personality vector
+    and returns a sorted tuple list in the format of (score, wine_variety) in
+    order of relevance.
+    """
+    scores = []
+    user = generate_personality_vec(legend)
+    for i in range(len(mat)):
+        a = cosine_similarity([user], [mat[i]])
+        scores.append((a[0][0], index[i]))
+    scores.sort(key=lambda x: x[0], reverse=True)
+    return scores
