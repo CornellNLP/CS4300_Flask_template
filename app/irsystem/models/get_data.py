@@ -13,4 +13,3 @@ def get_trail_to_idx():
 NUM_DOCS = len(data)
 
 trail_to_idx = get_trail_to_idx()
-# pprint.pprint(data['Ellis Hollow Yellow trail'])
