@@ -56,10 +56,10 @@ if __name__ == "__main__":
     #     "burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
     query = "Forrest Gump"
 
-    with open('./data/movie_food_words_from_wordnets.json') as f:
+    with open('./data/movie_food_words_from_wordnets_top2.json') as f:
         movie_list = json.load(f)
 
     recipes = pd.read_csv('./data/recipe_data/clean_recipes.csv')
-    movie_recipe_mat = pd.read_csv('./data/movie_recipe_mat.csv')
+    movie_recipe_mat = pd.read_csv('./data/movie_recipe_mat_top2.csv')
 
     run_search(movie_recipe_mat, movie_list, query, recipes)
