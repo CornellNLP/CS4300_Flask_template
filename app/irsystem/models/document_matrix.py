@@ -92,6 +92,8 @@ class DTMat:
         return mat
 
     # mat[i, j] := the term frequency of the term j in document i
+    # Features are not implemented for this matrix, so all terms are
+    # weighed and diplayed
     def _get_tf_mat(self):
         toks = Tokens(self.token_type)
         self.feature_names = toks.tokens
@@ -107,6 +109,8 @@ class DTMat:
         return mat
 
     # mat[i, j] := 1 if term j in document i | 0 otherwise
+    # Features are not implemented for this matrix, so all terms are
+    # weighed and displayed
     def _get_binary_mat(self):
         toks = Tokens(self.token_type)
         self.feature_names = toks.tokens
