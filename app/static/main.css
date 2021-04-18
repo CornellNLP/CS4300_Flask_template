@@ -36,3 +36,31 @@ border: none
 .step-links a{
 color: #4285F4;
 }
+
+#search-result-container {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
+}
+  
+#search-result-container table {
+    justify-content: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    width: 100%;
+}
+  
+#search-result-container  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+#search-result-container  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#search-result-container  h1 {
+    text-align: center;
+}
