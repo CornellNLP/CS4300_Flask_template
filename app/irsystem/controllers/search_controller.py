@@ -11,11 +11,17 @@ net_id = "Ryan Richardson: rrr225" + \
 
 @irsystem.route('/', methods=['GET'])
 def search():
+	# Retrieve values from search query
 	query = request.args.get('search')
+	require_accessible = request.args.get("requireAccessible")
+	require_free_entry = request.args.get("requireFreeEntry")
+	require_parking = request.args.get("requireParking")
 
 	# Retrieve rankings
-	test_result = Result(name="Cascadilla Gorge Trail", length=3.5)
-	results = [test_result]
+	test_result1 = Result(name="Cascadilla Gorge Trail", length=3.5)
+	test_result2 = Result(name="Buttermilk Falls Gorge Trail", length=1.2)
+	test_result3 = Result(name="BUttermilk Falls Rim Trail", length=0.4)
+	results = [test_result1, test_result2, test_result3]
 
 	if not query:
 		data = []
