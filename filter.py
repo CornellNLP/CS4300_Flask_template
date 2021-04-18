@@ -56,6 +56,14 @@ for line in business_file:
       else:
           pricerange = attribute["RestaurantsPriceRange2"]
     id_dic["price"] = pricerange
+    if attribute is None:
+      ambience = ""
+    else:
+      if "Ambience" not in attribute:
+        ambience = ""
+      else:
+          ambience = attribute["Ambience"]
+    id_dic["ambience"] = ambience
     id_dic["categories"] = categories
     id_dic["reviews"] = [] #initialize reviews as an empty list--these will be put in later
     json_merge[bus_id] = id_dic #add to the merge json
@@ -102,8 +110,17 @@ for key in json_merge:
   reviews2 = reviews[:2]
   print(len(reviews2))
 
+
+  price = json_merge[key]["price"]
+  info_dic["price"] = price
+  categories = json_merge[key]["categories"]
+  info_dic["categories"] = categories
+  ambience = json_merge[key]["ambience"]
+  info_dic["ambience"] = ambience
   #attributes = json_merge[key]["attributes"]
   info_dic["reviews"] = reviews2
+
+
   #if dataset still too large: sort the reviews based on "useful" rating and only include the top 10 (?)
   #info_dic["attributes"] = attributes
   #adds restaurant info to the json
