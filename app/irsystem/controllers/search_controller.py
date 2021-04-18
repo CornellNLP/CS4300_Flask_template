@@ -1,15 +1,10 @@
 from . import *  
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-
+import json
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
 import googlemaps
-from datetime import datetime
-import json
-import tablib
-import os
 
 final_data = pd.read_csv("app/static/final_data.csv")
 manhattan_modzcta = list(set(final_data['modzcta']))
@@ -33,7 +28,7 @@ def get_results(address, category, radius=100):
 
     # Search nearby open places in a specified category within a radius
     places_result = gmaps.places_nearby(location=origin, radius=radius, type=category, open_now=True)['results']
-    print("Number of results: ", len(places_result))
+    # print("Number of results: ", len(places_result))
 
     # get a list of destination geocodes and compute distances to origin
     geocodes = [tuple(place['geometry']['location'].values()) for place in places_result]
@@ -167,32 +162,6 @@ def search():
         exists = True
         # Todo: get data from scripts
         data = get_covid_data(query_loc, query_int, query_rad, 2.0)
-    #[
-    # {
-    #   "result": "Cinema 123 by Angelika",
-    #   "rating": 4.4,
-    #   "score": 81,
-    #   "cases": 28,
-    #   "vaccinePercentage": 61.8,
-#       "risk": "Green"
-#     },
-#     {
-#         "result": "Regal Cinemas",
-#         "rating": 4.5,
-#         "score": 70,
-#         "cases": 31,
-#         "vaccinePercentage": 52.9,
-#         "risk": "Green"
-#       },
-#       {
-#         "result": "AMC Empire 25",
-#         "rating": 4.1,
-#         "score": 65,
-#         "cases": 31,
-#         "vaccinePercentage": 52.9,
-#         "risk": "Green"
-#       }
-#   ]
 
     return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists)
 

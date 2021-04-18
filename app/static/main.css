@@ -11,6 +11,7 @@ text-align:center;
 body {
 padding-top: 15%;
 padding-bottom: 15px;
+font-family: Lato
 }
 .global-search {
 text-align:center;
@@ -65,8 +66,8 @@ color: #4285F4;
 }
 
 #search-result-container {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
     margin-top: 3em;
 }
 
@@ -80,9 +81,9 @@ color: #4285F4;
     padding: 1.5%;
   }
 
-  .container {
-    /* padding: 2px 16px; */
-  }
+  /* .container {
+    padding: 2px 16px;
+  } */
   
 #search-result-container table {
     justify-content: center;
@@ -100,6 +101,18 @@ color: #4285F4;
   
 #search-result-container  tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+#plotsDiv{
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+#casePlot{
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .output {

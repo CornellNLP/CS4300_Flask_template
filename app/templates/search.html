@@ -50,8 +50,23 @@
         </form>
 
         <h4 class="output">{{output_message}}</h4>
-
-        <div id="mapDiv"></div>
+        <div class="row" id="plotsDiv">
+            <div class="col-lg-6 col-sm-12">
+                <div id="mapDiv"></div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div id="casePlotDiv">
+                    <h4>Predicted Trend of COVID-19 Cases in the NYC</h4>
+                    <img src="/static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
+                    <br>
+                    <br>
+                    <p>Note: The <span style="color: blue; font-weight: bold;">blue curve</span>, <span style="color: black; font-weight: bold;">black curve</span> and <span style="color: purple; font-weight: bold;">purple curve</span> are the training, validation, and testing daily cases of NYC.
+                        The <span style="color: gold; font-weight: bold;">yellow curve</span> is the 15-day moving average of daily cases and deaths. The <span style="color: red; font-weight: bold;">red curve</span> and <span style="color: green; font-weight: bold;">green curve</span> are
+                        the upper and lower Bollinger Band, which are 2 standard deviations from the moving average. The <span style="color: red; font-weight: bold;">red dots</span> and
+                        <span style="color: green; font-weight: bold;">green dots</span> indicate observed counts exceeding the upper and lower limit.</p>
+                </div>
+            </div>
+        </div>
 
         {% if exists %}
         <div id='search-result-container'>
@@ -61,15 +76,16 @@
               <h4><b>{{data.name[d]}}</b></h4>
               <p class="firstrow">
                   <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
-                  <span class="distance">{{data.distance[d]}} m away</span>
+                  <span class="distance">{{data.duration[d]}} away</span>
               </p>
               <p class="secondrow">
                   Rating: {{data.rating[d]}}
                   <span class="pos">Positive Cases: {{data.positive_cases[d]}}</span>
-                  <span class="rec">
+                  <!-- Todo: replace with risk level -->
+                  <!-- <span class="rec">
                       <span class="color">Recommendation Score:</span> 
                       {{data.score[d]}}
-                  </span></p>
+                  </span></p> -->
             </div>
         </div>
         {% endfor %}
@@ -79,7 +95,7 @@
 
     <script>
         // create map
-        var map = L.map('mapDiv').setView([40.738, -73.98], 12);
+        var map = L.map('mapDiv').setView([40.75, -73.98], 12);
 
         const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -129,7 +145,7 @@
 
             var legend = L.control({position: 'bottomleft'});
             legend.onAdd = function (map) {
-                var div = L.DomUtil.create('div', 'info legend'),
+                var div = L.DomUtil.create('div', 'legend'),
                     grades = [0, 0.04, 0.08, 0.12, 0.16, 0.20],
                     labels = ['0-4%', '4-8%', '8-12%', '12-16%', '16-20%', '20%'];
 
@@ -143,6 +159,17 @@
             };
             
             legend.addTo(map);
+
+            // add info header
+            var infoHeader = L.control();
+
+            infoHeader.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info'); 
+                this._div.innerHTML = '<h4>Percentage of Positive Test Cases Over the Last Week</h4>';
+                return this._div;
+            };
+
+            infoHeader.addTo(map);
         }
 
         requestData();
