@@ -11,7 +11,7 @@ def readTranscript (filePath):
     #print(fileContents)
     return fileContents
 
-transcript = readTranscript("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/Avatar: The Last Airbender/avatar_scripts_s1_e2.txt")
+#transcript = readTranscript("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/Avatar: The Last Airbender/avatar_scripts_s1_e2.txt")
 
 def tokenize (transcript):
     text = transcript.lower()
@@ -19,4 +19,6 @@ def tokenize (transcript):
     #print("words:" , re.findall(regex,text))
     return re.findall(regex,text)
 
-tokenize(transcript)
+#tokenize(transcript)
+
+
