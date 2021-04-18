@@ -4,19 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ski Resort Recommendations</title>
-  <script src="scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
-  <script src="scripts/validation.js" type="text/javascript"></script>
+  <script src="/static/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="/static/validation.js" type="text/javascript"></script>
 
   <style>
     body {
-      background-image: url('skis_background.png');
+      background-image: url('/static/skis_background.png');
     }
 
     .hidden {
       display: none;
     }
 
-    .locationErrorMessage, .descriptionErrorMessage, .distanceErrorMessage {
+    .locationErrorMessage,
+    .descriptionErrorMessage,
+    .distanceErrorMessage {
       color: red;
       font-size: small;
     }
@@ -79,7 +81,6 @@
       font-size: 12px;
       font-family: "Source Sans Variable", sans-serif;
     }
-
   </style>
 
 </head>
@@ -88,31 +89,33 @@
 
   <div class="ski">
     <h2>Where would you like to go skiing?</h2>
-    <p class="explain">Planning a ski trip? Use our comprehensive guide to find your next US ski trip location. Enter your location and general interests below to get expert recommendations!</p>
-    <form id="resort-recommendations" action="front-end.html" method="post" novalidate>
-      <div class= "landd">
-        <div class= "location_all">
+    <p class="explain">Planning a ski trip? Use our comprehensive guide to find your next US ski trip location. Enter
+      your location and general interests below to get expert recommendations!</p>
+    <!-- <form id="resort-recommendations" action="front-end.html" method="post" novalidate> -->
+    <form id="resort-recommendations" class="form-inline global-search" novalidate>
+      <div class="landd">
+        <div class="location_all">
           <div class="input location">
-            <label for="location" >*Location:</label>
-            <div class= "locationErrorMessage">
-              <span class= "errorContainer hidden" id= "locationError">
-              Please enter a location.
+            <label for="location">*Location:</label>
+            <div class="locationErrorMessage">
+              <span class="errorContainer hidden" id="locationError">
+                Please enter a location.
               </span>
             </div>
-            <div class= "box">
-              <input type="text" id="location" placeholder = "City, State" name="location" required>
+            <div class="box">
+              <input type="text" id="location" placeholder="City, State" name="location" required>
             </div>
           </div>
         </div>
 
         <div class="input distance">
-          <label for="distance" class = "dist">*Distance:</label>
-          <div class= "distanceErrorMessage">
-            <span class= "errorContainer hidden" id= "distanceError">
-            Please select a distance.
+          <label for="distance" class="dist">*Distance:</label>
+          <div class="distanceErrorMessage">
+            <span class="errorContainer hidden" id="distanceError">
+              Please select a distance.
             </span>
           </div>
-          <div class= "box dis">
+          <div class="box dis">
             <select id="distance" name="distance" required>
               <option value="" disabled selected>Select a distance</option>
               <option value="1-25">1 mi - 25 mi</option>
@@ -126,16 +129,18 @@
         </div>
       </div>
 
-      <div class = 'descriptionAll'>
+      <div class='descriptionAll'>
         <div class="input">
           <label for="description">*Description:</label>
-          <div class= "descriptionErrorMessage">
-            <span class= "errorContainer hidden" id= "descriptionError">
-            Please describe what you are looking for in a ski resort.
+          <div class="descriptionErrorMessage">
+            <span class="errorContainer hidden" id="descriptionError">
+              Please describe what you are looking for in a ski resort.
             </span>
           </div>
-          <div class = 'box'>
-            <input type="text" id="description" placeholder= 'Include preferences on condition, ability level, price, lines, rental availability, etc.' name="description" required>
+          <div class='box'>
+            <input type="text" id="description"
+              placeholder='Include preferences on condition, ability level, price, lines, rental availability, etc.'
+              name="description" required>
           </div>
         </div>
       </div>
@@ -146,7 +151,17 @@
 
     </form>
 
+    {% if data %}
+    {% for d in data %}
+    <br>
+    <p>{{d}}</p>
+    {% endfor %}
+    {% endif %}
+
+
+
   </div>
 
 </body>
+
 </html>

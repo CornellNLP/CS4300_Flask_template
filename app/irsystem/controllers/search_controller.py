@@ -9,7 +9,8 @@ net_id = "Ava Anderson: aca76, Michael Behrens: mcb273, Cameron Haarmann: cmh332
 
 @irsystem.route('/', methods=['GET'])
 def search():
-    query = request.args.get('search')
+    # query = request.args.get('search')
+    query = request.args.get('description')
     if not query:
         data = []
         output_message = ''
@@ -17,4 +18,5 @@ def search():
         output_message = "Your search: " + query
         ski_dict = load_data()
         data = search_q(query, ski_dict)
-    return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+    # return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+    return render_template('front-end.html', data=data)
