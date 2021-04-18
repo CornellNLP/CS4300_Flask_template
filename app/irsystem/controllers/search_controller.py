@@ -4,7 +4,6 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 from app import app as data_pool
 import json
 from app.irsystem.models.search import get_doc_rankings
-# import app.irsystem.models.search as search
 
 project_name = "Book Club"
 net_id = "Caroline Lui: cel243, Elisabeth Finkel: esf76, Janie Walter: jjw249, Kurt Huebner: krh57, Taixiang(Max) Zeng: tz376"
@@ -29,19 +28,16 @@ def _get_book_from_partial(works, book_str):
 			relv_books.append(
 				{"string": string, "work_id": work_id, "image": works[work_id].get("image")}
 			)
-			# relv_books.append((title, works[work_id]['url']))
 	return relv_books
 
 
 def _get_reccs(work_ids):
-	# return search.get_doc_rankings(
 	return get_doc_rankings(
 		work_ids,
 		data_pool.data['tfidf'],
 		data_pool.data['inverted_index'],
 		data_pool.data['works']
 	)
-	# return ["harry potter is pretty good", "book2", "book3"]
 
 
 ### ajax endpoints ###
@@ -63,20 +59,14 @@ def get_reccs():
 	req = json.loads(request.data)
 	liked_work_ids = req.get('liked_works')
 
-	print("="*50)
-	print(request.data)
-	print("="*50)
-
 	results = _get_reccs(liked_work_ids)
 	return json.dumps(results)
-	# return "Result (template TBD): "+str(results)
-	# return render_template('result.html', results=results), 200
 
 
 # Endpoint to redirect to result page
 @irsystem.route('/result', methods=['GET'])
 def get_result():
-	return render_template('result.html')
+	return render_template('result.html'), 200
 
 
 # Route to select.html with num_users as parameter
