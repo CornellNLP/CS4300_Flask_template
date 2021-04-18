@@ -250,29 +250,34 @@ def precompute_personality(reviews):
     return inv_ind, idf, norms
 
 
-def display(query, sim_list, reviews, num):
+def display(query, wine_scores, sim_list, reviews, num):
     """
-    Takes a query, sim_list output from the cossim() function, the wine reviews df,
-    and number of results to return, and prints the output to the terminal.
-    Duplicate entries are caught and removed.
+    Takes a query, wine_scores, sim_list output from the cossim() function, the
+    wine reviews df, and number of results to return, and prints the output to
+    the terminal. Duplicate entries are caught and removed. Only varieties of
+    the top type according to wine_scores are printed.
     """
-    #print("Your query: " + query)
-    print("Wine matches for " + query)
-    print("Results:")
+    print("Based on your responses, we believe these particular " +
+          wine_scores[0][1] + "s will fit your taste:")
+    print()
 
     i = 0
+    counter = 1
     dup_list = []
     while len(dup_list) < num:
         idx = sim_list[i][1]
+        variety = reviews["variety"][idx]
         title = reviews["title"][idx]
-        if title not in dup_list:
-            # print(title)
-            dup_list.append(title)
-            score = round(sim_list[i][0]*100, 2)
-            desc = reviews["description"][idx]
-            print("[" + str(score) + "%] " + title)
-            print(desc)
-            print()
+        if variety == wine_scores[0][1]:
+            if title not in dup_list:
+                dup_list.append(title)
+                #score = round(sim_list[i][0]*100, 1)
+                desc = reviews["description"][idx]
+                #print("[" + str(score) + "%] " + title)
+                print(str(counter) + ". " + title)
+                print(desc)
+                print()
+                counter += 1
         i += 1
 
 
@@ -281,21 +286,25 @@ def display_personality(query, sim_list, reviews):
     Displays the personality - wine variety match 
     """
     print("Based on personality...")
-    print("Results:")
+    print("You are a " + str(round(100 *
+          sim_list[0][0], 1)) + "% match with " + sim_list[0][1] + "!")
+    print()
+
+    # build inverted dict
+    inv_dict = {}
+    for i in range(len(reviews["variety"])):
+        inv_dict[reviews["variety"][i]] = i
 
     i = 0
     dup_list = []
-    while len(dup_list) < len(sim_list):
-        idx = sim_list[i][1]
-        title = reviews["variety"][idx]
-        if title not in dup_list:
-            # print(title)
-            dup_list.append(title)
-            score = round(sim_list[i][0]*100, 2)
-            desc = reviews["personality_description"][idx]
-            print("[" + str(score) + "%] " + title)
-            print(desc)
-            print()
+    while len(dup_list) < 3:
+        title = sim_list[i][1]
+        dup_list.append(title)
+        score = round(sim_list[i][0]*100, 1)
+        desc = reviews["personality_description"][inv_dict[title]]
+        print("[" + str(score) + "%] " + title)
+        print(desc)
+        print()
         i += 1
 
 

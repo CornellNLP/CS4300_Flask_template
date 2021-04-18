@@ -4,7 +4,7 @@ from json_reader import *
 from cosine_similarity import *
 from personality_vector import *
 
-print("Welcome to Winetime!")
+print("Welcome to Perfect Wine Match!")
 print("Loading data...")
 df = json_read("winemag_data_withtoks.json")
 df_personality = json_read("wine_personality.json")
@@ -24,32 +24,21 @@ print()
 
 quit = False
 while not quit:
-    print("What is your name? \"quit to exit\"")
+    print("What is your name? (\"quit\" to exit)")
     name = input("> ")
     if name == "quit":
         quit = True
         break
-    # personality=input("How would your friends describe your personality? ")
-    personality = generate_personality_vec(legend)
+    wine_scores = similar_varieties(legend, index, mat)
     print("Describe your favorite drink (can be non-alcoholic!).")
     flavor = input("> ")
     print("Describe your favorite scent.")
     scent = input("> ")
-    # q = input("Enter your wine keywords (\"quit\" to exit): ")
-    # if name == "quit" or personality == "quit" or flavor == "quit" or scent == "quit":
-    #     quit = True
-    #     break
     flavor_result = cossim_dict(flavor, inv_ind, idf, norms)
     scent_result = cossim_dict(scent, inv_ind, idf, norms)
-    # personality_result=cossim_dict(
-    #    personality, inv_ind_person, idf_person, norms_person)
-    # personality_result_nondict=cossim(
-    #    personality, inv_ind_person, idf_person, norms_person)
     total = total_score(flavor_result, scent_result)
-    # a = cossim(q, inv_ind, idf, norms)
-    # print(a)
-    # display(q, a, df, 10)
-    display(name, total, df, 10)
-    #display_personality(name, personality_result_nondict, df_personality)
 
-    print()
+    display_personality(name, wine_scores, df_personality)
+    display(name, wine_scores, total, df, 5)
+
+print()
