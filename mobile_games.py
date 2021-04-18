@@ -138,7 +138,7 @@ for i in range(50):
     print(output_jaccard[i])
 
 print('cossim')
-output_cossim = steam_cossim_list(test_app)
+output_cossim = mgs_cossim_list(test_app)
 for i in range(50):
     print(output_cossim[i])
 
