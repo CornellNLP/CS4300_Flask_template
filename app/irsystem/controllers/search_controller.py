@@ -20,10 +20,11 @@ def search():
 	require_parking = request.args.get("requireParking")
 
 	# Retrieve rankings
-	test_result1 = Result((1.0, "Cascadilla Gorge Trail - North Rim"))
-	test_result2 = Result((.8, "Ellis Hollow Red trail"))
-	test_result3 = Result((.5, "Stewart Park"))
-	results = [test_result1, test_result2, test_result3]
+	results = []
+	# test_result1 = Result((1.0, "Cascadilla Gorge Trail - North Rim"))
+	# test_result2 = Result((.8, "Ellis Hollow Red trail"))
+	# test_result3 = Result((.5, "Stewart Park"))
+	# results = [test_result1, test_result2, test_result3]
 	# print(results)
 
 	if not query:
@@ -31,7 +32,9 @@ def search():
 		output_message = ''
 	else:
 		# Retrieve rankings
-		# results = get_rankings_by_query(query)
+		rankings = get_rankings_by_query(query)
+		for ranking in rankings:
+			results.append(Result(ranking))
 		output_message = "Your search: " + query
 		data = results
 

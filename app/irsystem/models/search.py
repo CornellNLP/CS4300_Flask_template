@@ -2,10 +2,11 @@ from collections import Counter
 import numpy as np
 from nltk.tokenize import TreebankWordTokenizer
 from app.irsystem.models.document_matrix import DTMat
+from app.irsystem.models.get_data import idx_to_trail_name
 
 def get_rankings_by_query(query):
     """
-    Returns a list of rankings given a query string.
+    Returns a list of the top 3 rankings given a query string.
     This serves as the main function that is called when a new query is made.
     """
     # Create tfidf matrix object for trail documents with 200 features
@@ -18,9 +19,11 @@ def get_rankings_by_query(query):
     query_tfidf_vec = tfidfize_query(query_tokens, features, idfs)
 
     # Calculate cosine similarity between query and all documents
+    num_trails = trails_tfidf.num_trails
+    ranked_results = cosine_sim_matrix(num_trails, query_tfidf_vec, trails_tfidf.mat, cosine_sim)
 
     # Return the top 3 highest values
-    return []
+    return ranked_results[:3]
 
 def tokenize_string(s):
     """
@@ -41,3 +44,24 @@ def tfidfize_query(q, features, idfs):
         tfidf_vec[i] = tf_q.get(token, 0) * idfs.get(token, 0)
 
     return tfidf_vec
+
+def cosine_sim(query, trail):
+    """
+    Returns cosine similarity of query and a trail document.
+    """
+    num = np.dot(query, trail)
+    denom = (np.sqrt(np.sum(np.linalg.norm(query))) * np.sqrt(np.sum(np.linalg.norm(trail))))
+                 
+    return num / denom
+ 
+def cosine_sim_matrix(num_trails, query, tfidf, sim_method = cosine_sim):
+    # trails_sims = np.zeros(num_trails)
+    trails_sims = [0 for _ in range(num_trails)]
+ 
+    # for each trail document find the cosine similarity with the query
+    for i in range(0, num_trails):
+        trails_sims[i] = (sim_method(query, tfidf[i]), idx_to_trail_name[i])
+    
+    # sorted list of all cosine similarity scores of query and trail documents
+    ranked_trails = sorted(trails_sims, key= lambda x: -x[0])
+    return ranked_trails
