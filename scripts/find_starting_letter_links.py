@@ -24,4 +24,4 @@ for link in soup.select("a.forumlink"):
   link = url + link['href'][1:]
   letters_to_links[letter] = link
 
-  
+print("\nEND OF SCRIPT")

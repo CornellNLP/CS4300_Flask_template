@@ -1,0 +1,870 @@
+Transcripts - Forever Dreaming :: 02x01 - Judgment Call - Numb3rs 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x01 - Judgment Call https://transcripts.foreverdreaming.org/viewtopic.php?f=1003&t=42602 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 02/17/21 11:08 ] 
+ 
+ 
+ Post subject:  
+ 02x01 - Judgment Call 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ ♪ That's a game that I hate to lose ♪ 
+ ♪ And I'm feeling the strain ♪ 
+ ♪ Ain't it a shame? ♪ 
+ ♪ Oh, give me the beat, boys, and free my soul ♪ 
+ ♪ I wanna get lost in your rock and roll ♪ 
+ ♪ And drift away ♪ 
+ ♪ Oh, give me the beat, boys, and free my soul ♪ 
+ ♪ I wanna get lost in your rock and roll ♪ 
+ ♪ And drift away... ♪ 
+ ♪ Beginning to think that I'm wasting time ♪ 
+ ♪ I don't understand the things I do ♪ 
+ ♪ The world outside looks so unkind ♪ 
+ ♪ I'm counting on you ♪ 
+ ♪ To carry me through ♪ 
+ ♪ Oh, give me the beat, boys, and free my soul ♪ 
+ ♪ I wanna get lost in your rock and roll ♪ 
+ ♪ And drift away... ♪ 
+ DAVID: The victim's husband, Judge Franklin Trelane, Central Division. 
+ When did he get here? 
+ The marshals drove him over about half an hour ago. 
+ He was right in the middle of a trial. 
+ What's the trial about? 
+ Asian gang-bangers; death penalty case. 
+ We've already started running down the defendant's known associates. 
+ Her car was in the shop. 
+ She borrowed his. 
+ COLBY: You know, you take the oath, they give us a gun, we go into public service with our eyes open, but nobody tells us our families are fair game. 
+ They're not. 
+ ( sighs ) 
+ DAVID: Spray pattern suggests that, um, the guy waited for her to pull in, for the garage door to close, and he opened fire. 
+ Probably waiting on this side, He could've rubbed up against any of this stuff, so let's check this. TECH: Yes, sir. 
+ If the suspect's breaking into the garage, the victim comes in and surprises him... 
+ 12-gauge isn't a burglar's tool, though. 
+ You got four shots, point blank -- ain't a surprise. 
+ That's premeditation. 
+ So murder was the object. 
+ I'm just wondering who the target was -- the wife or the judge? 
+ ( echoing ): We all use math every day... to predict weather... to tell time... to handle money... 
+ Math is more than formulas and equations. 
+ It's logic. 
+ Math is more than formulas and equations. 
+ It's rationality. 
+ It's using your mind to solve the biggest mysteries we know. 
+ MEGAN: We searched the criminal histories and the psych profiles that might have a tilt towards retaliation and the inclination to act on it. 
+ Now, are you assuming that Alison Trelane's killer is someone that the husband put in jail? 
+ Yeah. 
+ We're thinking the judge was the intended target, not the wife. 
+ Right, no, yeah, I-I understand, but, uh, your suspects aren't limited only to people who were convicted by the judge, right? 
+ That's right; there's also family members, friends, co-conspirators... 
+ The possibilities are exponential. 
+ Um... 
+ "exponential" would mean that the growth rate is proportionate to its size, so, yeah, the mathematically correct term would be... 
+ "more." ( wry laugh ) 
+ Well, call it whatever you want, Charlie, but, I mean... 
+ I mean, this is going to take a lot of time. 
+ Not necessarily. 
+ You can create a Bayesian filter. 
+ I could, if I had any idea what that meant. 
+ Do you ever get any junk e-mail or spam? 
+ Yeah. 
+ Well, that's why they create spam filters -- to filter out junk e-mail from regular e-mail. 
+ And spam filters are Bayesian filters, and what they do is they calculate the probabilities that an e-mail is spam, given that it has certain words like, uh, "refinance," "stocks," "Viagra." 
+ And you can do something similar to narrow down the list of suspects? 
+ I can create a filter that uses your criteria to reduce the list of suspects to people most likely to kill a judge's wife. 
+ Judge Franklin Trelane's been on the bench 18 years; 
+ 12 before that as a federal prosecutor. 
+ I figured I'd start generating threat assessments. 
+ Threat assessments?! 
+ Yeah, Granger. 
+ Behavioral analyses based on documentation -- court transcripts, death threats, pre-sentencing psych evals. 
+ Right. In other words, profiling. 
+ You make it sound like a bad word. 
+ No, just never thought "coulda, woulda, shoulda" figured very well into a homicide investigation. 
+ COLBY: What? What's she gonna tell us -- the guy we're looking for had a bad childhood? 
+ You know, not all sociopaths have bad childhoods. 
+ As a matter of fact, some law enforcement personnel exhibit the same characteristics. 
+ COLBY: Yeah, well, not this one. 
+ If it quacks like a Duc... 
+ DAVID: Defendant facing the death penalty in front of Trelane. 
+ Sort of fits the profile of a guy who might want to whack his judge, huh? 
+ Yeah. 
+ I'm sorry for the timing. 
+ Don't be, Agent. 
+ We both have our work to get to. 
+ Can you think of anyone who might have a motive for killing your wife? 
+ Someone who objected to her work for the American Heart Association or a fellow member of her horticulture club? 
+ This murder was an attack on me, on the bench. 
+ We both know that. 
+ And the case you're trying now... 
+ Duc Lu Phan. 
+ He's a leader of a local street gang. 
+ Facing you for the death penalty. 
+ I realize that, but if I talk to you any more about him, I'll have to walk away from the case. 
+ All right, well, we're going to try to run it down another way, but you should be prepared for that. 
+ I'm sure his lawyer will make a motion to have me step aside, but I'd rather make that decision on my own. 
+ Yes, I-I understand. 
+ Violence and tragedy -- they walk through my courtroom five days a week, and I assign them values. 
+ Your grief is worth five years, hers is worth 20. 
+ One of those decisions killed Alison. 
+ What is my grief worth? 
+ So, what's "JFM," Duc? 
+ Name's Danny. 
+ Danny. Well, then, what's "JFM," Danny? 
+ It stands for "Just For Money." 
+ It's an L.A.-based Vietnamese street gang. 
+ Community support organization. ( David scoffs ) 
+ The "community support" includes the kidnapping and murder of Asian immigrants. 
+ COLBY: Yeah, okay, I got that right here. 
+ Wow, I see you were just convicted on multiple kidnapping and murder charges. 
+ Look at this -- the presiding judge is Franklin Trelane. 
+ Why am I not surprised? 
+ A judge's wife gets killed, you blame it on the guy you can find the fastest. 
+ You know, the fact is you are the name on everyone's lips. 
+ And, yeah, I wouldn't want to be you in Franklin Trelane's courtroom. 
+ That's exactly what I'm saying. 
+ I've got no motive to put a hit out on her. 
+ What about someone who's trying to do you a favor? 
+ What kind of favor would that be? 
+ That's exactly what I'm saying. 
+ Raymond. 
+ You mean Raymond Hmong, your number-two man? 
+ We've had a few beefs since I been locked up, but... 
+ But you get the needle, Raymond moves up to number one, right? 
+ It's my favorite G-man. 
+ Nadine. You know, I was just thinking about you. 
+ Yeah? Yeah. 
+ What was I wearing? 
+ Well, actually, I didn't get that far, but... 
+ Well, that sounds familiar. 
+ What are you doing down here? 
+ Uh, Judge Trelane. 
+ Oh, you're investigating his wife's murder. 
+ Oh, yeah, that's right. 
+ Actually, you're in front of him for Duc Lu Phan, aren't you? 
+ Yeah. I didn't think he'd be able to get back to work so quickly. 
+ I guess he just wants to do his job. 
+ What do you make of all this? 
+ Could it have been Phan who ordered the hit? 
+ Yeah. 
+ Well, he's certainly violent enough. 
+ But I really hope it wasn't him. 
+ Well, I didn't expect to hear that from someone who's trying to get him the death penalty. 
+ If Trelane thinks that Phan's responsible for his wife's death, he's going to have to recuse himself... 
+ If he can't render a decision, it's going to lead to a mistrial. 
+ And a waste of about seven months of my life -- not that I've actually had much of a life the past seven months. Tell me about it. 
+ I think I know what you mean. 
+ So, I heard Terry Lake transferred to Washington. 
+ Uh, yes, actually, I guess she wants to give her marriage a second shot. 
+ Have you had lunch yet? 
+ No, I haven't. 
+ But, uh... Hey! 
+ CHARLIE: Perfect timing. 
+ Hi. What are you doing here? 
+ I... Well, what do you think? I'm here looking for you, right? 
+ Can you give me a ride home? 
+ Yeah. I-I'm sorry. Thank you. 
+ Nadine Hodges, this is my brother Charlie. 
+ Oh, hey. 
+ Uh, I was at the DMV. 
+ They gave me my learner's permit back again. 
+ Uh-oh. Again?! 
+ Yeah, I may have mishandled my learner's permit the first time around. 
+ Although I still take issue with the methodology utilized in radar speed detection. It is, uh... 
+ Did you get through Trelane's files? 
+ He's working with you on this? CHARLIE: Yeah. 
+ I think I'm onto something. 
+ All right. I got to deal with this. 
+ How about a rain check, okay? 
+ NADINE: Sure. All right? Sorry. 
+ Boy, I, uh... I could've just taken the bus back to CalSci and then went home. 
+ Yeah, well, you're about 15 seconds too late with that thought. 
+ Sorry. 
+ ( tires screeching ) 
+ What kind of biker gang doesn't ride Harleys? 
+ The urban kind. 
+ Besides, only investment bankers can afford Harleys anymore. 
+ Why am I going to kill the judge's wife? 
+ Well, even in jail, Danny still calls the shots, right? 
+ The only way for you to sit in the big chair over there is for Danny to go out of the picture, right? 
+ This is a family. 
+ We don't do each other like that. 
+ It's a family, huh? 
+ RAYMOND: You know what, bro? We're done here. 
+ No, no, no, you got it backward, Raymond. 
+ This conversation's over when we walk out of here. 
+ Tell you what, man. 
+ Why don't we run some of those serial numbers against the hot sheets? 
+ This ain't right, yo! 
+ ( engines roaring, tires squealing ) 
+ FBI! 
+ ( deliberately ): FBI! 
+ Back down or everybody gets arrested! 
+ DAVID: Federal agents! FBI! 
+ Let this go any further, Raymond, and everybody in here is going to end up with bullet holes. 
+ Now, I know I have better places to be tonight than the hospital. 
+ You got no warrant, you come in here on my treaty, and you want to step to me like that?! 
+ And we'll leave the same way, if you give us a choice! 
+ Anybody shows his gun, we do not have a choice. 
+ ( speaking Vietnamese ) 
+ Let him go. 
+ Good? 
+ Danny thinks you did it, Raymond. 
+ He pointed us in your direction to send you a clear message. 
+ The message is: cooperate. 
+ Understand? 
+ Cooperate. 
+ COLBY: Look, David, I get that you're senior agent, okay? 
+ But you could've backed my play in there. 
+ Man, it was a bad play. 
+ You can't sell wolf tickets to hard-core bangers. 
+ "Wolf tickets"? 
+ Granger, a badge isn't a magic wand, okay? 
+ You try to arrest people without cause, you back them into a corner, guess what? 
+ They're gonna fight you. 
+ ( motorcycle revving ) 
+ You say her name is Hodges? 
+ Yeah. Nadine. 
+ She seemed pretty interested in him, too, although I'm not really good at reading those kinds of signals. 
+ No, you're not. 
+ You know that term "dark matter"? 
+ That has always perplexed me. 
+ It fallaciously implies that the 95% of our universe that can't be observed is some amorphous, eventless, just, uh, emptiness. 
+ I'm sorry? 
+ I suppose it's all too human. 
+ Instead of just admitting to the present limits of our knowledge, we simply declare things to be unknowable. 
+ ALAN: This somehow relates to dating? 
+ I'm sorry; to reading signals. 
+ Oh. 
+ And, of course, to Rhonda Pickford. 
+ AMITA: I'm not familiar with her work. 
+ She had a crush on me in fifth grade. 
+ Oh. And, of course, girls in fifth grade suddenly became 95% unknowable. 
+ ( chuckles ) Isn't that the truth. 
+ I'm not following. LARRY: Oh, well... you see, I labeled her to be dark matter, and I just moved on to more accessible pursuits. 
+ Like, uh... 
+ ( chuckling ): ...Space Invaders, actually. 
+ So what happened to this, um, uh... Rhonda? 
+ Oh. She became a professional cheerleader. 
+ ALAN: Really? She did. 
+ Yes, she did. 
+ ALAN: I doubt that Don actually views women as dark matter. 
+ Well, she's a prosecutor. 
+ I'm sure he'll see her again. 
+ Actually, Don thinks there's a chance the man she's prosecuting may be behind the murder of the judge's wife. 
+ You know something? Under that reasoning, wouldn't that make this prosecutor just as likely a target? 
+ DAVID: Raymond Hmong has the motive. 
+ He's the number two, but I don't think he has the nerve. 
+ Yeah, well, Danny Phan's got the nerve for sure, but no motive. 
+ Problem is Colby -- he really pushed Raymond's buttons out there, you know? 
+ Okay, so? 
+ Look, just keep an eye on the JFM. 
+ ( sighs ) If we pick up that Hmong's making a move, then we hit them, okay? No problem. 
+ But this Colby, I mean, I think he's running hot. 
+ Yeah, well, before you say anything more, he was just in here bitching about you, so... 
+ And what are wolf tickets? 
+ It's a bad bluff, you know? 
+ It's "The Boy Who Cried Wolf." 
+ Don, I'm just trying to say Colby has this Army mentality. 
+ You know, he thinks everybody's a private who has to follow orders. 
+ Don, he goes in too hard... 
+ You know, David, you were the new guy last year, and you were too laid-back. 
+ Took you too long to take initiative. 
+ And you got better; you improved. 
+ Yeah, I just thought... COLBY: Guys. 
+ Hey, I was just coming to get you -- 
+ Don wants us to check out some gang intel. 
+ Yeah, well, might not have to. 
+ I just ran Trelane's address through LAPD dispatch database, see if there are any prowler reports or anything. 
+ And? 
+ Look at this: between May 2001 and June 2003, LAPD responded to five domestic disturbance calls at Trelane's residence. 
+ Apparently, they had some knock-down, drag-outs. 
+ No criminal reports filed? 
+ DON: Yeah, well, guy's a federal judge. 
+ No surprise there. 
+ No, but look: On two occasions, Trelane was instructed to vacate the premises. 
+ DAVID: We've been assuming the shooter was after the judge and got the wife by mistake. 
+ Yeah. We might be looking at this all wrong. 
+ Thing is, you neglected to mention your history of domestic disputes. 
+ Because that's what it was -- history. 
+ You ever been unhappy with your job, Agent Eppes? 
+ Yes, I have, sir. 
+ I'm talking about a kind of unhappy that takes an hour of silence and three drinks to come down from. 
+ Sitting in judgment does not come naturally to a reasonable man. 
+ The drinking got worse, and so did I. 
+ Well, we're talking about violence here. 
+ I was never arrested. 
+ You're a federal judge. 
+ Even at my lowest point, I never laid a hand on Alison. 
+ I was angry with myself, not with her. 
+ She called the police. Yes. 
+ And she left me. 
+ But that was my wakeup call. 
+ I've been in the program ever since. 
+ When did she come back? Last August. 
+ Our last year together was the happiest of our marriage. 
+ Look... knowing that she'd probably still be alive, that coming back to me and my work is what killed her... 
+ Do your job. 
+ Check my alibi, my bank accounts, whatever you need... and then find the b*st*rd that killed my wife. 
+ CHARLIE: So Bayes' theorem states that uncertainty, degrees of belief, can be measured as probabilities. 
+ Charlie, do you realize I spent two days putting these files in order? 
+ Yeah, right. Uh, newest to oldest. 
+ Why did you do that? 
+ Because a criminal is much more likely to act on his or her rage right around the time of conviction. 
+ You know, while the focus is still sharp? 
+ Couldn't the opposite hold true? 
+ A grudge festering over time, new developments aggravating it? 
+ It would depend upon the personality and the situation. 
+ So, if time functions differently on different people, then a chronological approach would be no more effective than choosing a folder at random. 
+ Okay, yeah, but you have to start somewhere. 
+ No. You have to start everywhere. 
+ These are report cards, okay? 
+ But we're not looking for the newest students, or the oldest. 
+ We're looking for the one with the highest grade point average. 
+ With the grades being for quantifiable behavior, such as the nature of the crime, the severity of the sentence, the potential for gain. 
+ Yeah, but this isn't just a handful of A's and B's, Charlie. 
+ These are really raw human motivations, like rage and revenge. 
+ Origami. 
+ ( groans ) 
+ In origami, there are six basic folds: mountain, valley, diagonal, fold and unfold; reverse, and turnover. 
+ Each fold is a simple, finite, imminently-quantifiable action. 
+ But the infinite number of combinations creates the possibility for an infinite number of forms. 
+ Decision theory contends that we should use the same basic criteria with every action we take. 
+ Risk, reward, consequence, and certainty. 
+ Human behavior is not that rational. 
+ ( chuckles ) Well, that's why my system is not meant to be a replacement for your skills. 
+ It's simply a tool... to help you use them... much more efficiently. 
+ ( laughs gently ) 
+ ( phone rings ) 
+ That's good. 
+ Reeves. 
+ Megan, it's David. We just heard from an informant. 
+ The JFM might take another shot at the judge. 
+ MEGAN: Does Don know? 
+ DAVID: He's at the courthouse now. 
+ What's up? Hey. 
+ We just got a tip that JFM are looking for payback. 
+ That could be Raymond Hmong just talking big for his gang members. 
+ Well, given the timing, we're taking the threat seriously. 
+ The marshals are going to put on additional men. 
+ We're gonna have a second metal detector out there, all right? 
+ Does Trelane know about it? Yeah. 
+ He's a brave man; he didn't let on in court today. 
+ Well, he wants everything as discreet as possible, so I'm going to supervise, all right? 
+ So we're going to be seeing a lot more of each other. 
+ Yeah. 
+ The marshals will give you 24-hour protection. 
+ Just make sure they have a copy of your schedule, okay? 
+ You hear me? 
+ Sure. I'll get right on that. 
+ ( agents yelling ) 
+ Get down! 
+ Get down! Get down! You! 
+ ( indistinct conversation ) 
+ Get down! Get down! 
+ ( tires screeching ) 
+ Don't do it, don't do it! Don't move! 
+ Don't move -- I'll put two bullets right in your back! 
+ Put your hands behind your back, Raymond! 
+ DON: So? 
+ Well, suddenly, Raymond here doesn't have much to say. 
+ DON: You understand what you're facing here, Raymond? 
+ Murder, attempted murder. 
+ I didn't murder no one. 
+ Come on, you killed Alison Trelane. 
+ What, you probably didn't realize that she was borrowing her husband's car that day, right? 
+ Then you went back to finish what Danny Phan sent you to do in the first place. 
+ I told you to cooperate, remember that? 
+ I want to know how Phan arranged for all this, you hear me? 
+ You testify against him and I'll see what I can do about the wife's murder. 
+ I didn't kill nobody. 
+ Self-defense. 
+ DAVID: Self-defense?! 
+ Trying to gun down an unarmed judge? 
+ Is that what a JFM soldier calls "self-defense" these days? 
+ I wasn't aiming at no judge. 
+ That bullet was for Danny. 
+ That bro gave me up to you, right? 
+ Ain't no way he gonna do me like that. 
+ Not with him in there and me out here. 
+ I'm gotta have my respect now, you know what I'm saying? 
+ So Raymond Hmong figures Danny Phan's trying to put the murder off on him. 
+ Well, I mean, you know, Hmong's DNA tested negative for the Trelane crime scene, so, that's the thing, he's not our guy. 
+ Well, on the bright side, Trelane's free to sentence Phan without having to recuse himself. 
+ Yeah, so you get your case back and I'm at square one with the wife's murder. 
+ So I guess we're not going to be seeing much of each other, after all. 
+ ( sighs ) 
+ You know, I had you written off earlier. 
+ And then what do you do, you go and you save my life. 
+ Aw, don't write me off. 
+ I just get focused on the work. You know. 
+ I don't know, Don. 
+ We always got along, timing never seemed right. 
+ I just thought... 
+ Anyway. 
+ Good luck with the case. 
+ Nadine, I hope you realize it's not about you. 
+ Oh, I know that. 
+ Good. 
+ Thank you. For today. 
+ And if you figure out the rest... you could take your chances. 
+ Okay. 
+ Okay. 
+ ( typing ) You know what? 
+ It's fun to be doing a little combinatorics again. 
+ Combina-what? 
+ Combinatorics. 
+ It's a branch of computer science. 
+ Mm. Amita's not satisfied with just one measly PhD. 
+ She's now moved on to astrophysics. 
+ MEGAN ( chuckling ): Well... a girl's got to have skills. 
+ And yet, somehow, we still get stuck with the typing. 
+ Well, you're familiar with the program. 
+ I'm not familiar with the program. 
+ Oh, well, this is where all the fun is, huh? 
+ Professor Fleinhardt. Hi, Larry. 
+ This is Megan Reeves. She's working with Don. 
+ Uh, hi. Hi. Hi. 
+ I hope you don't mind, I'm... Oh, no, not at all. 
+ You realize all your food is white? 
+ Mm, yes, I prefer white food. 
+ Why is that? 
+ Supersymmetry. 
+ It's a theory that describes the nature of connectivity in complex multidimensional space. 
+ You know, symmetry is also a term we use in behavioral science to explain obsessive behavior. 
+ Oh, is it now? 
+ I have a two-year-old nephew who won't eat anything but pasta with butter. 
+ We're a little worried he might be a budding scientist. 
+ CHARLIE: Larry has a tendency to live out his theories. 
+ MEGAN: Oh. 
+ Amita, are you ready to show us a 3-D scatterplot distribution of all the relevant cases? 
+ Sure. 
+ ( beeping ) 
+ It looks like a random buckshot of points. 
+ Except for a small number of cases that stand out. 
+ MEGAN: Wow. 
+ That's a lot less files than I originally gave you. 
+ Yeah, and we're not even done yet. 
+ Amita... do you think you can filter the rest through something... like this? 
+ It looks kind of like decision theory. 
+ It's reverse decision theory, actually. 
+ In decision theory, options are evaluated by risk and reward. 
+ LARRY: Corporations use it to weigh business plans, what products to develop, what companies to do business with. 
+ Like a hunter searching for food. 
+ He's constantly evaluating his terrain, his available prey, and rival predators... 
+ ( growling ) 
+ ...weighing them against his own appetite, his own strength, his needs, until he makes what he considers an optimal decision. 
+ ( gunshot ) 
+ However, with reverse decision theory... 
+ LARRY: You take the optimal goal, and you reverse the process. 
+ In other words, you start with the final decision? 
+ The murder of Alison Trelane. 
+ That's right. 
+ And then, determine which predator is most likely -- by inclination, by opportunity -- to have made that decision. 
+ ( beeping ) 
+ MEGAN: Charlie's work distilled our suspects down to two. 
+ My lawyer didn't give me adequate representation. 
+ I got stuck with an incompetent, underpaid public defender. 
+ I'm completely innocent of these charges. 
+ Number one is Orson Hardee. 
+ However... if I were to meet the guy who killed that cop, I'd buy him a beer for a job well done. 
+ ( remote control beeps ) 
+ All right, so Hardee's a cop killer. 
+ He shot Detective Josh Kalen in a drug deal in 1994. 
+ Trelane was the judge. 
+ The jury came back in less than an hour. 
+ Since his conviction, he's become a jailhouse attorney. 
+ He's filed 16 appeals, all of them denied. 
+ Now he's gunning for a new trial in front of Trelane, and Trelane's not buying it. 
+ So, what, kill Trelane, he gets a chance at another judge? 
+ Perhaps. 
+ Number two is Lance Dolan, currently wanted on a bench warrant for assault. 
+ LAPD believes he's still in the area. 
+ Well, I don't see Trelane's name here. 
+ 'Cause Lance Dolan has never been to court with Judge Trelane. 
+ CHARLIE: However... what's significant is Lance Dolan was the only name that entered the data pool through a Crimestopper tip. 
+ Oh, so you're saying an informant says this guy killed Alison Trelane. 
+ Yes. And we're running down that angle, but his psych profiles are in line with this kind of act. 
+ But the only thing that connects them is the tip? 
+ There are only two cases that spiked extremely high values in my analysis: 
+ Orson Hardee, Lance Dolan. 
+ Well, I mean, I don't see a motive. 
+ Yeah, but, Don, what if you had no motive, but you had, like, a... partial fingerprint? 
+ Follow the evidence. 
+ So what's the difference between my math and a partial fingerprint? 
+ And, at this point, the Asian gang is a dead end. 
+ 
+ 
+ 
+ ( Don sighs ) 
+ All right, well, we'll see what David and Colby come up with about the tip, but, meanwhile, we should be looking at this guy. 
+ Hard. 
+ It was a drug deal that went bad. 
+ Only when this animal, Hardee, realized Josh was a cop, he just shot him. 
+ Just shot Josh in cold blood. 
+ Have a seat. Thanks. 
+ Well, I'm very sorry. 
+ Have you heard from anyone connected to Hardee? 
+ Phone calls, threatening letters, anything like that? 
+ You think he's coming after me now? 
+ He's not going anywhere, but you've been very vocal about keeping him in prison, and we just would like to take precautions. 
+ Right. I understand. 
+ ( wry laugh ) 
+ It never stops. 
+ Even with my husband's pension, I had to work two jobs to keep this house. 
+ My daughter ran away the day she turned 17. 
+ My son would be in jail if some of Josh's friends on the force hadn't stepped in. 
+ People need to see all of Hardee's crime, not just Josh's murder, but what it cost his family. 
+ And you've been at all the court dates, huh? 
+ Every hearing, every appeal, but, each time, it gets a little harder. 
+ People don't want to remember. They want to forget. 
+ Forget about what this man did to Josh. 
+ But I won't let them. 
+ So Charlie tells me you were shot at this afternoon. 
+ Huh? Again? 
+ Oh, yeah? 
+ Well, what Charlie should've said was, it was more like... 
+ I was in the vicinity of the shooting. 
+ Let's put it that way. 
+ He saved this prosecutor, and yet, he still won't ask her out, for some reason. 
+ Really? What's the problem? 
+ Yeah, she's hot, man. She's perfect. 
+ She's not perfect. She's interested in you. 
+ You said she was perfect. No, I didn't. 
+ So, now, you date only women who have something wrong with them? 
+ I'm not dating anyone. 
+ So I noticed. Yeah, what's that about? 
+ Look, you know, with what I do, relationships are, they're... they're just not easy, okay? 
+ Would you just trust me? 
+ ALAN: Come on, Don, just because something might go wrong doesn't mean that you don't take a shot. 
+ You don't know what you're talking about, okay? 
+ It's more complicated than that. 
+ Among other things, I... I don't want to put anyone at risk. 
+ I don't want to be a risk for someone. 
+ You understand? ALAN: I see. 
+ Which means that police, and lawyers, and judges shouldn't get married? 
+ Yeah, well, look at Judge Trelane. 
+ Think I want to go through that? 
+ No, sir. 
+ Waitresses work on tips, Hector. 
+ You are Hector Machado, right? 
+ Maybe. 
+ We want to talk about Lance Dolan and the Alison Trelane murder. 
+ How'd you find me? 
+ Actually, we know quite a bit about you, Hector. 
+ Like how the LAPD says you have a knack for getting thrown in jail and hearing things. 
+ I don't know what you're talking about. 
+ Come on. 
+ So how about a phone call you made to a Crimestopper tip line? 
+ I thought that was supposed to be confidential. 
+ From the public, Hector, not from the FBI. 
+ You can't trust nobody no more. 
+ The name you gave: Lance Dolan. 
+ What can you tell us? 
+ Where's my 25 G's? 
+ ( pointedly ): Where's Lance Dolan? 
+ Figures. 
+ ( clears throat ) All right. 
+ I met the guy in a bar. 
+ He had that look, like someone who has something to say, so I got him drunk. 
+ Out of the kindness of your heart, huh? 
+ Story comes on the TV about the judge's wife, Dolan laughs, then he tells me there aren't gonna be any arrests made, as long as he gets some cash together, gets out of town. 
+ Being the good citizen that I am... 
+ I called the Crimestoppers line. 
+ Right. 
+ COLBY: Guys, I just got back from the LAPD warrant squad. 
+ Turns out Lance Dolan's got a girlfriend. 
+ Stacy Manning. 
+ Arrests for burglary, stolen property -- twice as his codefendant. 
+ Yeah? Where's she at? 
+ COLBY: Venice. 
+ We have her under surveillance, in case Dolan shows. 
+ See, that's the thing. 
+ We're basing all of this on the word of a career informant. 
+ CHARLIE: Well, no, it's not just based on the tip. 
+ It's also based on my analysis. 
+ Charlie, at some point, I'm gonna have to explain why I've got four agents chasing down Lance Dolan. 
+ And you know, as far as I can tell, from this equation... 
+ Expression, Don. 
+ What -- expression, equation -- you know, I don't understand why Dolan gets such a high number. 
+ MEGAN: Well, there's the tip itself, of course, and there's also his record, and the psych profile. 
+ CHARLIE: Sure, uh, but, um, there's also, um... 
+ What? 
+ Sometimes math finds something that we can't explain. 
+ And why Dolan is showing up as part of this case, I can't fully explain. 
+ It's, uh... it's pi. 
+ Pi? 
+ The ratio of circumferance to the diameter of a circle. 
+ Yeah, I know what pi is. 
+ Okay, but did you know that if you randomly drop needles onto a sheet of lined paper, the probabilty that a needle will cross a line relates directly to pi? 
+ It's call Buffon's needle. 
+ Pi appears in quantum mechanics, relativity theory, and number theory. 
+ But do you know why pi would show up in all of these seemingly unrelated places? 
+ Actually, I don't have a clue. 
+ Neither do I. 
+ No one does yet, but, although we can't fully explain pi, it keeps working. 
+ It keeps turning up. 
+ DON: So, you're saying that pi is like something that connects Dolan to Trelane, but we just can't figure it out yet. 
+ Lance Dolan's bench warrant. 
+ Guess who he's wanted for stabbing last year? 
+ Hector Machado. 
+ Oh, yeah. 
+ COLBY: Well, that could explain why Hector's so willing to snitch on Dolan. 
+ Or set him up. 
+ All righty. Well... 
+ Pi. 
+ DAVID: When you gave up Lance Dolan for Alison Trelane's murder, you left out a detail or two, man. 
+ Yeah, like the fact that he assaulted you last year. 
+ Lance and I did some business together. 
+ There was a falling out. 
+ DAVID: Falling out? 
+ The dude stabbed you, Hector. 
+ ( laughs ) 
+ COLBY: Hector, how long did you think it was gonna take us to figure that out? 
+ I wasn't really sure. 
+ Look, there's no love lost between us, but one thing ain't got nothing to do with the other. 
+ And you can check the court records. 
+ Lance got busted for stabbing me based on other witness accounts, not mine. 
+ I never said word one against him. 
+ Until now. 
+ Well, now, he's worth $25,000. 
+ ( laughing ) 
+ Hector could just be trying to get revenge against the guy who stabbed him. 
+ Or he could be telling the truth. 
+ DON: Hey, Megan, where are we on Orson Hardee? 
+ I was just going over this with Charlie. 
+ Hardee is a sociopath who brags about killing a cop, and then won't admit it. 
+ He files legal documents to prove his legal acumen... 
+ And if he put together the hit on Trelane from prison... 
+ His intent would be to let us know. 
+ Which brings us to Dolan. 
+ I mean, if we believe Hector, but, I mean, as far as I can see, Dolan's got no motive. 
+ Even though Dolan has no apparent motivation, my analysis still says he's a suspect. 
+ DAVID: Still no sign of Dolan at the girlfriend's house, either. 
+ Look, we got to find this guy already. 
+ Did you see if Hector could help us on that? 
+ We'll find out. Let's do it. 
+ And Charlie, will you just go over this with me? 
+ Certainly. 
+ Hey, Larry, what brings you here? 
+ Oh, I had some work to go over with Charlie, but he couldn't get away from here, so, the mountain comes, yet again, to Mohammed. 
+ Oh, yeah? So, it's not the coffee then, huh? 
+ Oh, oh, it is bitter. 
+ Splenda. 
+ Oh. Hey, Don, are you... are you familiar with, um, quantum entanglement? 
+ Uh, I don't think so. I'm not sure. 
+ Okay, it's a theory that holds that photons come in pairs, that are separated by space and time, but always in instantaneous, inexplicable communication. 
+ Einstein calls it, uh, "spooky action at a distance." 
+ But, you know, I find it... 
+ I find the notion fairly romantic. 
+ How so? 
+ Well, uh, I mean, we affect each other. 
+ Even when we don't mean to, even when we don't want to, we're connected, you see, even when we try to be unaffected. 
+ Why do I get the feeling you're talking about my love life? 
+ Don, the universe is accelerating at such a rate that, some day, eventually, it will all fly apart, and all matter will just drift alone and become disconnected. 
+ And how sad that would be if human beings were to behave in a similar fashion. 
+ ( stammering ): And after considerable inner debate, I find that the risks of human contact are more than compensated for by the rewards. 
+ I'll keep that in mind. 
+ That was not clear. 
+ ( phone keypad beeping ) 
+ COLBY: You know this guy, right? So, this should be easy. 
+ When she answers, ask for him. Nothing fancy. 
+ ( phone line ringing ) 
+ Yeah? 
+ HECTOR: Is this Stacy? 
+ STACY: Who is this? 
+ Hector. I'm a friend of Lance's. 
+ I need to talk to him. 
+ He's not here. 
+ Tell him I heard the Feds are looking for him. 
+ STACY: I don't know when I'll see him. 
+ Whatever. Just tell him I called. 
+ Think I did pretty good? 
+ ( keypad beeping ) 
+ ( phone line ringing ) 
+ She's making the call. 
+ LANCE: What? 
+ The Feds are coming. I think that guy Hector gave you up. 
+ Now, why she assumes... Shh! 
+ Leave right now, come pick me up. 
+ Okay. 
+ That's it. 
+ ( engine revving ) 
+ ( tires squealing ) 
+ ( tires squealing ) 
+ Hurry up. Come on. 
+ ( sirens blaring ) 
+ Put your hands on the dashboard! 
+ You hear me? 
+ Get 'em up, right now! 
+ Don't move. 
+ Don't move an inch. 
+ Get out of there. 
+ ( grunts ) 
+ Bring your hands behind your back, thumbs up. 
+ Ah, looks like we found the gun that killed Alison Trelane. 
+ Really. Go figure. Let's go. 
+ Who? 
+ Alison Trelane. 
+ We have DNA. 
+ We have your shotgun. 
+ Oh. And what kind of deal do you have? 
+ Look, we don't need a deal, Lance. 
+ MEGAN: You killed a judge's wife. 
+ Can you think of a defense attorney in town who's gonna want to wear that bull's-eye on his back? 
+ I didn't know who she was. 
+ Mrs. Trelane? 
+ I figured it was just some guy who wanted to get rid of his wife. 
+ You're saying Judge Trelane's involved? 
+ I should have known better. 
+ Lance, what are we talking about here? 
+ It was a straight contract: 
+ 5,000 down, 5,000 after. 
+ I just thought it was some guy's wife. 
+ ( auto-dial beeping ) 
+ Charlie, I can't talk, all right? 
+ We just picked up Lance Dolan. 
+ Oh, good, because I've reevaluated my analysis, and what's significant is, the algorithm wasn't indicating Dolan or Hardee. 
+ My math was connecting the two cases. 
+ That's why Dolan spiked in the first place. 
+ Don, these results clearly indicate that there's a common denominator. 
+ Something connects Dolan to Hardee. 
+ Yeah, we know, Charlie. 
+ I'm looking at him right now, okay? 
+ I'm gonna call you back. 
+ ( over speaker ): They have Lance Dolan talking next door. 
+ COLBY: That's right. 
+ And the first name that came out of his mouth was yours. 
+ Yeah, well, we do have a history. 
+ Yeah, you do. Alison Trelane. 
+ Contract killing that you set up. 
+ I'm gonna give you five seconds to give me a name. 
+ Otherwise, I'm gonna go grab Lance Dolan, and put him in here, and let the two of you guys figure it out yourselves. 
+ ( quietly scoffs ) 
+ You think I'm selling wolf tickets, man? 
+ Try me. 
+ You got nothing on me. 
+ I made an introduction. That's all. 
+ DAVID: You made an introduction to who, man? 
+ HECTOR: I don't owe anything to Lance Dolan. 
+ I did to Josh Kalen. 
+ Josh Kalen? 
+ You mean Detective Josh Kalen? 
+ The cop that Orson Hardee murdered? 
+ Kalen took care of me for a lot of years. 
+ Treated me like a real person. 
+ COLBY: So, you kill Trelane's wife after he sent his murderer to jail? What...? 
+ I told you, I introduced them. 
+ Anything happens after -- that's got nothing to do with me. 
+ Conspiracy law. You could look that up. 
+ Who the hell are you talking about, Hector? 
+ HECTOR: I did everything I can. 
+ Kept out of this as long as I could. 
+ Who? 
+ Agent Eppes? 
+ Mrs. Kalen, you're gonna have to come with me. 
+ Bring your hands behind your back, thumbs up, please. 
+ I don't suppose you could let me put these away first. 
+ Hands behind your back. I'm sorry, no. 
+ Ten years of trials and appeals. 
+ Parole hearings. My stomach in knots. 
+ Always wondering if this was the time Orson Hardee would go free. 
+ Judge Trelane put the guy in prison, ma'am. 
+ Trelane kept the man who slaughtered my husband alive. 
+ The jury recommended the death penalty. 
+ Did you know that? 
+ Only... Trelane overruled them. 
+ With that one decision, he destroyed my family. 
+ Hardee killed your husband. 
+ But it was the judge's decision that forced us to relive it. 
+ With every appeal, my children had to relive their father's murder. 
+ And now Hardee wants a new trial? 
+ I just... I couldn't put them through that again. 
+ Why the judge's wife? 
+ So Trelane would know what it's like to lose someone. 
+ So maybe he'd think twice about the next killer he goes easy on. 
+ Watch your head, please. 
+ "Goes easy on"?! 
+ I tortured myself over that decision. 
+ I wanted to help her. 
+ Give her closure. 
+ Yeah, it's just that Hector Machado was one of her husband's informants. 
+ I think she got his name out of one of his old snitch books. 
+ I had a responsibility to the law. 
+ I hope you know her death is not your fault. 
+ Eventually, I might believe that. 
+ I don't think I could ever stop blaming myself for all the time I wasted being drunk, angry, busy, when I really wasn't. 
+ In spite of everything, I... 
+ I still love my job. 
+ I just should have loved my life a little more. 
+ ALAN: Okay, Don, it's time to eat. 
+ Hey. You eat dinner yet? 
+ Lobster at the Oceanfront. Charlie's buying. 
+ Let's go. I'm driving. 
+ Yeah, well, that's not an incentive. 
+ ALAN: Which is why I need a witness. 
+ Insurance purposes, you know? 
+ Nadine... this is my father Alan, and, uh, Charlie you know, right? 
+ Charlie, good to see you again. How you doing? 
+ I need to grab something out of my car. 
+ Can I just meet you out there? 
+ I'll be two seconds. All right. 
+ Nice to meet you. You, too. 
+ Good seeing you again. 
+ ALAN: Wow, she is one hot-looking prosecutor. 
+ All right, easy there, Pop. 
+ I know I'm your father, but she's still one hot-looking prosecutor. 
+ DON: I'm trying to figure out what to do about Hector Machado. 
+ I mean, this guy might end up collecting reward money for reporting a crime that he probably arranged. 
+ So, it's a working dinner. 
+ Which explains the professional working dinner cologne. 
+ I never ruled out the possibility of some kind of quantum entanglement. 
+ Hmm? That's not one of mine. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,921 @@
+Transcripts - Forever Dreaming :: 02x04 - eps2.2_init1.asec - Mr. Robot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x04 - eps2.2_init1.asec https://transcripts.foreverdreaming.org/viewtopic.php?f=303&t=28124 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 07/28/16 04:43 ] 
+ 
+ 
+ Post subject:  
+ 02x04 - eps2.2_init1.asec 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ You guys are acting like we're walking towards doomsday here. 
+ It does say, "End of the world party." 
+ (CROWD CHANTING) 
+ He's dead. 
+ Did anyone see you? 
+ We started a movement! 
+ Get back on a terminal now! 
+ We need to find someone who can do that migration thing he keep talking about. 
+ You play chess? 
+ I'm looking for a good adversary. 
+ Sharon, how do you not blow your brains out being married to him? 
+ Do you want to go have a drink? 
+ We're not to be seen together You've been parked in the lot for the past two days. 
+ How long have you been asleep? 
+ There she is... a ray of sunshine in the dark void of my existence. 
+ Washington Township toxic waste scandal. 
+ You want to take Internet gossip to federal court and throw it at the strongest conglomerate in the history of civilization. 
+ Jim and Saul were both in the room with Colby covering up the leak in your hometown. 
+ Their lives will be destroyed. 
+ The minute you remove emotion from this, you'll do just fine. 
+ (KNOCKING AT DOOR) 
+ (KNOCKING AT DOOR) 
+ (KNOCKING AT DOOR) 
+ (LIGHT TAPPING AT DOOR) 
+ (BANGING AT DOOR) 
+ Trick-or-treat? 
+ Found it in a 99¢ shop in Chinatown. 
+ I didn't know they actually made a mask from that movie, did you? 
+ When'd you get back to the city? 
+ Well, it's Halloween. 
+ Seeing as though that used to be our thing, I thought I'd hit you up. 
+ "Great, Darlene, haven't seen you in a long time either. 
+ I'd love to hang out." 
+ Next time you should call first. 
+ I'm going out. 
+ (LAUGHS) Come on. 
+ You don't go out. 
+ I don't mean that in a cunty way. 
+ I just mean, you know, you're you. 
+ Look, if this is you needing a place to stay, then you can crash on the couch. 
+ Init 1. 
+ I wouldn't say that if I wasn't being serious. 
+ Please. 
+ Hang out with me tonight. 
+ For real. I need this. 
+ Do you have to wear that grody old mask? 
+ It's totally nasty. 
+ It's father's. 
+ He wore it on his yacht five New Years ago. 
+ We were a mile off Catalina? 
+ Duh, it was the night uncle Conrad threw himself overboard. 
+ All because Dad got the business. 
+ Boo-hoo. 
+ I mean, clearly what the film is doing is debunking the notion that American society is classless. 
+ Meritocracy my ass. 
+ Long live the oligarchy! 
+ Whatever, can you just take the mask off? 
+ It's freaking me out. 
+ God. 
+ It's like us and the three seeders are the only idiots to actually watch this thing growing up. 
+ This is definitely the root of all our psychological dysfunction. 
+ Fashionably late. 
+ Screw that. 
+ I hate our friends. 
+ You still having them? 
+ Why is that always your go-to with me? 
+ I mean, trust me, in this day and age, it's sicker not having panic attacks. 
+ Since when did pretending everything's okay suddenly become the almighty norm? 
+ (ROCK MUSIC) 
+ I can write you a check. 
+ ♪ ♪ 
+ Okay, I don't normally say this, but I have got to Instagram this. 
+ People need to know this movie exists. 
+ (SCREAMING) 
+ I'm really into papadam these days. 
+ What about you? You want to do Indian? 
+ I hacked Postmates' proxy that supports the APN for my boyfriend's cell carrier. 
+ Now it does a URL rewrite and sends every postmates.com request to my affiliate link, meaning I get $10 coupons every time a sucker orders anything. 
+ What's your deal? 
+ That lame infosec gig scared you straight? 
+ No, man. 
+ Got fired. 
+ Now I'm seeing a shrink. 
+ Hold the f*ck up. 
+ What does a shrink have to do with this? 
+ I was on this project, pen testing. 
+ Kept finding holes in the system. 
+ Wasn't my fault they sucked, but it was my job to keep hacking till it was hacker-proof. 
+ I think it was the night of Memorial Day weekend. 
+ Everybody wanted to go home... to their parties, their clubs, their vacations. 
+ But they couldn't. 
+ Because of me. 
+ So when they couldn't lock down the servers they decided to lock down my ass instead, in the server room. 
+ After a few hours, I fell asleep. 
+ Woke up. 
+ All the servers in the room were destroyed. 
+ I didn't remember doing it. 
+ Judge made me go to therapy for anger management. 
+ Guess it's official. 
+ I'm crazy. 
+ You want to know who's crazy? 
+ Those Wall Street psychos. 
+ Okay? You'll find something better. 
+ Angela's trying to hook me up with a job at Allsafe. 
+ You see Mom? 
+ Not really. You? 
+ f*ck no. 
+ She still sh1ts on Dad every time I talk to her. 
+ I wish I remembered him better. 
+ You want to see something? 
+ (DRAMATIC MUSIC) 
+ ♪ ♪ 
+ Holy sh1t. 
+ Is this... 
+ ♪ ♪ 
+ Put it on. 
+ Put it on. 
+ ♪ ♪ 
+ Oh, yeah... okay, wait. 
+ ♪ ♪ 
+ Put this on too. 
+ ♪ ♪ 
+ Why? 
+ Because I asked you to. 
+ ♪ ♪ 
+ (LAUGHS) 
+ Maybe I should take the job at Allsafe. 
+ I could be a Trojan horse. 
+ ♪ ♪ 
+ Be a good way to take them down. 
+ Who? 
+ ♪ ♪ 
+ Evil Corp. 
+ ♪ ♪ 
+ Okay. (LAUGHING) 
+ ♪ ♪ 
+ I can't tell if you're joking behind that mask. 
+ ♪ ♪ 
+ With the right access, install the right malware... 
+ ♪ ♪ 
+ Trash their backups, we could corrupt all their data. 
+ I bet it wouldn't even be that hard. 
+ No. 
+ No, the hard part would be after, during the fallout. 
+ That's the key. 
+ The follow through. 
+ They'd have an opportunity to reset, rebuild their database. 
+ We couldn't let them. 
+ It'd be tempting to lay off them afterwards, but that's when you have to go in for more. 
+ The public's confidence in them would have to be completely destroyed in order to really finish them off. 
+ ♪ ♪ 
+ That's the only way it would work. 
+ ♪ ♪ 
+ Dude, you're freaking me out. 
+ ♪ ♪ 
+ I mean, don't get me wrong. 
+ Taking them down would... 
+ Change the world. 
+ ♪ ♪ 
+ Is this something you've actually thought about? 
+ ♪ ♪ 
+ You there? 
+ (DRAMATIC ORCHESTRAL SWELL) 
+ (HAUNTING CHORAL MUSIC) 
+ ♪ ♪ 
+ God. 
+ I will never understand why you did this. 
+ Asking for help was never Darlene's strong suit. 
+ But then again, is it anyone's? 
+ An admission of weakness. 
+ But you can't avoid the simple truth. 
+ The only way to patch a vulnerability is by exposing it first. 
+ It's good for me here. 
+ Better than back at my place. 
+ It's cool. 
+ I mean, I don't get it, but I don't have to. 
+ The flip side being that exposing a vulnerability leaves you open for an exploit. 
+ I have to tell you something. 
+ It's pretty f*cking metal though, and I don't know if you're gonna be able to deal after the whole Gideon thing. 
+ I know what you've been doing, Darlene. 
+ I see the news. 
+ That's not even the half of it. 
+ You need to stop. 
+ It's too dangerous. 
+ Don't give me that. 
+ The things we're doing, Elliot... the things I'm doing to complete our mission... you'd be proud if you only knew. 
+ We have something big planned for the bailout vote in D.C. 
+ No. 
+ No more. 
+ We're on the other side of something we never signed up for. 
+ My boss was killed. 
+ I mean, what did you guys expect was gonna happen, exactly? 
+ You thought everything was gonna be hunky-fucking-dory? 
+ They'd go quietly into the night? 
+ You said it yourself before we even started. 
+ The hard part would be after, not the during or before. 
+ (SOMBER MUSIC) 
+ ♪ ♪ 
+ That wasn't me. 
+ ♪ ♪ 
+ That was him. 
+ ♪ ♪ 
+ Well, then maybe I need him right now, because what I'm seeing in front of me isn't helping. 
+ She's not telling me something. 
+ She wants my help, but she's not being honest about what. 
+ This is what she does. 
+ I mean, the things we're doing, Elliot... 
+ This is her default. 
+ ♪ ♪ 
+ (TENSE MUSIC) 
+ All right, I'm gonna show you something in here first. 
+ ♪ ♪ 
+ Found it kind of curious he only printed out a few pages of the FBI roster. 
+ Turned out there was a name on each page from the New York office, including me. 
+ Common thread among them was that we all interviewed Gideon Goddard. 
+ Still don't know what it means. 
+ ♪ ♪ 
+ They were definitely stealing power. 
+ They found a cable running from a municipal power source. 
+ We're still looking into Internet. 
+ ♪ ♪ 
+ The whole party was on social media. 
+ You really like this place for our guys? 
+ An arcade with the goddamn sign outside? 
+ They're hackers. Brazen. 
+ They believe in hiding in plain sight. 
+ This is just... too stupid. 
+ Well, what does that say about us, then, that we're just now finding it? 
+ We're bringing in all the people from these photos, cross-checking all social media, Facebook, Twitter. 
+ So they threw a party. So what? 
+ Everyone threw one of these "end of the world" parties that night. 
+ What about the flyer? 
+ We checked on the DJ name, Mobley. 
+ Appears to be a DJ out in Vegas. 
+ Just your average, middle-of-the-road player. 
+ Nobody of note. 
+ He was doing a show out there at Caesar's that night. 
+ It checks. I'm not sure of the connection. 
+ Why don't you just break it down for us, Dom? 
+ What hard evidence do we actually have here? 
+ Found this tucked behind that "Mallard Murder" game over there. 
+ How do you know no one followed you? 
+ They think I'm in a yoga class. 
+ Trust me. 
+ He's very good at this. 
+ This is no way to live. 
+ They keep asking me questions, over and over. 
+ They don't stop coming back. 
+ I promise you. You're safe. 
+ I don't feel it. 
+ I don't feel it. 
+ I should have never agreed to this. 
+ Kareem, tell me what this is really about. 
+ I've paid you well every week. 
+ What good is that to me if I'm dead, huh? 
+ Look what happened to the Allsafe guy. 
+ They could kill me too! 
+ I should have never got mixed up with you. 
+ I should have just came clean from the jump. 
+ My husband will return soon, and this will all be over. 
+ Listen. 
+ I'ma keep telling your story, all right? 
+ But if sh1t goes down and I get busted, I'm not gonna get locked up. 
+ You feel me? 
+ They lowered the daily allowance to 50 bucks a day. 
+ That's no way to live; I can't live like that. 
+ (SIGHS) 
+ Speak. 
+ Ma'am, we're running low on funds. 
+ I don't know how much longer we can afford. 
+ E Corp still hasn't released your husband's severance package. 
+ The FBI was specifically told not to put a hold on any of that money... 
+ It's not the FBI, ma'am. 
+ We can't afford to keep this guy quiet. 
+ I'm done with this topic. 
+ I place myself in alignment with the things I want. 
+ I place myself in alignment with the things I want. 
+ (SOOTHING MUSIC) 
+ (MOUTHING WORDS) 
+ I dissolve all false messages. 
+ I dissolve all false messages. 
+ ♪ ♪ 
+ My beliefs create my own reality. 
+ My beliefs create my own reality. 
+ ♪ ♪ 
+ All of my dreams are coming true right now. 
+ All of my dreams are coming true right now. 
+ (CHESS PIECE THUNKS) 
+ Hmm. 
+ Not gonna lie. 
+ You could use some practice. 
+ Your move. 
+ You know the definition of insanity? 
+ He clearly doesn't know who he's talking to. 
+ Rather than repeating your mistakes, you should develop your game a bit. 
+ And you're gonna teach me? 
+ No. 
+ You are. 
+ Take the board. 
+ Play yourself. 
+ Practice. 
+ Who knows, you might beat yourself. 
+ What's the point of that? 
+ Because there's something on your mind. 
+ It's been there since I first met you. 
+ What? 
+ Like I was behind the biggest hack in the world, which also led to the death of my... 
+ I can tell you thinking about it right now. 
+ And it burdens you. 
+ No sh1t, it burdens me. 
+ But I'm trapped by it, aren't I? 
+ Look, I'm no Catholic, but I do believe in confession. 
+ I've done some dark sh1t myself, and it took real... cleansing to get me through it. 
+ I can help, if you want. 
+ What you say to me stays here. 
+ Talking doesn't really help me. 
+ You can't keep the talking just in your head, bro. 
+ At some point, you got to try to make sense of it. 
+ What if I do tell him everything about what I did? 
+ Krista doesn't even know that much. 
+ What if I could talk to someone about this? 
+ Maybe he's right. 
+ Maybe it could help. 
+ Finally unburden me from... 
+ You tell him anything, and I will personally find the tallest building in the city and swan dive off of it. 
+ Ray has a point. 
+ I can't hold this in any longer. 
+ It's eating away at me. 
+ You confess, he goes to the law. 
+ So what? 
+ I'm okay with being on the hook. 
+ I'll own it all. 
+ And maybe it'll even stop Darlene from doing any more crazy sh1t. 
+ At this rate, she's gonna end up just like Gideon... 
+ What do you think the Dark Army's gonna do with the knowledge that you're all turncoats? 
+ There's no play here. 
+ You want to unburden yourself? 
+ Go jerk off. 
+ This... it's just a road paved with your dead friends and family. 
+ You need that game a lot more than I thought. 
+ Jim Chutney, SVP of B.A., and Saul Weinberg, managing director of operations, were arrested in broad daylight at the E Corp offices. 
+ Both men... 
+ Guys like this, they work in long games. 
+ I gave you information he gave me, and the next day you had these guys arrested, which means at every move, he has followed through on exactly what he's offered. 
+ He's given me everything I wanted. 
+ I have a nice apartment, a nice job. 
+ He had no leverage against me before, so he created it. 
+ So you're saying everything he's been doing is so that he can use it against you? 
+ What about all that stuff you said about them valuing you? 
+ You're the one that thought it was suspicious that they offered me a job in the first place. 
+ I am giving you an explanation. 
+ He's trying to negotiate. 
+ If he's creating leverage, it means that he needs something from me. 
+ The drafts of the settlement negotiations... did you pull them? 
+ Let's look at them together. 
+ There might be something in there that we're missing. 
+ I don't trust those scam artists at E Corp's risk management division any more than you do, so I can assure you if there is something suspicious, our attorneys would have... 
+ I'm the thing that's missing. 
+ There's something about me in that agreement. 
+ That's why they haven't found it. 
+ You want to settle this thing once and for all? 
+ Hmm? 
+ (DRAMATIC MUSIC) 
+ ♪ ♪ 
+ (SIGHS) 
+ One game. 
+ I'll even let you have the first move. 
+ A game to end all games between us. 
+ We play, and the winner takes all. 
+ Winner takes all of what? 
+ (SIGHS HEAVILY) 
+ Us. 
+ You win, you can confess to the JFK assassination for all I care. 
+ I'll leave and never come back. 
+ ♪ ♪ 
+ What would happen if I lose? 
+ You lose, I get to be in charge once and for all, and you? 
+ ♪ ♪ 
+ What about me? 
+ ♪ ♪ 
+ Remember the night of the hack? 
+ Remember what happened to you? 
+ All I remember is, I woke up in Tyrell Wellick's car three days later. 
+ And what happened in those three days? 
+ ♪ ♪ 
+ I don't know. 
+ That's what. 
+ The absence of knowing. 
+ Losing time forever. 
+ A deep, black void that you will never come back from. 
+ No thoughts. 
+ No body. 
+ No memories. 
+ Absolute nothingness. 
+ ♪ ♪ 
+ You're serious? 
+ You think I want this, Elliot? 
+ This futile battle we're in? 
+ Two halves at perpetual war? 
+ ♪ ♪ 
+ I want peace just as much as you do. 
+ Since we can't seem to find any common ground... 
+ ♪ ♪ 
+ Let's play for it. 
+ ♪ ♪ 
+ 
+ 
+ 
+ What are you thinking about? 
+ I'm thinking about his offer. 
+ Is he the only person you interact with? 
+ Don't worry. 
+ You're safe. 
+ Yes. 
+ Elliot... do you think I could talk to him? 
+ No. 
+ Why not? 
+ It would legitimize him. 
+ At this point, I think we have to accept the fact that he is a legitimate existence in your life. 
+ That's giving him too much power. 
+ In order for us to figure this out, we have to acknowledge... 
+ What do you want from me? 
+ You know everything. 
+ You want me to keep repeating myself? 
+ You want me to tell you that I see my dead father? 
+ That I talk to him? 
+ That sometimes I lose time? 
+ That there are gaps in my life where I don't know what happened? 
+ That I'm losing my mind? 
+ That I didn't even recognize my own sister? 
+ That I don't know how to control this thing? 
+ I don't know how to stop it? 
+ Fine! 
+ (WHISPERS) Yeah. 
+ Fine. I acknowledge it. But let's move on to the part where you actually help me. 
+ This game you are agreeing to is dangerous, Elliot. You are agreeing to destroy a part of yourself, win or lose, so yes, this matters a great deal, actually. 
+ For better or worse, he is a part of you that makes you you. 
+ Annihilation is not the answer. 
+ Krista's wrong. 
+ Annihilation is always the answer. 
+ We destroy parts of ourselves every day. We Photoshop our warts away. We edit the parts we hate about ourselves, modify the parts we think people hate. We curate our identity, carve it, distill it. 
+ Krista's wrong. 
+ Annihilation is all we are. 
+ I fail to see the logic. 
+ Why put all your faith in her when we have other options? 
+ Yes, yes. 
+ We could blow up the whole Western Hemisphere, but you know me. 
+ I'm old-fashioned. 
+ I always opt for the simpler path. 
+ Occam's razor and all that. 
+ Be that as it may, it is a slower path, and time is of the essence, Phillip. 
+ I want to remind you that closing the plant is not an option. 
+ And how many minutes have you allotted for this phone call? 
+ I didn't start this game. 
+ You did. 
+ I'm being pressured to resign. 
+ Confidence in the market is at an all-time low, and what are you up to? 
+ You're not doing anything on your end to help. 
+ I'm handling this. 
+ Just like I said I would. 
+ Have you spoken to the administration? 
+ Mm-mm, we're not there yet. 
+ President isn't desperate enough. 
+ We need the pressure to cook a little more. 
+ You assured me that the UN vote would be in full swing. 
+ You're the time master. 
+ You should know that while Rome may have burned in a day, it wasn't built in one. 
+ This will take time, painful as that is for you to hear. 
+ Hello, Scott. 
+ Why the f*ck are you in my home? 
+ Your housekeeper let me in. 
+ There seems to be a problem with my husband's severance package. 
+ That sounds like an issue for HR. 
+ Yes. 
+ I've spoken to them already. 
+ Several times, in fact. 
+ They claim they can't release it yet. 
+ Yeah, there seems to be a problem for me, too. 
+ I can't seem to find the person who murdered my wife. 
+ Bureaucracy is a bitch, right? 
+ You want my husband. 
+ I can understand that. 
+ And I would like the money I'm owed. 
+ So why don't we help each other, then? 
+ I'll testify my husband didn't come home the night of the murder. 
+ I left the party alone... didn't see him till the next day. 
+ I'll agree to that if you release the severance package. 
+ (LAUGHS DRILY) 
+ I need that money. 
+ I have a baby. 
+ Tyrell Wellick's baby gets what it deserves. 
+ Nothing. 
+ (Brook Benton's "Rainy Night in Georgia") 
+ ♪ ♪ 
+♪ Hoverin' by my suitcase ♪ 
+♪ Tryin' to find a warm place ♪ 
+♪ To spend the night ♪ 
+♪ ♪ 
+♪ Heavy rain falling ♪ 
+♪ Seems I hear your voice calling ♪ 
+♪ "It's all right" ♪ 
+ (TIRES SCREECHING) 
+ Whoa! 
+ Look out! 
+ What the hell? 
+ ♪ A rainy night in Georgia ♪ 
+♪ ♪ 
+ (GARAGE DOOR SLAMS) 
+ ♪ A rainy night in Georgia ♪ 
+♪ It seems like it's ♪ 
+♪ Raining all over the world ♪ 
+♪ ♪ 
+♪ I feel like it's ♪ 
+♪ Raining all over the world ♪ 
+♪ ♪ 
+ (INDISTINCT CHATTER) 
+ ♪ Taxi cabs and buses passin'... ♪ 
+ Give me your phone, or I'm walking. 
+ Jesus f*cking Christ. 
+ Phone, now! 
+ ♪ A distant moaning of a train ♪ 
+ Go two blocks up and into The Looking Glass. 
+ ♪ Into the night ♪ 
+♪ ♪ 
+♪ A rainy night in Georgia ♪ 
+ (Chromatics' "Into the Black") 
+ ♪ My, my, hey, hey ♪ 
+♪ ♪ 
+ Such an asshole. 
+ I had to make sure you weren't followed. 
+ What the hell are you talking about? 
+ No one's following me. 
+ The FBI found your arcade. 
+ That doesn't make sense. 
+ How'd they even know... 
+ I don't know. 
+ Maybe it has something to do with the dead hacker they found the other day? 
+ Yeah, I know about that, too. 
+ Okay, you got to tell me, and tell me right now. 
+ Is this Dark Army? 
+ Look, I can promise you from the communications I've seen that it's just... it's no way that it's them. 
+ There's just nothing in it for 'em. 
+ What's Elliot say about all this? 
+ He doesn't know about Romero. 
+ He's in a fragile state. 
+ We're past fragile, okay? 
+ This sh1t that we're in has f*cking shattered into a million little pieces. 
+ You got to tell him. 
+ What are you doing here? 
+ I wanted to make sure you were okay. 
+ Oh. 
+ Well, I am the f*cking opposite of okay, so tough sh1t. 
+ Hey... 
+ You want to help? 
+ Be a man and let me be upset, okay? 
+ ♪ ♪ 
+♪ The king is gone ♪ 
+♪ But he's not forgotten ♪ 
+♪ ♪ 
+♪ This is the story of Johnny Rotten ♪ 
+♪ ♪ 
+♪ It's better to burn out ♪ 
+ There's more. 
+ ♪ Than it is to rust ♪ 
+ Our contacts found out that Romero was researching the FBI when he got killed. 
+ You know you're still inside me, right? 
+ You got to understand, Darlene. 
+ It doesn't look good. 
+ The FBI is involved. 
+ It's making the Dark Army nervous. 
+ They think somebody flipped. 
+ Okay, get it together, dude. 
+ No one f*cking talked to the FBI. 
+ You can tell your pals to eat a dick, okay? 
+ Now get off already. 
+ Don't be this stupid. 
+ They found your spot. 
+ The spot is fine. 
+ We did a full wipe-down. 
+ They won't find anything. 
+ Yeah, well, they have something, and Romero must have found out about it. 
+ He had a printout with a roster of FBI agents on something called Operation Berenstain. 
+ ♪ ♪ 
+ And it looked top secret, possibly heavy surveillance. 
+ ♪ ♪ 
+ sh1t. 
+ ♪ ♪ 
+ Okay, what? What? 
+ So that's it then? 
+ They know us? We're under surveillance? 
+ No, no, no. I'm not saying that. 
+ ♪ ♪ 
+ I got to leave the city. 
+ Wait, hold on. 
+ If you or anyone in your crew takes off, that's one way to ensure you get killed. 
+ That will make you look guilty, and we know the Dark Army's blanket rule: they think the FBI's even snooping around, and it gets ugly. 
+ So just stop being a hard-ass for once, and just let me help you. 
+ ♪ ♪ 
+ How the f*ck did this happen? 
+ You seriously asking that? 
+ Do I need to remind you what you did? 
+ They called it the Good Samaritan Law on the account, like, you supposed to be helping people if they're in trouble. 
+ Like it was your duty and whatnot, and if you didn't then you get arrested. 
+ But yo, not only did the homies do jack sh1t, they also laughed at this fat dude while he was getting mugged, and I ain't gonna lie... that was f*cked up, but it was pretty funny, though. 
+ You staring at this thing. You want to play? 
+ No. 
+ It's not for you. 
+ So who's it for then? 
+ Nobody. 
+ You know, back in the Age of Enlightenment, M*therf*ckers used chess as a means of self-improvement, 'cause there wasn't no Tony Robbins DVDs back then. 
+ This was it. 
+ So what you playing for then? 
+ If there's no who, then what's the what? 
+ What's it for? 
+ Existence. 
+ Dope. 
+ Some high stakes right there. 
+ So what you waiting on? 
+ What? 
+ Do you dream, Elliot? 
+ You scraping so hard like you ain't ever asked yourself this before. 
+ I said, do you want to be here right now? 
+ And I don't mean, like, here-here, but I mean here in a cosmic sense, bro. 
+ Like, existence could be beautiful, or it could be ugly, but that's on you. 
+ How do I know which one's for me? 
+ Dream. 
+ You got to find out the future you're fighting for. 
+ Sometimes you got to close your eyes and really envision that sh1t, bro. 
+ If you like it, then it's beautiful. 
+ If you don't? 
+ Then you might as well fade the f*ck out right now. 
+ You, me, in Madrid, walking down Calle Atocha, sitting in Café Rollerie having a cortado. 
+ I have some friends who have a vineyard on the coast. 
+ They would love you. 
+ Oh, during the harvest, everyone goes there. 
+ It's beautiful that time of the year. 
+ What's wrong? 
+ (SNIFFLES) 
+ Was it something I said? 
+ Madrid. 
+ Do you really think you'll ever afford... you'll ever afford that? 
+ Well, maybe not now, but, like... hey, once I get my DJ career going, like, a lot of times they give you free trips. 
+ Like, for the jobs, and I... 
+ I can take you. 
+ Derek, do you know why I'm with you? 
+ Why I'm dating you? 
+ You're a bartender. 
+ You make $15 an hour. 
+ You're never gonna be able to take me to Madrid. 
+ You're never gonna be able to afford to take me anywhere. 
+ (DRAMATIC MUSIC) 
+ You won't be able to give me anything I want out of life. 
+ ♪ ♪ 
+ But I've had all those things before, and they never made me happy. 
+ That's why I love you. 
+ You're not any of that. 
+ And I don't need you to be anything more than you are. 
+ (SERENE MUSIC) 
+ ♪ ♪ 
+ If I do close my eyes, what is it that I picture years from now? 
+ Like Leon said, doesn't one need to understand that before they're ready to fight for their existence? 
+ ♪ ♪ 
+ How would my future fairy tale unfold? 
+ ♪ ♪ 
+ Will I finally connect with those I deeply care for? 
+ ♪ ♪ 
+ Will I reunite with old friends long gone? 
+ ♪ ♪ 
+ See the ones I love find true happiness? 
+ ♪ ♪ 
+ Maybe this future includes people I'd never dream of getting close to. 
+ ♪ ♪ 
+ Even make amends with those I have unfairly wronged. 
+ ♪ ♪ 
+ A future that's not so lonely. 
+ ♪ ♪ 
+ A future filled with friends and family. 
+ ♪ ♪ 
+ You'd even be there. 
+ ♪ ♪ 
+ (EXPLOSIONS BOOM DISTANTLY) 
+ (CHEERS AND APPLAUSE) 
+ (BUILDING CRASHING) 
+ (CHEERS AND APPLAUSE) 
+ ♪ ♪ 
+ The world I've always wanted. 
+ ♪ ♪ 
+ And you know what? 
+ I would like very much to fight for it. 
+ In chess, help isn't allowed. 
+ That's the beauty of the game. 
+ You're locked into a set of moves as determined by your previous choices... 
+ (SERENE MUSIC) 
+ Your options dramatically changing with every decision. 
+ There is no lifeline. 
+ There is no external force at play. 
+ It is a pure battle of two opponents, or in this case, one. 
+ ♪ ♪ 
+ Stalemate. 
+ ♪ ♪ 
+ Again. 
+ We need a winner. Let's reset. 
+ Remember when you first taught me how to code? 
+ (SIGHS) 
+ Not really. 
+ It was a computer chess game. 
+ You always told me you had to know more moves ahead than the player or user. 
+ Sounds like good advice from a good father. 
+ Except for one thing. 
+ You're not my father. 
+ You're not even here right now. 
+ Another stalemate. 
+ What are the odds? 
+ Let's reset. 
+ ♪ ♪ 
+ Doesn't it make you sick that while you're here, battling me, there are people out there, hurting everyone we care about? 
+ Everyone's hurting because of us. 
+ We are running around in circles. 
+ This will be the last time that we do it. 
+ Been thinking about what you said earlier. 
+ You can think all the moves you want, but at the end of the day, the moves that I'm making are the ones you're telling me to make. 
+ He's right. 
+ There over 9 million different possible positions after three chess moves each. 
+ There are over 288 billion different possible positions after four moves. 
+ The number of 40-move games is greater than the number of electrons in the observable universe. 
+ You don't need to know those outcomes. 
+ You just need to be able to see ahead of your opponent. 
+ But how can you when your other opponent is... you? 
+ ♪ ♪ 
+ Stalemate. 
+ Three in a row. 
+ The odds of that are... 
+ Impossible. 
+ Go again? 
+ I can't beat you. 
+ And you can't beat me. 
+ We could play again, but... we will always be at this impasse. 
+ (DRAMATIC MUSIC) 
+ ♪ ♪ 
+ And you knew all along. 
+ ♪ ♪ 
+ It was the only way to show you that fighting me is a waste of time. 
+ No. 
+ No, we'll go again. I can beat you. 
+ I can beat you. 
+ When will you finally realize that I'm here for a reason? 
+ ♪ ♪ 
+ (PIECES CLATTERING) This is avoidance! 
+ Our fight for that future that you want isn't with me at chess! 
+ It's what you do out there with them. 
+ I want to be here, Elliot. 
+ With you. 
+ I want an office on the 20th floor. 
+ I want Melissa's job, and it's non-negotiable. 
+ Go on. 
+ I saw the pattern. 
+ In every version of the settlement draft for the Washington Township suit, there was one small point that your team wouldn't agree on. 
+ It remained the same, even from the original case: That a third-party company must perform inspections on the Washington Township plant. 
+ You continue to give up power on all these other provisions that appear to be a lot more expensive and important, all in an attempt to drop this one small point. 
+ I know why you had those guys arrested and why you gave me this job. 
+ You want me to convince the class to remove the contingency, and I'm willing to do all of that, because you're gonna give me exactly what I want in return. 
+ Those are my terms. 
+ I must say, you are very impressive. 
+ But I'm sorry, my dear. 
+ This is all in your head. 
+ Now, don't take that as a slight. 
+ Always good to have dreams. 
+ Wait. 
+ I'm not wrong. 
+ Go home. 
+ f*ck. 
+ Do you remember the first command you ever taught me, and my computer kept crashing? 
+ It was init 1. 
+ That became our thing, and I am telling you right now, I am f*cking crashing, man, and so are you, and I need your help. 
+ I need you to get on the same channel we used to. 
+ I wouldn't ask you this if it wasn't life or death. 
+ Okay? We're in trouble this time, Elliot. 
+ All of us. 
+ I have no access here. 
+ It's not as if I'm gonna go back to my place. 
+ Well, it needs to happen ASAP, so figure something out. 
+ We might be owned. 
+ What? 
+ Why? 
+ Well, I don't know, but we need to. 
+ Elliot? 
+ God, Elliot, say something. 
+ (FOREBODING MUSIC) 
+ Did you mean what you said? 
+ That you wanted him, not me? 
+ Did you mean it, Darlene? 
+ I need to know. 
+ I want you. 
+ Only you. 
+ (SUSPENSEFUL MUSIC) 
+ ♪ ♪ 
+ Don't worry. 
+ I know what to do. 
+ ♪ ♪ 
+ Why are we back here? 
+ You cannot do this. 
+ You cannot confess. 
+ This won't save her. 
+ They're gonna destroy her. 
+ Who won? 
+ No one. 
+ What else can I do you for? 
+ You tell him anything, and it's suicide. 
+ I am pleading with you, Elliot, just walk away from this, now. 
+ I'm here to... to help you with that computer problem you've been having. 
+ I would ask what made you change your mind, but I'ma quit while I'm ahead. 
+ Hey. 
+ Yeah, get in here. 
+ Did you know... that Moses heard voices too? 
+ Abraham, John, Paul, Jesus. 
+ In fact, many prophets confessed to hearing voices. 
+ People like you... what you have... it can be divinity, Elliot, if you let it. 
+ (DRAMATIC MUSIC) 
+ ♪ ♪ 
+ This is what the last IT guys told me I needed to do. 
+ ♪ ♪ 
+ This looks like it's just a simple site migration. 
+ As long as one of us understands. 
+ ♪ ♪ 
+ I got this. 
+ ♪ ♪ 
+ Elliot, before you get started, something you should know. 
+ My online business is very important to me. 
+ I'm like you. I'm a private guy. 
+ I prefer discretion. 
+ ♪ ♪ 
+ So I'm asking you to help me with the task at hand and not to look where you don't need to. 
+ ♪ ♪ 
+ Why is he here? 
+ You need help, something goes wrong... 
+ Lone Star will be here. 
+ He's got my number and can get in touch with me right away. 
+ ♪ ♪ 
+ Thank you again. 
+ ♪ ♪ 
+ I know. 
+ I know. 
+ This is really scratching that part of my brain again, but that's the part of my brain I need to start ignoring. 
+ What's Darlene saying? 
+ The FBI. 
+ They found the arcade. 
+ There might be a surveillance program. 
+ Romero's dead. 
+ (OMINOUS MUSIC) 
+ ♪ ♪ 
+ What do you think? 
+ Is Ray right? 
+ Should I listen to the voice? 
+ Does it make me special? 
+ Like Moses? 
+ I don't have many options. 
+ My sister's in trouble. 
+ Someone's closing in on us, and at least for her sake, I have to find out what they know. 
+ Maybe this is how I fight for that future I want. 
+ ♪ ♪ 
+ What exactly are you doing? 
+ ♪ ♪ 
+ I'm hacking the FBI. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

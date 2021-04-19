@@ -1,0 +1,789 @@
+Transcripts - Forever Dreaming :: 01x05 - eps1.4_3xpl0its.wmv - Mr. Robot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x05 - eps1.4_3xpl0its.wmv https://transcripts.foreverdreaming.org/viewtopic.php?f=303&t=19631 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 07/23/15 09:51 ] 
+ 
+ 
+ Post subject:  
+ 01x05 - eps1.4_3xpl0its.wmv 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Mobley : He wants to hack Steel Mountain's climate control system, raise the facility's heat high enough to destroy all the tapes. 
+ This is what we're doing. 
+ I'll hit up my Dark Army contact as soon as you take off. 
+ Romero : You just gonna hit up the world's most dangerous hacker crew? 
+ He has my bank account, Ollie. 
+ We cannot just infect Allsafe's network because of this. I'll lose my job. 
+ Evil Corp's upping their security protocol. 
+ They are physically copying, then shipping all the analog backups. 
+ We go up today. 
+ [speaking Swedish] 
+ I want you to be where you belong, here with me. 
+ I think I'm happy where I am. 
+ Shayla : Don't let me down, okay? 
+ That girl in there is mine. 
+ Shayla : Did you have something to do with Vera getting busted? 
+ He's on murder charges. Do you know that? 
+ It's my plan. I'll go in. 
+ You might be able to hide it from these nerds, but I know a junkie when I see one. 
+ [sniffles] I'm alone. 
+ No, you're not. 
+ I'm not going anywhere, kiddo. 
+ [dramatic music] 
+ Carol : I wish I had better news for you, Fernando, but this isn't the you're-getting-out meeting. 
+ This is only as much as I could carry. 
+ The D.A. has more. 
+ How long this gonna be? 
+ We're talking years. 
+ Yo, you playing? 
+ You get our people out. 
+ That's your use to us. 
+ They have a solid case. 
+ For every charge they're gonna lay on you, they have these binders, your Twitters, your Instagram. 
+ You said they wouldn't figure this sh1t out. 
+ Manny : They can't, brah. 
+ I'm telling you, it was airtight, V. 
+ Fellas, this isn't the imitation game. 
+ The code here is not that complicated. 
+ Besides, who told you to put your business anywhere near social media? 
+ My aspirational little brother. 
+ You know how much money we saved last year? 
+ Made our whole operation way more efficient. 
+ We were careful. 
+ You tweeted about every transaction your business was involved in. 
+ That is the opposite of careful. 
+ It's no wonder an anonymous tip turned you in. 
+ Who called in the tip? 
+ This is what is meant by anonymous. 
+ It is now spilled milk. 
+ The information got out, and now they're coming down hard. 
+ There's no plea on the table. 
+ They're gonna lay murder one on you. 
+ I ain't pleading anyway. 
+ Men can't sentence me. 
+ That is a cosmic responsibility. 
+ Someone's gonna get hurt for this. 
+ That's how we get square with the universe. 
+ Fernando, we need to discuss strategy. 
+ You don't want Supermax. 
+ Naw, naw. 
+ If they lock me up, the kind of door they close don't matter. 
+ [ball bouncing] 
+ So that's you. That's who you are. 
+ [exhales] 
+ I know you. 
+ [ball bouncing] 
+ [electronic music] 
+ Mm-hmm. 
+ ♪ ♪ 
+ [exhales] 
+ Excuse me. 
+ Pardon me. Pardon me. I already paid. 
+ Just want to pay my respects. 
+ Thank you. Thank you. 
+ Ooh, I'm sorry, man. Sorry. 
+ Just want to pay my compliments. 
+ Hey, excellent coffee, fantastic service. 
+ Buy yourself something nice. 
+ ♪ ♪ 
+ Elliot : Steel Mountain. 
+ We're trying to penetrate a data security facility whose tagline literally is... 
+ Nothing is actually impenetrable. 
+ A place like this says it is, and it's close, but people still built this place. 
+ And if you can hack the right person, all of a sudden, you have a piece of powerful malware. 
+ People always make the best exploits. 
+ I've never found it hard to hack most people. 
+ If you listen to them, watch them, their vulnerabilities are like a neon sign screwed into their heads. 
+ Mobley's a glutton. 
+ He lacks discipline from his urges. 
+ I don't want to get bugs. They spread disease. 
+ Elliot : Romero is a know-it-all and a hypochondriac. 
+ Mobley : Bill Harper is our first exploit. 
+ He isn't gonna give the search much scrutiny. 
+ He'll get us to Level 1, but Bill is not gonna be able to get us to Level 2. 
+ And we need to get to Level 2. 
+ You're gonna ask to speak to his supervisor, Wendy. 
+ She'll get us to exactly where we need to be. 
+ Then we'll be able to get rid of her from the van. 
+ After that, you connect the Raspberry Pi to the climate control system, and Bob's your uncle. 
+ Now we can hear you, and you can hear us. 
+ Elliot : Mr. Robot? 
+ His flaw is he's absolutely insane. 
+ We're talking clinical. 
+ When they say, "If your friends jump off a bridge, would you?" he would, without hesitation, just to prove something. 
+ He goes in there, he's liable to blow the whole place up, just like he wanted to in the first place. 
+ Sure you don't want to look over the info and the map again? 
+ I got it. 
+ Okay, James Bond, let's go mess their sh1t up. 
+ Boom, boom. 
+ Elliot : Yes, I also have security flaws. 
+ I don't like being outside. 
+ I liked morphine too much. 
+ Mr. Sepiol? 
+ Elliot : I'm talking to you right now, and you don't exist. 
+ Sam Sepiol? 
+ Sir? 
+ That's you, Elliot. 
+ Okay. 
+ So sorry you had to wait. 
+ As you can see, there's always a lot of bustle here. 
+ How can I help you today? 
+ Mr. Robot : You need a tour. Don't elaborate. 
+ Um... a tour. 
+ Okay. 
+ I'm sure they told you at reception that we... we require appointments for tours. 
+ My supervisor gives us all a hard time about that. 
+ I'm Sam Sepiol. 
+ You should look me up. 
+ Okay. [clears throat] 
+ A little inelegant, but we can work with it. 
+ Tell you what. 
+ Have your company call over to new accounts, and we can set something up later this week. 
+ Ask for Bill Harper. 
+ They'll know where to find me. [chuckles] 
+ Mr. Robot : Listen, Bill. 
+ You think your boss gives you a hard time now? 
+ You're gonna get a really hard time right after I walk out of here. 
+ I'm not rescheduling, Bill. 
+ When I walk out that door, I'm never coming back. 
+ That's your ass, Bill. 
+ I really think you should look me up. 
+ It... it just doesn't work like that. 
+ I'm sorry, sir. 
+ You take care, okay? 
+ I'm coming out. It's not working. 
+ Mr. Robot : It's gonna work. 
+ Hang in there. 
+ I was being too weird. 
+ Mr. Robot : Just like every other tech billionaire. 
+ Slow your roll. It's gonna happen. 
+ Elliot : It's no wonder Wikipedia is never accurate. 
+ Anyone can edit them. 
+ Well, not anyone. 
+ Nerds like Mobley built a lot of credit over the years with his 20,000 edits. 
+ And still people trust it, beholden to all the Mobleys of the world for their information. 
+ Mr. Sepiol? 
+ Mr. Sepiol! 
+ I have some good news. 
+ [chuckles] 
+ Ollie : Stop it. Stop it. 
+ Can you stop packing for, like, five minutes? 
+ Can we just hash this out like adults? 
+ I love you. 
+ You don't even know why you're crying. 
+ Let's get married. 
+ Ollie, will you please stop? 
+ Angela... Angela, you can't just give up on us like this. 
+ [scoffs] 
+ I mean, have you even thought this through? 
+ What are you gonna do, go live with your dad in Jersey? 
+ Come on. 
+ You're ruining your life. 
+ Maybe, but I also ruined yours. 
+ Why do you have my work ID? 
+ Did you... did you... do you... do you... do you know what's gonna happen? 
+ There will be fallout from this, and I'm gonna tell them... 
+ I used your computer, so tell them whatever you want. 
+ Are you serious? 
+ Did you even think about how this would affect me? 
+ I did. 
+ Bill : Here's an idea of how big this place is. 
+ We have our own fire department, inside the building, just for us. 
+ And you can't have a fire department without a fire truck, and you can't have a fire truck without roads. 
+ We have all of that, inside. 
+ Imagine that. 
+ ♪ ♪ 
+ Mr. Robot : Elliot, now's the time we get rid of Bill. 
+ [elevator bell dings] 
+ There's so much information... 
+ Mr. Robot : Okay, we're gonna need to roll up our sleeves here. 
+ You have to destroy Bill in order to get to a supervisor. 
+ There's one vault in here that's 200,000 square feet. 
+ That's the size of a shopping mall, and that's just one. 
+ Bill, where are those giant vaults? 
+ Oh, they're on Level 2, but that's not part of the tour. 
+ Even I don't have authorization. 
+ Mr. Robot : He's not gonna take you for ice cream. 
+ He has to go away. 
+ There's no place in this plan for Bill. 
+ Now, right down here... 
+ Everything okay, sir? 
+ Mr. Robot : We need to tear Bill down piece by piece. 
+ You need to wipe that smile off of his stupid face. 
+ Sir, are you okay? 
+ You're not... you're not saying anything. 
+ Mr. Robot : Dig into him, Elliot. 
+ You of all people can do this, Elliot. 
+ You know how it feels when someone makes you small. 
+ You understand what happens when someone exposes the thing you fear most about yourself. 
+ Elliot's mother : Answer me! 
+ Answer me! 
+ [Elliot grunts] 
+ Get up. 
+ Just get up! 
+ I hate you. 
+ You're nothing. 
+ You're worthless. 
+ Think about it, Bill. 
+ Think about what? 
+ If you died, would anyone care? 
+ Would they really care? 
+ Yeah, maybe they'd cry for a day, but let's be honest. 
+ No one would give a sh1t. 
+ They wouldn't. 
+ The few people that would feel obligated to go to your funeral would probably be annoyed and leave as early as possible. 
+ [tense music] 
+ ♪ ♪ 
+ That's who you are. 
+ That's what you are. 
+ You're nothing to anyone, to everyone. 
+ Think about it, Bill. 
+ 'Cause if you do, if you let yourself... 
+ You'll know I'm telling you the truth. 
+ So instead of wasting any more of my time, I need you to go call someone that matters, because, Bill... 
+ You don't. 
+ I'll... [sniffles] I'll call my supervisor. 
+ Elliot : And that's why Bill Harper is a perfect exploit, desperate enough for the business to break protocol and let me in. 
+ Lonely enough to break. 
+ I need a supervisor in L1S3. 
+ man : Copy that. 
+ [elevator bell dings] 
+ [indistinct chatter] 
+ Mr. Robot : Don't apologize. 
+ You're almost there. You did great. 
+ Romero : Once Wendy gets there, we'll send her a text letting her know her pregnant wife is in labor. 
+ Once she leaves, that should give you enough time to plant the Pi, you dig? 
+ [door closes] 
+ Trudy Davis, Accounts Supervisor. 
+ Is there a problem here? 
+ Mr. Sepiol is asking... 
+ Trudy? 
+ What the f*ck? for someone more senior than me. 
+ I don't seem to have your name. 
+ I'm Sam Sepiol? 
+ Is that a question? 
+ Trudy? Trudy? 
+ Mobley : Where's Wendy? 
+ We only prepped for Wendy. Where the hell is Wendy? 
+ I need Wendy, actually. 
+ And how do you know Wendy? She didn't come in today. 
+ Trudy : What is it that you need, Mr. Sepiol? 
+ Um... 
+ I would love a tour of Level 2. 
+ I don't know what you've been told, but we don't allow that. 
+ I'll see you out. You can go, Bill. 
+ Follow me to the lobby. 
+ Romero : This woman's a ghost. 
+ None of these are her. 
+ No Facebook, no LinkedIn. 
+ She's been married for 30 years. 
+ All we have is her husband's cell phone number. 
+ He doesn't even have a picture online. 
+ No hobbies, no kids, no credit problems, no weird s*x stuff. 
+ House paid off. 
+ Mobley : I need... I need to... I need to think. 
+ [quietly] The elevator's almost here. 
+ Yes, that's how they work when you press the button. 
+ Okay. 
+ People... people are all just people, right? 
+ When it gets down to it, everyone's the same. 
+ They love something. 
+ They want something. They fear something. 
+ Specifics help, but specifics don't change the way that everyone is vulnerable. 
+ It just changes the way that we access those vulnerabilities. 
+ [phone vibrates] 
+ [elevator bell dings] 
+ I-I have to go. I'm sorry. 
+ I need to go to my office. 
+ Reception will see you out. 
+ What'd you do? 
+ Mobley : I spoofed a text from her husband. 
+ It's a palm print scanner. 
+ Mr. Robot : Get out of there. 
+ Romero : There's one door manually locked. 
+ It's a fire code thing, and I think you can pick it. 
+ Where? 
+ It's at the end of the hallway if you're heading north on L1. 
+ [tense music] 
+ ♪ ♪ 
+ The stairs don't go to Level 2. 
+ They go to a parking lot. 
+ Romero : You're on the complete wrong side of the building. 
+ You're gonna have to double back and go through the door you came in and make a run for it. 
+ Elliot... 
+ I thought I saw you. 
+ What are you doing here? 
+ Thank you. Y'all come back to Wingstravaganza. 
+ Okay, real important... 
+ Mm-hmm. 
+ Wingstravaganza means wings and extravaganza. 
+ Do you know what extravaganza means? 
+ Yep, it's a big deal. 
+ You got it. 
+ Mm-hmm. 
+ You look nervous. Are you excited? 
+ Oh, yeah. 
+ Okay. 
+ So you'll shadow me for the week, but don't sweat it. 
+ It's like every other server job. 
+ Well, I've actually never been a waitress before. 
+ Oh. 
+ This is kind of like a new beginning for me. 
+ What were you doing before? 
+ Pharmaceutical sales. 
+ Fancy. 
+ You must have made bank. 
+ What happened? 
+ Oh, um, just, you know, Obamacare. 
+ Welcome to Steel Mountain's data center. 
+ Our facility meets diamond specifications and features a tier 10 certified build and design, providing you with a safe, rock-solid fortress for your data needs. 
+ All of our facilities implement comprehensive security measures... 
+ Tyrell : They say I'm overdoing it, and I say exactly. 
+ [laughs] So yeah. 
+ Elliot. 
+ Nice meeting you. 
+ You too. 
+ Tell your wife I said hi. 
+ I will. 
+ Those men I just shook hands with, financiers of Hezbollah and ISIS. 
+ I wouldn't stare. 
+ Elliot : Did he know I was gonna be here? 
+ Does he know why I'm here? 
+ sh1t, he's gonna kill me. 
+ As you were saying? 
+ Uh, just a routine data process check. 
+ Allsafe does them all the time. 
+ But why would they send you? 
+ That type of thing isn't usually handled by the engineers, is it? 
+ We've been overlapping a lot in our duties. 
+ Budget reasons. 
+ It seems we both had the idea to work off-site today. 
+ Let's call this fortuitous. 
+ Join me for lunch? 
+ S-sure. 
+ I eat lunch. 
+ [laughs] 
+ So you are like the rest of us. 
+ Come. 
+ He got owned, man. 
+ We got to go. 
+ We're not going anywhere. 
+ This changes nothing. 
+ What can I get you, Elliot? 
+ Have a lot of things here. 
+ Mr. Robot : He has a vulnerability. 
+ He's an arrogant prick, and he's proud of it. 
+ He cares what you think about him, even though he probably hates that he does. 
+ Tyrell Wellick's greatest asset is his hubris, but it's also his flaw, and that's your exploit. 
+ Would be nice. 
+ You eat here? 
+ This place? 
+ Romero : Is that your plan, to piss him off? 
+ No, wait, man. Wait. 
+ [snaps fingers] 
+ Mr. Robot cutting out : Now remember, Elliot, you'll lose our signal on Level 2. 
+ Elliot. 
+ Elliot, say something if you can hear us. 
+ I'm impressed you came all the way out here. 
+ Allsafe is finished, but you won't let it die. 
+ We're the same. 
+ We're perfectionists. 
+ [tense music] 
+ ♪ ♪ 
+ I've seen our waiter here for the last... seven years. 
+ Must be in his 50s, maybe has kids, divorced, second wife, more kids, and I wonder, what must he think of himself? 
+ His life's potential reached at a 30 grand a year salary, an economy car he still owes money on, two-bedroom apartment, child support, coupons. 
+ I couldn't bear it, a life like that. 
+ The life of an ordinary cockroach whose biggest value is to serve me salad. 
+ 
+ 
+ 
+ ♪ ♪ 
+ [radio chatter] 
+ [handcuffs clink] 
+ [radio chatter continues] 
+ [pen writing on paper] 
+ I have to go to the bathroom. 
+ ♪ ♪ 
+ Elliot : Goddamn withdrawals again. 
+ Or is it Tyrell Wellick? 
+ Is he toying with me? 
+ What kind of game are we playing? 
+ Am I his malware? 
+ ♪ ♪ 
+ I had to wash my face. 
+ Hard to breathe... here. 
+ I know you framed Terry Colby. 
+ I-I didn't. 
+ Your father worked at Evil Corp before he died. 
+ That's a matter of public record. 
+ [urinal flushes] 
+ [water running] 
+ I'm not turning you in, if that's what you're thinking. 
+ I don't even have proof, and even if I did, I don't care. 
+ Just wanted to know your weakness. 
+ Now I do. 
+ Revenge. 
+ How ordinary. 
+ Just like our waiter. 
+ But even extraordinary people, and I believe you are, are driven by human banalities. 
+ And unfortunately, we're all human. 
+ Except me, of course. 
+ I'm joking, Elliot. 
+ Enjoy your long drive back home. 
+ I'm having a helicopter take me back to New York. 
+ You take care, Elliot. 
+ [door opens] 
+ [door closes] 
+ [exhales deeply] 
+ ♪ ♪ 
+ No. Bullshit. 
+ Dude, bullshit! 
+ What did they say? 
+ Oh, I don't know. 
+ Basically that they're a bunch of dickless assholes. 
+ Where are you going? 
+ To fix it. 
+ No one else is going to. 
+ Darlene, wait. 
+ I really don't think you should keep pushing them. 
+ Put it this way. 
+ Either I'm fixing this or breaking it. 
+ Their call. 
+ Hi, Pumpkin. 
+ Hey, Daddy. 
+ Why aren't you at work? 
+ I broke up with Ollie. 
+ I know. 
+ Just got off the phone with him. 
+ Come on. 
+ He was sobbing. 
+ He wanted me to tell you something like, "I'll always love you. Please come back." 
+ Oh, and he can learn to forgive you. 
+ [Angela chuckles] 
+ Jesus. 
+ What did you say? 
+ I told him I thought you should've broken up with him a long time ago and hung up on him. 
+ Nice. 
+ What did he mean, anyway? 
+ Just normal work and... money stuff. 
+ And, well, he cheated on me, so there's that. 
+ Well, the cheating part, I'm not surprised. 
+ Not trying to make you feel bad, honey, but come on. 
+ The kid's a douchebag. 
+ As for the money... 
+ Dad, no. 
+ I'll float you some money for professional development. 
+ Dad... 
+ Call it a loan, but do not pay me back. 
+ And you'll stay here and commute until you can save for an apartment. 
+ I can't make you do any of that. 
+ And you didn't. 
+ It's what I want. 
+ Are you hungry? 
+ Yeah. 
+ No, no. Sit, sit, sit, sit. 
+ Relax. 
+ What would you like? 
+ You don't need to cook for me, Dad. 
+ French toast coming up! 
+ [horns honk in the distance] 
+ [speaking Swedish] 
+ [classical music] 
+ [speaking Swedish] 
+ Mm-hmm. 
+ Ah. 
+ [speaking Swedish] 
+ Mm. 
+ [scoffs] 
+ Why are they backing out? 
+ [sighs] 
+ This is a library. 
+ You want to discuss that, go back to the IRC island. 
+ They banned me from the channel! 
+ What happened? 
+ We just owned Steel Mountain. 
+ We did our part, and it went perfect. 
+ Come on, we both know that sh1t didn't go perfect. 
+ Well, it doesn't matter! They called it off. 
+ We pulled our side together, and your side called it off like it was nothing. 
+ You got your answer. 
+ You better tell your pal whiterose to stop being a pussy and start growing a pair because we don't have time to dilly-dally around... 
+ And now you're gonna talk about this in the world? 
+ Do you even care who hears you? 
+ Face it, Darlene. 
+ It's over. 
+ Walk away. 
+ I can't go back to my people with that. 
+ Tell me why. 
+ You said the Dark Army was with us on this. 
+ [sighs] 
+ Between us? 
+ I'm not about to goddamn tweet about it. 
+ They were out before you ever got to Steel Mountain. 
+ I don't know why. That's all they said to me. 
+ I know you had your heart set, but for real this time, just let it go. 
+ [screams] 
+ I need seats mostly. 
+ No. 
+ I imagine it must be exciting to work in government. 
+ It's like a spy movie. 
+ [laughs] 
+ Can you read my secret emails? 
+ Mm, no. 
+ My job is mostly paperwork and bureaucracy. 
+ They always want more than the technology allows. 
+ I don't even have time to read your secret emails. 
+ But it's a stopgap for me. 
+ I'm restless. 
+ I'm always itching for something else. 
+ There have been a lot of something elses. 
+ [laughter] 
+ For both of us. 
+ [chuckles] 
+ Before this, I worked at an NGO, and before that, I worked at Microsoft for a year, which felt like a decade. 
+ [laughter] 
+ Your place is beautiful. 
+ I wish I could take the compliment. 
+ The decorating is Scott's domain. 
+ Oh, really? 
+ Yes. 
+ Very nice. 
+ Yeah. 
+ Where's all the... the antiques from? 
+ They're... 
+ So they tapped you for CTO, yes? 
+ They're 17th century. 
+ Don't be surprised. 
+ Suspicious is more accurate. 
+ I was beginning to wonder why you set this dinner. 
+ Four people in the world know about my conversations. 
+ Somehow you're number five. 
+ Then I'm exactly what you need in a right hand. 
+ So that's what this is about. 
+ Isn't everything about something? 
+ Like, we were thinking about, is it is it babyproof? 
+ Ah, yeah, that's... that's a consideration. 
+ If you were me, would you trust you as your right hand? 
+ If I were you, I wouldn't have even let me in the house. 
+ [chuckles] 
+ Joanna : We finished everything upstairs... 
+ [phone vibrating] 
+ Hey. 
+ Hey, it's me. 
+ Is now a good time? 
+ Yeah. 
+ I'm at my new job. 
+ How's it going? 
+ [sighs] Seriously, it's hard as hell, but I am getting the hang of it. 
+ At first, it took me, like, years to marry ketchups, but it turns out I'm amazing at upselling expensive cocktails. 
+ I'm not surprised. 
+ And then when I have to put together to go orders, it's like bagging Molly, so I'm, like, kind of an expert. 
+ How are you? 
+ I'm good. 
+ Wow, I've never heard you say a sentence like that before, ever. 
+ I did what I had to do today. 
+ Well, if you're around tonight, come over and tell me about it, okay? 
+ I got to go. 
+ Okay, bye. 
+ You seem to know how to drink your wine. 
+ [big band music playing] 
+ I indulge in few things, but I do love wine. 
+ Yourself? 
+ In my other life, when I could drink for one. 
+ But even then I had cheap tastes. 
+ It's safe to smell, though. 
+ Put your nose in there. 
+ ♪ Mean a thing to me ♪ 
+ You know, to me, it smells like every wine. 
+ [chuckles] 
+ But I'd love to learn. 
+ Uh-huh. 
+ Dried red fruit, fresh violet, uh, lemon peel. 
+ Try it again. 
+ Smell and really... really think about it. 
+ Mmm, I do smell lemon. 
+ Sharon? 
+ Yeah? 
+ How do you not blow your brains out being married to him? 
+ Smell again. 
+ Excuse me? 
+ Shall I repeat the question? 
+ You're a guest in our house. 
+ A very honest one. 
+ [laughs] 
+ Wow. 
+ [sets glass down] 
+ I think I'll mistake what you said as a joke in poor taste and excuse myself to the bathroom. 
+ I have a beautiful vintage over here. 
+ I would love to just show you the label. 
+ ♪ Just a tragic picture show ♪ 
+ Scott : Let's see here. 
+ Nope. 
+ Nope. 
+ There's the one. 
+ This is my prized possession, actually. 
+ Take a look at this. 
+ ♪ I'm begging you ♪ 
+ [door opens] 
+ I'm in here. 
+ Can I help you? 
+ Thank you for a lovely evening. 
+ [sighs] 
+ Siege in Stormstout! 
+ Carcass Emblem! 
+ [laughter] 
+ We got problems. 
+ Is the Pi online? 
+ Yeah, we're in the whole system. 
+ We could deliver the whole payload right now if we wanted. 
+ And yet I hear no applause. 
+ Applaud. [chuckles] 
+ You have to tell them. 
+ What? 
+ We lost China. 
+ I'm sorry? 
+ The Dark Army is bailing. 
+ Why? 
+ They don't answer whys apparently. 
+ That's no problem. We'll just call 'em back. 
+ We'll set up another meet ASAP... 
+ Dude, did you not hear me? 
+ They've gone dark. It's not happening. 
+ I know. I know. 
+ I get it, okay? I f*cked up. 
+ [phone vibrating] 
+ [phone stops vibrating] 
+ Let's not wait, then. 
+ Let's do it anyway, just us. 
+ Let's do it right now. 
+ Okay? We execute now. 
+ We execute on our side and trust that the Dark Army gets their sh1t together and follows. 
+ Why do they get to dictate terms? 
+ We dictate terms! 
+ [shushing] 
+ We can go now. 
+ If we move forward and they don't, China still holds all the redundant information. 
+ It will be pointless. 
+ And if we wait, it'll also be pointless. 
+ Everything you guys did today would be for nothing. 
+ [grunts] 
+ God, are you crazy? 
+ It will have no effect! 
+ It'll take down their network for weeks. 
+ They'll recover. 
+ It would still hurt them. 
+ We don't want to hurt them! 
+ We want to kill them! 
+ And neither will happen if we do nothing right now. 
+ What are you doing, huh? 
+ Take another step, and I'll do it. 
+ Think about what you're doing, okay? 
+ All right? 
+ In a month, they're gonna be up and running again with even better security. 
+ We are not gonna get another shot at this. 
+ The revolution that we've always talked about will be gone, dead, and buried. 
+ We will have failed because of you. 
+ Please do not do this. 
+ [tense music] 
+ ♪ ♪ 
+ [scoffs] 
+ Is there anyone here who can communicate with this woman? 
+ ♪ ♪ 
+ [whispers] Please. 
+ Tell me it's okay to execute. 
+ ♪ ♪ 
+ But we were so close. 
+ It's not over. 
+ We'll rework it. 
+ We'll figure something out. 
+ We got this far. 
+ We'll find a way, just not tonight. 
+ [sighs] 
+ [door opens and closes] 
+ This is all my fault. 
+ [sighs] 
+ Come on. 
+ You can crash at my place. 
+ [crying] 
+ [electronic music] 
+ Elliot : My father picked me up from school one day, and we played hooky and went to the beach. 
+ It was too cold to go in the water, so we sat on a blanket and ate pizza. 
+ When I got home, my sneakers were full of sand, and I dumped it on my bedroom floor. 
+ I didn't know the difference. 
+ I was six. 
+ My mother screamed at me for the mess, but he wasn't mad. 
+ He said that billions of years ago, the world shifting and the oceans moving brought that sand to that spot on the beach, and then I took it away. 
+ "Every day," he said, "we change the world," which is a nice thought until I think about how many days and lifetimes I would need to bring a shoe full of sand home until there is no beach, until it made a difference to anyone. 
+ Every day, we change the world, but to change the world in a way that means anything, that takes more time than most people have. 
+ It never happens all at once. 
+ It's slow. 
+ It's methodical. 
+ It's exhausting. 
+ We don't all have the stomach for it. 
+ ♪ ♪ 
+ Hey, sweetie. 
+ I'm gonna go for a run. 
+ Nice. 
+ [dog barking] 
+ Shayla's got the dog. 
+ She doesn't sh1t on her pillows. 
+ That's a plus, I guess. 
+ [phone beeping] 
+ [dog continues barking] 
+ [phone continues beeping] 
+ Shayla? 
+ Vera : Hey, brah. 
+ Sometimes the universe aligns perfectly. 
+ Here I am, locked away. 
+ Still, it brings you right to me. 
+ [Angela panting] 
+ ♪ ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 
