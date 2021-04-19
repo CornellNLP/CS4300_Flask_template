@@ -78,32 +78,21 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
     price = int(data["BOSTON"][name]["price"]) # price preference
     # no filtering
     if (not price_preference) and (not cuisine_preference) and (not ambiance_preference):
-      print("no filtering")
       recs.append(name)
     else:
       cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
       ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
-      print(type(ambiances))
       if ambiances is None:
         ambiances = {}
       elif len(ambiances) == 0:
         ambiances = {}
       else:
         ambiances = ast.literal_eval(ambiances)
-      #try:
-        #ambiances = json.loads(ambiances)
-      #except json.decoder.JSONDecodeError:
-        #ambiances = {}
-      #ambiances = eval(ambiances)
-      #print(ambiances)
-      #print(type(ambiances))
 
       price_match = False
       cuisine_match = False
       ambiance_match = False #False
 
-      #if len(ambiances) != ""
-      #if len(ambiances) != 0: # if restaurant has ambiance info
       if price_preference: # if there is a price preference
         if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
           price_match = True
@@ -116,17 +105,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
       else: # no cuisine preference
         cuisine_match = True
       if ambiance_preference: # if there is a ambiance preference
-            # print(ambiance)
-            # print(type(ambiance))
-            # print(json.loads(ambiances))
-            # print(type(json.loads(ambiances)))
-            # print(ambiances)
-            # print(type(ambiances))
-        print("!!!!!")
-        print(ambiance)
-        #print(len(ambiances))
         if ambiances:
-          print("in if")
           if ambiances[ambiance]:
             ambiance_match = True
       else: # no cuisine preference
