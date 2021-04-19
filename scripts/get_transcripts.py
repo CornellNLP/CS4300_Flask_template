@@ -14,7 +14,9 @@ def makeSoup(url):
         style.decompose()
     return soup_content
 
+count = 0
 for title, show_link in find_shows_in_ds.titles_to_links.items():
+  count+=1
   show = title
   abbrev = title.lower().replace(" ","_")
   show_dir_path = "./transcripts/" + show
@@ -71,4 +73,7 @@ for title, show_link in find_shows_in_ds.titles_to_links.items():
     write_file = open(text_file, "wt")
     write_file.write(output)
     write_file.close() 
+
+print(count)
+print("\nEND OF SCRIPT")
 
