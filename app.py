@@ -26,7 +26,6 @@ def query():
     ambiance_query = ""
   # if there is an input
   if restaurant_query:
-    app.logger.critical('Debugging statement') # from ta
     restaurant_query = string.capwords(restaurant_query)
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
@@ -36,6 +35,10 @@ def query():
     # restaurant_query is not in the data
     else:
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
+    app.logger.critical("output_message") # from ta
+    app.logger.critical(output_message) # from ta
+    app.logger.critical("data") # from ta
+    app.logger.critical(data) # from ta
   return render_template('search.html', output_message=output_message, data=data)
 
 if __name__ == "__main__":
