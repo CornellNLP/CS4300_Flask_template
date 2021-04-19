@@ -10,46 +10,60 @@
     <p>Project Name: {{ name }}</p>
     <p>Student Name: ({{ netid }})</p>
   </div>
-  <form class="form-inline global-search">
-    <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-      C
-      <span style="color: #EA4335; ">S</span>
-      <span style="color: #FBBC05; ">4</span>
-      3
-      <span style="color: #34A853; ">0</span>
-      <span style="color: #EA4335; ">0</span>
-    </h1>
-
-    <br><br>
-
-    <div class="form-group">
-      <input id="input" type="text" name="search" class="form-control" placeholder="flat hiking trail with waterfall and scenic forest views">
-
-      <div id="toggles">
-        <div>
-          <input id="accessible" type="checkbox" name="requireAccessible" />
-          <label for="accessible">Accessible</label>
+  <div class="card">
+    <div class="container">
+      <form class="form-inline global-search">
+        <div class="col">
+          <h1 style="font-size: 55px; font-family:Futura; color:forestgreen">
+            Take a hike!
+          </h1>
+          <p>Hiking trail recommender for the Finger Lakes area</p>
         </div>
-        <div>
-          <input id="freeentry" type="checkbox" name="requireFreeEntry" />
-          <label for="freeentry">Free Entry</label>
+
+
+        <br><br>
+
+        <div class="col">
+          <input id="input" type="text" name="search" class="form-control"
+            placeholder="Easy hiking trail with scenic waterfall view">
+
+          <div id="toggles">
+            <div>
+              <input id="accessible" type="checkbox" name="requireAccessible" />
+              <label for="accessible">Accessible</label>
+            </div>
+            <div>
+              <input id="freeentry" type="checkbox" name="requireFreeEntry" />
+              <label for="freeentry">Free Entry</label>
+            </div>
+            <div>
+              <input id="parking" type="checkbox" name="requireEntryFee" />
+              <label for="parking">Parking</label>
+            </div>
+          </div>
         </div>
-        <div>
-          <input id="parking" type="checkbox" name="requireEntryFee" />
-          <label for="parking">Parking</label>
-        </div>
-      </div>
+        <button type="submit" class="btn btn-info"> Go! </button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-info"> Go! </button>
-  </form>
+  </div>
 
   <form class="form-inline global-search">
     {% if data %}
     <h1>{{output_message}}</h1>
-      {% for d in data %}
-        <br>
-        <p>{{d.name}}: {{d.length}}mi</p>
-      {% endfor %}
+    {% for d in data %}
+    <br>
+    <div class="container" id="results">
+      <div class="card result">
+        <p><b>{{d.name}}:</b> {{d.length}} mi distance</p>
+        <p id="difficulty">{{d.difficulty}}</p>
+        {% for activity in d.activity_types[:3] %}
+        <p>{{ activity }}</p>
+        {% endfor %}
+        <p id="review">User Review:</p>
+        <p>{{ d.reviews[5] }} </p>
+      </div>
+    </div>
+    {% endfor %}
     {% endif %}
   </form>
 </body>
