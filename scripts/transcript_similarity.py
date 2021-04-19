@@ -1,5 +1,6 @@
 import re
 import os
+import numpy as np
 
 def readTranscript (filePath):
     """
@@ -130,7 +131,35 @@ def allWordsToAnalyze(transcriptsFolder):
     return ans     
 
 
-allWords = allWordsToAnalyze("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts")
+allWordsToAnalyze = allWordsToAnalyze("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts")
 #print(allWords)
+
+def jaccardSimMat(wordsToAnalyze = allWordsToAnalyze):
+    """
+    given allWordsToAnalyze, return an np array of size nShows x nShows with the jaccard similarity between shows
+    """
+    nShows = len(wordsToAnalyze)
+    result = np.zeros((nShows, nShows))
+    for i in range(nShows):
+        for j in range(nShows):
+            and_count = 0
+            or_count = 0
+            shows = list(wordsToAnalyze.keys())
+            showA = shows[i]
+            showB = shows[j]
+
+            lenA = len(wordsToAnalyze[showA].keys())
+            lenB = len(wordsToAnalyze[showB].keys())
+            for x in range(min(lenA, lenB)):
+                word = list(wordsToAnalyze[showA].keys())[x]
+                if(word in wordsToAnalyze[showA] or word in wordsToAnalyze[showB]):
+                    or_count += 1
+                    if (word in wordsToAnalyze[showA] and word in wordsToAnalyze[showB]):
+                        and_count += 1
+                result[i,j] = and_count/or_count         
+    #print(result)
+    return result
+
+jaccSimMat = jaccardSimMat()
 
 
