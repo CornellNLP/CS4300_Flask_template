@@ -5,10 +5,11 @@ from app.irsystem.models.search import *
 from app.irsystem.models.result import Result
 
 project_name = "Hiking Trail Recommender"
-net_id = "Ryan Richardson: rrr225" + \
-		 "Alicia Wang: axw5" + \
-		 "Alicia Chen: ac2596" + \
-		 "Cesar Ferreyra-Mansilla: crf85"
+net_id = "Ryan Richardson: rrr225 " + \
+		 "Alicia Wang: axw5 " + \
+		 "Alicia Chen: ac2596 " + \
+		 "Cesar Ferreyra-Mansilla: crf85 " + \
+		 "Renee Hoh: rch294 "
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -19,17 +20,18 @@ def search():
 	require_parking = request.args.get("requireParking")
 
 	# Retrieve rankings
-	# test_result1 = Result(name="Cascadilla Gorge Trail", length=3.5)
-	# test_result2 = Result(name="Buttermilk Falls Gorge Trail", length=1.2)
-	# test_result3 = Result(name="BUttermilk Falls Rim Trail", length=0.4)
-	# results = [test_result1, test_result2, test_result3]
+	test_result1 = Result((1.0, "Cascadilla Gorge Trail - North Rim"))
+	test_result2 = Result((.8, "Ellis Hollow Red trail"))
+	test_result3 = Result((.5, "Stewart Park"))
+	results = [test_result1, test_result2, test_result3]
+	# print(results)
 
 	if not query:
 		data = []
 		output_message = ''
 	else:
 		# Retrieve rankings
-		results = get_rankings_by_query(query)
+		# results = get_rankings_by_query(query)
 		output_message = "Your search: " + query
 		data = results
 
