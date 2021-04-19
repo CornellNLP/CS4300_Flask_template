@@ -2,6 +2,7 @@
 
 import math
 import numpy as np
+import pandas as pd
 import nltk
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.corpus import stopwords
@@ -250,15 +251,15 @@ def precompute_personality(reviews):
     return inv_ind, idf, norms
 
 
-def display(query, wine_scores, sim_list, reviews, num):
+def display(query, wine_scores, sim_list, reviews, num, max_price):
     """
     Takes a query, wine_scores, sim_list output from the cossim() function, the
-    wine reviews df, and number of results to return, and prints the output to
-    the terminal. Duplicate entries are caught and removed. Only varieties of
-    the top type according to wine_scores are printed.
+    wine reviews df, number of results to return, and maximum price (string) 
+    and prints the output to the terminal. Duplicate entries are caught and 
+    removed. Only varieties of the top type according to wine_scores are printed.
     """
     print("Based on your responses, we believe these particular " +
-          wine_scores[0][1] + "s will fit your taste:")
+          wine_scores[0][1] + "s will fit your taste and preference:")
     print()
 
     i = 0
@@ -268,14 +269,17 @@ def display(query, wine_scores, sim_list, reviews, num):
         idx = sim_list[i][1]
         variety = reviews["variety"][idx]
         title = reviews["title"][idx]
-        if variety == wine_scores[0][1]:
+        price = reviews["price"][idx]
+        if variety == wine_scores[0][1] and price <= float(max_price):
             if title not in dup_list:
                 dup_list.append(title)
                 #score = round(sim_list[i][0]*100, 1)
                 desc = reviews["description"][idx]
+                price = reviews["price"][idx]
                 #print("[" + str(score) + "%] " + title)
                 print(str(counter) + ". " + title)
                 print(desc)
+                print("The price of this wine is: $", price)
                 print()
                 counter += 1
         i += 1

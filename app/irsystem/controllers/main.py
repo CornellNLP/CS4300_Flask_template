@@ -34,11 +34,14 @@ while not quit:
     flavor = input("> ")
     print("Describe your favorite scent.")
     scent = input("> ")
+    print("What is the maximum price you would like to pay?")
+    max_price = input("> ")
+
     flavor_result = cossim_dict(flavor, inv_ind, idf, norms)
     scent_result = cossim_dict(scent, inv_ind, idf, norms)
     total = total_score(flavor_result, scent_result)
 
     display_personality(name, wine_scores, df_personality)
-    display(name, wine_scores, total, df, 5)
+    display(name, wine_scores, total, df, 5, max_price)
 
 print()
