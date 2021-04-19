@@ -1,0 +1,759 @@
+Transcripts - Forever Dreaming :: 03x05 - Yerba Buena - Halt and Catch Fire 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 03x05 - Yerba Buena https://transcripts.foreverdreaming.org/viewtopic.php?f=176&t=28593 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 09/14/16 02:30 ] 
+ 
+ 
+ Post subject:  
+ 03x05 - Yerba Buena 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ announcer : Previously on AMC's "Halt and Catch Fire"... 
+ I don't know what Mom told you, but I'm not angry at you. 
+ So here's my offer. 
+ You can decide if you want to be on the 8:45 out of DFW tonight. 
+ What's this? 
+ The log-in credentials for the ARPANET. 
+ I need you to map it and help me figure out what's next. 
+ Were you born this way, or did some ex-boyfriend turn you into a man hating bitch? 
+ I think we should fire them. 
+ If working with Doug and Craig is untenable, Mutiny can send 'em home. 
+ I told Dianne you want to fire them. 
+ And? 
+ She said "No". 
+ ("London Boys" playing in background) 
+ "Dodge 'Em." 
+ "Missile Command." 
+ "Dig Dug." 
+ "Grand Prix," suckers. 
+ Carl : Ah! 
+ Oh! 
+ Gordon, X to you. Atari 2600 games. 
+ Has to start with the last letter of the previous answer. 
+ Uh, "Xenophobe." 
+ Whoa! 
+ Wait, wait, there's seriously a game called "Xenophobe"? 
+ Yeah, but you're just being intolerant to aliens, so it's cool. 
+ All right, guys, any updates on the bug we've been having with the swap confirmations? 
+ Overhauled and working great. 
+ That's it, ChernobylBoy is going to the stocks. 
+ Happy Fourth of July, asswipe. 
+ Yeah. 
+ Some fifth grader reneged on a swap for a "Close Encounters" lunch pail. 
+ We're revoking trading privileges for repeat offenders. 
+ It's all internal for now, but we're working on putting this into here. 
+ Show him the guillotine. 
+ (laughs) 
+ But are you dead in Mutiny? 
+ I mean, are we cancelling people's subscriptions? 
+ You just wander around without a head and that lets people know this guy without a head is a total dick. 
+ Don't swap with this headless dickwad. 
+ (laughs) 
+ Can we get some blood spurting out of the neck hole? 
+ God, how did we not think of that? 
+ Put that in, dude! Yes. 
+ All right, we got to solve for the Sev 1 cache miss bug in the out-of-region swap routine? 
+ Tests today, ships tomorrow. 
+ You sure? 
+ Gordo, relax. 
+ SwapMeet's righteous. The only thing that's sideways is people keep ignoring the no buying stuff rule. 
+ A lot of people are trading for DBs. 
+ DBs? 
+ Dollar bills. 
+ We could technically monitor every trade to make sure it doesn't happen. 
+ I can't help you there. That's way above my pay grade. 
+ (laughs) 
+ So people are buying sh1t for money. 
+ So what? We knew this would happen. 
+ It's clunky. Our users want an easy way to buy things and they're frustrated it doesn't exist. 
+ Our users want the Police to get back together, but Sting's not interested. 
+ Doug and Craig said they can spend the weekend integrating their code for credit card transactions. 
+ No. - They were already in beta with it when we acquired them. 
+ It's basically ready to go. 
+ Because they yanked it off the shelf. 
+ It's boilerplate code supplied by the credit card company. 
+ They just gave it a little shine job. 
+ We don't need the perfect solution. 
+ If we have to temp something in now and customize it later, fine. 
+ A Band-Aid is better than bleeding to death. 
+ Bleeding to death? 
+ Donna, SwapMeet has doubled in size every week since we went live. 
+ You're just scared of slowing down. 
+ I don't want to slow our growth. 
+ And you keep acting like accepting credit cards is some devil's bargain. 
+ They make people's lives easier. That's the whole point. 
+ Okay, Mutiny is a castle. 
+ You and I built it and then we gave a little piece to Diane. 
+ And then a little piece to freakin' Doug and Craig. 
+ But making deals with credit card companies is just lowering the drawbridge. 
+ What good is a castle if nobody's in the kingdom? 
+ It doubles in size every week, okay? 
+ There is a fix for this, I promise. 
+ I just... I don't know what it is yet. 
+ Hey, Cam, are you down there? 
+ Yeah, Bos. 
+ Cam, I'm gonna pick you up tomorrow at 6:00 A.M. sharp, all right? 
+ We got to get to the terminal a little bit early. 
+ They always give me sh1t about the rods in my tailbone. 
+ Okay. 
+ When we moved here, we knew that there'd be times that we'd have to adapt quickly. This is one of those times. 
+ Donna, we're all alone, okay? 
+ There's no other company that's even attempting to do what SwapMeet is doing. 
+ I don't want to rush in and just screw it up all at once. 
+ Can we talk about it when I get back Monday? 
+ We're not gonna screw anything... 
+ Monday. 
+ Have a nice trip. 
+ Stanford's over here right next to Moffett. 
+ Over here is jackboot central. DoD, NORAD, the NSA. 
+ And I printed out all the directories for every mainframe on the network. 
+ And we can leverage some of the weak access points I found. 
+ Now, the Pentagon is nearly impenetrable, but some of these other guys... 
+ Utah is a total sieve. 
+ What is this right here? 
+ That's not really part of ARPANET. 
+ That's just the new network the National Science Foundation just rolled out. 
+ Yeah, NSFNET. Steve Wolff's baby. 
+ I went in through Cornell's node. 
+ It's only been live for a couple days. 
+ Could you... could you not do that? 
+ NSFNET's transmission lines are 10 times faster than ARPANET theoretically. 
+ Uh-huh. 
+ But it keeps crashing. 
+ I've been bumped off six times in less than an hour. - What else? 
+ Seriously, Joe, it's just a bunch of tenure-track slapdicks. 
+ They can't even get their basic infrastructure right. 
+ They got grants for the national network, threw a bunch of cash at the local level, and left the regional networks in the middle hanging. 
+ So? 
+ So there's a huge bottleneck baked in. 
+ There's no room for increased demand. 
+ So like ARPANET... 
+ Commercial use is banned. 
+ There could be something here. 
+ It's a lemon. 
+ I've been working on it for six weeks, I know. 
+ Well, you know. 
+ You've been working on it for six weeks. 
+ General Atomics left a hole in our balance sheet $3 million deep. 
+ We're hemorrhaging money. ARPANET will be mothballed soon. 
+ And NSFNET is the future. 
+ That's the story you just told me. 
+ No, Joe. Listen... 
+ Just dig deeper on this. 
+ Indulge me. 
+ That's all for today. 
+ (knock on door) 
+ Get some sleep, Ryan. You're starting to miss things. 
+ What are you doing here? 
+ I need to talk to you. 
+ It's not a good time. 
+ Now. 
+ Thank you for today. 
+ (theme music playing) 
+ Bosworth : I'm just so excited to see this little monkey, I whizzed right past Sonny Bryan's. 
+ Hey, when do babies start talking? 
+ Um, three or four months? 
+ His first words are gonna be barbecue if I got anything to say about it. 
+ Oh, hey, check this out. 
+ Remember that stewardess, the one with the legs? 
+ She gave me that for Sam. 
+ Every time I'd go on a trip when James was young, I'd get one of these, pin it to his teddy bear first thing in the morning so he'd know I was home. 
+ That's really sweet, Bos. 
+ So what's the plan? You gonna ship the bike or are you gonna ride off into the sunset, catch bugs in your teeth on the way back to the Bay? 
+ You know, I don't even know if it runs. 
+ I'm kind of playing this all by ear. 
+ Well, they know you're back, don't they? 
+ No. 
+ I'm not gonna give my mom time to work up some stupid speech. 
+ You'll be glad you did this. 
+ You're doing all right, Cam. 
+ I am so sorry. I thought Linda would never leave. 
+ She was supposed to pick up the kids first thing in the morning. 
+ For her, this is first thing. 
+ She was telling me about this creepy dad at school that keeps asking her to go boogie boarding in Capitola. 
+ I think she wants me to be jealous. 
+ Oh, I am not drinking out of that. 
+ Hey, look at this. 
+ Remember that bar we went to in Independence on our way to Onion Valley? 
+ The bartender got us so drunk, we had to sleep in the car. 
+ Oh, yeah. (laughs) 
+ Hey, where are the propane canisters? 
+ I forgot. 
+ But we can go stop by Orchard Supply on the way out. 
+ Orchard Supply is not open on the Fourth. 
+ You know, and this stupid thing is useless. 
+ Hey, I don't mind sleeping out under the stars. 
+ Yeah, that's what the rattlesnakes want you to do. 
+ (sighs) 
+ You know, what's the point of even going? 
+ You know, nothing's working. 
+ Well, the kids are gone and we haven't had one night alone since we got to California. 
+ We could always, you know, have a vacation at home. 
+ You know what? 
+ We're staying here. 
+ Yeah? 
+ Yeah. 
+ I'm gonna defrost the porterhouses. 
+ You can pull out that lacy thing with the straps that I got you for Easter. 
+ I am changing into sweatpants. 
+ Or sweatpants. 
+ Look at this. We got the same hair. You see? 
+ You want to hold him? 
+ Cameron : No, no, no, Bos. 
+ No, my taxi's coming. 
+ Hold the baby. 
+ Hold the baby, Cameron. 
+ Yeah. 
+ Lisa : Are you sure we can't convince you to stay, Cameron? 
+ I see the crib got here in one piece. 
+ Uh, yeah, in a lot of pieces, actually. 
+ Gonna put it together this weekend. 
+ Lisa : Sam's graduating out of his bassinet. 
+ Bosworth : Already? Precocious little fella. 
+ Look at him. Oh, I almost forgot. 
+ Do you remember when I used to get these for you? 
+ Yeah, sure do. 
+ (car horn honks) 
+ Oh, that's me. Okay. 
+ Bosworth : All right, see you first thing bright and early. 
+ Congratulations. Your baby's really cool. 
+ I got to get going, too. 
+ I can't believe they're making you work on the Fourth. 
+ Yeah, well, mouths to feed. Work's work. 
+ Oh, I know that kind of work. 
+ I'll be back soon. Just got to kiss the ring. 
+ All right. 
+ Do you want to talk to Grampy? Come talk to Grampy. 
+ (sighs) 
+ It's, uh... it's the Fourth of July. 
+ Right. I mean, you didn't say I had the day off, so... 
+ Ryan, it's the Fourth of July. 
+ So, do you want me to leave? 
+ No. 
+ No, come on in. 
+ Coffee? 
+ Sure. 
+ Kill the computer. 
+ (computer beeps) 
+ You take it black, right? 
+ Cream, lots of sugar, actually. 
+ (truck horn blows) 
+ (tone beeps) 
+ Oh, hi, it's me. 
+ I'm here in Dallas. 
+ Um... yeah, I'm staying at the Motel 6 on... 
+ I actually don't know where. 
+ There's a Midas and a Whataburger. 
+ But, uh, okay. 
+ I'm here. 
+ ("Nowhere Girl" playing in background) 
+ All right, steaks will be ready in a few. 
+ Mmm. 
+ (sighs) 
+ God. 
+ Unreal. 
+ Do you hear that? 
+ No. 
+ Exactly. 
+ No modems screeching like a dying hamster. 
+ God, she can be so stubborn. 
+ And, you know, you wouldn't think somebody so punk would be so conservative when it comes to business. 
+ Yeah, I was really just talking about the modem. 
+ But, sure, I get it. It's stressful. 
+ But Cameron's been great for the most part. 
+ You know, the kids love her. 
+ Of course, I guess that's a mixed bag. 
+ I mean, she makes you better, right? 
+ You know what? I really don't want to talk about work. 
+ I wasn't talking about work. 
+ Oh, well, I really don't want to talk about Cameron. 
+ Oh. 
+ Well, what do you want to talk about? 
+ I don't really want to talk at all. 
+ ("Crazy Jenny" playing in background) 
+ (laughs) 
+ And then we acquired this company, which was insane because our payroll doubled, like, overnight. 
+ Which is fine because that's what people say you have to do to be competitive in Silicon Valley, so that's what we did. 
+ Uh, but, yeah, so the thing that we acquired, it's called SwapMeet and it started off... 
+ I know about SwapMeet. 
+ It's pretty hard to miss 'cause I'm still a subscriber. 
+ Yeah. 
+ Yeah. 
+ I actually almost pulled the trigger on a swap for this "Centipede" cabinet, but the shipping from Winnipeg was ridiculous. 
+ Can I refill for y'all? 
+ I'm... I'm okay, but if you... 
+ Just the check. 
+ Hey, I'm really sorry that I didn't reach out. 
+ I wanted to write, but I'm... 
+ I'm not very good with words unless it's, like, part of a chunk of code. 
+ And honestly, I wasn't sure if you wanted to hear from me. 
+ It was good to get your call. 
+ Yeah. 
+ I mean, I didn't come just to see you. 
+ I came to grab some stuff from my mom. 
+ Well, you're gonna see her. That's... that's great, right? 
+ Yeah, I mean, she and Len are moving, so just got to get what I came here for and then get the hell out. 
+ I don't know, she just... 
+ If I had my way, I wouldn't have to see her at all, but... 
+ I'm really happy to see you. 
+ Don't. Come on. 
+ I mean, you... here, why don't you get this and start working off that plane ticket that you never used. 
+ I'm kidding. It's just a joke. 
+ I'll get it. It's like a $3 business expense. 
+ I can write it off. It's fine. 
+ Yeah, okay. 
+ Thanks. 
+ They quit for the holiday before they finished the new one. 
+ But what do you think? 
+ What's replacing me? 
+ Ryan : Denture cream. 
+ The lottery. 
+ This city. 
+ I can't decide if it's beautiful or horrifying. 
+ My mom came out here. 
+ She died here. 
+ Nothing lasts in this place. 
+ The whole city burned down seven times in the first couple years of its existence. 
+ Even its name has been reinvented. 
+ You know what San Francisco used to be called? 
+ Yeah, Yerba Buena. 
+ Look, that's what makes this city so great. 
+ You can screw up, you can fail, and so what? 
+ You get another chance. 
+ It's disposable. 
+ It's exciting. 
+ 'Cause you never know what the hell's next. 
+ Denture cream. 
+ (chuckles) 
+ I'm not sure I've got another next in me. 
+ You should know that. 
+ ("Train in Vain" playing) 
+ ♪ You say you stand by your man ♪ 
+♪ Tell me something I don't understand... ♪ 
+ Oh, my God. I haven't heard this song in years. 
+ Was that totally hot s*x worth burning the steaks or what? 
+ Oh, God, a billion times yes. 
+ To the best vacation ever. 
+ ♪ Did you stand by me ♪ 
+♪ No, not at all... ♪ 
+ (laughs) 
+ ♪ Did you stand by me ♪ 
+♪ No way ♪ 
+♪ All the times ♪ 
+♪ When we were close ♪ 
+♪ I'll remember ♪ 
+♪ These things the most ♪ 
+♪ I see all my dreams come tumbling down ♪ 
+♪ I can't be happy ♪ 
+♪ Without you around... ♪ 
+ I love you. 
+ I love, too. 
+ ♪ There's only one thing I can say ♪ 
+♪ You should stand by me ♪ 
+♪ No, not at all, did you stand by me... ♪ 
+ 
+ 
+ 
+ True fact... a banana peel will shine your shoes like no other. 
+ Saved me a mint in my 20s. 
+ Yeah, I think I've read that somewhere. 
+ Oh, you did, huh? Oh, there he is. 
+ Hey. 
+ (car door closes) 
+ Hey. 
+ Hey, hi. 
+ I got a little... got ribs and hoecake for you. 
+ Um, yeah. 
+ And, oh, there's some... you know, there's some fireworks going on out there that are pretty incredible. 
+ Shh, shh. 
+ Lisa : He's in the nursery. 
+ Your dad built the crib. He's been a huge help. 
+ Even went out for some diapers. 
+ No, no, no. I was gonna build that crib. 
+ Sam will be up in a couple hours. 
+ I'm going to bed. 
+ Well, I think we could all use some sleep. 
+ Yeah. Yeah, okay, Mr. Family Man. 
+ Nobody's blaming you for being gone, James. 
+ Well, maybe I should have brought home some pilot wings, huh? 
+ Maybe that would make up for it. 
+ You loved those when you were a kid. 
+ Hell, you had a whole box of them. 
+ Yeah, I had a whole box of them because Mom was a stewardess. 
+ I just tossed the ones you gave me on top. 
+ You can rewrite history to impress your 15-year-old boss, but you don't fool me. 
+ Hey, what's that place we used to go eat at down in the South Bay? 
+ Oh, Los Gatos Cafe. 
+ Yeah. 
+ Those eggs Benedict. 
+ I'm taking you there tomorrow for brunch. 
+ One last hurrah before the crazies return. 
+ Well, we definitely worked up an appetite. 
+ God, twice in one day. 
+ We should do that more often. 
+ Twice in one week is above average. 
+ We have not had s*x twice in one day since Gerald Ford was in the office. 
+ No, that's not true. 
+ It's totally true. 
+ Pre-kid. Do the math. Carry the one. 
+ Ford. 
+ Oh, my God. We really needed this. 
+ I'm so glad we didn't go camping. 
+ Really? 
+ Yeah. 
+ I'm so glad to hear you say that. 
+ Yeah? 
+ I mean, we're not as young as we used to be. 
+ Yeah. 
+ But, you know, even then popping a squat behind a tree and your back kills when you wake up. 
+ No, thank you. 
+ Yeah, but... you loved all those times at Mt. Tam. 
+ Eh. 
+ What? 
+ Yosemite was freaking awesome. 
+ You know what it is? 
+ It's like that saying about what crazy is. 
+ That you do the same thing a ton of times and you're like, "This always sucks." 
+ That's insanity. 
+ It's doing the same thing over and over and expecting a different result. 
+ Yeah. Yes. Camping is insanity. 
+ (laughs) 
+ Oh, God. I am exhausted. 
+ (yawns) 
+ (whistling) 
+ (exploding) 
+ (cheering) 
+ That was cool. Come on, let's go light another one. 
+ I got more back at my place. 
+ (distant fireworks exploding) 
+ (sloshing) 
+ (fireworks whistling, exploding) 
+ (car horns honking) 
+ (Joe sobbing) 
+ Woman : Hey, how much for this jacket? 
+ Bosworth : Look, if you're not gonna eat the rest of the thing, then I want it. 
+ You know how hard it is to get a halfway decent breakfast burrito in the Bay Area? 
+ It's a fool's errand. Thank you. 
+ It's funny. It's not where I pictured you growing up. 
+ I didn't. 
+ No? 
+ Oh, that hombre's back. 
+ He brought cash with him. 
+ You gonna do what you came here for or what? 
+ Shh, don't. 
+ Cameron, I know the first 2,000 miles are easy and the last 20 feet are hard, but you've come all this way and now here we are. 
+ Okay. 
+ You owe this to yourself. 
+ And to them. 
+ Come... 
+ He's buying your dad's bike, Cameron. 
+ Fine. Just stop talking, okay? 
+ That's yours. Go get it. Go get it. 
+ Stop it! What the hell are you doing? 
+ People don't make mistakes because they don't love you, Cameron. 
+ They make mistakes because they do. 
+ Oh, that is such a crock of sh1t even from you. 
+ You want me to pick up the slack for you again? 
+ Great, why should today be any different, huh? 
+ Would you stop? 
+ Cameron, you didn't come here just for the bike. 
+ Come on, now. 
+ Jesus Christ! 
+ Listen, you might think you're my father, but you're not, okay? 
+ I know that, God damn it. 
+ No, no, I don't think you do. 
+ (motor running) 
+ (engine starts) 
+ (tires squeal) 
+ Oh, wow. 
+ Oh, hey. Thought I'd get a jump-start on the day. 
+ Great. 
+ So Los Gatos Cafe? 
+ I'm really jonesing for that eggs Benedict. 
+ Yeah. 
+ I don't know. The kids will be home soon. 
+ Rain check? 
+ Everything all right? 
+ Yeah. 
+ Everything's fantastic. 
+ I'm gonna go work on the ham if it's all the same. 
+ Oh. 
+ You know, get some good ham time in. 
+ Oh, sure. 
+ Yeah. 
+ There's some leftover pizza in the fridge if you want some. 
+ (knocks) 
+ (phone rings) 
+ (knocks) Any word from the boss man? 
+ She even coming in? It's already noon. 
+ We're ready to move ahead. Just say the word. 
+ I have to talk to her first. 
+ There's a petition up right now on Community. 
+ It's called 1986 BC. 
+ It demands we let users pay with actual money. 
+ Hundreds of people have already signed. 
+ It was posted two hours ago. 
+ Okay, guys. 
+ One user just emailed me thanking Mutiny for reviving the "efficiency and modernity of the barter system." 
+ Doug : He signed it Methuselah. 
+ (door closes) 
+ Donna : Just wait, okay? 
+ My answer is the same as it was an hour ago. 
+ Take a knee or whatever. 
+ (knocks) 
+ How was Texas? 
+ Still big. How was camp? 
+ Didn't go. 
+ Peaches. 
+ Was the plane delayed? 
+ Got into San Jo' 8:00 A.M. right on time. 
+ I just needed a morning, so I took it. 
+ Okay. 
+ Look, I don't know where she is, Donna. 
+ She didn't even get on the damn plane. 
+ You left her in Texas? 
+ I'm not her keeper, Donna. 
+ And you have no idea where she is? 
+ Kid was at a Motel 6 on I-30. 
+ Beyond that, like I said, it's one big-ass state. 
+ (sighs) 
+ ("Walking Out on Love" playing in background) 
+ "Night Princess." 
+ "Spy Hunter." 
+ "Root Beer Tapper." 
+ What? 
+ Gordo, ColecoVision games. 
+ Hey, stupid Gordon, your stupid turn. 
+ R to you. 
+ Pass. 
+ (imitates buzzer) 
+ Gordo's in a mood. 
+ Hey, Donna. 
+ The guy at the Motel 6 said she checked out. 
+ How long will it take? 
+ We can start beta tests internally today. 
+ Be live in under a week. 
+ Okay, then do it. 
+ And Cameron's okay with that? 
+ Cameron's not here. She'll catch up. 
+ Ryan : Joe, check this out. Something weird going on near Ithaca. 
+ Found some code fragments with the same fingerprint as IBM, Kodak, Xerox. 
+ Hey, Joe? 
+ Yeah. 
+ You okay? 
+ Okay, I don't know exactly what we're looking at here, but the slapdicks have given way to the big swinging variety and they're working on something together called NYSERNET. 
+ That's interesting. 
+ Interesting, yeah, but it doesn't do much to fill the money hole you're so worried about. 
+ God, you're doing great work here. 
+ (phone rings) 
+ Hello? 
+ Woman : May I speak with Joe MacMillan? 
+ This is he. 
+ Mr. MacMillan, I'm calling from the San Francisco City Clinic. 
+ Is this a good time to discuss your recent visit? 
+ Hold on one second. 
+ We're done for the day. 
+ I'm ready. 
+ Mr. MacMillan, I have the results of your HIV antibody test. 
+ Since you were in contact... 
+ ("New Misery" playing) 
+ (beeps) 
+ ("Ammunition" playing in background) 
+ (phone rings) 
+ Hello. 
+ New user sign-ups saw a welcome spike after we integrated SwapMeet, but we're fielding too many complaints about the lack of support for our monetary transactions. 
+ So tonight we will go live with the credit card code that Doug and Craig have been testing all week. 
+ Man : Look who it is. 
+ It's Cameron. Cameron's back. 
+ Donna : When users purchase something, we charge them for the item and we add a small transaction fee. 
+ Mail checks to sellers for the sales price... 
+ What's this? 
+ Well, first of all, welcome back. 
+ I think I speak for all of us when I say I'm glad you're okay. 
+ I've been working. 
+ We've all been working. 
+ Cameron : I can see that. 
+ I have a solve for transactions. 
+ We've been in beta on a credit card interface all week. 
+ Doug and Craig's code? 
+ Yeah, it works great. 
+ Okay, so you just went ahead and did that without me. 
+ Could you all excuse us? 
+ Cameron and I need the room, please. 
+ Hey, so let me see if I've got this. 
+ So let's say I want to buy a, I don't know, first Superman comic for $100. 
+ Mutiny charges my AmEx, adds five bucks. 
+ As a transaction fee. 
+ But AmEx takes three of those dollars as their transaction fee, so Mutiny is only making two bucks. 
+ Meanwhile, I'm really pissed because yesterday I could have shelled out 100 DBs for that Superman and today I'm shelling out an extra five bucks for nothing. 
+ It's not nothing. We're providing a valuable service. 
+ Oh, spoken like a true middleman. 
+ Okay, so what's your solution? 
+ Routing numbers. 
+ It's how banks move money. 
+ And our subscribers pay by checks, so their account numbers are already on file. 
+ Okay, you sell me Superman. 
+ Mutiny pulls funds directly from my bank and deposits them into your account using our own ABA routing number as a pipeline. 
+ Oh, and it's basically free because we don't incur a transaction fee and we don't charge one either because our expenses haven't skyrocketed. 
+ But then with your way, we'd need, what, three people handling credit card transactions, a few people to handle check writing and mailing, probably an accountant or two. 
+ So that's, what, twelve new hires? 
+ Yeah, that's about right. 
+ Okay, my way adds one person. 
+ One. 
+ I can't believe you. 
+ Right back at you. 
+ We agreed to discuss this when I got back. 
+ We agreed to discuss this on Monday. 
+ It's Friday. Where have you been? 
+ Who cares? I'm here now. 
+ Since when do you make decisions for my company without consulting me? 
+ God damn it, I tried to consult you and I couldn't find you. 
+ Oh, my God, this is exactly what I've been worried about. 
+ What? 
+ Every new person that walks through that door, another piece of Mutiny gets cut away from me. 
+ No, no, no, Donna. Mutiny isn't just my job, it's who I am. 
+ It's who I am, too. 
+ I couldn't sleep all week. 
+ I could ignore the mountain of complaints in my in-box, but I care too much. 
+ I came up with a better solution. 
+ Just because you think you need to sprinkle your fairy dust over everything around here before you feel satisfied doesn't mean it's better. 
+ No, it is better. 
+ Oh, God. 
+ Okay, but that's not the point. 
+ We were in real trouble. 
+ And when I'm in trouble and I look around, I need to find you there. 
+ We need to have each other's backs. 
+ Sometimes I need to crawl into a hole just find my head. 
+ I know you're patient with me even when I drag my feet. 
+ I know I should find my own place to live and stop imposing on you guys. 
+ And I know that... that dinner with Doug and Craig that I missed that you probably didn't think we should fire them, but you went to bat for me anyways with Diane. 
+ I know that. 
+ I was with Tom, okay? That's where I was. 
+ Yeah, I was wondering. 
+ Still, you should have called. 
+ He said that you're the best thing that ever happened to me. 
+ And it's true. 
+ And not 'cause he said it or anything, just... you anchor me. 
+ So I guess we're like a bank now. 
+ That's pretty cool, huh? 
+ (chuckles) It's a routing number. 
+ We're not giving away free toasters or anything. 
+ I do have your back, Donna. 
+ I have a weird way of showing it, but I swear I do. 
+ I have yours. 
+ This and only this is what we focus on. 
+ Okay, yeah, time-out. This is super cool to me, but only NSFNET? 
+ The yarn you just pulled, those are the deep pockets. 
+ Exactly. 
+ It's virgin territory. 
+ Wolff created a bottleneck, right? 
+ Yeah, no support for regional networks. The guy is insane. 
+ The guy is brilliant. He's sending a signal. 
+ He's like our Gorbachev. 
+ Do you know what Glasnost is? 
+ I want to say either a vodka or a satellite. 
+ Wolff knows that the only way his network will grow is if private money gets in the game. 
+ The problem is that's against the law for now. 
+ But... 
+ But maybe one day it won't be. 
+ And when the rules change, people are going to flood in. 
+ Average people at home on their Apple IIe and Amiga and it's gonna overload the system. 
+ So who breaks the bottleneck? 
+ We are going to create a regional network right there. 
+ The past... the past is a bunch of fortresses all closed off from the rest of the world. 
+ We don't have to build a faster computer or dream up the next killer application. 
+ That's what you do in a fortress. 
+ We are going to pave a road between them. 
+ And you're going to ask the board to go deeper in the hole on something that may never turn a dime? 
+ I don't care what the board thinks anymore. 
+ Money is just a side effect. 
+ Glasnost. 
+ It means openness. 
+ And it's always a bad idea to bet against openness. 
+ Are you hungry? 
+ I don't know, Joe. 
+ You don't know if you're hungry? 
+ I don't even know what to think anymore. 
+ I try to decipher your sayings, but then the phone rings and you boot me to another zip code. 
+ And we still haven't figured out how to make any money and I go home every day and I'm spinning and I don't even know if you like me. 
+ I feel crazy. 
+ You're not going crazy, Ryan. 
+ You're hungry. 
+ Look, I've had a tough week. 
+ Will you join me for dinner? 
+ Okay. 
+ Okay, I'll come to dinner with you. 
+ Sounds nice. 
+ Just take a good look. 
+ That's what's next. 
+ (phone rings) 
+ Diane Gould. 
+ Diane, hi. It's Cameron Howe. 
+ Cameron. What's going on? 
+ I had a talk with Donna earlier today and I wanted to call and say I know I've been a little eccentric lately. 
+ Someone once told me that eccentric is just a fancy word for asshole. 
+ I'm a little eccentric myself. 
+ And you have to be if you want to make it as a woman in this business. 
+ This routing number thing is really great. 
+ Yeah, okay, I also just wanted to call and say thanks for, you know, seeing that Mutiny Exchange wasn't something we could do on our own and that it was smart to buy SwapMeet. 
+ And, yes, I don't love Doug and Craig, but I really totally respect your decision to keep them at the company. 
+ Like I told Donna, I'd have paid for them to go away. Cost of doing business. 
+ But it shows strength that you decided to make it work. 
+ Look, this call is appreciated, but it's unnecessary. 
+ It's your company. You don't have to apologize for any decision. 
+ In the end, you decide. 
+ Cameron? 
+ Uh, yeah. Okay, thanks, Diane. 
+ I've got to go. Bye. 
+ (door opens) 
+ (indistinct chatter) 
+ (breathing heavily) 
+ Donna : I'm gonna go check on the kids real quick. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

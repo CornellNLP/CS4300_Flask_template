@@ -1,0 +1,859 @@
+Transcripts - Forever Dreaming :: 03x04 - Rules of Honorable Play - Halt and Catch Fire 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 03x04 - Rules of Honorable Play https://transcripts.foreverdreaming.org/viewtopic.php?f=176&t=28513 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 09/07/16 02:25 ] 
+ 
+ 
+ Post subject:  
+ 03x04 - Rules of Honorable Play 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ I want you to come to this meeting. 
+ announcer : Previously on AMC's "Halt and Catch Fire"... 
+ You made a promise to people that you wouldn't charge them. 
+ If this is gonna work, we're gonna have to trust each other. 
+ Cameron was my dad's name. 
+ I started using it after he died. 
+ You could do a bit more delegating. 
+ Not when it's something that I think is truly foundational. 
+ You think that everything is foundational. 
+ Pack up your stuff. 
+ Starting tomorrow, we'll be working out of my place. 
+ What'd you do that for? 
+ If you can find someone willing to pay north of $350, you should go for it. 
+ When you see an opportunity, you take it. 
+ (music playing) 
+ (beeps) 
+ Jesus. 
+ (chatter) 
+ (fizzing) 
+ Doug : Your code loops all over the place. 
+ It's not structured. It's not maintainable by anyone. 
+ I disagree. 
+ There are reentrant forks, no way of knowing which branch invoked a function. 
+ We don't do that in C++. It's officially deprecated in the language. 
+ I can maintain it. There are condition flags for everything. 
+ There's no one-way arrow. 
+ Is that what you want to do? 
+ Be the code grunt for this sick piece of choss? 
+ Dougie, chill. 
+ My guys will flowchart it. I'll write out the flags... 
+ I'm sure you will. 
+ The flow chart would strangle us. It's a mess. 
+ And what do you mean your guys? 
+ It's fast and it fits. 
+ It's no longer necessary. 
+ Doug, we bought your company. 
+ You should adapt to our programming language. 
+ I know it sucks to be rewritten. 
+ It doesn't make sense. 
+ It's like asking a race car to adapt to a covered wagon. 
+ Poetic. 
+ Maybe we should all try to, you know, take our egos out of it. 
+ Well, my ego would love to have a good night's sleep, but sadly it has to rewrite your code first. 
+ (pencil clatters) 
+ Yikes. 
+ Diane, I am so sorry. 
+ Diane : It's all fun and games till someone gets stabbed in the cheek. 
+ Hi. 
+ I'm just here to observe. 
+ Okay, well... 
+ I think we're all on the same page now. 
+ Definitely. Um, we're really close. 
+ (scoffs) 
+ Maybe this'll help. 
+ It's an integration road map. 
+ Look, we think the way you created Mutiny was brilliant. 
+ The original block of code was truly innovative. 
+ Mm-hmm, but? 
+ It doesn't play nice with our SwapMeet code. 
+ If you make some changes to that block and we make some changes to our C++... 
+ It's a bug factory. The old code makes it impossible to keep track of the reentrant looping. 
+ But I don't need the object-oriented language, okay? 
+ I can keep track of the looping in my head. 
+ Oh, I get it. You're that good. 
+ Yeah, I am. Aren't you? 
+ Bosworth : ...looking all around and then he came around the side of the trailer there. 
+ And I swear to God, he goes, "Man, that ain't no bear. That's your ex-wife." 
+ Grr! 
+ (laughs) 
+ She was just doing the whole thing. 
+ Uh-oh. 
+ Oh, you surprised to see her? 
+ Yeah. 
+ Mm-mm. 
+ Adios, Amiga. 
+ Hey there. 
+ Hi. 
+ Hi. 
+ (stammers) Here, go ahead. After you. 
+ Thank you. (chuckles) 
+ Good day, ladies. 
+ Donna : Hi. Well, this is a nice surprise. 
+ I was in the neighborhood. 
+ So, how's it going with the SwapMeet guys? 
+ Um, good. 
+ You keep telling me that on the phone with that same not-so-sure thing you do with your voice. 
+ What not-so-sure thing? 
+ (chuckles) 
+ Anyway, I just popped into their project meeting. 
+ The vibe was pretty hostile. 
+ Why haven't you told me? 
+ Well, it's a work in progress. 
+ Donna. 
+ (sighs) I know. 
+ Cam isn't comfortable with the guys yet, and I'm working on it. 
+ How are you working on it? 
+ Well... 
+ My point is, we should be working on it. 
+ If there are issues, we need to air them out. 
+ Otherwise resentment festers and the whole thing starts to rot. 
+ All right, how about this? 
+ We could all go to dinner tonight, have some wine, talk things through. 
+ I do like wine. 
+ Great. 
+ But I can't do tonight. 
+ I've got tickets to a charity thing, a fundraiser for Save the Bay. 
+ Oh, that sounds... 
+ Terrible. 
+ I was gonna say lovely. 
+ My date just cancelled and I have a plus one. 
+ I could check with Gordon, see if he could watch the girls tonight. 
+ No, um... 
+ I was thinking about John Bosworth. 
+ Oh. 
+ I mean... really? 
+ Bosworth : "Man, that ain't no bear. That's my ex-wife." 
+ (all laugh) 
+ Grr! 
+ You know, there'll be a whole slew of Valley big shots there. 
+ It's a great opportunity for John to make some business connections. 
+ Sure. 
+ But... nobody calls him John. 
+ I do. 
+ ("Never Get Older" playing) 
+ All right, guys. 
+ Guys. 
+ Guys, please, please! 
+ Shh! 
+ Bodie : Yo, shut up, kid! 
+ All right, I know we've gotten off to a rough start, and I'm sorry about that. 
+ That's the understatement of the century. 
+ We're in a bit of a holding pattern ever since Cam took over for our lead coder. 
+ Louis : Yeah, that was genoid. 
+ Bodie : You don't know jack about it. 
+ But we're gonna use this as an opportunity. 
+ Now, I know we've had some success flow-charting the two systems. 
+ How are we doing with our organizational training objectives? 
+ Oh, you mean the buddy system? 
+ It's a nightmare trying to train these jokers. 
+ All they want to do is bitch about C++. 
+ (robotic voice) C++. 
+ He just follows me around all day doing this idiotic routine. 
+ C++. 
+ Carl, he's your trainee, okay? 
+ I don't care. 
+ Master Carl, I've been programmed to observe your every move... 
+ Okay. 
+ ...so I may learn from your flawed behavior what it is to be human. 
+ Shut up, shut up, shut up! 
+ Bodie : He's not even funny. 
+ Bodie, stop antagonizing him, okay? 
+ Beep-boop-beep. 
+ Get out of my face! 
+ Hey! 
+ Whoa, whoa! 
+ Let's kill these a-holes! 
+ Calm down! 
+ All : Oh! 
+ Oh, sh1t. You okay? 
+ Everyone, sit down. 
+ What the f...? 
+ (theme music playing) 
+ You see? It is just so charming. 
+ It has all the original molding. 
+ And all the original mold. 
+ And the backyard is adorable. It's perfect for barbecues. 
+ Oh, did you hear that? 
+ Okay, why don't I give you and your, uh, friend a minute to talk? 
+ Thanks. 
+ She thinks we're a couple. 
+ You're not my type. 
+ Yeah, this place has character. 
+ This isn't a generic box. 
+ No, the Mutiny house had character. 
+ This place is just quaint. 
+ You've hated every place we've seen. 
+ So? I'm picky. 
+ And nothing feels right. 
+ Is this about the house or is this something else? 
+ It's Thing One and Thing Two. 
+ God, I can't stand them. 
+ Especially the bigger Thing, this arrogant frat boy. 
+ (whines) 
+ The smaller Thing's not so bad. 
+ You know their names. 
+ Yes, Tweedledee and Tweedledum. 
+ Heckle and Jeckle. Frick and Frack. 
+ I get it. But they want to be useful. 
+ By what? Translating everything into C++? 
+ Donna, if I knew that was the plan, I wouldn't have signed on. 
+ But we did sign on. 
+ The guys are under a two-year contract with a piece of the company. We married them. 
+ We have to sit down and talk it out before the whole thing festers and rots. 
+ We're having dinner tomorrow night. 
+ What? 
+ That's a horrible idea. Who suggested that? 
+ I did. 
+ Oh, great. 
+ And so now you're just informing me. 
+ See? It already feels like home. 
+ MacMillan Utility was always intended to be a jumping-off point. 
+ Totally. It's all about transformation. 
+ Many companies start doing one thing and then change direction. 
+ If we can just find the right vector. 
+ Ryan : Then our freeware can stay free. 
+ Router tech is promising. 
+ Ah, Cisco's already way ahead on that one. 
+ Uh, 3-D graphics. Uh, AI. 
+ 5th gen systems. 
+ It's a billion-dollar road to nowhere. 
+ I give it a year. 
+ Fairchild made cameras. Now they make semiconductors. 
+ Coleco was the Connecticut Leather Company. 
+ Now they make video games. 
+ Yeah, and Mutiny started as a games company. 
+ Shut up. 
+ Sorry, I'm just so stoked to be a part of your process. 
+ Plus the caffeine... 
+ No, I mean be quiet. 
+ Now. 
+ Please. 
+ Shh. 
+ Uh... okay. 
+ Let's circle the five best ideas. 
+ Wait, what... what are you doing, man? 
+ We spent weeks on that. 
+ There's some good stuff there. 
+ Good is the enemy of great. 
+ If anything's worth pursuing, we'll remember it tomorrow. 
+ (sighs) 
+ ("Beyond Belief" playing) 
+ ♪ History repeats the old conceits ♪ 
+♪ The glib replies, the same defeats ♪ 
+♪ Keep your finger on important issues ♪ 
+♪ With crocodile tears and a pocketful of tissues ♪ 
+♪ I'm just the oily slick ♪ 
+♪ On the windup world of the nervous tick ♪ 
+♪ In a very fashionable hovel ♪ 
+♪ I hang around, dying to be tortured ♪ 
+♪ You'll never be alone in the bone orchard ♪ 
+♪ This battle with the bottle is nothing so novel ♪ 
+♪ So in this almost empty gin palace... ♪ 
+ (knock on door) 
+ ♪ Through a two-way looking glass... ♪ 
+ Come in... if you must. 
+ Can we talk for a minute? 
+ I guess. 
+ Look, I know we got off on the wrong foot. 
+ I mean, we all want the same thing, right? 
+ Yeah. 
+ Maybe we... got into this too quickly, but, yeah, let's... we're in it now, so... 
+ If you think it was too quick, you have your man Bos to thank. 
+ He strong-armed us into taking the deal. 
+ Really? 
+ 'Cause I heard that you and Greg misrepresented... 
+ It's Craig. 
+ ...the value of your company to lure us into overpaying. 
+ What's your deal? 
+ Why do you have such a hard time playing with others? 
+ Were you born this way or did some loser ex-boyfriend turn you into a man-hating bitch? 
+ (phone ringing) 
+ Cameron : Ah! 
+ ♪ I've got a feeling ♪ 
+♪ I'm gonna get a lot of grief... ♪ 
+ (music stops) 
+ (ringing continues) 
+ What? 
+ Man's voice : Catherine? Is that you? 
+ Yes. 
+ It's Len. 
+ What's wrong? 
+ Nothing, just... sorry to call you at work. 
+ I wanted to let you know your mom... 
+ What? 
+ Your mom and I are selling the house. 
+ Bought a little condo outside of Miami. 
+ We gotta get rid of all that crap in the garage. 
+ Do... do you want your dad's stuff? 
+ Your mom saved it for you, but, you know, Miami. 
+ We're gonna sell everything that's left over 4th of July weekend. 
+ I was hoping you might come and take a look, say hello to your mother. 
+ It's not like it used to be. 
+ She's much better now. 
+ Oh, uh... then why didn't she call? 
+ I hope you're doing well out there. 
+ I'll let your mom know that we talked. 
+ (line clicks, dial tone) 
+ (indistinct arguing) 
+ Craig : You need to apologize. 
+ All you have to do is say, "I'm sorry," that's it. 
+ How many times have I gotta try? 
+ God. 
+ Wait, Doug! 
+ (door opens, closes) 
+ Hey, what was that about? 
+ Oh. 
+ Oh, just the usual ups and downs of a magical partnership. 
+ You're here late. 
+ But then you're probably always here late. 
+ Are you implying that I don't have a life? 
+ Yes. 
+ You could say that Doug and I have different styles. 
+ No sh1t. 
+ He just walked into my office and called me a bitch. 
+ (sighs) 
+ I am so sorry. 
+ Look, we're really excited to be part of Mutiny. 
+ It's just SwapMeet was our baby. 
+ I think Doug still feels down about having to sell. 
+ But that's no excuse. 
+ You want to see something cool? 
+ Is it a dead body? 
+ Only if Doug's still here. 
+ You sure this is okay? 
+ He won't mind. 
+ Can I ask you something? 
+ Okay. 
+ Why won't you change that original block of PL/M? 
+ It's the only piece left that I wrote by myself. 
+ Alone in my bedroom, just me. 
+ Back when this whole place was just me. 
+ I did all the timings by hand, I checked the status on every buffer and every keystroke every time, all with check loops. 
+ It was fast and it was... 
+ Beautiful. 
+ It is beautiful. 
+ Yeah. 
+ And what do you want me to say? 
+ I... I'm proud of this place. 
+ But back then, it was this secret. 
+ It was all mine. 
+ Then we should leave it alone. 
+ Ah. 
+ (sighs) 
+ Just got the weirdest phone call. 
+ My stepfather. 
+ I guess he and my mom are moving to Florida. 
+ They're selling all my dad's stuff. 
+ He died when I was nine. 
+ sh1t. 
+ I'm sorry to hear that. 
+ Just he had this motorcycle... an old Panhead Harley. 
+ Oh, he used to ride me to school on it. 
+ I'd show up to kindergarten with this, like, gigantic helmet. 
+ I'm sure it looked ridiculous, but it was... it just felt so... 
+ You should go get the bike. 
+ Have you ever considered a solo business venture? 
+ (soft laugh) 
+ (gunshots) 
+ (quacking) 
+ (game chiming) 
+ Hmm. 
+ Wasn't the Nintendo system supposed to be for Joanie? 
+ (gunshots) 
+ No, it was a family present. 
+ Anyways, I had to unwind after that brawl today. 
+ I honestly don't know what to do about those guys. 
+ Cardiff had its challenges, but no one ever punched me in the ear. 
+ Yeah, well, you're not at Cardiff anymore. 
+ (gunshots) 
+ There's your answer. 
+ Just take the guys out back and shoot 'em. 
+ (quacking) 
+ (chimes) 
+ Bosworth : Well, he comes around the side of the trailer, and he goes, "Man, that ain't a bear. 
+ That's your ex-wife." 
+ Grr! 
+ (laughing) 
+ See? Thank you, thank you. 
+ (coughs) Man, it was crazy, man. 
+ And I don't know how long she stayed there. 
+ She was there all night, just sort of frozen in place. 
+ Grr! The poor b*st*rd... 
+ (woman giggles, screams) 
+ (continues indistinctly) 
+ (music playing) 
+ (chattering) 
+ Don't move. 
+ Joe MacMillan. 
+ Of course. 
+ Diane Gould. 
+ Funny that we've never officially met. 
+ But I'm certainly aware of you. 
+ Amador Gould Gilson. I admire your business model. 
+ Small, intelligent investment portfolio. 
+ I guess you could call that boutique. 
+ Well, size isn't everything, right? 
+ I hear you facilitated the SwapMeet acquisition at Mutiny. 
+ Congrats. 
+ We're very excited about it. 
+ I'm surprised Cameron Howe wanted to play ball with another company. 
+ She must be in a good place. 
+ Excuse me. Can I, um... can I borrow you for a sec? 
+ Yeah. 
+ It's great to finally meet you. 
+ Mm, you as well. 
+ (whooping, giggling) 
+ (music continues) 
+ (chatter) 
+ 
+ 
+ 
+ How do I get one of these? 
+ Uh, make more money. 
+ Which brings us to our little problem. 
+ You heard of this individual, Topher Erickson? 
+ Does not ring a bell. 
+ His father's Cal Erickson, senior vice president of General Atomics. 
+ Okay. 
+ Well, apparently he was at one of your parties and indulged in a copious amount of cocaine. 
+ Mm-hmm. 
+ And then grabbed someone and went off on a little joyride in the brand-new Ferrari his father procured for his 18th birthday. 
+ What kind of jerk spends 60 grand and buys Italian? 
+ Yeah, well, this particular jerk funds about a quarter of your business. 
+ Hmm, okay. 
+ And it's boring old contractor clients like that that float your little software experiments. 
+ I'm gonna mingle. 
+ Set something up. I'll do damage control. 
+ Good. 
+ Hi there. 
+ Mm. 
+ Friendly fella. 
+ Well, we can't all have your Southern charm. 
+ I want to thank you for calling me when my grandson was born. 
+ That was you, right? 
+ Mm-hmm. 
+ Oh, sure. Joe MacMillan, man of mystery. 
+ Yeah, it's always good to hear from an old... friend. 
+ Well, you seem to be doing just fine making new friends. 
+ Oh, Miss Gould is just a business associate. 
+ Oh, no, I mean everyone here. 
+ They're lapping you up. 
+ It's a good call, playing up the Texas thing. 
+ People love a performance. 
+ It looks like you're in a performance of your own, huh? 
+ More of a one-man show kind of thing. 
+ Yeah, I'm a regular Spalding Gray. 
+ I left someone hanging. 
+ Be well. 
+ Oh, good, you're still here. 
+ I was worried you got kidnapped by that old pal Joe MacMillan. 
+ Can I top you off? 
+ Yes, please. 
+ You certainly made a splash tonight. 
+ How so? 
+ You're the life of the party. 
+ Everybody loves you. 
+ Between you and me, I told Donna I was inviting you for business. 
+ But really, I just didn't feel like flying solo, you know, under the circumstances? 
+ Glad I could be of service. 
+ Isn't that crazy? 
+ That you can build a life with someone, raise kids, spend your 20s, your 30s, half your damn 40s together, and in the end feel nothing? 
+ How is that possible? 
+ I don't know. 
+ Would you like a cigarette? 
+ No. 
+ No, I'm good. 
+ Somewhere along the line, I lost my taste for tobacco. 
+ And champagne. 
+ Parties. 
+ I told my lawyer I didn't want to fly up here and bail Topher out right away. 
+ Let him cool his heels for a while, reflect upon his actions. 
+ Plus, SF's not my cup of tea. 
+ It must be hard to leave La Jolla. 
+ I love Del Mar. It's got the perfect mix of sand bottom beach breaks and patchy reefs. 
+ It's, uh... it's very easy to find a wave you can call your own. 
+ I've always envied surfers. 
+ We do a little naval work out at Coronado Island. 
+ Mm. 
+ Those bastards offshore look like they don't have a care in the world while I'm stuck to my seat worrying about packet switching and computer viruses, thank you very much. 
+ (chuckles) 
+ Packet switching? 
+ Is that with the DoD? 
+ Yeah, nothing sexy. 
+ Just moving a bunch of electronic boxes around. 
+ Mm. 
+ System's so damn clunky, they're gonna overhaul the whole thing. 
+ Ken : Ugh, sounds like a pain in the ass. 
+ You know what you should do? 
+ You should take a page from those carefree bastards and you should catch a wave, huh? Clear your mind. 
+ Joe's got a great instructor down your way. 
+ She's, uh... she's amazing. 
+ And guess what, her name... it's, uh... her name is Sandy. 
+ (both laugh) 
+ Sandy. 
+ Right, Joe. 
+ (chuckles) 
+ That's good. Love to meet her. 
+ Look, I know I'm being managed here. 
+ Glenfiddich goes down nice, but it doesn't wipe away the taste of that phone call from those cops. 
+ Topher's still a teenager. We don't let our boy run wild. 
+ Cal, I was very troubled when I heard what happened to your son. 
+ I had no idea there were minors in my home or narcotics, and in no universe would I approve of that. 
+ All right. 
+ You seem like a decent man. 
+ Not some 'Frisco nutjob. 
+ I'll submit a detailed report to the big boss, i.e., my wife, and, uh, that should clear things up. 
+ Might not mention Sandy to her, though. 
+ Nothing like a girl in a wet suit, am I right? 
+ You sure are. Although, I prefer a bikini. 
+ Yeah. 
+ Some of our business associates in SF, they're a little funny, if you catch my drift. 
+ Soft handshakes. 
+ Hell, maybe we'll get lucky and all the faggots will catch that special flu that's going around. 
+ As long as my son stays away from it. 
+ But, uh, got plenty of time to whip him into shape. 
+ Like I said, he's still a kid. 
+ All right, gentlemen, it's that time. 
+ All right. Yes, sir. 
+ Hey, watch it, man. 
+ Do you know, I wouldn't worry about your son. 
+ He'll find his path when he gets away from you. 
+ But I feel sorry for your wife. 
+ She has to lie there taking it, wondering what the hell she did to have your stinking breath in her face. 
+ Or, wait, maybe I was wrong. 
+ Maybe the big boss isn't the one taking it. 
+ Hey, Jesus Christ, Joe. 
+ We had the son of a bitch locked and you had to... 
+ Had to what? 
+ We sell security software to the government. 
+ Hey, wait. Come on, hey! 
+ Hey. 
+ Hey. 
+ It was great hanging out with you last night. 
+ Mm-hmm. 
+ (keyboard clacking) 
+ Can I just... 
+ Uh, yeah. 
+ Sure. 
+ Cool. 
+ I'll let you get back to work. 
+ (groans) 
+ I heard you two had a good conversation last night. 
+ Uh, yeah. 
+ I decided to, uh, keep the SwapMeet code as it is and translate some of Mutiny into C++ to bridge the interface. 
+ Really? That's great. 
+ The guys are gonna be thrilled. 
+ And I think we should fire them. 
+ What? Why? 
+ Do you have an actual, you know, reason we can give Diane, since she's the one who's gonna have to pay for it? 
+ Yes. 
+ We don't need them. 
+ Well, the dinner is tonight. 
+ If you really want to fire the guys, then you can tell Diane yourself. 
+ ("You Make Me Wanna Dance" playing in background) 
+ Oh, no! They have three-player "Yeti Mountain Mission"? 
+ Race! 
+ No, no, no, no, no. No video games. 
+ We're here to coalesce as a group. 
+ What? 
+ So line up by "heighth." 
+ What? 
+ "Heighth"? 
+ Height. Line up by height. How tall you are. 
+ (laughing) 
+ Height. 
+ So you're gonna be at the end. 
+ You're at this end over here. 
+ Hey, does hair count? 
+ Yes, hair counts. 
+ Down here at the end. 
+ Arki, you're in the center. Lev, you're there. 
+ Wonderboy, down at the end. 
+ Come on, guys. 
+ Bodie : Yeah, Wonderboy. 
+ All right, you've been ordered by Allied Command to select 12 general prisoners... 
+ I'm innocent. 
+ ...convicted by courts-martial and sentenced to be executed or serve lengthy prison terms for murder, robbery, striking a general in the ear, and other crimes of violence. 
+ And you will deliver them behind enemy lines in France to undertake a mission of sabotage that could change the course of the war. 
+ Okay, Lee Marvin, but don't most of the guys in that movie eat it? 
+ By the end, is it more like the "Dirty Deuce"? 
+ I'll show you a Dirty Deuce, Bodie. 
+ It's a metaphor. 
+ Actually, it's more of an allegory. 
+ Uh, pipe down, Smurfette. 
+ An allegory is a metaphor. 
+ F you, semen. 
+ Semen? Did she just call me semen? 
+ Man on P.A. : It's time for the next battle! 
+ (feedback squeals) 
+ God. 
+ Players, follow me for instruction in the rules of honorable play. 
+ Bodie : You need to turn down your toys. 
+ Come on, guys. Let's see a little bit of that Apache know-how. 
+ (growls) 
+ (guns blasting) 
+ Cover me, cover me! 
+ (coders shouting) 
+ There he is, there he is! 
+ Buckle up, big man. 
+ sh1t! 
+ (shouting indistinctly) 
+ Guys, don't just stand around. Fight back! 
+ I'm out, I'm done. Screw you, asshole. 
+ All right, guys, gather around, gather around. 
+ All right, look, focus, okay? 
+ Guard the base. Get each other's backs, all right? 
+ Is this thing even on? 
+ Bodie, get down. You're in the line of fire! 
+ Wonderboy, get that out of your mouth. 
+ Come on, man, get your head in the game. 
+ (blasting) 
+ Hey, guys, check it out. If you just cover this thing, you can't get hit. 
+ There must be a way to disengage the entire system. 
+ What a bunch of pussies. 
+ That's sexist. 
+ (beeps) 
+ All : Oh! 
+ He's on our team! 
+ F off, you big D. 
+ (beeps) 
+ Oh, my God, stop! 
+ We're all gonna die! 
+ It's Judgment Day, sinners! 
+ (shouting) 
+ Coder : Dodged a shot. 
+ ("Goodnight, Saigon" playing) 
+ (all screaming) 
+ Let's do this! 
+ ♪ We said we'd all go down together ♪ 
+♪ Yes, we would all go down together ♪ 
+♪ We said we'd all go down together ♪ 
+♪ Yes, we would all go down... ♪ 
+ (all yelling) 
+ (all cheering) 
+ Yeah! 
+ (cheering continues) 
+ Sir! Sir! You are officially disqualified. 
+ Coders : What?! 
+ (all chanting) Green! Green! Green! 
+ (echoes) ♪ And who was right? ♪ 
+ (chatter) 
+ Craig : We feel 100% confident. 
+ Doug : If we're properly assigned, we can get this whole thing out the door in three weeks. 
+ Three weeks? 
+ That's much sooner than we expected, right? 
+ Oh, I just wish... 
+ Let it go. She's not coming. 
+ (sighs) 
+ I thought you two had a good conversation. 
+ Yeah, I thought so, too. 
+ We have so much respect for Cam and what you guys have built together. 
+ It sounds nice and all, but the real question is can you work with her? 
+ Definitely. 
+ Of course. 
+ We just get the feeling she can't work with us. 
+ You know? 
+ Are we ready to go ahead and order? 
+ ("Cold Siren" playing in background) 
+ ♪ Cold, cold creature ♪ 
+♪ And she keeps her so-called heart ♪ 
+♪ She's a cold, cold, cold, cold, siren song ♪ 
+♪ A cold, siren song... ♪ 
+ (chatter) 
+ I'm sorry. 
+ It's not your fault. 
+ Can we have the check, please? 
+ I just think if Cam doesn't want to work with the guys, she should have the courage to deal with it face-to-face. 
+ No, I know. 
+ Look, I wanted her to tell you, but since she's not here... 
+ Cam wants to fire Doug and Craig. 
+ Really? That's big. 
+ Yeah. 
+ Do you agree with her? 
+ Well, I... she's my partner. 
+ Personally, I think these guys are a big asset. 
+ But your relationship with Cameron is the most important thing. 
+ That's what I'm investing in. 
+ If working with Doug and Craig is untenable, Mutiny can pay their earn-out early and send 'em home. 
+ But you just said that they're a big asset. 
+ I wouldn't be happy about it, but it's better than forcing something toxic. 
+ I just hope it's the guys who are the problem. 
+ So, how's the team-building coming? 
+ Well, surprisingly productive. 
+ Although I've been banned from future competition due to my controversial military tactics. 
+ (chuckles) 
+ You can get out there. They're still there. 
+ It's stupid fun. 
+ No, I just came by 'cause I... well, 'cause I said I would. 
+ Well, look at you, Mr. Nice Guy. 
+ Mr. Nice Guy? 
+ Back at Cardiff, you were the heavy SVP of Sales. 
+ All those multimillion-dollar accounts, everybody was scared shitless of you. 
+ You know, including myself. 
+ But now... 
+ Now what? 
+ Look, I just mean, you know, being the boss sounds good, but this is better. 
+ There's minimal responsibility, maximum fun. 
+ Which reminds me, what's that story you keep telling the guys? 
+ Something about... 
+ That thing's outta gas. 
+ (coders laughing) Bos! 
+ You should've seen it. 
+ Oh, man, you're not gonna believe it. 
+ Gordon went full-on kamikaze. 
+ He practically murdered the guy. 
+ It seemed totally lame at first, but it was actually pretty awesome. 
+ Yeah, even she liked it. 
+ (all laugh) 
+ You should play the next round, man. 
+ You would shred this course. 
+ No. 
+ Coders : Come on. Come on. 
+ (chanting) Bos! Bos! Bos! 
+ No, I'm good. 
+ I said I'm good! 
+ Go have another round. 
+ Get on in there. You guys enjoy it. 
+ Okay, yeah. 
+ (overlapping chatter) 
+ (all cheering) 
+ (guns blasting) 
+ (sighs) 
+ Cam. 
+ What time is it? 
+ It's late. You missed the dinner. 
+ Oh, my God, Donna, I'm sorry. 
+ Jesus, I... I don't know... 
+ I meant to be there. I planned to be there. 
+ I don't know what happened. 
+ You're overworked, that's what happened. 
+ You're exhausted. 
+ Um, how was the dinner? 
+ Fine. 
+ Doug sucked up a lot. 
+ God, I hate that guy. 
+ I know. But Craig's okay. 
+ Yeah. 
+ After they left, I told Diane you want to fire them. 
+ And? 
+ She said no. 
+ What do you mean, she said no? 
+ They're a part of the deal. 
+ They're an important asset and we have to find a way to make it work. 
+ (chuckles) What? 
+ I thought she was on our side. 
+ She feels it's what's best for the company. 
+ Okay. 
+ (exhales) 
+ Okay, well, thank you for asking. I really appreciate it. 
+ Yeah. 
+ I'll see you at home. 
+ Yeah. 
+ (door opens, closes) 
+ (door opens) 
+ Hello? 
+ I'm cool to work at night, but your call kind of freaked me out. 
+ We lost General Atomics today. 
+ They represent 37% of our annual billing. 
+ What happened? 
+ I traded them for something more valuable. 
+ What's this? 
+ The log-in credentials for the ARPANET, the Department of Defense packet-switching network. 
+ I secured the information through General Atomics. 
+ I want you to look into it before they flag that my credentials still work. 
+ Okay, but, you know, the ARPANET isn't new tech. 
+ It's sort of rusty. It's not like missile codes or fighter plane blueprints. 
+ This is... this is mundane stuff. 
+ I do know that. It's antiquated. 
+ And that means it's ripe for an upgrade. 
+ So what should I do? 
+ I need you to go into it, map it, and help me figure out what's next. 
+ (duck quacking) 
+ (gunshots) 
+ Cameron : Why? 
+ (game chimes) 
+ (Cameron and Gordon chatting indistinctly) 
+ Play after this. 
+ There's two controllers, though. 
+ Play after I finish the best out of 10. 
+ Man, you're like some kind of "Duck Hunt" savant. 
+ Does that mean I'm totally deficient in other areas? 
+ Like "Duck Hunt" savant, but bad team player. 
+ Come on. (groans) 
+ So how's it going with... 
+ (German accent) ...Dick und Doof? 
+ Dick und Doof? 
+ That's what my grandfather called Laurel and Hardy. 
+ Loosely translates to "chubby and dumb." 
+ Well, that's perfect, 'cause Doug's the Dick... 
+ Und Craig ist Doof. 
+ Ja. 
+ Ja. 
+ (both laugh) 
+ Ahh! 
+ Oh, whatever, though. 
+ I guess I'm gonna have to make it work. 
+ All right, hope you haven't lost your edge now that you're a peacemaker. 
+ Uh, oh, do you want a soda? 
+ Yeah, sure. 
+ Yeah? 
+ Hey. 
+ Jesus! 
+ What are you doing? 
+ You know, I wanted to tell you something. 
+ I've been thinking, and you should stay here as long as you want. 
+ You can take your time finding a place. 
+ ("Duck Hunt" continues in background) 
+ Oh, thanks. Yes! 
+ All right. All you. 
+ Can I ask you a question? 
+ When did you know you were losing Cardiff? 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 
