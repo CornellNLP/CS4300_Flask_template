@@ -19,22 +19,23 @@ def search():
 	require_free_entry = request.args.get("requireFreeEntry")
 	require_parking = request.args.get("requireParking")
 
-	# Retrieve rankings
-	results = []
-	# test_result1 = Result((1.0, "Cascadilla Gorge Trail - North Rim"))
-	# test_result2 = Result((.8, "Ellis Hollow Red trail"))
-	# test_result3 = Result((.5, "Stewart Park"))
-	# results = [test_result1, test_result2, test_result3]
-	# print(results)
-
 	if not query:
 		data = []
 		output_message = ''
 	else:
-		# Retrieve rankings
+		# Modify query to include toggle information
+		# TODO Change how we process toggles
+		if require_accessible:
+			query += ' accessible'
+		if require_free_entry:
+			query += ' free'
+		if require_parking:
+			query += ' parking'
+
+		# Retrieve rankings in the form of (sim_score, trail_name)
 		rankings = get_rankings_by_query(query)
-		for ranking in rankings:
-			results.append(Result(ranking))
+		# Convert rankings into displayable results
+		results = [Result(ranking) for ranking in rankings]
 		output_message = "Your search: " + query
 		data = results
 
