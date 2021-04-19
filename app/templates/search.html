@@ -214,6 +214,7 @@
             </div>
         </form>
         <div class="result">
+            <h3>Matches for {{ user_name }}:</h3> <br>
             <div class="personality">
                 <h4>{{personality_match[0]}}</h4>
                 <h3>{{personality_match[1]}}</h3>
@@ -224,6 +225,7 @@
                     <p class="info-detail">{{personality_match[i+1]}}</p>
                 </div>
                 <div class="content">
+                    <h4>{{ wine_match[0] }}</h4>
                     {% for j in range(1,wine_match|length,2) %}
                     <div class="info">
                         <p class="info-score"><strong>{{wine_match[j]}}</strong></p>

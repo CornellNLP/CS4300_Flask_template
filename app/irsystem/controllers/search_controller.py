@@ -5,7 +5,7 @@ from .json_reader import *
 from .cosine_similarity import *
 from .personality_vector import *
 
-project_name = "Wine Time: Your Personal Sommelier"
+project_name = "Perfect Wine Match: Find Your Perfect Wine"
 net_id = "Ashley Park: ap764, Junho Kim-Lee: jk2333, Sofia Yoon: hy348, Yubin Heo: yh356"
 
 df = json_read("app/irsystem/controllers/winemag_data_withtoks.json")
@@ -55,19 +55,29 @@ def search():
         personality_match = ''
         wine_match = ''
     else:
-        responses = [int(p1), int(p2), int(p3), int(
-            p4), int(p5), int(p6), int(p7), int(p8)]
+        responses = [
+            int(p1),
+            int(p2),
+            int(p3),
+            int(p4),
+            int(p5),
+            int(p6),
+            int(p7),
+            int(p8)
+        ]
         wine_scores = compute_personality_vec(legend, index, mat, responses)
         flavor_result = cossim_dict(flavor, inv_ind, idf, norms)
         scent_result = cossim_dict(scent, inv_ind, idf, norms)
         total = total_score(flavor_result, scent_result)
 
-        personality_match = compute_personality(
-            name, wine_scores, df_personality)
+        personality_match = compute_personality(name, wine_scores,
+                                                df_personality)
         wine_match = compute_wine(name, wine_scores, total, df, 5)
+        print(wine_match)
 
     return render_template('search.html',
                            name=project_name,
+                           user_name=name,
                            netid=net_id,
                            scale=scale,
                            personality_match=personality_match,

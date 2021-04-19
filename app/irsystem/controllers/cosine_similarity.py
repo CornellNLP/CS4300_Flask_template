@@ -6,6 +6,7 @@ import pandas as pd
 import nltk
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.corpus import stopwords
+
 nltk.download('stopwords')
 
 stopwords = set(stopwords.words('english'))
@@ -92,8 +93,8 @@ def compute_idf(inv_idx, n_docs, min_df, max_df_ratio):
     idf = {}
     for word in inv_idx:
         l = len(inv_idx[word])
-        if l >= min_df and l/n_docs <= max_df_ratio:
-            val = math.log(n_docs/(1+l), 2)
+        if l >= min_df and l / n_docs <= max_df_ratio:
+            val = math.log(n_docs / (1 + l), 2)
             idf[word] = val
     return idf
 
@@ -110,7 +111,7 @@ def compute_doc_norms(index, idf, n_docs):
                 j = doc[0]
                 tf_ij = doc[1]
                 idf_i = idf[word]
-                sum_term = (tf_ij * idf_i) ** 2
+                sum_term = (tf_ij * idf_i)**2
                 norms[j] += sum_term
     norms = np.sqrt(norms)
     return norms
@@ -133,7 +134,7 @@ def cossim(query, index, idf, doc_norms):
     q_norm = 0
     for word in query:
         if word in idf:
-            q_norm += (q_tf[word] * idf[word]) ** 2
+            q_norm += (q_tf[word] * idf[word])**2
     q_norm = math.sqrt(q_norm)
 
     num = {}
@@ -154,7 +155,7 @@ def cossim(query, index, idf, doc_norms):
 
     output = []
     for doc in num:
-        output.append((num[doc]/denom[doc], doc))
+        output.append((num[doc] / denom[doc], doc))
     output.sort(key=lambda x: x[1])
     output.sort(key=lambda x: x[0], reverse=True)
 
@@ -178,7 +179,7 @@ def cossim_dict(query, index, idf, doc_norms):
     q_norm = 0
     for word in query:
         if word in idf:
-            q_norm += (q_tf[word] * idf[word]) ** 2
+            q_norm += (q_tf[word] * idf[word])**2
     q_norm = math.sqrt(q_norm)
 
     num = {}
@@ -199,7 +200,7 @@ def cossim_dict(query, index, idf, doc_norms):
 
     output = dict()
     for doc in num:
-        output[doc] = num[doc]/denom[doc]
+        output[doc] = num[doc] / denom[doc]
     return output
 
 
@@ -290,8 +291,8 @@ def display_personality(query, sim_list, reviews):
     Displays the personality - wine variety match 
     """
     print("Based on personality...")
-    print("You are a " + str(round(100 *
-          sim_list[0][0], 1)) + "% match with " + sim_list[0][1] + "!")
+    print("You are a " + str(round(100 * sim_list[0][0], 1)) +
+          "% match with " + sim_list[0][1] + "!")
     print()
 
     # build inverted dict
@@ -304,7 +305,7 @@ def display_personality(query, sim_list, reviews):
     while len(dup_list) < 3:
         title = sim_list[i][1]
         dup_list.append(title)
-        score = round(sim_list[i][0]*100, 1)
+        score = round(sim_list[i][0] * 100, 1)
         desc = reviews["personality_description"][inv_dict[title]]
         print("[" + str(score) + "%] " + title)
         print(desc)
@@ -326,7 +327,7 @@ def compute_wine(query, wine_scores, sim_list, reviews, num):
     i = 0
     counter = 1
     dup_list = []
-    while len(dup_list) < num:
+    while len(dup_list) < num and i < len(sim_list):
         idx = sim_list[i][1]
         variety = reviews["variety"][idx]
         title = reviews["title"][idx]
@@ -349,8 +350,8 @@ def compute_personality(query, sim_list, reviews):
     """
     result = []
     result.append("Based on personality...")
-    result.append("You are a " + str(round(100 *
-                                           sim_list[0][0], 1)) + "% match with " + sim_list[0][1] + "!")
+    result.append("You are a " + str(round(100 * sim_list[0][0], 1)) +
+                  "% match with " + sim_list[0][1] + "!")
 
     # build inverted dict
     inv_dict = {}
@@ -362,7 +363,7 @@ def compute_personality(query, sim_list, reviews):
     while len(dup_list) < 3:
         title = sim_list[i][1]
         dup_list.append(title)
-        score = round(sim_list[i][0]*100, 1)
+        score = round(sim_list[i][0] * 100, 1)
         desc = reviews["personality_description"][inv_dict[title]]
         result.append("[" + str(score) + "%] " + title)
         result.append(desc)
@@ -384,7 +385,7 @@ def compute_outputs(query, sim_list, reviews, num):
             if title not in dup_list:
                 # print(title)
                 dup_list.append(title)
-                score = round(sim_list[i][0]*100, 2)
+                score = round(sim_list[i][0] * 100, 2)
                 desc = reviews["description"][idx]
                 wine = "[" + str(score) + "%] " + title + desc
                 result.append(wine)
@@ -408,7 +409,7 @@ def compute_outputs_personality(sim_list, reviews):
             if title not in dup_list:
                 # print(title)
                 dup_list.append(title)
-                score = round(sim_list[i][0]*100, 2)
+                score = round(sim_list[i][0] * 100, 2)
                 desc = reviews["personality_description"][idx]
                 variety = "[" + str(score) + "%] " + title
                 result.append(variety)
