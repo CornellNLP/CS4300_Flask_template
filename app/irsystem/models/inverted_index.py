@@ -1,5 +1,5 @@
-from tokens import Tokens
-from get_data import data, NUM_DOCS
+from app.irsystem.models.tokens import Tokens
+from app.irsystem.models.get_data import data, NUM_DOCS
 from collections import Counter
 import math
 

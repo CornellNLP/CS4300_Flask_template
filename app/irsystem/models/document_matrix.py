@@ -1,9 +1,9 @@
 import sys
 import numpy as np
-from inverted_index import InvertedIndex
+from app.irsystem.models.inverted_index import InvertedIndex
 from collections import Counter
-from get_data import data, trail_to_idx
-from tokens import *
+from app.irsystem.models.get_data import data, trail_to_idx
+from app.irsystem.models.tokens import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 

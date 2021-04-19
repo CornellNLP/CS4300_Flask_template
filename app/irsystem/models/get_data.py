@@ -1,7 +1,7 @@
 import pprint
 import json
 
-with open('../../../scrapers/ithacatrails.json') as f:
+with open('ithacatrails.json') as f:
     data = json.load(f)
 
 def get_trail_to_idx():

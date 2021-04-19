@@ -1,4 +1,4 @@
-from get_data import data, trail_to_idx
+from app.irsystem.models.get_data import data, trail_to_idx
 from nltk.tokenize import TreebankWordTokenizer
 
 class Tokens:
