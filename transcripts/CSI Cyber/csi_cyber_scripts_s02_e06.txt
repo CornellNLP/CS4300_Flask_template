@@ -1,0 +1,793 @@
+Transcripts - Forever Dreaming :: 02x06 - Gone in 6 Seconds - CSI: Cyber 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x06 - Gone in 6 Seconds https://transcripts.foreverdreaming.org/viewtopic.php?f=224&t=23666 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 11/09/15 18:30 ] 
+ 
+ 
+ Post subject:  
+ 02x06 - Gone in 6 Seconds 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ (people whooping, cheering; indistinct shouting and chatter) 
+ (applause and cheering) 
+ Hey! Go! Go! Go! Go! Go! Go! 
+ Go! 
+ (engines revving) 
+ (tires squealing) 
+ Go, go, go, go, go! 
+ Yeah! 
+ (shouting, applause and cheering) 
+ (engines revving) 
+ (engines roaring) 
+ (tires squealing) 
+ (engines revving) 
+ (people shouting, whooping and cheering) 
+ (engines revving) 
+ Oh, whoa, hey. 
+ (sirens blaring, overlapping chatter) 
+ Run! Oh, come with me! 
+ Go, go, go, go! 
+ (crowd clamoring) 
+ (sirens blaring) 
+ (whooping and loud, overlapping chatter) 
+ Man : Come on! Move! 
+ (clamoring) 
+ Man : Run! Come on! With me! 
+ (sirens blaring) 
+ (engines revving) 
+ (sirens blaring) 
+ (tires squealing) 
+ (tires squealing, sirens blaring) 
+ (engine revving) 
+ (crowd clamoring) 
+ (engine revving) 
+ (engine revving) 
+ (tires squealing) 
+ (horn honking) 
+ (sirens approaching) 
+ Woman (over radio) : 10-41. 10-41. 
+ All available units, Robert, Tango, Victor, to North Broad Street. 
+ Tac team en route. 
+ (helicopter hovering, sirens blaring) 
+ Ah. We need EMTs here. 
+ Officer (over radio) : Copy, Adam-214. 
+ Uh, ETA ten minutes. We'll be right there. 
+ What the hell?! 
+ (sighs) 
+ (indistinct radio communication, indistinct chatter) 
+ (siren whoops) 
+ Officer : Behind the tape. 
+ Sorry. 
+ (indistinct, overlapping chatter) 
+ LAPD confirmed the driver of the other car was Brad Harper. 
+ Died on impact. 
+ Damn. 
+ Officer said he just celebrated his 21st birthday. 
+ Mundo : No skid marks. 
+ This car didn't even try to stop. 
+ The report says that our driverless vehicle was involved in an illegal street race. 
+ Owner reported it stolen... 
+ (engine revving) 
+ (tires squealing) 
+ ...and driven straight through  his closed garage door. 
+ (engine revving, tires squealing) 
+ Drag racing a remote-controlled car just took car-hacking to a whole new level. 
+ Someone out there is playing  Grand Theft Auto,  only this is no video game. 
+ The victims are real. 
+ (indistinct radio communication) 
+ Man : Come with me. 
+ Okay, so, this is the same make and model of the car that was stolen and crashed. 
+ I generated a 3-D model based on factory blueprints, and then highlighted the mechanical systems that connected to the car's onboard computer. 
+ Which, thanks to super cool, yet totally unnecessary new features, is pretty much everything. 
+ Headlights, turn signals, steering, brakes-- all vulnerable. 
+ Cars are pretty much computers on wheels these days. 
+ Yet another reason to love my '68 Mustang. 
+ (laughs) Do me a favor. 
+ Pull up the crime scene photos, will you? 
+ Yeah. 
+ Yeah, how do... how do we know that the... the driver didn't jump from the car before the crash? 
+ I think this was the ultimate car hack. 
+ Someone was remotely driving this car. 
+ And how do we know that for certain? 
+ The Event Data Recorder will tell us. 
+ 90% of new cars have one. 
+ Records everything in the moments leading up to a collision. 
+ And there are sensors underneath the seats, so it'll tell us if anybody was inside. 
+ Like a little black box in an airplane crash, this device will tell us everything that happened. 
+ Okay, I buy that. 
+ (grunting with effort) 
+ It's kind of a mess in here. 
+ Krumitz : It should be jammed up against the wheel well. 
+ All right, I'm plugging to the car's CAN-Bus, downloading data. 
+ Krumitz : Great. Okay, now, the black box will tell us everything that happened leading up to the collision, and the CAN-Bus should tell us how the target hacked in. 
+ Now, if it were me, I'd go one of three ways-- the navigation system, the emergency response system, or the onboard diagnostic dongle. 
+ (laughing): The what? 
+ Dongle. 
+ The insurance company's device you self-install to get your money back for safe driving? 
+ Yeah, dongle. 
+ (laughing): That's what I said! 
+ Well, you use that word one more time, I'm gonna call HR. 
+ Dongle. 
+ Oh, I-I... 
+ Dongle! 
+ Okay, there you go, buddy. 
+ What? It's a computer thing! 
+ Russell : No, I'm calling right now. 
+ You wouldn't say that around Avery, would you? 
+ Nelson : What are you guys talking about? 
+ I'm sorry. 
+ Okay. 
+ Oh, my. 
+ All right. 
+ Got it. 
+ Doesn't look too damaged. 
+ All right. 
+ Nelson : All right. 
+ We'll send the data from the black box, along with everything from the car's computer. 
+ Krumitz : Wait. 
+ If I'm analyzing the black box and the CAN-Bus, what are you guys gonna do? 
+ We're going to Disneyland. 
+ (laughs) 
+ You don't think they're really gonna go, do you? 
+ I would. 
+ Woman (on TV) : I'm here in downtown Los Angeles where late last night, an illegal street race resulted in the tragic death of a young man on his way home from work. 
+ Witnesses claim the street race was broken up by police and one of the cars fled the scene. 
+ But in a shocking turn of events, witnesses also claim that no one was behind the wheel. 
+ We're waiting for police... 
+ Ramirez : What's Director Silver doing in Cyber? 
+ Ah, he's giving tours. 
+ Got to hire a new deputy director since Avery turned down the position. 
+ But more importantly, why are all the darn pens in this place missing springs? 
+ Nobody uses pens anymore. 
+ Well... 
+ There is so much press on this accident and the driverless car. 
+ Did you see this? 
+ I saw it on the news five times before realizing it was my son's car that was hit. 
+ I came here to ask every network to stop replaying the footage. 
+ Please! 
+ Just stop playing it. 
+ Let us grieve in peace. 
+ Russell : Losing a child... unthinkable. 
+ But having to watch all of this over and over again-- can't even imagine. 
+ Footage of the crash is on every network, blog, social media site. 
+ A remote-controlled car on the loose? 
+ It's a huge story. 
+ Well, let's find and arrest the hacker responsible, make that the story. 
+ All right, where are we? 
+ Krumitz asked me to analyze the black box, and I don't think this accident was an accident. 
+ The target's car was picking up speed when it slammed into Brad Harper. 
+ Wait a minute. The car is accelerating? 
+ Ramirez : And steered into  the collision. 
+ (engine revving) 
+ The target crashed his car on purpose. 
+ Why? Was he trying to get rid of the digital dust so we couldn't track him? 
+ Yeah, he didn't. 
+ His car's computer is telling us that his commands were not from the navigation system, emergency response system, or the insurance dongle. 
+ He didn't hack in remotely. 
+ So our target installed a foreign device to control the car, and we need to find it. 
+ ♪ ♪ ♪ ♪ 
+ Guys! Guys! Check it out. 
+ An open source microcontroller connected to the car's OBDtwo. 
+ It's got to be our hacking tool. 
+ Ryan : This is how the target took control of the car. 
+ Got a SIM card, which means it has a cellular connection. 
+ Target could've been controlling this vehicle from anywhere. 
+ Nelson : We can pull records to find the cell number the SIM card was connecting with. 
+ And get the target's current location. 
+ Mm-hmm. 
+ All right, it's race time, baby! 
+ Now, where is he? 
+ Mundo : Target's cell was a burner. 
+ Dropped off the network the moment the race ended. 
+ We can't track him. 
+ But we can track the cell towers the phone connected with. 
+ Mundo : Only pinged one tower, so he was relatively stationary. 
+ However, target was controlling the vehicle from somewhere within this circle. 
+ Nelson : That's all of downtown Los Angeles. No way we'll find him. 
+ Ryan : Then we'll find the other driver from last night's race. 
+ Look, street racing is dangerous enough. 
+ This black hat has no regard for anyone else's safety. 
+ We have to find him before he races again, or more people will die. 
+ (tires squealing, engine revving) 
+ ♪ CSI Cyber 2x06 ♪ 
+Gone in 6 Seconds 
+Original Air Date on November 8, 2015 
+ ♪ I know you've deceived me, now here's a surprise ♪ 
+♪ I know that you have, 'cause there's magic in my eyes ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ And miles... ♪ 
+♪ Oh, yeah. ♪ 
+ (hip-hop intro plays) 
+ ♪ West up ♪ 
+♪ Turn the volume up and bang it out the trunk now ♪ 
+♪ Turn the volume up and bang it out the trunk, yeah ♪ 
+♪ Turn the volume up and bang it out the trunk... ♪ 
+ Man : Putting a blower on that one so we'll need a new intake. 
+ Man 2 : Hey, Tuko, let me know, I'm about to get under it. 
+ Man 3 : Did you grind it, man? 
+ ♪ ♪ 
+ (man speaking Spanish) 
+ ...the pressure. 
+ (indistinct chatter) 
+ Mundo : FBI. We're looking for the owner of that car. 
+ They go by the name Blaze, AKA Carmen Lopez. 
+ This is about the race the other night? 
+ I already spoke to the cops, and they let me go. 
+ Yes, but we're FBI-- we have questions of our own. 
+ Someone died during that race. 
+ You could be charged with involuntary manslaughter. 
+ I was yanked from my car and handcuffed five miles away from that crash. 
+ Carmen, who was controlling the other car in that race? 
+ I don't know. 
+ Ryan : You're new to this crew. 
+ No neck tattoo. 
+ You're not a full- fledged member yet. 
+ Th race was your initiation. 
+ L.A. Street Kings looking for new drivers to transport drugs across the border? 
+ As I'm sure you already know, in addition to illegal street racing, word is your friends are also running a massive drug ring. 
+ You have two prior arrests for drug possession. 
+ You talk, or you're looking at time. 
+ The other driver goes by the name Smokescreen. 
+ No one knows his real name. 
+ He contacts who he wants to race from an unknown number, picks a location, and shows up in a different car each time. 
+ When's the next race? 
+ Don't know. He races when he feels like it. 
+ Doesn't give much notice. 
+ So unless you're gonna book me on some trumped-up charge we all know won't stick... we're done here. 
+ (wry laugh) 
+ (beeps twice) 
+ ♪ Dancing, let's go dancing ♪ 
+♪ Let's go dancing... ♪ 
+ (song continues, quietly) 
+ (music changes abruptly to driving rock) 
+ (rock music continues) 
+ ♪ ♪ 
+ (rock song continues playing) 
+ (engine roaring) 
+ (gasps): Oh! Oh, my God! 
+ (gasping loudly) 
+ (tires screech, horns honk) 
+ Man : Dude! What's up?! 
+ (gasping): Oh, my God! Oh, my God... oh, God... 
+ (rock music continues) 
+ Operator (over speaker) : 911. What is your emergency? 
+ Driver : Yeah-yeah, you got to help me! 
+ My car's out of control and it's driving itself! 
+ What do you got? 
+ I've been searching for any posts about Smokescreen, and a ton of them just popped up. 
+ Everyone's talking about this car chase in Los Angeles right now, claiming it's Smokescreen. 
+ Pull it up. 
+ Tv newswoman : We're live right now, with reports that a car is allegedly being... 
+ Ramirez : Okay, the driver called 911 in a panic, saying he lost control of the car and that it was driving on its own. 
+ Wait a minute, it was somebody  inside  the car this time? 
+ Looks like he found himself a new challenge. 
+ LAPD. 
+ (sirens wailing) 
+ (gasping, grunting) 
+ Come on! 
+ Officer : Pulled the driver from the car. 
+ Kept saying he wasn't driving,  but  he was buckled in, behind the wheel. 
+ He wasn't driving. 
+ Driver : It just took over. 
+ I-I... I sideswiped a few other cars. 
+ It was out of control. 
+ But the car slowed down when the cops showed up, so I tried to jump out, but the doors wouldn't unlock. 
+ I was trapped. 
+ I-I know it sounds crazy, but it's like the car was possessed. 
+ You said that when the police showed up the car slowed down. 
+ Yeah. 
+ Then sped up again, right before the crash. 
+ I-I'm just glad my son wasn't in the car with me. 
+ I was on my way to pick him up from soccer practice. 
+ Steven, once we know you're okay, we're gonna have more questions for you. 
+ Got it. 
+ (grunts) 
+ (sighs) 
+ Configured exactly like the first one we found. 
+ No two hackers build a board the same way. 
+ Uh-huh. 
+ Let's see what cell phone this SIM card was communicating with. 
+ All right. Our target's escalating. 
+ Drag racing remote-control cars is no longer a big enough thrill for him. 
+ If somebody is in the car, his stakes are higher. 
+ He wanted the police to be there when he crashed, to prove that he was driving. 
+ It may be remote, but it gives our target a sense of power and control, something that he lacks in his real life. 
+ I think I got him. 
+ Mundo : Cell phone's still on. 
+ (siren blaring) 
+ (indistinct chatter) 
+ FBI! Hands in the air! 
+ Get your hands in the air! Stay right where you are! 
+ Nobody move! 
+ The signal's getting stronger. 
+ The device Smokescreen used must be here somewhere. 
+ Oh, come on, this is harassment. 
+ (rapid beeping) 
+ Bingo! 
+ The cell phone used to communicate with the car-hacking tool in Steven Fuller's vehicle. 
+ All right, whose car is this? You plant that in my ride? 
+ It's your car. Turn around and put your hands behind your back. 
+ Yo, this is a joke. I've never seen that phone before. 
+ Carmen : Hey, Martinez, say nothing. 
+ Stay out of it. You cannot do this. 
+ Obstruction of justice is a felony under federal law. 
+ Cuff her. 
+ Seriously? 
+ ♪ ♪ 
+ You're very protective of Paul Martinez. 
+ You two must be very close. 
+ Or is that a part of your cover? 
+ Carmen Lopez, AKA Blaze, AKA April Castilla. 
+ Detective Castilla. 
+ LAPD Gang Unit. 
+ How did you make me? 
+ LAPD's cracking down on street racing; they let you go without even charging you; and you're wearing the color of the day so that other officers know that you're undercover. 
+ You've been playing with your bracelet. 
+ Today's color is green. 
+ Agent Ryan, you're about to ruin a six-month undercover sting. 
+ Do you know how hard it was to get in with these dealers? 
+ Gain their trust? 
+ We'll do our best to keep your cover intact. 
+ Detective Castilla, what can you tell me about Paul Martinez? 
+ He's the alpha. 
+ The brains behind a drug-smuggling operation  coming in from Mexico-- but can't prove it yet. 
+ Is he Smokescreen? 
+ I don't know. 
+ But... a lot of those guys are tech-savvy. 
+ Paul taught me how to boost horsepower by tuning my car's ECU and removing emission controls. 
+ So maybe that is the guy you're looking for. 
+ But one thing I do know-- if Paul Martinez finds out I'm a narc, it's not my cover that's at risk... it's my life. 
+ ♪ ♪ 
+ Nelson :  Hey, Raven, still no clue  how our target saw the road. 
+ Some newer cars have front-facing cameras in the grill to help them park, but this car has a camera on the trunk for going in reverse. 
+ Ramirez : Well, the target had to see somehow. 
+ You know, I  love  when you do your thinking face-- you look  so...  mm! So serious. 
+ Stop it. 
+ Stop. This is serious. 
+ Nelson (laughs) : What? 
+ I'm just sayin'. 
+ I mean, you look nice today. 
+ As pretty on screen as in person. 
+ Uh-huh. And I'm sure you haven't noticed any of the beautiful women in L.A.? 
+ What do you mea... I... 
+ Did Krummy say something? 
+ No. But  you  just did. 
+ (laughs): Busted. 
+ Hey, what about this? 
+ A lane-assisting feature some cars have. 
+ A camera mounted behind the rearview mirror that enables the car to steer itself back into its lane if the driver falls asleep. 
+ All right, well, let's see if this car has one. 
+ Looks like it does. 
+ Good call, Raven. 
+ Now, let's see how this thing works. 
+ Uh... 
+ Okay, we're in. 
+ Our hacker was using that image to navigate? 
+ (scoffs) Pretty hard to see what's ahead of you on the road. 
+ Nelson : Hold on. 
+ It was in night-mode, which is infrared. 
+ Mm... 
+ All right, here we go. 
+ Ramirez : All right, this was Smokescreen's point of view. 
+ He could see forward and he could see behind him. 
+ Yeah, but no side view. 
+ Talk about a blind spot. 
+ Hey. What do you got? 
+ Okay, I analyzed data  from both cars' internal computers. 
+ Russell :  Uh-huh. Now, once the car-hacking tool  was installed, it logged an error message, but never appeared on the dash. 
+ There were no... no warning lights or anything, so the... the driver never knew. 
+ 
+ 
+ 
+ Am I boring you? 
+ Uh, tell me what's happening to the pens around here, will you, please? All the springs are missing. 
+ Krumitz : I don't know. Who uses pens anymore? 
+ Well, apparently only me. 
+ Okay, okay. 
+ Like I was saying, I've got a recorded error message on each car's computer, and the time stamp of when it occurred. 
+ So if we just check the navigation system history... 
+ It will give us the location where our target physically installed the device. 
+ Exactly. 
+ Great. 
+ Do it. Can I have my pen back? 
+ No. 
+ We got a hit. 
+ Looks like the CAN-bus signal was disrupted at the Studio City Hand Car Wash. 
+ Based on that location, I'm not so sure that Paul Martinez is our guy. 
+ ♪ ♪ 
+ (vacuum whirring) 
+ Man : All right, we're ready here! 
+ Pretty sick ride, huh? 
+ Owner did some serious mods. 
+ Must be, like, 500 horsepower under the hood. 
+ Damn. I'd kill for a ride like this. 
+ Me, too. 
+ Ah... 
+ (indistinct chatter) 
+ Man : This one here gets the hand polish! 
+ Mundo : Looking for the owner. 
+ (workers and customers chatting back and forth) 
+ Special Agent Avery Ryan. 
+ We're looking for someone who may work here. 
+ Sure. 
+ What's his name? 
+ We're looking for Smokescreen. 
+ You got a first name? 
+ Or is that his first name? It's hard to tell these days. 
+ (chuckles) Well, we'll need to speak with your staff. 
+ We'll need information on all your employees. 
+ Hey! (whistles) 
+ Bring it in! 
+ Uh, you can talk to who's here. 
+ I don't really keep... official records on my employees. 
+ (chuckles) 
+ Hey, Diego. 
+ Yo. 
+ Where's Kevin? 
+ Who's Kevin? 
+ He's one of my vacuum guys. 
+ He was here just a second ago. 
+ He's kind of hard to miss. 
+ (starts engine) 
+ (engine revs) 
+ Mundo : All right, so all we know about our target so far is his name is Kevin and he's in a wheelchair. 
+ Well, it makes perfect sense. 
+ Without the ability to use his legs, he can't compete with real world racers. 
+ He's got to beat 'em in cyberspace. 
+ You know, I bet it's racing that put him in that wheelchair. 
+ But he became addicted to the excitement, to the adrenaline rush. That's why he can't give it up. 
+ Well, why set up Paul Martinez to take the fall? 
+ There must be a connection, a history. 
+ So what now? 
+ We challenge Smokescreen to a race. 
+ He'll connect to his car hacking tool. 
+ He stays online long enough, we can track him down. 
+ With all the media coverage on his remotely driven vehicles, he'll be eager to show his skills. 
+ But he'll be suspicious of a new challenger. 
+ So we get somebody he's raced before. 
+ A race he never got to finish. 
+ (vehicle approaching) 
+ I got a message to meet my handler here. 
+ I should have been suspicious. 
+ Called in a favor. 
+ I knew you wouldn't show otherwise. 
+ You're compromising my cover. 
+ Carmen, we need your help. 
+ I have enough problems. 
+ The Street Kings are looking for a snitch in their crew now. 
+ Paul knows someone planted that phone in his car. 
+ Someone did. Smokescreen. 
+ Do you realize how bad you're making this for me? 
+ I thought this meeting was to pull me off the case before I get killed. 
+ A man lost his life. 
+ If Smokescreen keeps racing, who knows how many more lives are gonna be lost? 
+ We need to find out his real identity. 
+ We need you to race Smokescreen again. 
+ And what makes you think he's gonna want to race me? 
+ He's competitive. 
+ You post a public challenge to a rematch on ToggleFly, his ego will force him to comply. 
+ I believe you were in the lead when the cops showed up. 
+ I help you, you help me. 
+ When you brought Paul in for questioning, you didn't get all of his devices. 
+ I copied the hard drive of Paul's laptop. 
+ But it's been encrypted. My team can't crack it. 
+ You can. You decrypt this for me, and I'll challenge Smokescreen to a rematch. 
+ Ramirez : Automatic License Plate Reader Database? 
+ Russell : Yep. 
+ It's pretty amazing, actually. Cameras mounted on squad cars and street poles, they're constantly scanning license plates to check against a list of citations and warrant records. 
+ And then the camera captures time, date, and location of the vehicle, and all that information is saved. 
+ So, basically, anyone's pattern of life-- going to work, where you live, going to the movies-- can be determined through this database. 
+ Russell : Pretty cool, huh? Okay, so what do we know about our target? 
+ He drove to the car wash, but he parked far enough away that his coworkers could not I.D. his car. 
+ And-and he worked on the weekends. We know that. 
+ So we need to find the common license plates parked near the car wash Saturday and Sunday. 
+ Right. And narrow it down from there. 
+ How many license plates are in the database? 
+ Uh, in L.A....? 
+ (exhales) Three million per week. 
+ It would take a couple hundred thousand. 
+ (sighs) 
+ Well, we better get started then. 
+ Yes, please. 
+ ♪ ♪ 
+ Ryan : Nelson, what's your ETA? 
+ Just pulled up. It's pretty crowded already. 
+ Don't think Blaze or Smokescreen are here yet. 
+ It's hard to tell, though. 
+ I mean, Smokescreen could be controlling any car out here. 
+ Elijah, are those cell numbers coming in? 
+ Flooding in is more like it. 
+ Avery : We're looking for the cell number being used by the car hacking tool. 
+ Nelson, your cell catcher still hasn't found Smokescreen's burner phone. 
+ Mundo : Should be the only prepaid SIM card not linked to a subscriber. 
+ It could take time. 
+ Nelson : Guys, guys, guys, guys. 
+ (crowd cheering) 
+ You got to hurry. 
+ Smokescreen just got here. 
+ Man : Ha-ha! All right! 
+ This is gonna be awesome! 
+ Woman : Yeah, Smokescreen! 
+ (cheering) 
+ (music throbbing) 
+ Is Blaze there yet? 
+ Uh, I don't see her car anywhere. 
+ Think she bailed on us? 
+ No. She promised she would help. 
+ There must be something wrong. 
+ What if we race Smokescreen with my car? 
+ No, Nelson, stick to the plan. 
+ No, look, not me, my car. 
+ I have one of Smokescreen's hacking tools in my bag. 
+ You know what, that could work. 
+ If Blaze is a no-show, our target won't be able to resist racing someone trying to beat him at his own game. 
+ Driverless car versus driverless car. 
+ He'll want to protect his reputation. 
+ Nelson, start getting your car ready. 
+ (spectator whooping) 
+ You really think this is possible? 
+ Remotely driving a car from across the country without crashing it? 
+ It's safer than someone else racing against Smokescreen. 
+ Look, I didn't have a lot of time, but I wrote a script to make hotkeys. 
+ Up arrow, gas. Down arrow, reverse. 
+ Pretty basic commands but it should work. 
+ Should? 
+ No time to field test it. 
+ Krumitz : Nelson, you almost ready? 
+ Yeah, just about. Putting the SIM card into the car hacking tool. 
+ Should be able to connect to it. 
+ (grunts) 
+ And we are connected. 
+ I have full control over your rental car. 
+ Well, just remember, I sprung for the premium package to fit in around here, and it's on my credit card, so... 
+ Price for riding in style, bud. 
+ You're installing a camera in there for me, right? 
+ Yep. 
+ I'm rigging something up right... now. 
+ All right. 
+ Woman : What?! Oh! 
+ (phone line ringing) 
+ Carmen (recorded) : You've reached Carmen. Leave a message. 
+ (sighs) Carmen's still not answering. 
+ Yeah, she hasn't checked in with her handler yet either. 
+ She was supposed to before the race. 
+ So what do we do? 
+ First, we find Smokescreen, then Carmen. 
+ (indistinct chatter, phones ringing) 
+ Whoa, whoa. 
+ Sir... oh... 
+ Director Silver. 
+ I'm so sorry. D.B. Russell. 
+ Forgive me. 
+ Of course. Good to see you. 
+ How are things going in Cyber Division? 
+ A little chaotic at the moment, sir. 
+ We're getting ready to drive a car in Los Angeles from a computer here in this room, believe it or not. 
+ That's possible? 
+ Uh, yeah. Terrifying, right? 
+ A lot about car hacking in the news lately. 
+ Seems like every day there's a new headline. 
+ Well, we're-we're, uh... we're working on making it less newsworthy. 
+ Just got to beat the bad guy to the, uh, finish line. 
+ Sorry about that. 
+ I'm not finding any prepaid SIM cards. 
+ Nelson, are you close enough to Smokescreen's car to grab his signal? 
+ Uh-huh. So close I can touch it. 
+ Are you sure you're not getting anything? 
+ (cheering) 
+ (music throbbing) 
+ (cheering) 
+ Krumitz : I know I'm supposed to keep Smokescreen racing so we can track him, but does it matter if I win or lose? 
+ Because I kick ass at  Gran Turismo,  so I'm planning on winning. 
+ Okay, you guys, listen up. 
+ I just sent you the top 100 hits that we got from the license plate database: Vehicles most frequently spotted close to the car wash. 
+ We're searching for any with a disability plate or a registered handicapped parking permit. 
+ So, let's go-- any one of those vehicles could belong to our target. 
+ Okay, I created a ToggleFly account under the name Ghost and challenged Smokescreen because Blaze is a no-show. 
+ Any response? 
+ Not yet. 
+ Guess we're gonna have to find out when the flag drops. 
+ (laughing): Whoa. 
+ Gentlemen, start your engines. 
+ Guys, we're still not getting the number used by Smokescreen's car hacking tool. 
+ All right, look, I have another idea. 
+ If I can get inside Smokescreen's car, I can get the serial number off the SIM card itself. 
+ Elijah could track down the cell phone on the other end. 
+ Nelson, that is too risky. 
+ Avery, that might be our only shot. 
+ Nelson : I got this. We know Smokescreen can only see directly in front and behind. 
+ Huge blind spot on both sides. 
+ I just need a distraction. 
+ How's this for a distraction? 
+ (spectators cheering, whooping) 
+ All right, it's not underneath the steering wheel. 
+ (muttering frantically) 
+ It's not in the glove box, either. 
+ It has to be in here somewhere. 
+ Nelson, what's taking so long? 
+ Ryan : Nelson, the race is about to start. 
+ Nelson, get out of there right now. 
+ Aah! 
+ Krummy, go, go! 
+ You have to race to keep him from ditching his cell. 
+ I'm going, I'm going. 
+ I just didn't want to hit that sexy flag lady. 
+ There has to be a car hacking tool in here somewhere. 
+ You need a physical device to manipulate the accelerator. 
+ Not every car. 
+ Auto park assist, which networks the computer to the accelerator. 
+ Yeah, he's got it. 
+ Krumitz : Which means Smokescreen could just remotely intrude without ever getting near the car. 
+ Also means there's no car hacking tool in here. 
+ That's why we didn't pick anything up on the cell catcher. 
+ Whoa! Whoa, whoa, whoa, whoa, whoa! Whoa! 
+ Whoa! Oh! 
+ Krummy, Krummy, heads up! 
+ Whoa! Aah! 
+ He's trying to crash already. 
+ Or take out the competition. 
+ All right, we got an I.D.: Kevin Cane, age 23, Hawthorne, California. 
+ Kevin Cane. Yes, okay. 
+ Personal cell. 
+ I am tracking the target's location right now. 
+ Ryan : Our target is five minutes away from here. I could go after Smokescreen. 
+ Elijah, you could check on Carmen. 
+ If Paul Martinez has made her, she could be in big trouble. 
+ But Nelson, Krumitz, tell us you can end this race. 
+ Yeah, yeah, okay, we got this-- chances are his remote intrusion was through the navigation system. 
+ Can we hack it and take control? 
+ Ramirez : There's no time for that. 
+ We have to kill the navigation from inside the car. 
+ You mean turn it off? 
+ Krumitz : No, no. 
+ You have to disable the GSM chip. 
+ Nelson : Hey, Krummy! 
+ He has the car headed straight for the crowd, bro! 
+ Like Raven said, no time for that. 
+ (crowd screaming, clamoring) 
+ Whew! 
+ We did it! 
+ He did it! (laughs) 
+ What did you do? 
+ I just needed something metal to short out the network. 
+ (cheering) 
+ (sirens approaching) 
+ Kevin Cane-- or do you prefer Smokescreen? 
+ You lost the use of your legs in a crash racing Paul Martinez on this very spot. 
+ That's why you set him up. 
+ Crashing those cars made you feel powerful, didn't it? 
+ Crashing is the only thing I ever enjoyed about racing. 
+ And now I don't even have to be in the car to do it. 
+ Well, your street racing days are officially over. 
+ (banging, knocking) 
+ (muffled grunting) 
+ Let's get you out of here. 
+ Here... 
+ (muffled yell) 
+ I dare you to try something. 
+ I've been dying to shoot you. 
+ Thanks, you know, for blowing my cover and almost getting me killed. 
+ And here I thought I just saved your life. 
+ I'm pretty sure I saved yours, too. 
+ Nah, I had him right where I wanted him. 
+ We'll call it even, then. 
+ Actually... now we're even. 
+ Decrypted the files you gave us from Paul's hard drive. 
+ Evidence of offshore accounts he was using to launder money along with personal e-mails to his suppliers in Mexico. 
+ D.A.'s gonna wonder how I got the evidence. 
+ Tell him the truth: FBI Cyber. 
+ Paul Martinez was our suspect as Smokescreen, so we searched his devices. 
+ That, along with the attempted murder of an undercover officer and a federal agent, should put him away for a very long time. 
+ ♪ ♪ 
+♪ ♪ 
+ Daniel... we need to talk. 
+ Uh... 
+ Russell : Oh, I'm sorry. 
+ This a bad time? 
+ No. Not at all. 
+ I'm just-just hanging with my new friend. 
+ Artie. 
+ Hi, Artie. 
+ Sir. Uh, uh... nothing suspicious going on in here at all. 
+ Definitely not, um, abusing FBI resources for personal gain. 
+ Shut up, Artie. 
+ Right. 
+ Daniel, now why are you removing all the springs from our pens? 
+ Me? 
+ I found a lot of partial prints in our reference database that match to you. 
+ (weak, anxious laugh) 
+ Daniel...? 
+ The pen springs are for our prototype's mechanical claw. 
+ We needed about 100 or so, and nobody here uses pens. 
+ Nobody except me. 
+ What is that thing? 
+ It's a battle robot-- a remote-controlled armored killing machine designed for arena combat. 
+ And one day, our only line of defense against the intelligent robot armies we'll inadvertently create. 
+ Well, everybody needs a hobby. 
+ All right... 
+ Oh! 
+ There we go. 
+ Oh! 
+ Oh, yeah. 
+ May I? 
+ Smash that thing! Smash that... 
+ (laughing) 
+ That's the claw coming after... 
+ Ooh-hoo! Ow! 
+ (laughing) 
+ It's fun, right? 
+ Krumitz : Doing a 360, 360, 360... 
+ Just smash it, man. Just smash that! 
+ (laughing) 
+ Welcome back, Agent Ryan. 
+ Director Silver. 
+ I'm so sorry, I didn't know you were coming. 
+ I was in the building. 
+ Giving another tour? 
+ No, no. Those aren't necessary anymore. 
+ So you found a new deputy director? 
+ Yes, I believe we have. 
+ You. 
+ Sir, with all due respect, I told you that I need to stay in the field. 
+ You know, I was here when your team was driving a car from across the country. 
+ That's pretty fascinating stuff. 
+ And you tracked down the person responsible. 
+ A hacker in a wheelchair, from what I read in the report. 
+ A street racer that injured himself in a crash. 
+ He got a computer science degree so he could terrorize the streets. 
+ Avery, there's no other person for the job of deputy director. 
+ You want to stay in the field, you stay in the field. 
+ But I want you to run this division. 
+ So... Cyber is yours. 
+ Because, this time, I won't take no for an answer. 
+ (laughs quietly) 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

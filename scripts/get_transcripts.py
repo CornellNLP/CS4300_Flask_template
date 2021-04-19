@@ -18,7 +18,15 @@ count = 0
 for title, show_link in find_shows_in_ds.titles_to_links.items():
   count+=1
   show = title
-  abbrev = title.lower().replace(" ","_")
+  if ":" in show:
+    show = show.replace(":", "")
+  if "?" in show:
+    show = show.replace("?", "")
+  if "*" in show:
+    show = show.replace("*", "")
+  if "+" in show:
+    show = show.replate("+", "")
+  abbrev = show.lower().replace(" ","_")
   show_dir_path = "./transcripts/" + show
   if not os.path.isdir(show_dir_path):
     os.mkdir(show_dir_path)

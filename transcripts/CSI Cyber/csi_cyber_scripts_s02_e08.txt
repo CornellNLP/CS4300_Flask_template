@@ -1,0 +1,168 @@
+Transcripts - Forever Dreaming :: 02x08 - Python - CSI: Cyber 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x08 - Python https://transcripts.foreverdreaming.org/viewtopic.php?f=224&t=23963 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 11/23/15 18:55 ] 
+ 
+ 
+ Post subject:  
+ 02x08 - Python 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ (phone buzzing) 
+ (laughs) 
+ Agent Rupert Flemming! 
+ How are things across the pond? I-- 
+ No! God no! No! 
+ Please! 
+ Rupert? 
+ Please no! No! No! 
+ Rupert... 
+ Rupert? 
+ (screaming) 
+ (mechanical drilling) 
+ Rupert? Rupert? 
+ I'm sorry, Agent Flemming can't come to the phone right now. 
+ (drilling) 
+ (screaming) 
+ Who is this?! What the hell's going on?! 
+ (screaming) 
+ Rupert?! 
+ Who is this? 
+ He's a little busy dying, Agent Ryan. 
+ But I have a message for you. 
+ Stop chasing me or more agents will follow your dear friend Rupert into the afterlife. 
+ No! (screaming) 
+ No! 
+ No! No-- 
+ Get me Miguel Vega, Interpol. 
+ (speaking Spanish) 
+ (phone buzzing) 
+ (quiet laugh) 
+ Avery, it seems congratulations are in order. 
+ I've heard you've been promoted. 
+ Barcelona, why? 
+ Rupert? 
+ I'm on the next flight. 
+ (indistinct radio transmission) 
+ Demolition power drill. 
+ 21-inch bit, 1,500 RPMs. 
+ Cuts through pretty much anything-- metal, concrete, flesh and bone. 
+ Grisly torture, violent execution. 
+ This was Python. 
+ Yeah, I thought hackers stayed behind their computer. 
+ Python's different-- he's one of the most violent cyber drug dealer we've ever encountered. 
+ He's got no problem hopping into the real world to kill whoever stands in his way. 
+ But an Interpol agent-- that's kind of risky, isn't it? 
+ Rupert must've stumbled upon something Python really didn't want getting out. 
+ Something worth killing an agent to protect. 
+ Miguel, what was Rupert even doing here? 
+ He was meeting an informant. 
+ I didn't know it was about Python. 
+ Rupert swore he was gonna be the agent that took him down. 
+ You actually spoke to Python? 
+ You heard the b*st*rd's voice on the phone? 
+ Yeah. 
+ When my phone rang, I thought it was Rupert. 
+ (Flemming screaming) 
+ Python :  Stop chasing me! 
+ (gunshot) 
+ I haven't told his wife Diana yet. 
+ I have... no idea what to say. 
+ Call her, Miguel. 
+ Better she hear it from you. 
+ Not... the news or some stranger in the Bureau. 
+ Yeah. 
+ You know, a year ago, Rupert saved my life. 
+ And I'm ashamed I couldn't do the same for him. 
+ There's no way you could've. 
+ I'm gonna, I'm gonna call her. 
+ Serial number's filed off. 
+ Mundo : That's Python's M.O. 
+ Removes the serial number from any gun he uses. 
+ And leaves it at the scene of the crime. 
+ It's how he gets away every time. 
+ So if he's done this before, you must have those other guns? 
+ Yep, six. 
+ One from each of Python's previous murders. 
+ All in an FBI evidence locker. 
+ All the serial numbers filed off. 
+ Yeah, I'd like to take a look at those. 
+ Can we make that happen? 
+ Ramirez :  Rupert Flemming was meeting with someone, so I had Interpol  send an image of his laptop. 
+ I've been through it twice trying to find communication with an anonymous New York informant. 
+ I found nothing. 
+ And just like Rupert's cell phone, no sign of intrusion. 
+ Well, if Python didn't hack Rupert's devices, how'd he know he was in New York? 
+ Python's skills are legendary. 
+ Is it possible he hacked Interpol? 
+ That's what I was thinking. 
+ So I had Interpol send a scan of their network. 
+ They looked for artifacts of known vulnerabilities, found nothing, and then they analyzed all the employee devices, and still didn't find a single intrusion. 
+ I have no idea how Python knew about Rupert's meeting. 
+ Found out somehow. 
+ We figure that out, maybe we can use that to track him down. 
+ What would D.B. say? 
+ I don't know, some story about terrifying bacteria he found? 
+ But he'd also tell us that if we can't find a lead in the evidence, we have to look for what's missing. 
+ A void. 
+ Interpol sends data over fiber optic cable. 
+ Let's take a look at the power output. 
+ Wait, Raven, look at that. 
+ What do you see three days ago? 
+ I see a slight dip in the optical network light output. 
+ Exactly. 
+ That's what's missing. 
+ Light-- that's what's missing? 
+ Yes! 
+ Fiber optic cables run underneath the ocean from Europe to the U.S. 
+ They carry data over long distances at light speed. 
+ The same amount of light that goes in one end, always comes out the other. Except three days ago. Python must've put a tap on Interpol's dedicated fiber optic line, connecting its U.S. offices to European HQ... and started to steal data. This was fiber tapping. Flash Boys,  Wall Street. Direct line, faster trades. Hey, Krumitz, you're not even completing sentences here. Okay, try this. Is this your soda? Yes it is. If I punch a hole... Okay, it's going to leak, so I will get less. Exactly. It's the same thing with the fiber optic cable. Python tapped it; punched a hole. So only a portion of their light-carrying data made it from Europe to America. Hmm. So the hack went unnoticed by Interpol for 72 hours. I think I can find where the fiber optic line is leaking if I measure the travel time of the information before it dips. Krumitz :  That'll lead us to Python's tap. Move, move, move, move, move, move! Go, go, go! Raven said the tap is here. Nelson : It is. The GPS coordinates put the tap right in the middle of this room. Clear. Agent 1 : Clear! Agent 2 : Clear! All right, I'm getting closer. I'm standing right over it. The floorboards have been cut. Guys, right here! Clear! I got a hole, an exposed fiber optic cable and a laptop-- we found Python's fiber tap. Nelson, here's the computer. All right, I'm starting forensic analysis on Python's computer. This is everything being sent over Interpol's fiber optic cable. You mean everything Python's stealing with his fiber tap. I hate to admit it. But I've got a case of hacker envy. Yeah, well, me, too. Laptop I found in the hole was running sniffer software that isolated Rupert's e-mail. And that's a complicated code to write. So that's how Python knew about Rupert's meeting. Python's good. Guys, Python is a psychotic killer, okay? So can we tone down the black hat worship? Okay, I've been writing decryption software. And I just found an e-mail from Rupert to his informant-- goes by the handle “Darko.” Avery, Miguel? You should see this. Ryan : “I have something that you want. “Something Python doesn't want you to have. Let's meet.” Okay, got two more e-mails, setting up date, time and location. This is how Python got to Rupert. Ramirez : But what happened to Darko? Did he show up to the meeting? Vega : “Can't meet today. Too risky. Sorry.” Wait a minute, this e-mail was sent ten minutes after the arranged meeting time. All right, so for some reason, Darko realized that Python was on to him. If Darko didn't make that meeting, he may still be alive. Vega : Well, that's good for us. He's got something that made Python nervous. Yeah, but, but what? This. I just decrypted another e-mail. Ryan : He has Python's real name? Anonymity is everything in the Deep Web. This Darko holds the key to I.D-ing and caging this snake. We have to find Darko before Python kills him and he crawls back into the Deep Web. ♪ CSI Cyber 2x08 ♪ 
+Python 
+Original Air Date on November 22, 2015 ♪ I know you've deceived me, now here's a surprise ♪ 
+♪ I know that you have, 'cause there's magic in my eyes ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ And miles... ♪ 
+♪ Oh, yeah. ♪ All right, everyone, listen up. We're looking for a hacker that goes by the handle Darko. I want you to scour every nook and cranny of the Deep Web from disgusting chat rooms to deviant forums. Darko's out there somewhere, let's go. (indistinct chatter) ♪ ♪ Russell : Okay, so we pass a current through this hydrochloric acid, and it should remove the tool marks and reveal the serial numbers. Whew uh. I got to be honest-- I didn't think that was gonna work. Well, unfortunately, we didn't get a complete serial number off the gun. This is only a partial. But if we get partials off the rest of these, maybe we can run an urgent trace and get a lead on Python. Let's do the next one here. All right. That was the president of Interpol. She wants the fiber tap to be removed immediately. Nelson : Man, that's a bad idea. If we disrupt the connection, Python will know we found it. Interpol's not gonna let Python continue stealing every secret we send over the fiber optic cable. Python doesn't know we found the tap. That gives us an advantage. We're gonna use it. Are you asking me not to follow orders, Avery? I am asking you to wait before you do. Always so unconventional. Miguel, send Darko an e-mail, introducing yourself as Rupert's partner. Propose a meeting. Then send back a fake e-mail  from Darko, accepting the meeting, setting a time and a location. Python intercepts these e-mails and walks himself right into our sting. (typing) ♪ ♪ All right, so what do we got? Finally got a hit on Darko. Then this came in-- a message from Python. What? “I'm looking for Darko-- dead or alive. Help him and you're next. And to the Interpol agent planning the Times Square sting... Nice try. Python.” Python saw through Avery's sting; now he's gloating. God, this guy just loves showing everybody he's the smartest. Somehow, Python knew we found the fiber tap. I mean, guy's a hacker god. No, he's just a man. And eventually, he's gonna make a mistake. What did you find on Darko before we got Python's message? Ramirez : Well, we found a solid lead. Turns out he's been selling what hackers call “fullz”-- full packages of personal info stolen from big corporate hacks like Target or Home Depot. And this is the Web site where he sells 'em. Mundo : Name, birth date and Social Security number. Holy trinity of identity fraud. Ramirez : Hey, isn't that one of your confidential informants? Fresh! It's been too long since I had a chat with my favorite C.I. I bet he's feeling neglected right now. Bernie Renard. Let's skip the foreplay today and just cut right to it. Please, I'd really prefer to be called by my handle. “Fresh.” You got it o, Bernie, you've recently done business with a hacker named Darko. Tell me everything you know about him. I ain't saying a damn thing, especially not after Python's warning. That's all anybody's talking about. Well, here's my warning. Tell me what you know or I'm arresting you for that little business you just started. That's right. We know all about the fullz. Well, I'd rather be alive and in jail than, you know... dead and stuff. Vega : Renard. Is your family from Toulouse? Yeah. Moved here when I was six. Vega : Yeah, I was born in Spain. But my family moved around Europe a lot. I lived just outside of Paris for five years. Uh... congratulations. Yeah, thanks. I enjoyed it. So here's what happens if you don't help us. I'm going to hang a digital snitch jacket on you and leak onto the wire the details of your FBI agreement. Go right ahead, man. Half the guys on the wire are tipsters for law enforcement. (speaking French) (speaking French) This guy is threatening my life. I think that's, like, against the law or something, right? Sorry, Bernie. I don't speak French. I have no way of knowing what he just said. Uh, but just a heads up... Python recently killed Agent Vega's partner. He needs to take his anger out on someone and you would satisfy that need. What happened to us, Elijah? I thought we were friends. How do you say in French: “You thought wrong”? (speaks French) That. Now, Bernie, tell me everything you know about Darko. Vega : Darko's real name is Teddy Frankle. Does Interpol have a file on him? Unfortunately, no. He's a British ex-pat living in the U.S. illegally. He works off the books at a Baltimore e-waste facility. So Darko gets his fullz by stealing personal information off of users' hard drives before they're recycled. Except when he stumbles across the personal info of someone valuable. Then he tries to sell it back to them for a fee. Well, that's a clever ransom operation. Darko must've tried his little scam on Python, which is how Python knows what Darko has. Recovering a computer with info on Python would be like finding a gold mine. But why would the snake ever recycle one of his old computers? Well, Python wasn't always Python. Maybe he didn't wipe his drive well enough or maybe it was stolen. Darko might be able to tell us more. Baltimore PD raided the facility and the apartment Darko was squatting in, but he disappeared yesterday. But we did get one lead. Darko reached out to Elijah's C.I. on the wire this morning, looking to unload a block of fullz for some quick cash, so he can go on the run. The C.I. turned Darko down. We have to start searching the Deep Web for auction sites where fullz are sold. That's where we'll find Darko. Russell : Okay, this is the last one. “Blank, blank, three, four, one.” What do you think Python's real name is gonna be? For some reason, I feel like it's gonna be something quirky, like... Ichabod or Jarvis. Nah, that's not weird enough. I'm thinking... Yoserian. How about Diebenkorn? (laughs) Hey, my-my parents named me after a very famous artist, just so you know. Okay. Geez. Just run the numbers. All right, the partials spit out a bunch of possible matches. Now we just need to figure out which serial numbers connect to Python's guns. Russell : Oh. Henry Hayes, Henry Hayes, Henry Hayes, Henry Hayes. I mean, it can't be a coincidence that this guy bought all four of these four guns. Python's real name is Henry Hayes. Guess his parents were not as creative as mine. Okay, I'm gonna send Python's real name and address to Elijah. Our work here is done, Diebenkorn. (chuckles) Boom! Clear! Clear! Clear! Mundo : It's a live feed. Python just made us. Vega : Wait, we can't be sure. Maybe he's not monitoring this feed. (sighs) Henry Hayes' file is thin. Anorexic, even. Born in New York. He's got a Social Security number, a credit report, and nothing else. He has no previous address and zero presence on social media. Because he only exists on paper. Python created him. Everything about Henry Hayes is fake. He's a shelf baby. I'm sorry... are we chasing a ghost? More like a virtual identity created by a hacker. It's frighteningly easy to register a Social Security number, a birth certificate, even medical records... all in the name of someone who doesn't even exist. A hacker “gives birth” to a shelf baby, then waits-- in real time-- while it “grows up.” Then, when the shelf baby turns 16, the hacker gives it a driver's license. Mundo : When the shelf baby graduates high school, it gets a diploma. Some hackers get creative and give their shelf babies braces, glasses, invitations to prom. Anything to sell the illusion of a real person. So when the shelf baby turns 18, they're now an adult that the hacker can use as a throw-away identity to commit crimes. Mundo : Takes a massive amount of patience to properly raise a shelf baby. Henry Hayes was rushed because Python needed him to buy guns immediately. So, rather than wait the 18 years for Henry to “grow up,” he just simply backdated all the paperwork. Which explains all the digital holes in Henry's life. Python is playing with us. He' making us look like amateurs. Can we trace the video camera's signal? Ryan : No. Just like the laptop was connected to Python's fiber tap, this video is going right into the Deep Web. Where everything is untraceable. Ryan : What do we got, Raven? Hey. An anonymous seller just posted a massive block of fullz on a Deep Web auction site. He wants cash immediately after the auction closes. Delivered in person. That's Darko. Yeah, he's unloading what he's got and fast. Ramirez : I exploited a bug on the auction site's messaging software. Now we can eavesdrop on all the messages sent between the seller and whoever placed the winning bid. Looks like the auction's closing. Okay, looks like we're in. Here's where the sale's going down. “Baltimore Boat Yard. 3:00 p.m. Cash. Yellow backpack.” Okay, so Python wants Darko as much as we do. How do we know he didn't win the auction? Actually, we're hoping he did. That's why SWAT will be backing us up. ♪ ♪ Mundo : All right, guys Look alive. Remember, we're looking for a yellow backpack. (indistinct radio chatter) All right, boys, keep your eyes open. (Vega chuckles) This was Rupert's favorite part. The stillness before all the craziness started. Do you remember Paris? Oh... He was changing his socks when the target suddenly appeared. He ran up 32 flights of stairs barefoot. Yep. He broke two toes, but he got the guy. He got the guy. You know, Elijah reminds me of Rupert. Mmm. Calm, strong, reliable... I can see why you chose him. All right. Sweep is complete. Team is in position. Darko is not getting away. SWAT officer : Roof team here. We've got eyes on the yellow backpack. North side of the harbor, by the warehouse. Team Two, point; Team One, containment. Let's move. ♪ ♪ SWAT officer 2 : I have subject in sight. Teddy Frankle! FBI! Vega : Stay on him! FBI! Hands in the air, right now! Hands in the air, now! Put 'em up! Very slowly, remove your backpack. Mundo : That's good. Put it on the ground. Hands back up in the air. (gunshot) Whoa, sniper, get down! Take cover! (gunshots) Sniper. Get down. Stay low. Drag him over here! Cover! (shouting) Top of the floating dock! Move, move. Get him to cover. Move it. Ryan : Cover, cover. I need EMTs on the dock. Our suspect has been shot. Move, move, move! (shouting) Teddy, help is on the way. What is Python's name? Teddy? Teddy? Stay with me. Teddy, stay with me. (whirring) 
+ 
+ Mundo : Avery, there's no shooter. Sniper rifle with remote control. Bluetooth enabled. What is Python's name? Teddy! Teddy! (gasping) Python's name is in my... in my laptop. Teddy? (sighs) (groans) Darko's laptop was infected with spyware. Someone was monitoring him. Python, that's how he knew where the meeting was being held. I mean, look at his coding. I mean, there's no pattern to the functions. It's pure poetry. Guys! What is Python's name? Look, Avery, I don't know what to tell you. Laptop's got nothing on it. The last thing Darko said was “Python's name is on that laptop.” I already had a friend who died. Find it and find it now. ♪ ♪ Mundo : 432 015. One remote sniper rifle, a dozen different parts. (sighs) All with different serial numbers. All purchased by different people and all used in different crimes. Even the tripod, the laptop, the ammo. Mundo : Python did rule over an empire of Deep Web criminals. These could all be contacts made while running Squamata. Let me run a quick identity history on them. Russell : Python's certainly living up to his reputation, isn't he? Pablo Escobar of the Deep Web. Mundo : His Web site, Squamata, brings is over $30 million a year in drug revenue. A third of that is from college kids. Python's drugs are just too easy to get. All it takes is a click of a mouse or the swipe of a screen. Then drugs are delivered within hours. Been chasing this guy for over a year. Russell :  Not only do we have to find this guy, but we have to take down his site, Squamata. Mundo :  Think of how many people his drugs have killed during that time. And how many more people are gonna die if we don't stop him. That's weird. Really weird. Look at this. All 12 of those people live at the same address, delivered by the same doctor at the same hospital. (sighs) There all shelf babies. Python's army of shelf babies. These documents are flawless. This guy's a master forger. All right, all right, so everybody who bought the sniper rifle, they're a dead end. Did we have any luck tracking the source of the weapon's remote commands? It received commands through the Deep Web. Again, untraceable. I can see why this guy's not in custody. Every bit of evidence, whether it's physical or digital, runs right into a wall. Ran the search three times, Krummy. There aren't any hidden partitions. Just hit the damn enter key again, Nelson. It's not that hard. Look, I might be smaller, but I fight dirty. Now drop the attitude, before I take this laptop and break it over that watermelon you call a head. Break this laptop. Yeah, that's what I said. Yeah? You're a genius. You shut... Wait, what? Python's name isn't in the laptop, it's... it's in the laptop. Okay, look, I appreciate the props, Krummy, but you sound insane right now. Where do extremely paranoid hackers hide data they don't want found? Offline. Oh, I am a genius. And the laptop... Get the glass board. Mm-hmm. Krumitz : Somewhere inside this laptop, Darko physically hid information on Python. We could be looking for a chip or a thumb drive. I'll bring up the schematic on Darko's laptop. We're looking for the part that isn't supposed to be there. ♪ ♪ These are the main components. It's not here. That ribbon cable look odd to you? Lift it. Bingo. You can slither, but you cannot hide. (chuckles) That's right. Avery, I'd like to introduce you to Robert Corto, aka Python, aka number one on Cyber's most wanted list. Real name, birth date, address, social security number, the works. And the best part? We know this is Python, because the chip also contained original source code from his Deep Web marketplace, Squamata. Robert Corto is another shelf baby. Krumitz : What? No. She's right. We were so excited we got Robert Corto's name, we didn't even look at his address. The same address as all the shelf babies, Freeside Street. Wait, no. Something's not adding up. Python murdered two people to get this chip. What was on it that was so important he'd be willing to kill? Not a shelf baby. Guy must have had dozens. Maybe he was protecting Squamata's source code. An early beta version with no login credentials? It's hardly worth anything. All right. (sighs) Tell me everything you guys found on that chip. Yeah, it was just Robert Corto's information, the code to Squamata. Bunch of half-written executables, scripts, text file that's pretty big. Mmm, and old zero days and their patches. Ryan : Wait, back up. Text file? Put that up on the screen. Krumitz : What is that? Nelson : Looks like a journal. Not just any journal. Python's. This is what he was after. He came out of hiding to erase a connection to his past. This journal must have the key to Python's true identity. Print every single page. Vega : Python's private thoughts spilled out on the page. It's like looking into his mind. Why do you think he started keeping a journal? A little boy with no friends has to express his feelings somewhere. Oh, he did plenty of expressing, but he never gave away his identity. He shows an extreme amount of control. He began isolating himself early. Even cut ties with family. Look. A decision he struggled over. All of this to protect his anonymity. He knew the moment Squamata went online, his identity would be his Achilles' heel. So he shed it. Yeah, that's not the only thing he shed. “Psoriasis”" Hereditary condition where skin cells slough off. Yeah, there's pages and pages here about the teasing he suffered. Look. Kids called him “snake skin”" “lizard arms,” and “python”" He didn't give himself the name Python. It was given to him by kids who were mocking him. He took a name that was meant to demean him, and turned it into a source of strength. (phone buzzes) Raven's got something. Ramirez : Hey, D.B. and I were looking at the 12 shelf babies that bought the sniper rifle. He spotted something. Look at this. They're all character names. It looks like all 12 of Python's shelf babies are taken from novels. The hospital, the doctor, the street where they live, even the people themselves. Right, but they're all jumbled up, so you add Phoebe from Phoebe Lee to Caulfield from John Caulfield... Ryan : You get Phoebe Caulfield from  The Catcher in the Rye. Right, this first name, that last name, and they're a blend of characters from different novels. One of them is  Catcher in the Rye,  but I'm having trouble figuring out the other ones. Ramirez : I get it. Take Molly from Molly Ackley, and Millions from Jane Millions, you get Molly Millions. It's from  Neuromancer. Godfather of cyberpunk. It's pretty much required reading for black hats. It's like the Bible. He picked these novels specifically. They mean something to him. Raven, pull up digital copies if each book, and then run a search on all the characters. All right, Linda Lee and Henry Dorsett Case both from  Neuromancer. D.B.'s theory's working. Russell : There's only one name that doesn't match. Renetta Wilkerson. The outlier. She's not from the books. Maybe a character from a third book. Or maybe she really exists. I'll run her name. Most criminals who assume a new identity can't completely walk away from their past. They stay connected to someone. A sibling, a girlfriend, a parent. Renetta Wilkerson may be someone from Python's former life. All right, these are all the addresses for that name. They're all over the country. Wichita, Seattle, Pittsburgh. I want FBI teams at each of those house ASAP. One of these women is connected to Python. Well, checking that many people is gonna take times. Ramirez : Maybe there's something in the journal that can help us. Right. Python wrote about being teased for his skin condition. Did he ever mention the first time he was given the name Python? He did. Okay, it happened at the summer camp, but he never says where the camp is located. Ryan : Read the passage. “Today at the lake, the counselors made us all take off our T-shirts. Cam made a comment. He said I had snake skin. He called my Python. Everyone started calling me Python. They think it's funny. I hate it here. The only nice person is Irene. She takes me on nature walks. We look for birds' nests in the grass. She told me the reason the male birds have black bodies and white-tipped wings is to attract a female” Male birds, black body, white wings, makes a nest in the ground-- that's awfully specific. Rav--? I am already on it, D.B. Russell : He's talking about a lark bunting. That's the state bird from Colorado. Ramirez : I got a Renetta Wilkerson in Colorado. Okay, Raven, call the regional office. Get agents at that house until we arrive. (indistinct chatter) Renetta Wilkerson, FBI! Renetta Wilkerson? Yes? Do you have a son? Yes... Is he currently living here? No, I mean, Dante hasn't lived here in over 20 years. Dante went missing when he was 14. The police said that he ran away. But in my heart, I knew he was abducted. So, he has never been back? No, that Tuesday in February was the last time that I saw him. It was snowing. Well, his room is over here. I mean, I go in once in a while and dust, but it's exactly the same as it was. I always hoped he'd come home someday. (indistinct radio transmission) Dante loved computers. I could never figure them out. I still can't. But he would build them in his room. He would stay in here for hours. He wasn't a very social child. I don't see any pictures. Do you have a photo of Dante? I used to have a shoe box full of them. But I don't know, I just-- It just got too painful. So I... got rid of them a long time ago. I have one picture though. He was just 14 years old then. That computer looks new. I thought you said you know nothing about computers. I won it. I always loved the sweepstakes. And Dante and I would fill in these forms together when he was a kid. (chuckles) We always lost. But wouldn't you know it? A year after he disappeared, I finally won. A free computer with a yearly upgrade for life. Every January a new computer shows up. I plug it in, I turn it on and I leave it. I want him to have the latest model if he'd just come home. Call me. (phone buzzing) Hello, Dante. It's so much nicer not to have to call you Python. Dante? No, Dante... I'm sorry, ma'am. Listen, we're gonna take care of this. Is that my Dante? You need to step aside-- Did you hear that? Can you imagine the amount of pain you've caused this poor woman? My mom's house. You're in my house. It was clever of you to use her love of sweepstakes to bring in a RAT-ed computer so you could watch her. Socially engineering and spying on your own mother? It doesn't get lower than that. Now, now, Avery Ryan. You have no idea who you're dealing with. Actually, I do, Dante Wilkerson. I've learned quite a lot about you reading your journals-- your hopes, your fears, your insecurities. But it was your bedroom. That is when I finally saw the real you. My bedroom? You're grasping at straws, Deputy Director Ryan. You have nothing! A scantily clad model on your wall? That's as close as you ever got to a real girl. You had every game console on the market, but only had one controller for each one. A little boy with no friends? Why would he need another controller? You have three sets of sheets folded in your closet, at the ready. Is that because you were still wetting the bed when you were a teenager? Just shut your mouth! I underestimated you. You savor this victory. It'll be your last. I'll have the site back up tomorrow. You crossed a line. You've made this personal. This is war. What? He just said he would get the site back up by tomorrow as if us taking it down was a foregone conclusion. That makes no sense. We don't know where he hosts the Web site, Squamata-- it could be anywhere in the world. But he thinks we do. Now, why would he think that? Unless... it's here. It's in this house! Krumitz, is Squamata being hosted on that computer? What? No. No, it's not even possible. It doesn't even have the right software. Wait, you-you think Squamata is being hosted here? Python just let something slip. It is here. It is in this house. There has to be a server blade somewhere. Whoa. Avery, I found a server blade! So, is that it? There's only one way to find out. Okay. This is it! This is it! This is the computer hosting Squamata. Wait! Wait! Wait, no! Everything's being deleted-- Ryan : Python's deleting evidence that connects him to the Deep Web. How do you stop it? I-I don't know. You do the one thing you're never supposed to do to a computer that's being used in a crime. You unplug it. (all cheering) Oh, no, please, thank you. Thank you. Thank you so much. Hey, you be careful with that, okay? It's only the most important piece of hardware I've ever put my hands on. I understand. Just dusting it for prints. Look at that smile! If it was any bigger, I think his head would split in half. Yeah, well, can you blame him? He found Squamata's host computer. Ramirez : And we've taken down Python's drug empire. Now we got a complete list of every supplier, dealer and distributor who ever logged on. Yeah, go ahead, go ahead. Take it in, Krummy. Take it in. Any idea on how Python got that blade into his old bedroom? Yeah, he RAT-ed his own mom's computer. Observed her pattern of life. Knew when she'd be out of the house. And now we've shut down his enterprise. Yeah, that's what I'm talking about, baby! Yes! (whoops) Krumitz sent me a scan of the photo from the milk carton. I ran it through an age progression program. So this is Python today. Not exactly, but close. Vega : Avery? Interpol agents in eight countries just hit Python's biggest suppliers and distributors. They seized hundreds of kilos of narcotics and made more than 90 arrests. You know, when the dust settles, this will go down as one of the biggest international raids in history. Rupert would have enjoyed this. Are you kidding me? He would already be slurring his way through some drinking song he just made up. (both laugh) You know the best part about working a case with Rupert? It never got boring. (laughing): No. (chuckles) No, it wasn't. I'm really gonna miss him. Me, too, Miguel. He traded his life to expose Python's true identity. I just wish that Rupert knew how close his lead on Darko got us to catching the snake. I'd like to believe he does. (quiet laugh) Vega : Python's site is down. But the snake will be back. And when he is, we'll be ready. Fly safe, Miguel. Thank you. Take care. (line ringing) D.B., bring your print kit to my office. That's a match to the one I pulled off Python's server blade. This print belongs to Dante Wilkerson. Python was here. But how's that possible? In your office? How? (all clamoring in celebration) The maintenance man. Krumitz : Man! (blows kisses) Thank you so much. Ryan :  He walked right by us, close enough to touch. Russell :  You went to Python's house. He came to yours. And he came to leave something more than a hand print. You said this guy was capable of anything? And he is-- with this kind of physical access? He could've put a virus on our network or a RAT. Something that lies dormant. We wouldn't even be able to find it until it's too late. Python wasn't kidding. This is war. (indistinct chatter) Python was here! In CTOC! Sweep everything! Contract the DOJ. If he left something here, I want it found! 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
