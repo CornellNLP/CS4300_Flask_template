@@ -19,8 +19,7 @@ def readTranscript(filePath):
 # readTranscript('../transcripts/Avatar The Last Airbender/avatar_scripts_s1_e1.txt')
 
 
-transcript = readTranscript(
-    '../transcripts/Breaking Bad/breaking_bad_scripts_s1_e3.txt')
+# transcript = readTranscript('../transcripts/Avatar The Last Airbender/avatar_scripts_s1_e1.txt')
 
 
 def tokenize(transcript):
@@ -97,15 +96,15 @@ def allShowTokens(transcriptsFolder):
             folder = filepath[:-1]
             tokenDict, episodeDict = showTokens(folder)
 
-            name = folder[(folder.rfind("/")) + 1:]
+            name = folder[(folder.rfind("\\")) + 1:]
             # print(name)
             result[name] = tokenDict
     # print(result)
     return result
 
 
-allShowToks = allShowTokens("../transcripts")
-#print(allShowToks.keys())
+allShowToks = allShowTokens("transcripts")
+# print(allShowToks.keys())
 
 
 def wordsToAnalyze(showFolder):
@@ -128,7 +127,7 @@ def wordsToAnalyze(showFolder):
     return sortedResult
 
 
-# wordsToAnalyze("../transcripts/American Crime Story")
+#wordsToAnalyze("../transcripts/American Crime Story")
 
 
 def allWordsToAnalyze(transcriptsFolder):
@@ -148,9 +147,9 @@ def allWordsToAnalyze(transcriptsFolder):
     return ans
 
 
-allWordsToAnalyze = allWordsToAnalyze("../transcripts")
+allWordsToAnalyze = allWordsToAnalyze("transcripts")
 shows = list(allWordsToAnalyze.keys())
-#print(shows)
+# print(shows)
 
 
 def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
@@ -163,7 +162,7 @@ def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
         for j in range(nShows):
             and_count = 0
             or_count = 0
-            
+
             showA = shows[i]
             showB = shows[j]
 
@@ -182,14 +181,16 @@ def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
 
 jaccSimMat = jaccardSimMat()
 
-def jaccardRanking (show, N = 3 , simMat = jaccSimMat) :
+
+def jaccardRanking(show, N=3, simMat=jaccSimMat):
     """
     given an input string show name, return a ranked list of the N most similar shows using the jaccSimMat (using N = 3 for demo)
     """
     showInd = shows.index(show)
     scores = jaccSimMat[showInd]
 
-    result = sorted(range(len(scores)), key = lambda substr: scores[substr])[(-N-1):-1]
+    result = sorted(range(len(scores)), key=lambda substr: scores[substr])[
+        (-N-1): -1]
     result.reverse()
 
     ranking = []
@@ -197,9 +198,8 @@ def jaccardRanking (show, N = 3 , simMat = jaccSimMat) :
         name = shows[x]
         ranking.append(name)
 
-    #print(ranking)
+    # print(ranking)
     return ranking
 
+# jaccardRanking ("Friends", 3)
 #jaccardRanking ("Friends")
-
-    
