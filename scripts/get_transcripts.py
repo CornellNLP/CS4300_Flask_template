@@ -28,7 +28,7 @@ for title, show_link in find_shows_in_ds.titles_to_links.items():
   if "+" in show:
     show = show.replate("+", " ")
   abbrev = show.lower().replace(" ","_")
-  show_dir_path = "./transcripts/" + show
+  show_dir_path = "./transcripts2/" + show
   if not os.path.isdir(show_dir_path):
     os.mkdir(show_dir_path)
 
