@@ -97,7 +97,7 @@ def allShowTokens(transcriptsFolder):
             folder = filepath[:-1]
             tokenDict, episodeDict = showTokens(folder)
 
-            name = folder[(folder.rfind("\\")) + 1:]
+            name = folder[(folder.rfind("/")) + 1:]
             # print(name)
             result[name] = tokenDict
     # print(result)
@@ -105,7 +105,7 @@ def allShowTokens(transcriptsFolder):
 
 
 allShowToks = allShowTokens("../transcripts")
-# print(allShowToks.keys())
+#print(allShowToks.keys())
 
 
 def wordsToAnalyze(showFolder):
@@ -149,7 +149,8 @@ def allWordsToAnalyze(transcriptsFolder):
 
 
 allWordsToAnalyze = allWordsToAnalyze("../transcripts")
-# print(allWordsToAnalyze)
+shows = list(allWordsToAnalyze.keys())
+#print(shows)
 
 
 def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
@@ -162,7 +163,7 @@ def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
         for j in range(nShows):
             and_count = 0
             or_count = 0
-            shows = list(wordsToAnalyze.keys())
+            
             showA = shows[i]
             showB = shows[j]
 
@@ -180,3 +181,16 @@ def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
 
 
 jaccSimMat = jaccardSimMat()
+
+def jaccardRanking (show, simMat = jaccSimMat) :
+    """
+    given an input string show name, return a ranked list of the 5 most similar shows using the jaccSimMat
+    """
+    showInd = shows.index(show)
+    scores = jaccSimMat[showInd]
+    print(scores)
+    return scores
+
+jaccardRanking ("Friends")
+
+    
