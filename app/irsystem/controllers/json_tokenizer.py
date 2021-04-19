@@ -33,7 +33,7 @@ varieties = [
     'Sauvignon Blanc', 'Merlot'
 ]
 df = df[df['variety'].isin(varieties)]
-df = df.sample(n=5000)
+df = df.sample(n=10000)
 # Tokenize description and add to df as "toks"
 toks = []
 for i in df["description"]:
