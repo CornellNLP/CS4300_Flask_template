@@ -15,7 +15,8 @@ def makeSoup(url):
     return soup_content
 
 count = 0
-for title, show_link in find_shows_in_ds.titles_to_links.items():
+d = {'Mary + Jane': 'https://transcripts.foreverdreaming.org/viewforum.php?f=700&sid=dc3a0962daf723775316d2aa0012fbde'}
+for title, show_link in d.items():
   count+=1
   show = title
   if ":" in show:
@@ -25,7 +26,7 @@ for title, show_link in find_shows_in_ds.titles_to_links.items():
   if "*" in show:
     show = show.replace("*", "")
   if "+" in show:
-    show = show.replate("+", "")
+    show = show.replace("+", "")
   abbrev = show.lower().replace(" ","_")
   show_dir_path = "./transcripts/" + show
   if not os.path.isdir(show_dir_path):
