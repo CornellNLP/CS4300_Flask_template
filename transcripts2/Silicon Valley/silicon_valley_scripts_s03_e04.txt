@@ -1,0 +1,186 @@
+Transcripts - Forever Dreaming :: 03x04 - Maleant Data Systems Solutions - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 03x04 - Maleant Data Systems Solutions https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=27228 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/16/16 10:33 ] 
+ 
+ 
+ Post subject:  
+ 03x04 - Maleant Data Systems Solutions 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Quite a plan you boys cooked up here. 
+ Quite a plan. 
+ I'm not sure what upsets me more, that I have four employees that conspired to commit felony fraud, or that I have four employees that are so stupid I found out about it within 30 seconds. 
+ Hearing it out loud, the first one seems worse. 
+ We got sales, manufacturing, design, assembly, logistics teams, they're all ready to go. 
+ All of them on the payroll, all of them here to build me a box. 
+ I have a deal, in principle, with Maleant to buy the box. 
+ The second that we deliver a product that meets those specs, we are cashing checks! 
+ And you are the only four people in this building that are fighting me on it! 
+ So give me one reason why I don't fire you right now, claw back your options, make you unhireable all over town, one goddamn reason! 
+ Because you can't. 
+ Excuse me? 
+ This agreement says that you have ten weeks to complete a working prototype before the deal expires. 
+ So how are you gonna do that if you fire us? 
+ There are maybe eight engineers on earth proficient in middle-out compression. 
+ Five of them work for Endframe, your competition, and three of them are here in this office right now. 
+ So if we're gone, I don't think you're ever going to get your box. 
+ What do you want? 
+ I want to build my platform. Now. 
+ To complete the box project is going to take six months, at least. 
+ So, what I think maybe we should do is, um, take a little tip from your chart there, and we, uh, compromise. 
+ Compromise is the shared hypotenuse of the conjoined triangles of success. 
+ Mm-hmm, yep. So, uh... so, what I'm proposing is we stand up the prototype, that's it. 
+ We're not doing any custom features, no new versions, no maintenance, nothing. 
+ Richard, the Maleant basement. 
+ And no onsite support. I think you can hire other engineers to do that f*cking mole monkey work. 
+ The second we write code that satisfies the basic minimum requirement of the deal, we are off the box and on to the platform. 
+ And that is my final offer. 
+ So, what do you say to that action-- 
+ Whoa! 
+ Ow! Ow! 
+ Hey, hey. You okay? You were standing and then what happened? 
+ It's just a little shocking. 
+ Oh... what were you saying? 
+ Did you... do we have a deal or...? 
+ Yeah, Richard, we have a deal. 
+ You have a bloody nose. 
+ That was pretty badass, Richard. 
+ Until it wasn't. 
+ (THEME MUSIC PLAYS) 
+ Uh, this is not even a room. This is a hallway. 
+ Uh, it can't be, because that is a bed, thus, this is a bedroom. 
+ Two entrances and exits, cross drafts ahoy. 
+ And, uh, it is the safest room in the event, unlikely, of a fire. 
+ Oh! Whoopsies. Don't mind me. 
+ Ah, Fred, this is Jared. He actually is a, uh... a temporary resident. 
+ Oh, uh, while I have you, there were fresh droppings near my cot. 
+ I think you were right. The Havahart traps don't seem to be working. 
+ I was thinking maybe we could just pick a day and just drench it in hawk urine, because the scent of a predator can keep rodents at bay. 
+ It's funny, we're named Pied Piper, but we're beset with rats. 
+ Little rascals. (CHUCKLES) 
+ f*ck this. I've been writing quick, bullshit subpar code for 48 hours and I want to kill myself. 
+ How do you do it every day, Dinesh? 
+ What a coincidence, I've also been writing bullshit code for 48 hours, and want you to kill yourself. 
+ Guys, please. Let's just sh1t this thing out so we can get on to building the platform. 
+ Hi. 
+ Hi. 
+ Dang. 
+ What? 
+ I'm Dang. 
+ I'm Dang? 
+ Dang. 
+ What... 
+ My name is Dang. 
+ Oh, my... I'm sorry. What, uh, what can I do for you? 
+ I'm heading the design team that's building the enclosure for the box. 
+ It's time for the concept meeting. 
+ Concept meeting? 
+ Okay. I'm just going to show you a few pictures, and you tell me which ones you like, okay? 
+ Okay. Sure. 
+ (RHYTHMIC DRUMBEAT PLAYS) 
+ Look, wait, hold on. 
+ I thought you were going to show me pictures of boxes. 
+ Like data storage devices. 
+ Before I can actualize a box, you and I need to develop a shared aesthetic vocabulary. 
+ Otherwise, I have no idea what you're going to want. 
+ Um, I have a lot of work to do right now. 
+ This is work. This is my work. 
+ What we're doing here could actually save time. 
+ Okay. Sure. Yeah. Uh... 
+ Let's just make this simple. 
+ If the box were an animal, what sort of animal would it be? 
+ Leopard? 
+ Butterfly? Rhinoceros? 
+ Stop. Animal? Um, it's a box. 
+ Right? Okay, so if you need an animal, make it a box turtle. How does that sound? 
+ So this is all kind of a joke to you? 
+ You know what? I don't actually give a flying f*ck what this box looks like. 
+ Okay, if it was up to me, I wouldn't even have it in the first place. 
+ So, look, here. This is a black rectangle. 
+ Make it that. All right? Because we're going to take it and put it in a hole in a subbasement in a data center, where no one can see it except for a sad man named John with a ponytail. 
+ Okay? Just make it a box. 
+ And please turn off that f*cking music. 
+ (MUSIC STOPS) 
+ Hello! 
+ It appears there has been a mistake. 
+ Is this not my parking space? 
+ Sorry, a lot of premium spaces are being reassigned. 
+ 14-A, you've been reassigned to lot D. 
+ Lot D? 
+ The structure? 
+ Beyond the freeway? 
+ Anywhere above level three, those are reserved. 
+ There's a shuttle stop on the ground level. 
+ A shuttle? 
+ (PHONE DINGS) 
+ Call Gavin Belson. Cell. 
+ (PHONE DINGS, LINE RINGS) 
+ Gavin (on voicemail) :  Greetings, friend, I'm not available right now. 
+ Please leave a message after the beep. (HORN HONKS) I'll get back to you as soon as I can. Richard : What the f*ck? Why isn't this working? Gilfoyle's preprocessor and my compressor should integrate seamlessly. This should work. I may have made my preprocessor slightly faster than you asked me to, Richard. What do you mean? How much slightly faster? 200 megs per second. You dick. That's eight times as fast as the specs required. No wonder our modules aren't running at the same speed. Why would you do that? I tried to make it slow. I really did. But I'm not Dinesh. It's very difficult for me to do shitty work. So I added a differencing library and then the whole thing just took off like a rocket. Wait, so you're not processing whole files, just the changes? That's actually pretty cool. Yeah, I thought so too. That's why I wrote it. All right, well, I guess I should just revert back. Right? Slow my preprocessor way down. Although, Richard, couldn't you just rewrite the compressor to make it faster so it's compatible? I mean, these are minimum speeds, right? Just cause making the box sucks doesn't mean we have to suck at making it. Yeah. Okay. Um, here's one idea. Uh, what if we actually move upstream and connect the parser... Both : directly to the compressor seed functions. Okay. (CHUCKLES) Well, then the whole thing would really fly. Yeah. That would rock. Hey, Richard, do you have a sec? I have a, uh, preliminary render for you. What is that? What do you mean? It's a box. That's not our box, is it? Yes. It's exactly what you asked me for. You drew a rectangle and said if it was an animal, it'd be a box turtle. I mean, are you just going to do the bare minimum and call it a day? Is that, like, what you do? You said it didn't matter, you said you didn't care. No one's caring about this. I'm just saying, like, it's just a matter of pride and, like, self-respect. I mean, that's going to go in brochures, man, that's like an advertisement to you and the company and everything. I can maybe add some color to it and give the bezel a little slam. There you go. Definitely, a slam. Slam it. Yeah, maybe add some more lights. Sure. Yeah. Well, hey, uh, what are you doing standing around here talking about it? You should go do it, you know. Go and make the damn thing. Make it a jaguar 'cause I have a feeling this baby is going to purr. I don't care either, but, you know, I think maybe a gazelle is more like it. Cause it's synonymous with speed. f*ck that. A cheetah's faster. And it kills f*cking gazelles. But I really don't f*cking care. But definitely cheetah. Or a gazelle. Also, don't throw away the whole jaguar thing, 'cause they're pretty quick too. Or a gazelle. Ah! Jared, Jesus f*ck! What are you doing? Sorry. I was... I was just taking a quiet moment to collect myself. What the hell is all this sh1t? My tenant has been leaving my belongings in the alley behind my condo, to make more room for his tenants. Your tenant has tenants? Yeah. (CHUCKLES) He's Airbnbing my Airbnb. So, if it's okay with you, I might need to stay a little bit longer, um... I can go around the back to get to the bathroom once Fred's here. When's he moving in? Wouldn't we all like to know. Fred, Erlich Bachman. You said you'd get back to me about the room. I don't mean to pressure you, but I need you to decide now. In this moment, on this phone call. I am literally standing within feet of three potential candidates whose selves I could easily tell to go f*ck... Good? What do you mean good? What does that mean, you're good? What? What other incubator? Where? What is the address? Because I want to send them a f*cking nice gift. f*cking "Miami Vice," disgusting architecture! Hey, man. What are you doing here? What the f*ck are you doing here? What do you mean? This is my house. Crazy, right? This place is huge. (CHUCKLES) Did you want to...? Yes, it would be polite for you to invite me into your home and offer me a Push Pop, yes. I'm sorry. You're telling me that we should spend less time together? Absolutely, Chela. Well, I have to say, this is a big relief. In all candor, I was feeling the same, but I thought that discussing it with you might be awkward. Not at all. You are ready, Chela, to stand on your own, to weather the challenges of the future, and the rumors swirling about your leadership. Be well, Gavin. I'm-- I'm sorry. Wait, what... what rumors? There is talk that in the face of a growing threat from Richard Hendricks and Pied Piper, armed with a powerful new CEO, that you have done nothing. (LAUGHS) Well, yes, but-- That by shuttering Nucleus, you have left them to gather strength unopposed, ceding the entire space. Some are saying this is a show of great weakness. Who? Who exactly is saying this? Well, people talk. In the halls, in the cafeteria, on the parking shuttle. Wait, should... should I be worried about this? The beauty is... now you have all the answers. Yes? All right. Denpok, please. Will you sit back down? I need your help. Of course. Thank you. Clearly, we have come far, but we still have far to go. Not as far as lot D, but far nonetheless. Jared : Look what you guys built. You can't help but be elegant, you're like Audrey Hepburn. Ah, here they come. Well, I know we made a big deal about just doing your absolute minimum of your specs, but one thing led to another and, well, Jack, buckle your seatbelt because I'd like to introduce you to... Richard, just save it. Just got off the phone with Calvin Greene, CEO of Maleant. They're pulling out. What? How can they just pull out? Because they shopped our deal and got a better bid from another appliance maker, so Maleant's out, they f*cked us. Oh. Yeah. So, probably we should just push pause on the whole box thing until we figure out where to go from here. Okay. Uh, I... actually, I have a... I have a question. Yeah, I know. I know. I know, Richard, we had an arrangement, but that was all based on closing the Maleant deal. So now we have to figure out-- No, no. Sorry, um... No, my question is, uh, who did they go with? Whose box do they think is that much better than ours? Oh, uh, Dectosphere. Dectosphere? It's a brick with a power cord. Yeah. But I hear their new 43-11s, they're going to be hitting close to 75 megs per second. Uh, we can do 200. What? Yeah. You think you can get me in a room with Calvin Greene? 
+ 
+ Big Head : This is the pool. The first night I was here, I turned the heat, like, all the way up, and half the water evaporated overnight. It's crazy. Well, I hope you own a skimmer because there's a massive turd floating on the surface of your pool. Who, Fred? Fred's great, man. He's got this really cool, um, malware cataloguing thing-- Cut the sh1t, Big Head. I see exactly what you're doing. Poaching my tenants? You stole my business model. What? No. Dude, it's not like that at all. It's just this house has, like, nine bedrooms. You have any idea how scary that gets at night? So I just wanted to have some roommates around, but, um, you know, I felt weird charging them rent, cause, you know. No, I don't. Well, it's like, 20 million, you know, so I don't really need it, but then they felt weird living here without paying me anything, so they offered me pieces of their startups. That's all. You just admitted to starting a competing incubator. I've caught you in a web of your own lies, haven't I? I don't think so. Wait, have you? All right, Big Head. You want to play it that way? If it's a fight you want, then a fight you shall have. All of you! See you, buddy. Big Head. (ENGINE SPUTTERS) f*ck! What are we doing here? Why are we fighting like this? I mean, I'm going to steal your guys, you're gonna steal my guys. We'll both wield the heft of our considerable fortunes until each of us have nearly nothing left. Is that really what you want? Me either. So what do you say we join forces? I'm big enough. Are you, Big Head? Partners? Okay. Attaboy. All right, I'm going to take a spin on that fancy Japanese toilet, and then let's get to work figuring out which one of these bedrooms is going to be my office. Gavin : Consider the bulldog. A grotesque monstrosity born of relentless inbreeding. Riddled with sinusitis, crippled by joint pain. Chronically flatulent. A kindly pet, or humanity's cruelest mistake? All right, take it away. Ladies and gentlemen, just like that horrible creature, the entire Nucleus program was the result of inbreeding. We mated Hooli engineers with Hooli designers in a Hooli kennel. Is it any wonder the result was just as unspeakable as that thing? Bring it back here. Look at that hideous face. All right, get it out of here! I'm sorry, Gavin. What's your point? My point is just as not all dogs are as flawed as the bulldog, not all compression plays are as flawed as Nucleus. Our execution was lacking, but the idea was correct. Our only mistake was looking inward. It is now time to look outward. I mean, this guy did all of the work. Ten minutes after we leave Calvin Greene's office, he calls me up and says, "Hey, you got me. How much?" I just showed them the box, Jack's the one who made the deal. Good feelings, happy feelings. So Big Head built a better version of your incubator, accidentally. Correct. And he didn't even realize it? Also correct. And your solution to that was to go into business with him? Big Head? The guy you once called more useless than a bag of dicks without a handle? Dinesh, don't fall for his "aw, shucks" routine. He is a shrewd businessman. And together, we have over 20 million and 36,000 dollars at our disposal. Now, if you'll excuse me, on to Pied Piper. I have a board meeting, and this board ain't exactly gonna meet itself. Laurie : Our subsequent order of business is the approval of Pied Piper's redraft of the hardware requisition agreement with Maleant Data Systems Solutions. Ah, yeah. The main event. We've all read the latest sales agreement, yes? Actually, I don't think I was CC'd on-- So I believe we can move straightforward to a vote? Actually, I'm sorry. I have an issue with, uh, section 14, paragraph two. Um, it states that Maleant has exclusive rights to purchase any appliance made by Pied Piper for the next five years. Oh, uh, yeah. Jack gave them exclusive rights to the box so that we would get a better price upfront. Right, but this language is far broader. They actually have exclusive rights to use the underlying algorithm in any form. Oh, no. That's not right at all. Yeah, so I think, Jack, we're going to have to go back to them and just change the language here. We're not going to be able to do that. And, uh, why not? Because that was the specific language which Maleant requested when I got them to pay three times as much for each one of our boxes. It's a white label deal, so they have the right to resell these boxes in any form they choose. Yeah, but Jack, if they have exclusive rights to the algorithm, then we can't use the algorithm to build the platform. For five years. They wanted seven, I talked them down. I know, but you said that we could build the platform once we gave you the box. Yes, but I never specified a timeframe. Are you serious? I save your ass and you stab me in the back like this? In the front, Richard. Laurie, did you know about this? I did not. Well, then, good, okay. So it won't go through, because Laurie's not going to vote for it. Richard, this is complicated. If one goes strictly by the numbers, these numbers, you have built a box that is so valuable, I am now obligated to vote in favor of it. Laurie, this deal is peanuts. The platform could be worth a thousand times what the box is worth. It could be, correct, however-- This is theoretical, Richard. You don't have a price point, I do, and she has a fiduciary obligation as a member of the board to vote for the box. On the page, this is in the best interest of the company. Am I wrong, Laurie? That is factually correct. You remember when you tried to end run me and kill the box? Well, she couldn't do a goddamn thing about it then. And she can't do a goddamn thing about it now. Simple majority ratifies the agreement, all in favor. Are you kidding me? What the f*ck is going on right now? Laurie. I wasn't carbon copied on this particular email, so I stand with Richard. Um, Richard, you know how I voted to fire you a couple months ago? And I said that I did it to stay in the game so that maybe at some point in the future, I could do something to help? Well, Laurie, I know you'll probably replace me on the board and call for a revote tomorrow, but I'm here today. And I don't have any metrics to back it up, but I honestly believe that the platform that Richard wants to build will be far more lucrative in the long term than any box. So, at least for today, I'm voting no. Motion denied. We will be reconvening tomorrow. And if I could get a, uh, an email, be CC'd on the latest draft... I couldn't sit there and watch them do that to you. I just hope I don't end up fired over this. Well, what you did took incredible guts. And the fact that it probably won't make any difference makes it all the more meaningful. Right, I saw this nature documentary where a bison fought a lion to protect the rest of the herd. And it was so moving. Um, it didn't work, the lion, uh, tore into the bison and then laid waste to the herd, but what courage. Thank you, Jared. You guys just had to make a great box, didn't you? You couldn't phone it in. (PHONE RINGS) Uh, guys, Gavin Belson is calling me. Again. What the f*ck does he want? Hello? Richard Hendricks, just checking in, seeing if you heard the news. What news? Mm. Obviously, you don't have your Hooli news alerts up to date. Go to the site. I'll wait. Go to the Hooli news website. Okay. It's an ad. Um, it's an ad. Hold on. Just wait four seconds, and you can click to skip it. Just wait four seconds and then you can click it. No, it's the kind where you have to watch the whole f*cking thing. It's the whole ad kind. I thought we stopped doing those. Goddamn it. Well, regardless, what you'll see once the paid announcement is over, is that I just closed a 250 million dollar deal to acquire a little company called Endframe. I thought you'd want to know. Update those Hooli news alerts. Also, I invite you to click yes, if our ad experience was relevant to you. Be well, Richard. What did he say? Oh, my God. "Gavin Belson announces deal to acquire Endframe, a middle-out compression platform company, for 250 million dollars." Even after they sh1t the bed with Nucleus, Hooli gets to build our platform and we don't? (LAUGHS, COUGHS) What is funny about this? He's intoxicated. No. No... yes, but don't you see? Gavin, in trying to f*ck us, just saved our asses. (COUGHING) He's right. He's right. (COUGHING) My gosh. Oh, my gosh, he's right. Holy sh1t. I am so confused right now. Gavin set a p-- (COUGHING) He set the-- The price point. Yes. Yes, yes, yes. Yes, thanks to Gavin, Endframe, a middle-out compression platform, is objectively worth 250 million dollars. Wait, okay. We are a middle-out compression platform company. Are we worth 250 million dollars? There's no way the box makes us worth a fraction of that. Laurie couldn't vote for the platform because she couldn't assign a dollar value to it. Well, Gavin has just done that. He's validated the market so there's... there's no reason to revote. We win. I can't wait to see the look on that AAR prick's face when we come in there and gut him like a-- (COUGHING) Is he okay? He's going to be fine. Welcome, men and ladies of Endframe. Rather than incestuously promoting the same faces from within, you represent fresh blood, new ideas. Everything Nucleus was not. It is my honor to personally welcome you all to Hooli. Does he really not remember us? How long did you work at Hooli? The last time? Seven years. I was here for nine. He was invited to my wedding. I hope Jack doesn't cry. I really hope he does. Hey, Gloria. Lynn. Did they both get fired? I don't... Laurie. What are you doing here? Where's Jack? Uh, as you may recall, at our board meeting last night, Jack said that he would get his way, and that, in his words, I, quote, "couldn't do a goddamn thing about it," end quote. Well, in light of recent activities, it appears that I could do a goddamn thing about it. And I just did. Jack Barker has been exited. f*ck me sideways. Indeed. Effective immediately, you are all at liberty to commence work upon the platform. Okay. Wow. Yeah, uh, uh, I just got to ask, um, with Jack not being CEO anymore, am I CEO again? You are not. Nor are you, Mr. Bachman. I'm sorry, if I'm not CEO, Erlich isn't, Jack isn't, who is going to run Pied Piper then? Officially, and until further notice, this chair will remain empty. Really? Excuse me. ♪ ♪ 
+♪ Yeah, yeah, yeah ♪ 
+♪ I don't never feel pain ♪ 
+♪ 'Cause I done felt too much pain ♪ 
+♪ Blood flowing through my veins ♪ 
+♪ I'm just doing my thing ♪ 
+♪ Get money, baby girl, gold chains ♪ 
+♪ I don't never feel pain ♪ 
+♪ 'Cause I done felt too much pain ♪ 
+♪ Standing in the rain ♪ 
+♪ Blood flowing through my veins ♪ 
+♪ I ain't never did a thing ♪ 
+♪ Getting money, rocking chains ♪ 
+♪ We'll never feel the same ♪ 
+♪ We the thugs in the game ♪ 
+♪ I don't never feel pain ♪ 
+♪ 18 wheeler gorillas Black with gold chains ♪ 
+♪ Pitch bird like steelers ♪ 
+♪ Hines Ward of the crime lords ♪ 
+♪ Running through this money screaming "encore" ♪ 
+♪ Spending nights with the prime whore ♪ 
+♪ But that's the bitch that you're blind for ♪ 
+♪ Celebrating on a whim, nigga ♪ 
+♪ Pain is Pac above the rim, nigga ♪ 
+♪ My bitch rock a bigger gem, niggas ♪ 
+♪ 'Cause she was there when it was dim, nigga ♪ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 

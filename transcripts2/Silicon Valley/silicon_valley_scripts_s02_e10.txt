@@ -1,0 +1,603 @@
+Transcripts - Forever Dreaming :: 02x10 - Two Days of The Condor - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x10 - Two Days of The Condor https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=26853 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 06/15/15 03:54 ] 
+ 
+ 
+ Post subject:  
+ 02x10 - Two Days of The Condor 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Hello? 
+ Can anyone hear me? 
+ Dinesh : This is unbelievable. 
+ There are seven thousand people watching this stream, and it's working flawlessly. 
+ Rebuffering events are below 0.5%. 
+ Even when his sobbing shakes the camera there's no blocking at all. And the quality is great. 
+ Why? 
+ More good news. There's a storm coming. 
+ There's no way the EMS guys can get up there. 
+ This could go on all day. 
+ Appreciate your cooperation here, gentlemen. 
+ We'll see you this afternoon. 
+ Richard, I'm sorry about that. 
+ No, it's fine. 
+ The lead counsel of the company that's suing us just marched their engineer through the house to make sure the platform they want to seize is ready for them. 
+ That felt great. 
+ It's like they assume they've already won. 
+ Is there any chance they haven't? 
+ Erlich : Goddammit, Richard. 
+ In addition to stealing two of my four packs of Fage yogurt, your ship-jumping coder c**ts happened to walk off with the rest of our toilet paper, so that... 
+ Hmm. 
+ Speaking of sh1t that can't be wiped away and flushed, how are you, Mr. "Mohanahan"? 
+ Morning, Mr. Bachman. 
+ I don't suppose you have anything to say to me by way of an apology? 
+ For? 
+ For the embarrassing ordeal that you put me through yesterday in front of over nine people. 
+ I think you should be the one apologizing, Mr. Bachman. 
+ You lost your composure and ruined our entire case. 
+ I'll see you gentlemen at 3:00. 
+ I shan't be attending out of contempt, so this will have to serve as our goodbye. 
+ Don't let the door hit ya where God split ya. 
+ I'm sorry. 
+ No. 
+ Richard, I'll see you there? 
+ Yeah. 
+ Pete? 
+ Do we have any chance of winning this? 
+ When you hired me, I told you I would never lie to you, Richard. 
+ Yeah, that's true. You did. 
+ I'll see you at 3:00. 
+ (theme music plays) 
+ Oh, hello, neighbor. 
+ Neighbor. 
+ Not for long. Louise helped me sell my house. 
+ The ferret laws are much more enlightened in Arizona. 
+ Arizona, huh? 
+ You'll be dead in a month. 
+ We'll miss you. 
+ This your home? 
+ Indeed it is. 
+ Are you interested in selling? It's a great time. 
+ Not interested. There are people in there who depend on me. 
+ Human people. Not weasel animals. 
+ It's a ferret. 
+ Weasels. 
+ Ferrets! 
+ Corner lot, good square footage. 
+ I could probably get you a lot more than I got Noah. 
+ How much did you get him? 
+ Wait. You're selling the house just like that? 
+ It wasn't a rash decision. I agonized over it. 
+ But what about your incubator? 
+ What about it, Jared? Pied Piper has caked its pants, Jian-Yang's chances of investment have literally gone up in smoke, and you heard what Monahan said in court yesterday. 
+ Market forces and random events have conspired against me to make the success of my incubator all but impossible. 
+ Functionally, all I've really achieved is running a flop house where guys have shat, jerked off, and paid me no rent. 
+ Man : Why won't anyone come get me? 
+ Well, we have accomplished one other thing. 
+ We're up over 20,000 viewers. 
+ Holy sh1t. Really? 
+ Buzzfeed linked to us. Now we're picking up on Reddit. 
+ This guy falling off a cliff is the first good luck we've had. 
+ And right as we're gaining traction, we have to hand it all over to Gavin f*cking Belson. 
+ This is f*cked. 
+ We can't give it to him... if we don't have it to give. 
+ What do you mean? 
+ We do have it, and we have to give it. 
+ 100% of what he's trying to take from us exists digitally on servers in this house. 
+ If we nuke them, there's nothing for him to seize. 
+ As far as he knows, it's an accident. 
+ No one would believe that. 
+ Two weeks ago, we accidentally erased one-third of Intersite's entire library. 
+ I think we've established our ineptitude beyond a reasonable doubt. 
+ f*ck it. 
+ I say we delete everything. 
+ No. No. No. No. 
+ Guys, that's not what we do. We don't destroy things. 
+ Not on purpose, anyway. 
+ Right? Isn't that the whole reason why you got into this in the first place, to build cool sh1t? 
+ I mean, look at that livestream. It's f*cking perfect. 
+ And even if Hooli ends up owning it, we built it with no resources and a f*cking stream of endless obstacles. 
+ I don't know, I mean, I kind of want to see how big it can get, right up until the point where Gavin Belson has to f*cking take it from us. 
+ (phone buzzes) 
+ Guys, who is Manny "Pa-qui-oh"? 
+ Pacquiao? He's one of the most famous people on the planet earth. 
+ Oh! Manny Pacquiao, the Filipino legislator. 
+ No, boxer. 
+ Okay, well, he just tweeted a link to our livestream, and he has almost two million followers. 
+ Oh, f*ck. 
+ Oh, f*ck. We got to scale up if we're going to handle that kind of traffic. 
+ Dinesh : I'm gonna compress the manifests. 
+ I'll kill the highest bitrate to give us more headroom. 
+ I've always wanted to be part of a suicide pact. 
+ What? That's not what we're doing. 
+ Richard : Hey, Gilfoyle, we're up to 50,000 views. 
+ Whoa, it is, like, 500 degrees in here. 
+ Yeah. Anton is really starting to sweat. 
+ Yeah, I still can't believe you gave the servers a man's name. 
+ Sorry, I couldn't remember your mother's name. 
+ Hey, why don't I just open up the garage door? Let some fresh air in here. 
+ Yeah, sure, if you want the cooling system to shut down and everything in here to turn to magma. 
+ Actually, with all the new servers I have running, we're about to max out the amperage and blow the main breaker anyway. 
+ Sooner or later, Gilfoyle's servers are gonna fail, and then it's all done. 
+ My servers can handle 10 times the traffic if they weren't busy apologizing for your sh1t codebase. 
+ Oh, yeah? Well, my codebase could handle this traffic, f*ck your mother, make a video of it, upload it, and even that video would not even buffer. 
+ Hey, Pete. 
+ Hey, I just heard from the judge. 
+ He's gonna call us in an hour early. 
+ Early? What does that mean? 
+ Well, it's either a very good or a very bad sign. 
+ Well, actually, it's almost always bad. 
+ I take it back. It's a bad thing. 
+ Why don't you head over, I'll see you when you get there, okay? 
+ Hey, guys, I gotta go. 
+ It's time. 
+ Try to keep it online as long as you can, okay? 
+ (crying) Why? 
+ The picture quality is remarkable. 
+ Mm-hmm. 
+ And this is all hosted at a data center they built themselves in their garage. 
+ Man : Please help me. 
+ That's right. 
+ Very impressive. 
+ Man : Please someone help me! 
+ It's already becoming a meme in the Philippines. Look. 
+ (guitar playing) 
+ Why won't anyone come help me? 
+ Can anyone hear me? 
+ (laughs) 
+ Man : Hello? 
+ And Filipinos find this amusing? 
+ Man : Can anyone hear me? 
+ Apparently. 
+ Please help me. 
+ I've lost all feeling below the waist. 
+ Why? 
+ They are a fascinating people. 
+ How are the numbers? 
+ Unless people start getting bored and tuning out, we're gonna hit our capacity. 
+ f*ck. 
+ Man : I'm so dehydrated. 
+ I'm gonna have to urinate into my water bottle. 
+ This guy's gonna drink his own piss? 
+ That's too good. We're gonna fail by succeeding. 
+ Jared, I need you to plug those servers in now. 
+ Aye-aye, captain. 
+ What a shit-circus. Good riddance. 
+ You're never gonna sell. 
+ What? 
+ Look what's happening here. 
+ It's magical. 
+ The only thing magical is how much this house has appreciated in the last three years, Jared. 
+ I'm selling. 
+ That's just money. It has no real value. 
+ It literally defines value. 
+ Look at this check. All right? 
+ You can't actually cash it, but think about what it represents. 
+ It's priceless. 
+ Jared, I saw your entire HR file. 
+ It was in the Hooli disclosure. 
+ You had a fat salary and stock options. 
+ By now, you would be a senior VP. 
+ But instead, you walked away to wrangle extension cords for a company that will be defunct in maybe 30 hours. 
+ If you're not kicking yourself even just a little bit, you are objectively insane. 
+ I can always find another job, but look at us... doing this. 
+ It's intoxicating. Don't act like it's not magical. 
+ It is. 
+ (banging) 
+ What the f*ck is that? 
+ Jesus Christ! 
+ What the f*cking f*ck? 
+ Hey, guys. 
+ On the day that I'm showing the place? Are you serious? 
+ I had to shorten up the cable run, so... 
+ This is the shortest distance to the garage. Had to do it. 
+ It's magical. 
+ Huh. 
+ So, start with the wide end. 
+ Oh, Richard. 
+ Here, let me help you with that. 
+ May I? 
+ Relax. 
+ Okay. 
+ Just gonna tie your tie. 
+ All right. 
+ I feel terrible it's come to this, Richard. 
+ But who knows? 
+ Sometimes things like this are for the best. 
+ I know this one is for me. 
+ If you hadn't blackmailed me into this arbitration, I was gonna have to go in front of the Hooli Board of Directors and ask for $250 million to buy you out. 
+ Wow. $250 million? 
+ Believe it or not, your algorithm is the only way to make Nucleus work. 
+ I was ready to pay whatever it took. 
+ Let me ask you this. If I offered you 10 million for Pied Piper right now, before we even go in there, would you take it? 
+ Really? You'd do that? 
+ No, of course not. 
+ I'm about to get it for free. I'm just f*cking with you. 
+ I'm sure you'll come up with plenty more once-in-a-lifetime ideas, Richard. 
+ Or not. 
+ ♪ ♪ 
+ There you go. 
+ Good luck in there, Richard. 
+ ♪ ♪ 
+ Gilfoyle, what are you doing? 
+ Jamming the breakers so they don't trip. 
+ That's not a huge f*cking fire hazard? 
+ Yeah, of course it is. This whole sh1t box could go up at any second. 
+ No. No fires in here. 
+ I already had that conversation with Jian-Yang, I think. 
+ 200,000 views. f*ck! 
+ Gilfoyle, we need to build the caching mechanisms now! 
+ It's the only way the clusters will scale. 
+ Okay, sounds good. Do it. 
+ I can't do it on my own, Gilfoyle! 
+ Hey, Erlich, I need another coder here! None of these guys can help me. 
+ Sorry, amigo. I don't code anymore. 
+ Remember? Carpal Tunnel Syndrome. 
+ (knocking) 
+ Well, then we're f*cked. This thing is gonna crash any second. 
+ Mr. Bachman, I am sorry to drop in on you like this... 
+ Erlich, Seriously! 
+ But I have got the buyers here. 
+ sh1t. He's gonna drink his own piss. 
+ Gilfoyle, I need some f*cking help! 
+ Sorry, Louise, this isn't a great time. I'm entertaining... and I have some minor cosmetic repairs to do before I show the house. 
+ Oh, no, they don't even need to look inside. 
+ They only want the property for the lot value. 
+ Seriously, I can't do this by myself! 
+ Lot value? Meaning? 
+ You have to realize your house is a total teardown, right? 
+ They want to tear this place down? 
+ Gilfoyle, the caching mechanisms! We're gonna crash! 
+ I told you, get Erlich to do it! 
+ Richard said keep it online! 
+ I can't do this by myself! 
+ Mr. Bachman... they want to make an offer right now. All cash. 
+ Mr. Bachman, I think you would be foolish to turn this down. 
+ Did you just call me a fool? 
+ No. All I meant was... 
+ Madam, you do not call a man a fool on the transom of his own home. 
+ A home that happens to be the world headquarters of a company keeping streaming video of a man who's about to drink his own urine online for tens of thousands of Filipinos. 
+ Does that sound like foolishness to you? 
+ So, you can tell your clients, respectfully, that they may go f*ck themselves. 
+ ♪ ♪ 
+ (man crying) 
+ All right, I'm gonna start compiling varnish to cache the manifest. 
+ Dinesh, you reduce the seeds in the P2P swarm, got it? 
+ Let's f*cking do this. 
+ I knew you wouldn't sell. 
+ Jared, respectfully, shut the f*ck up. I'm working. 
+ (sizzling) 
+ Man : I don't wanna drink my pee. 
+ What's that smell? 
+ Which I weighed in making my final decision. 
+ A decision I do not take lightly. 
+ Now, in concerning... 
+ (man crying on phone) 
+ Mr. Hendricks, are you on your phone? 
+ No. 
+ It says, "Aim at the base of the fire." 
+ That's the servers. 
+ If you hit those servers, you kill our livestream, Jared. 
+ I don't know what to do. 
+ Should we do verbal SWOT analysis? 
+ 298,000! 299,000! 
+ Our check is burning. 
+ He's drinking his own urine. He's drinking his piss. 
+ We're up over 300,000 viewers! 
+ Hello? I'm down here! Hello? 
+ Dinesh : Wait, who the f*ck is that guy? 
+ Wait, wait. They're rescuing him. 
+ Why did it take you so long? 
+ Wait. He shut it off. 
+ 290, 270... Everyone's leaving. 
+ It's over. 
+ Holy sh1t. 
+ We did it. 
+ We f*cking did it. 
+ We stayed online till the end. 
+ Look at that. (laughing) 
+ f*ck, yeah. 
+ (laughing) 
+ Oh! 
+ I wonder if Richard got to see that. 
+ Which is why I had no recourse but to rule that, since Mr. Hendricks, by his own admission, used Hooli equipment to facilitate the development of Pied Piper, then pursuant to California Labor Code, Hooli has a right to ownership of Pied Piper's underlying IP. 
+ (chattering) Congrats. 
+ Congratulations. 
+ Very well done. 
+ Congratulations. 
+ ♪ ♪ 
+ 
+ 
+ 
+ Richard, I'm sorry. 
+ I really am. 
+ We're now at 78 viewers, which still seems high. Like, who's watching a blank screen? 
+ We never went down, gents. 
+ (phone buzzes) 
+ Anton really carried us. 
+ Dinesh : One, still a weird name, and two, this was a win for our software stack. 
+ Your software can choke on my fat f*cking balls. 
+ Guys... 
+ Richard just texted me. 
+ He says delete it. 
+ What? 
+ He says, "We just lost. It's my company. Delete it all. Now." 
+ m*therf*cker. 
+ Now, Pied Piper, you conceded on all of these minor counts. 
+ Accordingly, on the count of wrongful solicitation, I find Richard Hendricks did indeed breach his contract with Hooli when he hired away a Hooli employee, one Donald Dunn, AKA Jared, AKA O.J., apparently. 
+ But this is where things get interesting. 
+ Mr. Belson, there is language in this contract that the California Supreme Court has deemed unlawful. 
+ Preventing Mr. Dunn from seeking employment elsewhere is a violation of his rights. 
+ Are you aware of this? 
+ I was not, but I'm willing to drop that count altogether if it makes things easier. 
+ Well, here's the thing. 
+ This clause was unlawful when you included it in Mr. Hendricks' employment agreement. 
+ Right. As I said, I'm willing to just move past this. 
+ See, again, I don't think you understand. 
+ If Mr. Hendricks hadn't hired Mr. Dunn, or you hadn't pursued him for that hire, I'm not sure I would've noticed the violation. 
+ But you did, so I did. 
+ What's happening? 
+ Justice, baby. 
+ And what I find is, this is an unenforceable contract. 
+ It is null and void. 
+ So, effectively, Mr. Hendricks never had a valid employment agreement with Hooli. 
+ As a result, Hooli has no claim to ownership of Pied Piper's underlying IP. 
+ That is my ruling and per your arbitration agreement, it is binding and final. 
+ Thank you, everyone. 
+ What the f*ck just happened? We lost? 
+ You gotta be f*cking kidding me! 
+ We won. 
+ We won, right? I mean, Pied Piper is ours? 
+ Richard, not long ago, emergency workers pulled me out of the flaming wreckage of my Mercury Grand Marquis. 
+ All right. 
+ Today, you pulled me out of the flaming wreckage of my life, and those flames burn far hotter. 
+ Sure. 
+ For that, I thank you. 
+ Yeah, you're welcome. 
+ I used to take a tampon, soak it in grain alcohol, and stick it up into my rectum. That got me high, Richard, but not half as high as the drug you just gave me. 
+ You know what that drug's called? 
+ No. 
+ A second chance. 
+ Right on. 
+ Uh... 
+ Well, thank you. You did great. 
+ Great job. 
+ Wow! I mean, I totally thought we were gonna lose that. 
+ I actually told the guys to... 
+ Oh my god. 
+ All right, I just wrote a mod of DBAN. 
+ As soon as we run it, it will delete the entire code repository. 
+ Pied Piper will literally vanish. 
+ (phone beeping) 
+ Wait, what? What? 
+ No. No, no, no. f*ck! 
+ Are we sure we have to do this? 
+ You read the text, Jared. 
+ If anything had changed, Richard would have called by now. Right? 
+ sh1t, no! Goddammit. 
+ (thunks, clattering) 
+ So all you have to do is press that button, and the entire platform's obliterated. 
+ And no one will ever be able to recover it. 
+ Yep, one click and poof. 
+ "The power to destroy a thing "is the absolute control over it." 
+ Frank Herbert, "Dune." 
+ All right then. Here we go. 
+ Three, two, one... 
+ Wait, wait. 
+ Shouldn't we drink one last toast to Pied Piper before we burn it to the f*cking ground? 
+ All right. As long as God isn't involved and there's beer. 
+ Okay. Okay. 
+ But if we're claiming this happened before the ruling, we should do it quickly. 
+ Damn. Hey, I need to use your phone. 
+ Sorry, I can only allow that for customers. 
+ I'm just gonna use it. 
+ sh1t. 
+ I don't know any of their numbers. They're all on my phone. 
+ Goddammit. f*ck. 
+ I need to use your phone to email my friend so he doesn't delete Pied Piper. 
+ Please. 
+ Bus? Okay. 
+ All : To Pied Piper. 
+ Wait, is this a wheat beer? 
+ I can't drink this without a lemon. 
+ Noah's got a lemon tree. f*ck him over one last time? 
+ Okay, but then we're... then we're gonna do it. 
+ Yeah. 
+ Thank you so much for letting me use your phone. 
+ Just one e-mail and I'm done, I swear. 
+ As long as you don't sh1t, piss, or puke on my bus, it's all good. 
+ Okay. 
+ I hope it's not weird that the email's coming from your account. 
+ (computer dings) 
+ I did not know lemon trees had thorns. 
+ Wait. 
+ This one has like a bruise on it. 
+ No response. Nothing. 
+ f*ck. 
+ Hey, thanks. 
+ Don't get that shitty one. Get that nice one up there. 
+ Yeah, I think the ferrets have nibbled some of the lower ones. 
+ Okay, there's no way I could have squirted this lemon in your eye on purpose from this distance. 
+ I'm not a f*cking lemon sniper. 
+ You'd be more of a lemon suicide bomber. 
+ (knocking frantically) Guys. 
+ Guys! It's Richard. 
+ Why is he knocking? He has my keys. 
+ We need to delete it before he comes in. 
+ Let me in! 
+ Richard. Richard. 
+ Don't delete it. 
+ Don't delete it. 
+ Did you delete it? 
+ Oops. 
+ Oops? 
+ What does that mean? Oops? 
+ You said "delete." 
+ f*ck. 
+ Oh, wait. 
+ Hold on. 
+ What? 
+ Gilfoyle, what's happening? What? 
+ That's weird. Kernel panic. The whole system just crashed. 
+ So, what does that mean? 
+ Did you delete Pied Piper or not? 
+ Nope. 
+ (sighs) We definitely did not. 
+ All thanks to Dinesh's garbage code. 
+ The software you wrote to delete our software just sh1t the bed. 
+ No surprise. 
+ No, my software's fine. It's 'cause it's running on your sh1t hardware. 
+ My hardware handled everything else just fine... 
+ It caught f*cking fire! 
+ Until your sh1t software spread like a virus and killed it. 
+ Restart it. 
+ Oh, I will restart it. 
+ No, don't restart it. Don't restart it. 
+ We won. 
+ We won? 
+ We won? 
+ Yeah, we beat Gavin Belson, and we won. 
+ Holy sh1t. 
+ (laughing) 
+ We won. 
+ What the f*ck happened here? 
+ Magic. 
+ Gilfoyle's sh1t hardware caught fire. 
+ No, 'cause your sh1t software was slowing it down. 
+ And then Erlich coded and it gave me chills. 
+ Gilfoyle made a hole in the wall. Look! 
+ I did. 
+ It was frightening. 
+ You hear he just lost the Pied Piper suit? 
+ That's nothing. They're saying half of all Hooli employment agreements may be legally invalid. 
+ You don't think the board will get rid of him, do you? 
+ Maybe. 
+ Two, please. 
+ Sure, coming right up. 
+ I'm hearing a lot of chatter about that Nelson Bighetti guy over at XYZ. 
+ I mean, three promotions in a year? 
+ President of Hooli Cancer and AIDS societies? 
+ That doesn't just happen. 
+ He must be smart as hell. 
+ ♪ ♪ 
+ Gavin, come in. 
+ Motherfuck. 
+ Wait, what? 
+ I am rarely wrong about these things. 
+ You have an aura about you. 
+ An aura that if carefully managed by someone with the necessary spiritual expertise, could be harnessed to great effect. 
+ Okay. 
+ Russ : Monica. 
+ Russ, what are you doing here? 
+ Question. What's got two thumbs and three commas? 
+ This guy. 
+ What? 
+ Yeah. 
+ Like, 10 minutes after boy genius won his lawsuit, your boss lady gave me a call. We just did a deal. 
+ She put me back over a "B." 
+ Mmm. 
+ It means a billion. 
+ Yeah, got it. 
+ I got a lot of cars, you know, if you want to go for a drive some time. 
+ Got my own. 
+ Does it go like this? 
+ Does it go like this? No? 
+ Think about it. 
+ Laurie, I just ran into Russ Hanneman leaving. 
+ He said you made him some kind of a deal. 
+ Yes. 
+ He was substantially difficult. Truly repugnant. 
+ And when we finalized our agreement, he described his erection to me. 
+ But in the end, I managed to buy 100% of his interest in Pied Piper. 
+ Let us never speak of him again. 
+ Well, that is fine by me, and I'm so glad you got him away from Pied Piper. 
+ I mean, now that their suit has been resolved, I think that they're about to become something really special. 
+ Their core technology, it's visionary. 
+ Absolutely. 
+ Also, the entirety of their recent stumbles with Homicide, with Intersite, with the very decision to pursue video instead of more pioneering applications. 
+ This was all rooted in human error, which is why I found it prudent to secure Hanneman's shares, his voting rights, and most critically, his board seats. 
+ Right. Russ has two board seats. 
+ He did. 
+ Now, Hendricks votes one, Bachman votes one, and we, at Raviga, we vote three. 
+ That is a majority. 
+ We can now take the necessary steps to ensure that Pied Piper is properly managed. 
+ What... What're you saying? 
+ I don't understand. 
+ Monica, I believe you do. 
+ (chanting) Always blue! Always blue! 
+ Always blue! Always blue! Always blue! 
+ (yelling) 
+ That was a long one. 
+ It's not the first time I've heard that. 
+ (phone buzzing) 
+ Monica, what's up? When are you getting here? 
+ The party has already started, and it's getting pretty crazy. 
+ You have to smoke weed. 
+ What's wrong? 
+ This is the best day of my life. 
+ Um, okay. 
+ And yet, no girls. 
+ There's nothing to it, it's just luck. 
+ Okay, well, then do it. 
+ Beat my 43. 
+ Beat my 43. 
+ I'd like to smoke weed. 
+ That's the difference between you and me, you smoke weed all day, I learn a valuable skill. 
+ Richard, are you okay? 
+ Yeah, who died? 
+ Um... 
+ What just happened? 
+ Well, apparently, Raviga held an emergency meeting of Pied Piper's Board of Directors... 
+ Oh, no. 
+ And they voted to remove me as CEO of my own company. 
+ I just got fired. 
+ And what about me? 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 
