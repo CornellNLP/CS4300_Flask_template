@@ -14,7 +14,7 @@ def makeSoup(url):
         style.decompose()
     return soup_content
 
-for title, show_link in find_shows_in_ds.A_titles_to_links.items():
+for title, show_link in find_shows_in_ds.titles_to_links.items():
   show = title
   abbrev = title.lower().replace(" ","_")
   show_dir_path = "./transcripts/" + show
