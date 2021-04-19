@@ -1,0 +1,240 @@
+Transcripts - Forever Dreaming :: 01x08 - Around the World in Eight Kidneys - Pure Genius 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x08 - Around the World in Eight Kidneys https://transcripts.foreverdreaming.org/viewtopic.php?f=770&t=30294 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 12/16/16 07:25 ] 
+ 
+ 
+ Post subject:  
+ 01x08 - Around the World in Eight Kidneys 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Previously on Pure Genius. 
+ When I opened Bunker Hill, I made a promise. 
+ That I do everything humanely possible  to save everyone who came through these doors. 
+ I want to be part of this. 
+ Cheng :  So, how's the Malik sitch? 
+ Zoe, I want to go out with you to a concert. 
+ You know, like on a date. 
+ I'm really sorry, James, but I can't. 
+ Right. Okay. 
+ ♪ ♪ 
+ Hey. 
+ Malik. Hey. 
+ How was your holiday? 
+ Good. Yours? 
+ Oh, it was... great to be back home. 
+ My niece is getting so big. 
+ Anyway, I got to, uh, go get some coffee, because I am... totally jetlagged, so... 
+ Okay, so, this isn't working for me. 
+ Us not talking about anything. 
+ I know you're not into dating at work. Neither am I. 
+ But I felt something when we were together. 
+ A connection. 
+ I think you did, too. 
+ I like you. 
+ And I want to make a go of this. 
+ Okay. 
+ O-Okay you want to make a go of this or okay you need coffee? 
+ Um... the first one. 
+ (chuckles) Okay. 
+ (phone chiming) 
+ Uh... sorry. 
+ We need to get to the Incubator. 
+ (dance music playing) 
+ (siren wailing sound effect) 
+ (women giggling) 
+ Yeah, guys, I don't think we should be watching this. 
+ It's an invasion of privacy. 
+ It is all over the Internet. 
+ It has half a million views. 
+ Bell : Hey, guys. 
+ James. 
+ Hey. 
+ Cheng : You're back. 
+ How was your vacation? 
+ Lovely. 
+ Uh, nice. 
+ Yours? 
+ Lovely. 
+ (stammers) Yeah. Good. 
+ I had a good time. Yeah, good. 
+ (sighs) 
+ Wallace : Everything looks good, Constance. 
+ You adapted to the new machine beautifully. 
+ Another 24 hours of observation and we can let you go home. 
+ (chuckles) 
+ Any questions? 
+ Uh, just the same one I've been asking all week. 
+ Do we really get to take this machine back with us to Baltimore? 
+ That's the whole point of the trial; you get the Rolls-Royce of dialysis in the privacy of your own home. 
+ I-I can't believe we're gonna get our freedom back. 
+ Both of us. 
+ Lauren, you have been my angel for two years, driving me to and from dialysis three days a week. 
+ She never complained. 
+ It hasn't been that bad, Mom. 
+ We do what we got to do, right? 
+ Dr. Wallace knows... 
+ Lauren has just had her third callback for the Paris Opera Ballet. 
+ Isn't that one of the best companies in the world? 
+ The best. 
+ Wow. And that's why this dialysis machine is a godsend. 
+ I mean, it's... (exhales) it's gonna give me my independence back, and... 
+ Lauren can move to Paris and... 
+ (exhales) live her dream. 
+ Whew. 
+ Constance, are you... feeling lightheaded? Any dizziness? 
+ Yeah. Maybe. Just a little bit. 
+ Blood pressure's fairly low. 
+ I need to order an EKG and echocardiogram. 
+ There may be, um, something wrong with your heart. 
+ Bell :  Listen up, everyone. 
+ Constance Durand, our kidney patient, has worsening congestive heart failure. 
+ Heart failure? I thought she just needed dialysis. 
+ It's called cardiorenal syndrome. 
+ It's a known complication in dialysis patients. 
+ Acute kidney injury causes the immune system to attack the heart. 
+ The damage results in impaired cardiac function. 
+ And the onset, it can be sudden. 
+ Based on her echo, her left ventricular ejection fraction is 18%. 
+ Yeah, her heart's barely pumping blood, which means she can't tolerate the lengthy dialysis. 
+ Yeah, and her kidneys are shot. Patients like this don't live more than a few weeks without a new kidney. 
+ What about a kidney transplant? 
+ Constance has a very rare tissue type. 
+ Her CPRA is 89, which means she'll reject most kidneys donated through an organ network. 
+ What about her daughter? 
+ Not a match. 
+ What about a kidney paired donation? 
+ What's that? 
+ It allows donors who are incompatible with their loved ones to switch their kidneys with other donor/recipient pairs. 
+ Yeah. Lauren would donate her kidney to a stranger, whose loved one would then donate their kidney to another stranger... 
+ The pattern would repeat itself until the chain circled back around and Constance would get a compatible kidney. 
+ Boom. Sounds great. Let's do that. 
+ Yeah, but it's not gonna be easy building a chain around a sensitized patient like Constance. 
+ She's right. These chains are built using crude algorithms, designed for single transplant networks. 
+ Which is why we're not gonna rely on someone else's algorithm; we're gonna build our own. 
+ Of course we are. 
+ (chuckles) 
+ (trilling) 
+ So, what am I looking at? 
+ Each node represents a donor/recipient pair. 
+ Constance and Lauren are the one in the middle. 
+ Do those lines indicate matches? 
+ Mm-hmm. Yep. 
+ So how long does it take to build a chain? 
+ I'm rendering the algorithm on 4,000 cloud computers, so what would take 36 hours should prob... Oh, it's done. 
+ (keys clacking) 
+ (beeping) 
+ Damn it. No matches. 
+ You know, Constance has a very interesting ethnic background. 
+ She's part French and part Ashkenazi. 
+ Tissue type is hereditary. 
+ Patients of similar ethnicities are more likely to be a match. 
+ We could target people in specific parts of the world... 
+ You want me to expand the algorithm internationally? 
+ Can it be done? 
+ Bonjour. I'd like to request access  to your transplant database. 
+ It's for a kidney paired donation. 
+ In the U.S. 
+ Sure, I'll hold. 
+ Hola. Información del donantes de órganos. 
+ Bunker Hill y James Bell. Sí. Gracias. (speaking Mandarin) (speaking Hindi) I've already spoken to the embassy. Yes, I know international organ donations are rare. Guys, I think this is working. (murmuring) We've got three pairs. Four. Bell : Five. Six. Seven. Eight. It's called a kidney paired donation. We used an algorithm to find seven other donor/recipient pairs from around the world. We'd have 'em all fly here and do the eight transplants at one time. And this is the only way to save my mom? This is the only option I see. (exhales) I'm sorry. This is a lot. I... First, you tell me I'm dying, and now you're telling me that my daughter has to donate her own kidney to a stranger. Yes. But, in return, a stranger donates a kidney to you. When would I be able to dance again? Your recovery would take... six to eight weeks. Well, then her answer's no. Mom... No. The Paris Opera Ballet is like winning the lottery for a dancer. Lauren may not get a chance ever again. I'll do it. I'll donate my kidney. Lauren... If it saves my mom, I'll do it. We have eight patients *** the kidneys and we have eight donors willing to donate. But as we know, a kidney chain is extremely delicate. They are a giant house of cards. So to avoid potential conflicts, Dr. Wallace and I have decided to keep all donor/recipient pairs anonymous. Patients won't know who is donating to whom until after the surgeries. Why is pair number seven blank? Pair number seven agreed to the kidney chain on one condition: total anonymity from patients and all Bunker Hill staff. Get out. All staff? How is that even possible? We shut down the east wing on the fifth floor. Only Dr. Wallace, myself and a select team will have access to it. Okay, Dr. Wallace, hand out the assignments. Listen carefully, everyone. Dr. Channarayapatra,  you'll be in charge of Luisah and Astrid Pierre. Luisah, born with only one kidney, to it during the 2010 earthquake in Haiti. Her sister Astrid will be donating on her behalf. Dr. Brockett, you'll be in charge  of Brandon and Lee Wen Hsu of Hong Kong. Brandon is ten and suffers from minimal change disease. His father, Lee Wen, will be donating on his behalf. Dr. Strauss, you'll have Dean and Helen Trainer. Dean has polycystic kidney disease. His wife will be donating on his behalf. Dr. Verlaine, you'll be in charge of pair number seven, our anonymous patients. Welcome to Bunker Hill. Good news, W. All eight pairs have checked in. This is happening. It's like the United Nations out there. We're making history. Why aren't you excited? I am, James. But there are 16 links in this chain. If any one of them breaks, the entire chain dies. Lee Wen, your labs look good. Unfortunately, Brandon's serum albumin level is 2.0 grams per liter. That's very low. It's been low. Our doctor almost refused to let us get on the plane. We can't thank you enough for this. My albumin is why I'm so skinny, right? Yes, that's right. Your kidneys lose albumin protein and other nutrients before your body can use them. But after you get your new kidney, you should have a big growth spurt. I've seen it before. I'll be like Niko the underdog, who became Niko the warrior. Mei : Japanese manga. His latest obsession. Dr. Brockett, where's my donor from? Lee Wen : We talked about this, Brandon. She can't tell you anything until the transplant is over. But do they have any special powers? Can they fly? He's convinced his donor is a superhero. 'Cause they're giving me their life force. Duh. (mock gasp) Actually, Brandon, you're not entirely wrong. When you were seven, you got a few blood transfusions, and those transfusions made you special. Sort of like... how did Niko get his powers? He got hit by comet dust. Sort of like that. Your blood changed, and you became a one-in-a-million match for a transplant. So your donor kind of is a superhero, because they're one in a million just like you. Hi. My name is Angie. I was sent up to deliver this. I'll take it. Actually, uh, they said I need to deliver it to the patient in the east wing in person. (chuckles) No, they didn't. What are you doing here, Angie? Nothing. Uh... Here's the thing... I tried to access your patient files on the Bunker Hill server, but I got locked out. What part of "totally anonymous" don't you understand? Thing is, since when do we keep secrets here at Bunker Hill? It flies in the face of our open-source culture. The patients requested it, and we're respecting their wishes. Before you go. (whispers): Is it a celebrity? Just wink if I'm right; nod if I'm wrong. Dean, what are you doing? Thought I told you not to eat before the surgery. No, if I'm gonna get a new kidney on James Bell's dime, I'm gonna make the most of it. Dr. Strauss, I can see that you and I have got a lot in common. I reckon we'd be mates back home. You're gonna have my back today, right? I-I don't know what you mean. Look, listen. I'm all for diversity. I think it's great. This whole international thing you're doing here. But... I don't want a kidney from just anyone. You know what I mean? No. I don't. Hey. Hey. Uh, can I talk to you for a second? Brockett, we're about to start a walk-through of patient labs. Yeah, I know. I just... I want to make sure... we're okay. Yes. Absolutely. Why would we not be okay? No reason. Excellent. Hey. Did I miss anything? Uh... no. How are your patients? Oh, you know. Anonymous. Mm. Hey. Oh. Wait. Okay. Yeah. What? What did I do? Nothing. I just wasn't expecting... You know what? Maybe we shouldn't be physical at work. Physical? You had a hair in your eye. (whispers): Yeah. I just... I'd rather push my own hair back. Noted. Okay, guys, we've got a problem. What is it, Doctor? My donor... donor eight... she's pregnant. Astrid Pierre? This jeopardizes the entire chain. Her doctor in Haiti must have missed it because she's only four weeks along. Pregnant? I don't understand. Why can't she donate while pregnant? In this case, your donor's cardiovascular and renal functions changed as a result of the pregnancy. Surgery would be too risky, uh, for the mother and the fetus. So we're back to square one. I have less than a month to live. We're doing everything in our power to come up with an alternative solution. (sniffles) What's going to happen to the kidney chain? Well, Lauren, that's the other reason I'm here. A lot of that depends on you. Why? Well, I know this is tough to hear, but there are two options. You can withdraw from the chain. It's entirely your choice. But that means the chain falls apart. So no one will get a kidney? That's right. Or? Or you stay in the chain and donate, and become what we call an altruistic donor. Your participation keeps the chain alive. And my mom? She wouldn't receive a kidney. Has Lauren made a decision yet? Not yet. Okay, so... is she fully aware what's at stake? That there are seven other families depending on her? I told her the facts. She's aware. Yeah, it's just, she's Brandon Hsu's donor. She might be his only chance of getting a kidney. He's running out of time. Is there anything else we can do? Dr. Brockett, you know it's against the rules to coerce a donor, and highly unethical. Yes, I know. I know that, but this is an extreme case. Seven other people could die if they don't get a kidney. I realize that, Dr. Brockett. I told her. Now it's up to her to decide. What are you making, Brandon? Niko wears this mask when he's fighting. I'm making one for me and my donor. Dr. Brockett. Can we have a word with you? We heard there might be a problem with the chain. How bad is it? Unfortunately, a donor did fall out due to an unexpected medical complication. But we are doing everything we can to keep the chain alive. Dr. Brockett, this is our son's only hope. He'll die if he doesn't get a kidney. What if I donated, too? Would that help? I'm afraid it's more complicated than that. What if we offered the donor money? We don't have much, but could scrape together something. Unfortunately, the process doesn't work that way. I'm so sorry. Please... Dr. Brockett. He's our only child. Promise me that you'll do everything you can to save him. I promise. Where we are Angie? I made two liters of bioactive blood plasma, like you asked. It's the same formula we used to test the new dialysis machine. Perfect. I have been making some calls around town, and according to my sources, this... is the most promising artificial kidney prototype currently in development. Wait, Hydrus Labs? The owner of this company's a moron. Don't think I'm  that  bad. You... What? I just bought Hydrus. But, James, I told you, no prototypes are ready. I mean, this one has shoddy membranes. How do you know? Because it's my job to know. I've been working on similar tech, and the only reason Hydrus Labs is ahead of me is because they have 14 geeks in a lab working on kidneys 24/7. It's all they do. (whispers): Angie, we're smarter than 14 geeks. You and I can make this work. Come on, let's test it out. Come on. Fine. Okay, so, once the bioactive blood filters through the kidney... Mm-hmm... it should come out in two streams. Red for clean blood and yellow for urine. If they turn orange, it's not working. All right, go ahead. (beep) (whirring) See? Told you it works. (alarm beeping) See? I told you. Shoddy membranes. 
+ 
+ Hey. Hey. You okay? Just spoke to my patients. They heard the chain might be falling apart, and they're getting desperate. I asked Wallace to push Lauren Durand to donate, and he refused. Said it would be unethical. He's just following transplant rules. Yeah, but we're Bunker Hill... since when do we ever follow the rules? He's our chief of staff. He's just trying to keep things on the rails. So you agree with him? You're not gonna like my answer. Just be honest with me. Forget about you and me, and... just tell me... as a doctor, what do you think? I think the rules exist for a reason. I think Wallace is right. I know you're invested in your patient, but it seems like you're getting a little too emotional. That's what I think. As a doctor. Best-case scenario: the mechanical kidney keeps your mom alive for another year. Hopefully, that will give us enough time to find another donor. That's the best-case scenario. What's the worst-case scenario? Well, the mechanical kidney is still experimental. We're working around the clock to finish it, but we... may not have it ready in time. Lauren : So... if I donate, I'll save the chain... but I'll lose everything else? I can't save my mom? And I have to... turn down the offer? Offer? You got the job. Why didn't you tell me? Because I didn't... I didn't want to upset you, and I wanted to donate so I could save you. But everything is falling apart. No. Lauren, you need to go to Paris. You need to take that job. It isn't fair to make you give up your dream to save this chain. This is not on you. (crying) This isn't on you. (crying) So the membranes are breaking because the blood flow entering the kidney is too strong. Yep. Then why can't we just make the membrane stronger? 'Cause they're made of delicate silicon. We're better off reconfiguring the housing to redistribute the force. We're 3-D printing a housing now. (beep) Uh, guys, the 3-D printer's done. (sighs) Let's test the kidney. Go ahead. Nice. (whirring) (alarm beeping) Damn it. Why isn't it working? That doesn't sound good. The membranes in the artificial kidney are still breaking. I wish I had better news. Lauren's dropped out of the chain. Come on! What did she say? What did you say? Did you even fight for it? Doctor, these chains are fragile. We all knew something like this could happen at any time. I know you're disappointed. I am, too, but we have to respect Lauren's decision. No, actually, we don't, because... End of discussion, Dr. Brockett. Now I just need you to do your job and tell your patients, unfortunately, the chain has fallen apart. ♪  ♪ Hi. Lauren. I'm Dr. Brockett. I'm one of the doctors from the kidney chain. My patient, um, Brandon, is the ten-year-old boy who needs your kidney. He's ten? I didn't know. I'm sorry. I know I'm hurting a lot of people. Lauren, I'm not judging you. No one is. I just want to give you the chance to meet a really amazing kid before you go. Could you excuse us for a second? Mm-hmm. Hey, Brandon. I want you to meet someone. This is my friend Lauren. Hi. Hi. Lauren's a ballet dancer. Really? Cool. Have you ever seen the ballet? Yeah. My mom took me to  The Nutcracker  once. And I saw the one with the swans. Swan Lake. What'd you think? It was kind of boring, but I liked the black swan. She kicks butt. Are you here for the kidney chain? Um... sort of. Are you giving a kidney or getting one? 'Cause I'm getting one. I'm giving one. She's incredible. Wallace : Do you know why I called you here, Dr. Brockett? I have an idea. Lauren told me about your meeting with Brandon. Now that she's decided to donate, she'll be in recovery for six weeks. Her mother might not live that long. She wanted to see her daughter dance one last time. Brockett : I didn't coerce Lauren. No, you cornered her with a dying ten-year-old boy. You manipulated her. I was trying to save my patient. Believe me, I get doing everything possible for your patient. What you did in this case was unethical. I saved the chain. I did what I had to do, and I don't regret it. I know James has a management style. "Best idea wins. No hierarchy." But you are a doctor, and I am your chief of staff. Do not undermine me like that ever again. I'm taking you off of Brandon's surgery tomorrow. You won't be scrubbing in as my assist. But he's my patient. I have to be in there with him. You're losing a surgery, Dr. Brockett. Be grateful you're not losing your job. You want to check his albumin level. If he gets nervous in the O.R., just talk about Niko. It's his favorite manga character. Okay. Brandon will be in good hands. I'm gonna go. Zoe. (sighs) I'm exhausted. I just got reamed by Wallace. And I don't need to hear you say "I told you so." That's not what I was gonna say. Zoe... What? For what it's worth, I think what you did today was amazing. You don't have to say that. I know you're on Wallace's side. You made that very clear. Professionally, yes. I think he was right and you were wrong, but you did what you believed was right. You risked everything for your patient. That's the kind of doctor I want to be. Good morning, Dean. You ready for your big day? Depends. Now's your chance to tell me, Doc. Straight up, just between you and me. Who's my donor? We're still on this? Yeah. 'Cause I've seen some pretty suspicious-looking people in the hallway. You know what, Dean? Fine. Your donor is Azeem Habib. She's Egyptian, and she's Muslim. Then I'm out. I'm not doing this. I'm breaking the chain. It's too late to break the chain. Your wife's already in surgery. The only person who wouldn't get a kidney is you. (chuckles) You set me up, Doctor. No. I didn't. I simply protected the other patients from your bigotry. So it's up to you. You can either take that hatred that's inside of you to your grave... ...or you can open up your heart a little. Hey. Rusty. Frank. It's time to take you guys to the O.R. You ready? Rusty. You okay? Rusty. It's okay. Guys. We're good, we're good. (sighs) Sorry, man. My head was somewhere else. I have to take you to surgery now. I arranged for a private hallway, so no one would see you. I'm just here to get my brother-in-law a kidney... ...not cause a scene. I know. Let's make that happen. Wallace : I've isolated the kidney. Wallace : And, uh, it is delivering it through the Pfannenstiel incision. There we are. I've made a ten-centimeter incision in the right lower quadrant. Very good work. You prep the kidney for implantation, and I'll prep the iliac vessels for anastomosis. I should be in there. Wallace : I'll position the donor kidney in the pelvis inferior to the diseased kidney. Well, that's weird. Why is Wallace leaving the bad kidney in? Most people don't know this, but you don't remove the diseased kidney unless it's causing a medical problem. You just transplant the new kidney right below it. Oh, my God, Angie, we have to go. James. Bell : Yeah? I think I know how to slow down the blood flow going into the artificial kidney. I'm gonna show you. Come on. Say this is Constance's diseased kidney. What if we used the diseased kidney, which we left inside her body, and used it to slow down the blood going into the artificial kidney. Wait, you don't have to remove the bad kidney? Yeah, apparently it's a thing. Listen, guys, all organs, even unhealthy ones, dampen blood pressure. Blood flow in is stronger than blood flow out. So, if we forced Constance's blood to go into the bad kidney first... It'd depressurize the blood before it enters the artificial kidney. This is already being done with some heart transplants. It's called a heterotopic surgery or a piggyback transplant. But blood coming out of the bad kidney would still be dirty. It wouldn't matter, because it would enter the artificial kidney with less force. The membranes wouldn't break. And the artificial kidney could do its job, clean the blood. We'd have to reconfigure some of the vessels and build a connector between the native kidney and the artificial kidney, but... It's completely insane, Brockett. It's brilliant. (chuckles) Thanks. ♪  ♪ 
+♪ When you were falling ♪ 
+♪ Down like dominoes ♪ 
+♪ And your foundation ♪ 
+♪ Turns to dust and smoke ♪ 
+♪ You don't want to know ♪ 
+♪ What's down below ♪ 
+♪ There's no giving in ♪ 
+♪ No place to go, oh ♪ 
+♪  ♪ 
+♪ Buried your compass ♪ 
+♪ Got no scars of gold ♪ 
+♪ Crisis of consciousness ♪ 
+♪ White lies soft as snow ♪ 
+♪ You don't want to know ♪ 
+♪ What's down below ♪ 
+♪ You're under the flood ♪ 
+♪ And cut to the bone ♪ 
+♪ You keep holding on ♪ 
+♪ You keep holding on... ♪ 
+♪  ♪ Brandon surgery went great. Wallace even let me anastomose part of the ureter. Which I should probably keep to myself. Dr. Brockett. I'll check you later. Dr. Wallace. I-I owe you an apology, Dr. Wallace. I did what I thought was right. Um, but I can see now that I could have handled it differently. I was wrong to undermine your authority, and it won't happen again. You solved the artificial kidney problem. A piggyback transplant with a diseased kidney... it's never been done before. I'm implanting the artificial kidney this afternoon. I want you to scrub in, Dr. Brockett. Yes, sir. (chuckles) Hi, Mom. Hi, honey. Dr. Wallace said you did great. Wallace : She did. In fact, all the surgeries were successful. Seven people now have a kidney and will live long, healthy lives thanks to you. Seven people. But not my mom. Actually, Dr. Wallace and his team have figured out how to make the mechanical kidney work. They did? (chuckles) Once we implant it, it will keep your mother alive for a year. (sighs) But there's one more thing. Someone I want you to meet. (chair whirring softly) Constance, this is Astrid Pierre, your original donor. Hello. I'm so sorry for the pain I caused. I didn't know I was pregnant. It's not your fault. My husband and I have been trying for six years. We'd lost hope. And, Lauren, I want to thank you for donating, for choosing not to break the chain. My sister is going to live because of you. This is for you. What is it? It's a contract. I signed it today. It's my promise that I will donate my kidney to you once my baby is born. Thank you. Thank you. Listen... the donors and recipients in the chain are starting to meet. I know you requested to remain anonymous, but the woman who received your kidney would like to meet you. I'm sure she doesn't want to meet this. What you did for her is bigger than a pair of handcuffs and a couple of guards. You don't get it, do you? I don't deserve her gratitude. I'm no hero. I've done bad things in my life. I know one deed doesn't make up for the bad. But you did a really good thing for this woman today, Rusty. ♪  ♪ 
+♪ From day one... ♪ Artificial kidney's prepped and ready. ♪ When we first breathe... ♪ Need more medial retraction on the artificial kidney to expose the renal hilum. Now you see the anterior branch of the renal vein. Clamp that. ♪ We first see... ♪ Clamp, Doctor. ♪ Into this world... ♪ Do you need me to place an anchoring suture? No. Thank you, Doctor. Clear the field. ♪ And back again ♪ 
+♪ You're all that I want ♪ 
+♪ You're all that I see ♪ 
+♪ In everything ♪ 
+♪ Right next to me ♪ 
+♪ You're all that I want ♪ 
+♪ You're all that I see ♪ 
+♪ In everything ♪ 
+♪ So open your heart ♪ 
+♪ And open your eyes ♪ 
+♪ Open your arms ♪ 
+♪ Into this life ♪ 
+♪ Into the world. ♪ I was hoping it was you. You were? Yeah. You have a strong life force. This is for you. What's this for? So you'll never forget you're my superhero. Brandon, I will... never forget. ♪  ♪ 
+♪ How do I wake my spirit cold? ♪ 
+♪ We always say when our history's told ♪ 
+♪ Let me back down ♪ 
+♪ In a place I know ♪ 
+♪ Hold the nail for the hammer stroke ♪ 
+♪ Oh... ♪ 
+♪ This my trash ♪ 
+♪ This my tome ♪ 
+♪ Oh... ♪ 
+♪ This my blood ♪ 
+♪ This my bone ♪ 
+♪ How do I learn my dreams to mold ♪ 
+♪ To lay them bare ♪ 
+♪ in the morning cold? ♪ 
+♪ If they're still out there, then the chasm grows ♪ 
+♪ For all you know ♪ 
+♪ For all you've known ♪ 
+♪ Let me down easy, let me down slow... ♪ Good work, Dr. Wallace. Good work, James. Mm. I heard about your vacation. Yachts. You partied. (chuckles) What brought all that on? Just needed a break, I guess. Been spending way too much time lately worrying. About my health, about people. And for what? It's pointless, all that spinning. ♪ This my loam... ♪ People disappoint you. People? Or Zoe? Is this because you asked her out? (chuckles) You mean did I charter a yacht the size of a city block and booze my way across Europe because a girl I like said no to a date? (chuckles) It's very possible. ♪ Others just go ♪ 
+♪ She's still out there ♪ 
+♪ And the chasm grows ♪ 
+♪ Steady are the feet ♪ 
+♪ In the morning glow... ♪ 
+♪ This my mountain ♪ 
+♪ This is my home ♪ 
+♪ How do I wake my spirit cold? ♪ 
+♪ There's a question ages old. 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
