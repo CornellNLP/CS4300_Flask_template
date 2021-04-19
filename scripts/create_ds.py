@@ -69,7 +69,7 @@ def make_reviews_ds():
     for show in result:
         d = {}
         val = {k: "" if v=="NaN" else v for k, v in show.items() if k!="Unnamed: 0" and k!="TV_show" and k!="review_title"}
-        val["review_content"] = val["review_content"].replace("/<br///>", "")
+        val["review_content"] = val["review_content"].replace("<br/>", "").replace("\n", "").replace("&amp", "")
         if show["TV_show"] not in reviews.keys():
             d[show["review_title"]] = val
             reviews[show["TV_show"]] = d
@@ -85,23 +85,24 @@ def make_reviews_ds():
 
 def main():
     print()
-    (tv_shows, index_to_tv_shows, tv_shows_to_index) = make_tv_show_ds()
-    a_file = open("datasets/final/tv_shows.json", "w")
-    json.dump(tv_shows, a_file)
-    a_file.close()
-
-    a_file = open("datasets/final/index_to_tv_shows.json", "w")
-    json.dump(index_to_tv_shows, a_file)
-    a_file.close()
-
-    a_file = open("datasets/final/tv_shows_to_index.json", "w")
-    json.dump(tv_shows_to_index, a_file)
-    a_file.close()
-
-    # reviews = make_reviews_ds()
-    # a_file = open("datasets/final/reviews.json", "w")
-    # json.dump(reviews, a_file)
+    # (tv_shows, index_to_tv_shows, tv_shows_to_index) = make_tv_show_ds()
+    # a_file = open("datasets/final/tv_shows.json", "w")
+    # json.dump(tv_shows, a_file)
     # a_file.close()
+
+    # a_file = open("datasets/final/index_to_tv_shows.json", "w")
+    # json.dump(index_to_tv_shows, a_file)
+    # a_file.close()
+
+    # a_file = open("datasets/final/tv_shows_to_index.json", "w")
+    # json.dump(tv_shows_to_index, a_file)
+    # a_file.close()
+
+    reviews = make_reviews_ds()
+    print(len(reviews))
+    a_file = open("datasets/final/reviews.json", "w")
+    json.dump(reviews, a_file)
+    a_file.close()
 
     # printing sample output
     # print("\n==Printing sample output==\n")
@@ -118,5 +119,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("\nEND OF SCRIPT")
 
 

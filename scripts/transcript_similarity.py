@@ -182,9 +182,9 @@ def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
 
 jaccSimMat = jaccardSimMat()
 
-def jaccardRanking (show, N, simMat = jaccSimMat) :
+def jaccardRanking (show, N = 3 , simMat = jaccSimMat) :
     """
-    given an input string show name, return a ranked list of the N most similar shows using the jaccSimMat
+    given an input string show name, return a ranked list of the N most similar shows using the jaccSimMat (using N = 3 for demo)
     """
     showInd = shows.index(show)
     scores = jaccSimMat[showInd]
@@ -200,6 +200,6 @@ def jaccardRanking (show, N, simMat = jaccSimMat) :
     #print(ranking)
     return ranking
 
-#jaccardRanking ("Friends", 3)
+#jaccardRanking ("Friends")
 
     
