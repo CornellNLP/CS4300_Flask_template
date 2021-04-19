@@ -9,6 +9,8 @@ Date: 16 April 2021
 import pandas as pd
 import numpy as np
 
+DATASET_DIR = "../../../Dataset/files/"
+RECIPE_FILE = "{}sampled_recipes.csv".format(DATASET_DIR)
 ING_CATEGORY_NAME = "ingredients" 
 
 def tokenize_recipe_ingredients(df):
@@ -82,7 +84,12 @@ def contains_ingredient(recipe_series, ingredient_query, max_dist=2):
         Whether recipe's ingredients contains a token within max_dist of
         the inputted ingredient.
     """
+    print(recipe_series)
     ingredients = recipe_series[ING_CATEGORY_NAME]
+    return list_contains_ingredient(ingredients, ingredient_query, max_dist)
+    
+
+def list_contains_ingredient(ingredients, ingredient_query, max_dist=2):
     for ing in ingredients:
         if calc_edit_distance(ing, ingredient_query) <= max_dist:
             return True
@@ -106,3 +113,23 @@ def make_meat_alias_dict(ALIAS_CSV="meat_aliases.csv"):
             original = l[0].strip()
             aliases[alias] = original
     return aliases
+
+def first_n_filtered(ranked_ids, banned_foods, n, max_dist=2):
+    df = tokenize_recipe_ingredients(pd.read_csv(RECIPE_FILE))
+
+    def contains_banned_ing(rec_ser):
+        for food in banned_foods:
+            if contains_ingredient(rec_ser, food, max_dist):
+                return True
+        return False
+
+    count = 0
+    ls = []
+    for i in range(0, len(ranked_ids)):
+        recipe_df = df.loc[df["id"] == ranked_ids[i]]
+        if len(recipe_df) > 0 and not contains_banned_ing(recipe_df.iloc[0]):
+            ls.append(ranked_ids[i])
+            count += 1
+        if count >= n:
+            break
+    return ls

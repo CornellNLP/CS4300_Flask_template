@@ -1,4 +1,5 @@
 import ingredients as ingr
+import co2_handling as co2
 import pandas as pd
 
 DATASET_DIR = "../../../Dataset/files/"
@@ -71,13 +72,38 @@ def test_meat_aliases():
         expected = t[2]
         test_eq(name, output, expected)
 
+def test_food_co2():
+    tests = [
+        ("Beef has 44", ["beef"], 44)
+    ]
 
+    df = co2.output_co2_df()
+    for t in tests:
+        output = int(co2.calc_ingredients_co2_score(df, t[1]))
+        test_eq(t[0], output, t[2])
+
+def test_food_filter():
+    tests = [
+        ("No water", ["water"], 0, 26946)
+    ]
+    for t in tests:
+        df = ingr.tokenize_recipe_ingredients(pd.read_csv(RECIPE_FILE))
+        df = df.head(100)
+        name = t[0]
+        banned = t[1]
+        idx = t[2]
+        expected = t[3]
+        df = ingr.filter_foods(t[1], df, 2)
+        print(df)
+        test_eq(name, df.loc[idx]["id"], expected)
 
 def test_all():
     test_tokenize()
     test_edit_distance()
     test_contains_ingredient()
     test_meat_aliases()
+    test_food_co2()
+    test_food_filter()
     print("All tests pass!")
 
 test_all()
