@@ -12,7 +12,7 @@ manhattan_modzcta = list(set(final_data['modzcta']))
 project_name = "COVID-19 Search Engine"
 net_id = "Hogun Lee hl928, Sijin Li sl2624, Irena Gao ijg24, Doreen Gui dg497, Evian Liu yl2867"
 
-def get_results(address, category, radius=100):
+def get_results(address, category, radius):
     """
     This function extracts a list of location results using Google Map API
     Input: string location, string category, (optional) int radius
@@ -30,6 +30,8 @@ def get_results(address, category, radius=100):
     places_result = gmaps.places_nearby(location=origin, radius=radius, type=category, open_now=True)['results']
     # print("Number of results: ", len(places_result))
 
+    print("hi")
+    print(places_result)
     # get a list of destination geocodes and compute distances to origin
     geocodes = [tuple(place['geometry']['location'].values()) for place in places_result]
     res_list = []
@@ -107,15 +109,15 @@ def rank_results(data, min_rating=0.0):
     """
     # normalize columns
     if not data.empty:
-        n_full_vax = (data.full_vax-data.full_vax.mean())/data.full_vax.std()
-        n_percent_positive = (data.percent_positive-data.percent_positive.mean())/data.percent_positive.std()
+        n_full_vax = 0 if round(data.full_vax.std(),4)==0 else (data.full_vax-data.full_vax.mean())/data.full_vax.std()
+        n_percent_positive = 0 if round(data.percent_positive.std())==0 else (data.percent_positive-data.percent_positive.mean())/data.percent_positive.std()
         if data.rating.isnull().values.any():
             new_rating = data.rating.fillna(2.5)
-            n_rating = (new_rating-new_rating.mean())/new_rating.std()
+            n_rating = 0 if round(new_rating.std(),4)==0 else (new_rating-new_rating.mean())/new_rating.std()
         else:
-            n_rating = (data.rating-data.rating.mean())/data.rating.std()
-        n_distance = (data.distance-data.distance.mean())/data.distance.std()
-
+            n_rating = 0 if round(data.rating.std(),4)==0 else (data.rating-data.rating.mean())/data.rating.std()
+        n_distance = 0 if round(data.distance.std(),4)==0 else (data.distance-data.distance.mean())/data.distance.std()
+        
         # compute weighted score
         data['score'] = n_full_vax*15.0 - n_percent_positive*7.0 + n_rating*5.0 - n_distance*5.0
         data['score'] = round(data['score'], 4)
@@ -140,7 +142,7 @@ def get_covid_data(address, category, radius, min_rating):
     # json_data = ranked_data.to_json(orient="columns")
     # Need to see the orientation of the dataframe
     # return json_data
-    result = get_results(address, category, radius=100)
+    result = get_results(address, category, radius)
     mapped_result = map_covid_vax(result)
     ranked_result = rank_results(mapped_result, min_rating=0.0)
 
