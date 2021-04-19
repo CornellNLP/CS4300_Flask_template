@@ -20,7 +20,7 @@ with open('./datasets/final/tv_shows_to_index.json') as json_file:
     
   session = requests.Session()
 
-  url = find_starting_letter_links.letters_to_links["S"]
+  url = find_starting_letter_links.letters_to_links["T"]
   soup = makeSoup(url)
   show_url = "https://transcripts.foreverdreaming.org"
 
