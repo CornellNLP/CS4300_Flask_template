@@ -47,9 +47,11 @@ def search():
     p6 = request.args.get('personality6')
     p7 = request.args.get('personality7')
     p8 = request.args.get('personality8')
-    scale = [1, 2, 3, 4, 5]
+    scale = [0, 1, 2, 3, 4, 5]
     flavor = request.args.get('flavor')
     scent = request.args.get('scent')
+    price = request.args.get('price')
+    print(price)
 
     if not p1 or not p2 or not p3 or not p4 or not p5 or not p6 or not p7 or not p8:
         personality_match = ''
@@ -72,8 +74,7 @@ def search():
 
         personality_match = compute_personality(name, wine_scores,
                                                 df_personality)
-        wine_match = compute_wine(name, wine_scores, total, df, 5)
-        print(wine_match)
+        wine_match = compute_wine(name, wine_scores, total, df, 5, price)
 
     return render_template('search.html',
                            name=project_name,

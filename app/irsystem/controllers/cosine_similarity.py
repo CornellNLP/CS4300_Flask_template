@@ -313,7 +313,7 @@ def display_personality(query, sim_list, reviews):
         i += 1
 
 
-def compute_wine(query, wine_scores, sim_list, reviews, num):
+def compute_wine(query, wine_scores, sim_list, reviews, num, max_price):
     """ 
     Takes a query, wine_scores, sim_list output from the cossim() function, the
     wine reviews df, and number of results to return, and prints the output to
@@ -324,6 +324,25 @@ def compute_wine(query, wine_scores, sim_list, reviews, num):
     result.append("Based on your responses, we believe these particular " +
                   wine_scores[0][1] + "s will fit your taste:")
 
+    # i = 0
+    # counter = 1
+    # dup_list = []
+    # while len(dup_list) < num and i < len(sim_list):
+    #     idx = sim_list[i][1]
+    #     variety = reviews["variety"][idx]
+    #     title = reviews["title"][idx]
+    #     if variety == wine_scores[0][1]:
+    #         if title not in dup_list:
+    #             dup_list.append(title)
+    #             #score = round(sim_list[i][0]*100, 1)
+    #             desc = reviews["description"][idx]
+    #             #print("[" + str(score) + "%] " + title)
+    #             result.append(str(counter) + ". " + title)
+    #             result.append(desc)
+    #             counter += 1
+    #     i += 1
+    # return result
+
     i = 0
     counter = 1
     dup_list = []
@@ -331,14 +350,17 @@ def compute_wine(query, wine_scores, sim_list, reviews, num):
         idx = sim_list[i][1]
         variety = reviews["variety"][idx]
         title = reviews["title"][idx]
-        if variety == wine_scores[0][1]:
+        price = reviews["price"][idx]
+        if variety == wine_scores[0][1] and price <= float(max_price):
             if title not in dup_list:
                 dup_list.append(title)
                 #score = round(sim_list[i][0]*100, 1)
                 desc = reviews["description"][idx]
+                price = reviews["price"][idx]
                 #print("[" + str(score) + "%] " + title)
                 result.append(str(counter) + ". " + title)
-                result.append(desc)
+                result.append(desc + " The price of this wine is $" +
+                              str(int(price)))
                 counter += 1
         i += 1
     return result
