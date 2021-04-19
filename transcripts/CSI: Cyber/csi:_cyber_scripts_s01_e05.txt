@@ -1,0 +1,718 @@
+Transcripts - Forever Dreaming :: 01x05 - Crowd Sourced - CSI: Cyber 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x05 - Crowd Sourced https://transcripts.foreverdreaming.org/viewtopic.php?f=224&t=17706 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 04/09/15 01:56 ] 
+ 
+ 
+ Post subject:  
+ 01x05 - Crowd Sourced 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ My name is Avery Ryan.  I was a victim of cyber crime. 
+ Like you, I posted on social media, checked my bank account balance online, even kept the confidential files of my psychological practice on my computer. Then I was hacked, and as a result, one of my patients was murdered.  My investigation into her death  led me to the FBI, where I joined a team of cyber experts to wage a war against a new breed of criminal hiding on the Deep Web... infiltrating our daily lives in ways we never imagined... faceless... nameless... lurking inside our devices, just a keystroke away. 
+ Hey, man. 
+ Turn your phone off. 
+ What? 
+ Turn... your phone off. The screen's bright. 
+ What the hell are you talking about? My phone's in my pocket. 
+ Oh, really? Then what's that lit under your chair? 
+ That's not my phone. 
+ Attendant : Hey, guys, come on. 
+ Quiet, or you're both out of here. 
+ Oh, my God. 
+ Move! Out of the way, move! 
+ Run, run, it's a bomb, get away! 
+ Back away, back away, it's a bomb! 
+ Move! 
+ (car alarms wailing) 
+ Sifter : So far, we believe it was a remote detonation using a tablet. 
+ Call you when I have more. 
+ Somebody's putting a little extra time in the field, huh? 
+ Yeah, when a bomb detonates in the capital, (phone dings) it is all hands on deck. 
+ Yeah. I spoke to ATF. They're waking up every local scumbag that's ever set off a bomb. 
+ As of now, the medical examiner just confirmed six dead, 30 injured. 
+ You could multiply that number by ten if that kid had not gotten that bomb out of that theater. 
+ Officer : Agent Mundo, over here. 
+ Avery, I gotta brief the White House in 30 minutes. 
+ I'm gonna have to show my hand. 
+ I want to be holding some face cards. 
+ Let me see what the boys have. 
+ (helicopter hovering) 
+ What have we got? 
+ Collected phones from witnesses. 
+ We scanned videos and photos of the bombing. 
+ Did you find any possible targets? 
+ No, but we did see a pattern. Almost every phone that we snagged received two text messages. First a number and then a word: "Kaboom". 
+ Did all these phones have the same text? 
+ No. "Kaboom!" is the same, but the numbers on all the phones are different. 
+ Krumitz : Yeah, we arranged  them from highest to lowest, like a countdown. 
+ Hey, guys, these phones are from inside the theater where the kid found the bomb. 
+ Now, they all got the same "Kaboom!" texts, but all the numbers were under 100. 
+ All right, if the low numbers were in the theater and those closest to the explosion were the highest, then the tablet was counting up. 
+ This is crowdsourcing. 
+ Every time the tablet connected to a phone, the number ticked up. 
+ Ryan :  So the target used cell phones to detonate the bomb. 
+ When did you arrive at the theater, Mrs. Carter? 
+ We were late getting here. 
+ My son was upset because he was missing the previews. 
+ When did you receive the first text? 
+ In the garage. 
+ Sam ran ahead to buy the tickets and I went back to the car to grab a sweater. 
+ It's a bomb, get away! 
+ Move! Get away! It's a bomb! 
+ Carter :  That's when I saw the 200. 
+ And then you received the "Kaboom!" text. 
+ Yes. 
+ When the explosion happened... 
+ I was near the car. 
+ And Sam was much closer to the... 
+ And now he's dead. 
+ The officer that I spoke with said that the 200 was the last text that was sent out. 
+ Back away, back away! 
+ Carter :  Means my phone set off that bomb.  (explosion)  I have to live with that. 
+ My phone killed all those people. It killed my son. 
+ Mrs. Carter... no, this is not your fault. 
+ (sighs, sniffles) 
+ I still haven't told my husband. 
+ I have to call my husband. 
+ Of course. 
+ Wait, I thought we were reassembling the bomb. 
+ We are. Before we reassemble we got to find the bomb parts first, which means we need to pick out every piece of shrapnel from all the debris collected at the scene. 
+ And you really think we're gonna find the tablet's hard drive in all of this stuff? 
+ No matter how powerful the blast, bombs don't disintegrate. 
+ Usually you recover all the pieces. 
+ Yeah. I'm hitting a wall with these victims' phones. 
+ Turns out our target anticipated we'd figure out the tablet was the one that sent the "Kaboom!" texts, so he protected himself. 
+ I mean, usually the tablet would leave digital dust on each phone,  you know, its Bluetooth address, and follow it back to the target. 
+ But we can't. 
+ Because every "Kaboom!" text was bundled with malware that wiped the pairing record. 
+ It's like a footprint being compromised at a crime scene. 
+ The hard drive isn't here. 
+ Too bad we can't go back in time to the explosion and see where all the teeny-tiny pieces went. 
+ Actually, we can. 
+ Krumitz... send all the media you have to the Cave. 
+ (wry chuckle) This is Cyber Division's big, secret weapon? 
+ It's a box. 
+ Just sit back and watch, here. 
+ Cave, tablet control. 
+ All right, you ready? 
+ Yeah. Security footage, crime scene photos and pictures from the victims' phones are locked and loaded. 
+ Have the computer pull it all up. 
+ Yup. 
+ Good. All right, run the 3-D stitch program. 
+ Wow. 
+ Okay. 
+ Add the bomb blast plume, eliminating human carnage. 
+ Guys, guys. 
+ Damn, that was real. 
+ Mundo : Okay. 
+ Let's find this hard drive. 
+ Yeah. 
+ Right here. 
+ That's the hard drive. 
+ Good. 
+ Let's see where it lands. 
+ Krumitz, advance the explosion. 
+ Um... I can't. 
+ The photos and the video that we compiled only take us up to the moment the bomb exploded. 
+ After that, it's just bits and pieces of data. 
+ Okay, so we know the hard drive was propelled in this direction, right? 
+ Mm-hmm. 
+ And we also know eventually, it would have to land. 
+ Means it's somewhere further down the alley. 
+ Yeah, but we collected every of bit shrapnel from the alley and we didn't recover the hard drive. 
+ Then something interrupted the course of its trajectory, so, Krumitz, run a line from the point of the bomb blast through the hard drive and advance the alley toward us. 
+ Okay, the flight path of the hard drive takes us right into these two people-- this is about where it would have landed, right about there. 
+ Good work. 
+ Send me a still of the hard drive's final position. 
+ I'm gonna find out who those two vics are. 
+ Krummy... 
+ I was thinking after we catch that bomber, maybe me and you can come back here and play that new first-person shooter. 
+ I got first. (chuckles) 
+ Hey... 
+ Krummy? 
+ Krummy! 
+ Coroner :  I believe these  are the two victims you're looking for. 
+ Both suffered injuries in the bomb blast. 
+ (grunts) 
+ There's the hard drive. 
+ Thank you. 
+ (sighs) I can't shake this Mrs. Carter story. 
+ Yeah, outliving your kid is tragic enough, but thinking you killed him? 
+ There's no words for that. 
+ So... M.E.'s office called. 
+ They finally I.D.'d the rest of the bodies. 
+ Now, two were Congressional staffers. 
+ I'm being asked if I think they were targeted. 
+ There's no way our target could've been certain who would be near the blast when it blew. 
+ They're just wrong place, wrong time. 
+ How we coming on that target profile? 
+ I compiled a list of our target's tactic, techniques, and procedures, like using a wireless device as a trigger. 
+ There are nine dossiers in the FBI database that fit. 
+ Three are dead and one is serving a life sentence. 
+ Eyewitnesses said that the bomb was made out of a shoebox and duct tape. 
+ So bombers are monogamous with their materials. 
+ Older materials suggests someone over 35. 
+ And then there were two. The one on the left is currently under surveillance in San Antonio. 
+ The other's been off the grid for over a year. 
+ That is our target. No name, no photo. 
+ We know that he detonated a bomb in Italy and another in France. 
+ And now, here in the States. 
+ Hey, you guys got to check out this Web site. 
+ It's trending like crazy on ToggleFly, FriendAgenda-- it is everywhere. 
+ Who's behind this? 
+ We don't know. 
+ Metadata's been scrubbed. It's a dead end. 
+ Scrambled voice : You are responsible for this bombing. 
+ You could've prevented it if you'd just left your cell phone at home. 
+ Your addiction to technology is going to kill you. 
+ And now for another lesson. 
+ When this Web site gets one million viewers, a second bomb will explode. 
+ Ryan : Our target is using page views on a Web site to make the public responsible for the next explosion. 
+ The site was uploaded a few hours ago. 
+ Has already 460,000 views and counting. 
+ The site has an auto-run feature. 
+ The video starts playing the moment you access the site. 
+ We have to pull it down now. 
+ We've tried to hack it. 
+ The firewall is too robust. 
+ We're working on it. 
+ Well, work faster. 
+ That URL cannot remain online. 
+ Let's find out where this site is being physically hosted, and have an FBI intrusion squad at the ready, in case we got to hit a building and unplug a server here. 
+ Meantime, we've got to alert the public and have them avoid that site. 
+ No, no, no. Simon, an alert will only pique interest and drive people to view the footage. 
+ Look how many views we already have. 
+ This is mass cyber voyeurism. 
+ They are visiting that site because they don't understand this is not a joke, and it's not a game. 
+ And every view brings us one step closer to a blast site and a body count. 
+ Clearly, our target understands social media addicts. 
+ People who are compelled to go to the site, thinking, "If I'm viewer 500,000 or 600,000, or 900,000, there are no consequences. All that matters is the one millionth view, so why not see what's trending?" 
+ Avery, I get the psychology, I do, but we cannot just sit by and watch that counter keep ticking up. 
+ By making that announcement, we can stretch it... 
+ No, the announcement will not just alert the public. 
+ It will alert the target. 
+ And there could be very real repercussions. 
+ What do you suggest? 
+ We need to find a way to break through that site's firewall. 
+ Then, you better get moving here, Avery, 'cause human curiosity puts us on an unpredictable clock. 
+ We got no way of knowing when or where that bomb is gonna explode. 
+ ♪ CSI Cyber 1x05 ♪ 
+Crowd Sourced 
+Original Air Date on April 8, 2015 
+ ♪ I know you've deceived me, now here's a surprise ♪ 
+♪ I know that you have, 'cause there's magic in my eyes ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ And miles... ♪ 
+♪ Oh, yeah. ♪ 
+ Guys, were you able to break through the firewall that's shielding Crowdbomber.com? 
+ No, still working on it. 
+ Target's Web site's protected by a legendary hardening package. 
+ It's not just one firewall. It's ten. 
+ Whoever set this up has mad skills. 
+ Well, can you recode it and get in? 
+ No. Hacking won't get us in. We need the user name and password to get beyond this page. And the only person who has that is... 
+ The target. 
+ I've seen this symbol before. 
+ You're about to make the best decision of your life. 
+ The FBI pulled six of us hackers out of that house last month. 
+ Some of my pals are crazy talented, and they're sitting in jail, and I'm sitting here. 
+ 'Cause you're not like the others. 
+ Come work with me in cyber. 
+ Tobin... are you in? 
+ (sighs) 
+ Well, working for the FBI means that you no longer have any secrets. 
+ I need you to unlock your computer. 
+ (sighs) 
+ Tobin. Tobin has something to do with this. 
+ Two years, three months, six days-- that's how long it's been since I've seen Special Agent Avery Ryan. 
+ I'm chasing a bomber. 
+ He's already used cell phones in a movie theater to detonate a bomb, and now, he's using page count views on a Web site to detonate another. 
+ Right down to it. 
+ Honestly, I'd love to help. 
+ I'm just not sure how this relates to me. 
+ You sold him hardening software. 
+ Code that he used to fortify his site. 
+ Made it impossible for us to hack. 
+ You sure that was mine? 
+ I recognized the log-in screen. 
+ Ah. 
+ You always were so observant. 
+ You know, I think I may remember to whom you refer. 
+ But I haven't talked to that guy in years. 
+ Bit of a wacko. 
+ You sure you're not working with this bit of a wacko now? 
+ No. 
+ Not my type of black hat. 
+ If we don't stop this target, more lives will be lost. 
+ Well, we both know you need my help, and we both know you're not gonna get it for free, so, here's the deal: I want access to the prison library. 
+ As you must remember, I'm kind of a voracious reader. 
+ I can't even get a smile? 
+ How about this, Tobin? 
+ No deal on the table. 
+ You'll help me, or I'll transfer the six Latin Kings you're paying to protect you into another prison. 
+ Can't I even get a smile? 
+ That's not a log-in and password. 
+ No, that's not a log-in and password. 
+ That's an address to my deep Web site where I keep all of my exploits and what you're looking for. 
+ You can't remember your password? 
+ Are you serious? Do you have any idea how many exploits these babies have created? 
+ Countless. 
+ Oh, uh, one last thing, kind of important. 
+ Tell your new hacker pet, Brody Nelson, to be real careful when he visits the site. 
+ I hear he's quite good, but then again, this malware is some of my most aggressive. 
+ (lock buzzes) 
+ Go this Web site. It's Tobin's. 
+ Be careful. It'll be crawling with malware. 
+ All right, I'll use a computer not connected to the FBI network. 
+ Well, somewhere on his site is the admin log-in and password... 
+ Mm-hmm. to unlock Crowdbomber. 
+ Find it fast, pull it down now. 
+ I'm on it. 
+ Did I hear right? You visited Tobin? 
+ I did. Tobin wrote software that our target is currently using to throw us off the trail. 
+ Which still doesn't mean you need to involve him in this. 
+ Well, leave no stone unturned. 
+ It's fine; seriously. 
+ I got him to help. 
+ In the end, that's all that matters. 
+ If it went fine, why do you look so upset? 
+ I brought him into the FBI to try to change a life, and now, he's in prison. 
+ You know, Avery, some people have the tools to make the right choice, like Raven. 
+ She knew we were the best thing that ever happened to her. 
+ Others can't be saved, 'cause others are just plain evil. 
+ Hoped you'd see that by now. 
+ Mundo :  I got an idea. 
+ We need to divert viewers from the original Crowdbomber site to about 50 other pages with the same video. 
+ Pages that are not linked to a bomb that's still out there. 
+ Is that doable? 
+ It's doable. 
+ It's just gonna take a long time to make 50 exact clones of the Web site. 
+ They don't have to be exact, just close. 
+ Once people view the video on a... on a similar format, hopefully, that'll satisfy their need to go watch it. 
+ I'll call the search engines, get 'em to move our cloned sites up to the top of their results page. 
+ Burying the real site-- hella clever. 
+ Yeah, I have my moments. 
+ Just figure if we spread out traffic, it'll give us some time to find the bomb. 
+ Got it. 
+ Krummy, Avery said be careful accessing Tobin's site. 
+ I didn't think she meant Level-5 CDC-biohazard careful. 
+ Look at that-- even the malware has got malware. 
+ Okay, locating the admin log-in and password. 
+ Downloading that right now. 
+ Oh, my God, you got to be kidding me. 
+ Krumitz : Tobin encrypted the log-in screen? 
+ Dude is playing games. 
+ No, he's trying to make Avery dance. 
+ The sicko gets a perverted sense of pleasure from one-upping her. 
+ Everybody talks about this dude like he's the Devil. 
+ Tobin betrayed Avery by trying to sell confidential FBI Intel to the bad guys she was chasing. 
+ Nobody saw his double-cross coming? 
+ Mundo : Tobin was the first black hat she rescued. 
+ Avery handpicked him. She saw something special in him. 
+ We trusted him because she did. 
+ Tobin knew Avery had a soft spot for him, and he played her. 
+ (computer trilling) Tell me that's the bomb's hard drive. 
+ It is. I was able to rebuild it and pull off the unique I.D. number. 
+ I used it to track the tablet's movement from the theater back to where it was first turned on. 
+ Could be where the bomber lives. 
+ Send me the GPS coordinates. 
+ See what I'm talking about? 
+ Why's he pounding you? 
+ I'm the one who found it. 
+ Clear! Clear! 
+ Clear! 
+ Digital voice : When I'm done, the world will fear their cell phone, fear social media, fear their crushing addiction. 
+ Because you interfered with my plan, this is my response. 
+ Instead of a million views, the bomb will now detonate at 750,000. 
+ People will die... soon, and you only have yourself to blame. 
+ Bomb! Bomb! Everybody out! 
+ I hope you all enjoy my surprise. 
+ (man grunts) 
+ (groaning) 
+ Mundo : Medic up! 
+ (groaning) Medic! 
+ Sifter : Raven's mirror sites have slowed the traffic, but word has gotten out. 
+ Now that the target's lowered the trigger number, the bomb could blow up before midnight. 
+ Yeah, and still not closer to finding Dr. Frankenstein or his monster. 
+ Okay, he hits a movie theater here. 
+ Library in Paris. 
+ Café in Italy. 
+ I mean, it's like the target's trying to make his pattern look completely random. 
+ But it's not completely random. 
+ For him, it's about victims. 
+ This target... is interested in maximizing the amount of victims by going after... large crowds. 
+ (scoffs) So he could hit anywhere with lots of people and lots of phones. 
+ I mean, the possibilities are endless. 
+ Mundo : The guys and I just processed what was left of the target's laptop. It's a dead end. There's nothing on that hard drive. 
+ So that's it. I mean, no more options. 
+ No. There's one more. 
+ Ton. 
+ Mundo : Come on, Avery. 
+ Tobin is playing games. 
+ But if we want to shut down that site, we have to play along  so he'll give us the encryption key  to get past the log-in screen. 
+ Sifter :  All right, all right, all right. 
+ Let's say we do play along. 
+ What does Tobin want? 
+ Tell your new hacker pet, Brody Nelson, to be real careful when he visits the site. 
+ He wants to spend a little quality time with a member of our Cyber team. 
+ 
+ 
+ 
+ (lock buzzes) 
+ Tobin : So this is Brody Nelson. 
+ This is the new Tobin. Hmm. 
+ Yeah, can I be honest? 
+ Not really what I expected. 
+ You sure this one's to be trusted? 
+ She knows this one's to be trusted. 
+ No more games, Tobin. 
+ I'm just surprised Sifter let you keep the party going. 
+ Trust a black hat once, shame on them. 
+ Trust a black hat twice... 
+ How long do you think you can deny the thirst, Nelson? 
+ You have no idea how much money can be made selling the secrets at your fingertips. 
+ But I do. 
+ And how's that working out for you? 
+ You like your new living situation? 
+ Concrete walls, shackled up, zero computer access? 
+ Seeing how much your life sucks only makes me more confident that I will never become you. 
+ Ryan : You know why I'm here. 
+ You knew I'd be back the moment you sent me to that site. 
+ Now give me the... 
+ Patience, Avery. We will get to the encryption key. But, right now, though... 
+ I want to know Nelson's hacker handle. 
+ You give me that key or I'm gonna make your life miserable. 
+ Hacker handle. 
+ Quest. 
+ Let's play "get to know you" later. 
+ Clock is ticking. 
+ You crashed CommerceTicker. 
+ Yeah, that was me. 
+ Now what's the encryption key, Tobin? 
+ You must know Free4All. 
+ Of course I do. Dude's ridiculously skilled. 
+ Yeah, Free's FriendAgenda tabnabbing exploit was top-shelf. 
+ Yeah, and adding a "Your session has timed out" page was genius. 
+ I hear he went after FriendAgenda because they banned him for life. 
+ Yeah, well, that's the word on the wire. 
+ All right, Avery. 
+ I'll let you in. 
+ Mm. 
+ Uh, under one condition, though. 
+ I get to type the encryption key myself. 
+ You want to type? 
+ Type into a text file. 
+ No Internet. 
+ (shuddering breath) 
+ I haven't touched a keyboard in years. 
+ (exhales passionately) 
+ (sighs) 
+ This should give us access to Crowdbomber.com. 
+ Okay, Krummy. 
+ Voila. You're in. 
+ So how long before the site comes down? 
+ Just need to get onto the host server and delete the Web site's files. 
+ Just give me one second. 
+ And... 
+ Nelson : Wait, wait, wait! Krummy-- Stop typing! 
+ Scroll up to the last subroutine. 
+ Tell me I'm crazy, but isn't that... 
+ Krumitz : It's a dead-man switch. 
+ Mundo : Wait, like the kind that triggers a bomb if the human operator is incapacitated? 
+ Nelson : Exactly like that. 
+ Except this is the digital version. 
+ If we alter any code, if we delete HTML files, if we try to disable the bomb remotely... boom. 
+ Wait, wait. Is there a work-around? 
+ Just make the bomb think it already exploded. 
+ I can't even alter one character on a single line of code. 
+ I have never seen anything this sophisticated. 
+ (sighs) So we're back to a manhunt again. 
+ Hey, Krummy, take a look at this code. 
+ It was just added four hours ago. 
+ Yeah, that's right. When the target adjusted the trigger threshold down to 750K. 
+ See, this, ladies and gentlemen, is what you call a mistake. 
+ See, he didn't count on us unlocking his hardening software, so he didn't anonymize the computer he used to alter the code. 
+ Can you trace it? 
+ Does Nelson's tie match his socks? 
+ (chuckles) 
+ That's a yes. 
+ (both laughing) 
+ Elijah, you want to meet our bomber? 
+ Mundo : I'll get a tac unit. 
+ High Fi... 
+ Yeah! High... 
+ Krumitz... 
+ Mundo : Hands up! Drop it! 
+ Stop! Stop! FBI! Hands up! 
+ Stop right there! Drop it! Drop it! 
+ I will blow us all to hell. 
+ You don't want to do that. There are children next door. 
+ Shut your mouth. 
+ I swear... people have to know the truth, and I'm gonna be the one to show them the truth. 
+ They're gonna know the truth and you're gonna show them. 
+ And I'm gonna help. 
+ What's your name? 
+ My name... 
+ What's your name? 
+ My name is Miles Jensen. 
+ Miles, I'm Elijah. 
+ Why don't you... 
+ People have to know that we are a society addicted to technology, to social media. 
+ No one sees it. You don't see it. 
+ I'm the only one who's paying attention to what we've become. 
+ Well, you've got our attention, Miles, and you've got a point. 
+ But you need to put down that detonator before we... 
+ Don't tell me what to do! 
+ I'm in control here, not you. 
+ These people need to be stopped, and I am the only one who can do it. 
+ They didn't listen before. 
+ But they're gonna listen now. 
+ I'm listening to you, Miles. I'm listening to you right now. 
+ What I'm telling you, if you let that bomb you linked to the Web site go off, nobody is going to care what you have to say. 
+ Tell me where the bomb is, and we could... 
+ Too late! It's not too late. 
+ It  is  too late! 
+ Miles! 
+ Put down the detonator! 
+ You shouldn't have come here. 
+ Miles, stay with me, all right? 
+ Now I have to take you all with me. 
+ No. 
+ Miles... 
+ M-Mil... 
+ Look at me. 
+ You think they're gonna listen now? 
+ Stay with me-- Miles! 
+ (auto-dial beeping) 
+ Avery, is the counter still running? 
+ 698,000... 
+ 698,001. 
+ Elijah, we're running out of time. 
+ Elijah, you didn't have a choice. 
+ You and your SWAT team were in harm's way. 
+ You made the right call. 
+ Did I? 
+ He was the only one who knew where the bomb was. 
+ The answer we needed died with him. 
+ We're gonna find that bomb. 
+ Nelson and Krumitz are working right now on how that Web site triggers the explosion. 
+ We got it! We got it! 
+ Internet Relay Chat, baby! 
+ IRC is an application layer protocol that facilitates data transfer in the form of text. 
+ Krumitz, some of us don't speak robot. 
+ It's a private message service. 
+ All right. 
+ Just think of an IRC channel like a tunnel that allows indirect communication. 
+ Mundo : Then let's indirectly communicate with the bomb and find its location. 
+ Gentlemen, is there something you want to share with the class? 
+ There's a password. And I killed the only guy who knows it. 
+ Yep. 
+ Can't you guys just hack the IRC? 
+ Absolutely. If we had a few dozen skilled coders and about a year. 
+ Wait a minute. 
+ Mmm! I knew that encryption coding on the Internet Relay Chat channel looked familiar. 
+ Tobin wrote it. 
+ Must have sold it to the bomber when he sold the hardening software. 
+ Ryan : Damn it. 
+ Avery, wait. 
+ I'm sorry-- Simon, I have to go back. Nelson... 
+ Yes? 
+ You're with me. 
+ Bring your laptop. 
+ We need that password to find the bomb. 
+ Avery, we need to talk. 
+ There's nothing to talk about. 
+ Oh, yeah, there is. 
+ Avery! 
+ That Tobin is clearly up to something. 
+ You can't trust him. 
+ I don't. That's not what this is. 
+ This is about Tobin getting what  he  wants. 
+ And you know what? He's good at it. 
+ He's crafty, but I'm better. 
+ Yeah, and I believe that you're better. 
+ Now, look, Tobin is dangerous for you, all right? 
+ So just stop going back to him and let him go. 
+ I will. 
+ As soon as I get what I need. 
+ As soon as we find that bomb. 
+ Library duty, like you requested. 
+ Now you can open the IRC channel, so we can find the bomb. 
+ Everything seems to be in order. 
+ Uh... the password is... one word: AveryRyan. Capital "A," capital "R". 
+ All right, I'm sending it to Krumitz now. 
+ (gasping): Help. Help. 
+ I can't breathe. I can't breathe. 
+ (gasping) 
+ Guard. 
+ Guard : I'll get another inhaler. 
+ (gasping) 
+ (breathing deeply, slowly) 
+ You could've just let me die. 
+ We might still need you. 
+ Send that password to Krumitz. 
+ Okay. 
+ (panting) 
+ Done. 
+ Krumitz : Okay, the IRC channel's open, and now we're tracing the bomb. These are the last three cell towers the bomb's detonation tablet connected to. 
+ Using the signal strength, I can tell you that bomb is somewhere in that square mile. 
+ Sifter : Yeah, a needle in a square-mile haystack. 
+ Could be anywhere. 
+ No, not anywhere. 
+ We just have to think like the bomber did. 
+ We better think fast-- we just passed 725,000 page views. 
+ Ryan : We know that he believed that technology and social media were the downfall of humanity. 
+ Yeah, and to save humanity, he wanted to kill as many people as possible. 
+ What about the convention center? Isn't there a tech conference going on? 
+ That was last month. 
+ Nelson : Football stadium's right there, but no one plays on a Tuesday. 
+ Nelson, do me a favor-- run a search on all the events in DC tonight-- anything that could draw a large crowd. 
+ Okay. 
+ Ramirez : Vine Club's cohosting an event tonight with AOV Mobile. 
+ The cellular company. 
+ Ryan : That's it-- big crowd, lots of cell phones, fits our bomber's MO. 
+ Adjusting the trigger to 750,000 wasn't arbitrary. 
+ He wanted to insure would explode at the show tonight. 
+ It's already started. 
+ Krumitz, you're with me. 
+ ♪ ♪ 
+ Ryan : Elijah, we just passed 730,000 views. 
+ Avery, it's packed in here! 
+ It's not gonna be easy to find the bomb. 
+ Everyone at the concert is recording it with their phones. 
+ The target was counting on that. He wants that explosion posted. 
+ That's how he spreads his message. 
+ Where's the one place you can guarantee all the cameras will be pointed? 
+ The stage. Start looking for the bomb there. 
+ I'm on it. 
+ Yo, cut the music, cut it. 
+ Get these people out of here. 
+ Hands away, back up. 
+ (music stops, crowd booing) 
+ Dj : Hey, guys, they're telling us we've gotta clear out of here. 
+ I don't know what to tell you, but they've got a badge and they look important. 
+ Krumitz. Found it. 
+ Nelson just texted. The web site just passed 735,000 views. 
+ I'm gonna call the bomb squad. 
+ Dj : Sorry about this. 
+ We can't know they're gonna get here in time. 
+ We're dealing with an unpredictable clock. 
+ Dj : If everyone can start heading for the exits... 
+ Krumitz : Oh, my... 
+ It's at least three times the size of the bomb that went off inside of the theater. 
+ It's not safe to disarm it in here. 
+ What does that mean? 
+ Shouldn't we just get... Okay. 
+ Krumitz, stay here, I got this. 
+ You can't disarm a bomb and drive. 
+ I'm coming. 
+ (siren wailing, tires screeching) 
+ Hey, man, it's a little hard to type with you all over the road. 
+ Sorry, Krummy. 
+ You want to drive? 
+ Ryan : Elijah, you're still ten miles from the first open area. 
+ You're not gonna make it in time. 
+ We sent the bomb squad your GPS coordinates. 
+ They'll try and meet you en route. 
+ The bomb squad'll never get it disarmed in time. 
+ Just passed 740,000, boys. 
+ Krumitz : Okay, I just ran a diagnostic on the bomb. 
+ It's the tablet's ringer that's the detonator. I think I can write a script to just tell the ringer not to ring. 
+ Nelson : Krumitz, not even you can write that much code Fm scratch. 
+ You got a better idea, Nelson? 
+ Actually, I do. 
+ I saw an exploit on Tobin's site. 
+ It's a piece of malware that turns off cell phone ringers. 
+ Ramirez : He's gonna need to update that code, adjust it to the tablet. 
+ Yeah, but the framework should still be the same. 
+ Krumitz, I'm sending it to you now. 
+ Okay, okay. This might actually work. 
+ (honking horn) 
+ Ryan : We just passed 742,000. 
+ Krumitz, did it work? 
+ Nope, nope, definitely did not work. 
+ Mundo : Coding's not gonna save the day, but I'm gonna slow down, I want you to get ready to jump out. 
+ What? Are you insane? 
+ Krumitz, I want you out of this car now. 
+ That is an order! 
+ The hell it is. 
+ We are in this together. Now just shut up. 
+ What just happened here? 
+ The counter's suddenly going crazy. 
+ Oh, God, unbelievable-- someone DDoS'd the site. 
+ Ramirez : 743,000 and climbing. 
+ Krumitz, Elijah, get out of that SUV now. 
+ We're still in a populated area. 
+ If we stop driving, people die. 
+ Ryan : Kill the battery on the tablet. 
+ Listen to me carefully. 
+ An SUV's engine takes a tremendous amount of electricity to turn over. 
+ Wire the tablet's battery to the car's starter. 
+ That will drain the tablet's power supply. 
+ Of course. Krumitz, we got to wire the tablet's battery into the car's starter. 
+ Hold on. 
+ (tires screech) 
+ Geez! 
+ Told you to hold on. 
+ Sifter : Passing 749,000. 
+ Hold it? 
+ Yeah. 
+ Elijah! Krumitz! 
+ Krummy? 
+ Krummy, are you alive? 
+ Krumitz, you alive, bro? 
+ Mundo : We're alive. 
+ (whoops) 
+ Ryan : Oh... (laughs) 
+ (Sifter whoops) 
+ I'm gonna throw up. 
+ (both laughing) 
+ Seriously, take me home right now. 
+ (both laughing) 
+ Sifter :  You brought a blackhat into our inner circle here... 
+ Mundo :  Tobin was another hacker we all trusted, who betrayed us. 
+ Sifter :  ...once a blackhat, always a blackhat. 
+ Tobin :  Wow. (laughs) 
+ This place is huge. (chuckles) What are we doing here, solving cyber crimes or putting on a Broadway show? Either way, you can count me in. The FBI director finally agreed Cyber needed its own space. Huh. Only took three years of jockeying with Major Crimes on a bunch of antique computers. So where's my office gonna be? You taking that one? 'Cause if not, I call dibs. Hey, I was just... just kidding about the office thing-- I don't... I don't really need an office. I wanted you to see this. I really wanted you to see Cyber's new home. But you're never gonna work here, Tobin. What? You're under arrest. What is this, a joke? What am I under arrest for? Hey! Hey. You betrayed your country when you tried to sell FBI secrets to criminals on the Deep Web. What? You are guilty of conspiracy, espionage, theft... I never did any of that, Avery. I... Tobin, stop! Honestly, I thought you had changed. But I was alone in that thinking. You see, the rest of the FBI-- they were just waiting for you to put your black hat back on. Including Sifter. He started watching you. What? He just showed me definitive proof that you compromised the FBI mainframe. No, Avery, listen, okay? You can't... you can't just send me to jail, okay? You can't just send me to jail, 'cause we're a team. We're not a team! We never were. You have the right to remain silent. Oh, no, no, no, no, please, no, no, no, listen. I-I made a mistake. One mistake. But you got to let it slide. You c... You can't do this to me, Avery. I'm not doing this to you, Tobin. You did this to yourself. Please... Hey, come on, let go of me. Hey! Hey, come on! Avery, please. Hey, Avery, please, hold it... You can't just put me in jail, Avery. Avery, come on, now, here now! Hey, we're a team, Avery! No, come on, guys, no, no, no, no... Hey. This bad boy's clean as a whistle. Wiped it seven times. No malware could survive that scrubbing. Not even malware as impressive as, uh... You're impressed with Tobin. That's okay, Nelson. He's incredibly impressive. I mean, look, I'm not defending the man or nothing like that, it's just, those codes, they... They're good. He's very talented. But so are you. We wouldn't have found that bomb without you. We wouldn't have saved those lives without you. We're lucky to have you. Thanks. There's just one thing I don't get: why was Tobin so hung up on getting library access? It wasn't like you were gonna let him near a computer. He didn't need a computer. He was gonna use the router in the librarian's desk to dump his Deep Web exploits onto the mainframe. I know I walked those exploits into that prison on that laptop. But how was he gonna get 'em off? What was he gonna do-- magic? He was using a near field communication device. Yeah, but the guards searched him right in front of us. How was he gonna get an NFC past us? Ryan :  He created a diversion. Nelson :  The asthma attack. (scoffs) The NFC was in his inhaler. I know I shouldn't be saying this, but, uh, It was pretty genius. But not genius enough. Ain't that right. Oh, by the way, Special Agent Avery Ryan wanted me to give you this. 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 

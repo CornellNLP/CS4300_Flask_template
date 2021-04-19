@@ -1,0 +1,452 @@
+Transcripts - Forever Dreaming :: 02x01 - Why-Fi - CSI: Cyber 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x01 - Why-Fi https://transcripts.foreverdreaming.org/viewtopic.php?f=224&t=22826 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 10/05/15 00:09 ] 
+ 
+ 
+ Post subject:  
+ 02x01 - Why-Fi 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ My name is Avery Ryan. I'm a cyber psychologist and special agent for the FBI. I lead a team of cyber experts and former black hats waging a war against a new breed of criminal: online predators hiding in the Deep Web, faceless, nameless, hackers intruding into our digital lives, lurking inside our devices, just a keystroke away. 
+ ♪ ♪ ♪ ♪ 
+ Female voice : Can you do that for me now? 
+ Girl : Okay, I can do that. 
+ (furniture scrapes along floor) 
+ (object clicking) 
+ (indistinct chatter) 
+ Blattaria-- more commonly referred to as the cockroach. 
+ But these guys are amazing. 
+ I mean, they've been around for, like, 354 million years. 
+ They can live six weeks without eating. 
+ Ooh. Two weeks without their head. 
+ (chuckles) 
+ (laughs): Come on. 
+ Anyway, see the, um... the chip there? 
+ Mm. 
+ It communicates with the roach's antenna, and then the whole thing is controlled wirelessly. 
+ I mean, the possibilities are endless. 
+ All right, how much are these cyber roaches gonna cost me? 
+ No, no, no, no. I'm the director of Next-Gen Forensics-- I-I don't do math. 
+ That's your job, as the-- what are you now, the... new deputy director? 
+ I didn't accept that job. 
+ Well... it's probably for the best, you know? 
+ The politics, the old-school protocol-- that's not your style. 
+ I didn't say I  won't  accept it. 
+ Oh, good-- 'cause seriously, you-you-you'd be perfect. 
+ I mean, who else are they gonna get? 
+ The last four months, what did you do? 
+ You took down three of the Top Ten Most Wanted. 
+ As Nelson would say, "You on fleek." 
+ Fleek? 
+ (chuckles) 
+ I told the director I'd think about it. 
+ I'm not sure I'm ready to become a member of the brass. 
+ Simon Sifter's a tough act to follow. 
+ I miss him. 
+ Hope he's enjoying his new promotion. 
+ So... we gonna do this? 
+ I want to be... that one. 
+ That's my girl. 
+ Loser buys lunch for a week. 
+ I'd like mine personally catered from La Friche. 
+ (both laugh) 
+ Okeydokey. 
+ Both : Ready. 
+ Ryan : Set. 
+ Go! 
+ Oh, yeah. Oh, yeah, here we go. 
+ (chuckles): Use the remote control. Avery. 
+ Oh, yeah. Yeah! This is amazing. 
+ I'm actually controlling her direction. 
+ (Russell laughing) 
+ Ryan : Come on, come on, go, go! 
+ My roach stopped. 
+ Go, go, go! You can do it! 
+ My controller's not working. 
+ Go, girl! 
+ Go, go, go! 
+ You can do it! 
+ Go! Go! Go! 
+ (both laughing) 
+ Wait, D.B. 
+ How do we stop them? 
+ Yeah, I don't know. 
+ Get it! 
+ Get-get-get 'em, get 'em, get 'em! 
+ ♪ ♪ 
+ (siren wailing in distance) 
+ (beeping) 
+ (groans) 
+ (clears throat) 
+ (beeping stops) 
+ (water running) 
+ (woman's distorted sobbing) 
+ Krumitz :  Francine, what's going on? What happened? Tell me. 
+ (sobbing) 
+ I killed him. 
+ I did it, Daniel. 
+ I killed Taylor Pettis. 
+ Nelson : Krummy. 
+ Bro, did you stay here all night again? 
+ (sighs) Big day in court, man. 
+ You know, maybe getting a little sleep wouldn't have... wouldn't have been a bad idea. 
+ It's a pretty big murder trial. 
+ And it's Francine. 
+ I'm just a character witness, Nelson. 
+ I got it. 
+ What? 
+ No, man, I'm just worried about you. 
+ I mean, we're all worried about you. 
+ I don't know why everybody's making such a big deal of it. 
+ Pettis was stalking my sister. 
+ She shot him in self-defense. 
+ He's dead. 
+ She'll be fine. 
+ I'll be fine. 
+ All right. 
+ (indistinct chatter) 
+ D.B., more of your toys. 
+ Soon you're gonna have every Wi-Fi, Bluetooth signal transmitting device out there. 
+ Well, that's the idea. 
+ I'll study 'em, you'll hack 'em, and together we'll stay two steps ahead of the guys in the black hats. 
+ We'll take 'em all down. 
+ Yes! 
+ (laughs): Sounds good. 
+ Did you hear? 
+ What? 
+ Linda found a cockroach in her coffee this morning. 
+ Not one of mine. 
+ No, no, no. 
+ Hootie and all the Blowfish are present and accounted for. 
+ Nelson : What? 
+ I'm just saying. You okay? 
+ Yeah, fine. 
+ Your top button's unbuttoned and you're not wearing your watch. 
+ You're distracted. Something's on your mind. 
+ I just woke up late, that's all. 
+ Just downloaded everything from a home burglary in Georgetown into CTOC. 
+ I thought you were taking the day off. 
+ I'd rather be here than at the courthouse waiting. 
+ Metro PD recovered  a phone from a crime scene, asked us to try to get an I.D. on its owner. 
+ I got a binary dump off the phone, but the data was misaligned, so that's gonna take a while. 
+ Although I was able to access the locally stored database, calendar and apps. 
+ Phone belonged to the homeowner, Scott Barrett. 
+ Found blood and tissue in the shattered screen and housing. 
+ Still waiting on DNA results. 
+ Definitely suggests violence. 
+ Is Scott Barrett okay? 
+ Don't know. 
+ Metro is still trying to locate him. 
+ His employer said he was on vacation. 
+ He wasn't at the house at the time of the robbery. 
+ On vacation without his phone? 
+ Who goes anywhere without their phone? 
+ Well, who called in the burglary? 
+ According to the police report, the housekeeper. 
+ This is all very intriguing, Krumitz, but you brought us all in here for a case that belongs to ViCAP, not Cyber. 
+ Except... I stumbled upon a little something that makes it Cyber. 
+ The home's security system was hacked. 
+ (chuckles) Check this out. 
+ He always do that? Bury the lead? 
+ Ah, he loves the attention. 
+ You know, in his mind this is the bridge and he's Captain Kirk, you know? (laughs) 
+ Krumitz : Anyway... one of the apps I was able to recover from the phone was for P-TECH alarm systems, and the last time the phone's app was accessed it armed the home security system in Scott Barrett's home. 
+ Ramirez : But according to the police report, no alarm was triggered during the burglary. 
+ I already called the security company. 
+ Their logs show an incoming command to disarm the system, but a closer look revealed it didn't come from the home keypad or the app. 
+ That means somebody hacked the communication between the control panel and P-TECH. 
+ And disarmed the alarm remotely from his own device without being detected. 
+ If that's true, there's a black hat out there that can gain access to any house, any business that happens to have a P-TECH alarm system. 
+ That's a regional company. 
+ The entire Eastern Seaboard is his playground. 
+ Raven, contact P-TECH. 
+ See if they've been notified of any other intrusions. 
+ This could be the beginning of a really big crime spree. 
+ Man (over police radio) : Dispatch, this is Charlie-312. Over. 
+ Responding to that 10-29. 
+ No wants, no warrants. 
+ ♪ ♪ 
+ Mundo :  Barrett's housekeeper reported  some jewelry stolen. 
+ Couple watches, a tablet. 
+ No eyewitnesses to the burglary. 
+ The house is our eyewitness. 
+ Grab the router, the computer, the security control box, the game console-- bring them back to CTOC, let's see what we find. 
+ I know that look. 
+ Something's not adding up for you. 
+ Well, hackers are motivated by one of two things: pride or profit. 
+ One group wants to boast, impress other hackers with their skills, creativity, their never-seen-before code. 
+ And the other group... they want money. 
+ Right, but those guys can simply harvest credit card numbers from retailers by the millions, sell them for $20 online, and never even leave the comfort of their own home. 
+ Right. 
+ So why would our target hack into this sophisticated security system, enter this house just to commit petty larceny? 
+ Russell : Someone vacuumed. 
+ Man (calls) : Agent Mundo! 
+ Somebody vacuumed the floor, but not this area right here in front of you. 
+ The housekeeper reported the burglary-- maybe she got started before she noticed anything was missing. 
+ Yeah, I don't think so-- the edges of the void are not consistent with the movement of a... vacuum going back and forth. 
+ Something was here. 
+ Very odd shape. 
+ Maybe that's what the thief took with him. 
+ Okay. 
+ Hello. 
+ You ever see one of these little... automatic vacuums? 
+ (laughs): No. 
+ Oh, they're so amazing. 
+ You can set the timer to vacuum on a schedule. 
+ Is this a subtle hint? You want me to get you one of these for your birthday? 
+ Yes, please. (laughs) 
+ No. Actually, my point is this new model, it has memory. 
+ It recalls the layout of the room, the placement of the furniture and... and objects, and it automatically maneuvers around them the next time it starts its cycle. 
+ Yeah. Yeah. 
+ It's gonna tell us what was taken from this room. 
+ ♪ ♪ 
+ (indistinct police transmission) 
+ (whirring) 
+ Russell : 38 minutes. 
+ Enough time for the vacuum to do its work and to... think that whoever was lying there was a piece of furniture. 
+ Our burglary just became a homicide. 
+ But who's our victim? 
+ And where's their body? 
+ ♪ CSI Cyber 2x01 ♪ 
+Why-Fi 
+Original Air Date on October 4, 2015 
+ ♪ I know you've deceived me, now here's a surprise ♪ 
+♪ I know that you have, 'cause there's magic in my eyes ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ And miles... ♪ 
+♪ Oh, yeah. ♪ 
+ (indistinct chatter) 
+ Okay. Let's see what you have to say. 
+ Yes. Photos. 
+ Okay. 
+ Text messages. Okay. 
+ Look at that. That one. 
+ DNA results on the tissue and blood Krumitz found  in the phone were a match to the saliva I swabbed from the mouthpiece. 
+ And all three were a match to a hair found in a brush I brought back from the crime scene. 
+ Which means Scott Barrett was not on vacation. 
+ He's our victim. 
+ My guess is, Barrett surprised the burglar, who thought the house would be empty. 
+ They struggled. Barrett lost. 
+ Guys, I got something. I just recovered a text message chain on Barrett's phone between Barrett and a woman named Ellen. 
+ Mundo : I did some background on the victim. 
+ Ellen Peters is the victim's ex-wife. 
+ Well, that might explain why she wrote this. 
+ "Thanks for covering the last two days. 
+ "I know you had to postpone your vacation. 
+ I'll come right from the airport to get her." 
+ Her? 
+ Mundo : They have a six-year-old daughter named Rae. 
+ They share custody, but Rae spends most of the time with her mother. 
+ This must be Rae. 
+ And according to the text chain, Ellen was on a business trip in Australia that got extended. 
+ She's on a flight right now, back to the States. 
+ If Scott Barrett's dead, where's his daughter? 
+ Peanut butter and jelly. 
+ What? 
+ His daughter, she's in the house. 
+ (siren wailing) 
+ (whispering): I don't hear anything. 
+ I think he's gone. 
+ Rae, can you keep a secret? 
+ Yeah, I can keep a secret. 
+ It's gonna be fun. 
+ Okay. 
+ I'll look in here. 
+ Rae? Rae? 
+ Where are you? 
+ Rae? 
+ (creaking) 
+ Rae. Are you Rae? 
+ Don't be afraid. 
+ D.B., I found her! 
+ I want my daddy. 
+ Do you know where he is? 
+ I don't know where your dad is, but that's okay. 
+ It's gonna be fun. 
+ Honey, my name's Avery. 
+ I'm here to keep you safe. 
+ Can you tell me why you're hiding in this closet? 
+ My daddy always told me, if I ever see anyone strange in the house, I'm supposed to hide in here. 
+ Did you see somebody strange? 
+ (gasps) 
+ That's him! 
+ Honey, it's okay. 
+ This is my friend. 
+ Hi. 
+ Listen, Rae, we're just gonna sit here until you feel comfortable, okay? 
+ And then when you're ready, I'm gonna take you someplace really safe. 
+ Do you want to hold my badge? 
+ Okay. 
+ (indistinct chatter) 
+ Ryan : Rae, you hungry? 
+ I spoke with your mom, and she said I could ask you a few questions. 
+ Is that okay with you? 
+ I'm not supposed to talk to strangers. 
+ (chuckles) That is a perfect answer. 
+ Well, maybe your doll can help me. 
+ Hi. What's your name? 
+ Marla. 
+ But she doesn't talk when we're not at home. 
+ She's shy. 
+ Sometimes I'm shy, too. 
+ Maybe that means we'll get along. 
+ Hi, Marla. Nice to meet you. 
+ I'm Avery. 
+ I'm gonna ask you a few questions, but if you get tired and you want to stop, you just wrinkle your nose like this. 
+ (chuckles) 
+ Oh, no. 
+ Marla can't wrinkle her nose. 
+ Hmm. What are we gonna do? 
+ We need to think of something else. 
+ She can raise her hand. 
+ Yes! That's a great idea, Rae. 
+ So, Marla, when I ask you these questions, if you get too tired or you want to stop, you just raise your hand. 
+ Marla, how long did you and Rae hide in the closet? 
+ What's going on? 
+ Nelson : He's sleeping. 
+ Ryan : Maybe he's channeling the Force. 
+ (scoffs) He's not a Jedi. 
+ Look at him. He's sleeping sitting up. 
+ Well, if he's Obi-Wan, I want to be Yoda. 
+ Uh... 
+ Oh. 
+ (both laugh) 
+ Power nap? 
+ Mm-hmm. 
+ Nah, I was meditating. 
+ Oh, sorry. 
+ Well, it turns out Rae didn't witness her father's murder. 
+ Oh, that's very good news. 
+ She got dropped off from a sleepover. 
+ The door was unlocked. 
+ Her dad wasn't there. She let herself into her closet fort. 
+ She played with her tablet, made herself a sandwich, fell asleep. And this was after the body was removed but before we arrived on the scene. 
+ Boy, that's one independent little girl. 
+ 
+ 
+ 
+ (knocking) 
+ Just confirmed that there's been seven P-TECH security burglaries in the past week and a half. 
+ Russell : I'm surprised. 
+ Metro Police should have noticed a pattern. 
+ Well, not all of them happened in the District. 
+ Maryland, Virginia as well. 
+ In all seven homes, the P-TECH system was shut down remotely. 
+ And no one-- not the homeowners or the police-- can identify the burglar's point of entry. 
+ (scraping) 
+ (creaking) 
+ I know how our target got in. 
+ Rae, I have a really important question I need your help with. 
+ Did you unlock the back window in your house? 
+ Yes. 
+ Why'd you do that? 
+ Marla told me to. 
+ Marla told you to? 
+ I was going to a sleepover, remember? 
+ Yes. 
+ But Marla couldn't come. 
+ So she wanted me to unlock the window so she could go in the backyard to play. 
+ What else did Marla tell you to do? 
+ It's okay. 
+ You can tell me. 
+ I took her in Daddy's room. 
+ And I know I'm not supposed to go in there. 
+ Rae, honey, you didn't do anything wrong. 
+ Okay? 
+ Okay. 
+ I just got your text. 
+ What do you got? 
+ Nelson : We went through all the devices that you brought back from the Barretts' brownstone. 
+ The very last thing he did was play a golf game on his Game Vex. 
+ Game Vex has a 3-D mapping system. 
+ It captures images of the room you're in. 
+ The console emits invisible infrared dots of light. 
+ I mean, they're bouncing off of everything, mapping the space. 
+ We even set up a Game Vex. 
+ Now we can see what the console sees through these night-vision glasses. 
+ Go ahead and put 'em on. 
+ These data points will be turned into a 2-D depth image by measuring our distance from the lens. 
+ It then creates a point cloud image. 
+ Mundo : Okay, this is how the console communicates with and identifies the user. 
+ Knows when you've stepped in the room to respond to your voice commands. 
+ Ramirez : Right. While playing, the console records and saves the last 20 minutes of gameplay. 
+ I found the console in the "power on" mode. 
+ Are you telling me the Game Vex captured the last 20 minutes of Scott Barrett's life? 
+ (grunting) 
+ We're downloading what the Game Vex captured at Scott Barrett's house. 
+ Mundo : We know he was playing an instructional golf video game  on his Game Vex before he was attacked. 
+ Okay, there's our killer. 
+ The two are struggling over what looks like a golf club. 
+ (grunting) 
+ In the struggle it looks like the golf club struck Scott's phone after it collided with his head. 
+ That explains the transfer  of the shattered phone screen. 
+ And that same golf club is our murder weapon. 
+ (grunting) 
+ Ramirez :  And it was never recovered at the scene. 
+ Mundo : All right, reboot in point cloud mode. 
+ Let's get a description on this guy. 
+ We know Scott Barrett is five-seven. That means the attacker is about five-ten, 165, long hair, right-handed. 
+ Mm-hmm. Unfortunately, lot of guys look like that. 
+ Yeah, to catch our target, we got to step up our game. 
+ We find that golf club, we get to the killer. 
+ You okay, Daniel? 
+ Yeah, I just needed some air. 
+ I got the call. 
+ I have to testify after lunch. 
+ Hey, you're gonna do great. 
+ I still haven't wrapped my mind around what Francine did. 
+ I mean, she killed a man. 
+ Killed him in self-defense. 
+ And today it could all be over if Francine is gonna come home soon and start her life again. 
+ She became kind of an instant parent when our mom and dad were murdered. 
+ I'm gonna tell Mom! 
+ (gasps, panting) 
+ Daniel, get out of here! 
+ Why? 
+ Go! 
+ Krumitz :  She never got to be a teenager. 
+ I need help. 
+ Krumitz :  She raised me. 
+ I just wish my parents knew what a good job she did. Your parents are watching you from above, Daniel. They're very proud of you. You think? I don't think. I know. Elijah, there was a golf app on Scott Barrett's phone. It syncs with a device to help you perfect your swing. The app communicates with the club. Mundo :  Right. It records path, speed,  angle and impact. But  the device that was attached to Barrett's club was also equipped with GPS tracking. It gave you the location of the murder weapon? Yup. (siren blaring) (tires squeak) Man : Team One, let's go. Over on the left side. Clear. Clear. (man speaks indistinctly) Clear behind this wall. Guys, here's our golf club. And Scott Barrett. Clear! (sighs) Ryan :  Rae said her doll told her to unlock the window. Her doll? Marla. Marla talks. So, the question is,  how does Marla talk? When a little girl wants Marla to speak, she pushes this button which triggers a microphone. As Marla listens, audio recordings travel through the Web to a server where it's processed into a text. It creates a database so in the future, when the doll responds, it responds with something that the child likes. Almost like a real conversation. Nelson : But with Rae's doll, our hacker was able to intercept communication, making Marla say whatever he wanted. Ugh. Turning a little girl's imaginary friend into something very real and very dangerous. So, through the doll, the hacker instructed Rae to unlock the window. Can you do that for me now? Yeah, okay, I can do that. Manipulating the most vulnerable person in the house by using their favorite toy-- I mean, that... that's frightening. How did the hacker do this? Nelson : Means the target went after the doll. Through Wi-Fi. This is war driving. The target parked outside  the victim's home, spoofed the DHCP address of the router to connect to the doll. Russell :  All right, so you guys figured out how the hacker did it. So can we make use of his handiwork Mm, that's a problem. The only digital dust left by the target on Barrett's router is the MAC address of his device he used. Nelson : Yeah, which doesn't help much. It's very tough to find a device that only has a MAC address. It's like having a fingerprint that's not in a database. Well, maybe we can find him through his patterns of life and behavior. What was the total value of all the items stolen from the Barrett home? Less than 600 bucks. And the other houses? No more than four grand total. Okay, that is a lot of work for a little return. Doesn't make any sense when he's sitting on something so much more valuable. Wait. What's that? Zero days. Two of 'em. Ryan : One for P-TECH, and one for Marla Doll. They're worth at least $200,000 each. Well, that's his endgame. Money, money, money. Wait, wait, wait. I'm sorry. How...how does that work? The companies will pay him to stay quiet and to stop the intrusions. All right, but then why would he risk entering a house to steal what, like, four grand? He needs to prove the exploits really work in order to collect. A hacker's real power is behind the computer. They rarely risk exposure in the real world, so it's highly unlikely that our hacker would enter the Barrett home. Russell :  So, we're looking for two people, right? Right. Hacker and a thief. So, the hacker used the Marla doll to case the house. What room are we in now? The living room. Let's count the windows. Okay. One, two, three. And took care of the breaking part. Then he outsourced the entering. That's when your burglar came through the unlocked window. Yeah, I don't imagine our hacker was planning on being an accessory to murder. Well, he just made a big mistake. (phone buzzing) I told you not to call me. I just want you to know I took care of it. You're gonna get me caught. Hello? (scoffs) Damn. (engine starts) (siren blaring, horn toots) Krumitz : Hey. So, we know the location of the murder and the location of the dump site. The killer traveled from  Barrett's home to the warehouse. And his phone would have pinged any towers Well, he had a body in the car, which means our killer would have taken the most direct route to drop Scott Barrett's body at the dump site. So, let's concentrate on the towers and the most direct path. All right, here are the phone numbers that have those towers in common. Based on the time of death and our drive time, we can create a window after Barrett was murdered, before the body dumped. Time stamp will help us eliminate any phones traveling away from the dump site. Okay, drumroll. All the phones that pinged in that area and... the towers they have in common. Let's see who those numbers belong to. Ramirez : Hey, check out Lonnie Swaine. He has a rap sheet and a little habit of breaking and entering. Call Elijah, see if he can track down Mr. Swaine. (beeping) Ryan : Time for court? Call me. Lonnie Swaine, FBI. Moving into this room. Clear. Clear! Follow me, check the kitchen. (gurgling) Call the EMTs. Man : Yes, sir! (gurgling, gasping) (whirring) She was shaken and scared, and right away she told me what she had done. Man : And what did Francine tell you happened? Krumitz : She shot Taylor Pettis. Did she tell you why? He was stalking her. Man : The two of you had seen Taylor Pettis at a diner the day before. Yes. Did she mention him stalking her then? No. What do you do for a living, Agent Krumitz? I'm an FBI cyber investigator. Which means, you understand what a tower dump is? Yes. Woman : Your Honor, I fail to see the relevance of this line of questioning. It speaks to the defendant's claim that she was being stalked. Answer the question, Mr. Krumitz. It's information requested from service providers that indicates the devices that connected with a particular tower. And what does this information include? Telephone numbers and a time stamp indicating when the device pinged the tower. Okay, so, if I was to show you a time stamp from a cell phone that pinged several towers within 30 seconds of another cell phone pinging those same towers, what would you conclude? Well, most likely the owner of the first phone was being followed by the owner of the second. Perfect. So according to these tower dump records, who would you conclude, in this case, the owner of the second phone is? Francine Krumitz. Attorney : Objection. Daniel Krumitz is not called as an expert witness, and that information has not been entered into evidence. In ten cases over just two days, Objection! Francine Krumitz's cell phone pings a tower Again, counselor's assuming after the victim's cell phone facts not in evidence! pings the exact same tower. You can't backdoor the use  of these documents. Judge : Objection overruled. Your Honor, please! Francine Krumitz... was stalking Taylor Pettis. Krumitz :  You lied to me. You are so selfish. Not for one moment did you think about me. All I had was you, and now I've lost that, too. Stop feeling sorry for yourself, Daniel. Make me a promise... that when you walk out this door you forget it all. Why are you saying this? I can't forget about you. Just move on, Daniel. No pity party. Promise me, Daniel. Just promise me you'll be happy. Please? Just... be happy. ♪ ♪ Child (echoing) :  Come on, get back here! I'm gonna tell Mom! (echoed giggling) I promise. Found two cell phones in a blender. One belonged to Lonnie, the other one was a burner. Now, we think the burner belonged to our target, ditched after he stabbed Lonnie. And Nelson and Raven have separated all the pieces and reconstructed both phones. Now, Lonnie does match the basic description of Scott Barrett's attacker Five-ten, 165 pounds, long hair. I'm not sure that'll get us a court conviction. No. Lonnie's not talking, despite the fact that he's clinging to his life. The target knew we were onto him. He attempted to kill Lonnie, because if Lonnie hadn't murdered Scott Barrett, things would be going along as planned. Here's what I don't understand. Our hacker could've simply gone to the doll company and to P-TECH after the first three burglaries and cashed in. Both companies would have dismissed him and used their own employees to find the vulnerabilities. He had to keep them scared. Nelson : I got it! I know how to prove the burner was our hacker's phone. There's no identifying info on the burner. No texts, no contacts, no calendars-- all empty. But there was one database bursting with info. Mundo : Motion processor data. Measures the phone's movement. Like up and down, left and right. Nelson : And better than that, the chip is so sensitive that it records even the tiny vibrations. So you're gonna tell us how these vibrations connect to these numbers? Yeah, well, those numbers represent our vibration, and each row of six numbers is a single keystroke. The tiny movement of our burner, and it has a rhythm. So, you know, I channeled my inner Jedi and, uh, I found a pattern. Looks like our target was doing something that we do every day. He was typing. Nelson :  Yep. The burner was sitting right next to his laptop, inadvertently recording vibrations as he typed. (buzzing) Are you really gonna tell us you know what he was typing? Yes, indeed. Come here. See, I mapped the position of every letter  on the standard keyboard-- right or left, top to bottom-- which means there are  corresponding letter positions for every word in the online dictionary. Mundo : Keystrokes become coordinates, like locations on a map. Nelson : Mm-hmm. And on a map, you get location; on a keyboard, you get words. Ryan : Wait, this is gonna tell us what our target was typing? Mundo : I mean, Nelson, this is great, but... unless the target I.D.'d himself to his victims, I don't see how this helps. War driving takes a long time. He could've gotten bored, maybe went online. He might have signed on to his e-mail. Search for this. Top left, bottom right, bottom left, top right, bottom right. You're looking for an at and dot com. (beeping) And that's our hacker's e-mail address. Nelson, call the service provider. Let's get a location on this guy. Whoever you are, playtime is over. ♪ ♪ (sirens wailing) (tires squeal) (sirens approaching) (grunts) Oh! Turn around. Roll over, roll over. (groaning in pain) Give me your other hand. This is gonna be fun. (siren wailing in distance) (indistinct radio chatter) I was doing those companies a favor. I exposed flaws in their systems. Was it worth it? Officer : Please stay in your home, ma'am. ♪ ♪ Mommy! Rae! ♪ ♪ ♪ ♪ (grunting) (loud grunt) ♪ ♪ ♪ ♪ ♪ ♪ Haven't seen you in a while. Rough day? (sighs) The kind that needs to end with a drink. Huh. You don't really strike me as the kind of guy that drinks to escape his problems. Can't escape this one. My dad has cancer. He's refusing treatment. (exhales) This is weird-- you're the first person I've talked to about any of this. I know how hard it is. Sometimes it's easier to talk to a stranger. ♪ ♪ (soft whirring) (beep) Not bad, huh? Are you showing off? Yeah, a little bit. What are you doing out here? Are you still debating whether or not to take the deputy director job? No, I'm not taking it. Really? Why not? Python. He's the most dangerous drug dealer on the Deep Web. He's implicated in six murders; I'm gonna catch him. And you can't unless you're out in the field, right? Right. Okay. Aren't you afraid they're gonna bring some stuffy suit above you? I don't think they can afford it. I spent the last of their budget on your new lab. (both laugh) Well, I thank you. I thank you for all of it. I can't tell you how much I... appreciate having a new chapter in my life. Oh. Now, how does this thing work? (whirring) You ever flown one of these before? No. Aah! (groans) Wait. Uh, just tell me how do I make it stop. I don't know. You broke it. (laughs) I didn't break it. Yeah, you did. I... It's heading towards the Capitol. (laughing) It's... Ah. Good luck. Well, now, don't... I've got to call the Pentagon. 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
