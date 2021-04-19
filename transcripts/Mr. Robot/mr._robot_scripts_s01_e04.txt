@@ -1,0 +1,732 @@
+Transcripts - Forever Dreaming :: 01x04 - eps1.3_da3m0ns.mp4 - Mr. Robot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x04 - eps1.3_da3m0ns.mp4 https://transcripts.foreverdreaming.org/viewtopic.php?f=303&t=19507 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 07/16/15 09:46 ] 
+ 
+ 
+ Post subject:  
+ 01x04 - eps1.3_da3m0ns.mp4 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Steel Mountain. The hacker's dilemma. 
+ What to do when a bunch of DATA you want to destroy is completely off the grid? 
+ Hello, Evil Corp. We are FSociety. 
+ Man of the hour. Take a curtsy. 
+ Dark Army? 
+ They got no code. They hack for anyone: Terrorists, North Korea, Iran, Russia... 
+ Yo, yo, yo, yo, my album just dropped. 
+ Please buy my CD. 
+ He has my bank account, Ollie. 
+ We cannot just infect Allsafe's network because of this. 
+ Darlene : Can we please hear the plan? 
+ Where are we at with Steel Mountain? 
+ I know how to take out the backups without blowing up the pipeline. 
+ What do normal people do when they get this sad? 
+ They reach out to friends or family. 
+ I do morphine. 
+ Elliot : There it is. 
+ After all the searching, scraping, dusting, that's all that's left. 
+ One line. The last line. 
+ The consequences of busting Vera and meeting Mr. Robot, creating you... everything till now, this moment. 
+ I chose this. I chose all this. 
+ Data storage facilities like Steel Mountain... it's linear-tape open standard 9. 
+ Temp value between 61 and 95. 
+ Iron oxide in mag tape... it sticks to polyurethane with a binder. 
+ If HVAC conditions surpass the ceiling 95 degrees, polyurethane adhesive mollifies and tape DATA is unreadable. 
+ [upbeat suspenseful music] 
+ ♪ ♪ 
+ [sizzling] 
+ This is what we're doing. 
+ This circuit board, if installed behind a thermostat, it lets us plant an asymmetric back door then create a VPN in the Steel Mountain intranet. 
+ Okay, we all know what a raspberry pie is. 
+ What's your point? 
+ He wants to hack Steel Mountain's climate control system, raise the facility's heat high enough to destroy all the tapes. 
+ And you think sticking this behind the thermostat will do all that? 
+ With the right software specifically designed. 
+ I'll pull up my research on the facility, start targeting which thermostats are the most accessible. 
+ Yeah, well, that's all well and good, but we still gotta get in the damn joint. 
+ Romero : There. Deep in the Adirondacks. 
+ In 145-plus acre former limestone mine. 
+ 3-ton steel gates, 24/7 armed guards, closed circuit cameras, NOC staffing. 
+ Sure you don't want to just blow it up? 
+ [scoffs] 
+ [Romero exhales] 
+ All we need is one security flaw. 
+ Look at this place, man. It was built not to have any. 
+ I see about... six walking around. 
+ [coughs] 
+ You okay, man? 
+ [coughing] 
+ Romero : What the hell? 
+ Where you going? 
+ We're done, aren't we? 
+ Elliot, voice-over : That was about the time the withdrawal started. 
+ Remember? 
+ I know... I broke my own rule. 
+ But I have no Suboxone. 
+ What I do have... clinical depression, social anxiety. 
+ A day job, a night job, confusing relationships. 
+ Others depending on me. 
+ Taking down the largest corporation in the world. 
+ And I chose it all. 
+ This line has wanted to own me my whole life. 
+ Biosynthesized in some lab in Mexico, packed into a pill, shipped to the States where it was packaged with a logo and taxed by the government, stolen by a bribed guard, sold to a Vera henchman, oversold to Shayla, and then to me. 
+ It needs me just as much as I need it. 
+ The moment was destined, every choice bringing me closer to this one line. 
+ This line. This last line. 
+ I promise. 
+ Today will be the worst of it. 
+ Get through the next couple days, and then I'll be clean. 
+ [shouts] What do you want? 
+ Huh? 
+ [knock on door] 
+ [pounding on door] 
+ I would have saved you the trip to the door but you're all, like, against me breaking in or whatever. 
+ Why are you here? 
+ Romero got some clarity on your little plan that's gonna need your undivided. 
+ Okay, let's go. 
+ What's going on with you? 
+ You look like sh1t. 
+ I'm fine. 
+ [low chatter] 
+ Look, man. This plan's not gonna work. 
+ Why? Why is that? 
+ I was doing recon on Steel Mountain. 
+ Came up with a problem. A big, fat one. 
+ Evil Corp's upping their security protocol. 
+ If you ask me, it's overkill, but it's legit. 
+ I already told you, they have their vulnerabilities. 
+ So what happens after we hack the New York facility? 
+ Then we have to take a trip to Nashville, then Colorado, then San Jose, then goddamn Tallahassee. 
+ Ugh, this looks real bad. Real bad. 
+ They are physically copying then shipping all the analog backups. 
+ Five big-ass fortress-like redundancies across the country. 
+ Now maybe... and it was always a big maybe... we get into one, but no way we get into all of them. 
+ The minute we fry one facility, they'll patch every climate control system they own. 
+ No matter how you slice it, the plan is DOA. 
+ Where'd you get this? 
+ What the hell do you mean? 
+ We're still in Evil Corp's network. 
+ [softly] sh1t. 
+ This is what Tyrell was talking about. 
+ What'd you just say? Tyrell? 
+ As in Tyrell Wellick? 
+ Yeah. 
+ Since when did you and the goddamn CTO of Evil Corp become, what, chums? 
+ Says this isn't happening till April 1st. 
+ It's only the 29th. 
+ We still got a few days. 
+ We have time. 
+ All their tapes are still inhe New York facility. 
+ Just means we go up today. 
+ We're nowhere close to being ready. 
+ Well, I've already downloaded all the necessary PDFs of the floor plans to target the thermostats. 
+ It will require some planning, but nothing I can't do in the car. 
+ It shouldn't take me long to own the facility's SCADA network. 
+ Especially with some help. 
+ You guys hit the road while Trenton helps  me   finish the distro. 
+ We'll double-time it. 
+ You can get it off the FTP server as soon as you get there. 
+ What about China? 
+ We'd have to execute the hack before Tuesday. 
+ Don't worry about China. 
+ I'll it up my Dark Army contact as soon as you take off. 
+ Oh, you just gonna hit up the world's most dangerous hacker crew? 
+ Pssh, ya'll have gone and misplaced your collective minds. 
+ We've been planning this for months. 
+ Now we're gonna go up on a lark just 'cause he said so? 
+ This plan is sh1t. 
+ Elliot : The plan will work. 
+ And once we're actually there, I still need to prep the social engineering, plus we have no idea who physically's gonna go in. 
+ It's my plan. I'll go in. 
+ Look, man, you... you might be able to hide it from these nerds, but I know a junkie when I see one. 
+ In your condition, you ain't gonna do Jack or Jill except puke your brains out or give hand jobs for another high. 
+ Like you said, in three days, one Steel Mountain becomes five. 
+ That's no good for any plan. 
+ Something ain't right about this guy. 
+ Yeah, well. He's gotten us this far. 
+ Still, I don't trust him. 
+ Well, it's not about trust, remember? 
+ [car alarm activates] 
+ [device beeps] 
+ Thank you, Mom. 
+ There it is. 
+ All right. 
+ Come to Daddy. 
+ [tense bass rhythm] 
+ ♪ ♪ 
+ [engine revs] (Romero) Yeah. Ha ha ha. 
+ Yo, man. 
+ You gonna say anything about this? 
+ What's there to say? 
+ You seem to have everything under control. 
+ Yeah. Okay. 
+ This isn't my operation. 
+ [laughs] 
+ [coughing] 
+ I told you before. 
+ You're the key to the whole thing. 
+ You're the only force of nature at play here. 
+ Elliot, voice-over : There's a saying. 
+ The devil's at his strongest while we're looking the other way, like a program running in the background silently, while we're busy doing other sh1t. 
+ Daemons, they call them. 
+ They perform action without user interaction. 
+ Monitoring, logging, notifications. 
+ Primal urges, repressed memories, unconscious habits. 
+ They're always there, always active. 
+ We can try to be right, we can try to be good. 
+ We can try to make a difference, but it's all bullshit. 
+ 'Cause intentions are irrelevant. 
+ They don't drive us. Daemons do. 
+ And me? I've got more than most. 
+ [retches] 
+ Elliot : I just need to rest a minute, okay? I'll be fine. 
+ Romero : Bullshit... a couple hours, you'll wish you felt as shitty as you do right now. 
+ Wait till the convulsions start. 
+ Full body pains, leaking from everywhere, then... 
+ Elliot, voice-over : Hypersensitivity to brightness and sound. 
+ After that, overwhelming paranoia followed by the darkest of depressions. 
+ Symptoms may persist for two weeks, assuming I last that long. 
+ Yeah, I know what's in store. 
+ Romero may have a point. 
+ You're not gonna be good for anything till you kick this. 
+ I... it burns. 
+ [shaky breathing] 
+ Elliot, voice-over : Don't be mad at me. 
+ I know I slipped, but I'm about to change the world. 
+ I'm allowed a few mistakes. I'm about to change the world. 
+ [soft thud] 
+ [whispers] sh1t. 
+ [inhales] 
+ Mm, that is the way I like to get up in the morning. 
+ Screw coffee or breakfast in bed. 
+ The first thing I could see every day is that sweet butt of yours. 
+ I'd be the happiest dude in the city. 
+ Are you going somewhere, babe? 
+ Yeah, um, I'm gonna meet my dad for brunch. 
+ What? No, babe. 
+ I was gonna take you to brunch. 
+ I mean, I know that things are, like, okay between us right now, but I'm... I'm not gonna let myself off easy, all right? 
+ You will be wined, and you will be dined until I feel I've gotten myself out of the doghouse. 
+ Well, we can do something tonight, then. 
+ Perfect. 
+ Okay. 
+ No. 
+ [knock at door] 
+ Oh, hey. 
+ Is Elliot around? I tried texting him. 
+ Uh, he didn't text me back. 
+ Yeah, he's gone for the day, which is why I'm on Flipper duty. 
+ Where is he? 
+ sh1t if I know. 
+ I mean, I don't ask details, but he only ever tells me what he wants anyway, right? 
+ And I'll tell him you stopped by. 
+ Do you want to walk with us? 
+ Flipper loves an audience when she pees. 
+ Sure. Yeah. I gotta... head back towards the subway anyway. 
+ Oh, we don't plan our path. 
+ I mean, we just kind of wing it and see where the moment takes us. 
+ Come on. 
+ Come on, before she bursts. 
+ Elliot, voice-over : Maybe this was all intentional. 
+ My subconscious, running in the background, making me doubt what I got everyone else to believe in. 
+ Turning me into the physical manifestation of my fear of being a... 
+ Goddamn waste. 
+ Just give him a night to recover, okay? 
+ We still have tomorrow. 
+ This sh1t'll last a week. 
+ And I refuse to waste my time playing nurse. 
+ We gotta get back, regroup, start devising a plan B. 
+ [electronic stuttering] 
+ man : The rabbit is in the administration system. 
+ Send a flu shot. 
+ Rabbit, flu shot... 
+ Someone talk to me. 
+ A rabbit replicates till it overloads a file, then it spreads like cancer. 
+ Cancer? 
+ Hollywood hacker bullshit. 
+ I been in this game 27 years. 
+ Not once have I ever come across an animated singing virus. 
+ I have yet to fly through a Tron City directory structure. 
+ I bet you right now some writer's working hard on a TV show that'll mess up this generation's idea of hacker culture. 
+ [loud traffic noises] 
+ [dramatic music] 
+ [keys clicking softly] 
+ All you had to do is ask, klepto. 
+ I've updated the FTP. 
+ All the files are ready. 
+ I've created... 
+ Any word from the road? 
+ Jesus, it's been a full 24 hours. 
+ Where the hell could they be? 
+ Got any Advil? 
+ [pills rattling] 
+ I'm guessing you didn't make contact. 
+ Nope. 
+ Perhaps this plan was a little too ambitious. 
+ We'll wait until the rest of them get back and then reevaluate. 
+ Sitting here helpless while we crash and burn? 
+ Not my speed. 
+ Even if they hack into Steel Mountain, we need to hit China's DATA centers simultaneously. 
+ If the Dark Army isn't compliant, then there's not much we can do. 
+ [laughs] God... sh1t! 
+ I got so wasted, I forgot it's Sunday. 
+ I know where my guy will be. 
+ Trenton : Is that wise? 
+ Those guys aren't known for being the most understanding. 
+ I'm assuming if he wanted contact... 
+ What about what I want? 
+ [rustling in purse] 
+ I'm coming with you. 
+ No, thank you. 
+ You stick around, wait for the boys to FTP it. 
+ Hey, Trenton. 
+ Here. 
+ What is this? 
+ Come on, they're my last two. 
+ Is this ecstasy? 
+ No, it's clarity. 
+ It'll help you see past whatever's bringing you down. 
+ I'm sorry. I don't mean to be rude. 
+ I... don't do drugs. 
+ I mean, I-I smoke weed... 
+ Well, sorry, but there's no take-backs, so... 
+ Besides, don't you want to figure your sh1t out? 
+ For me, sometimes when I'm going through something, just gotta... I don't know. 
+ Forget about it for a little while. 
+ [clacking sounds] 
+ [rock pop music in background] 
+ ♪ ♪ 
+ Are you seriously drinking a goddamn sparkling water right now? 
+ If you weren't wearing my scarf, I'd kick your ass. 
+ I think we should go. 
+ Trust me... he's here every Sunday, okay? 
+ He'll show. 
+ [dramatic music] 
+ ♪ ♪ 
+ Mobley : Jesus Christ, Romero. What are we gonna do? 
+ Romero : We dump him at a hospital, come up with an alternative course of action. 
+ That's our only option. 
+ Mr. Robot : No. No hospital. 
+ Romero : Then we split. Screw it. 
+ I mean, you say it all the time yourself, there's casualties in every revolution. 
+ All that matters is the end result. 
+ We got no time to haul dead weight. 
+ Fine! You wanna leave, leave. 
+ Screw this, man. 
+ [dr closes] 
+ I need a hit. 
+ [scoffs] 
+ I'll be better. 
+ Just to get me through this. 
+ I can't let you do that. 
+ One hit. 
+ You know, just to get me back on the road. 
+ We don't have time. This... needs to happen now. 
+ One hit. 
+ [tense music] 
+ [grunts] Come on. 
+ Let's go. 
+ 
+ 
+ 
+ 'Scuse me, fella. 
+ You lookin' for something? 
+ He could really use a helping hand. 
+ Yeah, okay, he can go in. But on... 
+ Uh, no can do. I gotta come with. 
+ Only if you're partaking, otherwise he goes it alone. 
+ Here you go. 
+ 30. 
+ 30. 
+ The guy in the house will set you up right. 
+ Long as he doesn't kill you. 
+ [laughs] 
+ Mr. Robot : All right, look, the minute you're done... you leave. 
+ You don't look at anyone. You don't talk to anyone. 
+ You take care of business and you get out. 
+ Hey. Nod if you understand. 
+ [tense music and drums] 
+ ♪ ♪ 
+ [muted TV in background] 
+ man : You want? 
+ [man coughs] 
+ Hey. 
+ Big eyes. 
+ It's all good, man. Go on. 
+ Elliot : I just... 
+ I need morphine. Pills. 
+ No, man. 
+ This is all we got right here. 
+ It's better. 
+ [whispers] Trust me. 
+ Go on. 
+ There you go. There you go. 
+ wan : GoI'll help. 
+ It'll be okay. I'll help. 
+ [TV continues in background] 
+ [low chatter] 
+ Elliot, voice-over : Have I sunk this low? 
+ What must you think of me? 
+ Is it spring? Election year? 
+ Shall I hibernate? 
+ Did we meet? In money we trust. 
+ No, I created... stop. 
+ I can't control thoughts. I need this. 
+ I know I promised my last line, but... 
+ [exhales] 
+ [TV continues in background] 
+ [voices distort] 
+ [distorted voices] 
+ Greedy bitch! 
+ [thud, clatter] 
+ [gunshot] 
+ [gunshots] 
+ [squeals] 
+ [men grunting] 
+ [gunshot] 
+ Aah! 
+ [overlapping shouting] 
+ sh1t, man... 
+ [gunshot] 
+ [shouting] [running footsteps fading] 
+ (TV announcer] Wednesday, Thursday, Friday, here's that seven-day forecast for the tri-state area. 
+ Lots of clouds today, but mostly sunny through Thursday with temperatures in the mid to the upper 80s. 
+ And you will notice that the humidity will be a tad uncomfortable. 
+ [static] 
+ Mr. Robot, synthesized voice : Dear brothers and sisters, now is the time to open your eyes. 
+ If you have not yet woken up to the reality of profiteering and enslavement we've been warning you about, I hope you realize we are fast running out of time. 
+ The governments of the world and their corporate masters do not want us to speak. 
+ Why? Because we unlock truths. 
+ We expose villains. We exorcize demons. 
+ Citizens of the world, we are here to help. 
+ If you have any interest in waking from your slumber, in retrieving lost, damaged, or stolen memory, we are here for you. 
+ We have your back. We are FSociety. 
+ [static, jumbled voices] 
+ [distorted voice] What's it open? 
+ It belongs to you now. 
+ Made in the Orient. 
+ Made just for your head. 
+ Now, find your monster, then turn the key. 
+ But first... a word from our corporate overlords! 
+ [static] 
+ woman : If you see our logo, that means you can rest assured that you're buying the best food, clothing, shelter, transportation, hygiene, electronics, and life's necessities that money can buy. 
+ [dog barks distantly] 
+ [child humming] 
+ [humming  Frere Jacques] 
+ ♪ ♪ 
+ Hello. 
+ Hello, friend. 
+ But we're not friends. 
+ Can you tell me what happened to that house? 
+ First can you tell me? What's your monster? 
+ [giggles] 
+ [giggling] 
+ I think you dropped this. 
+ [continues humming   Frere Jacques] 
+ ♪ ♪ 
+ [Elliot picks up tune] 
+ [both humming tune] 
+ ♪ Ding dong ding ♪ 
+♪ Ding dong ding ♪ 
+ Qwerty : Don't be shy now. 
+ You can come closer. 
+ Unsettling, I know. 
+ Your pet beta fish chatting you up. 
+ But time's money, Elliot. 
+ You need something? 
+ Your water... does it need changing? 
+ When you live in a fishbowl, ain't no such thing as change. 
+ My entire life's been spent in this thing. 
+ My whole world's on your side table. 
+ I look around... same sh1t, different day. 
+ The lighting, the furniture. 
+ Even the sounds... always the same. 
+ I'm on a loop, and it won't stop unless my life does. 
+ I'm exhausted with this world. 
+ What can I do? I wanna help. 
+ I think it's pretty obvious. 
+ There's really only one thing you can do for a brother in a fishbowl. 
+ What is it? 
+ [shouts] Move him to a goddamn window! 
+ [dinner music in background] 
+ [muted conversations] 
+ [phones ringing in background] 
+ ♪ ♪ 
+ Angela, he's my friend. 
+ Yes. 
+ And he's delicious. 
+ Here. 
+ [soft piano music continues] 
+ ♪ ♪ 
+ woman : Eat this. 
+ Mm-mm. 
+ woman : Open. 
+ It's piping hot, so consume with caution. 
+ Pop's famous raspberry pie. 
+ Enjoy. 
+ [crunching] 
+ Mm... 
+ Yes. 
+ Yes! 
+ Yes, Elliot, I do. 
+ [giggles] 
+ [applause] 
+ Elliot, I do! 
+ I do! 
+ [whistles] 
+ ♪ Don't you know your queen ♪ 
+ [Too Bright's  Queen] 
+ ♪ Whipped ♪ 
+♪ Heaving ♪ 
+♪ Flower bloom at my feet ♪ 
+♪ ♪ 
+♪ Oh ♪ 
+♪ Don't you know your queen ♪ 
+♪ Ooh ♪ 
+♪ Cracked ♪ 
+♪ Peeling ♪ 
+♪ Riddled with... ♪ 
+ Those people in there... 
+ I just told them what they wanted to hear. 
+ ♪ ♪ 
+ You're not gonna do it, are you? 
+ Change the world. 
+ Figures. You were only born a month ago. 
+ ♪ ♪ 
+ You're afraid. 
+ Afraid of your monster. 
+ Do you even know what it is? 
+ ♪ ♪ 
+ It doesn't fit. 
+ Why not? 
+ [voice distorts] Isn't it obvious? 
+ You're not Elliot. 
+ You're the... 
+ [static] 
+ Elliot : Hello? [child laughs] 
+ Hello? 
+ [children laughing, voices echo] 
+ [silence] 
+ [ominous music] 
+ ♪ ♪ 
+ Elliot voice-over : Am I still alone? 
+ Is this the face of my only friend? 
+ Are you my monster? 
+ [Elliot, synthesized voice] I am here. You are alone. 
+ [overlapping video game sounds] 
+ [bells dinging, volume increasing] 
+ They all left. 
+ They all left. 
+ [mutters] They all left. 
+ [voice breaks] I'm alone. 
+ I'm alone. 
+ [sniffling] 
+ [whispering] I'm alone. 
+ Mr. Robot : No, you're not. 
+ I'm not going anywhere, kiddo. 
+ We're in this to the end. 
+ Trenton : Maybe you should just walk. Ballet seems out of your skill set. 
+ Darlene : What? Screw you, young'un! 
+ This bitch can plie with the best of 'em. 
+ You know, when I'm not bangin' on a keyboard, I'm schooling classmates with moves like this! 
+ Ooh! 
+ Good lookin' out. 
+ I'm sorry he never came. 
+ [distant pop music] 
+ Let's... let's just go. 
+ I am a menace to society! 
+ What? 
+ Wait, where are you going? 
+ It's him. 
+ [suspenseful music] 
+ ♪ ♪ 
+ [yelling in Chinese] 
+ Phone. Now! 
+ Come on. 
+ [shouts in Chinese] 
+ [engine turns] 
+  [Hell of a Night,  muffled] ♪ Go, go, go, go ♪ 
+♪ Get up out your seat, you can have my drink ♪ 
+♪ Let me see you dance ♪ 
+♪ [cell phone buzzes] ♪ 
+♪ Get up off your feet, you can be my freak ♪ 
+♪ Let me see you dance dance, dance ♪ 
+♪ When the sun falls ♪ 
+♪ Then the moon lights ♪ 
+ Why am I still out? 
+ I have to be at work in four hours! 
+ [laughs] 
+ There's a lot I'm gonna miss about this gig. 
+ What are you gonna do for money now? 
+ [sighs] Oh, you know. Just be a hottie waitress. 
+ I'm, uh... Oh, thank you. 
+ Glad you liked it. 
+ Thanks. 
+ Although I am glad I got in one last hurrah before going all corporate. 
+ [rap song continues] 
+ You're not worried? 
+ Worried about what? 
+ I don't know. 
+ I always get worried before starting a new job. 
+ [laughs] No. I am definitely not worried. 
+ Worry's a waste of time. 
+ I mean, sh1t didn't work out at one job, so I got another. 
+ That's all! 
+ ♪ Go, go, go, go ♪ 
+ You worry a lot, don't you? 
+ [song continues] 
+ ♪ ♪ 
+ Yeah. 
+ ♪ When the sun falls ♪ 
+♪ Go, go, go, go ♪ 
+♪ Then the moon lights ♪ 
+♪ Go, go, go, go ♪ 
+♪ Might be a hell of a night, go ♪ 
+♪ Oh, yeah, yeah ♪ 
+♪ Got the whole world, trying to figure out Q ♪ 
+♪ You can never find a [... ] do what I do ♪ 
+♪ TDE, I'm the [... ] from the crew ♪ 
+♪ Hit it one time, now she want round two ♪ 
+♪ Ghetto [... ] but I love them bamboos ♪ 
+♪ No [... ] but I chopped and screwed ♪ 
+♪ She want a groovy type bucket hat dude ♪ 
+♪ Champagne pop, I'm about that life ♪ 
+♪ Molly gonna pop, I'm about that life ♪ 
+♪ Molly gonna pop ♪ 
+ Look in the mirror. 
+ ♪ Might not remember this night ♪ 
+♪ World might end so I'm livin' my life ♪ 
+♪ Hanging out... ♪ 
+ See that badass bitch? 
+ ♪ Go, go, go, go, go ♪ 
+ That's the only person you should ever worry about. 
+ ♪ Get up off your feet, you can be my freak ♪ 
+♪ Let me see you jam, jam, jam ♪ 
+♪ When the sun falls ♪ 
+♪ Go, go, go, go ♪ 
+♪ Then the moon lights ♪ 
+♪ Go, go, go, go ♪ 
+♪ Might be a hell of a night, go ♪ 
+♪ Ooh ooh ooh ooh ♪ 
+♪ Go ♪ 
+♪ Go ♪ 
+♪ Go ♪ 
+♪ Ooh ooh ooh ooh ♪ 
+♪ Go go go go ♪ 
+♪ Then the moon lights ♪ 
+♪ Go ♪ 
+♪ Go ♪ 
+♪ Might be a hell of a night ♪ 
+♪ Ooh ooh ooh ooh ♪ 
+♪ Go ♪ 
+♪ Might be a hell of a night, go ♪ 
+♪ Ooh ooh ooh ooh ♪ 
+ Do you know how hard it's been for me to find you? 
+ [whack] 
+ Come here. 
+ Yo, you need to chill. 
+ Go to hell, asshole! 
+ [chuckles] 
+ There she is. 
+ A ray of sunshine in the dark void of my existence. 
+ Oh, poetic. 
+ But not an apology. 
+ I ain't apologizing for sh1t. 
+ Oh, this is because I dumped your ass. 
+ For real? You're gonna start pissing me off. 
+ Sorry I wanted to spend my life with you. 
+ What a monster I am. 
+ Things are happening, Cisco. 
+ We need to go tomorrow. 
+ It's our only shot. 
+ Then you never had one. 
+ Look, I'm serious, Darlene. 
+ These guys don't mess around. 
+ Now, whatever it is you think you're doing... freeing the world, freeing the masses... the guys I work for, they ain't motivated by kumbaya sh1t like that. 
+ All right? Now, I'm warning you... for the last time. 
+ Oh, come on. 
+ You know how much this means to me. 
+ Please... just talk to them. 
+ My Aunt Esther cured all her habits with this... liquid anti-diarrheal for the... well, you know. 
+ Lemon and salt for the electrolytes, decongestant for the runny nose. 
+ This is the third one. 
+ Seven more, you'll be good as new. 
+ Romero : I'ma go pull the van around. 
+ Make sure he keeps chugging those. 
+ Thanks. 
+ Cool. 
+ Elliot, voice-over : Hello again. 
+ Long time no... whatever it is we do. 
+ I missed you. Where did you go? 
+ Did you leave, or did I? 
+ [low voice talking] 
+ Elliot : Maybe it was both. 
+ Or neither. Doesn't matter. 
+ [low voice continues] 
+ [praying in foreign language] 
+ Do those hopeful moments scare me? 
+ Of course. Daemons, remember? 
+ [ding] 
+ At some point an "action without user interaction" will come along and sweep my legs. 
+ This spinning wheel of false highs and true lows will continue. 
+ That much I know. 
+ [ding] 
+ [suspenseful music] 
+ ♪ ♪ 
+ Elliot : Daemons... they don't stop working. 
+ They're always active. 
+ [ding] 
+ They seduce. They manipulate. 
+ They own us. 
+ And even though you're with me, even though I created you, it makes no difference. 
+ We all must deal with them alone. 
+ The best we can hope for... the only silver lining in all of this... is that when we break through, we find a few familiar faces waiting on the other side. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

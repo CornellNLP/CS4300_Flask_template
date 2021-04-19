@@ -1,0 +1,859 @@
+Transcripts - Forever Dreaming :: 03x02 - eps3.1_undo.gz - Mr. Robot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 03x02 - eps3.1_undo.gz https://transcripts.foreverdreaming.org/viewtopic.php?f=303&t=32600 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 01/22/19 16:40 ] 
+ 
+ 
+ Post subject:  
+ 03x02 - eps3.1_undo.gz 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ - Hello? 
+-  Bonsoir, Elliot.   
+ - _ 
+-  They're planning something.   
+    of    facilities around the country so far.   
+ This is where the paper records are going.   
+ Elliot, what is Stage  ?   
+ The femtocell was to get access to their UPS's.   
+ They're trying to blow up Evil Corp's recovery building.   
+ I don't play fair. I play what I want.   
+ [speaking Mandarin]    
+ - I invoke my Fifth Amendment... 
+- You're an enemy combatant.    
+ You don't have any rights.    
+ One of your patients hacked me.    
+ He stole my dog on top of it.    
+ [speaking Danish]    
+ The phone call... make me understand.    
+ I wanted you to feel what I felt.    
+ - You pussy. 
+- You... [loud grunting]    
+ This fucker thinks he can hurt my girl!   
+ If you're serious about punishing him... 
+- I am.    
+ - Just tell me what to do. 
+- The E Corp party.    
+ When you saw Scott, he was disheveled.   
+ - Yeah, but Joanna... 
+- Tell the cops your story.    
+ Scott Knowles intimidated you. This is how we punish him.    
+ That ever-looming presence that is Mr. Robot, I don't feel it.   
+ Is it possible that the bullet killed him...   
+ - [gunshot] 
+-  And not me?   
+ I need to find a way to fix what I did.    
+ I need a job at Evil Corp.    
+ [soft street chatter]    
+ [siren wailing distantly]    
+ You know when you f*ck something up   
+ and you wish you had the power to hit "undo"?   
+ [INXS's "New Sensation"]   
+ Like when you say the dumbest thing   in front of your biggest crush.   
+ ♪ ♪   
+ Or when you talk sh1t about your boss in an email,   then hit "reply all" to everyone at work.   
+ Or when you crash the entire world economy   and kick-start the inevitable downfall   of human civilization?   
+ ♪ Live baby live ♪   
+ We all have those days.   
+ -  ♪ Now that the day is over ♪ 
+- [beeps]    
+ But today is not gonna be one of them.   
+ ♪ I got a new sensation ♪   
+ ♪ ♪   
+ Because today   
+ I found a way to hit "undo".   
+ ♪ Impossible to refuse ♪   
+ Today is the day I start working at Evil Corp.   
+ ♪ ♪   
+ Hello. I'm Linda, Chief Human Resources Officer here at Evil Corp.    
+ Evil Corp is, well, evil.   
+ That much I thought, but what I didn't realize was   maybe they're a necessary evil   that just needs to be kept in check.   
+ In fact, maybe calling them evil   was just my dorm room philosophizing run amuck.   
+ I'd like to say welcome to the Evil Corp family.    
+ We're happy to have you here.    
+ But this doesn't mean I'm selling out.   
+ I'm just growing up.   
+ Signing up for a    K,   choosing an HMO plan with a good deductible.   
+ Sign up for Trunk Club.   
+ ♪ ♪   
+ Pop a few Zoloft.   
+ [train screeches]    
+ Join in on the live-action cartoon   
+ of  D emotions that everyone else is in.   
+ I finally see the fatal exception error of my ways,   and I know what to do now.   
+ I'm gonna fix the world I broke,   and put it back together better than it was before.   
+ Let's talk about your crucial role here at Evil Corp.    
+ I'm gonna undo the hack.   
+ Now, I can't decrypt the data I f*cked up,   that much is true.   
+ But since I'm working on the recovery team,   I can help them rebuild the database   and defend the fort at the same time.   
+ There's a little talent roaming around on this floor, but the primo poon is on floor   .    
+ As of last week, it looks like Tyrell was right.   
+ Evil Corp has delivered their paper records   from    of their    buildings to their New York facility.   
+ Pretty sure she would cheat on her fiancé for me, man.    
+ She really... like, the way she looks at me, dude, it's like, slippery when wet, am I right? [soft laugh]    
+ But lucky for them, now they've got me.   
+ ♪ [sighs] Cry baby cry ♪   
+ - [train screeches] 
+- [beeps]    
+ ♪ When you got to get it out ♪   
+ ♪ ♪   
+ ♪ I'll be your shoulder ♪   
+ Our current plan is deeply flawed and massively inefficient.     
+ This is William.   
+ He's my technology manager.   
+ If I can convince him to convince his boss   to convince his boss to convince her boss   to digitize all the paper records   in their local facilities   instead of shipping them here, then...   
+ We can avoid a single point of failure.     
+ We would install hardware and softw...     
+ Elliot, I hear your passion, but I got tickets to the Goo Goo Dolls reunion concert tonight, so let's wrap this up. Okay? [clicks tongue]     
+ ♪ Right now ♪   
+ His password was pretty easy to figure out after that.   
+ After going through his emails,   I quickly learned that he was having the engineers install rootkits on all of Evil Corp's phones,   so they can illegally sell private consumer data.   
+ -  ♪ New sensation ♪ 
+- [knocking on door]     
+ I tipped off the FBI,   got him arrested, and promptly set a meeting   with the next exec up the chain.   
+ ♪ New sensation ♪   
+ ♪ Hate baby hate ♪   
+ - [train screeches] 
+- [beeps]     
+ ♪ When there's nothing left for you ♪   
+ ♪ ♪   
+ ♪ You're only human ♪   
+ But meetings can take forever to set.   
+ So in the meantime, I had to look for a stopgap.   
+ In this case, E Shipping,   their shipping management console.   
+ - [truck horn blares] 
+- Wait a minute, this ain't right.     
+ All our shipments are supposed to go to New York.     
+ The paper says "Sioux Falls, South Dakota."     
+ Yeah, you're in Sioux Falls, Earl, which sure as sh1t don't make no sense.     
+ But all right. Unpack her, boys!     
+ I'm sending shipping requests   
+ to the actual facilities,   
+ but in the manifest, I'm making it look like   
+ all the paper's still arriving in New York.   
+ It'll take a while, but I just need to buy enough time   
+ until I can prove my case to upper management.   
+ ♪ Uh-huh ♪   
+ ♪ I'm gonna take you on ♪   
+ ♪ A new sensation ♪   
+ ♪ New sensation ♪   
+ By eliminating physical paper delivery, we can cut E Shipping cost, installing hardware and software at...     
+ Elliot, you are ambitious, I'll give you that, but I got a SoulCycle class I'm late for.     
+ Let's pick this up sometime next quarter?     
+ Hacking Peter was as easy as watching him.   
+ I felt bad taking him down,   until I saw that he had his engineering team   use special software to help E Corp's auto manufacturing partners cheat the emissions test   to hide how much pollution they really created.   
+ -  ♪ A new sensation ♪ 
+- [knocking on door]     
+ Factoring in the bureaucracy and the line of   corrupt, moronic managers I have to get through,   I'll need to keep up the illusion that   shipments are still happening.   
+ These are the same damn boxes you brought last week.     
+ You know me. I do what the paper says.     
+ All right!     
+ Pack it up, boys!     
+ Problem with my illusion is,   what if Tyrell and the Dark Army think all the records actually get there?   
+ This is why I gotta keep the UPS systems safe too,   because these innocuous backup batteries   in the New York facility   can turn into idle bombs with the right malware.   
+ And these are the frontline soldiers trusted to protect them.   
+ You guys gonna stop me? 
+Uh, I'm a bloodhound, girl.     
+ I just dove right back in, dude, just... ah.     
+ This patch ensures that the UPS devices   
+ will only run trusted code   
+ that's digitally signed by Evil Corp.   
+ Bottom line: even if they think   
+ all the paper records got here,   
+ they won't be able to blow up that building.   
+ ♪ New sensation right now ♪   
+ ♪ ♪   
+ ♪ Got a hold on you ♪   
+ - [train screeches] 
+- [beeps]     
+ ♪ New sensation ♪ 
+♪ new sensation ♪   
+ In conclusion, digitizing locally and not shipping paper records here is the best option for our recovery efforts.     
+ Perfect.     
+ Let's set a meeting with the VP of Technology.     
+ I want to get this in front of him.     
+ Great work, Elliot.     
+ [subway train whooshes, screeches]     
+ - [indistinct PA announcement] 
+- [phone camera clicks]     
+ ♪ Hate baby hate ♪   
+ Once upper management's on board,   we'll be on our way to rebuilding the database and the hack will officially be behind us.   
+ Doesn't mean that in my spare time I can't   find ways to purge Evil Corp of all their shitbags.   
+ You know, your typical subprime mortgage scammers,   Ponzi schemers... 
+- [keyboard clicking]     
+ Pension embezzlers, and sexual harassers.   
+ That way, when Evil Corp gets back on its feet,   they'll no longer be evil.   
+ We're proud to call you   a new member of Evil... E Corp.   
+ Because changing the world was never about tearing E Corp down.   
+ It's about making them better.   
+ Maybe I f*cked up an already fucked-up world, but I'm fixing it now, hitting "undo."   
+ And, friend, it feels great.   
+ ♪ New sensation ♪ 
+♪ new sensation ♪   
+ - [soft chatter] 
+- [phones ringing]     
+ [keys clacking]     
+ [soft ambient music]   
+ ♪ ♪   
+ Okay, if I'm being real,   I haven't fixed everything.   
+ ♪ ♪   
+ [cheers and applause]   
+ The loneliness came back.   
+ Worse than I remember.   
+ ♪ ♪   
+ [soft weeping]     
+ I don't get it.   
+ I know I'm doing the right thing.   
+ You have to see that.   
+ [sniffles]     
+ Then what is this?   
+ Why do I feel this empty void inside?   
+ ♪ ♪   
+ Even the Zoloft isn't helping.   
+ I don't know what to do.   
+ ♪ ♪   
+ f*ck.   
+ What's wrong with me?   
+ I'm really starting to lose it.   
+ [clock ticking]     
+ With everything going on, my landlord at the office hasn't been paying utilities or maintenance, so...     
+ I'll be working from my home office for a while.     
+ Am I supposed to say something?   
+ It's a nice rug.     
+ Thank you.     
+ How are you feeling about your birthday today?     
+ sh1t.   
+ She's right.   
+ Totally forgot.   
+ It is my birthday today.   
+ Do you have plans tonight?     
+ Uh... no.     
+ In our last session, we talked about your sister.     
+ We haven't been talking.     
+ Can I ask why?     
+ She's one of the reasons he comes out.     
+ Talk about that.     
+ Well, he's... been gone, right?     
+ He hasn't come out since I stopped talking to her.     
+ How does that make you feel, that he's not around anymore?     
+ It's different.     
+ It's better. For everyone.     
+ You're still not answering the question.     
+ How do you feel?     
+ Good.     
+ You miss him, don't you?     
+ It's okay if you do.     
+ I miss being a part of something.     
+ Being a part of what, exactly?     
+ Something important.     
+ That meant something.     
+ [distant children playing]     
+ Where'd you go?     
+ [soft music]   
+ ♪ ♪   
+ I remembered this time Darlene and I...     
+ Never mind.     
+ I'd love to hear it, if you don't mind sharing it.     
+ ♪ ♪   
+ [soft laugh]     
+ ♪ ♪   
+ When we were kids, this one year, there was this huge snowstorm.     
+ And Darlene and I were so excited.     
+ And we spent all day just playing outside.     
+ We made this snowman, and we called him...     
+ ♪ ♪   
+ Kevin McAllister, you know, the kid from "Home Alone."     
+ We were pretty obsessed with that movie.     
+ We even did the hands to the face, like how he does in the movie.     
+ And how'd that turn out?     
+ [laughs]     
+ He just looked like a snowman with no arms and weird cheeks.     
+ [both laugh]     
+ And we were so proud of it, we promised we'd steal my dad's camera and take a picture of it before it melted.     
+ And what happened when you went back out?     
+ I never got a chance to.     
+ Why not?     
+ That was the day of my accident, when my dad pushed me out the window.     
+ We were at the hospital till pretty late.     
+ ♪ ♪   
+ Your dad pushed you out a window?     
+ Yeah.     
+ I've told you that before.     
+ Elliot, you've never...     
+ No, you've never told me this.     
+ That's weird.     
+ I remember...     
+ [dark music]   
+ I could have sworn I told you.     
+ ♪ ♪   
+ There's not much to it.     
+ He pushed me out the window.     
+ I broke my arm and went to the hospital.     
+ Kevin melted.     
+ Darlene was pissed.     
+ End of story.     
+ [clock ticking]     
+ What made you think of this just now?     
+ ♪ ♪   
+ [clock ticking]     
+ ♪ ♪   
+ I don't know.     
+ Truth bombs are coming your way, Cody-ites.   
+ Tonight, please welcome our special guest, Joanna Wellick. Thanks for being here.     
+ Thank you for having me.     
+ Scott Knowles has, uh, been facing charges for murdering his wife, Sharon Knowles.     
+ Initially, your husband, Tyrell Wellick, was accused of the murder, until you claimed Scott Knowles confessed to killing his wife while beating you.     
+ And since then, a bartender from the night of the party has also come forward to corroborate your story.     
+ I know that this must be difficult for you.     
+ You've been brave just coming here.     
+ Do you want to tell us a little more about what happened?     
+ My lawyers have advised me not to speak to that.     
+ But what I can say, Frank, is that     
+ I didn't need Scott Knowles to be arrested to know that my husband is innocent.     
+ Mr. Knowles is... clearly a troubled man and has been fixating on us for some time.     
+ I understand that you and your son have been tormented endlessly by fanatics and paparazzi.     
+ Some even went so far as to claim you filed for divorce.     
+ I did file for divorce... a few months ago.     
+ It was a moment of weakness.     
+ I listened to the wrong people, who were convincing me that that was the right thing to do.     
+ But I have and always will be faithful to Tyrell.     
+ I have since dismissed my petition for divorce.     
+ He is... the only man I've ever loved and the only man     
+ I ever will love.     
+ [traffic whooshes]     
+ [on radio]  In times of chaos and uncertainty,   when the world feels off balance,   we look to those who've stood with us from the beginning.   
+ Since     , we've had America's back.   
+ We may get knocked down, but we'll never be knocked out.   
+ -  [ominous music] 
+- Still on your side.   
+ Breaking news: a new fsociety video   has been released.   
+ [distorted] Hello, E Corp.     
+ We are fsociety.     
+ We are here to tell you that though you survived our first blow, you will not survive our last.     
+ In the coming weeks, we will be sending you a message so loud that it will make your eardrums explode... literally.     
+ [explosion]     
+ The clock is ticking.     
+ - [clock ticking] 
+- We are fsociety.     
+ We are malicious and hostile.     
+ We do not compromise.   
+ You have been warned.   
+ -  [tone] 
+- [clicks off]     
+ It was released about an hour ago.     
+ Six weeks, you've given us nothing.     
+ And now we have this to deal with?     
+ That video is bullshit.     
+ That video came from the same Vimeo account as the last one you guys used.     
+ Then it has to be Dark Army.     
+ Cisco probably gave them access.     
+ But that is not one of our guys, okay, trust me on this...     
+ You're a CHS.     
+ You understand what that means, right?     
+ I don't understand half the letters you guys throw at me.     
+ Confidential human source.     
+ Cool. Now I get it.     
+ See what speaking English can accomplish?     
+ Your job is to get intel from Elliot on Tyrell Wellick.     
+ That is the only reason you're not in jail right now.     
+ I don't know what you want me to tell you, dude.     
+ He's not talking to Tyrell.     
+ How do you know that?     
+ [soft dramatic music]   
+ [sighs]     
+ Five weeks ago, the night we lost your tail...     
+ And then gave us a bullshit explanation as to where you went? Yeah.     
+ Stink on that still hasn't washed off.     
+ I asked Elliot point-blank, and he said no.     
+ If you don't believe me, bring him in. He'll tell you the same thing.     
+ You know that telling Elliot anything about this would violate the terms of your immunity.     
+ It would spook his connection to Tyrell.     
+ Get woke already, dude.     
+ He is not nor has he ever had a f*cking relationship with Tyrell.     
+ [sighs]     
+ ♪ ♪   
+ [keyboard clicks]     
+ ♪ ♪   
+ [distorted line trilling]   
+ [phone line crackling]   
+ June   ,     .   
+ This is a call from Queensboro Correctional Facility.   
+ [line crackling]   
+ Hello?   
+ Is it really you?   
+ ♪ ♪   
+ Who is this?   
+ [soft laugh]   
+ Bonsoir, Elliot.   
+ [traffic whooshes]     
+ [on radio]  You're listening to '  s XM radio.   
+ [Roxette's "Listen to Your Heart" plays softly]     
+ [baby cooing softly]     
+ ♪ ♪     
+ You've been looking in the mirror the whole drive home.     
+ - [blinker clicking] 
+- I need to make a stop.     
+ [tense music]   
+ ♪ ♪   
+ [engine cuts out]     
+ [on radio]  ♪ I get a notion from the look in your eyes ♪   
+ Stay here.     
+ ♪ ♪   
+ [grunts]     
+ [car door closes]     
+ You want to consider your actions carefully.     
+ She f*cking lied to me.     
+ She went on national television and she said she still loves him.     
+ You love me!     
+ I know you do!     
+ You told me we were gonna be together.     
+ That's the only reason I agreed to testify!     
+ You made me lie to the police to get Tyrell off!     
+ But now I'm gonna tell them the truth!     
+ [blow lands]     
+ Get up.     
+ [coughs]     
+ [breathing weakly]     
+ If you retract your statement, you will die.     
+ I'm not being overly emotional about this.     
+ It's just that's how little we care about your life.     
+ Forget this night ever happened, move on.     
+ Marry a nice, young lady who actually finds whatever you are charming.     
+ But understand one thing: as certain as the pain you're feeling right now, there is no option where you and Joanna ever see each other again.     
+ [choking]     
+ [gasps]     
+ [coughs]     
+ [gasping weakly]     
+ [coughing]     
+ ♪ ♪   
+ Is everything under control?     
+ Yes, ma'am.     
+ He just needed a little clarity.     
+ [rock music playing on radio]     
+ - [gunshot] 
+- [grunts]     
+ [baby wailing]     
+ [breathing heavily]     
+ [car alarm sounding]     
+ No, no, no, no, no.     
+ [gasping]     
+ [soft grunt]     
+ [gunshot]     
+ [high-pitched tone]   
+ [Roxette's "Listen to Your Heart" builds]     
+ ♪ Listen to your heart ♪   
+ ♪ Take a listen when he's calling for you ♪   
+ ♪ Listen to your heart take a listen ♪   
+ ♪ There's nothing else you can do ♪   
+ ♪ I don't know where you're going ♪   
+ [gunshot]     
+ ♪ And I don't know why ♪   
+ ♪ Listen to your heart ♪   
+ [baby crying]     
+ ♪ Before, oh, listen to your heart ♪   
+ ♪ Take a listen to it when he's calling for you ♪   
+ [ambient tone]   
+ ♪ Listen to your heart take a listen ♪   
+ ♪ There's nothing else you can do ♪   
+ ♪ I don't know where you're going ♪   
+ ♪ And I don't know why ♪   
+ ♪ Listen to your heart ♪   
+ [baby continues crying]     
+ [whirring]     
+ [ambient music]   
+ ♪ ♪   
+ [metal clacking]     
+ [bone squelching]     
+ The shooter didn't survive.     
+ The driver looks like he's gonna pull through.     
+ We have someone down at the hospital, ready to question, but he's still in ICU.     
+ This information is too sensitive to share with the public.     
+ We got lucky we were on the scene before anyone saw the body.     
+ What about the baby?     
+ Once you contact the next of kin...     
+ We're not contacting them.     
+ He's going to social services.     
+ Don't be soft. Not now.     
+ Her husband is the most wanted man in the world.     
+ And you and I both know that finding him is more important than anything else, especially with that goddamn video that just got released.     
+ ♪ ♪   
+ Something about that video.     
+ I believe Darlene when she says it's not real.     
+ We have to assume fsociety's grown past her at this point.     
+ Yeah, but why wouldn't she just say that then?     
+ Her whole immunity's based on giving us intel.     
+ Right now all she wants to do is protect her brother, who took a job at E Corp for Lord knows why.     
+ There's no incentive for her to lie to us.     
+ She didn't even know he was working with Tyrell.     
+ Why would you trust her on this?     
+ Because I still think there's a Dark Army connection here.     
+ We have our other team looking into them.     
+ Your focus needs to stay on Tyrell and fsociety.     
+ [cell phone buzzes]     
+ [camera shutter snapping]     
+ Guys back at CART are zeroing in on the guy in the video.     
+ We might have a good lead soon.     
+ Let's just hope you're reading your girl right.     
+ I'm worried she's a flight risk.     
+ [camera shutter snapping]     
+ No, she's good.     
+ Trust me.     
+ [waves lapping]     
+ [distant chatter, music]     
+ I'm surprised you came.     
+ Thought you were going the distance with the silent treatment.     
+ If I remember correctly, you were the one who told me to go f*ck myself.     
+ Since when did you start remembering everything so well?     
+ Why'd you text me, Darlene? 
+What am I doing here?     
+ Wanted to wish you a happy birthday.     
+ Is that all?     
+ God, what is your problem?     
+ Why are you trying to shut me out?     
+ - Because we can't talk. 
+- Why not?     
+ You know why.     
+ Maybe I want to hear you say it.     
+ Because...     
+ you're my trigger.     
+ What am I, in a f*cking therapy session?     
+ Makes sense.     
+ You're my sister, part of my childhood.     
+ If I could take back what happened to Dad, I would.     
+ What happened to him f*cked me up too.     
+ So don't think for a second our shitty childhood is only yours.     
+ [music continues in distance]     
+ I wish Dad were here right now.     
+ He'd know what to do.     
+ I'm leaving.     
+ First thing in the morning, I'm gonna crash with a friend upstate.     
+ I can't do this anymore.     
+ I can't be here.     
+ Just thought you'd want to know that.     
+ Spending this last year with you was never about whatever the f*ck you want to call what we did.     
+ The real reason I did all of this was so that we could be close again.     
+ I guess that's... something else I thought you'd want to know.     
+ ♪ ♪     
+ 
+ 
+   
+ You remember when we made Kevin McAllister, the snowman?     
+ Of course.     
+ Do you... do you want to talk about it?     
+ ♪ ♪     
+ I want you to stay with me tonight.     
+ I'm good, dude, you don't have to worry about me.     
+ It's not that.     
+ I don't want to be alone.     
+ [waves crashing]     
+ [music stops]     
+ Given the ripple effect of rapid global inflation,   of the    members of this international forum have signed the Five/Nine Economic Accord, making Ecoin the currency by which all others will be measured.     
+ The only obstacle is the illegitimate monetary imposter that China has unofficially adopted...     
+ [tense music]   
+ Bitcoin.     
+ [crowd murmurs]     
+ China is weakening our economic state by not signing this accord, and the fact that they have embraced Bitcoin shows their resistance and emphatic rejection of our collective attempt to rescue the global economy.     
+ In short, ladies and gentlemen...     
+ ♪ ♪   
+ They are declaring a currency war.     
+ [crowd murmuring]     
+ [door closes]     
+ ♪ ♪   
+ This has to be brief.     
+ Truthfully, the only reason I even agreed to meet was that this room happens to be on my way out...     
+ Have your government sign the goddamn accord!     
+ ♪ ♪   
+ In    days, you'll have what you want.     
+ U.N. vote to annex the Congo, it's as good as yours, but this currency war must end.     
+ ♪ ♪   
+ The rest of the world needs China to embrace Ecoin now.     
+ We're at risk of other countries pulling out.     
+ ♪ ♪   
+ Let me put this as simply as I can, so that we never have to belabor this point again.     
+ Your success will always follow mine.     
+ ♪ ♪   
+ I don't give a f*ck about your accord.     
+ Until I get my U.N. vote, don't waste my time.     
+ Or maybe in    days, the administration changes its mind about your precious U.N. vote I worked so hard to procure for you.     
+ ♪ ♪   
+ Your empty threat reminds me that there's something I never shared with you.     
+ My associates found your pet employee after she smuggled out documents on the Washington Township plant.     
+ Now that I've gotten a chance to talk to her, I can see why you like her.     
+ She makes a very good companion.     
+ And those eyes of hers...     
+ I contemplated firing a bullet into each of them, but they're just so hypnotizing.     
+ ♪ ♪   
+ Don't mistake my generosity for generosity.     
+ ♪ ♪   
+ [door closes]     
+ [ambient music]   
+ ♪ ♪   
+ What are you doing?     
+ Why are you awake? It's early.     
+ You're not answering my question.     
+ What were you doing by my computer?     
+ I saw you behind the monitor.     
+ Jesus, I was looking for a pen.     
+ To write you a note.     
+ What's with the f*cking paranoia?     
+ A note for what?     
+ I'm leaving. I have to catch my bus.     
+ The buses aren't running.     
+ There's a transportation strike, it's all over the news.     
+ Okay, the train then.     
+ What's with the interrogation?     
+ You were gonna leave without saying good-bye.     
+ Thus, the note.     
+ And here I thought we were in a good f*cking place after last night.     
+ [music broods]   
+ You're not answering my f*cking question.     
+ Why are you here?     
+ What do you mean? You invited me.     
+ Jesus.     
+ It's you.     
+ What'd you do with the computer?     
+ [shouting] Why did you sleep here last night?     
+ - You're scaring me... 
+- Answer me!     
+ - Are you serious, Elliot? 
+- Answer me!     
+ - You're hurting me... stop! 
+- Answer me!     
+ - Why... 
+- Stop!     
+ [sighs]     
+ Stay the f*ck away from me, you f*cking psycho.     
+ [dramatic music]   
+ ♪ ♪   
+ [train screeches]     
+ [beeps]     
+ ♪ ♪   
+ So how does it work?   
+ How does what work?     
+ [clock ticking]     
+ If I wanted you to talk to him.     
+ What happened? Did he come back?     
+ I need you to talk to him.     
+ Didn't you say that that could help?     
+ Everyone's case is different.     
+ But yes, I think this can help you.     
+ What do we do?     
+ Let's just take a moment.     
+ Why don't you sit back and relax?     
+ I'd like you to close your eyes.     
+ Take a deep breath.     
+ [inhales]     
+ Listen to the sound of my voice.     
+ [soft ambient music]   
+ [echoing softly] If you want me to talk to him, just let him come to me.     
+ ♪ ♪   
+ Give him permission.     
+ [ambient whoosh]   
+ Elliot?     
+ You should know that nothing's gonna come from this.     
+ We were doing just fine.     
+ It's nice to finally meet you.     
+ [solemn piano music]   
+ ♪ ♪   
+ This was better when I could just come and go as I pleased, when we were whole.     
+ Now I'm seeing things that he should be seeing too.     
+ ♪ ♪   
+ We're just getting torn apart.     
+ You need to leave us alone so I can get him back to our work.     
+ [soft scoff]     
+ Elliot never told me how attractive you are.     
+ You know, for a shrink, you're, uh, pretty foxy.     
+ Thank you, but...     
+ I'm more interested in talking about you.     
+ Come on. Never thought about it?     
+ Getting with one of your patients?     
+ That would cross some ethical boundaries for me.     
+ Sucks for you.     
+ Everybody knows crazy can be sexy.     
+ So you think you're crazy?     
+ Relax.     
+ It's a figure of speech.     
+ Can I ask for your name?     
+ Well, what does he call me?     
+ - Mr. Robot. 
+- [soft laugh] Seriously?     
+ He still calls me that?     
+ Talk about labels.     
+ ♪ ♪   
+ I'd like to talk about why you're here.     
+ "A civilization which leaves so many of its citizens unsatisfied and drives them into revolt neither has nor deserves the prospect of a lasting existence."     
+ Who said that?     
+ - Freud. 
+- [book closes shut]     
+ Wow. Beautiful and smart.     
+ ♪ ♪   
+ Sorry.     
+ [sighs] As beautiful as you are, you're not getting inside my head.     
+ Why not?     
+ Because before you found out about me, we were good.     
+ I'm trying to help him.     
+ You're not trying to help him.     
+ You're trying to destroy me.     
+ I'm not trying to destroy you.     
+ Quite the opposite, actually.     
+ I want to understand you.     
+ You understand sh1t.     
+ You're just another phony cooze playing friend.     
+ Eh, it doesn't matter anymore anyway.     
+ Because of her, we've been compromised.     
+ She compromised us, and Elliot didn't see it.     
+ What do you mean, you've been compromised?     
+ ♪ ♪   
+ [suspenseful music]   
+ ♪ ♪   
+ I'm done talking to you.     
+ ♪ ♪   
+ [music stops]   
+ Krista?     
+ When are we gonna start?     
+ [pensive electronic music]   
+ What happened? Were you there?   
+ Did you go with me or stay with him?   
+ What did you see?   
+ What did Mr. Robot mean, "We've been compromised"?   
+ You were there, you heard it along with her, right?   
+ What was Mr. Robot talking about?   
+ [train whooshes]     
+ Scan my QR code and I'll suck your dick.     
+ Who compromised us? Who's even us?   
+ Him and me? Or him and Tyrell?   
+ No, he couldn't still be working with Tyrell.   
+ Could he?   
+ Is Stage   still on?   
+ No, I would know. That's impossible.   
+ Stage   is down. I made sure of it.   
+ Who compromised me?   
+ And why do I suddenly feel so alive?   
+ [dark music]   
+ ♪ ♪   
+ [dog whining]     
+ How do you do it?     
+ How do you get so lucky?     
+ Even when the world's going to sh1t, you're sitting pretty.     
+ The truth is, I never gave a sh1t about the dog.     
+ In fact, I hate the dog.     
+ Vet bills are through the roof because this little piece of sh1t is sick.     
+ She's been sh1tting all over my house for weeks.     
+ It's probably dying.     
+ Figured you wanted her so badly, let her sh1t all over your house.     
+ Like you did mine.     
+ [dog whines]     
+ [footsteps receding]     
+ [dark music]   
+ ♪ ♪   
+ [rousing electronic music]   
+ - [beeps] 
+- [computer whirs]     
+ ♪ ♪   
+ ♪ ♪   
+ [ambient whoosh]   
+ ♪ ♪   
+ Good job.     
+ ♪ ♪   
+ Stage  .     
+ I want it to happen on the day of the U.N. vote.     
+ Whether it goes our way or not.     
+ ♪ ♪   
+ Sir, Stage   is only meant to be implemented if Price doesn't come through.     
+ If the U.N. approves our annexation of the Congo, we can finally move our operation to the country's Luwow mine.     
+ Why would you still want to carry this out, given the serious implications?     
+ ♪ ♪   
+ It's time Phillip Price's hand got slapped.     
+ ♪ ♪   
+ [indistinct chatter]     
+ ♪ ♪   
+ [music stops]   
+ [indistinct TV chatter]     
+ Last time I buy from that coffee shop.     
+ They only take Ecoin.     
+ Gotta use Ecoin.     
+ With the exchange rate, dollar's worth sh1t now.     
+ [clink]     
+ You get anything from Elliot's computer?     
+ He hasn't logged in all day.     
+ Last night he sent an encrypted email with a link.     
+ [mouse clicking, keys clacking]     
+ Could be lucky, could be sending it to Tyrell, right?     
+ Is this from last night?     
+ Oh, also I was able to get a clean audio recording of his place.     
+ - Seriously? 
+- Yeah.     
+ He dropped some good intel.     
+ Here, let me play it for you.     
+ [Barenaked Ladies' "One Week" plays]     
+ - Ugh. 
+- [giggling]     
+ That'll be stuck in my head all day now.     
+ [laughing]     
+ ♪ Come back and see me three days... ♪   
+ [distant clatter]     
+ - Turn it off. 
+- [music halts]     
+ Is that coming from downstairs?     
+ [tense music]   
+ Yeah, that's Darlene's apartment, but... who the f*ck is that?     
+ - Is Darlene home? 
+- No, she's out.     
+ [lock clanks]     
+ You think she told someone about the safe house?     
+ ♪ ♪   
+ This email he sent from his computer, did you go to this link?     
+ Yeah, downloaded the file, opened it, but didn't find anything.     
+ ♪ ♪   
+ This email isn't for Tyrell.     
+ ♪ ♪   
+ It's for us.     
+ ♪ ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

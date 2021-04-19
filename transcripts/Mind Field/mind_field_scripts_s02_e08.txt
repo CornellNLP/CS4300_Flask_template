@@ -1,0 +1,553 @@
+Transcripts - Forever Dreaming :: 02x08 - The Electric Brain - Mind Field 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x08 - The Electric Brain https://transcripts.foreverdreaming.org/viewtopic.php?f=815&t=41190 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 12/27/20 08:11 ] 
+ 
+ 
+ Post subject:  
+ 02x08 - The Electric Brain 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ The nervous system is fundamentally electric. 
+ When we move our arm, it moves because a signal has been sent to the muscle that controls it, and that message is made of charged atoms moving in and out of nerve cells. 
+ It's electricity. 
+ Now, because the brain is electric, we could also use electricity to record what the brain is doing or bypass it entirely, -and control a body. -[beep] 
+ That means that we could use our minds to move other people's bodies, restore movement to people who are paralyzed, feel through an artificial hand as if it was our own, and even read people's minds. 
+ Shocking! 
+ [theme music playing] 
+ Even though electricity wasn't really understood until the 1800s, its ability to influence the body had been known since at least ancient Roman times, when respected physician Scribonius Largus 
+ wrote about a man 
+ who accidentally stepped 
+ on an electric fish 
+ and was suddenly relieved of gout pain. 
+ Scribonius did some experiments and found that you could put an electric fish 
+ on your head and relieve headaches. 
+ In 1804, centuries later, Italian physicist Giovanni Aldini 
+ discovered he could make people's muscles move 
+ with electricity. 
+ He amazed the European world by using electricity to animate the corpse of an executed criminal. 
+ The corpse opened its eyes 
+ and even seemed to sit up. 
+ But Aldini wasn't just trying to shock people. 
+ He was showing the world that neurons, the cells that control both our thoughts and our movements, operate through electricity. 
+ [buzzing] 
+ Imagine bypassing a person's brain so as to control their body. 
+ Now normally when you move your body, your brain sends electrical signals through nerves. 
+ But if we could use electrodes to send those signals, we could control a person's body without needing their brain to be involved. 
+ We could control them with a remote control, and that's what we are about to do today with cockroaches. 
+ I'm here with Tim Marzullo from Backyard Brains, and, Tim, you brought some cockroaches. 
+ [Tim] Yes, Michael, cockroaches use their antenna to sense their environment and move around, and we're going to try to trick the cockroach and control its movement for a number of minutes. 
+ Trick it, how do we trick it? 
+ We are going to do a surgery on the cockroach where we're going to hijack the nervous system to send electrical impulses to their antenna. 
+ [Michael] All right, well, let's get to it. 
+ -[Tim] Let's do it. -[Michael] I've brought with me today a state-of-the-art cockroach operating room. 
+ Now, how do you do surgery on a cockroach? 
+ We have a jar of ice water, and to induce anesthesia we are going to put the cockroaches in the ice water and their nervous system will stop firing electrical impulses. 
+ We'll notice after a minute or two they'll stop moving. 
+ [Michael] Once the roaches were anesthetized, they were ready for surgery. 
+ [Tim] All right, so then now what we're gonna do is attach the electrodes. 
+ So here we have the little connector. 
+ It has three wires. It has a ground wire, and it has a wire for the left antenna and the right antenna. 
+ I'm going to put a little bead of Superglue on the cockroach right here, and then I'm just gonna stick the electrode on the cockroach's head. 
+ [Michael] Next, we inserted the ground wire 
+ into the flight muscle of the wing. 
+ -[Tim] There you go. -[Michael] Cool. 
+ [Tim] I put the wire in the back. 
+ [Michael] The remaining two wires 
+ get inserted into the antenna. 
+ [Tim] Now I'm just gonna snip the antenna right there and we... 
+ [Michael] And now because it's a hollow tube... 
+ ...we can stick the wire in. 
+ [Tim] So now, what I'm gonna do is I'm just gonna insert it into the antenna. 
+ -All right? -[Michael] Got it, wow. 
+ [Tim] And he's ready for the left antenna. 
+ There we go. It went right in there. 
+ I'll put the cockroach right back in the ice water. 
+ Now it's worth pointing out what this does to them and to their quality of life. 
+ [Tim] Yeah, after the surgery I'm gonna take them back to their homes, snip the wires, and these cockroaches will then be retired. 
+ [Michael] And the antenna will grow back? 
+ [Tim] Yes, and I will return them to our reproducing colony, and they'll live happy cockroach lives after the show. 
+ -[Michael] Fantastic. -[Tim] All right. 
+ -So now we're ready to go. -[Michael] Wonderful. 
+ Our cyber-roach was now neurologically wired 
+ for external control. 
+ [Michael] This is a state-of-the-art roach racetrack. 
+ Tim and I are about to take some robo-roaches for a test drive. 
+ But first, Tim, I wanna see how an ordinary roach moves around and uses its antenna. 
+ [Tim] So let's just see where this guy goes. 
+ He wants to explore my hand. 
+ All right, and then, oh wow. 
+ -Wow. -Racin' away. 
+ And you can you see he's hugging that wall. 
+ You can see he keeps tapping the wall and moving along. 
+ He's not in the middle of the road, -he's on the edge of it. -[Michael] Yeah. 
+ As we know, roaches use their antennas 
+ to explore their surroundings 
+ and locate food and shelter. 
+ When no walls or obstacles were sensed, the roaches felt free 
+ to move around at will. 
+ -Hey, guys... -[Tim] Hey, whoa, whoa. 
+ [Michael] follow the rules. 
+ It was time to test-drive 
+ our robo-roach. 
+ [Michael] So this is the battery, along with the Bluetooth device. 
+ [Tim] And I'm just gonna plug them in right now. 
+ [Michael] We're talking about actual voltages. 
+ [Tim] Yes, because we are talking to the nerves in a language that the nerves understand. 
+ [Michael] Tim has built an app 
+ that communicates to the electrode 
+ on the roach's back. 
+ When we swipe right, the electrode sends a signal 
+ to the roach's left antenna, stimulating the sensation of an obstacle 
+ on its left which causes the roach 
+ to move right and vice versa. 
+ Which way should we go, left or right? 
+ I think we should go left. 
+ Left. Whoa. 
+ -[Tim] Okay, well, that's... -[Michael] Doing donuts. 
+ All right, that was a little bit too high. 
+ [Michael] We adjusted the intensity of the signal 
+ to find the optimal setting. 
+ All right, now, I'm gonna try to get him to turn right, go back through the factory. 
+ -[Tim] Oh. -[Michael] Good job. 
+ -[Tim] Okay, very good. -[Michael] Good job. 
+ Now he doesn't know if there's a road, so I'm gonna have to tell him to kind of keep going 
+ -to the right, good. -[Tim] Okay, very good. 
+ -[Michael] Yeah, good, come here. -All right, where is he? 
+ Did he just-- he wants to go to the hot air balloon? 
+ He wants to go to the hot air balloon, but I would rather he go to work at the factory, so I'm gonna-- I'm gonna... 
+ He's like, "I'll go back to work." 
+ [Michael] I'm gonna swipe left. 
+ -[Tim] Okay. -There, good. All right, left. 
+ -[Tim] Very good. -[Michael] Now right. 
+ -[Tim] Ooh. All right. -[Michael] Good. 
+ -[Michael] All right, watch this. And turn right. -[Tim] Okay. 
+ [Michael] Good, good, good. Turn right. 
+ [Tim] All right, turns a little bit. 
+ -[Michael] Turn right, oh. -[Tim] Oh, you see 
+ -he adapts over time. -[Michael] He adapts over time. 
+ So we are taking away their autonomous control of their body. 
+ We're just causing them to think they should decide to move one way or the other. 
+ [Tim] Yeah, some people used to be sort of scared that we're on the slippery slope where I'm gonna control a whole humanity with my electrical stimulation, but you can see that there's so many other sensory signals that the cockroach is receiving, that we're competing with. 
+ -So, Tim, this was very cool... -[Tim] Uh-huh. 
+ -a little bit weird. -[Tim] Uh-huh. 
+ I didn't feel totally comfortable controlling a living organism. 
+ -Uh-huh. -But there's something here that's, that's really important for the future of understanding brains. 
+ [Tim] Sure, we use this technology in biomedical applications, such as cochlear implants, and deep brain stimulation to treat Parkinson's. 
+ But things such as consciousness and attention and will are currently really at the cutting edge of neuroscience research. 
+ How do you make decisions? 
+ The wonderful thing about, uh, neuroscience is that it's wide open. 
+ [Michael] In the very near future, cyber cockroaches could actually save lives. 
+ Researchers at Texas A&M 
+ and North Carolina State University 
+ are developing a groundbreaking use 
+ for robo-roaches in search and rescue missions. 
+ Instead of installing wires 
+ in the roach's antennae, they're implanting receptors 
+ in the bug's actual nervous systems 
+ to insure a longer-term effect. 
+ The plan is to release a swarm of robo-roaches 
+ into a disaster area 
+ like a collapsed building. 
+ As the roaches explore, they'll send images and data back to a computer 
+ which creates a detailed 3D map 
+ of the disaster zone. 
+ If the cyber-bugs stray from the search area, their nerves get stimulated 
+ to steer them back in. 
+ If a roach detects a survivor, a signal is sent back 
+ with the victim's location. 
+ While a real world test has not been done yet, scientists hope to do so 
+ within the next 10 years. 
+ Meanwhile, the same technology 
+ used to cyber-hack cockroaches 
+ can also be used on humans. 
+ Now, Tim, when I move my arm, my brain is sending electrical signals to my muscles and they respond to that, and they contract, and they release. 
+ But you are about to use a battery to electrically stimulate my muscles. 
+ Sure, sure. 
+ [Michael] A human's nervous system can be hacked 
+ with no surgery required. 
+ Tim attached electrodes to my forearm, which communicated via Bluetooth 
+ to an app on his iPad. 
+ [Tim] So I'm gonna amplify the signals of your muscle activity. 
+ So, every time a neuron talks to the muscle, the muscle fires an electrical impulse like the neurons. 
+ So we can see these electrical impulses right here. 
+ So what I want you to do 
+ -is contract. -[Michael grunts] Oh, yeah. 
+ [Tim] All right, so there you go, you can see the impulses 
+ -occurring in your... -Watch this. 
+ [Tim] So that whoosh is the sound of many muscle fibers firing... 
+ -[Michael] Many, many. -firing action potentials because neurons are synapsing on those muscles when you are deciding to move your body. 
+ Let me passively move your hand. 
+ We don't see that much activity, maybe some stretch activity, but now resist me. 
+ -Now there's no movement... -[Michael] Wow. but we're seeing electrical activity because it's due to contraction. 
+ So what's cool about this is that because you are making voluntary movements with your brain, we can exploit these muscle contractions and use it to control robotics. 
+ [Michael] Okay, so, Tim, this is all really cool, but the real reason I invited you here today and told you to bring all of this is that I want to control another human. Alie? 
+ -Hi, Michael. -Thanks for coming. 
+ So, Alie, you might be a little apprehensive now after hearing what I just said, but... 
+ Yeah, yeah, I heard you. 
+ This is for science, and it's gonna go both ways. 
+ I'm gonna let you control my arm as well. You ready? 
+ Okay. Wait, I'm going first, though? 
+ You're gonna go first, I think that's important, yes. 
+ -For... -For randomization. 
+ -[Alie] Okay. -I flipped a coin earlier that no one saw, but it happened. 
+ Alie Ward from the Ologies podcast 
+ was brave enough to let me test 
+ how the brain sends signals to the body, in this case my brain sending signals 
+ to move her body. 
+ And we've placed a screen between us 
+ so she can't see when I make a move 
+ that sends the signal. 
+ All right, let's do it. So, Michael. 
+ Okay. Should I contract like softly or firmly? 
+ -Just go all the way like that, yes. -All the way? 
+ -Okay, here we go. -All right. 
+ -Did you feel anything? -Not yet, no. 
+ -I'm not strong enough. -Okay, I'm gonna turn it up 
+ -a little bit, okay? -[Alie] Okay, yeah. 
+ It feels like pins and needles a little bit. 
+ [Tim] Okay. You're at two. I'm gonna turn up to four, okay? 
+ -[Alie] All right. -Okay. 
+ Now contract, Michael. 
+ Ah! 
+ That was really, really, really weird. 
+ -[Tim] Contract. -Oh, that's really weird. 
+ -[Tim] Okay. -This is really weird. 
+ Oh, that's-- I'd-- I'm still not over that. 
+ It feels like, uh, I'm a marionette and there's just strings being tugged. 
+ [Michael] For the sake of science, it was only fair 
+ that I give Alie a turn at the controls. 
+ But I also wanted to know 
+ what it was like to have someone 
+ control my movements. 
+ All right, now while Alie controls my body, I thought it would be nice to maybe enjoy some hot, bright-red tomato soup and a nice glass of grape juice. 
+ I might even do some writing, [scoffs] multitasking. 
+ So, um, can we try out the strength, uh, just, like, get a bit of a sense 
+ -of what's gonna happen to me? -All right. 
+ So, I'll put it really low at a two. 
+ -[Michael] Good, yeah. -[Tim] Okay. 
+ And, uh, okay, now contract, Alie. 
+ All right. 
+ -Ah, okay, yup, I felt it. -Contract again. 
+ -I felt... -Okay. Did you feel that? 
+ -Yes. -[Tim] All right, now, I'm gonna turn it up to a four. 
+ Okay. 
+ All right, now contract. 
+ -You ready? -Yup. 
+ [laughter] 
+ Wow. 
+ That's, um, that's not me moving my arm. 
+ Or the rest of your entire body responds. 
+ [Michael] Well-- yeah, I'm a jumpy person, so you're gonna get a lot more out of me. 
+ -Okay. -[Michael] Now, please don't control me while I just take a nice, relaxing sip of... 
+ [Alie chuckles] 
+ [Tim] I'll turn it up to five and a half. 
+ [Michael] Okay, I'm just gonna take a nice little, uh, taste of this soup. 
+ This is so mean. I love it. [chuckles] 
+ The meanest part is that this is very lukewarm soup. 
+ All right. Now, just let me please eat in peace. 
+ -I'm sorry. -[Michael] All right, I'm gonna take a break and write something. 
+ I'll leave you alone, I'll leave you alone. 
+ Okay. 
+ [groans] 
+ I'm try-- I can resist it, but... 
+ Like the cockroaches, my body was learning 
+ to adapt to the signal. 
+ To science. 
+ That's the beauty of electrophysiology. 
+ Of course the fact that our neurons work through electricity means that we can also record from them, and that has amazing medical applications. 
+ The electroencephalogram, or EEG, came about in the 1920s, allowing doctors to see some of the brain's 
+ electrical signals as visible brain waves. 
+ But by the 1980s, scientists realized that for some tasks, like the dream of allowing paralyzed patients to move a robotic arm, you need a much richer brain signal. 
+ That's because moving an arm 
+ requires a lot of information. 
+ You need information for how to move your upper arm, your forearm, your hand, your fingers, all through 3D space. 
+ EEG just doesn't carry enough information to do that, since the electrical signals it picks up get distorted after they make their way through our skull and skin. 
+ So, if you wanted to control a prosthetic limb with just your mind, researchers realized you'd need to record directly from the brain. 
+ And in 2006, scientists finally did just that. 
+ They implanted an electrode 
+ in the brain of a paralyzed human 
+ for the very first time. 
+ And since that first test patient, several paralyzed patients 
+ have received brain implants 
+ that allow them to control robotic arms 
+ with their minds. 
+ As our understanding of the brain grows 
+ and our computers get better 
+ at decoding signals from the brain, these patients are gaining finer and finer control 
+ over these robotic arms. 
+ Recently, science has taken a big leap forward 
+ from allowing paralyzed patients 
+ to control robotic limbs 
+ to giving them control of their own limbs. 
+ I traveled to Ohio State University 
+ to meet one of those patients, Ian Burkhart. 
+ At 19, while vacationing with friends, Ian dove into a wave at the beach 
+ and broke his neck on the sandy floor, leaving him paralyzed from the chest down. 
+ [Ian] I knew as soon as I hit that I was paralyzed. 
+ And I was floating face-down in the water 
+ -and could not get up. -Could you... 
+ [Ian] I couldn't move anything at all. 
+ You go from being 19 and independent, living on your own in college, to now. 
+ I need help doing everything 
+ from eating to going to the bathroom, sitting up, getting into my wheelchair. 
+ I can move my shoulders pretty well, can move my biceps that allow me to move my arms a little bit, but nothing from my biceps down. 
+ [Michael] The doctors at Ohio State had approached 
+ Ian about a revolutionary experimental treatment 
+ developed by Battelle, a research and development firm 
+ using cutting-edge technology 
+ called NeuroLife. 
+ They wanted to implant a chip 
+ in Ian's motor cortex, which would allow him to move his hand again 
+ while he was connected to a computer in the lab. 
+ I was invited to the Wexner Medical Center 
+ at Ohio State University to meet the researchers 
+ and witness this cutting-edge work in action. 
+ [Sam] So first we're gonna plug Ian into the system. 
+ [Ian] The piece, uh, is protruding from my skull as... 
+ -[Michael] Yeah. -[Ian] ...reference, that's the pedestal. 
+ It's under a little protective cap, um, but it's there 24/7 and it leads to some wires that go to the actual microchip array that's on the surface of my brain. 
+ [Michael] Pushed into the actual organ of the brain. 
+ [Ian] Exactly. 
+ [Michael] The microchip in Ian's head 
+ detects the blood flow 
+ and electrical impulses of his brain 
+ that are associated with causing movement. 
+ [Sam] So this is the actual chip. 
+ It sits on the surface of his brain. 
+ [Michael] Wow. 
+ Ian's brain is connected to software 
+ that reads and analyzes 
+ his brain activity. 
+ So this is a live look at Ian's motor cortex. 
+ [Marcie] Yes. 
+ So if you think about moving your arm, we should see more activity 
+ -or a different pattern? -[Ian] Yeah. 
+ [Michael] At the start of the session, in order to calibrate the decoder with his brain, Ian is prompted to think about 
+ moving his hand by watching images 
+ of hand movements. 
+ [Ian] You'll see my computer prompt me and as it prompts me to do that, that's what I'm thinking about. 
+ 
+ 
+ 
+ What do you mean "think about?" 
+ [Ian] Just as much as I can think about 
+ -imagining that movement. -Yeah. 
+ As Ian's brain thinks about moving his hand... 
+ -[Sam] Okay, Ian, are you ready? -Yup. 
+ [Michael] ...its electrical signals 
+ are detected by the chip 
+ and sent to the decoder. 
+ Then we take that information and we associate it with a hand closed. 
+ So now the decoder can recognize if he's thinking that same thing again. 
+ [Michael] Next, the decoder sends a signal 
+ to a device that can control 
+ Ian's muscle movement. 
+ This special sleeve on Ian's arm 
+ contains a hundred and thirty electrodes, which stimulate the muscles in his forearm 
+ to produce the specific movements 
+ that his brain is thinking about, such as closing his hand 
+ or moving his thumb. 
+ Now it was time to see Ian move his paralyzed hand 
+ with his thoughts. 
+ [Sam] So, Ian, if you're ready for this next one... 
+ -[Ian] Yup. -I'm gonna count you down. 
+ Three, two, one. 
+ [Michael] Whoa. 
+ [Marcie] So, that was the decoder. 
+ Decoding his thoughts? 
+ -Decoding his thoughts. -[Michael] Wow. 
+ [Marcie] Ian was in control of the movements. 
+ [Michael] Nice work. 
+ Already, Ian's achievements 
+ go far beyond closing his hand. 
+ With the help of this cutting-edge technology, he can use his own paralyzed hand 
+ to do a number of fine motor tasks 
+ from everyday movements 
+ to playing Guitar Hero. 
+ How many other people are like Ian? 
+ Currently in the world, maybe five? 
+ [Michael] Ian continues to gain more independence 
+ outside the lab, as well. 
+ Do people ever drive with you and get nervous like, "Oh, my gosh, well, clearly this is dangerous." 
+ [Ian] I think if everyone else that was driving along in the road knew I have no use of my hands going 70 miles an hour down the freeway, they may not like that. 
+ But they've-- they have nothing to worry about. 
+ [Ian] Right, yeah, and I'm probably safer because I can't take my hands off the wheel 
+ -to get on my cell phone and... -Right. Yup. 
+ You're not fiddling with the radio and... 
+ Yeah, that I shouldn't be doing while I'm driving. 
+ [Michael] Ian's progress was truly inspiring, and this was only the beginning for him. 
+ What are your hopes for the future for yourself? 
+ [Ian] Hopefully, I can upgrade to the next version and, you know, have more capabilities and be able to do things a lot easier. 
+ In the long term, I hope that this can be a device 
+ that people just use. 
+ You have someone who has a spinal cord injury 
+ and they can just continue 
+ right where they left off. 
+ I think, you know, the work that we're doing is something that has never been done before and it's really exciting to be on that cutting edge. 
+ Restoring movement is one thing, but what about feeling, sensation? 
+ We feel with our skin because of signals sent to the somatosensory cortex of our brain. 
+ By putting sensors in robotic fingers connected to implants in a person's somatosensory cortex, researchers at the University of Pittsburgh have enabled Nathan Copeland to feel through a robotic hand. 
+ Nathan underwent brain surgery 
+ to receive two implants, one in his motor cortex 
+ to control a robotic arm 
+ and a second implant 
+ over his somatosensory cortex. 
+ This second implant 
+ stimulates his brain 
+ and the pattern of stimulation depends 
+ on what part of the robot hand is touched. 
+ So, if you touch the robot on a specific finger, then the part of Nathan's somatosensory cortex 
+ that normally responds to that finger 
+ get stimulated. 
+ [Nathan] Pinky. 
+ Uh, middle. 
+ [Michael] His brain interprets that as touch. 
+ Nathan and Ian's remarkable achievements 
+ have been aided by their ability 
+ to communicate with the researchers involved. 
+ But what can be done for people 
+ who are not only unable to move, but also unable to speak? 
+ Steve Kaplan was an active 
+ 57-year-old computer programmer dating Laurie, a horse wrangler for the rodeo. 
+ But that all changed a year ago 
+ when he suffered a massive stroke 
+ leaving him in a vegetative state, unable to move or speak. 
+ Doctors initially declared Steve brain dead. 
+ However, inside his body 
+ he was fully conscious, but unable to tell them so. 
+ It wasn't until a nurse noticed 
+ that Steve's eye movements were intentional 
+ that he was diagnosed with locked-in syndrome, a condition which robs people of everything 
+ but their mind. 
+ While a normal brain receives electrical signals 
+ from the senses and sends signals back to them, the stroke prevented the electrical signals 
+ from leaving Steve's brain. 
+ Over the last year, with the help of physical therapists, Steve has regained some very minor 
+ range of motion in his neck. 
+ I sat down with Steve and his now-wife Laurie 
+ to learn more about locked-in syndrome. 
+ Steve, Laurie, hello. 
+ Although he's still unable to speak, thanks to new scientific developments, Steve can communicate with the outside world 
+ using a computer. 
+ [computer male voice] Hello, Michael. 
+ [Michael] Nice to meet you, Steve. 
+ And nice to meet you, Laurie. 
+ First of all, thank you so much for giving us some time. 
+ Tell me how Steve started being able to communicate. 
+ [Laurie] Well, you know, I asked a lot of questions about locked-in syndrome when they explained what it was, and there wasn't a lot of answers. 
+ -Yeah. -[Laurie] At the beginning, he would blink once for yes and twice for no. 
+ And that was the first parts of the communication. 
+ And then they gave us a board, and I went through the ABCs, and he would close his eyes 
+ when I got to what he wanted. 
+ I'd write it down, and that's how it began. 
+ [Michael] As you could imagine, Laurie and Steve's first method of communicating 
+ was a slow and painstaking process. 
+ But just months later, an engineer working to help 
+ locked-in patients 
+ built Steve a machine 
+ that tracks his eye movements. 
+ As Steve looks at different letters on a screen, the machine translates where he's looking 
+ into synthesized audible speech. 
+ [computer male voice] I want to recover. 
+ [Michael] Although there's still a slight delay 
+ in communication as Steve scans 
+ the letters on the screen, this method is much more fluid 
+ and significantly faster. 
+ The computer helps me communicate 
+ [Michael] Yeah. You can write with your eyes. 
+ [Laurie] This thing's amazing. 
+ He can email, he can text, call me if he needs something. 
+ It's such a relief. 
+ [computer male voice] It does wonders. 
+ [Michael] It does wonders, yes. 
+ -Uh-hmm, [chuckles] -[Michael] And I could only imagine how emotional it would have been to you to be able to look and write a thing, and then have it spoken. 
+ And, Laurie, for you to hear words coming from his mind, from his heart, especially for the first time 
+ -in a long time. -[Laurie] Yes. 
+ What was the first thing you said, Steve? 
+ [computer male voice] The first message was happy birthday. 
+ [laughter] 
+ What a birthday present. 
+ [Laurie laughs] It really was. 
+ [Michael] Steve's progress is remarkable, and it would be difficult to deny 
+ the connection between his new ability to communicate 
+ and connect with the outside world 
+ with the incredible advances 
+ he's made physically over the last year. 
+ -Look up at the ceiling. -[Michael] Yeah. 
+ -Look down at your thumbs. -[clears throat] 
+ Look over at me, your beautiful wife. 
+ [laughter] 
+ [Michael] Laurie and Steve hope that one day 
+ Steve will make a full recovery 
+ from locked-in syndrome. 
+ Steve's eye-tracking device is electric, and so is his brain. 
+ They're connected by the fact that Steve can move his eyes. 
+ But some locked-in patients can't even control their eye movements. 
+ They have what is known as completely locked-in syndrome. 
+ For these patients, the eye-tracking technology that helped Steve communicate is useless. 
+ But researchers in Europe recently found a way 
+ of allowing completely locked-in patients 
+ to communicate using just their thoughts. 
+ The researchers combined EEG 
+ with near-infrared spectroscopy, which can non-invasively 
+ measure blood flow in the brain. 
+ The patients were asked simple yes or no questions that the researchers knew the answers to, which allowed them to train a machine to recognize which brain signals meant yes and which brain signals meant no. 
+ The researchers then asked the patients a new set of questions they knew the answer to, and using just their thoughts, the patients were able to give 
+ the correct answers to 70% of the questions. 
+ Now, giving just yes or no answers may be limited, but this technology is new. 
+ All of this happened just this year. 
+ These rapid advancements, thanks to the devotion and effort of researchers 
+ and subjects around the world, are slowly but surely 
+ chipping away at the mysteries of the mind. 
+ The better we understand the mind, the better we'll be able to help the millions of people who struggle to do what they want because of psychological or neurological conditions, and ultimately the better we'll understand ourselves. 
+ And as always, thanks for watching. 
+ [theme music playing] 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

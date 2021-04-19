@@ -1,0 +1,729 @@
+Transcripts - Forever Dreaming :: 01x11 - Sacrifice - Numb3rs 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x11 - Sacrifice https://transcripts.foreverdreaming.org/viewtopic.php?f=1003&t=42508 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 02/14/21 13:42 ] 
+ 
+ 
+ Post subject:  
+ 01x11 - Sacrifice 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ ( alarm blaring ) 
+ ( alarm continues ) 
+ Hey, Pete, I think I got something. 
+ You better call it in. 
+ Agent Eppes? 
+ Yeah. 
+ David Sinclair. 
+ How you doing? John Reacher. 
+ I'm with the Bureau's Security Division. 
+ Victim was a computer science researcher for a private think tank. 
+ High-level National Security clearance. 
+ DON: Who's that? 
+ This is Robert Oliver. 
+ He's the CEO of The Lorman Group. 
+ How are you? Don Eppes, FBI. 
+ Hi. 
+ The Lorman Group is the think tank? 
+ That's right. 
+ They have a number of contracts with us for classified government projects. 
+ So, the victim was one of your employees? 
+ Yes. Uh, Dr. Hoke was one of our senior researchers. 
+ I'll check on the body. DON: All right. 
+ Any reason to think the murder had anything to do with the work he was doing for you? 
+ It's possible. 
+ Those Bureau Techs? 
+ No, they're with my company. 
+ What are you doing? They're civilians. 
+ They have security clearance. 
+ DON: Gentlemen, back away from that computer. 
+ REACHER: Agent Eppes, can I talk to you for a minute? 
+ I have an obligation to secure the contents of Dr. Hoke's computer. 
+ Well, I got an obligation to investigate a murder, and whatever these guys are doing, they're contaminating my crime scene. 
+ Your crime scene? 
+ That's right. Unless there's something I don't know, my homicide investigation's gonna take priority over your security concerns. 
+ Don. 
+ We've got multiple stab wounds. 
+ The Coroner's Investigator says he's been dead for almost two days. 
+ What was that about? 
+ He was going to let those guys take data off that computer. 
+ Well, I think somebody beat them to it. 
+ According to what I heard, the files were already erased. 
+ All right, we're gonna start with that. 
+ Nobody touches it. All right. 
+ Let's get our people on it immediately. 
+ All right. Adam, Carter. 
+ ( echoing ): We all use math every day... to predict weather... to tell time... to handle money. 
+ Math is more than formulas and equations. 
+ It's logic. 
+ It's rationality. 
+ It's using your mind to solve the biggest mysteries we know. 
+ WOMAN: Okay, well, the first thing is, whoever wiped the information off of this hard drive didn't make a copy of it. 
+ You sure about that? 
+ Absolutely. 
+ Hoke had an event log on his computer. 
+ Recorded the wipe, but no duplication. 
+ And whoever did do the wipe knew exactly what they were doing. 
+ This code's been flipped hundreds of thousands of times. 
+ Wait. Define flipped. 
+ A computer's language boils down to binary code. 
+ Every bit of information is a specific sequence of zeroes and ones, like coins, all heads or tails. 
+ When you wipe the data, you don't really erase it. 
+ You just start flipping the coins back and forth. 
+ That destroys the code and renders the information pretty much unintelligible. 
+ Now, mind you, we're talking about binary code, which is millions upon millions of zeroes and ones. 
+ In order to recreate the data, I need to reconstruct the original sequence of the code. 
+ To flip it back to the way it was originally. 
+ Try to. But as you said, you're talking about millions and millions of numbers. 
+ CHARLIE: Now the program that was used to flip Hoke's code left a pattern behind. 
+ If I can find it, I can reverse engineer the program and reconstruct the original sequence. 
+ Give it a shot. Let me know if you find anything. 
+ Hey. 
+ Hey. 
+ Jonas Hoke was an applied physicist. 
+ Lived alone, no kids, and from everything I've heard so far, totally devoted to his work. 
+ He was in the middle of a divorce. 
+ Wife left him a few months ago. 
+ Oh, yeah? Any history there? 
+ No police reports, no 911 calls. 
+ Neighbors say he was a quiet, friendly guy. 
+ Yeah, who somehow wound up being butchered in his own house. 
+ House ransacked. You've got multiple stab wounds. 
+ Alarm tripped. 
+ Not really the M.O. of a professional killer. 
+ Why is the alarm tripped on the night the body's discovered, as opposed to two days earlier, when the guy's actually murdered? 
+ There's no evidence the body was ever moved. 
+ Yeah, the neighbors don't report seeing anyone else in the area. 
+ Still, the house being ransacked suggests somebody was searching for something. 
+ Well, whoever wiped that file knew what to look for, that's for sure. 
+ You think they trashed the house on a ruse? 
+ Make it look like an amateur? 
+ Why don't you go check out the wife? 
+ I'm going to talk to Reacher about the Lorman connection. 
+ DAVID: Mrs. Hoke, I understand there was a dispute over the money involved in the separation. 
+ I guess we both valued our time together a little differently. 
+ Maybe it was because he was angry I left. 
+ I don't know, but Jonas felt it appropriate that I leave the marriage with what I came to it with. 
+ I wanted to ask him for the 12 years back, but I didn't know how. 
+ When was the last time you spoke to your husband? 
+ A few weeks ago. 
+ He was late with a separation check. 
+ He'd do that -- forget. 
+ Sometimes I wondered if it was intentional. 
+ Mrs. Hoke, I have to ask you, where were you on the 14th? 
+ Right, I understand. 
+ As it happens, I was at home. 
+ Any witnesses who can verify that? 
+ Lucas Grodin. 
+ He is a friend. 
+ I don't expect you to understand. 
+ I'm not judging you, Mrs. Hoke. 
+ I'm just trying to take your statement. 
+ So, your tech's sure whoever it was who wiped Hoke's files from the hard drive -- they didn't make a copy? That's right. 
+ Apparently, it was erased, but not duplicated. 
+ My bosses will be happy to hear that. 
+ You know, you guys... 
+ You ought to remind your bosses that a man was murdered over this, you know? 
+ I didn't mean it the way it sounded. 
+ Look, what exactly did Hoke do for The Lorman Group? 
+ The company had a contract with the Defense Department for a new computer system, one that could better interpret global satellite imaging. 
+ So, so new that someone would kill over it? 
+ It's pretty sensitive stuff, but a motive for murder? 
+ I don't know. 
+ Hey. So Hoke was working on a DOD contract for a computer program that interprets satellite images. 
+ Remote Sensing. 
+ It's a process that scans electromagnetic signatures from the earth's surface. 
+ It was used to detect prehistoric Incan paths to sacred burial sites. 
+ Hoke was probably developing it to read roadside bombs or ruts from tanks. 
+ Why didn't you tell me you found this? 
+ Because that data wasn't the focus of the hard drive wipe. 
+ All right. What was? 
+ Say I want to hide what I've written. 
+ Have I hidden it? 
+ CHARLIE: Exactly. 
+ The impression runs deeper than the one sheet I've written it on. 
+ Now, if I really wanted to conceal it, I would do this. 
+ Hoke's remote sensing work was erased with the equivalent of a magic marker, but this section here was scribbled out with a data scrubber -- the equivalent of a pencil. 
+ On the surface, it renders the computer code meaningless, but here there are magnetic shadows underneath, pieces of data left behind that I was able to find. 
+ All right, tell me. 
+ Numbers. 
+ Specifically, like, baseball statistics. 
+ Baseball statistics? 
+ Batting averages, on-base percentages. 
+ I mean, as far as I can tell, Hoke was developing a pretty sophisticated application of sabermetrics, which places numerical values on specific skills, like home runs, hits, walks. 
+ A lot of teams use sabermetrics to identify the best way to allocate their resources. 
+ Yeah. What was that book about the...? 
+ It was the Oakland A's GM. 
+ Money Ball. Yeah, Money Ball. 
+ Right. Only Hoke was taking his formulas to a whole new level, attempting to predict player performance based on statistical curves. 
+ All right, so, why erase baseball stats? 
+ And why kill over it? 
+ I have no idea. Hmm. 
+ But I might be able to use a predictive equation to rebuild the missing data, like detecting the original lines here, and guessing at what letters they could make. 
+ Right. Well, I mean, we got to know what they were trying to hide. 
+ OLIVER: Obviously, it was quite a shock to hear about Jonas. 
+ To see him like that. 
+ I'm sure. 
+ I'm sorry for your loss. 
+ Yeah. We'd worked together for quite a while. 
+ Well, I'm gonna need to get a consultant in to access Dr. Hoke's computer. 
+ Well, I don't see a problem. 
+ So, this is Dr. Hoke's office. 
+ This is Scott Reynolds. 
+ He's Dr. Hoke's research assistant. 
+ Has anything else been touched in this office? 
+ Uh, no. Uh, Agent Reacher told us to leave everything in place. 
+ What are you doing on this computer? 
+ Just checking e-mails, general housekeeping. 
+ Well, I'd appreciate it if you did that someplace else for the time being. 
+ Okay. 
+ You worked with Dr. Hoke on a daily basis? 
+ Yeah. 
+ You remember what you were doing on the 14th? 
+ Uh, it was a Tuesday? 
+ Um, he came in that Monday, and then I didn't hear from him again till Mr. Oliver called me and told me what happened. 
+ Well, he was missing for two days. Wasn't that a little unusual? 
+ No, he would stay home from the office three, four days at a time. 
+ Scott's right. Jonas could get lost in his work. 
+ DON: Was Dr. Hoke a fan of baseball, by any chance? 
+ Baseball? Yeah. 
+ Oh, I'm not sure. 
+ Uh, he never went to any games or anything, if that's what you mean. 
+ Why do you ask? 
+ It's just a little survey I'm doing. 
+ You gentlemen are going to have to leave this office. 
+ Well, apparently, Hoke wasn't that into baseball. 
+ I mean, there's no autographed balls, no sports memorabilia whatsoever. 
+ So, whatever his interest, as far as I could tell, it wasn't personal. 
+ Maybe he was interested in sabermetrics as a hobby? 
+ Well, it doesn't seem like that should get you stabbed to death. 
+ How are you doing on recreating his data? 
+ I've been running the corrupted files through a series of algorithms on my computer. 
+ All right, well, as soon as you find anything, let me know, 'cause I want to get you out here and look at his computer, all right? 
+ All right, well, I'm actually on my way to give a lecture right now, but sure, afterwards, any way I can help. 
+ All right, good, thanks, Charlie. 
+ Now, did I just hear you say the word "sabermetrics"? 
+ Familiar with it? 
+ The "Money Ball" craze? 
+ Oh, yes, I'm familiar with it. 
+ I take it you don't approve. 
+ Well, the notion that human achievement on a baseball diamond can be predicted through the application of statistical analysis is, at it's very core, highly problematic. 
+ Even if the skill can be statistically measured? 
+ Yes, because, Charles, the human spirit is immeasurable. 
+ You know, our brains aren't just these machines. 
+ There's a lot of either/or going on here. 
+ Yes, statistical probability is a wonderful tool, but applied to human performance, it's only an extrapolation of the past. 
+ Still there are a number of baseball teams that use sabermetrics to determine who to pay. 
+ As a Dodger fan, I'm all too painfully aware of that fact, but I'm also aware that in a statistical model, the Red Sox never beat the Yankees. 
+ Ah, there are exceptions to every rule. 
+ Yes, and aren't they glorious? ( chuckles ) 
+ Now, why is Don even asking you about statistical baseball analysis? 
+ ( sighs ): A researcher was found murdered. 
+ Wait, are we talking about Jonas Hoke? 
+ You knew him? 
+ He... yeah. 
+ We were doctoral students together. 
+ Well, not together, but at the same time. 
+ He just -- I don't know. 
+ There's that old saying: 
+ "Applied physicists are from Venus, "theoretical physicists... 
+ ...wonder why it rotates in the opposite direction." 
+ There you go. 
+ No, our department was informed of his passing and the planned memorial service. 
+ I'm sorry. 
+ Well, the book doesn't always work, Charles, and numbers can't always account for the way life turns out. 
+ Well, I mean, just ask Jonas Hoke. 
+ DON: What do you say, David? 
+ Hey. Anything at The Lorman Group? 
+ Well, Hoke didn't show up for work for two days, and he wasn't missed. 
+ That's either very sad, or that's a really good job. 
+ Yeah? Seemed odd to me. 
+ Well, guess who had a $2 million insurance policy. 
+ What? The good Dr. Hoke? 
+ Mm-hmm. And guess who the beneficiary is? 
+ Not the wife. 
+ Yep. Turns out the divorce was nastier than we thought. 
+ Major issue being Hoke's potential earnings. 
+ Apparently, he didn't want to give her any. 
+ So she takes him out and gets the money she's entitled to? 
+ Then she's free and single again. 
+ He's her alibi the night of the murder. Arrested in '84. 
+ Assault and battery. 
+ I guess she figured Hoke was worth more dead than alive. 
+ MAN: I was twenty years old. 
+ I got in a fight with a guy at a bar. 
+ Two years probation, believe me, I learned my lesson. 
+ Which was what -- don't leave any witnesses behind the next time? 
+ You have some imagination. 
+ We do. 
+ How about you imagining this -- 
+ Gail Hoke's in the middle of a bad divorce, right? 
+ I mean, it really isn't going well. 
+ On the other hand, a dead husband pays out on a $2 million insurance policy. 
+ Wonder how many of these you'd have to work to make up that. 
+ And, killing Jonas helps me how? 
+ Because maybe Gail will give me some of her insurance settlement? 
+ Well, with him out of the way, she's free to marry again. 
+ Gail and I like each other. 
+ Maybe it's even more than that, but neither one of us has ever talked about marriage. 
+ All right. 
+ We'll be in touch. 
+ Gail Hoke wasn't over her ex-husband. 
+ I got that much from both of them. 
+ Well, doesn't mean she didn't kill him. 
+ Yeah, but I got the feeling she wasn't willing to admit the marriage was over. 
+ She was thinking about going back to him. 
+ How'd you get that? 
+ Kind of reminded me of my sister Linda when she got divorced. 
+ Moved out, got her own place, sat around waiting for her ex to call instead of getting out and getting on with her life. 
+ Did he call? 
+ Yeah, and she went back to him. 
+ I always thought she could've done better, you know, just given herself a chance. 
+ Thanks. Yeah. Yeah? 
+ Knucklehead, you know. 
+ Hello. I'm sorry. I have pretty specific instructions. 
+ No one's supposed to use this computer. 
+ Oh, I'm sorry. You must be Scott. 
+ Yeah. I'm Professor Charlie Eppes. 
+ Oh, I'm the, um, yeah, I'm the... FBI consultant. 
+ Oh, all right. 
+ Yeah, Mr. Oliver said you were coming. 
+ I was told that, uh, none of Dr. Hoke's work was to be touched before I got here. 
+ No, all that stuff's mine. 
+ Oh, you're leaving. 
+ Yeah. Well, they probably would have offered me another position here, but Dr. Hoke was kind of, kind of a mentor to me, and you work that closely with someone, it's hard. 
+ Mm. I can imagine. 
+ I work pretty closely with someone myself. 
+ He always wanted me to go back to school, finish my dissertation, so... 
+ Thinking now I will... 
+ Oh, that's great. What's your field? 
+ Econometrics, specializing in economic statistics. 
+ Ooh. 
+ Yeah, that's exactly what my dad said when I told him I was gonna borrow 30 grand a year to pay for it. 
+ He's like, "You don't make money by studying it." 
+ Mathematics can be much more lucrative than most fathers think. 
+ Yeah, but I want to do something with it. 
+ You know, make a difference in the world. 
+ That's really admirable. 
+ Well, 'cause people, they assume that the economy's this adversarial relationship, where one person's gain, by definition, has to be another person's loss. 
+ But it doesn't have to be that way. 
+ There can be gains for everyone. 
+ I'm sure you're right. No, I know I am. 
+ It's all there in the numbers... if anyone would just bother to look. 
+ Ah, I think I know just how you feel. 
+ Well, if you need me for anything, just let me know. 
+ Hey, Scott. 
+ Is there any reason that Dr. Hoke would've been working on, like... baseball formulas? 
+ Yeah, you know, the other FBI agent asked me that same thing about baseball. 
+ I-I told him Dr. Hoke never mentioned it. 
+ Yeah. Any backup files, any-any other workstation that Dr. Hoke might have used? 
+ No. That man was particular about where he worked. 
+ It was either this computer or the one at home. 
+ And you weren't aware of any of his work on sabermetrics? 
+ But then again, I'm not much of a baseball fan. 
+ (footsteps) 
+ Larry. 
+ Charlie. 
+ What are you doing here? 
+ Well, you mentioned a memorial, and I knew you'd be here. 
+ Oh, yeah. 
+ It's a rather disheartening turnout, isn't it? 
+ Are we early? 
+ No, I don't think so. 
+ It's physics. 
+ It's such a demanding field. 
+ Leaves little time or energy for a social life. 
+ Einstein said that one has either time for science or family... but not both. 
+ Well, now, that's spoken like a man who can appreciate our predicament. 
+ CHARLIE: I wonder though... Is our work the actual cause, or is it an excuse? 
+ That's a fair hypothesis, isn't it? 
+ I suppose the real trick is in finding the solution while it still matters. 
+ ALAN: What do these formulas tell you? 
+ CHARLIE: The ones I've recovered indicate that the Dodgers are not on the right track to win the pennant next year. 
+ Like you needed math to figure that one out, huh? 
+ ( chuckling ): No. 
+ ( chuckles ) 
+ I heard that, uh, Don was leaning towards the wife. 
+ That's right. 
+ Seems to be the first place they look nowadays. 
+ I don't understand. 
+ I mean, if you hate the person you're married to that much, get divorced. 
+ Even the thought of divorce holds its own special horrors, let me tell you. 
+ Well, you and Mom never thought about... 
+ I mean, I was never witness to any kind of... 
+ That's exactly the way we wanted it. 
+ Well, it was a long time ago, we, um... 
+ We had a little rough patch there for a moment, but we got through it. 
+ How rough a patch are we talking about? 
+ It was when you were 13 years old, and you went off to Princeton. 
+ Mom came with me. 
+ The separation was... pretty hard on both of us. 
+ And aside from the money matters, there was this irrational jealousy. 
+ Anyway, even the possibility of divorce was never discussed, because we loved each other too much. 
+ I don't remember any of it. 
+ I don't even remember a raised voice between the two of you. 
+ That's because your mother and I both agreed that we wouldn't stress you or Don any more than we had to. 
+ Charlie, that's how parents argue in front of their children; they disguise the big things as little things. 
+ CHARLIE: Big things disguised as little things. 
+ In World War II, U.S. submarines were equipped with bathythermographs, which helped them find warm pockets of water beneath colder ones, because warm water bent the sound waves away. 
+ If the submarine hid in the right place, the enemy's sonar was useless. 
+ Hoke did the same thing with his own data. 
+ He hid it in warm water. 
+ He disguised his work as baseball statistics, thereby hiding its real meaning. 
+ How'd you figure it out? 
+ CHARLIE: The magnetic shadows that were left on the hard drive after the wipe. 
+ I ran the extrapolated data through a series of simple algorithms. 
+ The end result was that the baseball statistics fell away, leaving the pertinent numbers. 
+ I then did a simple brute force analysis... 
+ Brute force? 
+ I just went on the internet and Googled the set of numbers. 
+ I sifted through the hits one by one, to find the matching data tables. 
+ ( beeps ) 
+ Hoke pulled his data off of U.S. Census Bureau reports over the last ten years. 
+ Other tables were federal budgets, grade point averages, SAT scores. 
+ Grade point averages? 
+ Hoke's work had nothing to do with baseball at all. 
+ He was attempting to apply the concept of sabermetrics to average communities, not athletes. 
+ You're talking about real people? 
+ Actuaries do it all the time. 
+ Uh, taking into account income levels, access to health insurance. 
+ Only Hoke wasn't measuring life expectancy; he was measuring human potential. 
+ What do you mean? 
+ Like predicting success? 
+ Almost from birth. 
+ That's not possible. 
+ Baseball teams use sabermetrics to determine which players to pay. 
+ He was using sabermetrics to determine what people were worth investing in. 
+ So no one gets left behind, they just never get started to begin with. 
+ It applies to schools. 
+ It applies to hospitals, to libraries. 
+ I mean, companies fire employees who smoke because of future statistical probabilities of cancer. 
+ Uh, they use DNA to deny employees access to healthcare. 
+ I mean, why not a mathematical analysis to do the exact same thing? 
+ And you're saying he was actually close? 
+ Well, from what I can tell, he hadn't finished his main equation, though once he was through, theoretically, he'd be able to predict human performance based on geographic and environmental factors, down to a city block. 
+ So basically, you are where you live? 
+ A mathematical determination of who will or won't be a winner. 
+ REYNOLDS: I've never seen any of this stuff before. 
+ Well, it's an incredible amount of data. 
+ So you're saying Dr. Hoke never asked for your help? 
+ With this? Absolutely not. 
+ I mean, you know how it is. 
+ He works alone. 
+ I'd get glimpses, but it's not like he includes me or anything. 
+ Yeah, but what about research, Scott? 
+ I mean, you never prepared charts, or downloaded statistics? 
+ That seem a little weird, considering what you thought he might be working on? 
+ Um, there's some market research studies that he asked me to get. 
+ Yeah? 
+ But I don't know. 
+ Market research? 
+ Yeah, stuff the Lorman Group was compiling. 
+ What kind of stuff? 
+ Household incomes, housing costs, buying tendencies. 
+ This was all stuff the Lorman Group was working on? 
+ Yeah. Um, Dr. Hoke would make the request, and then Mr. Oliver would have me e-mail it to his home. 
+ And when was this? 
+ Up until a few weeks ago. 
+ What happened a few weeks ago? 
+ For the last request, Mr. Oliver called me into his office, and he said the company was not going to allow Dr. Hoke access to the information anymore. 
+ Did he tell you why? 
+ I mean, it's not really my place to ask, but I just remember Dr. Hoke was pretty upset about it. 
+ Oh, yeah? 
+ Okay. Thanks for talking to us. 
+ I'll take that. Yeah. 
+ Thanks a lot, Scott. 
+ All right. 
+ Sounds like Hoke was going behind the company's back, trying to develop a new software program. 
+ Either that, or trying to hijack it. 
+ Explains why Oliver shows up the night the body's found. 
+ Yeah, he's gonna get back his program, right? 
+ Question is, did they want it bad enough to kill him for it? 
+ Well, I mean, he was concerned that someone was going to steal it, right? 
+ Otherwise, why disguise it as baseball stats? 
+ And why would he bother to do it on his own home computer? 
+ Unless he was worried that his house wasn't as private as he thought it was. 
+ Don, take a look. 
+ Oh, yeah, look at that. 
+ Something was there. Mm-hmm. 
+ Maybe they didn't have time to pull the wire. 
+ A dead body decomposing a few feet away -- maybe they felt the need to rush. 
+ DON: Oh, yeah. 
+ Someone put some kind of surveillance there. 
+ 
+ 
+ 
+ Hoke had a reason to be paranoid. 
+ See, that must be why the alarm went off two days late. 
+ DAVID: So someone came in after he was murdered to remove the device. 
+ That's what tripped it. 
+ So, someone planted a surveillance device in Dr. Hoke's house. 
+ Well, judging by your tone, you think that someone is me? 
+ Dr. Hoke was working on a software program that would be extremely valuable to a lot of people. 
+ Yes, well, I gave the FBI full access to the imaging data. 
+ DON: Well, actually, we found a second body of work on his home computer, and it had nothing to do with your satellite program. 
+ I have no idea what you're talking about. 
+ No? 
+ You sure? 
+ So if our consultant wanted to develop that data, you wouldn't assert a claim? 
+ Well, The Lorman Group has a contract with every researcher we employ, so anything that Dr. Hoke worked on is owned by the company. 
+ Maybe he didn't agree. 
+ Maybe you went to his house, argued. 
+ The night I met you is the only time I was ever in Dr. Hoke's house. 
+ There's more then one way inside of a person's home. 
+ Look, we want that surveillance, okay? 
+ I want my lawyer. 
+ You sure? 'Cause if someone happened to leak to the press that your company is under criminal investigation, your government contracts -- they might dry up pretty darn fast. 
+ What do you think? 
+ TERRY: Feds don't like scandals. 
+ You take a moment, think about it. 
+ ( sighs ) 
+ Jonas had no right doing what he did. 
+ No? 
+ The idea of using statistical analyses to predict human performance originated in this company. 
+ But he didn't see it that way? 
+ He refused to provide algorithms to us unless we gave him a percentage of the license fees we charge for the use of our software. 
+ And this time I bet you refused. 
+ I had no intention of being extorted by Jonas Hoke or anyone else. 
+ So, you put the surveillance on him? 
+ I did no such thing. 
+ But after I learned that he died, I felt that we were within our rights to retrieve the research. 
+ So, what, you called your friend, Reacher? 
+ Look, the point of all of this is, I didn't have to steal anything from Jonas Hoke. 
+ I already owned it. 
+ DON: Uh-huh. 
+ All right. 
+ We'll be in touch. 
+ So Oliver told you what Hoke was working on. 
+ That's why you wanted his people there. 
+ Oliver said Hoke had a program that could determine with mathematical certainty which neighborhoods would benefit from public spending and which ones wouldn't. 
+ Yeah, and you understand this is about justifying taking money from some certain communities and giving it to others. 
+ In case you hadn't heard, we're running a $10 trillion deficit. 
+ Yeah, I read the papers. 
+ Why throw money away on state-of-the-art lab facilities for kids who have no potential? 
+ That's right. Why even give them books? 
+ Oliver asked me if such a program would be of value to the government. 
+ I believed it would. 
+ So you put the surveillance in Hoke's house? 
+ No. 
+ You wouldn't tell me if you did, would you? 
+ I understand you haven't turned the data you got from Hoke's computer over to The Lorman Group yet. 
+ Yes, that's right, and I don't have any intention of it. 
+ Oh, you realize, I'll just have my boss call your boss. 
+ These relationships go way beyond the two of us, Eppes. 
+ Part of a homicide investigation. 
+ There's no telling when it might become available, but you go ahead, you make your call. 
+ We did not place surveillance inside Jonas Hoke's house. 
+ DAVID: So, if it wasn't us, and it wasn't Oliver's people, who was watching Hoke? 
+ Well, whoever it was, it's clean. 
+ No prints, no identifying signature. 
+ Any idea how they could have done it? 
+ Well, the alarm company runs a phone line through the touch pad. 
+ Whatever system was used to spy on Hoke was piggybacked onto the security system. 
+ So, it was a listening device? 
+ Some sort of audio would be my guess, but it's hard to tell without the actual device. 
+ Wait a minute. Hold that screen right there. 
+ Don, take a look at this. 
+ This is the manufacturers' list for the alarm system, right? 
+ Mm-hmm. This is the serial number for that unit -- the unit in Hoke's house. 
+ Take a look at who bought it. 
+ Grodin Construction. 
+ Aha. The boyfriend. 
+ Yup. 
+ Take it to four. 
+ MAN: Okay. 
+ GRODIN: You two again. 
+ Yep... with more questions. 
+ I don't know what else I can tell you. 
+ Why don't you tell us about the bug you planted in Jonas Hoke's house? 
+ DAVID: You know, for a while there, I was thinking Gail was the victim in all this. 
+ I didn't do anything wrong. 
+ No? 
+ Don't tell me this is the part where you say that she did it all? 
+ Look, neither of us did anything. 
+ DON: Well, we still got a dead body and an alarm system that was bugged -- an alarm system that you installed. 
+ Gail's lawyer asked me to help her guy put a wire or something into Jonas's house, but that's it. That's all I did. 
+ DAVID: Turn around. Let's go. 
+ DAVID: Last time we spoke, you weren't exactly forthcoming about your relationship with Lucas Grodin. 
+ In what way wasn't she forthcoming? 
+ For starters, how about the fact you never mentioned you asked him to wire your husband's house. 
+ The house was never adjudicated as separate property, so therefore whatever monitoring system Mrs. Hoke may have placed in her own house, she was absolutely entitled to do so. 
+ I put Jonas through college and grad school. 
+ Gail... I waited tables. 
+ I did anything I could, because I believed we had a future together. 
+ Do you have any idea what it's like to have your husband tell you your contribution to your marriage isn't of value? 
+ ATTORNEY: I think we should take a break now. 
+ I'm not finished with your client, counselor. 
+ You can't prove Gail did anything. 
+ All I need to make out conspiracy at this point is probable cause. 
+ And your boyfriend's alarm system gives me exactly that. 
+ It also puts you in possession of material evidence, and an obstruction of justice charge, counselor. 
+ If Jonas were a doctor or a lawyer, I'd be entitled to half of everything. 
+ But everything he had was inside his head, so tell me, Agent Sinclair, how do you get half of that? 
+ Which is why you put surveillance in his house -- to see what was on his computer. 
+ It was the only way Jonas would have ever given me what I was entitled to. 
+ Right. 
+ But after you had the information you needed, why'd you kill him? 
+ I didn't kill him. 
+ I could never do anything like that. 
+ I told you, he was late with a check. 
+ I went there to get it. 
+ That's when I found him dead. 
+ Gail did not kill her husband. 
+ DAVID: Forgive me if I'm not willing to take your word for it. 
+ ATTORNEY: You don't have to. 
+ I have the surveillance, remember? 
+ So is this an audio file? 
+ No, actually, digital video. 
+ So the device was a camera? 
+ Not exactly... 
+ It was an antenna. 
+ CHARLIE: A Van Eck phreak. 
+ But at a far more sophisticated level. 
+ Wait, what are you guys talking about? 
+ The wire you found in his house wasn't for a camera. 
+ It wasn't for a microphone. 
+ It was for a high-gain antenna. 
+ An antenna? 
+ For what? To pick up what? 
+ Well, with any LCD screen, liquid crystals provide an image when energy passes through them. 
+ The color they become depends on the amount of energy that they're exposed to. 
+ When energy passes through these liquid crystals, it emits a wave of electromagnetic radiation. 
+ Dutch physicist van Eck realized that with an antenna and a decoder, you could both read the waves and decode them into a perfect replica of what someone would be seeing on their computer screen. 
+ What you're saying is that the antenna was able to read and pick up whatever was on Hoke's home computer screen. 
+ That's right. That is amazing. 
+ Hoke had elaborate safeguards against conventional hacking. 
+ Firewalls, blockers... 
+ Still, nothing could stop this. 
+ Isn't that around the time he was killed? 
+ Yeah. 
+ That's where the files were being erased. 
+ See the zeroes and ones just flipping around, back and forth? 
+ So the killer knew Hoke's passwords. 
+ Too bad he didn't leave a fingerprint. 
+ Actually, you know what? I think he did. 
+ DON: All right, so what are we looking at? 
+ Digital representations of a pattern of keystrokes. 
+ One taken from Hoke's computer at home, one from Hoke's computer at work. 
+ Now, you know that experts can distinguish one person's typing from another by their rhythm. 
+ Yeah, you mean like Morse Code. 
+ Right. 
+ Telegraph operators used to recognize each other by the different ways they used to tap into the exact same codes, like a concert pianist sitting down to play a piece of music. 
+ Even though the notes originate from the sheet music, the way she plays them is entirely distinctive. 
+ Now, if another pianist sits down to play the same piece of music, the strength of notes, the flourishes in rhythm would make the keystrokes totally different. 
+ Now, only by seeing them side-by-side would you be able to tell they were different. 
+ See... 
+ Now, I'm sitting here, and I'm looking at these, and they look identical to me. 
+ That's because they are, Don. 
+ This is from Hoke's computer at home. 
+ The keystrokes you're seeing are passwords used to tap into Hoke's sabermetrics files, made after Hoke was dead. 
+ This is from Hoke's computer workstation at the Lorman Group, made after Hoke was dead. 
+ So then this is the same person that erased the files? 
+ DON: Scott Reynolds, you're under arrest for the murder of Dr. Jonas Hoke. 
+ Get your hands up. 
+ ( handcuffs snap ) 
+ You have the right to remain silent. 
+ Anything you say can and will be used against you in a court of law. 
+ Bring him down. 
+ AGENT: All right, sir. Go ahead. 
+ What do you want? 
+ I'm trying to figure out how you could kill a man, how you could kill a fellow scientist, to steal his work. 
+ Is that why you think I killed Dr. Hoke? 
+ For the money? 
+ You weren't jealous of his accomplishments. 
+ His accomplishments... is that what you call them? 
+ I grew up in West Oakland. 
+ Anyone I grew up with who isn't dead or in prison is flipping burgers or driving a truck. 
+ And it's not too difficult to guess what Dr. Hoke's formula would have said about putting a computer lab in my high school. 
+ That computer lab saved my life, and next year, it's gonna save somebody else's. 
+ And killing Dr. Hoke accomplishes that? 
+ You think it stops there? 
+ In the last century, the Nazis used the theory of eugenics to stop the poor from reproducing. 
+ Eventually, they justified just killing the sick ones. 
+ You can't compare that to this... 
+ Actually, that's a perfect comparison, cause what Jonas was doing was taking away a person's chance at life. 
+ It's taking away someone's hope. 
+ And I did what I had to do to stop that before it started. 
+ That makes you a murderer. 
+ Don't you ever wonder about your own work? 
+ What about my work? 
+ Well, you consult for the NSA, don't you? 
+ Ah... of course you do. 
+ So you're gonna tell me that everything you do will be used for good all the time? 
+ What's your point? 
+ Well, you're asking me how I'm gonna live with myself. 
+ Look in the mirror. 
+ Ask yourself the same question. 
+ Let's go. 
+ Jonas Hoke's last hurdle. 
+ Oh, yes, his equation seeking to predict a person's chance at success. 
+ He never got to finish it. 
+ I thought maybe I'd give it a shot myself. 
+ Why? 
+ To what end? 
+ This work is just a self-fulfilling prophecy. 
+ How do you mean? 
+ Well, Charles, if we use numbers to choose who among us gets opportunity, then by definition, those we haven't chosen don't. 
+ I mean, that's not science. 
+ Well, it's not good science. 
+ It's like, every year college football chooses a national champion, but they use computers to determine which two teams play for the title. 
+ And every year, invariably, some team gets left off that believes, well, it could have won the game on the field if it had just been given the chance. 
+ I've always believed that it was my duty to develop mathematical tools, and someone else's to use them wisely. 
+ Could I have been wrong? 
+ The consequence of our understanding subatomic particles was a horrible bomb that transformed the world we live in and a source of energy, the basis of life-saving techniques, and an indispensable scientific tool. 
+ Science... you know, science, not this, but real science, is discovery, Charles. 
+ It's not invention. 
+ The truths are there, whether we find them or not. 
+ Listen, I'm gonna grab a bite to eat. 
+ You want to come? 
+ Okay. 
+ Thank you. 
+ ( door closes ) 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

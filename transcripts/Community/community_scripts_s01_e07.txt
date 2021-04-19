@@ -1,0 +1,470 @@
+Transcripts - Forever Dreaming :: 01x07 - Introduction to Statistics - Community 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x07 - Introduction to Statistics https://transcripts.foreverdreaming.org/viewtopic.php?f=239&t=17011 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 11/01/09 21:34 ] 
+ 
+ 
+ Post subject:  
+ 01x07 - Introduction to Statistics 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ ♪ give me some more ♪ 
+♪ time in a tree ♪ 
+♪ give me the hope ♪ 
+♪ to run out of steam ♪ 
+♪ somebody said ♪ 
+♪ it could be here ♪ 
+♪ we could be rolled up tight ♪ 
+♪ up dead in a year ♪ 
+♪ and I can't count the reasons I should stay ♪ 
+♪ one by one they all just fade away ♪ 
+ The bernoulli distribution is the number of successes in a sequence of independent yes-no experiments. 
+ Okay. 
+ Uh, for the quiz monday, brush up on chapters three and four. 
+ Bernoulli's one of my favorites. 
+ Little-known fact, statistics were not his only love. 
+ He's also famous for his french sauce used on meat and poultry. 
+ That's bearnaise. 
+ Oh, we may need to settle this at a restaurant. 
+ It's cute. 
+ A little aggressive, but as a busy, confident woman of authority, I'm attracted to men who take charge. 
+ Are you being sarcastic, or am I nailing it? 
+ You were nailing it, until you had to ask. 
+ Oh, damn it. Starting over. 
+ Hey, you in the skirt, date me. 
+ I'd like to, Mr. Winger. 
+ You're tall, you dress nice, and I've graded enough of your tests to know I'd never feel mentally inadequate. 
+ Thank you. 
+ Only problem, I don't date students. 
+ You know if you agree to go out with me-- 
+ Oh, hey. 
+ Awkward. 
+ How small is this campus? 
+ b*st*rd. 
+ It's fine. I don't care. 
+ It's disgusting the way men behave. 
+ Did you ever see that katherine heigl movie poster where gerard butler had that heart over his weiner? 
+ That resonated with me. 
+ Okay, fine. 
+ But just to repeat, I don't care what Jeff does. 
+ b*st*rd. 
+ I'm barely a student. 
+ I'm older than you. 
+ I drive a lexus. 
+ i saw ghost busters in the theater. 
+ Look, my gums are receding. 
+ It's uncanny how many of my buttons you're finding, but I have a personal rule about this, and I stick to it. 
+ Have a cup of coffee with me. I bet I can change your mind. 
+ Oh, I know you can. 
+ That's why you're not getting the chance. 
+ Ooh, whoo. 
+ are you coming to my dias de los muertos party? 
+ I'm definitely gonna try to swing by. 
+ Then I can mark you down as definitely being there from 7:00 sharp till upside-down spanish question mark? 
+ Here's the thing-- 
+ No, here's the thing. 
+ I am putting my foot down. You understand? 
+ I am being assertive, and I am making eye contact, and it is achieving results. 
+ Are you trying to get formidable with me? 
+ It worked on pierce. 
+ Infomercials work on pierce. 
+ Jeff, you're the cool guy, okay? 
+ If you show up, it'll be the first party I host where everyone doesn't say they need to get home in time for the news. 
+ This won't work. 
+ The last time you did this, I saved a vial of your tears and have been slowly building up an immunity. 
+ I was so unpopular in high school, the crossing guard used to lure me into traffic. 
+ This party is a second chance to be... 
+ Hip. 
+ Cool! 
+ Laidback! 
+ Look, I will come to your party. 
+ Thank you. 
+ I'm putting you down for two bags of ice and a sleeve of paper cups. 
+ Taking a pill? 
+ Yes, I am. 
+ Xenolovaden. 
+ My grandpa took that when he was around your age. 
+ Fantastic. 
+ But by the time grandpa got up in years, his memory wasn't great. 
+ He'd mix the wrong pills. You know how old people are? 
+ Heard stories about it, yeah. 
+ One time he started hallucinating and ran down the street with no pants on. 
+ Which in the gaza strip is considered a real party foul, so you should probably be careful-- 
+ Look, I really don't need your advice, and I'm not your pantsless grandpa. 
+ Pantsless grandpa. 
+ [latin music playing] 
+ hola! 
+ [laughs] 
+ Scary. 
+ Oh, cute! cute. 
+ Oh, Britta. 
+ You look adorable. 
+ Thank you. 
+ I hate when women use halloween as an excuse to dress up like sluts, you know? 
+ Yeah. 
+ Okay, everyone. 
+ I think we can begin. 
+ I've got everyone's personalized cookie tombstones,  por tradicion, 
+ And in a few minutes, we're going to start the dance of the dead-- 
+ la danza de los muertos. 
+ You don't have to keep doing that! 
+ Party on. 
+ It's nice of you to be here. 
+ Sure you'd rather be out with your hot professor. 
+ Well, it's funny, I enrolled here as selfish loner, but you and the group have given me a crash course in friendship. 
+ She blew you off, huh? 
+ She's grading papers. 
+ Professor slater? 
+ She's not grading papers. 
+ She's at the faculty party in the cafeteria. 
+ Oh, look, it's the eavesdropping matador. 
+ Are you saying my people are sneaky? 
+ What? 
+ [deep voice] There's a storm building on the horizon, but you and i will save the night. 
+ Chex mix, pretzels, baby carrots, predictable but appetizing. 
+ Hey. 
+ Hey. 
+ Can I ask you something i always wanted to ask the real batman? 
+ Yeah. 
+ Am I good looking? 
+ You're a very attractive young man. 
+ I knew it. 
+ Let's get this party started! 
+ Who are you? 
+ I am the beastmaster. 
+ from the movie beastmaster. 
+ What rock have you been living under? 
+ What are you going as? 
+ A gay douchebag? Just kidding. 
+ Nice one. I'm not much of a costume guy. 
+ I know, you're not much of a liking the ladies guy either, huh? 
+ Oop. Body blow. Is that liquor? 
+ [british accent] Hello. 
+ Here's your drinks, mates. 
+ Oh, thanks, urkel. 
+ I'm harry potter. 
+ Really? 
+ What up, urkel? 
+ Hey. 
+ Oh... all right. What are you taking? 
+ Huh? oh. 
+ You know, the usual cool stuff. 
+ I've got 'ludes, uh, dreamers... 
+ Johnny boys. 
+ Tell you what. 
+ I'll trade you one of mine for two of yours. Hmm? 
+ I don't know, star-burns. I'm-- 
+ Oh, sorry. 
+ I thought I was dealing with the beastmaster. 
+ Hey, hey, who said you weren't? 
+ Saddle up, fruit pie. 
+ I don't mind if I do. May I? 
+ Here. Take this. 
+ Give anyone that shows up their stupid credit. 
+ You going to the faculty party? 
+ Make me your plus one. 
+ Ah, give it up, winger. 
+ Professor slater doesn't date students. 
+ Or married asians who drive mopeds. 
+ Give you 20 bucks. 
+ I'll bring the hog around. 
+ Okay, it's time for the dance of the dead. 
+ Everyone form a circle. 
+ Lights. Music. 
+ Is it under genre or on a specific playlist? 
+ Hey, uh, man? What'd you slip me? 
+ I keep grinding my teeth, and I want to kiss everybody. 
+ what'd you slip me, man? 
+ My heart stopped racing, and I can't pee. 
+ Now for the first dance, id like to invite a very special guest to the floor. 
+ Jeff winger? 
+ Jeff? 
+ Where's Jeff? 
+ Is Jeff gone? 
+ [whistles] 
+ You know, I'm gonna go. 
+ I don't want to miss the news. 
+ News! 
+ He just stepped out. 
+ He's gonna be right back. 
+ He's going to the faculty party. 
+ To be with professor short skirt? 
+ We hate her. 
+ No, it's not about her, Shirley. 
+ I can't believe that Jeff would do this to annie. 
+ Yes, absolutely. It's about annie. 
+ We should go find that bitch's car and snap off her antenna. 
+ It's like high school all over again. 
+ Everyone's leaving. 
+ Not me. 
+ I could do this all night. 
+ There you go, pretty lady. 
+ What are you doing here? 
+ Showing you my non-student side. 
+ I have to admit, this outfit's doing it for me. 
+ I may or may not have been deflowered by a junior rodeo champion. 
+ You're reminding me of my first time too. 
+ You lost your virginity to robin hood? 
+ No, with an attractive woman at a party. 
+ We seem destined to repeat history. 
+ I told you no students. It's unseemly. 
+ I go out with you, you tell your friends, It gets around the school-- 
+ What friends? 
+ I have no friends. 
+ I hate everyone here but you. 
+ 
+ 
+ 
+ Hey. 
+ What are you doing here? 
+ what are you doing here? 
+ You should be over at the library with annie... 
+ Whoa. 
+ Yippy ki yay. 
+ Thought you weren't a costume guy. 
+ You had to have one to get in here, squirrel. 
+ Oh, so where did you get it? 
+ 'cause I wouldn't think that any costume stores would be open this late. 
+ I don't know what you're getting at. 
+ I think the words that you're looking for are "i own a cowboy outfit." 
+ And it is tight too. Did you buy it like that? 
+ Your toy gun to my head, I'd say yes. 
+ Hi. Michelle slater, ph.d. 
+ Britta perry, g.e.d. 
+ Oh, are you a classmate of Jeff's? 
+ Oh, well, when you say "classmate," 
+ It sounds like we take naps together and eat paste, but what's great about community colleges is that a lot of the students are just as mature as the teachers. 
+ Jeff, you must return to annie's party. 
+ She's feeling unpopular. 
+ Jeff, pierce took something, and he is tripping balls. 
+ He is touching people and dancing weird. 
+ it's like grumpy old men but not hilarious. 
+ Okay, uh, guys? 
+ I'm at a grownup halloween party, all right? 
+ You're all being unseemly. 
+ Oh, no. 
+ How are we unseemly? 
+ Why is urkel ripping the antenna off professor slater's car? 
+ [grunts] 
+ That's right, professor slim calves. 
+ This is what you get when you steal Jeff from a good woman! 
+ No, Abed! 
+ [laughs] 
+ [meowing] 
+ Is he meowing? 
+ Yeah. 
+ Enough. I want you guys out of here. 
+ Britta, I don't care about your high school soap opera. 
+ Abed, you're not batman. 
+ Pierce. Pierce. Pierce. 
+ Stop grinding on the women's studies department. 
+ You are too old to be tripping. 
+ I'm old? 
+ What do you mean old? 
+ Whose hands are these? 
+ Aah! 
+ Aah! 
+ Help me! 
+ Way to go. 
+ [normal voice] 
+ I know I'm not batman. 
+ You could try not being a jerk. 
+ She's pretty hot. 
+ Well, where were we, little doggie? 
+ Unseemly. 
+ Yeah. Crap. 
+ [glass breaks] 
+ Shirley? 
+ [grunting] 
+ Shirley! 
+ This is professor robin hood's office. 
+ So what are you doing? 
+ I'm putting this hose in her desk, and you going outside to turn the water on. 
+ Why? 
+ To teach that long-neck weave-having bank teller she can't steal another woman's man! 
+ That's why. 
+ Uh... 
+ I have a confession to make. 
+ I think some of what I just said may have more to do with my situation. 
+ Yeah, the long-neck, weave-having bank teller didn't feel universal. 
+ My ex-husband came by this morning, and he, uh, he asked for his ring back. 
+ It was his mother's, and he wants to give it to his new girlfriend. 
+ Shirley, that sucks. 
+ Don't get me wrong. 
+ Best thing ever happened to me was him leaving. 
+ I just--i always thought he'd come crawling back, and I'd get to tell him, "go to hell." 
+ He couldn't even give me that. 
+ [sniffs] 
+ You know what the crazy thing is, Britta? 
+ Everything you've done tonight? 
+ It's like I was too proud to admit I was hurt, so I had to pretend that you were. 
+ I totally get that. 
+ I feel better now. 
+ Let's go check on annie. 
+ Mm-hmm. Mm. 
+ Can you believe I targeted this poor lady? 
+ Look at all these awards. 
+ I bet she's nice. 
+ Yeah. 
+ Nice and pretentious. 
+ [latin music] 
+ ♪ ♪ 
+ Pierce? 
+ Pierce, are you okay? 
+ Hey, man, what's going on? 
+ You have a full-on erection. 
+ Just rela-- just relax. 
+ Pierce, relax. Just relax, okay? 
+ Pierce! 
+ You are too old to be tripping! 
+ Pierce... [evil laughter] you are too old to be tripping. 
+ Tell me about the beatles, pierce. 
+ Tell me about woodstock and sputnik, pierce. 
+ Gee, do I feel a breeze here? 
+ Because someone just struck out. 
+ She blew you off too, chang. 
+ Is that what you had to fall back on? 
+ Look at me, bro. Look at me. 
+ I've got the body of a fifth grader, okay? 
+ If I was working with what you've got, she'd be at the comfort inn right now giving me a mexican halloween. 
+ It's this campus. 
+ It feeds on my coolness. 
+ I--i got no moves anymore. 
+ Moves? 
+ Everything's a game to guys like you. 
+ I know one move I bet you've never tried in your life. 
+ What is it? 
+ Please sleep with me. Please. 
+ Pretty please. I'm so lonely. 
+ I haven't slept with anyone in a very long time, and you are so good looking. 
+ Please do me the favor of having s*x with me. 
+ Okay, stay three steps behind and promise you won't tell anybody. 
+ I promise. 
+ I promise. 
+ Everybody, stay out of the library. 
+ Pierce, it's okay. Come out of there. 
+ No, I'm not ready to die! 
+ Pierce, you're not gonna die! 
+ Just--just keep walking. Don't make eye contact. 
+ Jeff. Jeff! Jeff. 
+ Pierce is freaking out. 
+ You're the only one that can help. 
+ What makes you think that? 
+ Is Jeff out there? 
+ He's the only one who can help. 
+ He says he's gonna kill himself, but he doesn't want us to call 911, because he doesn't want to get in trouble for taking drugs. 
+ [groans] 
+ I can't believe I'm doing this. 
+ I, uh... I think I have to say goodnight. 
+ Are you, like, a court-appointed guardian for these people? 
+ Uh, no. 
+ Um, they're my classmates. 
+ Goodnight, Jeff. 
+ Loser! 
+ What in the pink floyd? 
+ I'm gonna crush myself to death with desks and tables, Jeff! 
+ Is that a death befitting a beastmaster? 
+ i never saw beastmaster. 
+ I just wanted to be cool. 
+ I'm coming in there, pierce. 
+ Those floating mexican skeletons were right. 
+ My life is over. 
+ Well, when we go to floating skeletons with our problems, we get what we pay for, don't we? 
+ I'm old, Jeff. 
+ Pierce, I don't know how you spent the first 60 years, but I know in the last two months you've probably doubled the national average for amount of life lived per lifetime. 
+ Well, I do have a young, african-american friend. 
+ Yeah. 
+ And, more importantly, you're dressed like a gladiator in a desk fort that you built during a bad trip. 
+ If life is just a series of ridiculous attempts to be alive, you're a hero to everything that's ever lived. 
+ Yeah? 
+ Yeah. 
+ Yeah! 
+ [dramatic orchestration] 
+ ♪ ♪ 
+ Batman? 
+ [deep voice] Yeah? 
+ Are you staying for the party? 
+ If I stay, there can be no party. 
+ I must be out there in the night, staying vigilant. 
+ Wherever a party needs to be saved, I'm there. 
+ Wherever there are masks, wherever there's tomfoolery and joy, I'm there. 
+ But sometimes I'm not, 'cause I'm out in the night, staying vigilant, watching, lurking, running, jumping, hurtling, sleeping... 
+ No, I can't sleep. 
+ You sleep. I'm awake. 
+ I don't sleep. I don't blink. 
+ [dramatic orchestration] 
+ Am I a bird? No. 
+ I'm a bat. 
+ I am batman. 
+ Or am I? 
+ Yes, I am batman. 
+ Happy halloween. 
+ I'm Batman. 
+ You sound like cookie monster. 
+ I'm batman. 
+ That's batman. 
+ Candy corn looks like tiny traffic cones. 
+ Yeah, it sure does. 
+ At, like, a candy traffic school. 
+ [imitates engine] 
+ Like, a little gingerbread man at the wheel, and he's drunk. 
+ Look out. 
+ You'd be driving, but you keep wanting to eat yourself. 
+ All day. 
+ That's one of my biggest fears. 
+ What is? 
+ If I ever, like, woke up as a donut. 
+ You would eat yourself? 
+ I wouldn't even question it. 
+ Mm. That'd be tasty. 
+ It's cool to know other people think about this stuff too. 
+ Yeah. 
+ Yeah. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

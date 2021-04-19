@@ -1,0 +1,360 @@
+Transcripts - Forever Dreaming :: 01x02 - Upgrade - Dark Net 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x02 - Upgrade https://transcripts.foreverdreaming.org/viewtopic.php?f=560&t=24951 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 01/29/16 06:08 ] 
+ 
+ 
+ Post subject:  
+ 01x02 - Upgrade 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Narrator :  The Web transforms us. We become data, code... uploading our very selves... ...to a place we call the cloud. But this cloud is grounded in hardware... a chaos of code. But with the right tools, you can find the signal in the noise. 
+ ♪ ♪ ♪ ♪ 
+ Spence :  So, when I was 9 years old, I was at my grandfather's farm in Ireland. And I thought it would be a good idea to get his 12-gauge shotgun... ...and shoot a pile of cow sh1t. Uh, and I did that. And, boom. Unfortunately, I wasn't holding the gun correctly. To me, upgrading is a part of modern life. In my case, it's satisfying to be able to upgrade what is basically an opportunity. I'm hacking my own body. And I'm doing it in such a way that... I'm improving the code, hopefully. 
+ [ Pulsing ] 
+ Narrator :  Inside your computer, if you listen hard enough, there's a hum, a heartbeat, a pulse. Like us, technology lives, dies, and evolves. We embrace each new version faster than the one before. And our devices have gone from a convenience to a dependence... an extension of ourselves. When you look into the deep web, you find a glimmer of a stranger future. The question is, what happens when we become more than human? 
+ ♪ ♪ 
+ [ Indistinct conversations ] 
+ So, um, welcome, everybody, to Epicenter. Just a quick show of hands... How many of you have been to Epicenter before? 
+ Mardirossian :  My name is Fanny Mardirossian, and I am a graphic designer. 
+ I am into new stuff. 
+ I'm a curious person, and I am a tech nerd. 
+ I like gadgets. 
+ So I like to get ahold of stuff as soon as possible when they reach the market. What we do here at Epicenter,  as this is a house of innovation, is, we try to explore new technology. 
+ Mardirossian :  Epicenter... It's kind of a start-up cluster for creative people to meet. They also have tons of new tech stuff to try out. 
+ We're actually doing an implant party tonight, as well,  so for those of you who want to try the latest tech,  you can get chipped here today on the sixth floor here. 
+ Mardirossian :  I met this guy, Hannes. He told me about a new type of tech. I thought it was super-cool. The idea is that you're putting something into your body and the tech being part of you. 
+ ♪ ♪ 
+ Sjoblad :  I certainly consider myself human. However, I may not want to be just human for the rest of my life. I'm Hannes Sjoblad, I work at Epicenter, and I'm a biohacker. What we biohackers do is, we look at biology as something that can be hacked. Is there something we can do to this being to change a little way, to make it do something else? We are not scientists. 
+ We are experimenters. 
+ My implant is a microchip in my left hand, which is about the size of a grain of rice. I use it to access the office. I just swipe my hand at the door. 
+ [ beep ] 
+ I can turn off the alarm. I can log into the different computers. 
+ [ beep ] 
+ It uses RFID technology. 
+ narrator :  Chances are, you already use RFID, or radio frequency identification tags, without knowing it. They're in our access cards, our credit cards, our cellphones, and our passports. We even use them to tag our livestock and our pets. What's enticing about this technology is that we could eventually store all of our personal information on RFID chips and never have to carry keys, cards, or cash again. 
+ Sjoblad :  To upgrade the body with the chip allows me to speak the language of machines. 
+ [ beep ] 
+ We can decide what will be the next step in human evolution. 
+ [ pulsing ] 
+ Narrator :  Hannes belongs to a global community of biohackers who experiment with do-it-yourself ways to enhance the human body. 
+ man : My initial incision was a little shallow. 
+ Man 2 : You might be able to see it. 
+ There we go. 
+ Narrator :  They share their experiences online for all to see. And the deeper you look into this world, the more dangerous it gets. Biohacking used to be hidden on sites that were unindexed and impossible to find. But now anyone can mail-order implant kits from dangerousthings.com, a hacker gadget company that sold 5,000 human microchips in just the last couple of years. People all over the world are posting about getting chipped. But despite the hype, the idea of implanting a computer chip inside the body doesn't sit right with everyone. And one day, we may not have a choice. 
+ ♪ ♪ 
+ Mama, Mama. 
+ [  Speaking Swedish  ] 
+ Mardirossian :  It's gonna be a strange feeling  to, like, be the device yourself, but people do things to their bodies like alter them  and better them in all kinds of ways, so it's not that big a deal. 
+ narrator :  But why get chipped when you can already create a better version of yourself using external devices? 
+ Dancy :  Technology today, it's all about data. We're the first generation to have a choice in how we record our lives. 
+ [ birds chirping ] 
+ Coleman :  From NPR News in Washington, I'm Korva Coleman. South... 
+ Dancy :  I'm tracking mattress movement, body movement, body temperature. 
+ woman :  Reading complete. 
+ Dancy :  Blood pressure, blood oxygen. 
+ [ buzz ] 
+ Body weight, the air quality, temperature, humidity. 
+ woman :  Partly sunny skies. 
+ Dancy :  Light, sound, what am I eating, who am I with, what am I watching on TV. 
+ [ breathing heavily ] 
+ I've been called the world's most connected human. 
+ [ Vehicle door opens ] 
+ In the car, I've got a sensor that measures how often I'm accelerating, how often I'm hard-braking, how often I'm going over the speed limit. 
+ ♪ ♪ 
+ Narrator :  Chris Dancy uses up to 700 systems, 11 different wearable devices, and 71 wireless networks to monitor and record every second of his life. 
+ Dancy :  The idea to bring more data into my life  really came from massive amounts of anxiety. 
+ Whether it was food or alcohol or recreational drugs or cigarettes, I could feel this just heaviness of, you know, getting older and being unhealthy. I needed to find a way to harvest my behavior out of systems. 
+ narrator :  Chris began logging all of his actions and looking for patterns. 
+ Dancy :  What I did early on was just color-coding information so when it entered my online calendar, I could tell days that were good from days that were bad just by looking at the bands on it. After you become aware of your behavior, it's just scheduling, like, interruptions to behavior. 
+ narrator :  By removing triggers for bad habits, Chris turned his life around. He lost over 100 pounds in two years, quit smoking, reduced his stress levels, and increased his confidence. He might seem unique, but he's just a more extreme version of the rest of us. Wearables have become a multibillion-dollar industry that's only going to keep growing. Information leads to knowledge, and knowledge is power, right? 
+ ♪ ♪ 
+ But what if you went a step further? What if you could collect information about other people without them knowing it? 
+ Spence :  Some people hack software. I hack my face. My name's Rob Spence. I'm a filmmaker, and they call me Eyeborg. So many characters in science fiction and pop culture have prosthetic eyes. You know... the Terminator or Geordi from "Star Trek." It's an interesting idea to have a realistic-looking camera eye. I mean, that's what the Bionic Man had. 
+ man :  We can rebuild him. 
+ So that's what I want. 
+ As a documentary filmmaker, one of the things you always want is for somebody to act naturally. And what better way to get somebody to act naturally  than to hide the camera in an eye? 
+ One that looks like a human eye, where the person doesn't know that you're recording them. This is a way that I can use technology...  in an empty eye socket to get a very human piece of film, a very human conversation. 
+ ♪ ♪ 
+ There are such small cameras out there, they should be, in theory, easy to put into a prosthetic eye. But it's difficult. There's no manual. We are much more do-it-yourself. 
+ [ drill whirring ] 
+ We have lift-off... 
+ Yes. 
+ ...with the video out? 
+ Spent a good portion of yesterday  wandering all over Chinatown, looking for parts. 
+ "Blade Runner," Chris. 
+ Yeah. 
+ They wandered all over Chinatown, looking for spare eye parts, as well, to identify various skin jobs. 
+ Skin job is "Terminator." 
+ Skin jobs are from "Blade Runner." 
+ That's who Harrison Ford kills. 
+ I'm looking for this. 
+ No, that's Replicants. 
+ Replicants. 
+ Exactly. 
+ Spence : I think they're both. 
+ There we go. 
+ There you are, my little darling. 
+ There's basically five versions of Eyeborg... Eyeborg 1.0. 
+ It's alive! 
+ It's not working very well, but it's alive. Version 2... eh... Version 3... boom! It's amazing, but it's totally clear. You can see the battery. 
+ Version 4 is us trying to make a realistic-looking eye camera,  but we just don't have enough time to put all the resources together. 
+ Right now, we're doing version 5. 
+ Version 5 is simply an eye camera that looks like a human eye. 
+ ♪ ♪ 
+ The first time we got the eye camera going, it was thrilling, actually, because no one else had ever done it, and, in fact, nobody else has since. 
+ Yeah, it's kind of creepy when your own eye... is staring back at you. 
+ Okay, so, let's... 
+ Let's see if this bad boy works, then. 
+ Let's... take this off. 
+ Ooh, it's a bit of a tight fit. 
+ Having a little trouble pulling the lower lid over it. 
+ You remember, Martin, the old one was sort of a tight fit, as well. 
+ Well, 3 was a really tight fit. It may be that we've got too much material in the join between the two sides of the shell here. 
+ Yeah. 
+ Wow. 
+ That's not... 
+ That's not good, is it? 
+ That's hopeless. 
+ That's not good. 
+ No. 
+ Hey, can you tell that I'm wearing... 
+ It's totally... 
+ Hey, wow, I'm just normal. 
+ That's fine, eh? 
+ [ Laughs ] 
+ We may have to basically squeeze the electronics in a bit further. Do you think we'll mess up the components if we open it up, take the wax out? I mean, my thinking  is just to basically grind off thickness there. 
+ We'll sterilize it again, and we can try again. 
+ Sure, there's a danger to upgrading. Sometimes you move ahead before you're ready to go. 
+ However, if you don't change, you're gonna die. 
+ Man :  Great to see so many volunteers that want to try this new technology. The RFID chip is supposed to have a life-span  of more than 120 years, so it will definitely live longer than you will if you keep it in. 
+ Man 2 :  I work in a hotel chain, so I'm trying to figure out, what will be the next big thing for our guests? 
+ But I was telling my wife that I was going to chip me, and she said I was just stupid because, "Why are you going to do that? 
+ That's just ridiculous." 
+ I can't see why not. 
+ It's not such a big deal to me, and it's fun to try new things. 
+ The first comment I usually get when I talk about getting a chip is, "Well, they'll be able to monitor you  and see where you are." 
+ To be able to hack the chip, you have to be close to a reader for it to be activated. We already have Facebook accounts,  and you go around with your cellphone all day. 
+ So if people want to, like, find out information about you, there are tons of other ways to do it. 
+ man :  What makes me curious about this chip is the next generation, right? Then I think the privacy kind of aspect  will be a bit more of an issue, and you'll have to have, like, someone you really trust providing, you know, that technology or, you know, keeping that data. 
+ Narrator :  But who can you trust now? Every bit of information about you is worth something to someone. The U.S. government does not intend to regulate the data generated by wearable fitness trackers. Wearable companies claim they are policing themselves. But there's nothing stopping them from selling your private data to whomever they please. Who's to say that chip implants won't follow the same path? 
+ 
+ 
+ 
+ [ Indistinct chanting ] 
+ A Swedish group with 12,000 followers on Twitter is concerned that one day, RFID could be used to track citizens. And they're not the only ones. All over the Internet, groups are protesting RFID, making noise and news worldwide. 
+ [ Indistinct chanting ] 
+ Sjoblad :  It is really important that when we experiment with these chip implants that we do it on a voluntary basis  as sort of free citizens. 
+ It shouldn't just be the big government or big companies who develop these technologies. 
+ So, who wants to get started? 
+ I could. 
+ Yeah? 
+ Yeah, yeah. 
+ Come on back here. 
+ [ Indistinct conversations ] 
+ Okay. Gear, and then we'll get started. 
+ Nervous? 
+ Mm, I've given birth to two kids, so it can't be... 
+ It should be a piece of cake. 
+ Piece of cake. 
+ Hopefully, this is a bit quicker than giving birth. 
+ Hopefully. 
+ So, yeah. 
+ [ Indistinct conversation ] 
+ ♪ ♪ 
+ Is it shanky enough? 
+ Just take a deep breath in. 
+ Yeah. 
+ Okay? So, we're all done? 
+ Yeah, we're all done. 
+ Yeah. 
+ Thank you. 
+ Thank you. 
+ [ Camera shutter clicks ] 
+ I'm Snapchatting it to my colleagues  and friends and my husband. 
+ [ laughs ] 
+ [ Buzz ] 
+ Hmm? Connection. 
+ That was quite a cool feeling to see that I could connect with another device,  and, well, that, I guess, makes me kind of a device, as well. 
+ So that's pretty exciting. 
+ What does it say? 
+ This is just basic information. 
+ Serial number and the tag type. 
+ Yeah. 
+ 041ED812FF3881. 
+ So that's my... my other self, I guess. 
+ Yeah. 
+ [ Woman laugh ] 
+ Or myself-self. 
+ Yeah. 
+ That's my new self. 
+ Yeah. 
+ [ Chuckles ] 
+ Chris. 
+ Hi. 
+ [ Chuckles ] Hey, nice to meet you. 
+ Robert, nice to meet you. 
+ Yeah. 
+ I haven't been out with anyone in a long time, so I'm a little bit nervous. 
+ [ Both laugh ] 
+ So, is that one of your sensors? 
+ This is a narrative clip. 
+ It just takes a picture every few minutes and then saves your day for you. 
+ And you can play it back. I just wanted to start... 
+ narrator :  This is Chris' first date with a guy he met on Grindr. 
+ So, what's really cool about this is, you can come in here, and I can see how you're feeling by looking at your heart rate. 
+ It uses light to go through your skin. 
+ [ laughing ] 
+ Oh, going up! 
+ He's getting nervous. 
+ Hold on. I can rub your arm. 
+ Uh-oh. 
+ Mm... 
+ If you were to measure someone you were dating, then you start to look for subtle variances. Yeah, baby!  - [ laughs ] 
+ We got up to 83 by holding hands! 
+ [ laughs ] 
+ While it's a novelty at first to them and you, 
+ 'cause you're just collecting things, you start to go, "Oh, no, things are changing." 
+ You know, and what's great about is, from now on, I've got your heartbeat. 
+ Now you got my heartbeat. 
+ Your heartbeat's in my data. 
+ For me, relationships are difficult. I see people as just a pile of information. 
+ Alexa? 
+ Order orange juice. 
+ Woman :  I added orange juice to your shopping list. 
+ Thank you. 
+ Don't mention it. Problem with more data is, all it does is make us crave more data. Heroin addicts and junkies aren't looking for another high. They're looking for another escape. As I've gone on with my journey, I realize... data makes us lonely. 
+ We're not so scary. 
+ We f*cking need each other. 
+ Like, bad. 
+ ♪ ♪ 
+ Ling :  I've had to make some adjusts 
+ to how the electronics are positioned,  because having brought the back in,  we didn't have space for the battery anymore. 
+ Spence :  Okay. Let's put this bad boy... 
+ Okay. 
+ ...into my face. 
+ [ Louise chuckles ] 
+ I really hope this works. [ laughs ] 
+ This off. 
+ [ Chuckles ] 
+ I don't know what it means to always have video access all the time of everything. 
+ But it's just data. We always have more data. Video usually has a more accurate portrayal of an objective truth  of something that's happened. 
+ Um... that may not necessarily be a great thing. 
+ Can I look? 
+ [ chuckles ] 
+ [ laughing ] Oh! 
+ No. 
+ Well... nobody said spies have to be good-looking. 
+ [  Iaughs  ] 
+ You know? 
+ Okay. I'm tuned on channel 3. 
+ Okay, ready? 
+ Yep. 
+ Everyone ready? 
+ Yeah. 
+ Louise :  Hold your breath. So, here goes. Yeah. Up a bit. Yes. Yes, we've got it. 
+ Good? We got a signal? 
+ Look at me. Look at me. Yeah. 
+ Wow. 
+ Whoa! I can feel the video! 
+ Can you? 
+ No, I can't feel it, no. [ chuckles ] 
+ Wow. 
+ That's a pretty strong signal. 
+ Yeah, that's not even on the... 
+ Wait, try moving it away. 
+ That's a really good... 
+ Yeah, I'm still getting it. 
+ Oh, wow. 
+ Holy sh1t, man! It's never done that before. 
+ Oh, wow. 
+ Louise : That's really good. 
+ Yeah. 
+ That's f*cking nuts. 
+ It never... It never goes that far. 
+ It doesn't look 100% like a real eye, but it doesn't look a video camera. 
+ That's for sure. 
+ You'll be very sneaky with that. Are you recording me right now? 
+ Spence :  There are implications to everyone shooting video all the time. And it feels invasive, you know? 
+ There's not many spaces left that we have privacy. 
+ It's a little bit creepy.  [  laughs  ] 
+ Spence :  What that does to society, I don't know. Video footage is ultimately just information. 
+ But we feel like that's the last little part of our lives that we don't want to share that information. 
+ Um, I think it's too late, though. 
+ Sorry. 
+ ♪ ♪ 
+ Woman :  Hey. 
+ Yeah. 
+ Mardirossian :  I was kind of surprised that it was so fast for me to accept the chip as part of me. 
+ [ beep ] 
+ I still get, like, this "wow" feeling every time I scan it and it actually works. 
+ And I like that feeling. 
+ It's great, actually. 
+ Narrator :  In the future, anything that can be connected will be. 
+ [ buzz ] 
+ It's a phenomenon known as the Internet of Things, and we're making ourselves part of it. 
+ Spence :  Sometimes I wonder, "Where else can we take this eye?" And you know what? There's endless possibilities. Increasingly, people who aren't missing anything want to augment themselves. 
+ [ sizzling ] 
+ If people can afford it and it improves their life, then they're gonna get it. 
+ Can you grab me a glass of wine? 
+ [ Smooches ] 
+ Dancy :  I think we're starting to cross a line as a species. I think if you watched this interview in 2020, you'd go, "sh1t, we should have listened. 
+ We should have done something." 
+ [ crinkling ] 
+ Sjoblad :  This technology is here to stay. And the question comes, what is standing around the corner? What can the next generation of implants do? There are many things that animals can do and perceive  that humans can't perceive, and I think that we humans, we are missing out on a lot of beauty. 
+ [ Birds chirping ] 
+ Can you imagine being able to see the ultraviolet like honeybees do? 
+ [ bee buzzing ] 
+ What does a meadow of flowers look like with the eyes of a bee? 
+ Perhaps that's a very beautiful experience that we are yet to experience. 
+ Mardirossian :  There's definitely room for this new technology, and I think mostly it's for the good of humanity. But... when do we stop being human,  and when do we start being tech devices? 
+ Well... I don't know. 
+ ♪ ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 
