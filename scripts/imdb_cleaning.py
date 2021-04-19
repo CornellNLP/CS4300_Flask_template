@@ -56,7 +56,7 @@ def get_imbd_ds():
             except:
                 val["end year"] = 0
         except:
-            end_year = start_year
+            val["end year"] = val["start year"]
         if show["title"] in imbd_dict.keys():
             # print(show["title"] +" duplicate")
             # print(imbd_dict[show["title"]])
@@ -81,7 +81,7 @@ def get_imbd_ds():
 def main():
     imbd_dict = get_imbd_ds()
     print(len(imbd_dict))
-    a_file = open("datasets/final/imbd.json", "w")
+    a_file = open("datasets/final/imdb.json", "w")
     json.dump(imbd_dict, a_file)
     a_file.close()
 

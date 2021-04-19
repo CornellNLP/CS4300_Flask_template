@@ -24,6 +24,7 @@ def make_tv_show_ds():
     df = pd.read_csv(kaggle_file, na_values='')
     df = df.fillna('')
     result = df.to_dict(orient='records')
+    print(len(result))
 
     tv_shows = []
     index_to_tv_shows = {}
@@ -40,11 +41,15 @@ def make_tv_show_ds():
         seasons = val["no of seasons"]
         if seasons!="":
             val["no of seasons"] = int(seasons[0:seasons.index('S')].strip())
+        val["runtime"] = -1
+        val["start year"] = -1
+        val["end year"] = -1
         d = {"show_title": show["Title"], "show_info": val}
         tv_shows.append(d)
         index_to_tv_shows[show["Unnamed: 0"]] = show["Title"]
 
     tv_shows_to_index = {v: k for k, v in index_to_tv_shows.items()}
+    print(len(tv_shows))
     print("Data structures created for tv shows")
     return (tv_shows, index_to_tv_shows, tv_shows_to_index)
 
@@ -80,23 +85,23 @@ def make_reviews_ds():
 
 def main():
     print()
-    # (tv_shows, index_to_tv_shows, tv_shows_to_index) = make_tv_show_ds()
-    # a_file = open("datasets/final/tv_shows.json", "w")
-    # json.dump(tv_shows, a_file)
-    # a_file.close()
-
-    # a_file = open("datasets/final/index_to_tv_shows.json", "w")
-    # json.dump(index_to_tv_shows, a_file)
-    # a_file.close()
-
-    # a_file = open("datasets/final/tv_shows_to_index.json", "w")
-    # json.dump(tv_shows_to_index, a_file)
-    # a_file.close()
-
-    reviews = make_reviews_ds()
-    a_file = open("datasets/final/reviews.json", "w")
-    json.dump(reviews, a_file)
+    (tv_shows, index_to_tv_shows, tv_shows_to_index) = make_tv_show_ds()
+    a_file = open("datasets/final/tv_shows.json", "w")
+    json.dump(tv_shows, a_file)
     a_file.close()
+
+    a_file = open("datasets/final/index_to_tv_shows.json", "w")
+    json.dump(index_to_tv_shows, a_file)
+    a_file.close()
+
+    a_file = open("datasets/final/tv_shows_to_index.json", "w")
+    json.dump(tv_shows_to_index, a_file)
+    a_file.close()
+
+    # reviews = make_reviews_ds()
+    # a_file = open("datasets/final/reviews.json", "w")
+    # json.dump(reviews, a_file)
+    # a_file.close()
 
     # printing sample output
     # print("\n==Printing sample output==\n")
