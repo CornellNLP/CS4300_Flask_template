@@ -1,0 +1,278 @@
+Transcripts - Forever Dreaming :: 01x01 - The Pilot I/O - Halt and Catch Fire 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x01 - The Pilot I/O https://transcripts.foreverdreaming.org/viewtopic.php?f=176&t=11058 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/21/14 09:27 ] 
+ 
+ 
+ Post subject:  
+ 01x01 - The Pilot I/O 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ (crunches) 
+ (tires screech) 
+ (engine stops) 
+ Professor: Today's discussion is postponed, as we have a very special guest. 
+ He's played an instrumental part in the world debut of the IBM PC, which is now on the verge of becoming the industry standard for corporate America. 
+ Please welcome Mr. Joseph MacMillan. 
+ (students applauding) 
+ Let me start by asking a question. 
+ How many of you desire to be computer engineers? 
+ Hmm. 
+ (music playing faintly) 
+ Oh... glad you could join us. 
+ MacMillan: Keep your hands up, keep your hands up. 
+ Now I'm going to list off several categories. 
+ When you hear a category you don't have hands-on experience in... 
+ (music stops) 
+ Put your hand down. 
+ Software design. 
+ Hardware/software integration. 
+ Circuit design. Microprocessing. 
+ Firmware design. Very large-scale integration. 
+ (chuckles) 
+ Something funny? 
+ I don't thing you really know what that is. 
+ Why? 
+ Because nobody who knows what it is calls it that. 
+ "VLSI." How's that? 
+ Operating systems. 
+ P-ROM configuration and PLC design. 
+ Personal computer design. Very good. 
+ Now, tell me one thing that will be true about computers 10 years from now. 
+ Well, fully intelligent machines will simulate the actions of neurons more closely, replicate... 
+ Okay, thanks. You. 
+ Uh, computers will be connected together across one network with a standard protocol. 
+ Like phone lines. 
+ Obviously phone lines. 
+ What's your name? 
+ Cameron. 
+ Cameron Howe. 
+ (music playing) 
+ So, you graduate this year. 
+ You land a job, become a programmer for what, what do you wanna do? Microcode? PCs? Video games? 
+ Do you need a quarter? 
+ Got it. 
+ Nice. 
+ I want to work for Reagan's Strategic Defense Initiative and put missiles in space. 
+ Are you afraid to give me a straight answer? 
+ (video game rumbles) 
+ A straight answer? Uh, let's see. 
+ Everything I'm studying here is so totally 10 years ago that no one who matters pays attention to anything I do. 
+ I'm paying attention. 
+ Yeah, but do you matter? 
+ Hey, can we get two more? 
+ Would you know if I did? 
+ What is this anyway, some kind of job interview? 
+ Maybe, maybe not. Depends on you. 
+ (machine clattering) 
+ You still haven't answered my question. 
+ Does it even matter what I want to do? 
+ God, this is an industry built on people ripping off each other's boring-ass ideas. 
+ SCP rips off CP/M, Microsoft rips off SCP. 
+ Oh, IBM rips off everybody, right? 
+ You've got a lot of excuses. 
+ And you work for IBM! 
+ Hey, computers could be more. They should be. 
+ You build counting machines, the same thing you've done for the last 70 years. 
+ I don't work for IBM. 
+ (bangs) 
+ (moaning) 
+ This doesn't mean you get the job. 
+ Wow! 
+ You mean we're not in love? 
+ Guard: Clock. 
+ (two-way radio chatter) 
+ (gate buzzes) 
+ Man on radio: Clear the gate. 
+ Ain't no jail cell can hold me. 
+ Come on. 
+ You didn't have to bring the kids. 
+ I think I did. 
+ Look, I had one too many drinks. 
+ It got away from me. 
+ It won't happen again. 
+ Sorry. 
+ You still have a job? 
+ Of course I do. 
+ They could care less about me anyway. 
+ Remember at the demo when we went to turn it on and it wouldn't turn on? 
+ Gordon... 
+ It's like, 1979 was good, but then 1980 came and it was like, whoa... what happened, you know? 
+ What I know is that you need to be at work in four hours. 
+ Four. 
+ Then your dad... your dad said, 
+"We can't lend you any more." 
+ And he wasn't being mean. 
+ He was just in his kitchen looking at me, and I said, "Okay, Gary." 
+ You're drunk, so the best thing you could do right now is to shut up. 
+ (clicks) 
+ I know what IBM is. 
+ I also know what IBM ain't, and everything that ain't IBM is cheaper, faster, and better, and that's what this company lives by. 
+ Well, John, that's what Hitachi thought. 
+ And Burroughs and NCR and Honeywell and Control Data. 
+ No, I know all the companies that IBM has crushed, and Cardiff Electric ain't one of 'em. It won't be. 
+ You sound pretty sure about that. 
+ (laughs) Look at you. 
+ Same suit, different tie. 
+ You know, Dallas is a long way from Armonk, New York, son. 
+ That's no accident. 
+ I couldn't agree with you more. 
+ Maybe I'm a guy who's done doing business like that. 
+ Maybe I see Cardiff Electric as a mid-major ready to take the jump and myself as the heavy hitter you need to legitimize your sales force, this company, this region. 
+ I just need someone to come in here and blow the balls off the numbers, Joe. 
+ I will tell you this... it's system software, straight up. 
+ No application, no next-gen PC garbage. 
+ It ain't sexy, but it sure as hell make us some serious money. 
+ Then I'm your guy. 
+ (scoffs) Don't know if I see it. 
+ You got East Coast corporate written all over ya. 
+ Don't like East Coast corporate. 
+ Hell, hotshot, you didn't bring in a damn resume. 
+ (briefcase latches click) 
+ And what is this? What am I looking at? 
+ My W-2. 
+ Box one is my last reported income at IBM. 
+ Whoo-hoo. 
+ It's also what 200% of quota looks like. 
+ The golden circle. 
+ I'll break numbers. I always do. 
+ (laughs) 
+ You answer to me. I'm SVP of sales, so you're dog sh1t around here until you close a deal. 
+ Do you understand? 
+ I do. 
+ All right: "Do." Good. 
+ Well, we're married. 
+ You may now go break your numbers, darlin'. 
+ Woman on radio: ...free and clear through Lewisville and Carrollton, but starting to slow down... 
+ (engine belt squeaking) 
+ Hey. 
+ (horn honks) 
+ A-16. 
+ Hey, that's me. That's my spot, A-16. 
+ Woman on radio: ...high from Love Field today is 86... 
+ (clicks) 
+ MacMillan: A-16! 
+ A-16. 
+ You're my SE for this sales call. 
+ Oh, fantastic. 
+ We'll take my car, it's closer. 
+ MacMillan: You know the truth is are system's are outperforming every top seller in the market. 
+ What about IBM? 
+ IBM is IBM, but we're neck and neck and we're cheaper. 
+ Technically. The difference in cost is negligible. 
+ It just seems you guys at Cardiff think you've built yourselves a fancy race car that deserves and outrageous price tag. 
+ And we get no Big Blue guarantee. 
+ I don't think there is such a thing. 
+ Well, they had me fooled. 
+ (man laughs) 
+ Me, too. 
+ I worked there. 
+ I grew up there. 
+ And I was brought up to believe that the work we did, the things we built were the singular contribution to computers that history would remember. 
+ And I believed it for a long time. 
+ For a long time, it was true. 
+ Nobody ever got fired for buying an IBM, right? 
+ What a fearful way to do business. 
+ You've made just enough safe choices to stay alive, but not enough to matter. 
+ Is that what you want? 
+ You can be more. 
+ You want to be more, don't you? 
+ The window of opportunity is closing. 
+ This is your chance. 
+ This is not about not losing. 
+ This is about you finally having the confidence to walk out on the ledge and know that you're not going to fall. 
+ Are we still talking about systems software here? 
+ Amen, let's get this guy another drink. 
+ I'm not going to apologize for caring about your business, even if the people who work for you don't. 
+ I'll ask you one more time. 
+ Are you ready to be more? 
+ There's also free install... 
+ Gordon, please. 
+ I'll think about it. 
+ Look, it's better than a flat-out no. 
+ Hey, man, look, Applied Data hasn't bought jack-all from anyone in years. 
+ You did a solid job explaining the software, but I need you to do me one favor. 
+ Okay. 
+ Next time I move to close, this is what you do. 
+ Okay, what? 
+ You shut up! 
+ "Lodi" playing 
+ ♪ The man from the magazine ♪ 
+♪ Said I was on my way... ♪ Hey. Hey, Mom. Come here, you little monkeys. Give me my kisses. Thank you. Go play. ♪ Came into town, a one-night stand ♪ - ♪ Looks like my plans fell through... ♪ It's soda. ♪ Oh, Lord, stuck in Lodi again... ♪ Daughter: Mom, Speak & Spell's not working. Well, what's wrong with it? It won't turn on. Joanie did it. Uh-uh, Haley did it. She was playing with her blocks... Let's see. Joanie's Speak & Spell won't turn on. Joanie: Pressing "on" makes it go. Okay. Are you gonna fix it? I'm gonna try. Did it give you any good words? Did it stump you at all? No. Okay. Joanie: She was throwing her blocks at it. Haley: But you did it. You were pressing "on." I don't care who broke it. That probably breaked it. I'm just gonna get it fixed, okay? No. (sighs) Okay, girls, other room, please. (both grumble) Please? Thank you. (sighs) You want to take a look and see what's wrong with that? They make that where you work, not where I do. Okay, Gordon, do you want to maybe get me the salt? Maybe you could reach into the cabinet about seven inches from your head, take out the salt and put it in my hand so I can finish cooking this. Do you think you could at least get me the salt? Here's the salt. Thank you. (object slaps) A-16. What is this? Page 33. Man, if you think it's funny... Page 33. I'm not in the mood, all right? Why don't you go blow-dry your hair some more or something? Don't you realize what you wrote? You wrote a treasure map. If you see him around, I wanna meet that guy. There's a project I want to discuss with him. Hey, hey. What are you doing? Why are you doing this? "This puts the future squarely in the hands of those who know computers not for what they are, but for everything they have the potential to be." What? You know who said that? No, no, I don't. You did. Page 36, closing paragraph. Computers aren't the thing. They're the thing that gets us to the thing. Over here on the circuit board, you've got the ROM chip. That's like the brain that remembers all the words... 128 kilobits worth. That is a lot of words. (phone ringing) And then you've got your VFD display right here. That's the part that shows you the words. And the speech synthesizer chip right here, that is the extra-special one they make where Mommy works. I got it. (ringing continues) Hello? It's somebody named Joe MacMillan. We're headed out the door to a movie. Can I have him call you back? What does the special chip do? Oh, um, the chip makes it talk. You know, like you and me. Can you make it talk? Not right now, kiddo. Hey, Joanie, why don't you go get ready for the movie, 'kay? He wanted to know if you thought about what he said. That article I wrote in "Byte." What about it? He had some ideas about it. Oh, yeah? What kind of ideas? I don't know. It doesn't really matter. ...go home and watch the other two "Star Wars"? You wanna do that tonight? Hi, Joe MacMillan. We spoke on the phone earlier. (chuckles) Did you follow me here? Your husband is the best SE I've worked with at Cardiff Electric. Now, granted, I've only been there a week. Do you mind if I borrow Gordon for one second? Donna: Come on. Hey, I'll see you guys outside. Donna: Yeah, maybe, if Daddy lets us. (chuckles) Reverse engineer an IBM PC with me. What? Why? What would be the point? Because I want to build a machine that nobody else has the balls to build. Wow, you're serious. Look, that's a terrible idea. Why? For such a multitude of reasons that I... because it's illegal. Worst-case scenario, IBM sues us into the ground. Uh, Cardiff finds out, then both of us would be on the street. Apple, IBM, they have the market sewn up. Plus, you got Commodore, Tandy, Texas Instruments. I'm sorry, but you missed it. We all did. Gordon, wait, wait. That's why we do it as Cardiff Electric. Scale up instantly. Are you out of your mind? Buzzards like Bosworth and Cardiff would never go for something... So we force their hand. Force their hand? How are you gonna force their hand? Let me worry about that part. Haley, Joanie: Dad! Come on, Dad! Hurry! Do you have a family, Joe? That's what I thought. Look, thanks, but no thanks. (car horn honks) So, that was Joe MacMillan, huh? He stalked our family to the movies, Gordon. Could you please acknowledge how crazy that is? He's just keyed up about something. What does he want? He wants to build a computer. And what does that have to do with you? Gordon? Gordon, we can't do this again. You know we can't. Look, I know, okay? I know. Do you know? Because I just had to spread the payments for Joanie's next dental visit Oh, my God, Donna. over three different credit cards. It's just literally a mistake that we can't afford to make again. Look, the Symphonic was a good idea. I know you still think so. What's a Symphonic? Donna: It's a silly computer. Mommy and Daddy built that didn't work. The Symphonic... was the best thing your dad ever did. 
+ 
+ "Complicated Game" plays (engine starts) ♪ It's always been the same ♪ 
+♪ It's just a complicated game ♪ - ♪ Yeah ♪ (clattering) ♪  A little girl asked me ♪ 
+♪ should she part her hair ♪ 
+♪ upon the left ♪ 
+♪ No ♪ 
+♪ A little girl asked me should she part her hair upon the right ♪ 
+♪ No ♪ 
+♪ I said, "It really doesn't matter where you part your hair ♪ 
+♪ Someone else will come along and move it ♪ 
+♪ And it's always been the same ♪ 
+♪ It's just a complicated game" ♪ 
+♪ It's just... a complicated game... ♪ (sizzling) (shatters) ♪ A little boy asks me should he put his vote upon the left... ♪ (cracks) ♪ A little boy asks me should he put his vote upon the right ♪ 
+♪ I said, "It really doesn't matter where you put your vote ♪ 
+♪ 'Cause someone else will come along and move it ♪ 
+♪ And it's always been the same ♪ 
+♪ It's just a complicated game." ♪ Do you have any idea how expensive this thing was? Donna took the kids to see her brother for the three-day weekend. I faked a fever, so... let's turn this thing inside out. (engine roars) Gordon: A personal computer, like any other computer, is just a nothing box full of electronic switches and hardware. You know, the IBM, the Altair, the Apple II... Anyone can buy all this stuff off the shelf right now. It's called "open architecture." I mean, IBM, they basically don't own anything inside the machine. Except the chip. Yeah, well, except what's on the chip. The BIOS is on one of these chips, we just don't know which one. The ROM BIOS is the only part of the machine IBM actually designed. I mean, it is the program, it is the magic. The bad news is they copyrighted it and they own how it works. The good news is there's a way around that, sort of. Reverse engineering. Right, grab me the oscilloscope. And a pen and paper. We need to record these pin voltages. (pops) I am a little rusty at this. (puffing) Yeah. Plus five? Yeah. Zero? Mm-hmm. - Zero. Mm-hmm. Plus five. Yeah. Zero. Mm-hmm. - Plus five. No. - Zero. Yeah. - Plus five? Zero. Yeah. Minus five? Yeah, yeah. Zero. Yeah. Minus five. Yeah. Zero. (sighs) Yeah. Plus five? (sizzling) That's it. Let's get to work. All right, write these numbers down. 2-8-0-0... 1-3-1-6... 0-4-5-6... Wait, wait, wait, what am I doing here? We're writing down the contents of the addresses, all right? So each group of four lights represents a hex digit. I understand hexadecimal code. How are you getting this from that? This first line, that's a B. Two on, one off, one on. Okay, second line here, E. Three on, one off... Oh, I get it, I get it. How many of these addresses do we need to transcribe? 65,536. E-4-2-1. 8-0... C-4... C-2-7-2... 3-8-7-9... C-9-1-0... 4-C... 1-9-2-1... (reciting continues) ...6-C-9-4. All right, fire up the monitor. I'm gonna go put on some coffee. Are we done? (gulps) With this part. (footsteps fade) (sighs) All right... ahem... let's see if we got it right. (Clicks) (pops) (clicks) (whirring) There's a prompt. That's a good sign. (keyboard keys clicking) You found a needle in a haystack. Now, hold on. Let's fire up the printer. We still have a lot to do. (whirring, beeping) The IBM PC-ROM BIOS. That's the assembly language code. Now we do our own chip. Well, I mean... I told you. It's a treasure map. Yeah, maybe, but look... (laughs) Oh, this definitely calls for a toast... (rattling) Gordon: Oh, sh1t. I-I thought you weren't gonna be back till Monday. It is Monday. Haley's sick. I figured she caught whatever you had, but looking at you now, I can tell that you're not sick at all. Would you please tell me that you didn't buy all this? Maybe I can help explain... I'd like to speak to my husband... privately. Gordon: Honey, just let me explain... I mean, I really don't understand. Let me just defend myself here. Why would you lie to me? Hold on, I did not lie to you about anything. You did, you lied. No, I did not lie to you. Gordon, this is going backwards. This right here, this is what I want to do with my life! Yes, but don't you realize what you're risking? Don't you realize what you have now? Well, it's not enough. Okay? I'm sorry, it's not enough. Okay. Well, it always has been enough for me. Come on, Donna, don't be like that. But I guess I never had the burden of believing that I was some misunderstood genius. (car door closes) Donna: Let's put you to bed. John? Nope. I'm sorry, but I think you'll wanna take this. Mama makin' pork chops tonight. It's IBM. (button clicks) Bosworth here. John, it's Dale Butler, Senior Vice President of Sales, North America. What can I do you for, Dale? You got one of my boys down there. Why, yes, we do. MacMillan. Uh-huh. Interesting fella. (Dale chuckles) I guess I can say it's How so? Joe walked out the front door of our offices last March. And? And he never came back. You lost me, Dale. No one has seen or heard from Joe MacMillan in more than a year. We even filed police reports. Up until we caught wind he was working for you, He's damaged goods, John. I wish I could've warned you, but now it might be too late. How so? I'm here with Rebecca Taylor, our in-house legal counsel. Hi, John. We've got a problem. You two... sit down. (door closes) This here is Nathan Cardiff. He owns the company you destroyed. We just got done with a two-and-a-half-hour jaw Oh, yeah? How's he doing? Oh, he's doing pretty splendid, given the fact that Big Blue is gonna liquidate this company to the tune of several dozen million dollars in legal damages because two idiot children in our employ decided to rip off their flagship product. Sir, that wasn't the idea. We did this solely on our own. It turns out that doesn't matter... and, believe me, we tried to feed you to the wolves, boys. But because MacMillan here worked at IBM and you two were in our employ at the time of your little project, that project is ours now, for better or worse. Worse, in this case. Butler and that woman Taylor are headed down here tomorrow. Sir, how the hell did IBM find out about this? I told them. Hey! Hey! That's how you force their hand? You call IBM? Just let everybody cool off. This is exactly what my wife... Joe, look at me. I'm not like you, okay? I have a wife, kids, a mortgage, okay? You know, I was fine until you threw that stupid article in my face and gave me some... What? What did I give you, Gordon? Oh, go to hell, Joe. Good! Get angry, get angry! Feel something, like you did in that garage, because this is the only way we get what we want. There is no "we," Joe. There is now. I was at COMDEX two years ago. I saw the Symphonic demo. It was ahead of its time. That was then, this is now... and a year from now, you're gonna thank me. You're a builder, Gordon. No, I'm not, okay? Not anymore. All right? Get that through your head. Hey. Yeah. Yes. I figured you needed a break. Joanie: Daddy, you fixed it! Yeah, well, turn it on. (toy beeps) Hello, Joanie. How'd you get it to say my name? Well, I programmed it. Now spell something for me. (both giggle) Electronic voice: D-A-D-D-Y. What's that spell? (dishes clatter) Look, I've been awful. I'm sorry. I know you think you need this. And whatever it is, I'm pretty sure I can't stop you. Yeah, I know. I've already stopped, okay? Computers, my job... none of that matters. Not without you. Build it. Whatever it is you're dreaming of, build it. I know you can make it great. But here's the deal. You wanna partner with Joe MacMillan... then you partner with me and this family. Yeah. Deal. Why can't we fire these peckerheads? Because then you'll lose this lawsuit. Fire them, shelve their work, you're essentially admitting guilt. Okay, so what's the solution, Barry? We legitimize the project. What? Go the other way. We say Cardiff Electric as a company has been pursuing PC development all along. I don't see how the hell that'd solve any... You take Clark's findings on the BIOS chip, you tell an engineer to build a unit that operates and performs in exactly the same way, but you don't tell him how to do it. Hell, I don't think we have one engineer capable of building a BIOS from scratch other than "Sonny Bono" over here. And you can't use him or any other engineer we currently employ. So we have to hire? Yes, someone who doesn't know us or IBM and certainly hasn't seen the contents of this binder. Essentially, all the law stipulates is that he can't be hands-on in the actual chip creation. And we can't fire them. Barry: No, not right now. So we get out of this by actually building a PC clone? This is your brilliant idea to save our hides, Barry? For God's sake, man! No. Actually, it was MacMillan's. You son of a bitch. Now, why didn't you tell me about this yesterday? I needed you to exhaust your options so that you would take this one seriously. Do you know how many futures you're toying with here, son? Selling systems software, I probably would've made you a couple hundred thousand... (screams) You listen to me, boy! You listen to me! I admire your tenacity, but I draw the line at you claiming that you did me a favor. Don't screw this up. 'Cause in Texas, you put a man's livelihood on the line and you don't follow through, there's not gonna be another new job 'cause ain't nobody gonna be able to find where you're buried. You've got something to say, Gordon? No. No, sir. Bosworth: Where are we gonna find this new engineer? We needed him yesterday. IBM legal's here first thing tomorrow. I need time to vet a candidate. Barry: We don't have time. You think IBM is just sitting around on their asses? Who do we have right now, huh? Who do we have right now? 
+(slams desk) "Wanna Be Manor" plays ♪ I ended up at the Wannabe Manor ♪ 
+♪ Wannabe Manor, what a place to be ♪ 
+♪ Wannabe Manor, is not for me... ♪ (bangs) ♪ I walked in the door, pee on the floor ♪ 
+♪ Looked on the floor, spotted a whore ♪ 
+♪ Drugs and filth are all around ♪ 
+♪ No clean dishes can be found ♪ 
+♪ If you thought your nightmares were scary ♪ 
+♪ Wait till you meet the ho called Jeri... ♪ Next game. ♪ It's her spreading legs and her female perfume... ♪ (quarter clatters) What the hell? You've Hey. Hey. Get your hands off me, man. We're getting complaints. Unbelievable. You're gone. Go! Later, spooky bitch. Arcade employee: Hey! What? That's enough! Put me down! Come on! Let go of me! Go! (yells) Fascist! (Coins clatter) God. Oh, Jesus. No. What? Great. (patrons chattering) You know I screwed him, right? Let's be adult about this. You love talking down to me, don't you? Look, there are a thousand other engineers we can get. Preferably one you haven't bedded down with. Who are you again? I'm the guy who figured out the boot code in four days. What have you done? You heard him... a thousand other engineers. No. You need me, otherwise you wouldn't be here. What do you want? I want you to go dangle your little opportunity in someone else's face. Then why are you still here? I wanted to see what I was so wrong about the first time. I regret that happened. I'm sorry you feel bad for hurting my feelings, but don't worry, you didn't. It wasn't supposed to be personal. I was scouting you. Scouting you for this exact moment. Humph. No, wait. This is too important to get wrong. "No one who matters pays attention," right? Okay, stop selling me. I don't need you. You think I don't see it? This takes off, I write my own ticket, but if it goes wrong, I'm a college dropout repairing VCRs for $3.25 an hour, so forgive me for weighing my options. See? Now you're thinking like a professional. How much money would you give me? Junior engineer, no experience... 20 grand. Double it. My wife makes 15 at TI. Well, then I feel sorry for her. So? What's it gonna be, Joe? "The Magnificent Seven" playing ♪ You lot! What? ♪ 
+♪ Don't stop, give it all you got ♪ 
+♪ You lot! What? ♪ 
+♪ Don't stop, yeah! ♪ 
+♪ You lot! What? ♪ 
+♪ Don't stop, yeah! ♪ 
+♪ Working for a rise, better my station ♪ 
+♪ Take my baby to sophistication ♪ 
+♪ She's seen the ads, she thinks it's nice ♪ 
+♪ Better work hard, I seen the price ♪ 
+♪ Never mind that, it's time for the bus ♪ 
+♪ We got to work and you're one of us ♪ 
+♪ Clocks go slow in a place of work ♪ 
+♪ Minutes drag and the hours jerk... ♪ Answer honestly. This is for legal record. False answers put you at risk of perjury, you understand? I'm sorry, you have to answer "yes" or "I do." Cameron: Oh, yes, I do. Barry: Have you ever attempted to disassemble or deconstruct Uh, no, I have not. Barry: Have you ever attempted to reverse engineer  any product or equipment made by IBM? No, I have not. Barry: Have you ever attempted to reverse engineer any microchips, microcode, or any computer hardware while under the employ of a business or corporation? No, I have not. Bosworth: Well, welcome...  to the tiniest, leakiest lifeboat... you ever tried to paddle to shore in. I had some numbers run, looks like this PC business is gonna cost us upwards of a couple million dollars just to get in the door. So, in order to reach that perfect world where we actually start selling things rather than running from the bogeyman, there will be some rules. One, no bullshit. Sorry, what constitutes bull... Whatever I damn say it is. Two, hours are now from when this meeting is done until when you die. And three, I know I can't fire any of you yet, but that also means you can't leave, so if I need to stomp on one of y'all's heads to feel better about my morning shave, whoa, you're gonna have to find a way to deal with that. Do you understand? So, who's my boss or whatever? Both: Me. (door opens) IBM is here. Listen, keep your stories straight. You're gonna be reciting them all day. Joe, one more thing. According to IBM, you've been on the side of a milk carton for about a year. Yeah, I hired you. I didn't check your references, so whatever this is, son, I'm on the hook for it. You understand? Yeah. I've worked here for 22 years. I helped build this company into what it is. And you backed me into a corner in my own home? I'm never... I'm never gonna forget that. Never. I'm gonna root through your closets, boy. Oh, I'm gonna pull every loose thread. How are you? Dale. Good to see ya. Good to see you. John Bosworth, Miss Taylor. We spoke on the phone. This way. Holy sh1t. What are you trying to prove with all this? 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
