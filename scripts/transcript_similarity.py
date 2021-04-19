@@ -2,33 +2,38 @@ import re
 import os
 import numpy as np
 
-def readTranscript (filePath):
+
+def readTranscript(filePath):
     """
     given a string filePath, return the relevant part of the transcript file
     """
-    file = open(filePath)
+    file = open(filePath, encoding='utf-8')
     fileContents = file.read()
     file.close()
-    #print(fileContents)
+    # print(fileContents)
 
     start = fileContents.index('Print')
     end = fileContents.rfind("Transcripts")
-    return fileContents[start+5 : end]
+    return fileContents[start+5: end]
 
-#readTranscript("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/Avatar: The Last Airbender/avatar_scripts_s1_e2.txt")
+# readTranscript('../transcripts/Avatar The Last Airbender/avatar_scripts_s1_e1.txt')
 
-transcript = readTranscript("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/Avatar: The Last Airbender/avatar_scripts_s1_e2.txt")
-#print(transcript)
-def tokenize (transcript):
+
+transcript = readTranscript(
+    '../transcripts/Breaking Bad/breaking_bad_scripts_s1_e3.txt')
+
+
+def tokenize(transcript):
     """
     given a string transcript, return a list of tokens
     """
     text = transcript.lower()
     regex = r'[a-z]+'
-    #print("words:" , re.findall(regex,text))
-    return re.findall(regex,text)
+    # print("words:" , re.findall(regex,text))
+    return re.findall(regex, text)
 
-#tokenize(transcript)
+# tokenize(transcript)
+
 
 def listTranscripts(showFolder):
     """
@@ -39,10 +44,12 @@ def listTranscripts(showFolder):
         for file in transcripts:
             filepath = sub + os.sep + file
             result.append(filepath)
-    #print(result)
+    # print(result)
     return (result)
-    
-#listTranscripts("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/American Crime Story")
+
+
+# listTranscripts("../transcripts/American Crime Story")
+
 
 def showTokens(showFolder):
     """
@@ -52,9 +59,9 @@ def showTokens(showFolder):
     result = {}
     episodeCount = {}
     for episode in episodes:
-        #print(episode)
+        # print(episode)
         fileContents = readTranscript(episode)
-        
+
         tokenList = tokenize(fileContents)
         tokenSet = set(tokenList)
         for token in tokenSet:
@@ -67,12 +74,16 @@ def showTokens(showFolder):
                 result[token] += 1
             else:
                 result[token] = 1
-    sortedResult = dict(sorted(result.items(), key=lambda item: item[1], reverse = True))
-    sortedEpisodes = dict(sorted(episodeCount.items(), key=lambda item: item[1], reverse = True))
-    #print (sortedEpisodes)
+    sortedResult = dict(
+        sorted(result.items(), key=lambda item: item[1], reverse=True))
+    sortedEpisodes = dict(
+        sorted(episodeCount.items(), key=lambda item: item[1], reverse=True))
+    # print (sortedEpisodes)
     return sortedResult, sortedEpisodes
 
-#showTokens("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/American Crime Story")
+
+# showTokens("../transcripts/American Crime Story")
+
 
 def allShowTokens(transcriptsFolder):
     """
@@ -82,36 +93,42 @@ def allShowTokens(transcriptsFolder):
     result = {}
     for sub, dirs, shows in os.walk(transcriptsFolder):
         for file in shows:
-            filepath = sub + os.sep 
+            filepath = sub + os.sep
             folder = filepath[:-1]
             tokenDict, episodeDict = showTokens(folder)
-            
-            name = folder[(folder.rfind("/")) + 1 :]
-            #print(name)
+
+            name = folder[(folder.rfind("\\")) + 1:]
+            # print(name)
             result[name] = tokenDict
-    #print(result)
+    # print(result)
     return result
 
-allShowToks = allShowTokens("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts")
+
+allShowToks = allShowTokens("../transcripts")
+# print(allShowToks.keys())
+
 
 def wordsToAnalyze(showFolder):
     """
     given string path to showFolder, return a dict of the form {token:count} of words that appear in more than one episode of the show
     """
+    # print(showFolder)
     result = {}
     tokenDict, episodeDict = showTokens(showFolder)
-    name = showFolder[(showFolder.rfind("/")) + 1 :]
+    name = showFolder[(showFolder.rfind("/")) + 1:]
     allToks = allShowToks[name]
 
     for token in episodeDict.keys():
-        if episodeDict[token] > 1 :
+        if episodeDict[token] > 1:
             count = allToks[token]
             result[token] = count
-    sortedResult = dict(sorted(result.items(), key=lambda item: item[1], reverse = True))
-    #print(sortedResult)
+    sortedResult = dict(
+        sorted(result.items(), key=lambda item: item[1], reverse=True))
+    # print(sortedResult)
     return sortedResult
 
-#wordsToAnalyze("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts/American Crime Story")
+
+# wordsToAnalyze("../transcripts/American Crime Story")
 
 
 def allWordsToAnalyze(transcriptsFolder):
@@ -122,19 +139,20 @@ def allWordsToAnalyze(transcriptsFolder):
 
     for sub, dirs, shows in os.walk(transcriptsFolder):
         for file in shows:
-            filepath = sub + os.sep 
-            folder = filepath[:-1]
-            x = wordsToAnalyze(folder)#
-            name = folder[(folder.rfind("/")) + 1 :]
+            filepath = sub
+            folder = filepath.replace("\\", "/")
+            x = wordsToAnalyze(folder)
+            name = folder[(folder.rfind("/")) + 1:]
             ans[name] = x
 
-    return ans     
+    return ans
 
 
-allWordsToAnalyze = allWordsToAnalyze("/Users/siddhichordia/cs4300sp2020-rj356-dd492-sc2538-sv352-kal255-1/transcripts")
-#print(allWords)
+allWordsToAnalyze = allWordsToAnalyze("../transcripts")
+# print(allWordsToAnalyze)
 
-def jaccardSimMat(wordsToAnalyze = allWordsToAnalyze):
+
+def jaccardSimMat(wordsToAnalyze=allWordsToAnalyze):
     """
     given allWordsToAnalyze, return an np array of size nShows x nShows with the jaccard similarity between shows
     """
@@ -156,10 +174,9 @@ def jaccardSimMat(wordsToAnalyze = allWordsToAnalyze):
                     or_count += 1
                     if (word in wordsToAnalyze[showA] and word in wordsToAnalyze[showB]):
                         and_count += 1
-                result[i,j] = and_count/or_count         
-    #print(result)
+                result[i, j] = and_count/or_count
+    # print(result)
     return result
 
+
 jaccSimMat = jaccardSimMat()
-
-
