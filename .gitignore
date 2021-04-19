@@ -9,3 +9,4 @@ vagrant/a4keypair.pem
 .env
 .DS_Store
 __pycache__
+*.swp
