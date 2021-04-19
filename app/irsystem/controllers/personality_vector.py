@@ -1,4 +1,4 @@
-from json_reader import json_read_vector
+# from json_reader import json_read_vector
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -122,4 +122,74 @@ def similar_varieties(legend, index, mat):
         a = cosine_similarity([user], [mat[i]])
         scores.append((a[0][0], index[i]))
     scores.sort(key=lambda x: x[0], reverse=True)
+    return scores
+
+
+def compute_personality_vec(legend, index, mat, responses):
+    scores = []
+
+    p_vec = [0]*len(legend)
+    p_vec_count = [0]*len(legend)
+    lookup_dict = {}
+    for count, i in enumerate(legend):
+        lookup_dict[i] = count
+
+    # charm, social
+    p_vec[lookup_dict["Charm"]] += responses[0]
+    p_vec[lookup_dict["Social"]] += responses[0]
+    p_vec_count[lookup_dict["Charm"]] += 1
+    p_vec_count[lookup_dict["Social"]] += 1
+
+    # social, drive
+    p_vec[lookup_dict["Social"]] += responses[1]
+    p_vec[lookup_dict["Drive"]] += responses[1]
+    p_vec_count[lookup_dict["Social"]] += 1
+    p_vec_count[lookup_dict["Drive"]] += 1
+
+    # drive, adapt, pragmatic
+    p_vec[lookup_dict["Drive"]] += responses[2]
+    p_vec[lookup_dict["Adaptability"]] += responses[2]
+    p_vec[lookup_dict["Idealistic"]] += inv(responses[2])
+    p_vec_count[lookup_dict["Drive"]] += 1
+    p_vec_count[lookup_dict["Adaptability"]] += 1
+    p_vec_count[lookup_dict["Idealistic"]] += 1
+
+    # sophistication, charm
+    p_vec[lookup_dict["Sophistication"]] += responses[3]
+    p_vec[lookup_dict["Charm"]] += responses[3]
+    p_vec_count[lookup_dict["Sophistication"]] += 1
+    p_vec_count[lookup_dict["Charm"]] += 1
+
+    # prag, kindness
+    p_vec[lookup_dict["Idealistic"]] += inv(responses[4])
+    p_vec[lookup_dict["Kindness"]] += inv(responses[4])
+    p_vec_count[lookup_dict["Idealistic"]] += 1
+    p_vec_count[lookup_dict["Kindness"]] += 1
+
+    # adapt
+    p_vec[lookup_dict["Adaptability"]] += responses[5]
+    p_vec_count[lookup_dict["Adaptability"]] += 1
+
+    # kindness, prag
+    p_vec[lookup_dict["Idealistic"]] += inv(responses[6])
+    p_vec[lookup_dict["Kindness"]] += inv(responses[6])
+    p_vec_count[lookup_dict["Idealistic"]] += 1
+    p_vec_count[lookup_dict["Kindness"]] += 1
+
+    # sophistication, adapt
+    p_vec[lookup_dict["Sophistication"]] += responses[7]
+    p_vec[lookup_dict["Adaptability"]] += inv(responses[7])
+    p_vec_count[lookup_dict["Sophistication"]] += 1
+    p_vec_count[lookup_dict["Adaptability"]] += 1
+
+    for i in range(len(p_vec)):
+        p_vec[i] = p_vec[i]/p_vec_count[i]
+
+    user = np.array(p_vec)
+
+    for i in range(len(mat)):
+        a = cosine_similarity([user], [mat[i]])
+        scores.append((a[0][0], index[i]))
+    scores.sort(key=lambda x: x[0], reverse=True)
+
     return scores

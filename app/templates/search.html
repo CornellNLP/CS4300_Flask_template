@@ -1,117 +1,268 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/main.css">
-    </head>
-    <body>
-        <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div>
+
+<head>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/static/main.css"> -->
+</head>
+
+<style>
+    .header,
+    .body,
+    .footer {
+        max-width: 1100px;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header {
+        /* height: 600px;
+        background-image: url("../static/wine.jpg");
+        background-size: cover;
+        background-position: center bottom; */
+    }
+
+    .header,
+    .footer {
+        padding: 50px 0px;
+    }
+
+    .form-inline {
+        color: rgb(68, 68, 68);
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(240, 240, 240);
+        border-radius: 30px;
+        padding: 10px 0px;
+    }
+
+    .form-group {
+        padding: 5px 30px;
+        width: 100%;
+    }
+
+    .collapsible {
+        color: white;
+        background-color: rgb(68, 68, 68);
+        padding: 15px;
+        border: none;
+        text-align: left;
+        outline: none;
+        margin: 10px 30px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .active,
+    .collapsible:hover {
+        background-color: rgb(128, 128, 128);
+    }
+
+    .content {
+        padding: 0 15px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .form-inline .collapsible:after {
+        content: '\002B';
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .form-inline .active:after {
+        content: "\2212";
+    }
+
+    .result {
+        padding: 30px 0px;
+    }
+
+    .info {
+        margin: 20px 0px;
+        padding: 10px;
+        background-color: rgb(255, 234, 112);
+        border-radius: 10px;
+    }
+
+    .personality .collapsible {
+        color: #333;
+    }
+
+    .personality .active,
+    .personality .collapsible:hover {
+        background-color: rgb(189, 173, 87);
+    }
+
+    .personality .content {
+        background-color: white;
+    }
+
+    .personality .content .info {
+        background-color: rgb(209, 128, 128);
+    }
+</style>
+
+
+<body>
+    <div class="header">
+        <h1>{{ name }}</h1>
+    </div>
+    <div class="body">
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-                C
-                <span style="color: #EA4335; ">S</span>
-                <span style="color: #FBBC05; ">4</span>
-                3
-                <span style="color: #34A853; ">0</span>
-                <span style="color: #EA4335; ">0</span>
-            </h1>
-            
-            <br><br>
-            
             <div class="form-group">
-                <label for = "name"> What is your name? </label>
-                <input name = "name" placeholder = "Jane Doe">
+                <label for="name"> What is your name? </label>
+                <input name="name" class="form-control" placeholder="Jane Doe" />
             </div>
-            <br><br>
             <div class="form-group">
-                <label for = "personality1"> How would your friends describe your personality? </label>
-                <input list="adjectives" name = "personality1">
-                <datalist id="adjectives" class = "hidden">
-                    {% for a in adjectives %}  
+                <label for="flavor">Describe your favorite drink (can be non-alcoholic)!</label>
+                <textarea name="flavor" class="form-control" cols="142"
+                    placeholder="Really cold coca-cola during the summer..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="scent">Describe your favorite scent</label>
+                <textarea name="scent" class="form-control" cols="142"
+                    placeholder="idk an example for this lol"></textarea>
+            </div>
+            <button type="button" class="collapsible">Personality Match</button>
+            <div class="content">
+                <div class="form-group">
+                    <p>On a scale of 1-5, rate how well the following statements describe you.</p>
+                </div>
+                <div class="form-group">
+                    <label for="personality1">You are the life of a party.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality1">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist> 
-            </div>
-            <br><br>
-            <div class="form-group">
-                <input list="adjectives" name = "personality2"> 
-                <datalist id="adjectives"> 
-                    {% for a in adjectives %}  
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality2">People near you often rally around you.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality2">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist>
-            </div>
-            <br><br>
-            <div class="form-group">
-                <input list="adjectives" name = "personality3">
-                <datalist id="adjectives">
-                    {% for a in adjectives %}  
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality3">You will do whatever it takes to succeed, no matter what.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality3">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist>
-            </div>
-            <br><br>
-            <div class="form-group">
-                <label for = "personality1"> How would you describe your own personality? </label>
-                <input list="adjectives" name = "personality4">
-                <datalist id="adjectives" class = "hidden">
-                    {% for a in adjectives %}  
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality4">Your friends come to you for fashion advice.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality4">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist> 
-            </div>
-            <br><br>
-            <div class="form-group">
-                <input list="adjectives" name = "personality5"> 
-                <datalist id="adjectives"> 
-                    {% for a in adjectives %}  
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality5">Life is not fair, and that means you have to look out for yourself first
+                        and
+                        foremost.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality5">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist>
-            </div>
-            <br><br>
-            <div class="form-group">
-                <input list="adjectives" name = "personality6">
-                <datalist id="adjectives">
-                    {% for a in adjectives %}  
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality6">You don't like making a plan because you often end up deviating from it
+                        anyways.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality6">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
                         <option value="{{ a }}">
-                    {% endfor %}
-                </datalist>
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality7">You see many relationships in your life as transactional.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality7">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
+                        <option value="{{ a }}">
+                            {% endfor %}
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="personality8">You have high standards of living, and you'll go the extra mile to attain
+                        that.</label>
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality8">
+                    <datalist id="scale" class="hidden">
+                        {% for a in scale %}
+                        <option value="{{ a }}">
+                            {% endfor %}
+                    </datalist>
+                </div>
             </div>
-            <br><br>
             <div class="form-group">
-                <label for = "flavor"> Describe your favorite drink (can be non-alcoholic)! </label>
-                <textarea name = "flavor" rows="10" cols="50" placeholder = "Really cold coca-cola during the summer..."></textarea>
+                <button type="submit" class="btn btn-info pull-right">Find your match!</button>
             </div>
-            <br><br>
-            <div class="form-group">
-                <label for = "scent"> Describe your favorite scent </label>
-                <textarea name = "scent" rows="10" cols="50" placeholder = "idk an example for this lol"></textarea>
-            </div>
-            <br><br>
-                <!-- <input id="input" type="text" name="search" class="form-control" placeholder="Your Input"> -->
-            <button type="submit" class="btn btn-info"> Find your match! </button>
         </form>
-        <form class="form-inline global-search">
-        {% if data %}
-            <h1>{{output_message}}</h1>
-            {% for d in data %}  
-                <br>
-                <p>{{d}}</p>
-            {% endfor %}
-        {% endif %}
-        </form>
-        <form class="form-inline global-search">
-            {% if personality_only %}
-                <h2>Based only on your personality...</h2>
-                {% for d in personality_only %}  
-                    <br>
-                    <p>{{d}}</p>
+        <div class="result">
+            <div class="personality">
+                <h4>{{personality_match[0]}}</h4>
+                <h3>{{personality_match[1]}}</h3>
+                {% for i in range(2,personality_match|length,2) %}
+                {% if i == 2 %}
+                <div class="info collapsible">
+                    <p class="info-score"><strong>{{personality_match[i]}}</strong></p>
+                    <p class="info-detail">{{personality_match[i+1]}}</p>
+                </div>
+                <div class="content">
+                    {% for j in range(1,wine_match|length,2) %}
+                    <div class="info">
+                        <p class="info-score"><strong>{{wine_match[j]}}</strong></p>
+                        <p class="info-detail">{{wine_match[j+1]}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="info">
+                    <p class="info-score"><strong>{{personality_match[i]}}</strong></p>
+                    <p class="info-detail">{{personality_match[i+1]}}</p>
+                </div>
+                {% endif %}
                 {% endfor %}
-            {% endif %}
-        </form>
-    </body>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="footer">
+        <h4>{{ netid }}</h4>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
 
 </html>

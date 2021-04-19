@@ -308,6 +308,64 @@ def display_personality(query, sim_list, reviews):
         i += 1
 
 
+def compute_wine(query, wine_scores, sim_list, reviews, num):
+    """ 
+    Takes a query, wine_scores, sim_list output from the cossim() function, the
+    wine reviews df, and number of results to return, and prints the output to
+    the terminal. Duplicate entries are caught and removed. Only varieties of
+    the top type according to wine_scores are printed.
+    """
+    result = []
+    result.append("Based on your responses, we believe these particular " +
+                  wine_scores[0][1] + "s will fit your taste:")
+
+    i = 0
+    counter = 1
+    dup_list = []
+    while len(dup_list) < num:
+        idx = sim_list[i][1]
+        variety = reviews["variety"][idx]
+        title = reviews["title"][idx]
+        if variety == wine_scores[0][1]:
+            if title not in dup_list:
+                dup_list.append(title)
+                #score = round(sim_list[i][0]*100, 1)
+                desc = reviews["description"][idx]
+                #print("[" + str(score) + "%] " + title)
+                result.append(str(counter) + ". " + title)
+                result.append(desc)
+                counter += 1
+        i += 1
+    return result
+
+
+def compute_personality(query, sim_list, reviews):
+    """
+    Displays the personality - wine variety match 
+    """
+    result = []
+    result.append("Based on personality...")
+    result.append("You are a " + str(round(100 *
+                                           sim_list[0][0], 1)) + "% match with " + sim_list[0][1] + "!")
+
+    # build inverted dict
+    inv_dict = {}
+    for i in range(len(reviews["variety"])):
+        inv_dict[reviews["variety"][i]] = i
+
+    i = 0
+    dup_list = []
+    while len(dup_list) < 3:
+        title = sim_list[i][1]
+        dup_list.append(title)
+        score = round(sim_list[i][0]*100, 1)
+        desc = reviews["personality_description"][inv_dict[title]]
+        result.append("[" + str(score) + "%] " + title)
+        result.append(desc)
+        i += 1
+    return result
+
+
 def compute_outputs(query, sim_list, reviews, num):
     """
     Returns a list of wine results to return
