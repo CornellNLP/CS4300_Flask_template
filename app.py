@@ -11,6 +11,8 @@ gunicorn_logger = logging.getLogger('gunicorn.error') # from ta
 app.logger.handlers = gunicorn_logger.handlers # from ta
 app.logger.setLevel(gunicorn_logger.level) # from ta
 
+app.logger.critical("14")
+
 # get user input
 @app.route("/", methods=["GET"])
 def query():
