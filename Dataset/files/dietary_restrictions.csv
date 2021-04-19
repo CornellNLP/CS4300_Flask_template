@@ -1,0 +1,235 @@
+VEGAN,VEGETARIAN,PESCATARIAN
+egg,beef,beef
+eggs,chuck,chuck
+butter,flat iron,flat iron
+milk,top blade,top blade
+cream,steak,steak
+single cream,arm,arm
+double cream,mock,mock
+whipped cream,clod,clod
+ice cream,heart,heart
+mayonnaise,medallion,medallion
+honey,medallions,medallions
+yoghurt,sierra,sierra
+cheese,denver,denver
+mascarpone,boneless,boneless
+parmigiano-reggiano,ribs,ribs
+parmesean,spare,spare
+burrata,filet mignon,filet mignon
+halloumi,back rib,back rib
+gruyère,back ribs,back ribs
+camembert,ribeye,ribeye
+pecorino romano,flank,flank
+grana padano,ground,ground
+roquefort,prime,prime
+emmental,t-bone,t-bone
+mozzarella,tenderloin,tenderloin
+cheddar,sirloin,sirloin
+taleggio,brisket,brisket
+comte,shank,shank
+stilton,pork,pork
+fromage blanc,bacon,bacon
+feta,ribchop,ribchop
+paneer,leg,leg
+danish blue,chump,chump
+cream,belly,belly
+cottage,loin,loin
+swiss,fillet,fillet
+blue,shoulder,shoulder
+gorgonzola,cheeks,cheeks
+muenster,cheek,cheek
+queso,liver,liver
+american,crackling,crackling
+jack,scratchings,scratchings
+beef,chops,chops
+chuck,poultry,poultry
+flat iron,quail,quail
+top blade,chicken,chicken
+steak,turkey,turkey
+arm,fowl,fowl
+mock,pheasant,pheasant
+clod,quail,quail
+heart,drumstick,drumstick
+medallion,thigh,thigh
+medallions,wing,wing
+sierra,breast,breast
+denver,duck,duck
+boneless,geese,geese
+ribs,salmonella,salmonella
+spare,tinders,tinders
+filet mignon,skinless,skinless
+back rib,winglette,winglette
+back ribs,drumette,drumette
+ribeye,back,back
+flank,neck,neck
+ground,seafood,bison
+prime,crab,buffalo
+t-bone,shrimp,cattle
+tenderloin,prawn,llama
+sirloin,prawns,dog
+brisket,lobster,goat
+shank,crayfish,elk
+pork,fish,deer
+bacon,langoustine,moose
+ribchop,scampi,donkey
+leg,shellfish,horse
+chump,mussels,guinea
+belly,anchovies,boar
+loin,barracuda,sausage
+fillet,bass,antelope
+shoulder,cod,partridge
+cheeks,blowfish,pig
+cheek,bluefish,grouse
+liver,bream,rabbit
+crackling,brill,fallow
+scratchings,catfish,jelly
+chops,dogfish,gelatin
+poultry,eel,marshmallows
+quail,haddock,ham
+chicken,halibut,gummy bears
+turkey,herring,
+fowl,mackerel,
+pheasant,parrotfish,
+quail,pollock,
+drumstick,salmon,
+thigh,sardine,
+wing,sea bass,
+breast,shark,
+duck,snakehead,
+geese,snapper,
+salmonella,swordfish,
+tinders,tilapia,
+skinless,trout,
+winglette,tuna,
+drumette,turbot,
+back,whitefish,
+neck,yellowfin,
+seafood,bigeye,
+crab,bluefin,
+shrimp,whitefish,
+prawn,caviar,
+prawns,masago,
+lobster,ikura,
+crayfish,kazunoko,
+fish,lumpfish,
+langoustine,shad,
+scampi,roe,
+shellfish,tobiko,
+mussels,craw,
+anchovies,mollusca,
+barracuda,cockle,
+bass,cuttlefish,
+cod,clam,
+blowfish,loco,
+bluefish,mussel,
+bream,octopus,
+brill,oyster,
+catfish,periwinkle,
+dogfish,scallop,
+eel,squid,
+haddock,calamari,
+halibut,conch,
+herring,snails,
+mackerel,uni,
+parrotfish,sea cucumber,
+pollock,urchin,
+salmon,jellyfish,
+sardine,liver,
+sea bass,fish sauce,
+shark,fish paste,
+snakehead,fish stock,
+snapper,stockfish,
+swordfish,shrimp paste,
+tilapia,surimi,
+trout,sushi,
+tuna,bison,
+turbot,buffalo,
+whitefish,cattle,
+yellowfin,llama,
+bigeye,dog,
+bluefin,goat,
+whitefish,elk,
+caviar,deer,
+masago,moose,
+ikura,donkey,
+kazunoko,horse,
+lumpfish,guinea,
+shad,boar,
+roe,sausage,
+tobiko,antelope,
+craw,partridge,
+mollusca,pig,
+cockle,grouse,
+cuttlefish,rabbit,
+clam,fallow,
+loco,jelly,
+mussel,gelatin,
+octopus,marshmallows,
+oyster,ham,
+periwinkle,gummy bears,
+scallop,,
+squid,,
+calamari,,
+conch,,
+snails,,
+uni,,
+sea cucumber,,
+urchin,,
+jellyfish,,
+liver,,
+fish sauce,,
+fish paste,,
+fish stock,,
+stockfish,,
+shrimp paste,,
+surimi,,
+sushi,,
+bison,,
+buffalo,,
+cattle,,
+llama,,
+dog,,
+goat,,
+elk,,
+deer,,
+moose,,
+donkey,,
+horse,,
+guinea,,
+boar,,
+sausage,,
+antelope,,
+partridge,,
+pig,,
+grouse,,
+rabbit,,
+fallow,,
+yolk,,
+pollen,,
+jelly,,
+gelatin,,
+whey,,
+lactose,,
+milk powder,,
+dressing,,
+ranch,,
+jell-o,,
+marshmallows,,
+tapenade,,
+pesto,,
+ham,,
+creamer,,
+fresh pasta,,
+milk chocolate,,
+white chocolate,,
+chocolate,,
+worcestershire sauce,,
+gummy bears,,
+lard,,
+mocha,,
+bread,,
+miso,,
+tortellini,,
+pad thai,,
+quark,,
+fromage frais,,
