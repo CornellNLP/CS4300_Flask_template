@@ -56,11 +56,12 @@
       <div class="card result">
         <p><b>{{d.name}}:</b> {{d.length}} mi distance</p>
         <p id="difficulty">{{d.difficulty}}</p>
-        {% for activity in d.activity_types[:3] %}
+        {% for activity in d.activity_types %}
         <p>{{ activity }}</p>
         {% endfor %}
         <p id="review">User Review:</p>
-        <p>{{ d.reviews[5] }} </p>
+        <p>{{ d.review }} </p>
+        <!-- <p>{{d.description}}</p> -->
       </div>
     </div>
     {% endfor %}

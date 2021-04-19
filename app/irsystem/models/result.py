@@ -1,4 +1,5 @@
 from app.irsystem.models.get_data import data, trail_to_idx
+import random
 
 
 class Result:
@@ -13,6 +14,7 @@ class Result:
         - activity types (list)
         - description (string)
         - reviews (string list)
+        - random review (string)
     """
 
     def __init__(self, sim_tup, **kwargs):
@@ -29,6 +31,7 @@ class Result:
         for review in ith_trails["Reviews"]:
             if review['comment'] != "":
                 self.reviews.append(review["comment"])
+        self.review = self.reviews[random.randint(0, len(self.reviews))]
         # self.accessibility_types = kwargs.get('accessibility_types')
 
         
