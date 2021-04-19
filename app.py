@@ -16,7 +16,9 @@ def query():
   data = []
   output_message = ''
 
+  app.logger.critical("app")
   restaurant_query = request.args.get('fav_name')
+  app.logger.critical(restaurant_query)
   price_query = request.args.get('max_price')
   cuisine_query = request.args.get('cuisine')
   ambiance_query = request.args.get('ambiance')
