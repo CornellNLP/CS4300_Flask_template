@@ -119,6 +119,7 @@ def rank_results(data, min_rating=0.0):
         # compute weighted score
         data['score'] = n_full_vax*15.0 - n_percent_positive*7.0 + n_rating*5.0 - n_distance*5.0
         data['score'] = round(data['score'], 4)
+        # print(data['score'])
 
         # sort by score
         data = data.sort_values(by='score', ascending=False, na_position='last')
