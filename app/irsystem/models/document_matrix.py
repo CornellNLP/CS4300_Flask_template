@@ -41,6 +41,8 @@ class DTMat:
             [feature_names] -> dtm.feature_names
         - The number of trails used to calculate the Tokens object
             [num_trails] -> dtm.num_trails
+        - The inverted index used
+            [inv_idx] -> dtm.inv_idx
         - Provided by the Tokens object, a dictionary where keys are indexes
           for a particular trail, and values are lists containing the tokens
           returned from calling [Tokens().tokens.per_trail[trail_idx]] for
@@ -59,6 +61,7 @@ class DTMat:
     feature_names = []
     num_trails = None
     toks_per_trails = {}
+    inv_idx = None
 
     def __init__(self, term_rep="tfidf", token_type="reviews and descriptions", features=100):
         assert term_rep in ['tfidf', 'tf', 'binary']
@@ -71,6 +74,7 @@ class DTMat:
         self.token_type = token_type
         self.toks_per_trails = Tokens(token_type).tokens_per_trail
         self.num_trails = len(self.toks_per_trails)
+        self.inv_idx = InvertedIndex(token_type=self.token_type, vector_type='tfidf')
         if term_rep == "tfidf":
             self.mat = self._get_tfidf_mat(features)
         if term_rep == "tf":

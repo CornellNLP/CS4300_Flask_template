@@ -67,7 +67,7 @@ class InvertedIndex:
 
         self.inv_idx = inv_idx
     
-    def get_idfs(self, min_df = 15, max_df_ratio= 0.9):
+    def get_idfs(self, min_df = 10, max_df_ratio= 0.9):
         assert self._vector_type in ['tf', 'tfidf']
         idfs = {}
         for token in self.inv_idx:
