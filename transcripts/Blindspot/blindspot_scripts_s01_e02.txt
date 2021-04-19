@@ -1,0 +1,772 @@
+Transcripts - Forever Dreaming :: 01x02 - A Stray Howl - Blindspot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x02 - A Stray Howl https://transcripts.foreverdreaming.org/viewtopic.php?f=390&t=22651 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 09/29/15 01:13 ] 
+ 
+ 
+ Post subject:  
+ 01x02 - A Stray Howl 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Previously on "Blindspot..." 
+ Borden : She can't remember who she is, where she came from... nothing... before she crawled out of that bag in Times Square. 
+ Mayfair : Do you recognize her? 
+ No. 
+ Then why is your name tattooed on her back? 
+ Patterson : All of her tattoos are brand-new. 
+ Weller : It's a treasure map. 
+ Come again? 
+ It's an address and today's date. 
+ Weller : Chao's gonna blow up the Statue of Liberty. 
+ Mayfair : It's a Navy SEAL tattoo. 
+ If she was Navy, she'd be in our database. 
+ Not if she was special ops. 
+ Jane! Stop! 
+ Borden : It's possible that something familiar could trigger her memory. 
+ Jane : None of this feels real. 
+ Who is this woman? 
+ Weller : She might be just the most important resource we've ever had. 
+ Jane : Everything just feels so out of control. 
+ (gunfire) 
+ I don't remember who I am, who I was. 
+ Whatever life I had is gone... shattered into a million tiny pieces. 
+ Sometimes it's hard to breathe. 
+ I have something I'd like to try. 
+ It's called a Rorschach test, and it's designed to analyze personality characteristics and emotional functioning. 
+ But with your amnesia, my hope is that the ethereal nature of the images might provoke another memory. 
+ So, tell me what you see when you look at these. 
+ Okay. 
+ A spider web. Is that right? 
+ There's no right or wrong. 
+ Let's try another one, shall we? 
+ (gunshots) 
+ You missed two. 
+ Do it again. 
+ A target. 
+ Have they told you they think I might be a Navy SEAL? 
+ They have, yes. 
+ I only have one memory of training in the woods, but didn't seem very official. 
+ SEAL training is very... unconventional. 
+ So, that actually makes sense. 
+ Let's try another one, shall we? 
+ Morning, sis. 
+ Oh, damn it, did we wake you? 
+ I got an apartment broker scheduled for tomorrow. 
+ We'll be out of your hair in no time, I promise. 
+ There's no rush, Sarah. 
+ Huh, what is that supposed to be? 
+ It's a pancake, all right? 
+ Mm-hmm. 
+ Morning, little buddy. 
+ "Morning, Uncle Kurt." 
+ Morning. 
+ Morning. 
+ So, Dad called last night. 
+ Just wanted to know if you were gonna go back for Taylor's memorial this year. 
+ No, I've got too much going on at work. 
+ He shouldn't be going to that memorial either. 
+ Makes people uncomfortable. 
+ Yeah, well, that's their problem. 
+ Yeah. 
+ Look, just think about it, okay? 
+ Yeah. 
+ Bye, buddy. 
+ Bye. 
+ What are we doing in here? 
+ Your first memory was triggered by being active. 
+ Maybe your muscles might remember something your mind can't. 
+ That's an M-4. 
+ So, if you wanna fire that, you're going to... 
+ ...need to do... 
+ Exactly that. 
+ Step up. 
+ Okay, let's try this. 
+ Patterson : Her body is covered in cryptic symbols, map pieces, riddles. 
+ Whoever did this to her has a very specific goal in mind. 
+ And what that goal is remains a mystery. 
+ I have my best people on it, but this information is so varied and so dense, it could take years to decode. 
+ I noticed a scar on the back of her neck. 
+ Yeah, that. 
+ Got any idea how old that is? 
+ Well, it's hard to tell with these things, but it's definitely not recent. 
+ I don't wanna hurt you. 
+ You won't. 
+ Come on, hands up. 
+ Here we go. 
+ Start swinging. 
+ Come on, come on. 
+ (grunting) 
+ All right? 
+ Again. 
+ We've captured hundreds of numeric sequences and phrases from Jane's body in over two dozen languages, and we're feeding them into a database that I have designed that'll cross-reference them with every information system that we have access to. 
+ Like a Google alert for her tattoos. 
+ Well... it's a little bit more sophisticated than that. 
+ But, uh, yes, it's... it's like a Google alert. 
+ ♪♪ 
+ What is it, Jane? 
+ Did you remember something? 
+ The hospital just called. Chao is dead. 
+ (speaking Chinese) 
+ Zapata : Chao had a massive stroke at around midnight just as he was getting out of surgery. 
+ I'm not buying it. He was young, healthy. 
+ He also got shot. 
+ Get me the full autopsy. 
+ He was the only link we had to whoever did this to me. 
+ We'll find another one. 
+ Wait... look at that. 
+ All the doctors rushing into Chao's room, and that one walking away. 
+ Canvas the hospital... find me that doctor. 
+ Patterson : I did it! 
+ What, you found him? 
+ I... what? Who? 
+ Sorry, you were in the middle of... 
+ Well, I unlocked another tattoo. 
+ So, as we scanned some of the numerical tattoos into the database, one of them just jumped out at me. 
+ Right? Do you see that? 
+ Okay, so, just pretend that we're not you. 
+ Okay, the... the Chinese symbols behind Jane's ear. 
+ The first clue that we decoded was an address... 
+ 399 White Street, Apartment Seven. 
+ Okay? 
+ Okay, so, look at this tattoo. 
+ Starts with 399, has a bunch of letters just jumbled up in between, and then it ends with seven. 
+ Do you see that? 
+ Who here knows what a Vigenere cipher is? 
+ Put your hand down. 
+ It's a polyalphabetic substitution code. 
+ Patterson : Yes, awesome. 
+ A Vigenere cipher is a method of encrypting alphabetic text based on the letters of a key word. 
+ And unless you have the key word, it is next to impossible to decode. 
+ So, what's the key word? 
+ The words between the two numbers on the original tattoo. 
+ Exactly. 
+ Use White Street Apartment as your key word, and suddenly, the mess of letters in between become "Major Arthur Gibson". 
+ So, the first clue unlocks the second. 
+ Crazy, right? 
+ Who is this Gibson guy? 
+ Okay, so, according to his service records, Gibson flew F-22 missions over Iraq and Afghanistan, earned a boatload of medals, including the Silver Star, and then an injury sidelined his flying career and he moved back stateside. 
+ Took a desk job in Nevada before coming to work for the Air Force in New York. 
+ Jane : Now that Chao's dead and can't help me, Gibson might know who I am, who did this to me. 
+ We gotta go talk to him. 
+ DMV records have him living in Brooklyn. 
+ Let's go. 
+ I'm coming with you. 
+ Yes, you are. 
+ She is? 
+ You were dead against her going into the field yesterday. 
+ I was wrong. 
+ We don't know how the tattoos work yet. 
+ She should be there. 
+ It might help her trigger her memory. 
+ And we all know she can handle herself. 
+ Please, I can help figure this out. 
+ Thank you. Let's go. 
+ (knocking) 
+ Major Gibson. It's the FBI. 
+ (knocking) 
+ Who sent you? 
+ It's kind of a long story. Mind if we come in? 
+ Hey, I don't know what they told you, but I'm not talking. 
+ I haven't said a thing. 
+ "They"? Who's "they"? Do you recognize me? 
+ Get off my property. 
+ Well, he didn't get that Silver Star for his charm. 
+ Zapata : Can we get a warrant? 
+ No. 
+ Tattoos aren't probable cause. 
+ Couldn't I just kick the door down? 
+ I mean, it didn't look that heavy. 
+ No, you can't, Jane. That's not how it works. 
+ (explosion) 
+ (high-pitched ringing) 
+ ♪♪ 
+ Building's not structurally sound, I can't let you in. 
+ Come on. 
+ What happened? 
+ The whole place was wired up to blow, I've never seen anything like it. 
+ He blew up his own house while he was still in it? Why? 
+ We need to see the body. 
+ There isn't one. 
+ What do you mean? 
+ He was inside when it went up. 
+ I don't know what to tell you, we searched the entire place. 
+ It was a distraction. 
+ Keep us busy here while he got away. 
+ Not to mention, destroy any evidence he left behind. 
+ Evidence of what? 
+ The only thing that survived that blast was an old wall safe. 
+ We need to get that back to our lab immediately. 
+ How much time did he buy himself? 
+ We got here a little over an hour ago. 
+ Who is this guy? 
+ woman : I served with Major Gibson both in Afghanistan and as his commanding officer here in New York. He's a hell of a pilot. 
+ I thought he was injured, moved to a desk. 
+ Once a pilot, always a pilot. 
+ So, what happened to him? 
+ Gibson's injury was psychological. 
+ He had a mission gone bad. 
+ There was collateral damage. 
+ How many civilians died? 
+ I'm afraid that's classified. 
+ So, a lot then? 
+ Gibson was never the same. 
+ His PTSD got worse and worse until eventually, we had to ground him. 
+ What exactly did he do when he got back stateside? 
+ I'm sorry, but I can't say much more. 
+ But unfortunately, even the desk work got to be too much for him. 
+ We had no choice but to discharge him. 
+ When was the last time you spoke? 
+ A few months. 
+ After we let him go, his marriage ended. 
+ He couldn't hold down a job, he grew increasingly paranoid. 
+ I think he blamed me. 
+ So, why'd he blow up his own house this morning? 
+ I can't begin to imagine. 
+ Look, ma'am, I'm racing to contain a potentially volatile situation, so I need to know what you know. 
+ I've told you everything I can. 
+ I wish we could have done more for him. 
+ He was a good man. 
+ So, Gibson couldn't get over killing all those civilians? 
+ That one day, that... that single moment defined the rest of his life. 
+ Some things are hard to forget. 
+ Borden says people are shaped by their past. 
+ Do you think that's true? 
+ I wish it wasn't. 
+ What if I find out who I am and I don't like it? 
+ (phone ringing) 
+ It's Patterson. 
+ You're on speaker. 
+ I'm just going through Gibson's files, and something's not right. 
+ Powers said they sidelined Gibson because he was suffering from PTSD. 
+ But according to his files, they promoted him. 
+ They can still get promoted off the desk. 
+ Maybe they're just trying to take care of their own. 
+ Maybe, but they also raised his security clearance, from Secret to Top Secret and above. 
+ If Gibson was suffering from PTSD they wouldn't have increased his access. 
+ Nope, they would've frozen him out. 
+ He was one of their top pilots in Iraq and Afghanistan. 
+ So, what, they move him back to Nevada? 
+ Bump him up in rank? Raise his clearance? 
+ What are you thinking? 
+ Nellis, Nevada is where the Air Force drone program is based. 
+ He didn't wash out. 
+ They made him a drone pilot. 
+ Patterson :  Okay, well, that explains Nevada. 
+ But when they moved him to New York, his clearance skyrocketed. 
+ There's no drone program here. 
+ Not one we know about. 
+ Oh, come on. I'm gonna be late for work. 
+ girl : Daddy? 
+ Gibson. What are you doing? 
+ I need you to do something for me, Alex. 
+ Just put the gun down, okay? 
+ I gave them everything. 
+ I did unspeakable things for them. 
+ Gibson, my daughter is innocent. 
+ I killed a lot of innocent people, Alex. 
+ Please, just let her go. 
+ No. 
+ This whole country abandoned me. 
+ And today, you're gonna help me teach them a lesson. 
+ All right, listen to me... 
+ No, you listen to me! 
+ You'll do as I say, or you'll never see your daughter again. 
+ ♪♪ 
+ (beep) 
+ Call the general for me, tell him I can't make it Thursday. 
+ (phone ringing) 
+ Powers. 
+ Wait, what? 
+ No, that's not possible, they're not... 
+ (car alarm sounding) 
+ We gotta drill into this guy's life with everything we've got. 
+ I wanna know who Gibson was talking to, what he's been spending his money on. 
+ And Patterson, I want you to find out about the explosives he used on his own house. 
+ Of course. 
+ And I wanna see inside that safe, okay? 
+ There's gotta be something in there. 
+ On it. 
+ Thank you. 
+ His house and Powers. 
+ This is just the beginning. 
+ All right, the guy's not gonna stop. 
+ So, we need to find out who his next target is. 
+ I can't help but think we pushed Gibson over the edge this morning when we knocked on his door. 
+ Zapata : What are you talking about? 
+ Weller : Yeah. 
+ That wasn't our fault. 
+ I didn't say it was. 
+ Reed, enough. 
+ Blindly following her tattoos is reckless. 
+ I don't think you recognize just how important she is. 
+ It's a little early to make that call, don't you think? 
+ No. The most important thing is to find Gibson and to stop him. 
+ So, can you join Patterson and find me a lead? 
+ Let's go. 
+ Thank you. 
+ What if he's right? 
+ He's not. 
+ And what if these tattoos are a trap? 
+ Jane. 
+ We don't know anything about who did this to me or why, and people are losing their lives. 
+ Jane, this is not your fault, okay? 
+ This is not your fault. 
+ Weller, come with me. 
+ Yes, ma'am. 
+ General, what the hell is going on? 
+ This morning a former Air Force pilot blew up his own house. 
+ Three hours later, his former CO dies in an air to ground missile attack. 
+ Please, do me the courtesy of admitting these incidents are connected. 
+ They are connected. 
+ Care to elaborate? 
+ It was decided the country needed a domestic UAV program that could not only surveil targets, but also, in extreme circumstances... take action. 
+ You're telling me we have armed drones flying over American soil. 
+ It's in place as a last resort. 
+ We've never dispensed ordinance domestically. 
+ Until today. 
+ Gibson got control of one of these UAVs, how? 
+ general : He kidnapped the daughter of one of our avionics specialists, forced him to retrofit a drone with an alternate control card that severed its signal with our satellite, allowing Gibson to take over remotely. 
+ And where is that girl now? 
+ We believe Gibson still has her. 
+ And the drone... can you recover control, locate it? 
+ He's frozen us out. 
+ And it was designed to evade radar detection. 
+ It still has another two missiles, but I've got my entire team working on it. 
+ We need to find him before he kills anyone else. 
+ You should've come clean with this as soon as we asked you about it... 
+ We had no idea... 
+ No idea, what? 
+ That he'd blow up his own house? 
+ There were larger issues at... 
+ Larger than what? 
+ An armed rogue drone? Ten dead people? 
+ Or a little girl who was taken away from her father? 
+ Mayfair : Weller! 
+ We are trying... 
+ If anything happens to that little girl... 
+ Walk away. 
+ Why is he doing this, General? 
+ His motives could help us anticipate his next target. 
+ (sighs) I wish I knew. 
+ What I do know is that Gibson is one of the most efficient killing machines the Air Force has ever made. 
+ Doesn't something feel off to you? 
+ Whoever did this to Jane knew about the drone program. 
+ That information's above Top Secret. 
+ Her first tattoo helped us save lives. 
+ Hopefully this one will too. 
+ Maybe. 
+ Or maybe we're about to knock over a hornets' nest. 
+ I don't think Gibson recognized me. 
+ Chao didn't recognize me either. 
+ So, so far, these tattoos have sent us to people who don't seem to be connected to me at all. 
+ If they've got nothing to do with you, why are they on your body? 
+ Penance. 
+ (silenced gunshots) 
+ What? 
+ Hey, come take a look at this. 
+ He's lying. 
+ I know. 
+ But threatening a three-star general does not help us. 
+ Sorry. 
+ (sighs) 
+ How are you holding up? 
+ I know you don't do too well with missing kids. 
+ I'm fine. 
+ Kurt, I need to know where your head is. 
+ I've been thinking about Taylor. 
+ Then maybe you should start talking to someone... 
+ No, I don't wanna talk. 
+ Listen to me. 
+ That girl's disappearance was not your fault. 
+ You were ten years old. 
+ One of my last memories of her... we were climbing a tree in our backyard. 
+ And we were up pretty high. 
+ She was fearless. 
+ I was above her. 
+ I stepped on her hand accidentally. 
+ She slipped. 
+ She fell, cut herself. 
+ It left a really big scar on the back of her neck. 
+ Jane has the same scar. 
+ Same eyes. 
+ She's the right age. 
+ I know why it's me. 
+ I know why my name is on her back. 
+ I think Jane Doe is Taylor Shaw. 
+ 
+ 
+ 
+ ♪♪ 
+ You think Jane is Taylor Shaw? 
+ I do. 
+ I don't know why and I don't know who. 
+ But someone sent her back to me. 
+ That's impossible. 
+ Why? 
+ Why is my name on her back? 
+ Taylor Shaw has been missing for 25 years. 
+ Yeah. 
+ And she's not missing anymore. 
+ Hey, we got into Gibson's safe. 
+ It's an air-gapped computer. 
+ Sorry, what does that mean? 
+ It's a computer that's never been connected to the Internet. 
+ It makes it impossible for a third party to access or monitor it. 
+ The thing is, there's not much on it but a few Word documents... super weird. 
+ But this one caught my eye. 
+ Dates, times, locations. Five of 'em. 
+ They line up with five seemingly unrelated explosive accidents. 
+ Faulty gas lines, car crashes... 
+ Zapata : Victims are all foreign nationals. 
+ All from the Middle East, all incidents occurring on U.S. soil. 
+ Drone attacks. 
+ They've already hit targets inside America. 
+ So, the general lied to us. 
+ Zapata : Each incident has a set of initials next to it. 
+ "A.G.", Arthur Gibson, for three of them, and "I.M." for the other two. 
+ We searched the Air Force's employment records, and we think "I.M." is another drone pilot... 
+ Major Ivan Musgrave. 
+ Got an address for him? 
+ Of course. 
+ Let's move. 
+ Jane, just wait here for us, all right? 
+ Just until we get a read on the situation, okay? 
+ Thanks. 
+ (knocking) 
+ Major Musgrave, this is the FBI. 
+ Major Musgrave? 
+ Ivan Musgrave? 
+ Weller! 
+ Uhh! 
+ (Musgrave yells) 
+ woman : Hey! 
+ What are you doing? 
+ Hey! Hey! Did they go in there? 
+ (grunting) 
+ (choking, gasping) 
+ Jane! Jane! Let him go! 
+ Let him go. 
+ We want to question him, not kill him. 
+ Turn over. Turn over! 
+ (panting) 
+ We're taking you in. 
+ Why? I didn't do anything wrong! 
+ You okay? 
+ All right, all right. Okay, all right. 
+ What? 
+ Fine, I got a couple of weapons up there that maybe I shouldn't have, but show me an airman who doesn't. 
+ That's not what this is about. 
+ Your friend Gibson's in serious trouble. 
+ So, we got some questions for you. 
+ Gibson? Man, that guy hates me. 
+ I'm the one who turned him in. 
+ What? 
+ He was about to blow the whistle on the whole... 
+ No, you people don't have the clearance for this. 
+ Keep talking. 
+ I wanna talk to Colonel Powers, now. 
+ Powers is dead. 
+ Musgrave : What? Since when? 
+ Weller? 
+ Zapata : Wait a minute. 
+ If Gibson hates this guy... 
+ We just brought him outside. 
+ Zapata : Go! Go! Go! 
+ Get inside. 
+ No, wait, no. 
+ Inside, get inside. Get inside! 
+ No, no, wait, that's him! 
+ Jane : That's the man from the woods, he's standing right there... 
+ (electricity buzzing) 
+ (high-pitched ringing) 
+ (Reed groaning) 
+ Jane : Wait, wait, wait. All right. 
+ Easy, easy, easy, easy. All right. 
+ (Reed speaking indistinctly) 
+ Look, you might have hit an artery, okay? 
+ If you pull the glass, you could bleed out in minutes. 
+ Weller : You all right? 
+ I hope you know what you're doing. 
+ I do. 
+ Come on. Come on. 
+ (Reed wincing) 
+ Weller, Weller? 
+ (overlapping chatter) 
+ Jane : I'll get him. Hey. 
+ (Weller speaking indistinctly) 
+ Come on. (continues indistinctly) 
+ ♪♪ 
+ Oh, my God. 
+ How did he get his hands on this? 
+ He kidnapped the daughter of an avionics specialist who helped him hack the drone. 
+ Weller : That girl's still missing,  so she needs our help. 
+ Musgrave :  This is terrible. 
+ The program wasn't last resort, was it? 
+ You'd already been using it. 
+ Five confirmed kills. 
+ How much collateral damage? 
+ Drones are messy. 
+ What, so Gibson wanted to stop it? 
+ He was one of our best pilots, but even he couldn't stomach the loss of American civilians. 
+ Weller :  What, he was gonna blow the whistle? 
+ Yeah... yeah, he asked me to help. 
+ But, um, I turned him in. 
+ They stripped his clearance, they pulled his pension. 
+ Threatened his family. 
+ We pushed him over the edge, we destroyed his life. 
+ So, Gibson was a good guy. 
+ He just wanted the killing to stop. 
+ He killed ten innocent people this morning. 
+ Good guys don't do that. 
+ You don't think good people ever do terrible things? 
+ I think terrible people do terrible things. 
+ And the good people stop them. 
+ Musgrave :  Gibson snapped. 
+ He's unpredictable now. 
+ He's still got a missile left. 
+ Who's his next target? 
+ I was hoping you were gonna tell me that. 
+ I don't know, man, the guy's vindictive. 
+ He's trying to hurt the people that hurt him. 
+ Powers? Me? 
+ Who is next on the list? 
+ General, where do the drone pilots operate from? 
+ That's classified. 
+ Gibson wants revenge, that's obvious. 
+ But he also hates the program and wants the public to know about it. 
+ So, where would he hit if he wants to do the most damage? 
+ General, please. 
+ Here. 
+ Excuse me? 
+ The top three floors of this building. 
+ The pilots operate from here. 
+ But this doesn't make any sense. 
+ If he wanted to bomb our facility, he would've done it by now. 
+ Why wait? Why... 
+ The shift change. 
+ Okay, what are you talking about? 
+ The drones are in the air for days at a time, but the pilots fly them in 12-hour shifts so there's no overlap. Twice a day, every pilot is in this building. 
+ He's waiting for the overlap. Maximum impact. 
+ A well-placed strike could bring this whole building down. 
+ When's the next shift change? 
+ An hour. 
+ So, we're evacuating now. 
+ If he sees the building start to empty out, he'll hit us immediately, cut his losses. 
+ general : My people think they are very close to regaining control of this drone. 
+ "Think" isn't gonna cut it! 
+ We got 60 minutes to find Gibson before he kills thousands of people. 
+ I'm on it. 
+ We're funneling as many people as we can through the basement subway connect, but there's no way we're gonna evacuate the whole building in time. 
+ Weller : Tell me you've figured out a way to track this guy. 
+ Well, he'd have to be somewhere pretty high up to maintain line of sight with the drone. 
+ Okay, so, we've narrowed his location down to somewhere up high? 
+ Well, I've been given access to the exact frequency that the drone communicates on, and traced the signal's emanation point to Brooklyn. 
+ Gibson's home turf. 
+ That's a lot of ground to cover. 
+ Yes, but the explosives in Gibson's house were a very specific grade of demolition manufactured exclusively for Garamond Construction sites. 
+ And guess what? 
+ Gibson worked for them at two sites... both new high rises, both in Brooklyn. 
+ You and Tasha take the Lexus, hit one of the sites. 
+ Me and Jane will split, cover the other one. 
+ Let's go. 
+ (siren whooping) 
+ I lied to you this morning. 
+ At the shooting range, I did remember something. 
+ That's good. What was it? 
+ Something unforgivable. 
+ What if I was a terrible person before all of this? 
+ I don't think you were, Jane. 
+ Whoever you were then... that's not who you are now. 
+ How do you know? 
+ Your first instinct is to help people, Jane. 
+ Battered wife in Chinatown, Reed after the explosion today. 
+ You don't hesitate, you act. 
+ And you do the right thing. 
+ So, I don't know what it is you're remembering or what the context is. 
+ But I do think you're a good person. 
+ (tires screeching) 
+ I'm heading up to the roof. 
+ Okay, I'll stay here in case he doubles back. 
+ Stay in contact with that radio in the car, all right? 
+ Let me know if you see him. 
+ ♪♪ 
+ (gunshots) 
+ (gunfire continues) 
+ (gunfire) 
+ Jane! 
+ Jane, it's Weller. Gibson's... 
+ (radio breaking up) 
+ Weller, you're breaking up. 
+ Jane! 
+ (radio static) 
+ Weller, I can't... 
+ I don't understand you. 
+ Jane! 
+ Gibson's coming down to you now! 
+ (gunfire) 
+ We're gonna lose Gibson! I'm on him! 
+ (tires screeching) 
+ Weller :  Jane! It's too dangerous! 
+ Reed, Zapata! 
+ Jane's in pursuit of Gibson. 
+ She's what? 
+ We got separated. All right, she's in my SUV. 
+ So, lock onto that GPS 
+ and converge on that position. 
+ Do we even know if she can drive? 
+ Yes, she can drive! 
+ (tires screeching) 
+ ♪♪ 
+ (crashing) 
+ (tires screeching) 
+ (crashing) 
+ ♪♪ 
+ Jane : Penance? 
+ ♪♪ 
+ Jane. 
+ Jane... 
+ (gasping) 
+ You okay? 
+ Can you move? 
+ Yes. 
+ I'm gonna get you out of here. 
+ (grunting) 
+ Good. 
+ We have to go. 
+ Come here. 
+ Where's the girl? 
+ Where is the girl?! 
+ Emily? Emily! 
+ (sobbing quietly) 
+ Emily, hi. 
+ My name's Kurt, all right? 
+ And I'm here to take you home. 
+ Okay? 
+ Okay. There we go. 
+ ♪♪ 
+ Alex : Emily! 
+ Daddy! 
+ Are you okay? 
+ We got her back. 
+ Yeah. 
+ We did. 
+ The Eagle Two just touched down safely. 
+ Air Force is already spinning the two explosions as accidents... faulty engine and a natural gas leak. 
+ The public has a right to know the truth. 
+ That's not our call. 
+ Weller : Any more hits on the tattoo database? 
+ Patterson : Not yet. 
+ Wait a minute, we're not seriously gonna keep doing this, are we? 
+ We incited a man to rampage today. 
+ What, you think he built a drone control card and didn't intend to use it? 
+ He'd been planning this. 
+ And yes, we forced him to up his timeline. 
+ But if he was able to wait until he was ready, there'd be no stopping him. 
+ So, the tattoos helped. 
+ That's one way of looking at it. 
+ Okay, that's it for today. 
+ Weller? 
+ Yes, ma'am? 
+ If you think Jane is Taylor Shaw... 
+ I do. 
+ I want to be certain. 
+ I've already ordered Shaw's old case files to be sent to our lab. 
+ Patterson can test Taylor's DNA against Jane's. 
+ It's gonna match. 
+ I don't know. If she is Taylor, where has she been for 25 years? 
+ Where did she learn these skills? 
+ And why did someone erase her memory and send her back to you? 
+ It doesn't make sense. 
+ It's her. I can feel it. 
+ Hey. You okay? 
+ (sighs) 
+ I can't stop thinking about Gibson. 
+ What he did was terrible, but some part of him was just trying to help. 
+ He let vengeance cloud his thinking. 
+ It's one thing to want to blow the whistle. 
+ It's another thing to take lives. 
+ Thank you for what you said earlier... about my instincts. 
+ And for everything. 
+ What happened to you was horrible, Jane. 
+ Good can come of it. 
+ I've been thinking about it. 
+ I might just be the messenger, but your name is still on my back. 
+ They could've just said "FBI." 
+ Why would they send me to you? 
+ I don't know. 
+ Patterson : We got Chao's autopsy results back. 
+ We found elevated levels of potassium chloride in his system. 
+ What does that mean? 
+ He was poisoned. 
+ Someone went through a lot of trouble to keep him from talking to us. 
+ The doctor, the one that was walking away. 
+ Canvassed the whole hospital, no one could place him. 
+ Oh, my God. 
+ We have no proof yet. 
+ We're trying to verify it with some DNA from Taylor's case files. 
+ Well, you realize what this... this could mean, right? 
+ I mean, Dad's been accused of kidnapping her, of killing her. 
+ It didn't matter they couldn't prove it, he's had it hanging over his head since the day she disappeared. 
+ Mom left him. 
+ Kurt, you spent 25 years convinced Dad committed a murder that never even happened. 
+ If Jane Doe is Taylor Shaw, then Dad is innocent. 
+ Maybe. 
+ No, Kurt, not maybe! 
+ You have to go see him. 
+ Sarah... 
+ He's dying. 
+ It's lung cancer, he doesn't have long. 
+ Please, just go see him. 
+ You can fix this before it's too late. 
+ (shower running) 
+ (sighs) 
+ (panicked breathing) 
+ Don't... don't make a sound. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 
