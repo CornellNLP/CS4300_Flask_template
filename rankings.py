@@ -10,6 +10,7 @@ from nltk.tokenize import TreebankWordTokenizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
+import ast
 
 with open("finalData2.json", "r") as f:
   data = json.load(f)
@@ -82,39 +83,54 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
     else:
       cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
       ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
-      ambiances = eval(ambiances)
-      print(ambiances)
       print(type(ambiances))
+      if ambiances is None:
+        ambiances = {}
+      elif len(ambiances) == 0:
+        ambiances = {}
+      else:
+        ambiances = ast.literal_eval(ambiances)
+      #try:
+        #ambiances = json.loads(ambiances)
+      #except json.decoder.JSONDecodeError:
+        #ambiances = {}
+      #ambiances = eval(ambiances)
+      #print(ambiances)
+      #print(type(ambiances))
 
       price_match = False
       cuisine_match = False
-      ambiance_match = False
+      ambiance_match = False #False
 
-      if ambiances != "": # if restaurant has ambiance info
-        if price_preference: # if there is a price preference
-          if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
-            price_match = True
-        else: # no price preference
+      #if len(ambiances) != ""
+      #if len(ambiances) != 0: # if restaurant has ambiance info
+      if price_preference: # if there is a price preference
+        if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
           price_match = True
+      else: # no price preference
+        price_match = True
 
-        if cuisine_preference: # if there is a cuisine preference
-          if cuisine in cuisines:
+      if cuisine_preference: # if there is a cuisine preference
+        if cuisine in cuisines:
             cuisine_match = True
-        else: # no cuisine preference
-          cuisine_match = True
-
-        if ambiance_preference: # if there is a ambiance preference
-          # print(ambiance)
-          # print(type(ambiance))
-          # print(json.loads(ambiances))
-          # print(type(json.loads(ambiances)))
-          # print(ambiances)
-          # print(type(ambiances))
-          print("!!!!!")
+      else: # no cuisine preference
+        cuisine_match = True
+      if ambiance_preference: # if there is a ambiance preference
+            # print(ambiance)
+            # print(type(ambiance))
+            # print(json.loads(ambiances))
+            # print(type(json.loads(ambiances)))
+            # print(ambiances)
+            # print(type(ambiances))
+        print("!!!!!")
+        print(ambiance)
+        #print(len(ambiances))
+        if ambiances:
+          print("in if")
           if ambiances[ambiance]:
             ambiance_match = True
-        else: # no cuisine preference
-          ambiance_match = True
+      else: # no cuisine preference
+        ambiance_match = True
 
       if ambiance_match and cuisine_match and price_match:
         recs.append(name)
