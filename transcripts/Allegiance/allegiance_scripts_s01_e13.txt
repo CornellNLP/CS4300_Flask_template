@@ -1,0 +1,453 @@
+Transcripts - Forever Dreaming :: 01x13 - Family Crisis - Allegiance 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x13 - Family Crisis https://transcripts.foreverdreaming.org/viewtopic.php?f=210&t=18071 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/02/15 19:55 ] 
+ 
+ 
+ Post subject:  
+ 01x13 - Family Crisis 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ man : Previously on Allegiance... 
+ Sam : Say hello to Oskar Christoph. 
+ If he is here, it is for one reason, and that is to execute Black Dagger. 
+ Oskar : I belong here with you. 
+ And I would be a father to our baby. 
+ [crying] 
+ Katya : Elizabeth Simpson? 
+ I'm Agent Kim Solloway with the Department of Homeland Security. 
+ This is Christoph, the man you know as Marcos Oliva. 
+ Marcos is not a terrorist. 
+ You people are wrong. 
+ Elizabeth : And you're not gonna hurt him. 
+ We'll take him peacefully. 
+ Once you start shooting, empty the gun. 
+ Christoph can't leave here alive. 
+ Alex : If we're right, information on one of these files will be used to kill thousands of people. 
+ But you are not right. 
+ Hello? 
+ I have to thank you, Amor, for reminding me how people really are. 
+ I think I lost... 
+ [gunshot] Ah! 
+ Katya : Did you find anything on Elizabeth's computer? 
+ Christoph's target, Williamstown, Pennsylvania, Standard Gas facility. 
+ Sam : We have found a loft space leased under one of his aliases, John Phillips, and we are gonna hit it now. 
+ [alarm beeping] 
+ [device beeping] 
+ [explosion booms] 
+ The Rezident? 
+ I shoot him and take his place. 
+ Help me, and you're my new number two. 
+ I think you'd be safer going back home. 
+ Sam agreed to put an FBI detail on the house. 
+ Alex : The SVR would never try anything in front of the FBI. 
+ Sarah would be safe there. 
+ [muffled gunshots] 
+ Sarah : [sighs] Where is it? 
+ I've looked everywhere. 
+ Where did she put it? 
+ Natalie : What are you doing? 
+ Looking for my tablet. 
+ Mom confiscated it until my next report card. 
+ Doesn't really matter now, does it? 
+ It's not in here. 
+ How do you know that? 
+ 'Cause I've known Mom a little longer than you. 
+ Jackpot. 
+ Don't say I never gave you anything. 
+ Yeah. 
+ Oh, my God. 
+ [laughs] 
+ What? 
+ I used to want this so bad. 
+ Why? 
+ Dad got it for Mom in Paris. 
+ She'd wear it whenever she got really dressed up. 
+ You don't remember? 
+ Mm, I think it was before my time. 
+ I used to think it was the most beautiful thing in the world. 
+ I wanted to wear it to prom, but Mom said I'd lose it. 
+ Yeah, of course she did. 
+ She doesn't trust anyone but herself. 
+ [laughs] 
+ That prom night, Dad was making me and Dan Gerbois take, like, a million pictures before we left. 
+ Of course he was. 
+ And Mom came in and said I was wearing too much makeup. 
+ I was so mad that she said something in front of Dan. 
+ She made me come up here to "fix it." 
+ Oh, my God. 
+ And then we get up here, and, um... she says my makeup is fine. 
+ I look really pretty... but something's missing. 
+ So she pulls out this necklace and, uh, says... 
+ "You can handle it." 
+ [somber music] 
+ ♪ ♪ 
+ Is everything gonna work out, Natalie? 
+ Yes. 
+ I promise. 
+ ♪ ♪ 
+ [knock at door] 
+ Doug Peters? 
+ Yes? 
+ [muffled gunshot] 
+ [ominous music] 
+ ♪ ♪ 
+ Katya : The Standard Gas plant in Williamstown, Pennsylvania. 
+ A man named Oskar Christoph is going to sabotage it. 
+ He's going to tamper with the pressure valves. 
+ No, this is not a threat. 
+ I am telling you about a threat. 
+ I am not with any group. 
+ Yes, yes, you can trace this number. 
+ [phone beeps] 
+ Hello? 
+ [scoffs] 
+ What? 
+ They hung up on me. 
+ They don't believe me. 
+ What? 
+ Some environmental group has organized a harassment campaign against fracking facilities all over the country. 
+ They said they've had over 1,000 threats this week. 
+ I'm sure Christoph is behind that. 
+ This doesn't make sense. 
+ I mean, the SVR needs this to look like an accident. 
+ It's because a U.S. retaliation for a deliberate act would start a war. 
+ These valves are 400 pounds of solid steel. 
+ It would take massive amounts of plastic explosives to blow these up from the outside. 
+ I mean, it would never look like an accident. 
+ What if he used a much smaller amount of explosives, but inside the valves themselves? 
+ Well, it takes a dozen people to switch out these valves. 
+ There's no way that Christoph could rig the explosives to them without being seen. 
+ He could if he did it before the valves even reach the site. 
+ With Elizabeth Simpson's files, he would have had access to the entire order history at that plant. 
+ He'd know which vendor was supplying the new valves, along with their exact specifications. 
+ If he acquired valves identical to the new ones, he'd have as much time as he needed to rig them. 
+ He could use a micro-explosive, something exotic, moldable. 
+ PLX. 
+ Extremely potent and totally untraceable. 
+ [explosion booms] 
+ That was only 1/100 of a kilo. 
+ I'd like 50 kilos. 
+ But then all he'd need to do is switch out his valves with the ones sitting in the vendor's warehouse before they were delivered. 
+ And then they would be brought in and installed for him. 
+ Then the weight of the valves would naturally tamp the explosives downward, ensuring their full force, going into the gas lines, the storage tanks, the fracking Wells. 
+ I mean, this is brilliant, actually. 
+ Wouldn't the plant have some sort of safety protocols to prevent fire from spreading down the pipelines? 
+ Failsafes, yes. 
+ Yes, but someone like Christoph would have figure out a way to turn those off. 
+ Well, he'd have to get into the control room. 
+ Well, he will find a way in. 
+ How? 
+ Katya : Under the right cover. 
+ ♪ ♪ 
+ Mark : If he got access to the control room, with the right software he could hijack the computer's mainframe, bypass the security protocols... 
+ Patched the security hole in a production facility, backdoor on a server, took me about ten minutes. 
+ [explosion booms] 
+ Mark : Then he would be able to shut off the failsafes, allowing the fire to spread through the line, increasing the pressure, increasing the volatility. 
+ One spark in the right place... 
+ The whole facility explodes. 
+ Eliminating the evidence that the plant was tampered with. 
+ That's what this is all about, creating a natural gas accident big enough that the American public turn against it as a source of energy. 
+ 35 years ago, the partial meltdown at Three Mile Island... 
+ No one was killed. No one was even badly injured. 
+ But the country soured on nuclear energy overnight. 
+ There hasn't been a single nuclear plant built since then. 
+ If thousands die, the outcry would be deafening. 
+ The public would insist on a ban on processing plants or pipelines in populated areas. 
+ Not to mention fracking altogether. 
+ Our energy boom collapses overnight. 
+ Russia is restored as the premier energy provider in all of Europe and Western Asia. 
+ The energy prices in the U.S. would quadruple. 
+ And he'll only have to level one town to do it. 
+ And possibly set the entire Marcellus Shale Formation on fire. 
+ It would burn for a decade, maybe longer. 
+ Alex, when are the valves supposed to be replaced? 
+ Now. They're being replaced now. 
+ [tense music] 
+ ♪ ♪ 
+ [cell phone ringing] 
+ Yeah? 
+ Victor. 
+ I'm surprised you answered. 
+ I was expecting to leave a message. 
+ What do you want? 
+ A resolution to our issue. 
+ A bullet to your head is the only resolution. 
+ I understand how you can feel that way, but circumstances have changed. 
+ I want to tell you about a unique opportunity. 
+ What are you talking about? 
+ Rezident : Sacrifice. 
+ What we're willing to do for the most important people in our lives. 
+ The FBI detailed outside the O'Connor home has been tragically killed in the line of duty tonight. 
+ My men have eyes on Natalie and her little sister. 
+ They die when I give the order. 
+ You're mad. 
+ Not more so than you walking into Uri Adulov's club and shooting him for refusing to kill me. 
+ But here's the opportunity that I promised. 
+ You get to the show the world how much, or how little, you care about Natalie. 
+ Would you die for her, Victor? 
+ Because it's you or her. 
+ Fort Tryon overlook, 9:00 A.M. tomorrow. 
+ If you're not there, Natalie and her little sister die. 
+ Slowly. 
+ [phone clicks] 
+ [phone beeps] 
+ [ominous music] 
+ ♪ ♪ 
+ Sarah : Everything okay? 
+ Yeah. 
+ Everything's fine. 
+ Bad Girls Club marathon is on next. 
+ Want to watch? 
+ [cell phone buzzing] 
+ One of them gets so wasted, she barfs on her own cake. 
+ It's gonna be great. 
+ Yeah, just... give me a minute. 
+ Is it done? 
+ There is a complication. 
+ Natalie : What do you mean, a complication? 
+ Victor : The house, assume it's bugged. 
+ Okay. 
+ [water running] 
+ Victor : The men outside are not FBI. 
+ They're SVR. 
+ What? 
+ The Rezident took out the FBI team. 
+ He's demanding I turn myself over to him, or... he sends them in after you. 
+ I'm on my way. 
+ No. 
+ Stick with the plan. 
+ Natalie, you don't understand. 
+ No, you don't understand. 
+ You're not coming here. 
+ Yes, I am. 
+ That's what he expects you to do. 
+ There's no other way. 
+ Do what he doesn't expect. 
+ Go right at him. 
+ Hurt him where he feels safe. 
+ At the Rezidentura? 
+ Natalie : Yes. 
+ ♪ ♪ 
+ I can't leave you alone. 
+ It's too dangerous. They'll be better-armed. 
+ If you come here, we're all dead. 
+ Take him out, Victor. 
+ It's our only chance. 
+ I love you. 
+ ♪ ♪ 
+ I love you too. 
+ ♪ ♪ 
+ [dramatic music] 
+ ♪ ♪ 
+ Look how close it is to everything. 
+ If that goes off, all these buildings, all these people... 
+ They're probably finished installing the valves by now. 
+ How long do you think we have? 
+ A facility this size, a half hour to get back online, run tests, restart the gas flow. 
+ Then that's our window to stop Christoph's attack. 
+ We can't let them restart the gas flow. 
+ There must be another way. 
+ Mark : Wish there was. 
+ There's no one else coming, no one else to call. 
+ ♪ ♪ 
+ We're gonna need a way to get through that gate. 
+ It's nice to meet you, Inspector Peters. 
+ It still amazes me how they send you guys out to watch us turn a few screws. 
+ Oskar : Re-establishing a facility of this size is more than just turning screws. 
+ Whatever you say. 
+ All the new valves are in the North yard. 
+ Well, actually, I prefer to start in the control room. 
+ Eh, it doesn't mention anything about control room access here. 
+ My job is to inspect the safety of this plant, which means evaluating your security protocols before you restart gas flow. 
+ Well, I understand that... 
+ Mr. Lundgren, is it? 
+ I didn't come all the way up here from Washington just to stroll around your yard. 
+ I'm sorry, but without authorization... 
+ If that's the way you want it... 
+ [phone beeps] 
+ Ms. Levy? 
+ Doug Peters here. 
+ Yes. 
+ Get me Associate Administrator Stevens on the line. 
+ Look, I-I don't care if he's in a Senate subcommittee. 
+ Pull him out. 
+ Yeah, I have a facility manager blocking my inspection. 
+ Okay. 
+ You can hang up. 
+ Actually, Ms. Levy, that won't be necessary, thank you. 
+ Control room is this way. 
+ ♪ ♪ 
+ - 
+ Natalie : Hey. 
+ Found Mom's, um, cinnamon bread recipe. 
+ Want to make it for breakfast? 
+ Sure. 
+ I'll heat up the oven. 
+ [wood clacks and echoes] 
+ ♪ ♪ 
+ [suspenseful music] 
+ Katya : If we're lucky, we have 20 seconds from the time we breach the gate until they lock down the facility. 
+ What? 
+ You should get out. 
+ Even if we stop Christoph, to do what we have to do, we go to prison. 
+ He's right. I'm already wanted... 
+ Drive, Mark. 
+ ♪ ♪ 
+ man : What the hell? 
+ Maybe he will spare Natalie and the girl. 
+ You know he won't. 
+ I don't blame you for having second thoughts, Roman, but none of this will ever come back on you. 
+ If I fail, no one will ever know you helped me. 
+ But if I succeed, your career, your life... will change forever. 
+ And this city will be ours. 
+ Even if you do make it into his office, you have no way out. 
+ You let me worry about that. 
+ [dramatic music] 
+ Go, go! Go, go, go, go! 
+ Mark, come on. 
+ ♪ ♪ 
+ man on radio : We have a code gray. 
+ Repeat, code gray. 
+ Two men, one woman. 
+ I'm sorry, Inspector, we're gonna have to stop. 
+ [muffled gunshot] 
+ [alarm wailing] 
+ ♪ ♪ 
+ You saw the blueprints? 
+ Yes, the control room's 200 feet North, but there's no direct route. 
+ How do we get there? 
+ I'm, uh, trying to think. 
+ Let's think while we run. 
+ ♪ ♪ 
+ [alarm continues wailing] 
+ Stop, or I'll shoot! 
+ Go! Go, go! 
+ [gunshots] 
+ ♪ ♪ 
+ Careful. 
+ Not too much yeast. 
+ It makes the dough bubble. 
+ Okay, no need to freak. 
+ ♪ ♪ 
+ Sarah : This better? 
+ Natalie : Much. 
+ ♪ ♪ 
+ Hey, you okay? 
+ Yeah, it's just... 
+ I'm sorry... that you're stuck here with me all day, bored out of your mind, making cinnamon bread. 
+ I know you'd much rather be out with your friends. 
+ [alarm wailing] 
+ [gunfire] 
+ We have to tell them about Christoph. 
+ Tens of thousands of people are gonna die! 
+ I don't think they're in a listening mood. 
+ [gunfire] 
+ We're running out of time. 
+ Christoph will know we're here by now. 
+ Katya : I have an idea, but it means that you're going to have to go on alone. 
+ It's okay. 
+ Alex : What are you doing? 
+ ♪ ♪ 
+ Natalie : Mm, cinnamon bread's ready. 
+ How does it look? 
+ Burned. 
+ Does not. 
+ Natalie : You can scrape it off, you whiner. 
+ Come out, hands up! 
+ Mark[b]: Okay, we're coming out! 
+ Don't shoot, don't shoot. We're coming out. 
+ We're coming out. 
+ Hands on your head! 
+ Okay, she... she's been shot. She needs an ambulance, please. 
+ Somebody get her an ambulance, please. 
+ I said get down on the ground now! 
+ She's been shot! She's bleeding out! 
+ I can't, I can't! 
+ Get down! 
+ Get down on the ground! 
+ Okay, okay, okay. 
+ I can't, I can't. 
+ Okay, please. 
+ Get on the ground now! 
+ Get down! 
+ Okay, okay. 
+ 
+ 
+ 
+ ♪ ♪ 
+ [sharp blast and high-pitch ringing] 
+ ♪ ♪ 
+ Run, run, run! 
+ Tie! 
+ ♪ ♪ 
+ [alarm wailing] 
+ Hey, you can't... 
+ [muffled gunshots] 
+ No, no, no... 
+ [muffled gunshots] 
+ ♪ ♪ 
+ [keyboard clacking] 
+ [computer beeping] 
+ [computer chimes] 
+ [alert buzzes] 
+ ♪ ♪ 
+ [alarm wailing] 
+ [dramatic music] 
+ ♪ ♪ 
+ [gunshots] 
+ [alert buzzes] 
+ [gunshots] 
+ [grunts] 
+ [alert buzzes] 
+ [gunshots] 
+ ♪ ♪ 
+ [kettle whistling] 
+ [ominous music] 
+ ♪ ♪ 
+ [cell phone rings] 
+ ♪ ♪ 
+ Victor, where have you been? 
+ What? 
+ You turned yourself in to the FBI? 
+ Are you nuts? 
+ [b]Natalie Natalie : Make sure to get it in writing. Just hurry up and get here, okay? I love you too, baby. Sarah : What was that about? Don't be afraid, okay? But there are men outside, really bad men, who want to hurt us. The FBI agents? Natalie : No, they're not FBI. They're SVR. Sarah : Oh, my God, we have to call the cops. No, we don't. Victor, the FBI, they're... they're on their way, and they're bringing a whole team. Sarah : What if those guys come in before they get here? Natalie : Then we'll hide, upstairs, behind all that stuff in Mom's closet. But if they find us up there... They won't. You can handle it. [dramatic music] ♪ ♪ [cell phone ringing] [phone beeps] ♪ ♪ We can't get in. I can't get in. [keypad tones] Alex : Mark. Alex, we can't get to you. He got away. What? Christoph, he's gone. The... the pipeline's dead. I think you were right. He overrode the system somehow. Okay, tell me what the control screens are saying. Describe what you see. I-I-I don't know. Um... I think he's causing a pressure buildup. I can't tell. I don't know, there's a lot of emergency lights. They're all flashing. It's bad. It's really bad. Okay, okay, Alex, Alex, you got to slow down. Slow... slow down. Listen to the sound of my voice, okay? Okay. You got to work in steps. Breathe. ♪ ♪ Katya : Now, what did Christoph do? ♪ ♪ I think... I think he's using a pressure trigger inside the rigged valves. Once the gas inside the pipes hits a certain PSI... It's over. Can you stop it, Alex? I don't know. [rapid beeping] He took control of the mainframe with a security upgrade, I think. We don't have time for this. Alex : No, I can't... I can't do it. But we can. We can, by working together. Okay, at 750 PSI, these pipes are gonna rupture. If Christoph wanted it to look like an accident, he would set it at that pressure for his bombs to go off. Okay, what do we do? Release the pressure in the lines before it hits 750. All right, if we do that, he'll never be able to detonate his explosives. How do I do that? Mark : Flow lines. The flow lines coming into the building from the Wells. Look at the grid. There should be a point where they come together, getting bigger and gathering before they go into the storage tanks. Sub-basement, east wing. Mark : Great job, Alex. Now, somewhere near the junction of those gathering lines is a compressor station. Mark : Tell me where that is. North side of the hallway, second door from the end, in a chamber off of a small corridor. What are you gonna do? Mark : Disable the compressor. We knock that out, the pressure in the pipes drops. But Christoph overrode the compressor. You won't be able to turn it off, even manually. We're not gonna turn it off. We're gonna blow it up. Katya : The pressure in the lines is too much. If we're anywhere near it and we set off a spark, wouldn't it explode? The explosion's gonna kill us. But if we don't blow it up and it hits 750, we're gonna be dead anyway. The pressure's at 700 PSI! You're running out of time! [tense music] ♪ ♪ [footsteps approach] [muffled gunshots] [electronic beeping] [muffled gunshots] [muffled gunshot] [speaking Russian] Easy, Sasha, easy. Anybody shoots, we all die. Mark, all we have left is a single flashbang. Yeah. It only has a three-second fuse. We're not going to be able to get out. No. Alex : Come on. Come on! Okay, okay. The door! Mark. Open the door. No. Open the door. Open the door, you b*st*rd. I'm sorry. I love you. Open the door! Open the door! Mark! Mark! Mark! Now you're wondering what the next play is. I'll tell you. The Rezident was a traitor. He helped hand the SVR over to oligarchs and fools. Victor : He turned us into errand boys and bagmen. You are both officers of the SVR. We swore to serve the Russian people, not a handful of corrupt billionaires who don't shrug at killing innocents as long as it marks a good return on their investment. [suspenseful music] ♪ ♪ [suspenseful music] ♪ ♪ I am the new Rezident. And I was asked to handle that criminal. Asked? By General Sergeyev. Victor : I have his blessing. And you can join with me now, or die with me now. But I promise you, if you put down your weapons, you'll be able to look at yourselves in the mirror again, as proud sons of Russia. Thank you. [suspenseful music] ♪ ♪ [explosion] [gunshots] They're all dead, aren't they? It's okay. You're okay. [suspenseful music] ♪ ♪ Come on, come on. [suspenseful music] ♪ ♪ [explosion] [alarms blaring] Mom? Dad, Dad! Mom? Mom! Katya : Mark. Mark! Mark! Mark, Mark! Oh, my God, no, no! Oh, my God, no. No, Mark, no. Oh, my God. Mark, Mark. I'm dying. Wha... what the hell? You tricked me. I had to. I didn't want to take the chance. I'm sorry, honey. Did it work? Yes. Yes. [laughing] It actually worked. It worked. We did it. Yeah, we did it. [cell phone rings] Mom. Katya : We stopped it. It's over. Are you okay? Katya : We're fine. But the police are arriving out front. Go out through one of the loading docks. We'll meet you at the car. Okay. Katya : I love you, honey. I'm just glad you're safe. Alex... Actually, I have to make a stop first. Katya : What stop? Alex, what are you talking about? I'll meet you back at the rendezvous point in the city. Katya : Wait, what stop? Alex, how are you going to get... [phone beeps] [phone ringing and pop music playing] [dog barking] [ominous music] ♪ ♪ So... you found me. How? I shot you. I knew you needed medical attention, and you wouldn't risk going to a hospital. Yes, but of all the offices in the world, why here? Law enforcement would assume you'd be heading to Canada. Alex : You'd know that and go the other direction. Easton's the closest town outside the blast radius, and this is the closest place to the interstate that has medical equipment. Stop. You're quite clever. You're the one who turned Elizabeth, aren't you? You convinced her to lure me back to the apartment. I never turned Elizabeth. She never believed you were who you are. Alex : She thought you were innocent. She was trying to protect you, and your baby. You are operating alone, without authorization. No. Oskar : No government agency would approve of a move so bold. So, the question is... Who are you? I'm an analyst. And I'm bringing you in. [chuckles] Well, before you do, I'd like you to meet Dr. Glover. Dr. Glover has... how many kids? It's okay, you can tell him. Twins. Dr. Glover : A boy and a girl. Grace and Lyle. They're 5. So young... to lose a mother. Oskar : Clara, it's your turn. I... I'm married. I take of my mom. She's sick. Oskar : I know what you're thinking. Why are poor Clara and Dr. Glover so afraid of this unarmed man? How is it that, even with a gun pointed at his head, that he is so... calm? Oskar : There's a red Sedan outside, parked in the spot closest to the door. Its trunk is packed full of 7 kilos of PLX, wired to a remote detonator, a dead man's switch, which happens to be in my hand. Oskar : I release the switch, and the car explodes, taking us all with it, and any other unfortunate soul who happens to be within a five-block radius. Dr. Glover, are we... quite finished? Ah. Please, help me with my jacket. Thank you. So... It's up to you. Oskar : I walk out of that door alone... or nobody does. You killed the woman carrying your own child, the woman you loved. Then you know what I am willing to do. How do you sleep at night? I don't. [footsteps] [dramatic music] ♪ ♪ Alex : You're okay. It's okay. [cell phone ringing] [cell phone beeps] Hello? [stirring music] ♪ ♪ [indistinct chatter] Mark : As soon as the authorities find out what we did, they'll give us immunity. No, I wouldn't count on that. The surveillance tapes at the plant. They'll see that we risked our lives. No, Christoph destroyed the disks. Mark : Well, there's got to be backups. Katya : No, Christoph is too good not to have disabled whatever there was just in case. Victor : I can help, Alex. I can leak evidence proving Faber was a traitor working for the SVR. The Rezident will kill you, Victor. The Rezident is dead. Victor is the new Rezident. Well, Moscow will kill you, then, because a leak is a leak. It's not worth the risk. FBI already suspects Faber is the mole. How do you know that? Sam, my boss. He survived the explosion in the Bronx. He called me on the way back from Pennsylvania from his hospital bed. Alex : I'm gonna be okay. Sam's gonna vouch for me, and I never did anything to intentionally help the Russians. But you did, both of you, for years. I don't think we can rely on the Department of Justice looking the other way. He's right. What if they don't Grant you immunity? I mean, what if they just throw you in a hole? Then I hope you will take care of your sister. Mom, no. Mark : It's okay. Of course I will. I think you two should take Sarah and run. It's not worth the risk. What? Nothing. It's just a surprise, hearing that from you. Why? Because a month ago you were ready to turn us over to the FBI. A lot's changed in the last month. Even if you're granted immunity, you'd be arrested and held for weeks beforehand, which means the SVR would know exactly where you are. Victor can't protect you from the higher-ups in Moscow. When they realize what you've done, they'll come after you, and they'll want you dead. Run, it's the only way to be safe. Yes. Come with us. No, I can't. Why not? Because I need to get back to the CIA and help hunt down Oskar Christoph and the people who hired him, the people who thought up Black Dagger. No, Alex, that is not going to be easy. Natalie : It's impossible. Sam doesn't seem to think so. He's already given me my first assignment. He thinks I'm the only person that could pull it off. What's that? Recruiting a high-level SVR officer. Who? I can't talk about that. It's classified. 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
