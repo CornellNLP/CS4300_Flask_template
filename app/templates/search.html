@@ -231,6 +231,7 @@
                     <p class="info-detail">{{personality_match[i+1]}}</p>
                 </div>
                 <div class="content">
+                {% if wine_match|length > 1 %}
                     <h4>{{ wine_match[0] }}</h4>
                     {% for j in range(1,wine_match|length,2) %}
                     <div class="info">
@@ -238,6 +239,7 @@
                         <p class="info-detail">{{wine_match[j+1]}}</p>
                     </div>
                     {% endfor %}
+                {% endif %}
                 </div>
                 {% else %}
                 <div class="info">

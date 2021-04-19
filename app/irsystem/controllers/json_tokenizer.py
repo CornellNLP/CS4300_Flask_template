@@ -25,6 +25,15 @@ with open("winemag_data.json") as f:
 df = pd.DataFrame(data)
 df.drop_duplicates()
 
+varieties = [
+    'Mourvedre', 'Gamay', 'Cabernet Franc', 'Syrah', 'Petit Verdot', 'Barbera',
+    'Nebbiolo', 'Grenache', 'Tempranillo', 'Sangiovese', 'Carmenere',
+    'Moscato', 'Champagne', 'Pinot Noir', 'Pinot Grigio', 'Cabernet Sauvignon',
+    'Chardonnary', 'Riesling', 'Ros\u00e9', 'Malbec', 'White Zinfandel',
+    'Sauvignon Blanc', 'Merlot'
+]
+df = df[df['variety'].isin(varieties)]
+df = df.sample(n=10000)
 # Tokenize description and add to df as "toks"
 toks = []
 for i in df["description"]:
