@@ -125,7 +125,7 @@
             <div class="form-group">
                 <label for="scent">Describe your favorite scent</label>
                 <textarea name="scent" class="form-control" cols="142"
-                    placeholder="idk an example for this lol"></textarea>
+                    placeholder="fresh tangerines..."></textarea>
             </div>
             <button type="button" class="collapsible">Personality Match</button>
             <div class="content">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="form-group">
                     <label for="personality1">You are the life of a party.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality1">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality1" autocomplete="off" > 
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -143,7 +143,7 @@
                 </div>
                 <div class="form-group">
                     <label for="personality2">People near you often rally around you.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality2">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality2" autocomplete="off" >
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -152,7 +152,7 @@
                 </div>
                 <div class="form-group">
                     <label for="personality3">You will do whatever it takes to succeed, no matter what.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality3">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality3" autocomplete="off" >
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -161,7 +161,7 @@
                 </div>
                 <div class="form-group">
                     <label for="personality4">Your friends come to you for fashion advice.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality4">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality4" autocomplete="off" >
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -172,7 +172,7 @@
                     <label for="personality5">Life is not fair, and that means you have to look out for yourself first
                         and
                         foremost.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality5">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality5" autocomplete="off" >
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -182,7 +182,7 @@
                 <div class="form-group">
                     <label for="personality6">You don't like making a plan because you often end up deviating from it
                         anyways.</label>
-                    <input class="form-control" placeholder="0-5" list="scale" name="personality6">
+                    <input class="form-control" placeholder="0-5" list="scale" name="personality6" autocomplete="off" >
                     <datalist id="scale" class="hidden">
                         {% for a in scale %}
                         <option value="{{ a }}">
@@ -210,11 +210,17 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for = "price">What is the maximum price you would like to pay?</label>
+                $ <input name = "price" class="form-control">
+            </div>
+            <div class="form-group">
                 <button type="submit" class="btn btn-info pull-right">Find your match!</button>
             </div>
         </form>
         <div class="result">
+            {% if user_name %}
             <h3>Matches for {{ user_name }}:</h3> <br>
+            {% endif %}
             <div class="personality">
                 <h4>{{personality_match[0]}}</h4>
                 <h3>{{personality_match[1]}}</h3>
