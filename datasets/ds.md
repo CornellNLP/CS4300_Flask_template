@@ -1,16 +1,20 @@
 # TV Shows
 
 `tv_shows` - list of tv shows
-```
+```python
 [
-    "tv_show" : {
+	"show_title" : string,
+    "show_info" : {
         "year": int 
         "content_rating": string
         "imbd_rating": float
         "r rating": float
         "genre": list of strings
         "description": string
-        "no. of seasons": int 
+        "no. of seasons": int,
+		"runtime": int,  # avg episode length in minutes
+		"start year": int, # starting year ; -1 if data not there
+		"end year": int, # ending year; 0 if still continuing; -1 if data not there
         "streaming platform": list of strings
         "rotten_tomatoes": int
     }
@@ -24,18 +28,17 @@
 # Reviews
 
 `reviews`  - list of reviews
-```
-[
-    {"tvshow": {
-            "review title": {
-            review_content: ""
-            review_helpful: ""
-            review_rating: ""
-            review_date: "",
-            }
-        }
-    }
-]
+```python
+{
+	"tvshow": {
+		"review title": {
+		review_content: ""
+		review_helpful: ""
+		review_rating: ""
+		review_date: "",
+		}
+	}
+}
 ```
 
 # Script output
