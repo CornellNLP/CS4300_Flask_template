@@ -4,14 +4,14 @@ import string
 from rankings import get_top, restaurant_to_index
 import logging # from ta
 
-app = Flask(__name__, template_folder='app/templates')
+app1 = Flask(__name__, template_folder='app/templates')
 
 gunicorn_logger = logging.getLogger('gunicorn.error') # from ta
 app.logger.handlers = gunicorn_logger.handlers # from ta
 app.logger.setLevel(gunicorn_logger.level) # from ta
 
 # get user input
-@app.route("/", methods=["GET"])
+@app1.route("/", methods=["GET"])
 def query():
   data = []
   output_message = ''
@@ -45,4 +45,4 @@ def query():
 
 if __name__ == "__main__":
   print("Flask app running at http://0.0.0.0:5000")
-  socketio.run(app, host="0.0.0.0", port=5000)
+  socketio.run(app1, host="0.0.0.0", port=5000)
