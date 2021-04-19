@@ -63,6 +63,8 @@ for title, show_link in find_shows_in_ds.titles_to_links.items():
           x_index = first_line.find("x")
           season = season_episode[:x_index]
           episode = season_episode[x_index+1:]
+          if "/" in episode:
+            episode = episode.replace("/", "_")
           first_line_index += 1
 
     text_file = show_dir_path + "/" + abbrev + "_scripts_s"+ season +"_e"+ episode +".txt"
