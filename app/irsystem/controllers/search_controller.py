@@ -1,7 +1,8 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-from scripts.transcript_similarity import *
+# from scripts.transcript_similarity import *
+from scripts.backend_script import *
 
 project_name = "Stream On"
 net_id = "Divya Damodaran: dd492, Riya Jaggi: rj356, Siddhi Chordia: sc2538, Sidharth Vadduri: sv352, Kendall Lane: kal255"
