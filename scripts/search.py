@@ -4,6 +4,7 @@ Searches for recipes similar to movie and returns top ten.
 import scripts.sim
 import json
 import pandas as pd
+import csv
 
 """
 Given a query (movie name), a dict of movies to food words, and a list of recipes
@@ -27,10 +28,17 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     if query not in movie_to_index:
         return None
     query_index = movie_to_index[query]
+    #print(query_index)
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
+<<<<<<< HEAD
     for i in range(len(recipe_list)):
         recipe_tuples.append((i, recipe_scores[i]))
+=======
+    for i in range(1,len(recipe_list)+1):
+        # print(recipe_list[i])
+        recipe_tuples.append((i-1, recipe_scores[i])) #i-1 since recipes starts at 0 and recipe scores start at 1
+>>>>>>> 003f0b0729a0e256914c412093e35617199e3861
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
     return results[:10]
 
@@ -47,12 +55,21 @@ if __name__ == "__main__":
     #                "Blueberry Pancakes", "Shrimp and Catfish Gumbo", "Cajun Shrimp", "Shrimp Burgers"]
     # movie_list = {"Pulp Fiction": [
     #     "burger, cheeseburger"], "Forrest Gump": ["shrimp", "chocolates"]}
-    query = "Forrest Gump"
+    query = "Jacket"
 
-    with open('./data/movie_food_words_from_wordnets.json') as f:
+    with open('./data/movie_food_words_from_wordnets_top2.json') as f:
         movie_list = json.load(f)
 
-    recipes = pd.read_csv('./data/recipe_data/clean_recipes.csv')
-    movie_recipe_mat = pd.read_csv('./data/movie_recipe_mat.csv')
+    #recipes = pd.read_csv('./data/recipe_data/clean_recipes.csv')
+    with open('./data/recipe_data/clean_recipes.csv') as f:
+        csvreader = csv.DictReader(f, delimiter=';')
+        recipes = []
+        for row in csvreader:
+            recipes.append(row)
+    with open('./data/movie_recipe_mat_top2.csv') as f:
+        csvreader = csv.reader(f, delimiter=',')
+        movie_recipe_mat = []
+        for row in csvreader:
+            movie_recipe_mat.append(row)
 
-    run_search(movie_recipe_mat, movie_list, query, recipes)
+    print(run_search(movie_recipe_mat, movie_list, query, recipes))
