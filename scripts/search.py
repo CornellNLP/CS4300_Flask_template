@@ -28,17 +28,11 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     if query not in movie_to_index:
         return None
     query_index = movie_to_index[query]
-    #print(query_index)
+    # print(query_index)
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
-<<<<<<< HEAD
-    for i in range(len(recipe_list)):
-        recipe_tuples.append((i, recipe_scores[i]))
-=======
-    for i in range(1,len(recipe_list)+1):
-        # print(recipe_list[i])
-        recipe_tuples.append((i-1, recipe_scores[i])) #i-1 since recipes starts at 0 and recipe scores start at 1
->>>>>>> 003f0b0729a0e256914c412093e35617199e3861
+    for i in range(1, len(recipe_list)+1):
+        recipe_tuples.append((i-1, recipe_scores[i]))
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
     return results[:10]
 
