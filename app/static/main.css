@@ -61,23 +61,78 @@
      flex-direction: column;
  }
 
+ .display-row {
+    display: flex;
+    flex-direction: row;
+}
+
 #toggles, .access-btn {
     margin: 10px;
 }
 
  .result {
-     display: flex;
-     flex-direction: column;
-     padding: 10px;
+     /* display: flex;
+     flex-direction: column; */
+     /* padding: 10px; */
      margin-top:10px;
  }
 
- #difficulty {
-     color: forestgreen;
-     font-weight: bold;
+ #name {
+     margin-top:10px;
+     font-size: 150%;
  }
 
+ #difficulty {
+     color: white;
+     background-color: forestgreen;
+     font-weight: light;
+     border-radius: 5px;
+     padding-right: 5px;
+     width:150px;
+     text-align: center;
+ }
+
+#length {
+    width: 80%;
+    color:gray;
+}
+
  #review {
-     font-weight: bold;
-     margin-top:10px
+     /* font-weight: bold; */
+     margin-top:10px;
+     font-size: 90%;
+     font-style: italic;
+ }
+
+ #activity-types {
+    margin-right: 3px;
+ }
+
+ #activity-type {
+     border: 1px forestgreen solid;
+     border-radius: 5px;
+     color: forestgreen;
+     font-size: 80%;
+     font-weight: light;
+     padding:3 5 3 5;
+     margin-right: 3px;
+     text-align: center;
+
+
+ }
+
+ .trail-img { 
+    width: 100%; 
+    height:150px;
+    object-fit:cover;
+     /* max-width: 100%; */
+     /* max-height: 200px; */
+     border-radius: 10px 10px 0 0;
+     overflow: hidden;
+     justify-content: flex-end;
+ }
+
+ .trail-img img {
+    width: 300px; height:200px;
+    object-fit:cover
  }

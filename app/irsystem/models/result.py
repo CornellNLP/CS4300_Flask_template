@@ -26,12 +26,14 @@ class Result:
         self.activity_types = []
         for activity in ith_trails['Trail Attributes']:
             self.activity_types.append(activity)
+        self.activity_types = self.activity_types[:5]
+
         self.description = ith_trails['Description']
         self.reviews = []
         for review in ith_trails["Reviews"]:
             if review['comment'] != "":
                 self.reviews.append(review["comment"])
-        self.review = self.reviews[random.randint(0, len(self.reviews))]
+        self.review = self.reviews[random.randint(0, len(self.reviews)-1)]
         # self.accessibility_types = kwargs.get('accessibility_types')
 
         

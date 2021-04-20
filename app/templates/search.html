@@ -47,22 +47,33 @@
     </div>
   </div>
 
-  <form class="form-inline global-search">
+  <h1 class="form-inline global-search">{{output_message}}</h1>
+  <form class="">
     {% if data %}
-    <h1>{{output_message}}</h1>
     {% for d in data %}
     <br>
-    <div class="container" id="results">
-      <div class="card result">
-        <p><b>{{d.name}}:</b> {{d.length}} mi distance</p>
-        <p id="difficulty">{{d.difficulty}}</p>
-        {% for activity in d.activity_types %}
-        <p>{{ activity }}</p>
-        {% endfor %}
-        <p id="review">User Review:</p>
-        <p>{{ d.review }} </p>
-        <!-- <p>{{d.description}}</p> -->
+    <div class="card result">
+      <div class="trail-imgs">
+        <img src="static/placeholder.jpg" alt="Hiking Trail" class="trail-img" />
       </div>
+      <div class="container col" id="results">
+        <div class="trail-info">
+
+          <p id="name"><b>{{d.name}}</b></p>
+          <div class="display-row">
+            <p id="length">{{d.length}} mi distance</p>
+            <p id="difficulty">{{d.difficulty}}</p>
+          </div>
+          <div id="activity-types" class="display-row">
+            {% for activity in d.activity_types %}
+            <p id="activity-type">{{ activity }}</p>
+            {% endfor %}
+          </div>
+          <p id="review">"{{ d.review }}"</p>
+          <!-- <p>{{d.description}}</p> -->
+        </div>
+      </div>
+
     </div>
     {% endfor %}
     {% endif %}
