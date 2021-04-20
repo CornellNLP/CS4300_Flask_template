@@ -30,20 +30,13 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(len(recipe_list)):
-        # print(recipe_list[i])
         recipe_tuples.append((i, recipe_scores[i]))
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
-    # results = [(r[1], r[0]) for r in sorted(recipe_tuples, reverse=True)]
     return results[:10]
 
 
 def run_search(sim_mat, movie_list, query, recipes):
-    # recipe_mat, vectorizer = sim.build_vectorizer(recipe_list)
-    # movie_mat = sim.get_movie_tfidfs(movie_list, vectorizer)
-    # sim_mat = sim.get_cos_sim(recipe_mat, movie_mat)
-
     movie_to_index = movie_to_index_maker(movie_list)
-
     res = mat_search(query, sim_mat, movie_to_index, recipes)
 
     return res

@@ -43,8 +43,6 @@ def home():
     else:
         output_message = "Your search: " + query
         res = run_search(movie_recipe_mat, movie_list, query, recipes)
-        print(res)
-        print(type(res))
         if res == None:
             output_message = res
             return render_template('search.html', name=project_name, netid=net_id, output_message=output_message)
