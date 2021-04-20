@@ -52,18 +52,21 @@ def get_results(address, category, radius=100):
             res['duration'] = input_distance['duration']['text']
 
             # get zip code and reviews using place details api
-            place_id = place['place_id']
-            place_details = gmaps.place(place_id)['result']
-            res['zip_code'] = place_details['address_components'][-1]['short_name']
+            res['zip_code'] = gmaps.reverse_geocode(res['geolocation'])[0]['address_components'][-1]['short_name']
             res['reviews'] = []
-            if 'reviews' in place_details:
-                reviews = place_details['reviews']
-            else: 
-                for review in reviews:
-                    review_text = {}
-                    reviewer = review['author_name']
-                    review_text[reviewer] = review['text']
-                    res['reviews'].append(review_text)
+            
+#             place_id = place['place_id']
+#             place_details = gmaps.place(place_id)['result']
+#             res['zip_code'] = place_details['address_components'][-1]['short_name']
+#             res['reviews'] = []
+#             if 'reviews' in place_details:
+#                 reviews = place_details['reviews']
+#             else: 
+#                 for review in reviews:
+#                     review_text = {}
+#                     reviewer = review['author_name']
+#                     review_text[reviewer] = review['text']
+#                     res['reviews'].append(review_text)
                         
             res_list.append(res)
         
