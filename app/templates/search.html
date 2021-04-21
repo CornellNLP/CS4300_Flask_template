@@ -11,32 +11,39 @@
         <p>Project Name: {{ name }}</p>
         <p>Student Name: ({{ netid }})</p>
     </div>
-    <div id="fuck">
-        <p>this sucks</p>
-    </div>
+
     <form class="form-inline global-search">
-        <h1 style="font-size: 55px; font-family:Futura; color: #4285F4">
-            C
-            <span style="color: #EA4335; ">S</span>
-            <span style="color: #FBBC05; ">4</span>
-            3
-            <span style="color: #34A853; ">0</span>
-            <span style="color: #EA4335; ">0</span>
+        <h1 id="title">
+            Stream
+        </h1>
+        <h1 id="title1" style="color: #5680E9;">
+            On
         </h1>
 
         <br><br>
 
         <div class="form-group">
-            <input id="input" type="text" name="search" class="form-control" placeholder="Your Input">
+            <input id="query" type="text" name="search" class="form-control" placeholder="Your Input">
         </div>
         <button type="submit" class="btn btn-info"> Go! </button>
+    </form>
+    <form class="form-inline global-search">
+        <input id="not" type="text" name="notShow" class="form-control" placeholder="Shows not to include">
+        <input id="type" type="text" name="Genre" class="form-control" placeholder="Genre">
+        <input id="stream" type="text" name="platform" class="form-control" placeholder="Platforms">
     </form>
     <form class="form-inline global-search">
         {% if data %}
         <h1>{{output_message}}</h1>
         {% for d in data %}
         <br>
-        <p>{{d}}</p>
+        <br>
+        <p id="ans" style="text-align: center;
+        color: black;
+        background: #F7F3F3;
+      border: 4px solid #D8CFCF;
+      box-sizing: border-box;
+      border-radius: 25px;">{{d}}<br></p>
         {% endfor %}
         {% endif %}
     </form>

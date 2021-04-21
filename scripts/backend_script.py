@@ -28,4 +28,4 @@ def jaccardRanking(show, N=3):
     return ranking
 
 # jaccardRanking ("Friends", 3)
-# print(jaccardRanking("Friends"))
+# print(jaccardRanking("Criminal Minds"))

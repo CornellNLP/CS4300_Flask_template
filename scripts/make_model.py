@@ -55,6 +55,7 @@ def showTokens(showFolder):
     """
     given a string showFolder (path to show folder), return a dict of form {token: count}
     """
+    # print(showFolder)
     episodes = listTranscripts(showFolder)
     result = {}
     episodeCount = {}
@@ -93,6 +94,8 @@ def allShowTokens(transcriptsFolder):
     result = {}
     for sub, dirs, shows in os.walk(transcriptsFolder):
         for file in shows:
+            print(file)
+            # if(file!=".DS_Store"):
             filepath = sub + os.sep
             folder = filepath[:-1]
             tokenDict, episodeDict = showTokens(folder)
@@ -100,7 +103,7 @@ def allShowTokens(transcriptsFolder):
             name = folder[(folder.rfind("\\")) + 1:]
             # print(name)
             result[name] = tokenDict
-    # print(result)
+        # print(result)
     return result
 
 
@@ -135,6 +138,7 @@ def allWordsToAnalyze(transcriptsFolder, allShowToks):
 
     for sub, dirs, shows in os.walk(transcriptsFolder):
         for file in shows:
+            # if(file!=".DS_Store"):
             filepath = sub
             folder = filepath.replace("\\", "/")
             x = wordsToAnalyze(folder, allShowToks)
