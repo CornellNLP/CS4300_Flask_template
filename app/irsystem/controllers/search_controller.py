@@ -28,15 +28,11 @@ def get_results():
     data = run_search(query)
 
     if data == None:
-        return redirect(url_for('irsystem.home', msg="try again"))
+        # return redirect(url_for('irsystem.home', msg="try again"))
         return "No results :("
     else:
         res = []
 
-        for d in data:
-            idx = int(d[0])
-            r = recipes[idx]
-            res.append((idx, r))
         return render_template('results.html', res=res)
 
 
