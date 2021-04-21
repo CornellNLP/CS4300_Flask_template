@@ -22,6 +22,8 @@ with open('./data/recipe_data/clean_recipes.csv') as f:
     recipes = []
     for row in csvreader:
         recipes.append(row)
+with open('./data/average_reviews.json') as f:
+    reviews = json.load(f)
 with open('./data/movie_recipe_mat_top2.csv') as f:
     csvreader = csv.reader(f, delimiter=',')
     movie_recipe_mat = []
@@ -42,7 +44,7 @@ def home():
         return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
     else:
         output_message = "Your search: " + query
-        res = run_search(movie_recipe_mat, movie_list, query, recipes)
+        res = run_search(movie_recipe_mat, movie_list, query, recipes, reviews)
         if res == None:
             output_message = res
             return render_template('search.html', name=project_name, netid=net_id, output_message=output_message)

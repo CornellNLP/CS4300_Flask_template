@@ -22,8 +22,14 @@ def movie_to_index_maker(m_dict):
         m_to_i[m_list[i]] = i + 1
     return m_to_i
 
+def get_rating(id, reviews):
+    try:
+        return reviews[str(float(id))]
+    except:
+        return 0
+    
 
-def mat_search(query, sim_mat, movie_to_index, recipe_list):
+def mat_search(query, sim_mat, movie_to_index, recipe_list, reviews):
 
     if query not in movie_to_index:
         return None
@@ -34,12 +40,13 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     for i in range(1, len(recipe_list)+1):
         recipe_tuples.append((i-1, recipe_scores[i]))
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
-    return results[:10]
+    top = results[:10]
+    return sorted(top, key=(lambda x: get_rating(recipe_list[x[0]]["RecipeID"], reviews)), reverse = True)
 
 
-def run_search(sim_mat, movie_list, query, recipes):
+def run_search(sim_mat, movie_list, query, recipes, reviews):
     movie_to_index = movie_to_index_maker(movie_list)
-    res = mat_search(query, sim_mat, movie_to_index, recipes)
+    res = mat_search(query, sim_mat, movie_to_index, recipes, reviews)
 
     return res
 
@@ -60,10 +67,12 @@ if __name__ == "__main__":
         recipes = []
         for row in csvreader:
             recipes.append(row)
+    with open('./data/average_reviews.json') as f:
+        reviews = json.load(f)
     with open('./data/movie_recipe_mat_top2.csv') as f:
         csvreader = csv.reader(f, delimiter=',')
         movie_recipe_mat = []
         for row in csvreader:
             movie_recipe_mat.append(row)
 
-    print(run_search(movie_recipe_mat, movie_list, query, recipes))
+    print(run_search(movie_recipe_mat, movie_list, query, recipes, reviews))
