@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import csv
 import scripts.sim as sim
-from scripts.search import run_search, get_recipe
+from scripts.search import run_search, get_recipe, get_closest
 project_name = "Screen to Table"
 net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(klw242), Elizabeth Healy(eah255)"
 
@@ -26,7 +26,7 @@ def results():
     data = run_search(query)
 
     if data == None:
-        return "No results :("
+        return "Did you mean " + get_closest(query)
     else:
         return render_template('results.html', res=data)
 

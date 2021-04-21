@@ -2,6 +2,7 @@
 Searches for recipes similar to movie and returns top ten. 
 """
 import scripts.sim
+import scripts.edit
 import json
 import pandas as pd
 import csv
@@ -29,6 +30,8 @@ with open('./data/movie_recipe_mat_top2.csv') as f:
         movie_recipe_mat.append(row)
 with open('./data/average_reviews.json') as f:
     reviews = json.load(f)
+with open('./data/movie_script_list.txt') as f:
+        titles = f.readlines()
 
 
 def movie_to_index_maker(m_dict):
@@ -84,6 +87,11 @@ def run_search(query):
 def get_recipe(idx):
     return recipes[idx]
 
+def get_closest(query):
+    edits = scripts.edit.edit_distance_search(query, titles)
+    topthree = edits[0][1] + "\n" + edits[1][1] + "\n" + edits[2][1]
+    return edits[0][1]
+
 
 if __name__ == "__main__":
     # recipe_list = ["Double Cheeseburger", "Cheeseburger Sliders", "Pop-Tarts",
@@ -103,6 +111,8 @@ if __name__ == "__main__":
             recipes.append(row)
     with open('./data/average_reviews.json') as f:
         reviews = json.load(f)
+    with open('./data/movie_script_list.txt') as f:
+        titles = f.readlines()
     with open('./data/movie_recipe_mat_top2.csv') as f:
         csvreader = csv.reader(f, delimiter=',')
         movie_recipe_mat = []
