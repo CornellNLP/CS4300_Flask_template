@@ -15,7 +15,7 @@ def home():
     query = request.args.get('search')
 
     if not query:
-        return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
+        return render_template('search.html', name=project_name, netid=net_id)
     else:
         return redirect(url_for('irsystem.results', query=query))
 
