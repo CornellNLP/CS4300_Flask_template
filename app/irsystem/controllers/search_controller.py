@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import csv
 import scripts.sim as sim
-from scripts.search import run_search
+from scripts.search import run_search, get_recipe
 project_name = "Screen to Table"
 net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(klw242), Elizabeth Healy(eah255)"
 
@@ -13,40 +13,33 @@ net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(k
 @irsystem.route('/', methods=['GET'])
 def home():
     query = request.args.get('search')
-    msg = request.args.get('msg')
+
     if not query:
-        data = []
-        output_message = ''
         return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data)
     else:
-        return redirect(url_for('irsystem.get_results', query=query))
+        return redirect(url_for('irsystem.results', query=query))
 
 
 @irsystem.route('/results')
-def get_results():
+def results():
     query = request.args.get("query")
     data = run_search(query)
 
     if data == None:
-        # return redirect(url_for('irsystem.home', msg="try again"))
         return "No results :("
     else:
-        res = []
-
-        return render_template('results.html', res=res)
+        return render_template('results.html', res=data)
 
 
 @irsystem.route('/recipe')
-def get_recipe():
+def recipe():
     idx = int(request.args.get("idx"))
-    recipe = recipes[idx]
-    title = recipe['Recipe Name']
-    ingredients = recipe['Ingredients']
-    steps = recipe['Directions']
-    author = recipe['Author']
-    # title = 'Recipe Name'
-    # ingredients = 'Ingredients'
-    # steps = 'Directions'
+    r = get_recipe(idx)
+    title = r['Recipe Name']
+    ingredients = r['Ingredients']
+    steps = r['Directions']
+    author = r['Author']
+
     return render_template('recipe.html',
                            title=title,
                            ingredients=ingredients,

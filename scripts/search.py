@@ -27,6 +27,8 @@ with open('./data/movie_recipe_mat_top2.csv') as f:
     movie_recipe_mat = []
     for row in csvreader:
         movie_recipe_mat.append(row)
+with open('./data/average_reviews.json') as f:
+    reviews = json.load(f)
 
 
 def movie_to_index_maker(m_dict):
@@ -66,9 +68,21 @@ def validate_query(query):
 
 
 def run_search(query):
-    res = mat_search(query, movie_recipe_mat, movie_to_index, recipes)
+    data = mat_search(query, movie_recipe_mat, movie_to_index, recipes)
 
+    if data == None:
+        return data
+
+    res = []
+    for d in data:
+        idx = int(d[0])
+        r = recipes[idx]
+        res.append((idx, r))
     return res
+
+
+def get_recipe(idx):
+    return recipes[idx]
 
 
 if __name__ == "__main__":
