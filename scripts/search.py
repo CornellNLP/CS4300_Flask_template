@@ -60,10 +60,10 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(1, len(recipe_list)+1):
-        recipe_tuples.append((i-1, recipe_scores[i]))
+        recipe_tuples.append((i-1, recipe_scores[i], get_rating(recipe_list[i-1]["RecipeID"], reviews)))
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
     top = results[:10]
-    return sorted(top, key=(lambda x: get_rating(recipe_list[x[0]]["RecipeID"], reviews)), reverse=True)
+    return sorted(top, key=(lambda x: x[2]), reverse=True)
 
 
 def validate_query(query):
@@ -79,8 +79,9 @@ def run_search(query):
     res = []
     for d in data:
         idx = int(d[0])
+        rating = round(d[2],1) if d[2] else "n/a"
         r = recipes[idx]
-        res.append((idx, r))
+        res.append((idx, r, rating))
     return res
 
 

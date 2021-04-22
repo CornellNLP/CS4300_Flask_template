@@ -24,7 +24,7 @@
 
     <div class="d-md-flex h-md-100">
         <div class="container py-3 col-md-5 h-md-100">
-            {% for (idx, recipe) in res %}
+            {% for (idx, recipe, rating) in res %}
             <!-- Card Start -->
             <div class="card">
                 <div class="row">
@@ -33,7 +33,7 @@
                             <h4>{{recipe['Recipe Name']}}</h4>
                             <div class="py-1">
                                 <div>
-                                    <span class="get-rating">98</span><span class="font-weight-bold">/100</span>
+                                    <span class="get-rating">{{rating}}</span><span class="font-weight-bold">/5</span>
                                 </div>
                             </div>
                             <br />
