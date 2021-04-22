@@ -18,6 +18,8 @@ return recipes in sorted order
 # load data
 with open('./data/movie_food_words_from_wordnets_top2.json') as f:
     movie_list = json.load(f)
+with open('./data/recipe_data/allergy_dict.json') as f:
+    allergy_dict = json.load(f)
 with open('./data/recipe_data/clean_recipes.csv') as f:
     csvreader = csv.DictReader(f, delimiter=';')
     recipes = []
@@ -51,8 +53,27 @@ def get_rating(id, reviews):
 
 movie_to_index = movie_to_index_maker(movie_list)
 
+def get_recipes_with_allergies(results, recipe_list,allergies, allergy_dict):
+    allergy_list = [i.lower().strip() for i in allergies.split(',')]
+    foods = set()
+    for allergy in allergy_list:
+        if allergy in allergy_dict:
+            foods.update(allergy_dict[allergy])
+        else:
+            foods.add(allergy)
+    foods = list(foods)
+    top_10 = []
+    for (idx, score, rating) in results:
+        if len(top_10)==10:
+            break
+        ingredients = recipe_list[idx]["Ingredients"]
+        allergy_ingredients = [item for item in foods if item in ingredients]
+        if not allergy_ingredients:
+            top_10.append((idx, score, rating))
+    return top_10
 
-def mat_search(query, sim_mat, movie_to_index, recipe_list):
+
+def mat_search(query, sim_mat, movie_to_index, recipe_list, allergies, allergy_dict):
 
     if not validate_query(query):
         return None
@@ -60,9 +81,15 @@ def mat_search(query, sim_mat, movie_to_index, recipe_list):
     recipe_scores = sim_mat[query_index]
     recipe_tuples = []
     for i in range(1, len(recipe_list)+1):
-        recipe_tuples.append((i-1, recipe_scores[i], get_rating(recipe_list[i-1]["RecipeID"], reviews)))
+        recipe_tuples.append((i-1, recipe_scores[i],
+            get_rating(recipe_list[i-1]["RecipeID"], reviews)))
     results = sorted(recipe_tuples, key=(lambda x: x[1]), reverse=True)
-    top = results[:10]
+    
+    if allergies:
+        top = get_recipes_with_allergies(results, recipe_list,allergies, allergy_dict)
+    else:
+        top = results[:10]
+        
     return sorted(top, key=(lambda x: x[2]), reverse=True)
 
 
@@ -70,8 +97,9 @@ def validate_query(query):
     return query in movie_to_index
 
 
-def run_search(query):
-    data = mat_search(query, movie_recipe_mat, movie_to_index, recipes)
+def run_search(query, allergies):
+    data = mat_search(query, movie_recipe_mat, movie_to_index, recipes,
+     allergies, allergy_dict)
 
     if data == None:
         return data

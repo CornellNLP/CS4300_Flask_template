@@ -1,0 +1,252 @@
+{
+  "nut allergy": [
+    "almond",
+    "chestnut",
+    "ginkgo nut",
+    "pecan",
+    "walnut"
+  ],
+  "oral allergy syndrome": [
+    "apple",
+    "avocado",
+    "date",
+    "guava",
+    "japanese pear",
+    "kiwi",
+    "loquat",
+    "mango",
+    "papaya",
+    "passion fruit",
+    "pear",
+    "pineapple",
+    "quince"
+  ],
+  "stone fruit allergy": [
+    "apricot",
+    "cherry",
+    "japanese plum",
+    "mume plum",
+    "nectarine",
+    "peach",
+    "prune"
+  ],
+  "insulin allergy": [
+    "artichoke",
+    "chicory",
+    "endive",
+    "salsify",
+    "shungiku"
+  ],
+  "allium allergy": [
+    "asparagus",
+    "garlic",
+    "leek",
+    "nira",
+    "onion",
+    "shallot",
+    "welsh"
+  ],
+  "histamine allergy": [
+    "bamboo shoot",
+    "bonito",
+    "ginger",
+    "okra",
+    "spinach"
+  ],
+  "banana allergy": [
+    "banana"
+  ],
+  "gluten allergy": [
+    "barley",
+    "buckwheat",
+    "rye",
+    "wheat",
+    "flour"
+  ],
+  "legume allergy": [
+    "bean",
+    "black-eyed bean",
+    "broad bean",
+    "butter bean",
+    "green soybean",
+    "kidney bean",
+    "lentil",
+    "lima bean",
+    "peas",
+    "peas",
+    "pegia",
+    "sultani",
+    "sultapya",
+    "white bean"
+  ],
+  "salicylate allergy": [
+    "blackberry",
+    "blueberry",
+    "cranberry",
+    "huckleberry",
+    "raspberry",
+    "strawberry"
+  ],
+  "broccoli allergy": [
+    "broccoli"
+  ],
+  "cruciferous allergy": [
+    "brussels sprouts",
+    "cabbage",
+    "cauliflower",
+    "chinese cabbage",
+    "horseradish",
+    "kale",
+    "kyona",
+    "mustard spinach",
+    "qing-geng-cai"
+  ],
+  "ragweed allergy": [
+    "burdock"
+  ],
+  "milk allergy / lactose intolerance": [
+    "butter",
+    "buttermilk",
+    "casein",
+    "cheese",
+    "cream",
+    "custard",
+    "ice cream",
+    "milk",
+    "sour cream",
+    "whey",
+    "yogurt"
+  ],
+  "mushroom allergy": [
+    "button mushroom",
+    "shiitake  mushroom",
+    "mushroom"
+  ],
+  "hypersensitivity": [
+    "carrot",
+    "celery",
+    "mitsuba",
+    "parsley",
+    "parsnip",
+    "radish root"
+  ],
+  "alpha-gal syndrome": [
+    "cattle",
+    "deer",
+    "goat",
+    "horse",
+    "pig",
+    "sheep"
+  ],
+  "poultry allergy": [
+    "chicken",
+    "duck",
+    "eggs",
+    "turkey"
+  ],
+  "ochratoxin allergy": [
+    "coffee bean"
+  ],
+  "corn allergy": [
+    "corn",
+    "popcorn",
+    "sweet corn"
+  ],
+  "seed allergy": [
+    "cotton seed",
+    "rapeseed",
+    "safflower seed",
+    "sesame seed",
+    "sunflower seed"
+  ],
+  "shellfish allergy": [
+    "crustaceans",
+    "shrimp",
+    "crayfish",
+    "crab",
+    "lobster",
+    "clams",
+    "scallops",
+    "oysters",
+    "mussels"
+  ],
+  "fish allergy": [
+    "eel",
+    "globfish",
+    "horse mackerel",
+    "mackerel",
+    "percifomes",
+    "salmon",
+    "sea bass",
+    "sea bream",
+    "shelled mollusc",
+    "tetraodontiformes",
+    "trout",
+    "tuna"
+  ],
+  "nightshade allergy": [
+    "egg plant",
+    "sweet pepper",
+    "tomato"
+  ],
+  "sugar allergy / intolerance": [
+    "fructose",
+    "glucose",
+    "sugar",
+    "sugar beet",
+    "sugarcane"
+  ],
+  "ltp allergy": [
+    "grape",
+    "lettuce "
+  ],
+  "citrus allergy": [
+    "grapefruit",
+    "lemon",
+    "lime",
+    "orange",
+    "orange pulp"
+  ],
+  "honey allergy": [
+    "honey",
+    "royal jelly"
+  ],
+  "beer allergy": [
+    "hop"
+  ],
+  "potato allergy": [
+    "konjac",
+    "potato",
+    "sweet potato",
+    "taro",
+    "yam"
+  ],
+  "lactose intolerance": [
+    "lactose"
+  ],
+  "aquagenic urticaria": [
+    "mineral water"
+  ],
+  "peanut allergy": [
+    "peanut"
+  ],
+  "mint allergy": [
+    "peppermint",
+    "spearmint"
+  ],
+  "rice allergy": [
+    "rice"
+  ],
+  "pepper allergy": [
+    "sansho"
+  ],
+  "soy allergy": [
+    "soybean"
+  ],
+  "tannin allergy": [
+    "tea"
+  ],
+  "thyroid": [
+    "turnip root"
+  ]
+}

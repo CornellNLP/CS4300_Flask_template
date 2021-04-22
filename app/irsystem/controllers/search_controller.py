@@ -13,17 +13,22 @@ net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(k
 @irsystem.route('/', methods=['GET'])
 def home():
     query = request.args.get('search')
+    allergies = request.args.get('search2')
+    #print("alergies: ", allergies)
 
     if not query:
         return render_template('search.html', name=project_name, netid=net_id)
     else:
-        return redirect(url_for('irsystem.results', query=query))
+        return redirect(url_for('irsystem.results', query=query, allergies=allergies))
 
 
 @irsystem.route('/results')
 def results():
     query = request.args.get("query")
-    data = run_search(query)
+    allergies = request.args.get("allergies")
+    print("Allergies: ", allergies)
+
+    data = run_search(query, allergies)
 
     if data == None:
         return "Did you mean " + get_closest(query)
