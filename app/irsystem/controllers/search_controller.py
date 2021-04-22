@@ -35,13 +35,15 @@ def results():
 def recipe():
     idx = int(request.args.get("idx"))
     r = get_recipe(idx)
-    title = r['Recipe Name']
-    ingredients = r['Ingredients']
-    steps = r['Directions']
-    author = r['Author']
+    # r['Ingredients'] = r['Ingredients']
+    # r['Directions'] = r['Directions']
+    # ingredients = ",".split(r['Ingredients'])
+    # steps = ",".split(r['Directions'])
+    # author = r['Author']
 
-    return render_template('recipe.html',
-                           title=title,
-                           ingredients=ingredients,
-                           steps=steps,
-                           author=author)
+    return jsonify(r)
+    # return render_template('results.html',
+    #                        title=title,
+    #                        ingredients=ingredients,
+    #                        steps=steps,
+    #                        author=author)

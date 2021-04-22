@@ -1,65 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/static/style.css" />
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <title>Screen To Table</title>
+    </head>
 
-  <link rel="stylesheet" href="/static/style.css" />
-  <title>Hello, world!</title>
-</head>
+    <body>
+        <form class="form-inline global-search">
+            <div class="form-group">
+                <input
+                    id="input"
+                    type="text"
+                    name="query"
+                    class="form-control"
+                    placeholder="Your Input"
+                />
+            </div>
+            <button type="submit" class="btn btn-info">Go!</button>
+        </form>
 
-<body>
-  {% for (idx, recipe) in res %}
-  <div class="container py-3">
-    <!-- Card Start -->
-    <div class="card">
-      <div class="row">
-        <div class="col-md-7 px-3">
-          <div class="card-block px-6">
-            <h4>{{recipe['Recipe Name']}}</h4>
-            <div class="py-1">
-              <div>
-                <span class="get-rating">98</span><span class="font-weight-bold">/100</span>
-              </div>
+        <div class="d-md-flex h-md-100">
+            <div class="container py-3 col-md-5 h-md-100">
+                {% for (idx, recipe) in res %}
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4>{{recipe['Recipe Name']}}</h4>
+                                <div class="py-1">
+                                    <div>
+                                        <span class="get-rating">98</span
+                                        ><span class="font-weight-bold"
+                                            >/100</span
+                                        >
+                                    </div>
+                                </div>
+                                <br />
+                                <button
+                                    class="recipe-button btn btn-info"
+                                    id="{{idx}}"
+                                >
+                                    Show Recipe
+                                </button>
+                                <!-- <a
+                                href="{{url_for('irsystem.recipe', idx=idx)}}"
+                                class="mt-auto btn btn-primary"
+                                id = "recipe"
+                            >
+                                Recipe Link
+                            </a> -->
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="squareimg-container">
+                                <img
+                                    class="squareimg"
+                                    src="{{recipe['Recipe Photo']}}"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of card -->
+                {% endfor %}
             </div>
 
-            <p class="card-text">
-              Insert recipe description here
-            </p>
-            <br />
-            <a href="{{url_for('irsystem.recipe', idx=idx)}}" class="mt-auto btn btn-primary">
-              Recipe Link
-            </a>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="squareimg-container">
-            <img class="squareimg" src="{{recipe['Recipe Photo']}}" />
-          </div>
-        </div>
-      </div>
-      <!-- End of card -->
-    </div>
-  </div>
-  {% endfor %}
-  <!-- End of card -->
+            <div class="col-md-7 py-3 h-md-100">
+                <div class="preview">
+                    <h1 id="title">No Recipe Selected</h1>
+                    <p id="author"></p>
+                    <div id="ingredients">
+                        <h3></h3>
+                        <ul id="ingredients"></ul>
+                    </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
+                    <div id="steps">
+                        <h3></h3>
+                        <ol id="steps"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const requestData = async function (recipeID) {
+                let recipeData = await d3.json(`/recipe?idx=${recipeID}`);
+                console.log(recipeData);
 
+                d3.select("h1#title").text(recipeData["Recipe Name"]);
+                d3.select("#author").text(
+                    `Author Name: ${recipeData["Author"]}`
+                );
+                let ingredients = d3.select("#ingredients");
+                ingredients.selectAll("li").remove();
+                ingredients.select("h3").text("Ingredients");
+                recipeData["Ingredients"].split(",").forEach((d) => {
+                    ingredients.append("li").text(d);
+                });
+                let steps = d3.select("#steps");
+                steps.selectAll("li").remove();
+                steps.select("h3").text("Directions");
+                recipeData["Directions"].split(",").forEach((d) => {
+                    steps.append("li").text(d);
+                });
+            };
+
+            d3.selectAll(".recipe-button").each(function () {
+                let button = d3.select(this);
+                button.on("click", function () {
+                    console.log(button);
+                    let id = button.attr("id");
+                    requestData(id);
+                });
+            });
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
