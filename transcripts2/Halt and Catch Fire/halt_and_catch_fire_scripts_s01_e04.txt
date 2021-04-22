@@ -1,0 +1,171 @@
+Transcripts - Forever Dreaming :: 01x04 - Close to the Metal - Halt and Catch Fire 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x04 - Close to the Metal https://transcripts.foreverdreaming.org/viewtopic.php?f=176&t=11151 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 06/24/14 06:39 ] 
+ 
+ 
+ Post subject:  
+ 01x04 - Close to the Metal 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Previously on AMC's Halt and Catch Fire... 
+ A truly portable computer, weighing no more than 15 pounds. 
+ Oh, come on. 
+ You can't... 
+ You know what you could do... 
+ Split the Motherboard... I call it a layered array. 
+ You're the vision guy and John makes the financial decisions. 
+ You're a talented coder, but right now you're a bottleneck. 
+ Whoa, whoa. 
+ You're fired. 
+ We had a deal! 
+ Hey! What did you do? 
+ $1.3 million in 20 days and you just... you just understand? 
+ The future's expensive. We knew that. 
+ Apple spends that daily on its in-house catering. 
+ Apple ships PCs that you can type on, that have screens. 
+ Oh, and what is... is that a fish tank? 
+ Joe: Yes and no. 
+ It's actually a time machine. 
+ See, to test the BIOS and hardware at the speed we're gunning for, we need the 12 and a half megahertz 286, but it's not out yet. We only have the eight, and if we overclock the eight... pfft... the chip will fry in seconds, so Larry here... 
+ Stan. 
+ Stan's put the chip in mineral oil and cranked down the temp. 
+ Cooling it makes it run at 12 and a half megahertz, so we get to design tomorrow before tomorrow's even here. 
+ Well, what's taking so long? 
+ We're right on track to have our prototype ready for COMDEX. 
+ In November. 
+ Oh, and, hey, look at this, look at this. 
+ Three four-layer PCBs. That's the new norm. 
+ Our PC's aiming for 12. 
+ So, imagine, um, an invisible subway system with electrons as trains. 
+ More layers, fewer collisions, which is pretty amazing when you're moving at the speed of light. 
+ The electrons actually move at one third the speed of light. 
+ Bigger point here, Stan, please stop talking. 
+ The checks you're writing are making innovation happen. 
+ Tell me that's not beautiful, that you don't feel the excitement. 
+ I will "feel the excitement" when a clone with our logo encased in fancy plastic running Lotus 1-2-3 is on the shelves over at Sears and people are shoving each other out the way to get to it with their wallets hanging open. 
+ I imagine how you must feel. 
+ It's difficult to believe in something when your knowledge is so limited. 
+ Maylene: Nathan Cardiff's on the line. 
+ (computer beeps) 
+ Mother Mary. 
+ 396 milliseconds. 
+ Hot damn! 
+ Don't screw with us. 
+ Are you sure you ran it right? 
+ Checked it three times. 
+ Where's Gordon? 
+ He might still be sleeping. 
+ Yes, I will be home for bedtimes. 
+ I know I said that last night, but tonight I promise. 
+ Hey, little privacy. 
+ 396 milliseconds. 
+ What? But she's not done. 
+ She did the subroutine for the hard drive table lookups first. 
+ That's what the seeks clocked in at. 
+ Donna, we just hit the Doherty Threshold. 
+ No, I know. I know. I love you. 
+ "I Love Your Neurosis" playing in background 
+ We hit the Doherty Threshold. 
+ Someone's been up late studying. 
+ Maybe between mocking me and your 19th orange soda, you could register a little happiness. 
+ I knew it would be fast. 
+ How much longer till you're done? 
+ I don't know, two days? 
+ A day and a night, or two full days? 
+ 31.29 hours and 13 nanoseconds. 
+ Can you leave and shut the door? 
+ I'm calling a team-building meeting. 
+ (scoffs) You're joking, right? 
+ Joe: All right, gather round, come closer. 
+ Today, we hit a milestone. 
+ When engineers measure the speed of a PC, they talk about something called the "Doherty Threshold of System Response Time." 
+ It sounds fancy, I know, but, basically, what it means is when you ask your computer to do something  and hit the enter key, if it answers you back in less than 400 milliseconds, just under half a second, then you will stay glued to that machine for hours. 
+ Your eyes may glaze over, but your productivity will soar. 
+ You'll be transfixed, mesmerized. 
+ Even a slight deviation back to half a second response time will allow your attention to stray. 
+ You'll get up and do the dishes, pick up the remote, watch the game. 
+ But under 400 milliseconds, ah, that's the sweet spot. 
+ Well, guess what? 
+ Our soon-to-be Cardiff PC, though it looks ragtag now, just clocked in at 396 milliseconds. 
+ (clapping) 
+ Joe: Once assembled, it will not only be faster than other PCs on the market,  it will also be addictive. 
+ So spend time with your families, folks, get drinks with your friends,  'cause once our PC hits, you're gonna be hanging out with it. 
+ (scattered laughing) 
+ And, hey, Debbie, let's see 'em. 
+ Now, this is just a smattering of the calls I'm getting now. 
+ Potential customers, retailers, 
+ and they all wanna know what we're up to. 
+ And tomorrow a reporter from the "Wall Street Quarterly" is coming to do a story on us. 
+ Practically begged me to get in the door. 
+ We're hitting the radar, people. 
+ I mean, really cooking with gas. 
+ So it's only appropriate... 
+ Barry: No, no, no. You'll contaminate. 
+ Whoa, whoa. 
+ Everybody disperse. 
+ Joe, what are you doing? 
+ Ed: Get that thing outta here. 
+ Stan: You could blow the whole thing. 
+ Barry: Come on, Joe. 
+ Relax. No one goes anywhere. (chuckles) Oh, that's what I call cooking the books! (clapping, laughter) (theme music playing)  No, Daddy, my pink ones. Haley, stop. These are pink enough. Your pinks are dirty, sweetie. Apple slices and peanut butter? Joanie: Yuck, they turn brown! (singsong) Not if I put lemon juice. Just wear the red ones, Haley. Why is it that when Mommy says, "Wear the socks," you suddenly wear the socks? Donna: Gordon. All right, Smooch, go put your shoes on. "Sett of Ayers" playing on radio. Maybe we should start smoking pot again. That'd take off the edge. Yeah, and we'd never get out of bed. How can you listen to this so early in the morning? Doesn't it get on your nerves? (music stops) So, 2:15, don't forget. At the playground, not the traffic circle. Huh? You're picking up the girls. You'll have them till 6:00. That's right. Wait, can't you just... No, no, I can't. Hunt's been covering for me way too much lately. I can't be late with this one. Well, what about your mom? They're in Vegas, I told you. And Rose has the chicken pox. Do you listen? Fine, I blanked. 2:15 it is. Thank you. But please come home right after. I'm gonna have to go back to the office. Haley threw my toothbrush in the toilet with pee pee in it. I'm handling food here. All right, come on. Let's get the pee pee toothbrush out. What did you do to her? What did you say? (music resumes) (sprinkler hissing) (engine starts) Hi! Hi! Gordon, hey, don't work too hard! "Too Political" playing in background ♪ It's disgusting and sick and always has been ♪ 
+♪ Liberators become oppressors all over again ♪ 
+♪ And the church stands on its wealth as it blesses the troops ♪ 
+♪ Telling them that their way is so true ♪ 
+♪ And they build ghettos to put their prisoners in ♪ 
+♪ Still building ghettos to put their prisoners in ♪ 
+♪ No more ghettos! ♪ 
+♪ No more ghettos! ♪ Mornin'. (sighs) I got donuts. I put 'em in the break room. I don't want that fancy reporter thinking we ain't got no hospitality. (sighs) You all right? I think I need your help. Okay. Getting an article about us in the "Wall Street Quarterly," the right article, that could be a game-changer, put our PC on the map, take this company into the stratosphere, but if we seem sloppy or fly-by-night, if we project the wrong image, then it could all fall apart. Should I have gotten pastries instead? No, those are fine. (whispering) Our real problem is Cameron. Her work station's a pigsty. It's unprofessional, it's unsanitary. Frankly, it's embarrassing. We've gotta get it cleaned up before Kane gets here. Well, he's scheduled for 11:00. Yeah, tell the cleaning crew to hurry. But she'll never let 'em. You know how she is. Yeah. You live close to here, right? Yeah, just down on Buxton. Then convince her to go back to your place for a break. Get her to take a shower, wash her hair. She doesn't hate you and might listen. You know, woman to woman or... Well, you're her boss. Can't you talk to her? I can't tell her to put on a bra, Debbie. You can. And please do. Okay. I'll do my best. Oh, thank you. Cardiff: You get enough of Milly's sausage? Another bite and I'd, hell, pop like a mosquito sucking a pig. Good as ever, though. She is somethin'. Yep, she's a keeper. Like they say, John, "Good help is hard to find." Yeah, well, thanks for breakfast, Nathan. I guess I'd best be getting on back to it. To what? Beg your pardon? What's your rush? Thought Joe MacMillan had everything pretty much in hand. (groans) You know what I just can't shake? Loulu not funding our PC pipe dream, that I get. She's a tough one. But her not returning my calls after three weeks? Joe called that woman names... Bullshit. He wouldn't... Bullshit. You could call Loulu a redneck sack of goat sperm. She'd still do business with you if she thought she could make a buck. Is that your new M.O.? I ask a question, first thing you say is, "Joe..."? Ah, come... no, of course not. I want a straight answer. Who's running things? I am. You better be 'cause folks are starting to talk. They're saying that you're letting this thing run away from ya. Make clear who's working for who or else we're both gonna look like idiots. All right, I think you know your way out. (groans) (gunshot blasts) And with this extra-wide chip carrier, the CPU and coprocessor can be clipped into a single ribbon cable. It's just one of the many innovations that helped us hit the Doherty Threshold. (scoffs) You're not an engineer, are ya? What? You just sound a bit canned, that's all. Like you're repeating what people told you or getting it from books. (chuckles) No, I'm the product manager. Do I have a degree in... I mean, the Doherty Threshold? Come on. You know how many companies think they hit that in the testing phase? All of them. Try building the damn thing with the heat sink and the case. Once the realities of physics kick in, it's a whole new ball game. Not to mention I don't write for "Hobbyists' Weekly." My readers will be asleep in seconds. Okay, fair enough. Joe, I told you on the phone, I came here because Matt Garrison in New York said he owed you a favor. I owed him one, so I said I'd pop by, but now I gotta go. Ron, please, please. Just meet some of our people, get their stories. There's an underdog angle here I guarantee you'll find interesting. Fine. 15 minutes. Great. "Learn to Hate the 80s" playing in background" (keyboard keys clicking) As you can see, we don't waste money on amenities because, hey, you know programmers. What's the joke? "They're just machines for turning pizza into code." Yeah, good one. But Cameron, in this case, is a girl. Yep, you don't see that every day. 22, brilliant, and writing a BIOS that defies belief. What happened? Cameron: It's gone. All my code, I... Did you try booting it up again? I can't even get a prompt. All right, look, it's probably just the monitor or the connection. Guys... What... what's happening? You backed it up, right? Yeah... yeah, at some point. "At some point"? What's that? What the...? Oh, no. (Gordon scoffs) Are you kidding me? Guys, it was a power surge. Probably just burned out the disks. Where are your backup floppies? She left one in the A-drive. It's toast. FAT's gotta be empty. Cameron, where are the other ones? Here, check 'em. Yep. (keys clicking) (whimpers) No. This one's degaussed. This one, too... wiped. What? How is that possible? A vacuum cleaner? You plugged your vacuum cleaner in my computer?! Okay, okay. Janitor: Sorry, sorry! Just walk me through what happened. You put your... you put your backups next to your speakers and then you blast music? Good God, Cameron. Why didn't you just put a magnet up to them? Get off! Hey, calm down! Who the hell is this? Ron Kane, "Wall Street Quarterly." Okay, girls. Let's go. Let's go see your dad. Daddy! You're late. Miss Ferris had to call Mommy. I know, I know. I know. I asked you to do one thing. You can't write it on your arm? You can't get an admin to remind you? Things got crazy, okay? I'm having kind of a day here. Oh, you're having kind of a day? Now I'm gonna miss another deadline that I promised I'd make. Well, maybe the stakes are a little bit higher in my world, okay? I'm not just QA-ing calculators. Excuse me? I didn't... Gordon, let me ask you something. When is the last time you cut their toenails? Or which one of your daughters is allergic to apricots? Do you even know their pediatrician's name? No, you don't? Because you don't have to. I make your world possible. Mommy, let's go home. It's okay, it's okay. We're just... just take them, Gordon. We'll talk at home. Donna. Oh, my God, you can't. No. You can't even take them. I need you to come to Cardiff. Crazy back there, huh? Pretty sported. Thought they might come to blows. (chuckles) I hope it's okay that I set up here. Your gal... what's her name... said she thought it would be fine. Look, why don't you come back next week? Our head engineer just told me this whole thing's no big deal, but even so, it's kind of distracting. Let me level with you, Joe. I was never gonna write a word about this company. I think its odds of being a player in the PC market are about on par with the guys who fix my washer-dryer. I came only as a favor to Matt. But lo and behold, the universe paid me back, gave me a story about a company flying too close to the sun that burnt to a crisp in IBM's shadow. The pain, the dashed hopes and dreams. 5,000 words on that, a byline, I might finally get off this crappy beat and make it back to Wall Street or Silicon Valley, where the real action is. All of which is to say I'm not leaving till I get this in all its gory glory. Maybe you don't understand. I'm not asking you, Ron. Oh, a threat. Okay. Let me lob one back at you. If I leave, if I go, I write what I got, and we both know that ain't pretty. Other hand, let me stay, maybe I get the full story... good with the bad. Cardiff's engineers are the best in the Silicon Prairie... That's not saying much. ...and they will find a way through this. It's a bump, that's all. Great, then I'm sure you'll want me around to see that. Or, wait, was that all bullshit? This is your data retrieval expert? Hello to you, too. She did her thesis on magnetic storage. How long ago, Gordon? We need current technical know-how here. Oh, excuse me. Like you'd know technical know-how if it hit you in the head. Look, you can't be here. Great, that's just great. Come on, girls. Ladies, come on. You blow my whole day and he tells me I have to leave? Hold up. Look, girls, calm down. Get out your coloring book. What are you talking about? With him here? Come on. Everything we do will be open to scrutiny. Donna: Who, the reporter? So tell him to leave. It's a little more complicated. With you, that's a big surprise. I'm actually thinking about you. If it comes out that you're working here, even as a favor, you think your bosses at TI would be okay with it? Is that it, Joe, really? Or do you not want anyone thinking you couldn't save your own... (whispers) ...ass? I don't want your wife at the office. What the hell's the matter with you? Without Donna, this thing stays dead on the table, Joe. She is our best option. Right now, she is our only option. Fine, but if Kane wants to know, she's a Cardiff employee, and don't use your real name. Hey, uh, I need to ask you a couple questions. Besides the floppy you left in the A-drive and the stack near the speakers, are you sure you never backed up elsewhere? (faintly) Uh-huh. That's a no? Okay, how about a list of files? Do you keep anything like that? No. When you're in the flow creating something, you don't just stop for some mindless bookkeeping. Right, which is why we're here right now. (scoffs) Who are you, anyways? Just somebody's mother? Do you have any clue what it's like to work close to the metal? Like, any idea what I've lost? Well, FYI, I am also an engineer with a degree from Berkeley who's not only created my share of code,  but given birth to two real humans. Oh, God. So yeah, I am somebody's mother and you could use one right now because, frankly, you're a mess. Leave me alone. Go burn a bra or something. That's great. Sally Ride just went to space and here's you screwing up at work and lashing out like a child  at the people trying to help you. You slept with the boss to get here. Now I know why you had to. Oh, I'm still sleeping with him, in case you're wondering, bitch. Oh, wow. You really don't think much of yourself, do you? Go to hell. 
+ 
+ (panting) Donna: It's melted, fine, so it can't spin. The read head's damaged anyway. We'll have to remount it on a different spindle. Wait, won't that just ruin the head on that one? Yeah, you gonna spin it by hand? A micron at a time? Yes. If the guys at NASA can grind parabolic mirrors to within one sixth of the wavelength of yellow light by hand, I'm pretty sure I can control the rotation of a disk. In fact, my chances of success are greater by a factor of 144. Maybe, but no way the ins and outs. Exactly, which is why we'll modify it. Use the stepper motor on the head, not the spinner motor. Remove the data one click at a time, back up to a third drive. Only problem being we'll die of old age before you finish. Not if the FAT's intact. That way, aside from the fried files, I can reassemble the BIOS by deduction. (scoffs) I think she's smarter than you are. I knew that the moment I met her. How I'd never really deserve her. And, frankly, I'm amazed she puts up with me. (whispers) Someone's in the doghouse. Come on, let's do this. Joe: Hey, you all right? I brought you something to eat. Just go. (keys clicking) Okay, you can do the transfer. ETA on that, Ed? Not too long. It's coming. Wiring's a bit tricky. Spinner wires are in the middle of the ribbon. Mommy? I wanna go. I'm starving. Maylene... I'm sorry, I got rascals of my own at home. What about Debbie? Joe sent her home. I gotta go. (sighs) Fine. Okay, I've got nuts and raisins. That's what's for dinner? Just eat it, okay? Kids in Africa are starving right now. Gordon... Come on, we need to get this done. Hey, I can take them if you guys wanna keep working. No, no, no. We're good, thanks. We don't need any more of your help. Well, where will you be? Uh, the garage, I guess, just outside the fire door. Fine, all right? Just be careful. There's a phone down there. Call if you got a problem. Okay, and we'll be right in this room, all right? Here, dinner, which they will eat and not gripe about. I'm sure they'll be little angels. The good news is I'll go blind before I die. Then at least I'll have to stop. Well, the guys are bringing you down another monitor. There. (sighs) There it is, the FAT. It's mostly intact. Thank God. Easy, now. It's a process. You know, watching you work, you know what it reminds me of? How often you distract me when I'm trying to work? That night in CS-50, remember? When everybody had left the lab and you forced yourself on me on the motherboard assembly table. I recall it a little differently. It took five days to rebuild the ones that broke when you swept them to the floor. You swept them to the floor. Hey, romantic urgency. Yeah, I remember. Donna, I'm... I'm sorry. Okay, now leave me alone. I gotta work. Okay. (chair rumbles) Okay, oh, do you want tickle spray? Sure. Some guy who doesn't work here anymore left it in his desk, so I stole it. Some people think it's yucky, but let's just try it. Okay, ready? (laughs) No? I think real tickles are better, what do you think? Right? Real tickles are good. (laughing) You're not trash. Yeah, you're fun. What? Did someone say I was? It's okay, girls. You can tell me. Well, Dad said to Mom that you were just like white trash. Haley: Yeah, they were joking. How do you know they were joking? 'Cause they were laughing. Let's go play, Cameron. You guys wanna see something fun? (gasps) Huh? Okay, go. Playtime's over. Go play with your parents. Joanie: Let's go. (door opens, closes) (garage door rattling) (rattling stops) I thought Joe told you to leave. Oh, he did. But then we came to an understanding. How's the BIOS recovery looking? Yeah, your engineers didn't want to talk to me either. They're a prickly bunch. I thought they were gonna try and crucify me the moment I set foot down there. Now you know they're smart. Must be especially rough on you. I mean, 22 years here... selling diodes and ham radios... to mainframe software, to this? (chuckles) You feeling any guilt  letting some IBM slickster come in and hijack it all away from you? (scoffs) First, check your facts. No one hijacked anything from me. And, second, you think your little story here about our failed hopes and dreams, that gonna revolutionize news reportin'? Hell, just another wad of paper I'll wrap my dead fish heads in. But you go ahead and write your Titanic story, the one where we go down. But I tell ya, y'all should be careful. Because when we build this PC, everybody gonna wanna be in and you... are gonna be outside standing there, your little pecker wagging in the wind. Now, you get out of my office before I punch you in the face. I think we got it. (spray can rattling) - (loud crashing) Man: Damn it! (gun cocks) Brian: Ah. (laughs) Oh, man. They fired you, too? God, it's like a frickin' horror movie over there. Hey, oh, don't worry. I only shoot bad guys. Yeah. (laughs) Oh, oh, you're here for payback, huh? Justice! What are you gonna write? The usual, huh? Okay, go ahead. Do it. I mean, they're both such hypocrites, right? Nose-in-the-air Donna with her whole career woman act, 
+ and Gordon, the artiste? Oh, please. Like he and Joe what's-his-face are ever gonna create a PC to rival the big boys. Do it. I swear to God, I won't tell. (clicks key) (sighs) We got it. Kane: Nice save. Crisis averted, huh? Well, we're just lucky the file allocation table wasn't lost. Once I found that, I was able to write a program to help reassemble the data sectors. She's not completely recovered, but by my calculations, about 93%. And you are? This is, um, Susan Fairchild. She's one of our debuggers. Thanks, Susan. Nice work. Hey, guys. How about showing Ron here how you cracked the problem? You really got in deep there, right? Okay, well, the magnetic platter melted, right? And it couldn't be spun. So we remounted it. - Kane: And you are...? Oh, Gordon Clark, head engineer. No, no, but, come on. IBM decimated your mainframe business. You laid off scores of employees. Have you got the resources, the guts, 
+ to fight in the PC world? Joe: Ron, three things... nimbleness, vision, and a complete lack of fear. IBM's formidable, but it's gotten fat. (sighs) The storage room has no carpeting. It's concrete. I don't know about you, but I'd use a mop, not a vacuum cleaner. I had the janitor let go, but if you want, I can call... My God, you are tenacious. They were degaussed, all right. But one of them had a spreadsheet on it. Another, part of a game. Cameron's sloppy, but she's not that sloppy. She would've used clean disks to back up on, not those. You engineered this. You got her out of the room somehow, you made the power surge happen, but you grabbed a bunch of random disks, didn't you, and demagnetized them all before swapping them for Cameron's? Congrats, you got me. And if I hadn't recovered the BIOS? I would've saved the day myself before Kane left the building. All of this for a little publicity? Don't underestimate it. He came in here today with zero interest in what we were doing. Now, whether he writes that we're geniuses on the cusp of something great or misfits who almost crashed and burned, at least he'll write something, and right now that's all we need. And Cameron, who's sleeping with you? She's just collateral damage? She'll get over it. Plus, she's learned to be more careful. (Donna scoffs) Look, you can think what you want about me, Donna. But this is their dream, too, not just mine. I'd hate to see their trust in me broken over something so minor, so beneficial as this. If you're smart, and clearly you are... you won't tell anyone. Not even Gordon. The kids are fine. Thanks for asking. Hey, would you get them settled, please? What? Just... I'll be there in a minute. Okay. Hey. You scared my girls. I had to leave, I'm sorry. You should be. I don't know if you heard, but I recovered your code. Not all of it, but 93.6%. Thank you. God, what I said to you... No, forget it. You were a wreck. Makes sense you would be. One time when I was in school, I spilled a whole Coke on my motherboard. Hadn't backed up for weeks. I felt like jumping off the Bay Bridge. But I have to tell you, my code... was never like yours. Yours is, uh... well, it's like a piece of music. You should go home. Sleep, maybe eat a real meal. You can work tomorrow. No, I gotta get back that 6.4%. Suit yourself. Oh, are these... are these yours? Oh. Gordon. (siren wailing) (car door closes) (sighs) Was a little fast, huh? License and registration? Yeah. Whoa, whoa, what are you reaching for? Just getting my license out of the... whoa, whoa. What are you doing? All right, all right. Oh, sh1t. He hit me. No, I... what? Ow! (thumping) (door closes) They're gonna be a mess tomorrow. You mean in two hours? (scoffs) Man, what a day. You were amazing. I mean, amazing. Susan Fairchild? You give me my mother's maiden name? It was the first thing I thought of. So you think of me as my mother? No, of course not. You're being crabby. Come on, we both need to get to bed. What? What? Joe fried Cameron's hard drive and made it look like she degaussed her backups. He did it on purpose to try and get that reporter to write about you guys, about your PC, about the company. The BIOS was never lost. He had the real backups the whole time. What? This is the man we've hitched our wagon to, Gordon. This is your partner in this whole thing. But how could he? I mean... Jesus. I mean, what he put us all through. Wasting my whole day on some massive fake drama? He only told me when I confronted him about it. God. Well, did it work? Is the reporter gonna write the story  about us and our PC? What? What? I'm just asking. (phones ringing) (chatter) John: Jeff, we still fishin' on Sunday? Hey, Hank. Saw that boy of yours on the mound. (laughs) God, he is bringing some Nolan Ryan heat, that kid. Yep, they do grow up quick, Boz. (groans) (exhales) You wanted to see me? Because I'm doing it right now. No, no, it's not about that report. It's about this one. Not only was it late, it was full of errors. I looked like an idiot in front of Mark. Um... I'm sorry. What's wrong? You're better than this. Now, I'm a friend. You know that. But I can't keep covering for you. I've got my own job to think about. As of now, you're on probation. Now, unless your work improves, there may be action taken. That's it. (liquid pouring) Jeez. What the hell happened to you? I got careless, fell. (groans) Had a close call yesterday. Yep. If it hadn't been for Donna, who knows where we'd be? "Fear" playing ♪ Fear ♪ 
+♪ It's cold and it's gray ♪ 
+♪ It's strange ♪ - ♪ Fear... ♪ (disk drive clicking) ♪ Fear ♪ 
+♪ Fear ♪ 
+♪ It's cold and it's gray ♪ 
+♪ I just can't explain ♪ 
+♪ Fear ♪ 
+♪ Ooh... ♪ 
+♪ Same as yesterday ♪ 
+♪ Fear ♪ 
+♪ Fear ♪ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 

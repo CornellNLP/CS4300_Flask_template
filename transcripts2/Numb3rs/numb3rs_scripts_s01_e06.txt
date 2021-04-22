@@ -1,0 +1,841 @@
+Transcripts - Forever Dreaming :: 01x06 - Sabotage - Numb3rs 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x06 - Sabotage https://transcripts.foreverdreaming.org/viewtopic.php?f=1003&t=42503 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 02/14/21 13:38 ] 
+ 
+ 
+ Post subject:  
+ 01x06 - Sabotage 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ ( train chugging ) 
+ ( train whistle blowing ) 
+ ( brakes screeching ) 
+ ( metal crunching ) 
+ MAN: I handle the throttle and the brakes. 
+ Jack watches the other systems. 
+ You drive a train with math. 
+ It's not like driving a car. 
+ You can't just step on the gas or hit the brakes. 
+ Got something up ahead. 
+ Vehicle on the track. 
+ ( train horn honking ) 
+ ( brakes screeching ) 
+ ( siren whooping ) 
+ DON: What was the kid doing there? 
+ Homework assignment on Dad's job. 
+ Day you take your kid to work, you get in a wreck. 
+ ( train horn honking ) Dad, what's going on? 
+ Jim, stay down Grab on to something. 
+ Emergency brakes! 
+ ( brakes screeching ) Damn it! 
+ The sander valve must be plugged. 
+ What does the sander do? 
+ Well, it sprays sand on the track to increase traction. 
+ That wouldn't have stopped them in time. 
+ A train at that speed has the kinetic energy of a small atomic weapon. 
+ Then why release the valve? 
+ He was thinking about the kids. 
+ Take over the controls. I'm gonna open the valve by hand. 
+ But we're still gonna crash. 
+ The only chance those kids have. 
+ Brace your feet against the wall. 
+ ( kisses ) I'll be right back. 
+ ( bell clanging ) 
+ Hang on, Jimbo. 
+ Dad! 
+ ( siren wails in distance ) 
+ Jim, I'm very sorry about your father. 
+ ( sniffles ) 
+ ( weeping ) 
+ Is it true no one was on the bus? 
+ My husband died trying to save children who weren't even there? 
+ Who leaves an empty school bus on the railroad tracks? 
+ MAN: Six wrecks in three years? 
+ All copies of previous accidents. 
+ This one is based on a crash in Utah, where seven kids died. 
+ He always leaves one of these. 
+ All the notes are the same. 
+ Just a series of numbers. 
+ Looks like a code. ( phone rings ) 
+ This is Eppes. 
+ Okay. Put it through. 
+ This is Agent Eppes. 
+ MAN: I want to speak to the agent in charge of the train accident. 
+ You got him. Who's this? 
+ Do you have my note? 
+ Save yourself time and effort. 
+ Everything you need is in that note. 
+ ( call disconnects ) 
+ Hung up? 
+ Male or female? 
+ Male. 
+ What have you got from these? 
+ Well, our cryptographers have gone over it. 
+ If it is a code, it's unbreakable. 
+ Wouldn't count on it. 
+ ( train chugging ) 
+ CHARLIE: We all use math everyday. 
+ To predict weather. 
+ To tell time. 
+ To handle money. 
+ Math is more than formulas and equasions. 
+ It's logic. 
+ It's rationality. 
+ It's using your mind to solve the biggest mysteries we know. 
+ Our saboteur has staged six attacks, all recreations of previous accidents. 
+ This is a photo of the original accident in New Jersey, caused by signal malfunction. 
+ He re-created it... right outside Fresno. 
+ This is the famous accident at the Cabot Bayou. 
+ Now, a barge hit the bridge, knocking tracks out of alignment, and the warning system failed to alert the train. 
+ Now, our saboteur, he jimmies this track here in Seattle. 
+ Shorted out the warning system. Eight people died. 
+ Every accident he's copied is based on incidents that include railroad negligence? 
+ That's right. 
+ DON: So someone has a problem with the rail system. 
+ You're thinking a disgruntled railroad employee? 
+ TERRY: Or a victim of a train wreck. 
+ I mean, whatever the motivation, I-I'm saying we're dealing with terrorism here. 
+ What do you make of these, Terry? 
+ Every note he's left is identical, which is a signature of sorts, his way of taking credit. Now he's added phone calls, which means his need to explain his actions is growing. 
+ So, what's he trying to tell us? 
+ ( knocking ) Hey. 
+ Oh, good. 
+ Charlie, uh... 
+ This is my brother, he's, uh, a consultant with the bureau. 
+ This is Inspector Sutter, with the NTSB, the National Transportation Safety Board. 
+ This is, uh, Amita. 
+ Hi. You're a consultant as well? 
+ Uh, no. Charlie's my thesis advisor, so sometimes I work with him on school and consulting cases. 
+ Hey, can I take a look at the code? 
+ Yeah. Why don't you grab a seat here. 
+ So, uh, how long have you studied cryptography? 
+ I haven't, really. 
+ I work in applied mathematics. 
+ DON: Wha-What we're dealing with here is a saboteur who staged a series of train wrecks that have two things in common. 
+ One: He leaves the same note at every scene. 
+ Two: He's re-creating accidents that are supposedly based on railroad negligence. 
+ So you... Wait. 
+ You're saying that it's exactly the same note every time? 
+ That's right. 
+ And he says everything that we need to know is in the notes. 
+ ( train engine roaring ) 
+ Well... 
+ Just by looking at it, I can tell you that this note begins and ends with a prime number. 
+ Um... 
+ This row and this column equal identical sums. 
+ The grouping of four down here is the same as the grouping of four up here, only backwards. 
+ And, uh... the only number repeated is 36, Yes, 36, one, two... 
+ It reoccurs three times. 
+ That's amazing. 
+ Well, what would be amazing is if I could tell you why they're arranged that way. 
+ Wait a minute. 
+ Charlie, as in Charles Eppes? 
+ Yeah. 
+ I studied electrical engineering at M.I.T. 
+ Oh. 
+ Your paper on H-infinity control of nonlinear systems blew my mind. 
+ I-It changed my whole views on control theory. 
+ Well, yeah, that was a fun project, sure. 
+ This is a real honor, you know? 
+ It took us four weeks to even pick up the 36 repetition, but we think it's... it's something important to the saboteur. 
+ Maybe 36 relates to the key? 
+ DAVID: The key? 
+ Yeah, the key is, um, anything that will unlock the code. 
+ Right, and it could be anything: a sentence, a word, a book. 
+ In fact a famous example is in, uh, 1820. 
+ A man from Virginia named Thomas Beale claimed to have hidden $25 million in gold. 
+ The location of the treasure was hidden within a coded message that really just looked like a string of numbers. 
+ Now, he created that code by using a key. 
+ And that key was the Declaration of Independence. 
+ Three referred to the first letter of the third word, Six to the first letter of the sixth word, and so on. 
+ TERRY: So we need the key to crack the code? 
+ Finding the key is one way to attack the code, but there's actually a whole spectrum of mathematical tools I can utilize. 
+ ( phone rings ) 
+ First, I can do a statistical analysis of the numbers, then I can also work the cipher text by using a Kasiski exam. 
+ Oh. Wouldn't Kasiski be problematic due to the lack of spaces? 
+ Not if you consider multiple grouping possibilities. 
+ A trainspotter's come forward. 
+ Claims to have video footage of the crash. 
+ All right, well, let's get ahold of that tape. 
+ ( train whistle blowing ) 
+ DAVID: As a trainspotter, you videotape trains on a recreational basis? 
+ Yes, at that crossing, four or five times a week. 
+ Catching those beauties coming around the bend makes a man feel alive. 
+ Maybe you wanted to get some footage that was even more exciting. 
+ You think I had something to do with the derailment? 
+ No. 
+ I live to see trains running on the rails, not off 'em. 
+ But I can't deny, catching an accident like that on tape is pretty incredible. 
+ I could kill those guys for running through my shot. 
+ What guys? 
+ Go ahead. Keep going. 
+ All right, stop. 
+ Right... Hold, stop there. 
+ DAVID: Good Samaritan trying to help? 
+ Yeah, stealing cargo? 
+ I don't think so. 
+ Wind it back to where that first guy jumps out of the van. 
+ Ho-ho-ho-hold, stop. 
+ To me, it looks like an acetylene torch, so we know they came to cut into those cars. 
+ Yeah, they had to know about the wreck in advance. 
+ Now push forward to the license plate. 
+ Push forward where they drive off. 
+ Okay, hold. 
+ Just zoom in on that. 
+ Got it. Trace that. 
+ So we got his identity off the license. 
+ This is Matt McDonald. 
+ His van was used in a pre-planned robbery of today's train wreck. 
+ We're gonna set a perimeter around his house. 
+ If he's home, we'll try to lure him out alright. 
+ Nobody moves unless I say. 
+ David get anything on that threat call? 
+ They traced it to a phone booth. 
+ They're checking for fingerprints. 
+ Professor Fleinhardt! 
+ What are you doing? 
+ I just... Nothing in particular. 
+ I just wanted to see what you're up to in here and... 
+ Some kind of number theory conundrum? 
+ Perhaps I could offer some insights. 
+ Well, first, it's not number theory. 
+ It's a code. 
+ And second, you hate number theory, so tell us why you're here and what's really going on. 
+ I'm avoiding... 
+ Laura Wilson. 
+ The professor of Philosophy of Science? 
+ She's the lady you go hiking with? 
+ For years we've enjoyed this... 
+ I don't know, um, delightful wilderness-based friendship -- entirely platonic -- but last night, she and I just veered... we veered off into the... the carnal. 
+ I'm taking it didn't go well. 
+ Actually, it was incredible. 
+ It was primal. 
+ I mean that in the animal, not the numerical sense. 
+ But what I was saying, this was a perfect event. 
+ And as such, untwinable. 
+ So, because the s*x was great, the odds are against it ever being great again. 
+ The replication defies the laws of probability. 
+ So why try? Yes, yes. 
+ Well, that's why I'm here. 
+ I mean, it's the perfect refuge. 
+ What do you mean, "the perfect refuge"? 
+ Well, the Math Department... must be the least libidinous place on campus. 
+ It's definitely the same van used in the robbery. 
+ ( blipping ) 
+ I've got one heat signature emanating from the dining room. 
+ All right, surveillance indicates our guy Matt McDonald is alone in the house. 
+ Look, he's our only lead. 
+ I want to avoid a confrontation, so what would you think about going in, trying to lure him out? 
+ Yeah, I could ring his doorbell, say I'm having car trouble. 
+ Good. Let's set up a perimeter around the house. 
+ Think McDonald's our saboteur? 
+ Well, he's connected. 
+ We just got to get him to tell us how. 
+ ( buzzes ) 
+ ( buzzes ) 
+ Come on. Answer the door. 
+ ( buzzes ) 
+ What's he doing? 
+ Wait a minute. What's wrong? 
+ Why's the temperature dropping? 
+ I just had it recalibrated. 
+ All right, I'm going to go. Let's go, let's go, let's go. 
+ All units go. 
+ ( yelling ): Let's go! 
+ FBI! Get your hands up! 
+ I got an unresponsive male. 
+ I need four. Move! 
+ Dead. 
+ This guy's a railroad cop. 
+ DON: No sign of forced entry. 
+ Stippling on the forehead so it looks like he was shot at close range. 
+ The shooter was sitting across from him. 
+ Met him at the door, grabbed a cup of coffee, sat down at the table. 
+ DON: Two cups of coffee. 
+ So, I'd say they knew each other. 
+ David, uh, make sure any prints or fibers that we get are processed priority. 
+ Got it. 
+ TERRY: Looks like an electronics store in here. 
+ DON: I mean, no way he stole all this off today's wreck. 
+ HARRILL: We checked the cargo manifests from the previous attacks. 
+ The computers came from the Fresno accident, plasma TVs from the crash in Seattle. 
+ How many of the wrecks did he hit? 
+ Four out of the six. 
+ The corrupt railroad cop who was staging train wrecks just to rip off the cargo? 
+ Seems like a stretch to me. I agree. 
+ I mean, obviously, he knew about it in advance, but I just, I don't make him for our guy. 
+ No, it doesn't make sense. 
+ It doesn't fit with the re-creation 
+ ( phone ringing ) of accidents or the coded messages. 
+ Eppes. 
+ MAN: Well done, finding your way to MacDonald's house. 
+ Too bad I beat you to the punch. 
+ TERRY: Sweep the neighborhood. He may be watching the house. 
+ I don't understand; why'd you kill him? 
+ Wasn't he your partner? 
+ No. MacDonald was a thief and a dirty cop. 
+ He used me to make some money. 
+ He didn't understand what I was doing -- the importance of exposing the railroads for the criminals they are. 
+ There are other ways, you know? 
+ ( call disconnects ) 
+ Hello? 
+ He just hung up. 
+ He implied he killed MacDonald. 
+ He's escalated to hands-on violence. 
+ Right. So, that'll make it seem like he's gearing up for something big. 
+ We got to find out how he and MacDonald knew each other. 
+ We got to get into his files. 
+ Has anyone come across his files? 
+ Hello, Mr. Eppes. Oh, hi. 
+ Good to see you. 
+ Nice to see you again. 
+ ALAN: Is that, uh, Amita sitting out in the car out front? 
+ Yeah. We just stopped by for a minute so I could check this text on encryption, code-breaking... 
+ Uh, and you left her waiting in the car? 
+ No, no, this is not the way we treat people, Charlie. 
+ You bring her inside, you at least offer her something to drink. 
+ You know, like an adult. 
+ We just stopped by for a second. 
+ You came in 15 minutes ago, Charlie. 
+ Meanwhile, she's just sitting in that car out there. 
+ Well, I just got caught up in something. 
+ Yeah, I know, I know. I don't see what the big deal is. 
+ That's exactly what I'm talking about. 
+ What? 
+ She likes you, you know? 
+ Aren't you ever going to do something about that? 
+ ( sighing ) 
+ CHARLIE: Remember we need to know more about trains to find the key to the saboteur's code. 
+ AMITA: So, you're familiar with these accidents? 
+ Huh. The greatest hits of train tragedies? 
+ Of course. 
+ What is this, some sort of a research project? 
+ You could say that. 
+ What would be a big help is if you could identify any significant words or phrases associated with these accidents. 
+ Wait, words or phrases? 
+ Anything specific to the accident. 
+ The track location, the cause, the people involved. 
+ Yeah, I guess I could do that. 
+ You know, you are missing a major accident here -- 
+ Cajon Pass, 2001. 
+ Train full of hazardous chemicals derailed into a whole row of houses. 
+ About 30 people died. 
+ Sounds like a bad one. 
+ Yeah. Well, you know, uh, accidents are kind of just a small part of railroad history. 
+ Maybe you'd like to learn more over dinner? 
+ Oh, uh, sorry, we'll be working tonight. 
+ You guys got MacDonald's case files? 
+ Yeah. Apparently, he was working undercover with a group called the FTRA -- Freight Train Riders of America. 
+ Yeah, I read about them. 
+ They're like the Hell's Angels of the rails, or something. 
+ According to his notes, the FTRA are into everything -- drugs, rape, murder. 
+ TERRY: And they live completely off the grid. 
+ Commit a crime, hop a train, vanish. 
+ So, it sounds like a perfect place for our guy to disappear into. 
+ Yeah, it could be where MacDonald met him when he was undercover. 
+ Possible. 
+ Or maybe it'll be in these. 
+ This is interesting. 
+ Bob Malone, aka Horizontal Bob. 
+ Suspect in the derailment of the Sunset Limited in Arizona. 
+ That's worth checking out. 
+ Let me see that. 
+ Says here he holes up in an Antelope Valley freight warehouse. 
+ The first call from our saboteur, that came from a pay phone in Antelope Valley, right? 
+ Well, let's hit that warehouse. 
+ FBI! 
+ Nobody Move! FBI! 
+ FBI! Don't move! You, get down! 
+ ( yelling ) 
+ Get down! 
+ Get your hands up! 
+ You! Get down! You! ( yelling ) 
+ FBI! Don't move! 
+ Get your hands up where I can see them! 
+ Get them up where I can see them right now! 
+ FBI! Get away from the box! 
+ Get away from the box now! 
+ FBI! 
+ Get 'em up! 
+ ( screaming ) 
+ Are you crazy?! 
+ FBI! 
+ TERRY: Move back! 
+ Move back! Move back! 
+ Okay. Don't move. 
+ You're not moving, okay? 
+ Does anybody know where Horizontal Bob is?! 
+ Gee, I just think you missed him. 
+ How about you help us out and we don't bust you for attacking a federal officer? 
+ Yeah, dime out an FTRA brother to some government tool? 
+ Yeah, right. 
+ See, that's a bad answer. 
+ Get over here. 
+ Nobody's seen Horizontal Bob here? 
+ Nobody knows who he is? 
+ No sign of Horizontal Bob. 
+ None of these guys are giving him up. 
+ Only takes one. 
+ ( clanging ) 
+ ( thud ) 
+ CRICKET: You got to understand the rails are our homes, our churches, our highways. 
+ The FTRA don't mess with the trains. 
+ So you don't think H-Bob caused the wrecks? 
+ (laughs) H-Bob, that's another story. 
+ Guy's a nut job. 
+ He got no respect for the trains. 
+ He shoved me off a flatcar, wrecked my arm. 
+ Well, if I find him, he's not going to be hurting you again. 
+ You check the Sacramento rail yard. 
+ I hear he was up that way. 
+ Let's call the Sacramento office and get them staking out that switchyard. 
+ Well, hopefully the key is somewhere in the materials from the docent in the train museum. 
+ Right next to his phone number. 
+ ( chuckles ): Look at this. 
+ "If you ever decide to eat again, call me." 
+ The docent. 
+ You think you... you think you will? 
+ Eat? Yeah. 
+ Call him? No. 
+ He is not my type. 
+ I'm sorry, but does that ever work? 
+ Just coming out and being so... obvious? 
+ Well, if it's the right guy, sure. 
+ Certainly beats the alternative. 
+ Hmm. What do you mean? 
+ Having no idea whether or not a man is interested in you. 
+ You really can't tell? 
+ Generally, that is how you tell. 
+ You know, they make a move. Otherwise... 
+ Larry? 
+ Are you all right? 
+ Laurel Wilson cornered me. 
+ So I explained to her. 
+ I said, "Statistically speaking..." statistically speaking, "...our encounter, unlikely to be repeated." 
+ So, she declared that I had broken her heart. 
+ You know, believe me, I never intended to upset her. 
+ I know. You seem pretty upset yourself. 
+ Well, yeah. 
+ She's a dear friend. 
+ Witty and articulate and... tremendous trail sense. 
+ I don't know. 
+ Combining friendship and romance -- exceedingly risky. 
+ The Cajon Pass accident killed 37 people. 
+ The number in every note is 36. 
+ Fairly close. 
+ How so? 37 is a prime. 
+ 36 is a composite with multiple factors. 
+ Right. What was I thinking? 
+ Still... this Cajon accident is unbelievable. 
+ 5,237 tons of steel flying off the track at 90 miles an hour. 
+ Did you just say five, two, three, seven? 
+ Yeah, 5,237 tons. 
+ How fast? 
+ About 90 miles an hour. 
+ Where did you get this information? 
+ I downloaded the NTSB report. 
+ Read me some more. 
+ "While the NTSB encountered..." 
+ No, the numbers. 
+ Just numbers. 
+ Locomotive number 
+ 4-4-0-4. 
+ Train length: 3,218 feet. 
+ The grade of pass: 4.2 percent. 
+ Brake pipe pressure: 60 pounds. 
+ 14 miles an hour, increasing five miles an hour each minute. 
+ Despite application of brakes, train reaches speed of 90 miles an hour. 
+ Train derails at milepost 64. 
+ Time of the accident: 4:10 a.m. 
+ Every single one of those numbers appears in these notes. 
+ So the Cajon Pass derailment is the key to the code? 
+ The key is that there is no key. 
+ The numbers don't represent words... or letters. 
+ They're numbers, all from this accident. 
+ It's not a code. 
+ It's a story told in numbers. 
+ Each time he creates an accident, he leaves a note. 
+ And each note has the same numbers. 
+ And those numbers tell the story of the Cajon Pass derailment. 
+ Charlie, it happened on March 12, 2001. 
+ That accounts for eight more digits that appear in these notes. 
+ The anniversary of the accident. 
+ Two days from now. 
+ ( train whistle blowing ) 
+ CHARLIE: Every number in these notes corresponds to the NTSB report on the derailment. 
+ The length of the train, speed, number of cars... 
+ It's all in the messages. 
+ DON: Any connection between H-Bob and the Cajon Pass accident, Terry? 
+ I'll check. 
+ Anything from Sacramento? 
+ They have agents all over that switchyard. 
+ There's no sign of him at all. 
+ There are still a few digits unaccounted for. 
+ AMITA: These seven numbers, the letter "B" and 36. 
+ What caused the Cajon Pass accident? 
+ I think the NTSB report said that the engineer forgot to check the end-of-train brake system. 
+ I'm sorry, I've just been over the report -- a lot. 
+ I'm glad someone reads our work. 
+ Well, 37 people died -- that's close to the 36 in the notes. No? 
+ Seven numbers and a letter. 
+ I don't see anything linking H-Bob to the Cajon Pass. 
+ DAVID: Maybe the link is indirect. 
+ Wait a minute. 
+ California Driver's license -- a letter and seven numbers. 
+ See if you can generate a list of licenses using all seven numbers and then check it against the NTSB files. 
+ Right? Right. 
+ The license belongs to Frank Milton, the Cajon train engineer. 
+ He died in the crash. 
+ Milton was deemed responsible for the accident. 
+ Why would the saboteur leave a copy of Frank Milton's driver's license in his note? 
+ Why bring attention to Milton? 
+ Well, look, he's the engineer during the Cajon Pass accident. 
+ The railroad blames him. 
+ If he thinks they're trying to cover up their mistakes... 
+ He thinks Frank Milton's a martyr. 
+ Well, let's see what the widow says. 
+ My husband did not forget to turn on his end-of-train brake. 
+ The railroad lied to the NTSB. 
+ How can you be sure? 
+ He was the most meticulous engineer on the line. 
+ His crews used to call him "Four-check Frank," 
+ 'cause of the way he'd go over the equipment. 
+ Well, so what do you think happened to the brake? 
+ Damn thing was always breaking down. 
+ The railroad covered up the service records. 
+ Oh, yeah? Yes. 
+ Let me ask you something. 
+ You ever seen this man? 
+ Goes by the name Horizontal Bob. 
+ Never seen him in my life. 
+ Worst thing is, those corporate bastards keep trying to buy me off. 
+ Every few months, I get cash in the mail. 
+ 
+ 
+ 
+ Guilt money. 
+ Don. 
+ Yeah, can you excuse us, please? 
+ Frank Milton was meticulous and detail-oriented and wrongly accused of causing a terrible tragedy. 
+ He's supposed to be dead. Someone's sending the widow money. 
+ It's not the railroad. Hmm-mm. 
+ Is this your husband? Yes. 
+ That's from our wedding. 
+ DON: So, Frank Milton didn't die in the Cajon pass accident. 
+ He is alive. He didn't want to be blamed. 
+ Instead of facing accusations, he drops out, right? 
+ He goes underground with the FTRA. 
+ So what about Horizontal Bob? 
+ Well, he fingers him to throw us off, right? 
+ Mm-hmm. What he's doing, he's trying to wreck public confidence in the rail system. 
+ ( phone ringing ) Hey. 
+ Eppes. 
+ The clock is ticking, Agent Eppes. 
+ You're nowhere near catching me. 
+ 90 seconds to trace the call. I need a trace. 
+ Well, I'd say I'm pretty darn close, Frank. 
+ I know H-Bob didn't throw you off that train, I know you jumped just before the Cajon Pass. 
+ That's how you hurt your arm. 
+ You're smarter than the NTSB. 
+ Yeah, I also know you're not responsible for that first accident, Frank. 
+ Well, the railroad said I was. 
+ The brake lines failed -- I told them the maintenance was shoddy. 
+ They didn't care. 
+ And 36 people died. 
+ Look, let me ask you this. 
+ Do you know how much your wife misses you? 
+ You talked to my wife? 
+ Yup, and believes in you. 
+ You want to see her again, Frank? 
+ The only way that's going to happen is if you turn yourself in. 
+ No, people need to know the rails aren't safe. 
+ We can do that. 
+ Look, we can set the record straight, you and me, okay? 
+ The railroad buries its mistakes! 
+ Everyone knows it'll cost billions to make the rails safe. 
+ They won't spend the money. 
+ It's going to take something big to force a change. 
+ Well, this is what I know. 
+ Tomorrow is the anniversary of the Cajon Pass accident and I think you're going to try and re-create it, Frank. 
+ And I'm here to tell you it's not going to happen. 
+ There is no way you'll pull that off. 
+ Agent Eppes, there are a lot of trains out there. 
+ You can't protect all of them. 
+ But even if it doesn't happen tomorrow, it will another day. 
+ I have all the time in the world. 
+ But when I'm done, the railroad companies will be in ruins. 
+ All right, Frank? Frank? ( call disconnects ) 
+ The call originated from inside the control room of the San Bernardino switchyard. 
+ What? Yeah. 
+ I got them. 
+ I want to know how he got in here? 
+ People saw a man in a janitor's uniform, no one thought twice. 
+ But from in here, he can tamper with any number of switches and controls, cause hundreds of accidents. 
+ And did he? 
+ As far as we can tell, he didn't touch a thing, except for this. 
+ He's showing us what he's capable of. 
+ All right, well, now it's our turn. 
+ Why don't you guys look around here. 
+ Show me how this thing works. 
+ This is Frank Milton. 
+ We believe tomorrow he will attempt to attack one of 100 trains traveling over the Cajon Pass. 
+ DAVID: We can't get the pass closed because we don't have a specific threat. 
+ All we have are our conclusions about Milton's plans. 
+ Yeah, it's the major freight rail line into L.A.. 
+ Closing it would shut down 60% of the region's commerce. 
+ DON: The kicker is, the guy's off the grid. 
+ Hunting him down could take months or years. 
+ Our best shot is at that Pass. 
+ CHARLIE: Terry believes Milton will select a train most like the one he drove. 
+ I'll rank tomorrow's trains according to similarities to the original; that way we can focus the searches. 
+ Right, and I'll be in the yard, coordinating the searches. 
+ TERRY: Crews will check their end-of-train equipment and the entire brake system before heading down the pass. 
+ DON: Local cops will be walking the tracks, checking for any tampering. 
+ I want cops posted anywhere that train slows down in case he tries to jump on one after the yard. 
+ What about rail cops? 
+ DAVID: They've posted the photos around the yard and tightened the perimeter. 
+ DON: There'll be an armed agent or cop on every train just in case he happens to get on one. 
+ You think Milton will try to sabotage a train with all this security? 
+ Yeah, I do, I think he's gonna attempt it, but we're gonna be ready for him. 
+ Hey, ready to go? 
+ Not quite. Mrs. Milton is here. 
+ Oh. All right. 
+ Mrs. Milton. 
+ Agent Eppes. Yes, ma'am. 
+ Frank called me. 
+ I couldn't believe it. 
+ To hear his voice after four years. 
+ What did he say? 
+ He begged me to forgive him, and then he told me... 
+ Please, Mrs. Milton, this is very important. 
+ Time is of the essence now. 
+ He told me goodbye. 
+ On the Cajon Pass that day, apparently he... jumped before the wreck. 
+ Engineers aren't supposed to do that. 
+ As much as he hates the railroad, he hates himself worse. 
+ He's going to kill himself. 
+ Is that what you think? 
+ Is that what he was saying? 
+ He's going to kill himself? 
+ ( whistle blowing ) 
+ DON: All right, so we all set? 
+ I've compiled data on every train car leaving the switchyard today. 
+ All that's left is to compare those elements to the original train in order to find the closest match. 
+ Did you use a computer program for the comparison? 
+ You know what, there wasn't time to write one, but I can handle that. 
+ You'll have to review over 100,000 data points. 
+ Well, we're going to concentrate on the trains that Charlie flagged. 
+ See you later. 
+ SUTTER: The yard supervisor says that a train leaves every six minutes. 
+ A lot carry munitions or hazardous chemicals. 
+ All right, let's get the database up. 
+ I've got to find the trains most like the one that derailed four years ago. 
+ So how does this work? 
+ These specs are from the original El Cajon locomotive and container cars. 
+ This database shows today's trains, sorted by departure time and their relevant specs -- number of cars, gear ratio, engine model, HP traction... 
+ ( clang ) 
+ ( train chugging ) 
+ MAN: All right. 
+ All right, give me the first group. 
+ Train HB-17 and PL-02. 
+ Track 32 and 2 respectively. 
+ Right, 32. 
+ Track 2 train contains some cars of Naval munitions. 
+ Well, that sounds like an ideal target -- why don't you take that. 
+ Okay, let's go. 
+ All right, ride-along assignments -- 
+ Ortiz, you're on CC-3. 
+ Varitek, IS-22. 
+ Mulligan, HM-04. And hustle! 
+ It leaves on Track 20 in eight minutes. 
+ All right, give me the next train, Charlie. 
+ ( train chugging ) 
+ CHARLIE: That one. 
+ PSP-31, track 24. 
+ Hey, actually, Don, you know, wait, go, um... go to HM-04. 
+ It's nearly identical to the original. 
+ It's got several cars of nuclear waste. 
+ Track 20. 
+ Train number HM-04. 
+ He shoved me off a flatcar, wrecked my arm. 
+ Frank, it's over! 
+ Don't move! Don't do it, Frank! 
+ Frank! Frank! Easy, easy! Don't shoot! 
+ You'll blow up the whole yard. 
+ Shoot me, and there'll be a radioactive cloud hanging over the L.A. basin for a week. 
+ Just put that down and go down to the ground. 
+ Put your knees on the ground, Frank. 
+ Don, are you at Track 20? 
+ Don? 
+ Frank, hold it. Listen to me. Just listen to me. 
+ I know you want to settle your score with the railroad. 
+ The best way to do that is to stay alive, Frank... 
+ I'll tell my story when I hop on that train, ride it down the pass and blow it up. 
+ Then everyone will wonder why, and you're going to tell them why. 
+ Because you have the responsibility... 
+ Charlie, tell the supervisor to move that HM-04 now. 
+ We've got an explosive device on Track 20. 
+ I sent Don to Track 20. 
+ ( train whistle blowing ) 
+ Frank if you set that off, you're the bad guy in this scenario -- is that what you want? 
+ You want to die for no reason? 
+ Is that what you want, Frank? 
+ I should've died years ago, with everybody else. 
+ FRANK: Ow! 
+ TERRY: Don, you okay? 
+ No, bomb! There's a timer running! 
+ It's over, Agent Eppes. 
+ Get train HM-04 out of the yard. Terry, get out of here. 
+ They'll never get the train out of here in time. 
+ I said fall back! 
+ You can't hold him and work the bomb. I stay! 
+ Don't move! ( grunting ) 
+ All right, all right. Let's get it off him. All right. 
+ Let's get it off him. DAVID: Don, don't! 
+ Don't touch that. David, get out of here. 
+ There might be a trip wire. 
+ There might be a trip wire! 
+ TERRY: Don't move! Ow! Ah! 
+ Hold him! There might be a trip wire between him and the device. 
+ What are you gonna do? 
+ I got it. 
+ Are you sure you know-- I know what I'm doing. 
+ I got it. 
+ You just hold him. 
+ I got him. 
+ ( high-pitched tone ) 
+ Just hold him still. Don't let him move. 
+ ( tone stops ) ( grunts ) 
+ ( gasps ) 
+ All right, get him up. 
+ How'd you learn how to do that? 
+ Don't tell me, you took a class at the academy, right? 
+ First posting was in Tel Aviv. 
+ Got my bomb training. 
+ Guys, for following orders, not your best moment, but thank you. 
+ It's all right, we got him. 
+ It's okay, we got him, we got him. 
+ We got him. I'll stand down. 
+ ( sighs and laughs ) 
+ Well, this has turned out to be a really good day. 
+ You helped the FBI, and I managed to convince Larry to ask out Professor Wilson. 
+ Really? 
+ How'd you change his mind? 
+ I used game theory, which says people will take bigger risks for bigger gain. 
+ I pointed out that he has the opportunity to turn a good friendship into a great romance. 
+ And he actually bought that from you? 
+ He wants to do it; he just needed a good reason. 
+ I know. 
+ Amita, you know, you and I have been working really closely together these last couple weeks. 
+ I've had a great time. 
+ Actually, um, I was, uh, just wondering if... 
+ Hey, Charlie? Excuse me, I'm sorry. 
+ Amita, can you give us one second? 
+ Yeah, sure, I'll wait for you downstairs. 
+ I'm sorry, did I interrupt something? 
+ Yes, you did. Well, look... 
+ What is it? I just want to tell you that you're doing great work here and... 
+ Oh. Well... well, thanks, thank you. 
+ You know, I don't know anyone who could've done what you did with those notes, and I want you to know, I don't take for granted what you do. 
+ I never thought you did. 
+ Good. 
+ So, what's the deal, you gonna ask her out already? 
+ Well... 
+ Don't wait too long, man, or someone's gonna snatch her up. 
+ I know my due date, I'm sorry. 
+ You're trying to show me up, man. 
+ No, man. I apologize. 
+ Okay, all right. Okay, okay. 
+ ( laughter ) 
+ There you go. Ah, excellent, Dad. Thank you. 
+ Okay. Thank you so much. 
+ No, no, no, I was a good student. 
+ No, I just couldn't get into math. 
+ Couldn't see how it could relate to the real world. 
+ What? What did I say? 
+ DON: I think you're about to find out. 
+ Oh, you guys are on your own. 
+ Good luck. 
+ CHARLIE: Math is the real world, okay? 
+ It's everywhere, okay? 
+ Hey, can I show you? Please. 
+ ( chuckling ) 
+ Um, you see how the... the petals spiral? 
+ The number of petals in each row is the sum of the preceding two rows. 
+ The Fibonacci sequence. 
+ It's found in... the structure of crystals and the spiral of galaxies. 
+ In a nautilus shell. That's amazing. 
+ What's more, the ratio between each number in the sequence to the one before it is approximately 1.61803. 
+ Wha-What the Greeks called the Golden Ratio. 
+ It shows up. 
+ The pyramids at Giza and in the Parthenon at Athens and... and the dimensions of this card. 
+ And it's based on a number you can find in a flower? ( chuckles ) 
+ Math is nature's language, its method of communicating directly with us. 
+ So... 
+ Everything is numbers. 
+ Okay, well, when you explain it like that, it's a lot more interesting. 
+ ALAN: Well, it seems like your new math consultant's working out nicely. 
+ I got to tell you, Dad, I can't think of anyone who could've helped us the way Charlie did in the investigation. 
+ Just remember how Charlie is. 
+ Can't seem to quit a problem. 
+ He's still working on the same one he's had since grade school. 
+ And what's that? 
+ Trying to impress his big brother. 
+ Come on. 
+ ( chuckling ) 
+ Yeah, I've given that exact speech to, uh, my-my junior class... 
+ He is going to test the recurrence of the untwinnable moment. 
+ You think, maybe? 
+ Thank you for helping us out on another investigation. 
+ Well done. 
+ Well, it's always a pleasure to help with that. 
+ ♪ And far away... ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

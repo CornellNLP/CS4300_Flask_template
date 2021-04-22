@@ -1,0 +1,577 @@
+Transcripts - Forever Dreaming :: 03x06 - Bachmanity Insanity - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 03x06 - Bachmanity Insanity https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=27424 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/30/16 12:08 ] 
+ 
+ 
+ Post subject:  
+ 03x06 - Bachmanity Insanity 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Okay, one extra-large, virgin margarita. 
+ Thank you, Richard. 
+ What took you so long? 
+ Uh, I actually, uh, I met a girl. 
+ It's called the bartender, she works here. 
+ No, no. It's a real girl. 
+ And I actually got her real phone number. 
+ Check you out, Mr. Casanova. 
+ Where is this individual? Um... 
+ She's right over there. 
+ The tall dude? 
+ No, behind him. 
+ Oh, she must be hiding behind that attractive girl in the red sweater. 
+ No, it is the attractive girl in the red sweater. 
+ Oh. 
+ Can we stop looking at her? 
+ She's magnificent. 
+ Are you sure it's not the tall guy? 
+ Why are we surprised that young Richard is garnering the attention of ladies? 
+ After all, he's king again. Women like that. 
+ Okay, so she's a founder hounder. 
+ Come on, no, it-- it's not like that. 
+ But you did tell her that you're the CEO of your own company? 
+ It came up. But I mean, honestly, how else was I going to explain that me and my friends were at a bar? 
+ That is a good point. 
+ Anytime you're near a woman, it is important to explain why. 
+ Otherwise, they get nervous. 
+ Gentlemen... 
+ Richard : Hm... 
+ To Pied Piper's past, and now present CEO. 
+ Oh, what about future? 
+ Jared, we'll worry about that later. 
+ Tonight it's about Richard. 
+ To Richard. 
+ (THEME SONG PLAYS) 
+ I think you'll find I'm a... I'm a... I'm a pretty tolerant boss, but, Gleb, your-- your last commit, you did use spaces over tabs. 
+ Um, I don't know why you'd commit to that, uh, so just tell me why on earth you-- you would do something like that? 
+ Is not so big a deal. They're very much the same, yes? 
+ Yes, yes, he's right. They're very much the same. 
+ No, no, sorry, they're-- they're not the same. 
+ At least, not in my book. Um, um, one is right, and the other is wrong. (CHUCKLES) 
+ Why didn't anyone tell Gleb to use tabs? 
+ Yeah, we did. And it's in the company style guide. 
+ I just don't think Gleb realized how seriously Richard takes this stuff. 
+ Yeah, I've honestly never understood it myself. 
+ I mean, once the code goes through the compiler, there's effectively no difference. 
+ I know, but coders go, like, batshit over it. 
+ At Hooli, I once saw two engineers get into a fight so vicious, they almost made physical contact. 
+ What? 
+ Richard : Okay, guys, uh, back to work. 
+ Uh, Gleb, Sanjay, everyone, do you understand tabs? 
+ Yes, yes. You have made this very clear as clear as crystal. 
+ Okay. Good, that's my little thing, and I'll hand you back to Dinesh now. 
+ He's, uh, he's the man with the plan, and the, uh, pretty cool tan. 
+ (CHUCKLES) 
+ It's not a tan, it's-- 
+ Yeah, I know, I know. 
+ Uh... sorry. 
+ This is how I was born. 
+ Hey, uh, Elisabet? Hi. 
+ Um, before you go, I just wanted to say that I thought your last commit was very impressive. 
+ Oh. Thank you. 
+ Almost as nice as the fingers that typed it. 
+ (LAUGHS) 
+ Just call it like I see it. 
+ Elisabet : Thank you. 
+ Speaking of seeing, I will see... you tomorrow. 
+ Elisabet : Yes. You will. 
+ (CHUCKLES) Bye-bye, Dinesh. 
+ Bye, Elisabet. 
+ (CHUCKLES) 
+ Yuck. 
+ What? 
+ You don't actually think she was flirting, do you? 
+ She works here. She's paid to interact with you. 
+ Just like that bartender that Richard thought he was flirting with. 
+ Uh, actually, she's not a bartender. 
+ And for your information, we've been trading texts. 
+ And, uh, we're going for drinks later, so... 
+ Great. If you go to the bar she works at, you can probably drink for free. 
+ Again, uh, not a bartender. 
+ Okay, she works at Facebook. So she makes a lot more money than I do or you do. 
+ And, um, she's definitely not a founder hounder. So... sorry. (CHUCKLES) 
+ Yeah, none of that adds up. 
+ Hey, guys, check out Code/Rag. 
+ What, did the Gavin piece post? 
+ Indeed it did. 
+ Oh, "Gavin Belson's Hooli-Scrub Scandal." 
+ Awesome. 
+ Man, Gavin cannot be happy about this. 
+ (PEOPLE SHOUTING) 
+ (CROWD BOOING) 
+ Stay close. 
+ Back up, back up. 
+ You're on private property, back to the sidewalk. 
+ You're gonna get arrested. 
+ Hey, Gavin! 
+ Hello, I'm... 
+ (CROWD CHEERING) 
+ You know, a hundred years ago, men like me could've had people like that killed. 
+ Just like that. You think captains of industry like Andrew Carnegie or Cornelius Vanderbilt would've batted an eyelid? Please. 
+ (SIGHS) Times sure have changed. 
+ Or have they? 
+ Of course they have. And for the better. 
+ Unless... 
+ All right, forget it. What are we doing about this article? 
+ Can we sue this Cantwell woman for libel? 
+ Gavin, libel laws don't really apply when what's written is true. 
+ It's my understanding you did in fact instruct Nucleus engineers to obscure negative Hooli-Search--- 
+ I know what I did. 
+ Forget libel. What about this unnamed Hooli insider she keeps quoting. 
+ Everything this person is saying is obviously covered by a nondisclosure agreement. Let's sue that person. 
+ We don't know who that person is. 
+ And reporters generally don't give up their sources. 
+ Well, then I'll just have to light a fire under this reporter's ass, won't I? 
+ You know, there was a time, not so long ago, when it could've been a literal fire. 
+ But as discussed, those days are gone. 
+ Unless... 
+ All right, forget it. You people are useless. 
+ Thank you. You're excused. 
+ It's Gavin Belson for CJ Cantwell, please. 
+ She'll know what it's regarding. 
+ Ehrlich : Now, the stage should be here. 
+ With Yeezy or someone comparable. 
+ Now, I have yet to land on a theme. 
+ Most people who rent Alcatraz for parties tend to go with the prison theme. 
+ Hm... how much would it cost to make this look as if it were never a prison at all? 
+ Spare no expense, and if you think it would be cool, I would love to have some sort of chocolate moat here, with little boats floating down a field with graham crackers and marshmallows. 
+ It's been a childhood dream of mine. 
+ And get the best chocolatier, we want to impress. 
+ I'm inviting every asshole from the Valley to attend. 
+ You're inviting assholes? 
+ Absolutely. 
+ Assholes, sh1t dongles, any foe or enemy I've made over my storied career will be here. 
+ That way, when I take this stage and unleash the power of Bachmanity, they'll all be in the front row. 
+ Erlich, uh, can we talk for a second? 
+ What is it, Big Head? I thought I told you to go watch something on your iPad. 
+ I think we may have a problem. 
+ That Code/Rag reporter I talked to says that Gavin Belson is threatening to sue her if she doesn't tell him who she spoke to. 
+ So? 
+ So, she spoke to me. 
+ No publicity is bad publicity. This might be great timing. 
+ Exactly the reason that we are partners. 
+ Okay, yeah. Except if Gavin finds out it was me that talked to the reporter, then he'll know I violated my NDA. 
+ And then he could come after my entire settlement if that happens. 
+ All two million. I mean, 20 million. 
+ Big Head, I'm not going to yell. 
+ And I'm not going to hit you. 
+ I'm just gonna ask you nicely, why in the holy f*ck didn't you tell me you signed an NDA, you sweet, helpless, little piece of sh1t? 
+ Well, that's the thing about the NDA, is that the NDA is actually covered under the NDA. 
+ So if I told you about the NDA, it would've been a violation of the NDA. 
+ And what about speaking with the reporter? What would that be? 
+ Yeah. sh1t. 
+ So, what do you think I should do? 
+ I could call her back and-- 
+ No! 
+ Let me handle it. You go wait in the helicopter. 
+ Go. 
+ Okay. 
+ Sasha, I'm going to need to go back to the mainland. 
+ Oh, is there a problem? 
+ Oh, no, no. Full steam ahead. 
+ Mainland. 
+ This is an island. 
+ That's the theme. 
+ Hawaiian. 
+ We'll have a luau. 
+ Yeah, somebody called me that in high school, and the nickname just stuck. 
+ Pakistani Denzel. 
+ I mean, I don't see it. 
+ But everybody else does. So... 
+ Maybe they should call him American Dinesh ? 
+ (BOTH LAUGH) 
+ Stop. 
+ Only if you stop first. 
+ No, you stop first. 
+ You stop first. 
+ You go first. 
+ No, I think you should. 
+ Okay, I'll stop. Bye. 
+ What's your end game here? You think after your tired rap, she's going to hop on a plane, fly halfway across the world, and f*ck you? 
+ My motivations are pure. 
+ Her and I have, like, a real connection. 
+ She's so, like, nice and she's so down to earth, that it's like she has no idea how attractive she is. 
+ You don't know how attractive she is. 
+ Packet loss over Estonian broadband is terrible. She could be hideous. 
+ Well, I can't imagine that would matter to Dinesh one iota. 
+ Right. Cause she's nice, and, uh, very talented, and has a great laugh. 
+ And with any luck, she's not a dogface. 
+ How was your date with Winnie? 
+ Uh, well, pretty good, considering she's still in the other room. 
+ Baller, you got lucky on the first date. 
+ Yeah, did a little bit, uh, not everything. 
+ I mean, I slept in my jeans. 
+ Well, take your time. Hunger is the best sauce. 
+ You're right. Uh, we did a little bit of under the shirts and, like, finger banging. Oh, hey. 
+ Hey, I'm Winnie. 
+ Oh. 
+ Hi, I'm Dinesh. 
+ Hi, I'm Jared. 
+ It is an honor to meet you. 
+ Okay. 
+ God, what a pleasure. 
+ Thanks. 
+ I'm Gilfoyle. Are you a bartender? 
+ I work at Facebook. 
+ As a bartender? 
+ I had a stuffed animal named Winnie. 
+ Winnie : Oh, wow. 
+ I mean, it wasn't technically an animal, I took a Ziploc bag and I stuffed it with old newspaper and then I-- I drew a smile on it. 
+ Okay, well, uh, shall we have some coffee, my lady? 
+ Sure. Let's do it. 
+ Okay. All right. 
+ We're already on to Elizabethan nicknames. This is serious. 
+ They'll be Ren Faire-ing soon. 
+ Jared : It's healthy. 
+ And now that Richard's dating, uh, in solidarity, I think I might get back out there myself. 
+ You make it sound like you've chosen not to date. 
+ Yeah, absolutely. I wanted to focus on Pied Piper. 
+ But, yeah, maybe now I'll fan out my plumage, so to speak, and see what pretty birdies might share my nest. 
+ Hey, Jared. If you f*ck any pretty birdies in my server room, put a tie on the doorknob, won't you? 
+ Oh, as a signal. Yeah, good thinking. 
+ Okay, so I'll just get the car keys and then give you a lift home. Okay, my lady? 
+ My lord. Oh. My lady. 
+ (BOTH CHUCKLE) 
+ Okay. 
+ So, Richard tells me you guys are building deep nets into your platform? 
+ Oh, really? What other company secrets did he blab to you? 
+ Well I'm a bartender, I wouldn't understand all the science-y talk, right? 
+ Touché. 
+ So you do AI at Facebook? 
+ No, but when I was at MIT, I did my master's thesis on game playing AIs. 
+ I did a lot of machine learning stuff. 
+ For gaming? How does that work? 
+ It's on my GitHub. Do you want to check it out? 
+ Gavin said he was gonna haul me into court and have a judge compel me to give up my source, or go to jail. 
+ Okay? I am not going to jail. 
+ No, no one's going to jail, CJ. 
+ Although, if you did, going to jail for protecting your source would make you some kind of First Amendment hero. 
+ It's pretty much the best thing that can happen to a journalist. 
+ Journalist? Okay, I'm a tech blogger. 
+ Okay? I write stories for the internet about the internet. 
+ I am not going to jail for that. 
+ I know it is an inconsequential sh1t job. 
+ It doesn't really contribute to culture in any way whatsoever. 
+ We've established that you don't have any journalistic integrity, but what would it cost to buy you some? 
+ Winnie : Then I figured out a way to train a convolutional net to play Atari 2600 games. 
+ 
+ 
+ 
+ Uh-oh. 
+ What? 
+ Spaces. Yeah, so what, you guys use tabs? 
+ In this house, yes. 
+ Richard is a bit of a zealot in the Tabs V. Spaces holy war. 
+ I get that, for his company. Sure. 
+ This goes much deeper. 
+ I think he believes that people who use spaces are less than. 
+ Huh... 
+ I wouldn't mention this to Richard. 
+ You don't want to see him throw a hissy fit. 
+ Okay. Shall we away, my lady? 
+ Nice to meet you guys. 
+ Have fun. 
+ Bye. 
+ Gilfoyle : Bye. 
+ I actually kind of liked her. 
+ Too bad Richard's going to f*ck it up. 
+ So, you moved the swimming pool? 
+ Yeah, it just felt like it was way too far from the house, like, crazy far. 
+ So I had this company come and just move it closer. 
+ Uh-huh. But then you moved it back? 
+ Yeah, turns out the guy who built this place knew exactly what he was doing, and the pool was right where it needed to be the whole time. 
+ But now I know that for sure, which feels good. 
+ Nelson, do you like being wealthy? 
+ Yeah. Oh, man, it's awesome. 
+ So you want to stay wealthy? 
+ Okay, yeah, sure. 
+ Great. 
+ Here are the three things you need to do, all right? 
+ One, stop moving the swimming pool. 
+ Oh, yeah, okay, I can do that. What else? 
+ Two, you need to manage your expenses and track your receipts a little bit better than... this. 
+ I'm only as good as the information I have. 
+ Oh, you're great. 
+ No, I wasn't fishing for compliments. 
+ And three, I sense that people are taking advantage of you. 
+ (PHONE VIBRATES) 
+ Oh. Sorry, hold on. 
+ Oh, it's Erlich, I should probably grab this. 
+ Erlich Bachman, a perfect example. 
+ You gave him signing power on your personal checking account? 
+ Yeah, he's my business partner. 
+ You're not structured as a corporation. You're a general partnership. 
+ So he's essentially your spouse. 
+ That's very dangerous. 
+ But I trust him. 
+ He's actually trying to save us money right now, so hold-- hold on. 
+ Hey, man. 
+ Big Head, wondrous news. 
+ I eliminated the Gavin problem, and at the exact same time, I closed funding on our first strategic investment. 
+ We bought a blog. 
+ Oh, cool. How much do blogs cost? 
+ What? 
+ Oh, nothing. 
+ We practically stole it from them. 
+ What? 
+ (WHISPERS) I'm bullshitting. 
+ Half a million dollars. 
+ Let me talk to him, please. 
+ Uh, hey, Erlich, could you talk to, uh, my business manager for a second. 
+ No, I've got to jet, but tell him I'll see him at the party. 
+ Good day, partner. 
+ Okay, cool. 
+ About the blog... 
+ 500 grand. 
+ Oh, God. 
+ I know, we practically stole it, right? 
+ Winnie : Your roommates are really funny. I like them. 
+ They gave me a little sh1t. 
+ Oh, well, you can't take that personally. 
+ Oh, it's fine. They gave you sh1t too. 
+ Oh, really? What about, like my hair or something? 
+ No. They tried to convince me you were some sort of formatting Nazi about tabs versus spaces. 
+ What? Me? Nazi? (CHUCKLES) 
+ (HITLER ACCENT) That's ridiculous. 
+ That's what I said, I mean, I use spaces. So what? 
+ Mm... Yeah, so what? 
+ See, they said you'd have a hissy fit if you found out. 
+ Mm-mm. Hissy fit, me? No. 
+ I know. 
+ You know. I know. 
+ I mean, make up your mind, guys, am I a Nazi or am I a guy who throws hissy fits? 
+ You know? Am I a Nazi who throws hissy fits? 
+ I hope not. That was Hitler. That was like his whole deal. 
+ I mean, that's pretty insensitive to the Holocaust, don't you think? 
+ Cause that's, like, what Hitler did, you know, he just, like, killed so many people, so tragic, such a tragic time. 
+ Yeah. 
+ I'm so glad we're not doing that anymore. 
+ I mean, we, like I... like I was, you know, whoa! 
+ I want them all to die. I don't, I don't care. 
+ I mean, I do care, don't-- don't kill them-- them-- Jews. 
+ Uh, anyway, what do you want to... what do you want to order here? 
+ Is that our P-to-P protocol? 
+ Yeah, I'm just hacking for fun. 
+ I figured out a way to use our compression for RTC, so... 
+ Video chat? Yeah. I think it could be better resolution than Hooli-Chat. Even over 3G. 
+ It could just be like a fun, cool feature in the platform, you know. 
+ And then coincidentally you'll finally be able to see what Elisabet actually looks like. 
+ Oh, yeah. 
+ Huh. 
+ I hadn't thought of that. 
+ If you worked half as hard on the platform as you do trying to ogle strange Slavic women, maybe our shares would finally be worth something. 
+ Hey, uh... what the hell was that? 
+ Can you give us slightly more, Richard? 
+ Why did you tell Winnie that I think people who use spaces over tabs are stupid? 
+ Because you do. 
+ No, I don't. 
+ And if I did, which I don't, why would you say that behind my back, to her? 
+ I mean, things were just going so well, until she-- 
+ (WOMAN CHUCKLES) 
+ That was completely lovely. 
+ Yeah, it was really nice. 
+ You're really something. 
+ I'll give you a call later, okay? 
+ Okay, cool, yeah. 
+ Great, sounds good. Bye, Jared. 
+ Bye. 
+ Jared? 
+ Yeah? 
+ Who was that? 
+ Oh, that was Carol. 
+ So, uh, Jared, did-- did you just have s*x with her? 
+ What? I'm an adult, and like the rest of you, I'm a sexual being. 
+ You f*cked her in the garage? 
+ Well, it's the server room and my bedroom. 
+ What, so you just meet a woman, and then you have s*x with her? 
+ How often does this happen? 
+ Well, if you're asking me how many times I've been in love, the answer is two. 
+ But the rest I won't talk about. It's untoward. 
+ Russ was right, this guy f*cks. 
+ Who was that gorgeous gazelle in the driveway? 
+ Well, I've said all I care to, let's move on. 
+ She let Jared have s*x with her. 
+ Jared, nice. Using that dick. 
+ Gents, I'd like to invite you to what promises to be the social event of the season. 
+ Bachmanity Insanity. 
+ Alcatraz? 
+ Don't worry, it will be unrecognizable. 
+ Jared, with regards to the... you need a plus one? 
+ Oh, no thank you. I think it's too early for that. 
+ Good idea. Don't bring sand to the beach, there's already pussy there. 
+ Richard, I assume you'll be taking your woman friend? 
+ You know what? Yes. She and I will be there together. 
+ I'm going to make this work, despite all your little attempts to sabotage my relationship. 
+ You can do anything you put your mind to, Richard. 
+ Including turning Alcatraz into Hawaii. (LAUGHS) 
+ You okay? 
+ Yeah. Yeah, all good. Great. (CHUCKLES) 
+ You know... 
+ What? 
+ My roommate's going out of town tomorrow, so if we want to come back here after Erlich's party... 
+ Oh. Okay, yeah. Sure, that sounds good to me. 
+ All right, it's a date. 
+ See you then. (CHUCKLES) 
+ (SIGHS) Richard, what's wrong? 
+ Nothing. Nothing, literally it's all good. 
+ Come on. (CHUCKLES) 
+ Oh, my God! 
+ I'm sorry. 
+ Your roommates were right, you really hate spaces. 
+ No, no, no. 
+ I don't, it's not hate, hate's a strong word. 
+ Um, truth be told, I do have a slight preference for tabs. 
+ But that's only because I'm a**l and because I prefer... precision. 
+ Well, not to pick a fight here, but if you really care about precision, wouldn't you use spaces? 
+ Nn... 
+ But whatever. 
+ Once it goes through the compiler, it's the same thing. Right? 
+ Yeah. Yeah, technically yes. 
+ I guess, I just... I just don't understand why you-- anyone would use spaces over tabs. 
+ Like, if it's all the same, why not just use tabs? 
+ Because it could look different on other people's computers. 
+ Tabs create smaller file sizes, all right? 
+ I run a compression company, trust me, I've devoted my life to minimalizing file sizes. 
+ It's what I do. I mean, I do not get why anyone would use spaces over tabs. 
+ I mean, why not just use Vim over Emacs? (CHUCKLES) 
+ I do use Vim over Emac. 
+ Oh, God, help us! 
+ Okay, uh... you know what? 
+ I just... I don't think this is going to work. I'm so sorry. 
+ Uh, I mean like, what, we're going to bring kids into this world with that over their heads? That's not really fair to them, don't you think? 
+ Kids? We haven't even slept together. 
+ And guess what, it's never going to happen now, because there is no way I'm going to be with someone who uses spaces over tabs. 
+ Richard! 
+ Wow. Okay. Goodbye. 
+ One tab saves you eight spaces! 
+ (DOOR SLAMS) 
+ (BANGING) 
+ Richard : Oh! 
+ (RICHARD MOANS) 
+ Oh, my God! 
+ Richard, what happened? 
+ I just tried to go down the stairs eight steps at a time. 
+ I'm okay, though. 
+ See you around, Richard. 
+ Just making a point. 
+ Oh! 
+ Huh... 
+ This new video chat protocol is making your image crystal clear. 
+ Wait... wait one second, Dinesh. 
+ Uh, Dinesh, I can't see you, it's all black. 
+ Oh, I'm sorry. I didn't give the camera permission to access the video chat, hold on. 
+ Boom! 
+ Yes! I can... see you now. 
+ It's me! Pakistani Denzel! 
+ Yes! The Denzel who is from Pakistan. 
+ This video quality is great, right? Looks so sharp. 
+ That's what we do here at Pied Piper. 
+ It-- it's very impressive. 
+ Um, I will have to tell my boyfriend all about it. 
+ Boyfriend? You never mentioned a boyfriend. 
+ Oh, no? Um... 
+ This is because he's now just husband. 
+ Um, I keep forgetting to say this, husband, but it is very good to see you this way, and we will talk more tomorrow. 
+ Yeah, we'll talk-- 
+ (COMPUTER BEEPS) 
+ Either she froze time, met and married the man of her dreams, unfroze time, and hopped back on to vid chat with you, or... you're the dogface. 
+ Which do you think it is? I'm on the fence. 
+ What the f*ck is going on? Richard found a girl, you have a girlfriend, Jared is getting laid with a girl. 
+ (PHONE VIBRATES) 
+ Hi, Mom. 
+ (HAWAIIAN MUSIC PLAYS) 
+ Oh, God. Winnie, Winnie, Winnie, Winnie, Winnie. 
+ Sweet, sweet Elisabet. 
+ Gentlemen, mahalo for coming. 
+ You must taste the breaded humuhumunukunukuapua'a, flown in fresh this a.m. 
+ What is mumu-- 
+ It's breaded. 
+ Get ready. In T-minus five minutes, Big Head and I are going to take that stage and I am going to ejaculate my success all over the faces and hair of my fiercest rivals. 
+ Like some sort of vengeful viscous web of payback. 
+ Erlich? 
+ Yes. One moment. 
+ Sasha, you are doing an exceptional job. I mean, I see... I see no evidence that we are not in Hawaii. 
+ Hm... we have a problem. 
+ Just several of our vendors are saying that your checks have bounced. 
+ Um, Sasha... (SPEAKS HAWAIIAN) I'll be back. 
+ Big Head, Big Head. Why are our checks bouncing? 
+ If you had responded to any of my phone calls, I would've explained it to you. 
+ Who the f*ck are you? 
+ Uh, Erlich this is my business manager, Arthur... 
+ Klaiman. 
+ Klaiman. I knew it was something with Clay. 
+ As I was explaining to Mr. Bighetti, I've finally managed to get a handle on his finances. 
+ Our finances. Continue. 
+ After your considerable outlay on lifestyle, this party and half a million dollars on a website, you're functionally insolvent. 
+ Big Head, you're broke? 
+ We're broke, dude. 
+ Erlich, it's time. 
+ You have my number. I left it on your voicemail. 
+ Several times. 
+ Announcer : Titans of the tech world, I give you Nelson Bighetti, Erlich Bachman, and Bachmanity! 
+ (HORN BLARES) 
+ Aloha. 
+ Uh, that means hello. 
+ Oh, and goodbye. 
+ ♪ I saw you in my dreams ♪ 
+♪ We were walking hand in hand ♪ 
+♪ On a white sandy beach ♪ 
+♪ Of Hawaii ♪ 
+♪ We were playing in the sun ♪ 
+♪ We were having so much fun ♪ 
+♪ On a white sandy beach ♪ 
+♪ Of Hawaii ♪ 
+♪ The sound of the ocean ♪ 
+♪ Rocks me all night long ♪ 
+♪ Ahhh ♪ 
+♪ Ahhhhhh ♪ 
+♪ Of Hawaii ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

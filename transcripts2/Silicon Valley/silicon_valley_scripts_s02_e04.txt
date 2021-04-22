@@ -1,0 +1,587 @@
+Transcripts - Forever Dreaming :: 02x04 - The Lady - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x04 - The Lady https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=26847 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/04/15 18:32 ] 
+ 
+ 
+ Post subject:  
+ 02x04 - The Lady 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Thanks for coming in and sitting down with us. 
+ We're really excited to meet a few good engineers to join the Pied Piper Team. 
+ So why don't you tell us a little about yourself? 
+ I don't work before noon. 
+ Or after 2:00 PM. 
+ And I need to bring my dog to work. 
+ Are you... are you dog-friendly? 
+ Oh, yeah, you can bring your dog to work. 
+ That's not what I asked. 
+ Are you dog-friendly? 
+ Um... 
+ Nice pool. Can my dog go in? 
+ Yeah, yeah, we're very dog-friendly. 
+ Is there a lifeguard? 
+ Um... 'Cause my dog can't swim. 
+ It says here on your resume that from 2010 to 2011 you "crushed it"? 
+ That's actually an old resume. It should also read that I crushed it from 2013 to present. 
+ So are we to understand that you did not "crush it" in 2012? 
+ There was a medical situation preventing me from crushing it to my usual standards. 
+ So I had to take some time off until I was able to crush it at 100%, at which point I resumed crushing it full-time. 
+ So it says here that you're proficient in C++, code assembly for multiple processor architectures, and that you are a cyborg? 
+ That is correct... short for cybernetic organism. 
+ I came into this world of filth and pain with a congenital heart condition, requiring the installation of a pacemaker, upon which I am mortally dependent. 
+ Mmm. 
+ Wow, he's technically a cyborg. 
+ Yeah, yeah. Makes the resume accurate. 
+ Look, we all know that I can make a shitload more money working for some multi-colored Happy Town in a hermetically-sealed box. 
+ But permission to be honest? 
+ Permission granted. 
+ Granted. 
+ I like that you guys are so weird. 
+ Mmm. 
+ Yes, we are the weird ones. 
+ (theme music playing) 
+ This morning, you put your soda cans in the green one. 
+ Okay? That's not right. 
+ The green is for grass and leaves. 
+ Okay? 
+ The blue one is for recycling. 
+ Go ahead and put those in there. 
+ Yeah. 
+ Very good. The black one is for all other trash. 
+ Do you understand? 
+ Yes. Which is for burning? 
+ No, we don't burn trash in this country. 
+ It's illegal. You never burn trash. 
+ Okay, can you say that? "I never burn trash." 
+ I never burn trash. 
+ Yes. What about garbage? 
+ m*therf*cker. 
+ Jared Patakian? 
+ You know, this Patakian guy is definitely on some end of some spectrum, but he is a full-stack engineer. 
+ I mean, I'm sold. Jared, what do you think? 
+ Well, he's qualified and he definitely seemed interested. 
+ It's a programmer's market right now. 
+ I think if we like him, we should pursue him aggressively. 
+ My only concern here, and it's a small one, um, he's also named Jared. Will it be confusing with two Jareds? 
+ If we hire him, I can always go back to my real name... Donald. 
+ No, that's too big a hassle. We'll just go with "other Jared." 
+ OJ, for short. 
+ I know a name is just a sound somebody makes when they need you, but shouldn't this much-newer Jared be "other Jared"? 
+ You should be flattered. OJ Simpson is one of the most recognizable people on the face of the planet. 
+ Was that Jared Patakian I saw exiting the house? 
+ Yes, we just interviewed him. We think he's great. 
+ He actually is great. I tried to hire him for Aviato. 
+ But then he took the offer, shopped it around town, and got more dough at a different gig. 
+ I didn't care for the way that he handled it. 
+ So I am going to have to err on the side of caution and say "Pass-adena," 
+ Trina. 
+ Well, I'm sorry that that happened to you, but you don't get to Pass-adena on anyone. 
+ We've got to hire a lot of people, and he was the only one that we all agree on. 
+ But this is my house. I'm on the board of this company. 
+ I mean, I must get dings, right? 
+ Dings? 
+ Like in a jury or "Whose Line Is It Anyway?" 
+ Erlich, thank you for letting us stay in your house while we figure out what we need office-wise. Really. 
+ But I'm sorry. You don't get a say in this. 
+ We're going to hire the android. 
+ He's a cyborg, Richard. 
+ The son of a bitch is a goddamned cyborg. 
+ Ladies and gentlemen of the press, distinguished guests, question... What is a moonshot? 
+ A moonshot is an idea so big, so bold, as to be impossible until it is not. 
+ Magellan circumnavigating... 
+ There you are. 
+ Sorry, I got lost. But I think I'm supposed to be here... 
+ Shh! Come on. 
+ Not so long ago, people called the idea of sending a man to the moon a moonshot. 
+ But we did it, and that is just the beginning. 
+ No idea will be too big for our newest division, "Hooli [xyz]." 
+ How long do I have to stay here? 
+ 'Cause lunch... 
+ And today, I'm pleased to announce that after some negotiations and arm-twisting, the brilliant Professor Davis Bannerchek, a pioneer in robotics and founder of Somerville Dynamics, has agreed to head up this new division. 
+ I give you Dr. Bannerchek, the one and only man fit to be the first head dreamer of Hooli [xyz]. 
+ Also I give you the one and only man fit to be his co-head dreamer, our very own Nelson Bighetti, otherwise known around here as "Baghead." Come on up here, Baghead. 
+ What? 
+ He also co-founded Pied Piper right here at Hooli. 
+ I'm not sure I understand. 
+ You are being promoted. 
+ Being named "co-head dreamer" carries with it a significant pay increase. 
+ Greater equity, more favorable vesting schedule. 
+ See, but I really liked the job I had. 
+ You know, I was perfectly happy there. 
+ It was kind of the... the perfect level of involvement for me, I think. 
+ And also that other guy, Bannerchek? 
+ He... he did not really seem to like me very much. 
+ Oh, he does not. And he wanted you to know that he moved four school-aged children and his elderly mother across the country in order to run Hooli [xyz] on his own. 
+ He was very clear about that. 
+ And he wanted me to convey that to you. 
+ Have I done that? 
+ Yeah. So what is my job exactly? 
+ Oh, that's actually... that's up to you. 
+ You can do whatever you want. 
+ Okay. See, that's sort of what I do now, though. 
+ But starting today, you can do it in a much more significant way. 
+ Enjoy your new office. 
+ Wait, this is my office? 
+ Sorry to interrupt. The photographer's here. 
+ The photographer? 
+ From "Wired" magazine, for the profile they're doing on you. 
+ Sorry, who are you? 
+ Your assistant. 
+ What? 
+ Okay, Richard, last interview of the day. 
+ Uh, Dinesh, Gilfoyle, this is someone you guys recommended I contact, Carla Walton? Yeah, we hung out with her a bunch at the last S.F. vid/tech meet-up. 
+ Her code is f*cking great. 
+ She was head of engineering at Earcast? 
+ She was engineering at Earcast. She pulled that whole system on her own. 
+ You know what else excites me here? 
+ There's a distinct over-representation of men in this company. 
+ Look around. I think it would behoove us to prioritize hiring a woman. 
+ I disagree, OJ. We should hire the best person for the job, period. 
+ And Carla is one of the best. 
+ Right, let me rephrase. 
+ I think having a woman in the company is important, but hiring someone only because they're a woman is bad. 
+ I would never compromise Pied Piper. 
+ Okay, just to be clear, our top priority is to hire the most qualified person available, right? 
+ Of course. 
+ But it would be better if that someone was a woman even though the "woman" part of that statement is irrelevant? 
+ Exactly. It's like we're the Beatles and now we just need Yoko. 
+ That's the worst example you could have used. 
+ I'm using VP9 ABR to reduce bits and using WebRTC to carry the bulk of the load via p2p. 
+ So basically I pay for one tiny-ass outgoing stream and the user's ISP picks up the whole tab. 
+ The users pay for all that bandwidth, not you? 
+ Wow, that could save us a ton of money. 
+ Yeah, a sh1t ton. 
+ And do you think you could integrate it into our platform by January in time for CES? 
+ Look, I'm not going to get in your way. 
+ You know, you design the engine. I just assemble the car. 
+ I could have an alpha of that up in a solid weekend of hacking. 
+ Wow. Cool. 
+ Plus I could count on one hand the number of people on earth who could handle sitting in a room with Dinesh and Gilfoyle all day. 
+ So... 
+ All of that. 
+ Plus you're a woman. 
+ What? 
+ No, I just mean we would absolutely love to have a strong woman working here. 
+ I'm not a woman engineer. I'm an engineer. 
+ Yeah, yeah. 
+ Okay, no, no, no. 
+ No, yes, of course. We want to hire the best people who happen to be women, regardless of whether or not they are women. That part is irrelevant. 
+ Are you doing that interviewing thing where you try to rattle somebody to see if they freak out or not? 
+ Uh, sadly no. This is... that's just Jared. 
+ I wouldn't know how to do that. 
+ Well, I am aggressively unemployed right now. 
+ So why don't you give me a call when you know what you want to do? 
+ Great, great. 
+ All right. 
+ All right, I'll show you out. 
+ Yeah, lucky me. 
+ I love "The Girl With the Dragon Tattoo." 
+ So? 
+ So she's actually a bad-ass. 
+ Yeah, we told you, right? 
+ We have to hire that person. 
+ Are you sh1tting me? 
+ You see this, Richard? What is this? 
+ A spoon? 
+ It's a wide spoon. In fact, the only spoon type that is left in this drawer. 
+ I specifically posted a note on the refrigerator saying that the more narrow spoons be reserved for the eating for Fage yogurt by me. 
+ Look at this... the angle's all wrong. 
+ Aren't you supposed to just tip that little plastic cup part up and dump the jam into the yogurt? 
+ How would you know that? Have you been eating my Fage yogurts? 
+ No, I saw it on the billboards. 
+ Well, what they don't tell you on the billboards is that you can't get all of it out... look at that! 
+ You have to dig it out. But you can't dig it out with these big-as-hell, wide f*cking spoons. 
+ This isn't about the spoons, is it, Erlich? 
+ This is about Jared Patakian. 
+ This is about me not letting you tell me who I can or can't hire. 
+ Or maybe it's about the fact that you're the one who's been using my narrow spoons? 
+ Okay. 
+ You and I both have to get ready for a board meeting. 
+ Can we just stop with the nonsense? 
+ Nonsense? This is nonsense? 
+ Yeah, yeah. 
+ You know, half the yogurt's gonna go unused because one quarter of the jam can't come out. 
+ Thank you for hosting. You have a lovely home. 
+ Yeah, I do. I like this painting. 
+ Is it sperm? 
+ No, three commas. 
+ Know what has three commas in it, Richard? 
+ Uh, a sentence with two appositive phrases in it? 
+ No, a billion dollars. 
+ Yeah, I'm in the three-comma club. 
+ You know, you play your cards right, you could be in the three-comma club, too. 
+ But probably not. But you could be. Probably not. 
+ There she is. Say hello to tonight's fifth board member, my girlfriend Nastia. 
+ Charmed. 
+ Hello. 
+ Hi. 
+ Hello. 
+ Huh. 
+ You are Jew. 
+ Episcopalian, actually. 
+ Jew... good at business. 
+ Ha. My baby's got some ideas about Jews, some good, some bad. 
+ Mm-hmm. 
+ Dad? 
+ Oh, hey there, buddy. 
+ Hello. 
+ Who's this? Another board member? 
+ (beeping) 
+ Computer voice :  Aspen, it's time for bed. 
+ I don't want to go to bed. 
+ I'm sorry, buddy. It's not up to me. 
+ Computer voice :   I need you to cooperate, Aspen. 10, nine, eight, 
+ seven, six, five...  
+ Fine. 
+ Four, three... good boy. Aspen 
+ What the hell is that? 
+ Company I'm funding. We call it the Lady. 
+ I press a button, and the lady tells Aspen when it's time for bed, time to take a bath, when his f*cking mother's here to pick him up. 
+ I get to be his friend and she's the bad guy. 
+ Undisrupted fatherhood. It's visionary technology. 
+ Okay, come on. Board meeting, bitches. 
+ (beeping)   Aspen, remember to take your medication. 
+ Hey. Just remember, Russ only has two board seats, so as long as we vote together, we can carry every vote. 
+ Yeah, I'm familiar with the rules of a board meeting. 
+ Okay, so 409A valuation report and new ESOPs. Is there a motion to approve? 
+ Great, it's unanimous. Approved. 
+ Now we need to clear the equity packages we're offering to a couple prospective hires, Carla Walton and Jared Patakian. 
+ (grunts) 
+ f*cking cyborg. 
+ Oh, um, Patakian is actually a solid engineer. 
+ We'd be foolish not to hire him. 
+ He's really good. So all in favor? 
+ Sounds like a good pick-up. 
+ 
+ 
+ 
+ Monica : Okay, board of one approved. 
+ All right, uh, is there anything else we need to cover? 
+ Yeah, I think we need to talk about getting some shwaaaag. 
+ What? 
+ Shwaaag! 
+ "Sha-wagga"? 
+ Shwag! 
+ What is it? 
+ Swag. 
+ Swag? 
+ Swag! What is it? 
+ Swag. 
+ I actually don't know... 
+ I think we need to build on the success of our outdoor media campaign. 
+ I'm talking Pied Piper mouse pads, puzzle cubes, f*ckin' antenna balls. Come on, I'm talking 30 grand. 
+ That's like a hand of blackjack. All in favor? 
+ I mean, first billboards, now this? 
+ I mean, as it is, we're barely going to make it to January. 
+ Sorry. 
+ What? 
+ I think it's a really solid idea. 
+ I think we'd be foolish not to do it. 
+ Cool. So three-to-two in favor... swag! 
+ Set you guys up with my marketing company. We'll give you a killer rate. 
+ Question... who likes margaritas? 
+ Answer... everybody! 
+ Babe, go out back, grab some limes from the tree, all right? 
+ Who likes swag? This guy, this guy. 
+ ♪ We gonna get our swag on! ♪ 
+ What the f*ck are you doing? 
+ You just cost us $30,000. 
+ I thought we agreed to present a unified front here. 
+ Well, if Richard wants a unified front, then maybe Richard should do a better job at unifying it. 
+ Why are you such a dick? 
+ Why are you unable to listen to people who know what they're talking about? 
+ Speaking of Mexico, I'm supposed to go to Cabo tomorrow, but I got roped into buying these two tickets to the Muir Woods preservation thing tomorrow night. 
+ Sean Parker's charity? That's a big event. 
+ Gonna be a lot of members of the three-comma club there. Am I right? 
+ Total asshole parade. Anyone want these stupid things? 
+ Yeah, I'm down. 
+ Uh, and Richard, no, you can't come. 
+ But Monica... 
+ No. 
+ Okay. 
+ Babe, I said limes... limes. 
+ She's honestly so f*cking stupid. 
+ (both chuckling) 
+ She doesn't even know what I'm saying right now. 
+ And until we get real office space, I guess we could just put you right here. 
+ And we could put Patakian here. 
+ I hope you don't mind sitting next to a cyborg. 
+ Does he fart a lot and smell like onions? 
+ Well, he is a coder. 
+ Well, I'd say I'm not getting paid enough to deal with this crap, but I so am, so... 
+ You know, if it's cool, I'm going to get some stuff out of my car to dump here. 
+ I know I don't start till Monday, but I want to get it cleaned out before I trade it in. 
+ You're getting a new car? 
+ Yeah, yeah. Mercedes hybrid. 
+ It's pretty dope. 
+ That sounds expensive. 
+ Guys? 
+ It is. 
+ Uh, Richard has something very important to tell you. 
+ Yes. Ahem, so, Jared has informed me that as CEO, I need to be able to answer any questions that you might have about Pied Piper's harassment policy and workplace code of conduct. 
+ Apparently, every company our size has to have one of those. 
+ Essentially, if you find the workplace hostile in any way, you can submit a written complaint. It will be completely anonymous. 
+ Essentially, don't do or say anything that might offend anyone. 
+ Okay? Thank you. That's the policy. 
+ Okay. 
+ Guys, um... 
+ This is actually pretty serious. 
+ I mean, we're all cool here, but we know each other. 
+ So obviously, when Dinesh calls me retarded Frankenstein, or he describes me as AIDS lady, or Gilfoyle refers to me as effeminate K.D. Lang, I know this is a joke among friends. 
+ It's not a joke. 
+ We're not friends. 
+ (laughing) See, it's hilarious. 
+ But, um, as we grow, we're going to be adding a lot of new people to this company, and to this office, and some of them might not be as amused as I am by such strong language. Lawsuits happen. 
+ So, questions? 
+ Oh, uh, I have a question. 
+ Mm-hmm. 
+ My best friend's nickname is Cunty. 
+ I'm sorry, her name is... 
+ Cunty. 
+ And I was hoping I could call her Cunty while I'm here. 
+ Okay, that one's easy. No, you cannot. 
+ 'Cause, you know, I want to have Cunty come visit me for lunch, and if I can't call Cunty "Cunty," then it's like, I'm not going to want to have Cunty over at all, which I feel like kind of violates my rights... 
+ Yeah, um, it does not... as a woman. 
+ Okay, I'm going to have to get back to you on that one. 
+ Her best friend's nickname is Cunty. 
+ Let's maybe get back to the kitchen. 
+ Okay. 
+ Okay, okay. 
+ All right, I got to clean out my sh1t box. 
+ Nice bag. 
+ Thank you. 
+ Oh, look, "D&G." It's like Dinesh and Gilfoyle. 
+ Okay, that was the third reference she's made to how much money she's making. 
+ Hmm. 
+ That's a $3500 bag. 
+ How do you know? You have the same one? 
+ No, I have the f*cking Internet. 
+ You don't think she's making more money than us, do you? 
+ No, we all have equalized pay, remember? 
+ Yeah, me and you and Richard and Jared do, but not new hires. It's the classic dilemma where the founders make less. 
+ We told Richard to get her no matter what it took. 
+ Even if she is making more cash than us, which she isn't, there's no way she has as much equity. 
+ You don't know that. And Richard won't tell us. It's confidential. 
+ I guess there's a reason for it. 
+ It's so people don't get jealous and throw a hissy fit. 
+ I'm not jealous. I just want to make sure she's making less than me. 
+ Hey, how do we find out how much she's getting paid here? 
+ I have a plan. 
+ Hey, Carla, how much money do you make here? 
+ Uh, let's just say it's a big jump from my old job. 
+ Right, but you probably got more equity there. 
+ Um, no, actually I get more equity here. 
+ What? 
+ Yeah. Why, what are you guys getting? 
+ Three points each. 
+ Three? That's weird. 
+ I thought you got in at the beginning. 
+ I have another plan. 
+ Erlich : All right, Jian-Yang, don't talk to anybody else. 
+ When we get inside, don't talk to me. 
+ Good evening. 
+ Here's the... 
+ Thank you. 
+ Thank you. 
+ And how will you be paying, sir? 
+ Excuse me? 
+ Your donation. 
+ What's your preferred method of payment? 
+ Oh, no, these are already paid for. We're guests of Russ Hanneman. 
+ Yes, he reserved the tickets, but you have to pay for them. 
+ Oh, okay. And how much are they? 
+ $25,000. 
+ Um, so... but for both? 
+ No, no, no, per ticket. 
+ Uh, there's no possible way that we could pay that, so what do we do here? 
+ Well, there are a number of other ways to help preserve the Muir Woods. 
+ We do a volunteer clean-up program every weekend. 
+ Yeah, I don't give a sh1t about the Muir Woods. I need to get in there. 
+ Sir, if you can't pay for the tickets, I really don't see how that's possible. 
+ What if we do like a little in-and-out thing? 
+ I just go in there, 10 minutes, you know, have one cocktail, two, three max. 
+ He doesn't eat. He won't eat. Yes, I'm hungry. 
+ Gentlemen, I'm going to need you to move aside for the other guests. 
+ You want me to email Russ Hanneman right now? 
+ You don't have Russ's email. 
+ But I have his... I have the phone number of the person who works in his office. 
+ Does anybody have an extra ticket? My investor cannot pay. 
+ That's actually not true. 
+ Uh, I think they must have misplaced the tickets. 
+ No, we have everyone's tickets here. 
+ Can you please check? Erlich Bachman? 
+ E-R-I-C-H... 
+ That's not at all how it's spelled here. 
+ Let's go, Jian. 
+ Have a nice night. Thank you. Next. 
+ Excuse me, do you have a ticket? 
+ God damn it! 
+ Jian-Yang, come here! 
+ Do you have a ticket? 
+ Hey, Jian-Yang, how... how was last night? 
+ It was sad. 
+ Erlich, he promised me dinner with a big meat. 
+ Big meat? 
+ Big meet people. 
+ Meet people? 
+ Then people say, "No, you can't come in." 
+ Wait, so you guys didn't get in? 
+ We went to Taco Bell. 
+ Erlich, he started crying in Taco Bell. 
+ He tried to blame the taco sauce. 
+ Richard? 
+ Yes. 
+ OJ says you wanted to see me? 
+ Yeah. 
+ Um, I don't want to say this any of this, at all, but several employees have lodged a complaint against you. 
+ For what? 
+ Um... for making this a hostile workplace. 
+ By, quote, "repeatedly rubbing our f*cking faces in the fact that Richard Hendricks is a pussy who gave a new hire more than us." 
+ Mm-hmm. Interesting. 
+ And which two of the several lodged a complaint? 
+ Actually, our policy guarantees anonymity, so I can't tell you that. 
+ Look, you and I both know how much you make. 
+ Are you f*cking with them? 
+ Yeah, of course I'm f*cking with them. 
+ I bought a fake Dolce & Gabbana bag at a swap meet to piss them off and apparently it did. 
+ And I lied and said I was getting a Mercedes. 
+ Oh, I also left a fake credit-card statement open on my screen, 'cause I thought they'd see it. Did they see it? 
+ They saw it. 
+ Yeah, sweet. 
+ Carla. 
+ Okay, all right, but what I used to do to f*ck with them involved gay p0rn and Photoshop, so I don't think that would be cool after OJ's big harassment speech. 
+ Huh. So in effect, the policy worked. 
+ Well, I... can we not do any of it? 
+ It just that they're getting really pissed and it's really distracting. 
+ All right. 
+ No more Cunty. 
+ Terrific. 
+ That's really good. 
+ Cunty's done. 
+ Great. But you said it again, but maybe that's the last time. 
+ Cunty's done. I'm gonna call you OJ, though. 
+ Yeah, that's fine. 
+ That's for good. 
+ Yeah, because in my head, I change the meaning from "Other Jared" to "Original Jared," so now it's a compliment. 
+ If I have to, I'm going to keep my f*cking "Star Blazer" 
+ VHS tapes in my room! 
+ It doesn't take an IQ of nine to know they should remain alphabetized. 
+ I want to watch a specific episode. 
+ And it's not like they're on f*cking DVD! 
+ Hey, um, Erlich, I just want to say this is your house and you've been really cool letting us stay here for all this time, and as soon as we get our office space, we'll be out of your way. 
+ And how soon is that going to be? 
+ Soon. 
+ And look, I realize it's not fair that I bring someone into your house that you don't want here, so I will call the cyborg and I will rescind the offer. 
+ No, Richard, I've been thinking, the cyborg is a solid coder. 
+ You should hire him. It's fine, I'll get someone else. 
+ Don't be stupid, Richard. You need a full working beta up in the next few months. Just hire the guy. 
+ I'm not being stupid, okay? I'm not going to hire him. 
+ And frankly, I'm not going to let you bully me into doing it. 
+ Would you look at yourself? You're still not f*cking listening to me. 
+ I'm trying to respect you, asshole. 
+ If you want to respect me, then just hire the piece of sh1t. 
+ Don't act like a moron. You're not going to kick Nucleus' ass acting like a f*cking moron. 
+ You don't get to tell me how I respect you, okay? 
+ I can respect you however the f*ck I want. 
+ What are you doing? 
+ I'm respecting you. 
+ Jared, hey, it's Richard Hendricks from Pied Piper. 
+ Yeah, uh, bad news. 
+ We're not gonna... 
+ What? 
+ What's that? 
+ Where? 
+ Okay, well, cyborg, f*ck you, you f*ckin'... 
+ Metal-dick piece of sh1t. 
+ Metal-dick piece of sh1t. 
+ (laughing) What happened? 
+ He, uh, he took another job from Russ f*cking Hanneman. 
+ What? 
+ Yeah. 
+ Apparently, I said so much nice sh1t about him in the board meeting, Russ offered him a job at one of his other f*cking companies for a lot more money. Our own investor poached him. 
+ And he went? 
+ f*cking cyborg. 
+ Dinesh : Richard! You need to come see this. 
+ What event could this possibly be used at? 
+ Are you happy? 
+ Not really. 
+ They used the old logo. 
+ Do you smell something burning? 
+ God damn it! Jian-Yang! 
+ ♪ All I do is flex, I don't need a reason ♪ 
+♪ All I want is s*x, I don't need a reason ♪ 
+♪ Fly out on a jet, I don't need a reason ♪ 
+♪ Every day's a never-ending summer season ♪ 
+ Background vocals : ♪ All eyes on me ♪ 
+♪ All eyes on me ♪ 
+♪ All eyes on me ♪ 
+♪ All eyes on me ♪ 
+♪ 160, blink and miss me, super nifty, riding swiftly ♪ 
+♪ Rolling through the sticks, living extra-crispy, effortlessly ♪ 
+♪ Power steering, accurately, ready for action, actually ♪ 
+♪ Mellow, relaxed, and cocking my snapback ♪ 
+♪ Not taking no goddamn backchat ♪ 
+♪ Just racking up fat stacks, no ring, no chain, no fat chaps ♪ 
+♪ I don't get no sleep, no cat naps ♪ 
+♪ And everybody want to be on my black sack, but I don't slack ♪ 
+♪ You don't really want to see me get abstract ♪ 
+♪ I'll switch up the place like have that ♪ 
+♪ Don't care about none of that rap crap ♪ 
+♪ Stay clear of the rat trap, some say that I lack tact ♪ 
+♪ But I'm on the map, I'm setting the pace, I'm on track ♪ 
+♪ So get out of my face, I'm on slapping, I'm on scrapping ♪ 
+♪ So stop yakking, what's crack-a-lacking? ♪ 
+♪ Don't follow fashion, just keeping it G ♪ 
+♪ With these hoes macking, and that's what's happening ♪ 
+♪ Oh, that's what's happening ♪ 
+ Background vocals : ♪ Eyes on me, all eyes on me. ♪ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

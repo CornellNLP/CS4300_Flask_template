@@ -1,0 +1,807 @@
+Transcripts - Forever Dreaming :: 02x07 - Convergence - Numb3rs 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x07 - Convergence https://transcripts.foreverdreaming.org/viewtopic.php?f=1003&t=42608 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 02/17/21 11:33 ] 
+ 
+ 
+ Post subject:  
+ 02x07 - Convergence 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ CHARLIE: What do you say, Larry? 
+ The Eagle, the Shark? 
+ Oh, I think the Eagle. 
+ More stability. 
+ Let's go, bro. Show us how it's done. 
+ ( grunts ) 
+ ( group groaning ) 
+ Ah, that close... 
+ Nice, all right. 
+ Watch this. 
+ All right, go for it. 
+ Oh, yeah. 
+ Oh! 
+ Yes! 
+ Oh! Nice! Nice. 
+ Nice throw, brother. Sweet, right? 
+ You know, Don, you and I are very alike. 
+ We're both focused on large, possibly unattainable goals -- me trying to explain all the workings of the universe... 
+ Yeah. What am I doing? 
+ Trying to take all the unworkable workings and put them in jail. (phone rings) 
+ Good luck to both of us. 
+ Eppes. 
+ Yeah. All right. 
+ Okay, I'm on my way. 
+ Sorry, guys, got to go. 
+ You know, work. I'll see you, all right? 
+ Yeah. Well, there he goes, back to the unattainable. 
+ ( indistinct chatter ) 
+ MEGAN: Hi. 
+ They killed the father when he tried to resist. 
+ Seems just like the third robbery. 
+ It's the same guys -- ski masks, physical descriptions match the other home invasions. 
+ This puts us up to seven in six months, so they're coming at faster intervals. 
+ They go after any specific items? 
+ Yeah. 
+ Jewelry, paintings, high-end furnishings. 
+ The deceased is Dr. Richard Bloom. 
+ He and his wife arrived home with their 15-year-old son, Jordan, after a school track meet. 
+ Three guys rushed them at the front door. 
+ Bound them up with duct tape. 
+ Did you see this? Yeah. 
+ The son put up a struggle, and one of the burglars hit him. 
+ The father tried to stop him, and they threw him in the pool, hands and feet still bound, and laughed while he drowned. 
+ DAVID: Daughter's name is Jill. 
+ She was at a friend's house. 
+ Her friend's mom brought her back home, saw something was wrong. 
+ She called 911. 
+ Daughter didn't see anything. 
+ Thank God. 
+ Right now, someone has to tell her her Daddy's dead. 
+ We all use math every day, to predict weather, to tell time, to handle money. 
+ Math is more than formulas and equations. 
+ It's logic. 
+ It's rationality. 
+ It's using your mind to solve the biggest mysteries we know. 
+ So, we got seven home invasions, right? 
+ This is before LAPD asked for our help. 
+ This is after. 
+ What we know is that they-they do have weapons, although they haven't fired them, so we have no useful forensics. 
+ And they all live in exclusive neighborhoods, they all have high-end, expensive valuables in their homes, and they all have security systems, but the attacks take place just as they're coming in, and the alarms have been turned off. 
+ Who are they? 
+ DON: They're both fathers. 
+ They both fought back to protect their families. 
+ I mean, we can't even figure out how these guys are picking the homes. 
+ MEGAN: No. So far, there's no commonalities between the families. 
+ You know, other than the fact that they're wealthy. 
+ Let's try data mining. 
+ It's a system for analyzing information. 
+ MEGAN: Army Intelligence uses that to identify possible terrorist attacks. 
+ I design an algorithm based on these crimes. 
+ The algorithm then takes the data and identifies correlations. 
+ All right. I'll get you everything we have on the families. 
+ MEGAN: Yeah, where they live, where they go to school, shop, dine out. 
+ Who cleans their pools, who fixes their cars. 
+ I'll need more than that. 
+ More than everything on the families? 
+ More... on everything. 
+ All crime stats for the past six months for the entire county. 
+ MEGAN: Wouldn't that much data make it harder to find what you're looking for? 
+ CHARLIE: The opposite. 
+ More data means more chances to find something. 
+ It's like when you're trying to put together a jigsaw puzzle. 
+ You start with a few pieces, and the rest are in the box. 
+ All the pieces you have should eventually fit your puzzle. 
+ All the pieces and nothing more come in the box. 
+ But with a real-world problem, that's just like trying to solve a jigsaw puzzle when all the pieces you need are mixed in with pieces from many other puzzles. 
+ Now, when you grab a few pieces from the box, most won't fit. 
+ You got to go through the entire box and pull out the pieces that fit your puzzle. 
+ The algorithm goes through it all, pulls out what fits together. 
+ All right. Well, I'll get you our reports, okay? 
+ CHARLIE Hey, guys. 
+ Hey, I've got a complex data analysis problem. 
+ Either of you free? Well, both of you? 
+ I'd prefer both. 
+ I... Well, I have some, a couple of hours. 
+ Charlie, have you seen the guest lecture schedule for this week? 
+ No, I haven't. Why? 
+ Oh, don't... Damn it. 
+ Don't tell me I've gotten stuck hosting another reception. 
+ No. Uh, some guy's giving a talk on the asymptotics of random matrices. 
+ Hey, you've done some distinguished work there, haven't you? 
+ The guest lecturer's name is... 
+ What the hell is that son of a bitch doing here? 
+ To whom are you referring? 
+ Marshall Penfield. 
+ That's the guy -- the guy that's giving the talk. 
+ Oh, really? 
+ Marshall and I -- we attended Princeton together. 
+ Every chance he got, he slammed my work. 
+ And the only keg party I ever threw -- he stole the keg. 
+ Marshall. 
+ Hey, Eppesy. You coming to the talk? 
+ It's gonna be a good one. 
+ I just heard about it. Ever so excited. 
+ Wondering what your subject could be. 
+ Oh, same old same old. 
+ Hi. How you doing? 
+ CHARLIE: You found a new approach? 
+ Only because I recall your earlier attacks on my analysis of Plancharel measures. 
+ You made an ass of yourself. 
+ ( chuckles ): Yes, but unlike you, I continued to work in the field. 
+ And I've made some interesting findings. 
+ Elaborate. 
+ A flaw in your work. 
+ I'll spare you the details. 
+ I'll save it for the talk, but, bottom line -- your big breakthrough, the Eppes Convergence? 
+ It's wrong. 
+ It was nice meeting you. 
+ MRS. BLOOM: These things -- most of them have been in our families for years. 
+ I don't care about any of this. 
+ But Richard -- he was only trying to protect our son. 
+ I know, Mrs. Bloom. 
+ I'm so sorry. 
+ He just couldn't bear to see people hurt. 
+ It's why he became a doctor. 
+ I just think if maybe you could tell me anything about one of these pieces, it might help me find your husband's killer. 
+ There's a lamp. It was, uh, made by Dirk Van Erp. 
+ It's one of a pair. 
+ Richard got the first one for me as a wedding present, and he spent years trying to find the other one. 
+ He finally found it. 
+ He said they belonged together, just like we did. 
+ DON: So, this lamp's worth, like, $100,000. 
+ Which, I imagine, you can't just sell just anywhere. 
+ Yeah, that's what I'm thinking. 
+ We should check into whatever markets deal with this kind of stuff, see if there's any buzz. 
+ Mm-hmm. 
+ CHARLIE: Penfield hates me. 
+ It drove him crazy. 
+ I became the youngest person to ever publish a major paper, and when I gave my first seminar on the Eppes Convergence, he shows up with a button that says, uh, "Don't believe the hype." 
+ LARRY ( laughs ): Okay. 
+ Well, that's a little confrontational. 
+ But, I mean, you were a star in your field. 
+ You-you got to expect this kind of attention. 
+ This man has singled me out. 
+ No. Your status has singled you out. 
+ I mean, people-people are scrutinizing your work because of your reputation. 
+ You must understand -- that's why he's doing it. 
+ To ruin my reputation. 
+ The Eppes Convergence made me. 
+ If it's wrong, then what am I? 
+ Well, you're a talented, theoretician with an ego problem? 
+ I'm sorry? 
+ ( phone ringing ) 
+ Hello? 
+ Yeah, I'll be right there. 
+ I got to go. 
+ Okay. 
+ The computer lab says the algorithm for Don's case kicked out some findings. 
+ Yeah. 
+ Well, wisdom and genius -- rarely present in equal abundance. 
+ I don't remember where I got this lamp. 
+ Probably some estate sale. 
+ Wrong answer. 
+ Hands behind your back right now. 
+ What's going on? You know what's going on. 
+ You can tell us where you got it here, or you can tell us down at our office. 
+ That's after we walk you through your show room full of customers. 
+ Wait, wait. Okay. 
+ Where did you get it? ( sighs ) 
+ I was introduced to this guy a few months ago. 
+ His name is Roley. 
+ He told me he got the lamp from a bankruptcy procedure. 
+ But you knew better, didn't you? 
+ ( humming ) 
+ DON: Colby. 
+ Your brother is starting to freak me out a little bit. 
+ DON: What, just a little? 
+ Hey. What's up? 
+ Calendars are wonderful analog mathematical tools. 
+ They create a universal timeline for societies by interpreting astrophysical movement. 
+ What are you talking about? 
+ CHARLIE: Calendars aren't based on easily divisible factors. 
+ Okay? You know, they originally tried to make them like that. 
+ 360 days divides quite evenly, but doesn't match with what you see in the night sky, so ancient calendars would add an extra month every eight years, or tack on five extra days. 
+ What, these were all the dates from the home invasions? 
+ Right. Once I got the data mining algorithm up and running, I ran a Fourier analysis on the chronologies -- the dates, the times. 
+ COLBY: We've actually been looking to try and find a timeline pattern, Charlie, but we can't come up with anything. 
+ Because you weren't looking in the same way my analysis does. 
+ The red days are known attacks. 
+ The blue days are when the analysis says there should be attacks, but there aren't. 
+ And what we must ask ourselves is: 
+ How do you know there aren't? 
+ No homes were hit on those dates, right? 
+ CHARLIE: Let's assume that these same guys commit other types of crimes. 
+ You mean, not just home invasions. 
+ DON: So, you're saying, what, if we find new crimes, maybe we find new evidence? 
+ CHARLIE: I think you should be looking for crimes committed by gunmen that fit the same description, that occur in these days that I've marked blue. 
+ And Charlie, the pattern. 
+ Can it tell us when the next attack would be? 
+ CHARLIE: Patterns like this are-are clearer in hindsight. 
+ I mean, they're not really used as-as predictors. 
+ I mean, there's an erratic frequency here. 
+ I mean, you know, there's several robberies a couple days apart, and then there's one or two hits, and then an even shorter break. 
+ Just point us in a direction. 
+ ( exhales ) This is my best guess. 
+ It's possible that the next attack could occur in three days. 
+ I checked the incident reports on the days where Charlie said there might have been related crimes. 
+ I found three carjackings done by three guys in ski masks that match the physical descriptions of our home invaders. 
+ COLBY: Our guys go for the high-end goods, though, Megan. 
+ The cars stolen were a Mercedes, Range Rover and a Porsche. 
+ Any of them found? 
+ No, which means either they were repainted and given new VINs or they were sold outside the area. 
+ These guys seem to know how to move expensive items. 
+ And there's something else. 
+ We've never had a gun fired in any of the home invasions... 
+ There's a gunshot in the carjacking. 
+ Yes, there was. At the Porsche robbery, one of the members of the crew shot a round into the air to scare the owner. 
+ We find that bullet, we might be able to make a match. 
+ You want to find a bullet fired straight up? 
+ It's not gonna be easy. It's not impossible. 
+ Just find the cops who responded to the call. 
+ DAVID: They would've done a neighborhood canvas to ID the round that was fired. 
+ We should be talking to the people whose cars were jacked, running down the lead from the antique store owner. 
+ What's the fence's name? Roley. I'm on it. 
+ Good. All right. 
+ DAVID: A bad time? 
+ No, come on in. 
+ I'm just sitting here, waiting for a new run of the data mining program. 
+ Emergence theory. 
+ The whole is greater than the sum of its parts. 
+ Individually, ants have limited capabilities. 
+ But the colony can be viewed as a single complex organism. 
+ But you guys aren't here to talk about ants, are you? 
+ No, actually, we have a little bet. 
+ David here seems to think that you might be able to help us find a needle in a haystack. 
+ A bullet in Brentwood, to be exact. 
+ COLBY: Checking the time periods where you thought there might be related crimes, we found three carjackings -- one of them, there was gunfire. 
+ We find that bullet, we might be able to match it to a gun. 
+ This bullet, was it fired parallel to the ground or at an angle? 
+ According to the crime report, into the air. 
+ We're not sure of the exact angle. 
+ What type of gun? 
+ Uh, we're actually not certain about that, either. 
+ CHARLIE: Okay, we're looking at at least two variables. 
+ Any handgun's going to fall into a certain range of muzzle velocity. 
+ Now, we're assuming that the gun was pointed up, not exactly vertical? Okay. 
+ So that'll give us a radius of... 
+ PENFIELD: Two to three thousand feet. 
+ Roughly half a mile. 
+ Only there are a lot of assumptions built into these calculations, but I suppose that can't be helped. 
+ Agent Sinclair, Agent Granger, this is Dr. Penfield. 
+ Sorry to interrupt. 
+ I just heard the familiar staccato clacking of chalk, I thought it might be something interesting. 
+ You're still coming to my presentation, right? 
+ I might get something wrong about Hermitian random matrices. 
+ You know, I've moved on to sequences with orthogonal symmetry, man. 
+ Oh, really? Mm-hmm. 
+ Well, that's funny, 'cause that's the exact same thing. 
+ Resonances in quantum chaotic systems. 
+ That's a simplistic analysis. 
+ PENFIELD: You always were testy when challenged. 
+ You know, I was talking about that with Amita, um... 
+ You were, were you? 
+ Yeah, yeah, last night. 
+ We were hanging out, you know, got a little dinner, long conversation -- that doesn't bother you, does it? 
+ Marshall, do whatever you like. 
+ Just you remember, Amita's a sharp mathematician. 
+ So no matter how hard you try, you're never gonna get her to believe that this is six inches. 
+ I bet with you that subject's never come up. 
+ Ooh, math fight. 
+ Hey, that was carjacking victim number three. 
+ Just like in the home invasions, these robbers targeted specific items. 
+ They went right for his watch, which was hidden underneath his jacket. 
+ Carjacking victim number two they made give up a $55,000 ring. 
+ All right, so they're being followed, right? 
+ Forced to pull over. No, no. 
+ Carjacking victim number one locked her keys in her car. 
+ She called AAA on her cell phone, and ten minutes later, these guys showed up. 
+ Victim number two got lost, entered the destination into her navigation system. 
+ And victim number three ran out of gas. 
+ He called his onboard assistance service and spoke to a real operator, but the robbers got there first with a can of gas. 
+ It's like they're eavesdropping on their cell phones or something. 
+ Maybe, but that doesn't explain their knowledge of their personal possessions. 
+ And they all have different cell phone carriers. 
+ I mean, they're tapping into them somehow, right? 
+ Yeah. 
+ The question is, what's the common link? 
+ Just don't push the wrong button or else we'll be looking for that bullet the old-fashioned way. 
+ It's okay, all right, Charlie's already programmed the trajectory equations into the calculator. 
+ Yeah, we have the origin point of the shot. 
+ The equations will generate high probability areas for a search. 
+ It's you plugging in those variables that has me worried. 
+ Hey, man, it's only two variables, okay? 
+ We got muzzle velocity and inclination of the weapon when fired. 
+ I can handle it. 
+ At least I've used a graphing calculator before. 
+ Really? You have? 
+ High school, man. 
+ Why? You didn't? 
+ I went to high school in the Bronx. 
+ Get your gear. We found Roley. 
+ Roley? He's the fence that sold that stolen lamp to the antique store, right? 
+ Yeah, we're setting up a buy. 
+ Hey, Charlie. 
+ Hey. What's going on? 
+ I was doing my work from my, uh, city planning days. 
+ See, I'm taking it all down to the offices that we're leasing now. 
+ You're really starting a consulting company with Stan Fischer, huh? 
+ Why not? You know, I miss work. 
+ Now I can be my own boss and I can concentrate on the aspects of design and planning that I always enjoyed, myself. 
+ It's a big investment. 
+ Oh... I have money. 
+ Thanks to you buying this house at the asking price. 
+ So you're not worried about the risk? 
+ ( grunts ) Well, that's business. 
+ In fact, that's life. 
+ You know, I never really wanted to retire. 
+ But when your mother got sick, there really wasn't much choice. 
+ And now, I have a choice. 
+ I'm really happy for you, Dad. 
+ You okay? 
+ You seem a little, uh... 
+ Stressed. Yeah. 
+ Why? What's wrong? 
+ Marshall Penfield, fellow Princeton graduate, has come here to rip apart five years of my work. 
+ And it's made me realize that I haven't focused on anything new since then. 
+ I've been wasting my time with this stuff for Don. 
+ Oh, come on. 
+ You don't mean wasting your time. 
+ You're right, I don't. 
+ I'm not wasting my time, I'm just... so easily distracted. 
+ Yeah, well, it's more like, you're easily fascinated. 
+ I need to devote myself to something significant in my field -- important to other mathematicians. 
+ Yeah, well, you know what I think, Charlie? 
+ I think your life's work should be what you find important. 
+ Are you the lady Jay sent over from his store? 
+ Yeah. 
+ He said you get him some of his best inventory. 
+ I'm Roley. 
+ This here's Timmy. Hi. 
+ Sorry to make you come out so late, but you know how it is. 
+ Oh, I've been to worse neighborhoods. 
+ So, let's see if we could do a little business. 
+ You, uh, brought money, right? 
+ Oh, I brought better than money. 
+ AGENTS: FBI! FBI! 
+ Get down! 
+ FBI! 
+ You stop right there! Stop! 
+ Drop on your knees! 
+ Hands behind your head! 
+ You know where this came from, right? 
+ I'm really not one to ask that many questions. 
+ No? Maybe you ought to rub it three times and find out where it's about to send you. 
+ This is a list of everything that was in your storage unit. 
+ And this is a list of everything that was stolen from seven home invasions. 
+ They're kind of similar. 
+ I had no part of that. 
+ Having this stuff makes you a part of that. 
+ I'm telling you, I am not that kind of guy. 
+ You got a nice painting or a good piece of period furniture, I can find you a buyer. 
+ Who's not gonna ask too many questions. 
+ That's right. 
+ I find people with money who are interested in deals on luxury items. 
+ That's my niche. 
+ Killing? Not my niche. 
+ Well, how'd you get all this stuff? 
+ It wasn't from any crew, it was just... it was two guys. 
+ And how'd you meet them? 
+ They came up to me at a bar, said they knew me by reputation. 
+ And what makes you think that these guys aren't robbers? 
+ One of them was dressed better than my lawyer. 
+ And the other guy, he was just a total geek. 
+ I'm gonna need their names. 
+ Mr. Brown, Mr. Gray. 
+ ( chuckles ) 
+ That's all I know. 
+ Then I feel sorry for you, Roley. 
+ Wait a minute. 
+ All right, these guys, they're not barehanders, all right? 
+ They're way too business. How so? 
+ For one thing, they gave me a list, like this one. 
+ With everything they were gonna bring me weeks in advance. 
+ Said it was so I could locate buyers ahead of time. 
+ MEGAN: Roley's description of the men he dealt with don't match what we have. 
+ So then, we could be looking for five different guys? 
+ Maybe not five different guys, but maybe two guys that case it and three guys that do the actual robbery. 
+ I'm telling you, the cell phones tie into it. 
+ Yeah, but every single person uses a different service. 
+ And how would they know what's in the homes? 
+ And what about the data mining? I'm working it. 
+ The analysis finds all kinds of links and I have to gauge which ones are meaningful. 
+ For instance, the data mining found that all the victims buy bottled water. 
+ Well, that's meaningless. 
+ CHARLIE: When Army intelligence tried to use data mining to spot commonalities between terrorist attacks, one of the people it picked out was Condoleezza Rice. 
+ Okay, so it's thorough, but it's not discriminating? 
+ Whatever you can do, Charlie. 
+ You're the one who said we're talking about three days here. 
+ Yeah, I know. No pressure. 
+ DAVID: A variable two-way muzzle velocity. 
+ We're working with a nine millimeter, but these guys like to play rough. 
+ Now, I'm thinking they're packing something stronger. 
+ Yeah, but muzzle velocity changes with the grain of the bullet, anyway. 
+ The heavier the projectile, the slower it goes. 
+ Right. 
+ Okay, let's just say, you're a guy into invading people's homes, and you're getting off on messing them up. 
+ Right. What's your weapon of choice? 
+ Semi-automatic with a big clip. Lots of stopping power. 
+ .45 ACP, 180 grain rounds. 
+ That's a muzzle velocity of 1,200 feet per second. 
+ Oh, yeah, man, plug that one in. 
+ The development of any type of representation theory is usually split into two stages. 
+ The first is a description of all elementary representations. 
+ The second consists of constructing certain natural representations of the group, and decomposing them into irreducible ones. 
+ What we see when we get deeper into the Eppes Convergence, is a small and, until now, undetectable conceptual roadblock. 
+ It's an expression, floating through these equations like a tiny blood clot, until it lands here, at the infinite-dimensional simplex, which... causes a stroke to the entire theory. 
+ Maybe these guys are into revolvers. 
+ You know, a nice little .38, or a .357, maybe. 
+ I'm telling you, man, they're physical, they're pumped, they're flush with cash. 
+ These guys buy a gun, it's going to be a .40 caliber 45 HK. 
+ David, we can talk muzzle velocities all day long. 
+ But if this joker fired straight up, it doesn't matter, because the bullet would have landed right here, within a 500-foot radius of where the guy fired from. 
+ So, the question is: do you think it's possible that he actually fired straight? 
+ Yup, I do think it's possible. 
+ Yeah? Based on what? 
+ Based on I just found the bullet. 
+ Charlie? 
+ He does have a valid point about the end-point process on the one-dimensional lattice. 
+ Right. 
+ Penfield's blood clot to my brain. 
+ Or was it the torpedo in the engine room analogy? 
+ I forget. 
+ Hey, Amita, there you are. 
+ You still up for Pie n' Burger? 
+ Sure, let me grab my stuff. 
+ Hey, Eppesy. 
+ Heard you got a substance abuse problem with lemon meringue. 
+ It's a "gateway" pie, you know. 
+ Why don't you come meet us out front? 
+ You know, there's a whole crowd of people going. 
+ I'll pass. 
+ What's the matter? 
+ I can't make any headway on this FBI case. 
+ And... there's my life's work... going up in flames. 
+ Well, you're spreading yourself really thin. 
+ You're spending a lot of time with Marshall. 
+ He's an interesting thinker. 
+ It's not a big deal, Charlie. 
+ You've got your FBI work, your teaching, your research... 
+ Yeah, and you've got your astrophysics work, your work with Dr. Keppler. 
+ I know. 
+ I'm focused on my work. 
+ I'm not sure that I want to focus myself socially right now. 
+ I guess I can understand that. 
+ You sure you don't want some pie? 
+ No, I... 
+ Go eat pie. 
+ Please. I need to think. 
+ Okay. 
+ Do you two realize what's in here? 
+ Well, in your case, a lot of unanswered voicemails. 
+ I can tell you that. 
+ After 9/11, the FCC mandated that all cell phones be able to locate people in the event of an emergency. 
+ Oh, right. 
+ That a GPS locator chip has to be put in every new phone by 2005. 
+ And newer phones can be used to track people within a range of 30 feet. 
+ But you're still going to need access to classified data. 
+ Are you saying that these robbers have figured out how to intercept encrypted material from a military satellite? 
+ No, that's impossible. 
+ 
+ 
+ 
+ Listen, somehow they've gotten that GPS information. 
+ They've gotten into the phones. 
+ But that doesn't explain how they knew who to rob. 
+ Look, this is a two-part problem, okay? 
+ Part one: How do they know who to rob? 
+ And part two: How do they know where the victims are? 
+ The phone is the key to part two -- locating victims. 
+ Part one: how they know who owns what, I still can't tell you. 
+ But you can be positive that all the families will have it in common. 
+ ALAN: Hey, Charlie, you seen my cell phone? 
+ I been looking all over for it, I can't find... 
+ What are you doing with it? 
+ We'll put it back together. 
+ You can't use one of your own? 
+ LARRY: Well, I refused to allow the small, quiet moments of my life to be invaded by these devices of distraction. 
+ Which means you don't have one? 
+ And I need mine. 
+ Look, Charlie, I'm not a homebound retiree anymore. 
+ I happen to be starting a new business. 
+ And having a cell phone might come in handy. 
+ Right? 
+ Look, you'll have it back in one hour. 
+ Dad, we need to look at your GPS chip. 
+ What do you need to do that for? 
+ Every new phone comes embedded with this tiny chip that acts as a global positioning receiver. 
+ And it's my theory that these home-invasion robbers are using them to track their victims. 
+ How would they do it? 
+ Well, a cell phone's essentially a radio. 
+ Whenever it's on, it's sending radio signals to let cell towers know where the phone is so a person can move from one cell zone to another without losing a call. 
+ At the same time, the GPS chip receives signals from outer space, specifically, from at least three geosynchronous satellites. 
+ Using the geometric method called "three-dimensional trilateration," the GPS chip uses the signals from the satellites to calculate its exact location on Earth. 
+ The data generated can be used by police, roadside assistance, emergency services, tracking truck fleets -- and even lets parents keep tabs on their teenage children. 
+ Ah, it's too "Big Brother" for me. 
+ I'll stick with my rotary dial-up. 
+ But intercepting these signals is really beyond the grasp of most criminals. 
+ ALAN: If all my years of working at Urban Infrastructure has taught me anything, it's that there's always somebody who gets into the system. 
+ MEGAN: Charlie was right. 
+ Three days on the button. 
+ Married couple, 74 and 77 years old. 
+ From the evidence, it looks like the man struggled with the robbers. 
+ DON: Yeah, they beat him to death, they got the woman over here. 
+ They strangled her. 
+ Doesn't look like they put up much of a fight. 
+ MEGAN: They're acting more frequently, and killing more readily. 
+ I am crossing my fingers that this has to be the bullet from the carjacking. 
+ DAVID: Not a lot of bullets lying around Brentwood. 
+ No, it's more of a slash-your-throat kind of neighborhood. 
+ Well, we're running the slug through the ATF Bullet Trap database, hoping to match the gun it was fired from to a previous crime. 
+ We need this lead. 
+ And after eight hits, they're going to think they're invincible. 
+ That we can't catch them. 
+ They're going to be more reckless, more dangerous. 
+ Bingo. 
+ LARRY: Yeah, I heard on the radio -- two more people killed by these robbers Don is trying to catch. 
+ Yeah. It's bad. 
+ And the data mining is not yielding any connections you can work with? 
+ Well, it's hard to say. 
+ You know, one commonality that the analysis keeps highlighting is cell phones. 
+ But, you know, everyone has cell phones. 
+ Then there's a second commonality, that has no defined value. 
+ The algorithm keeps pointing out that the families all have rare, collectible items. 
+ And all were insured. 
+ You really should get this program to Amita. 
+ She is the best coder we've got. 
+ I don't think this is where the problem is. 
+ And... Amita's off chilling with Penfield. 
+ Well, he is a brilliant mathematician and, I assume, a sparkling conversationalist. 
+ Are you serious? 
+ Oh, you're great. 
+ You're just another member of the Penfield Fan Club. Right? 
+ Well, I do understand his analysis of the Eppes Convergence was a bit pointed. 
+ I'll admit, he's a bright fellow. 
+ He's got all sorts of insight. 
+ But he's so full of himself. 
+ He's so annoyingly confident. 
+ "Certainly in extending the calculation for S 
+ "to the infinite unitary group, "it would be obvious to anyone 
+ "that my genius would mandate -- 
+ "upon my death -- 
+ "the inclusion of my brain in the Smithsonian." 
+ I would actually prefer someone take my brain on a road trip like they did with Einstein's. But... 
+ Hey, Charlie. 
+ Hello. 
+ Charlie, Marshall and I went to your office looking for you, and we kind of saw what was on the chalkboard. 
+ ( mouths words ) 
+ PENFIELD: Yeah, you had a problem that was of interest to me because it relates to my main field-set theory. 
+ Oh, well... 
+ This is it, isn't it? 
+ This is the same thing right here. 
+ Could be. 
+ Why? 
+ Marshall's new research at Princeton is inset theory, in something he calls "deep current" sets. 
+ What are those? 
+ Chalk. 
+ Connections between groups that are hard to detect, but that affect all the other sets. 
+ Kind of like how currents beneath the ocean surface can influence the weather patterns in the atmosphere. 
+ There's something underneath we can't see. 
+ Things that seem to have no connection are all linked by a common factor. 
+ Marshall, have you developed methods of analysis to help you define the unidentified connections? 
+ Oh, yeah, sure. 
+ Even if I can't tell you where the deep current is, I can tell you were to look. 
+ MEGAN: But, Charlie, all eight families have different insurance companies. 
+ Sure, but the data mining found that there's a powerful connection between the victims, And it's not something we can see. 
+ It's an unseen set, a deep current set. 
+ I'm sure that means something. Right. 
+ The victims' families all had high-end valuables, Like the Dirk Van Erp lamp that you guys tracked down, right? 
+ Right, that the robbers all knew about in advance. 
+ The victims' families all had different insurance companies, but my analysis suggests that the insurance companies have something in common. 
+ Like what? 
+ Well, apparently, when covering rare, high-cost items, insurance companies often purchase a rider, a backup policy from another firm. 
+ Yeah, insurance riders, of course... which wouldn't show up on a criminal report, because the customers don't even know they have them! 
+ Colby, Charlie's got a good idea -- check out if any of the insurance carriers bought any riders from the same firm. 
+ CHARLIE: If I'm right, you'll find a company common to several victims. 
+ And someone with access to that company's list of clients... 
+ ...would know how to hack into cell phone signals. 
+ Megan, get a list of local employees with criminal records from the wireless companies. 
+ All right? I have that. 
+ Very fast. 
+ Thank you. 
+ Don, I already looked at three of them. 
+ They used the same underwriter. It's a BTL, Limited, so I'm gonna check, see if I can get employee lists. 
+ DON: Good. Great. 
+ Now, compare that list to Megan's list, and maybe we'll find one guy on both. 
+ No, we're looking for two guys, Mr. Brown, and Mr. Gray. 
+ Remember, one will know cell phones, one's gonna know insurance. 
+ This is the FBI's version of data mining, finding links the old-fashioned way. 
+ Oh, yeah, by hand and by luck. 
+ Here we go, Herbert Quilty, service tech for Vertech Wireless. 
+ Two years ago, pled guilty to selling stolen cell phones, served three months in county jail. 
+ What's his link to the insurance company? 
+ Same time as Quilty was in jail, a guy named Thomas Maynard was serving weekends on a DUI conviction, Maynard was a supervisor at BTL Underwriters. 
+ How did Roley put it? 
+ "One dresses better than my lawyer, Right. and one is a total geek." 
+ Freeze! 
+ Hands behind your head! Down on your knees! 
+ Down! 
+ Herbert Quilty, you're under arrest for murder. 
+ All right. 
+ I had that wine at Morton's last week. 
+ FBI! Get on the ground! 
+ On your knees! 
+ Down! 
+ Okay! 
+ Hands behind your back, Maynard! 
+ You're working with some nasty dudes, Maynard. 
+ Where'd you meet guys like this? 
+ Weekend lockup seems a bit tame for stone killers. 
+ No evidence connects me to any crimes. 
+ Can't control these guys, can you? 
+ Thought you were getting into the robbery business. 
+ They switched the game on you, didn't they? 
+ You set it up so they could stalk their victims, in their homes, in their cars. 
+ That puts you right in the middle of things. 
+ Walter Gordon. 
+ His friends call him "Demento." 
+ Leader of a San Fernando Valley skinhead gang. 
+ Hmm? 
+ Never seen him before in my life. 
+ Yes, you have. 
+ What happens to you now? 
+ What do you think he's gonna do to you the next time the two of you run into each other? 
+ And what about your family? 
+ If you're locked up, and he's still out there? 
+ They weren't supposed to hurt anyone. 
+ That's all on them. 
+ I picked people from the company files. 
+ Quilty rigged the phones. 
+ With GPS to the node signal. 
+ MAYNARD: Demento's crazy. 
+ I tried to keep him to a schedule, but he wanted to move faster and faster. 
+ He decided to pull these carjackings. 
+ Said he wanted to be known for selling expensive wheels. 
+ Nice timing on the photo. 
+ DAVID: Forensics matched the bullet we found in Brentwood to one shot through the head of a fast food worker in Tarzana about two years ago. 
+ Witness in that case ID'd Walter Gordon, aka Demento. 
+ MEGAN: What I don't understand is how did Quilty's phone let the robbers know where the victims were? 
+ Well... 
+ Quilty must have put a sniffer on a node. 
+ A node is something that takes all the calls coming into a cell tower and then relays those signals to where they're going. 
+ A sniffer is an electronic device that detects specific calls, then sends that signal to a phone the robbers must have. 
+ And you think Quilty's phone could do that? 
+ I think so. 
+ All he needed was access to the cell towers. 
+ Because he worked at a wireless company, he had that. 
+ CHARLIE: And the gear required, well, he could buy that at any electronics store, couldn't he? 
+ All right, So Maynard gave Quilty phone numbers of people who owned valuable things. 
+ Right, and Quilty had his sniffer search for those numbers. 
+ When those signals came in, the locations went to the phone that he gave the robbers. 
+ They could follow victims, move in as they arrived home. 
+ Walter Gordon, aka Demento, has no known address. 
+ LAPD's been looking for him since the Tarzana killing. 
+ Okay, so Maynard and Quilty set up Gordon with phone numbers of potential victims. 
+ See if they picked any new victims. 
+ I mean, if we can't find Gordon, let's find out where he's going. 
+ Come on, take me to your home. 
+ ( loading clip ) 
+ DEMENTO: There's the Volvo. 
+ SKINHEAD: This family won't know what hit them. 
+ ( tires screeching ) 
+ I got the driver, you get the girl! 
+ Out of the damn car! 
+ Get out of the car now! 
+ Get out of the car! Drop the gun! 
+ Drop it! 
+ ( agents all yelling ) 
+ Don't move! 
+ Get your hands behind your back! 
+ ( skinhead grunts ) 
+ ( grunts ) 
+ Get him up. 
+ Ow! 
+ What the hell is that? 
+ MEGAN: Shut up, Can't you see the baby's sleeping? 
+ CHARLIE: Marshall. Eppesy. 
+ I just thought you might like to know that your insight on the subset commonality helped the FBI catch three murderers. 
+ Wow. 
+ That's, uh... That's, that's great. 
+ So, thank you for your help. 
+ You're welcome. 
+ I hope you understand, I didn't work on the Eppes Convergence because of you. 
+ I did because, uh... 
+ Well, because it's great math. 
+ You know, back at Princeton, you were always the guy with the deep ideas. 
+ This one just fascinated me. 
+ Well, I have to admit... your work shows tremendous insight. 
+ Thank you. 
+ Though I've taken another look at your analysis. 
+ Oh, no, I know that tone. 
+ And I think I've found a way to address the flaw that you've identified. 
+ That's the basic idea. 
+ That negates the whole need for the flawed section, then. 
+ How about that? 
+ Great Professor Charlie Eppes has done it again. 
+ Now, that's hokum. 
+ This approach was only apparent because of your work. 
+ So I'm going to call this the Penfield Variation. 
+ ( laughs ) 
+ Great. 
+ Way to make me feel like a real ass. 
+ ( chuckles ) 
+ ( knock at door ) 
+ ALAN: Door's open. 
+ Hi, Mr. Eppes. 
+ Hi. Hi. 
+ Charlie's supposed to come with us to a seminar. 
+ Oh, he's out in the garage. 
+ Hey, Charlie, your friends... 
+ Here he comes. Been out in the garage all day. 
+ Hey, guys, you know what? Go on without me -- maybe I'll catch up with you later, 'cause I'm a little caught up with something right now. 
+ What are you working on? 
+ A unified theory of the neural network in higher cognitive functions. 
+ LARRY: The math of the brain. 
+ I'd better stick to it, too. 
+ It might take me a while... 
+ Say, several decades. 
+ Attaboy. 
+ Yeah, what is it they say? 
+ "The journey is more important than the destination?" 
+ So true. 
+ You're doing a jigsaw puzzle. 
+ Oh, yeah, it's 5,000 pieces. 
+ My wife used to do them all the time. 
+ So what do you say you skip the seminar, and we'll order in some pizza? 
+ I love jigsaw puzzles. 
+ And I love pizza. 
+ All right. 
+ ( upbeat music playing ) 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

@@ -11,7 +11,8 @@ from bs4 import BeautifulSoup
 
 list_of_shows = pd.read_csv("datasets/All_Streaming_Shows.csv")
 check_shows = list(list_of_shows['Title'].apply(lambda x: x.lower()))
-
+ad_shows = pd.read_csv("datasets/more_shows.csv")
+more_shows = list(ad_shows['title'].apply(lambda x: x.lower()))
 
 def tag_contents(tag, type):
     """
@@ -67,16 +68,20 @@ info_runtime = []
 info_age = []
 info_years = []
 info_votes = []
-
-for num in range(1,  10000, 50):
-    print(num)
-    sleep(randint(1,3))
-    TV_shows = get('https://www.imdb.com/search/title/?title_type=tv_series&start=' + str(num) + '&ref_=adv_nxt',
+i = 9951
+next_page = 'https://www.imdb.com/search/title/?title_type=tv_series&start=9951&ref_=adv_nxt'
+while i < 204059:
+    print(i)
+    TV_shows = get(next_page,
     headers = headers)
     print(TV_shows.status_code) #prints 200 if successful
 
-
     laptop_soup = BeautifulSoup(TV_shows.content, 'html.parser')
+
+    next_page = str(laptop_soup.find_all('a', class_ = "lister-page-next next-page")[0])
+    np_si = next_page.find('href="')+5
+    np_ei = next_page.find('"', np_si+1)
+    next_page = "https://www.imdb.com"+ next_page[np_si+1: np_ei]
 
     container = laptop_soup.find_all('div', class_ = "lister-item-content")
 
@@ -91,7 +96,7 @@ for num in range(1,  10000, 50):
 
         title = tag_contents(link, "a").strip()
 
-        if title.lower() in check_shows:
+        if title.lower() in check_shows or title.lower() in more_shows :
             print(title)
             gen = show.find_all('span', class_ = "genre")
             if len(gen) > 0:
@@ -104,7 +109,7 @@ for num in range(1,  10000, 50):
                 runtime = tag_contents(str(run[0]), 'span').strip()
             else:
                 runtime = "N/A"
-            
+
             temp_age = show.find_all('span', class_ = "certificate")
             if len(temp_age)> 0:
                 age = tag_contents(str(temp_age[0]), 'span').strip()
@@ -171,27 +176,28 @@ for num in range(1,  10000, 50):
 
 
             dict_of_shows[link] = {'title': title, 'reviews': review_info_list}
+            i+=50
 
-TV_reviews_df = pd.DataFrame({"TV_show": TV_show,
-"review_title": reviews_title,
-"review_content": reviews_content,
-"review_helpful": reviews_helpful,
-"review_rating": reviews_rating,
-"review_date": reviews_date})
+    TV_reviews_df = pd.DataFrame({"TV_show": TV_show,
+    "review_title": reviews_title,
+    "review_content": reviews_content,
+    "review_helpful": reviews_helpful,
+    "review_rating": reviews_rating,
+    "review_date": reviews_date})
 
-TV_reviews_df.to_csv("datasets/TV_reviews_df.csv")
+    TV_reviews_df.to_csv("datasets/TV_reviews_df.csv")
 
-TV_info_df = pd.DataFrame({"title": info_title,
-"genre": info_genre,
-"rating": info_rating,
-"runtime": info_runtime,
-"age_rating": info_age,
-"years": info_years,
-})
+    TV_info_df = pd.DataFrame({"title": info_title,
+    "genre": info_genre,
+    "rating": info_rating,
+    "runtime": info_runtime,
+    "age_rating": info_age,
+    "years": info_years,
+    })
 
-TV_info_df.to_csv("datasets/TV_info_df.csv")
+    TV_info_df.to_csv("datasets/TV_info_df.csv")
 
 
-a_file = open("datasets/review_data.json", "w")
-json.dump(dict_of_shows, a_file)
-a_file.close()
+    a_file = open("datasets/review_data.json", "w")
+    json.dump(dict_of_shows, a_file)
+    a_file.close()

@@ -1,0 +1,828 @@
+Transcripts - Forever Dreaming :: 01x00 - Expedition Mars (extra) - Mars 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x00 - Expedition Mars (extra) https://transcripts.foreverdreaming.org/viewtopic.php?f=768&t=29885 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 11/21/16 18:26 ] 
+ 
+ 
+ Post subject:  
+ 01x00 - Expedition Mars (extra) 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Mars has been the next frontier since the space age began. But by the year 2000, we we're losing ground. 
+ At that time two out of three of the missions that had flown, had failed. 
+ It's nothing but disaster after disaster. 
+ NASA said we've got to show the public that we can do it. 
+ Two rovers called Spirit and Opportunity got the job and the game was on. 
+ We had to succeed. 
+ That was just all there was to it. 
+ We had to succeed. 
+ Ooohh! 
+ Well, the drop was successful. 
+ The fact that the parachute exploded... 
+ Not a good thing. 
+ To me it's a miracle that they got to Mars at all. 
+ They beat the odds on earth and then they did it again on Mars, embarking on two incredible journeys that opened the martian frontier for good. 
+ They gave it life! 
+ Their persistence and the discoveries meant we were going back. 
+ Spirit and Opportunity, the legendary rovers that conquered Mars... Expected to last a few months, they lasted years. They climbed mountains and crater walls, survived dust storms, frigid nights, broken wheels. Intrepid explorers, destined for greatness from the day they were conceived. At least, that's the way it seems now. 
+ It was always going to happen. 
+ It was always going to be a big success... 
+ It was nothing like that at the start! 
+ I, I, I didn't even know if we were going to get to Cape Canaveral... 
+ If we were going to get to the launch pad. 
+ There were times when it looked like we were just dead in the water. 
+ In the beginning, long before they were heroes, Spirit and Opportunity were a last ditch effort to prove that NASA could handle Mars. 
+ They started really as a, I wouldn't say an act of desperation, but we had our backs against the wall. 
+ In 1999, NASA suffered two embarrassing failures on Mars. An orbiter that lost its way thanks to a mixup between english and metric units... And a lander that may have cut off its engines too soon. 
+ We never heard from it. 
+ We've never figured out what happened to it. 
+ So in late 1999 the Mars program was a complete shambles. 
+ Facing questions about whether Mars was still worth the risk, NASA scrubbed most of its plans and debated the next step. 
+ It was in a place where we could just fold up shop and say forget about it. 
+ And so we looked at our playbook and we said, well what has worked for us in the recent epoch? 
+ Well, it was this Pathfinder mission. 
+ Mars Pathfinder was a low budget experiment by the Jet Propulsion Laboratory just before the two failed missions. 
+ We were setting out to prove that it was possible to build something really simple and easy to land on Mars. 
+ It was exciting, a small team... 
+ We were doing things that no one had ever done before. 
+ The goal was to invent a new way of landing on Mars using airbags with a fold-up lander inside carrying a small rover the size of a microwave oven. 
+ It had been 20 years since anybody had landed on Mars. 
+ The guys who did Pathfinder were making it up from scratch. 
+ And they were young. 
+ On the 4th of July, 1997... They pulled it off and the little rover was big hit with the public. So a Pathfinder followup looked like good bet to restore confidence in Mars exploration. NASA's Jet Propulsion Laboratory in Pasadena, California would design and build the spacecraft, land it on Mars, and run the mission once it got there. And a planetary scientist named Steve Squyres would lead the science team with a new approach to exploring Mars. 
+ With a couple of failures behind us and a lot of uncertainty ahead of us there was an enormous amount of attention focused on our mission. 
+ I don't know what would have happened if we had failed. 
+ It would not have been good. 
+ Squyres produced this animation to show all the stakeholders how everything was supposed to work... From the fiery entry into the atmosphere all the way to the ground. 
+ The idea was the original Pathfinder lander, with the Pathfinder airbags, the Pathfinder parachute, and we'd just put something different inside. 
+ On Mars Pathfinder, the lander was where the computer was, that was where the brains were, that was where the bulk of the instruments were. 
+ The thing that made this mission different was the rovers. 
+ What we did was put the biggest rover we could possibly fit inside that lander. 
+ And everything moves. 
+ Everything travels with you as you go. 
+ All your instruments, your power system and your computer. 
+ And that enables true exploration. 
+ This rover would do more than just land on Mars. It would explore, like a geologist, searching for clues to whether Mars was was ever a place that could have supported life. NASA decided to build not one, but two of these robot geologists to double the chances of success... And by the time they approved the plan, the schedule was already tight. As they orbit the sun, earth and Mars get close enough to launch a mission just once every 26 months. Miss that chance and you have to wait another 26 months... Their deadline was the summer of 2003, less than three years away. 
+ We put a team together. 
+ I mean it's the first time I'd done anything, so as a rookie principal investigator I had a lot to learn. 
+ And not much time to learn it in. 
+ We had to succeed. 
+ That was just all there was to it. 
+ We had to succeed. 
+ The way we did it was by pushing an incredibly talented team harder than they ever should have been pushed. 
+ People were working insane hours. 
+ We were all so committed, that we just poured everything we had into it. 
+ One of the toughest jobs fell to the team responsible for something that was supposed to be straightforward... Making the already proven Pathfinder landing system work with the new rovers. 
+ Normally when we develop a mission we have about five years. 
+ We only had about three years at the outset for Spirit and Opportunity, very tight timeline. 
+ We thought it would be OK because we were reusing this Pathfinder landing system. 
+ I was young and hungry with a relatively fresh minted PhD. 
+ I found myself positioned to lead the mechanical engineering for the landing system, which meant learning about parachutes and learning about airbags and learning about rockets and heat shields. 
+ Learning about a whole bunch of new stuff that I hadn't learned in school. 
+ Entry, descent and landing, "EDL" for short, covers everything from entering the martian atmosphere to touch down. The trouble started with the Pathfinder airbags. 
+ We intended to use the exact same technique, in fact the exact same airbags. 
+ We were just going to rebuild those airbags. 
+ For the first test they found a spare set of bags left over from Pathfinder. 
+ We wanted to get some testing under our belts really quickly. 
+ We used the world's largest vacuum chamber, 100 feet tall and 75 feet wide that we can pump down to Mars conditions and throw these inflated bags at a simulated martian surface, sort of a worst case martian landing site. 
+ We thought for sure that they would prove out. 
+ JPL? 
+ Ready. 
+ We inflated them. 
+ We see the airbags impact the surface and as they roll away you can see this gaping hole. 
+ That was a bummer. 
+ Now very quickly we said, oh, but those bags are old. 
+ We're going to have to build some fresh bags and come back. 
+ And we did that. 
+ And the next test, looking through the same cameras, boom, a big hole as the bags roll away. 
+ Now we're starting to feel the pressure. 
+ Then came the parachutes. 
+ We were testing them at national guard gunnery range south of Boise, Idaho. 
+ We lift our test vehicle with the parachute on it. 
+ We get it up to altitude, we let go of the test vehicle. 
+ We see a beautiful inflation of the parachute and then... 
+ Wow! 
+ It's another "oh shoot" moment. 
+ Uh, well, the drop was successful. 
+ The fact that the parachute exploded... 
+ Not a good thing. 
+ Well, yeah, but I'd rather have it happen here than, uh... 
+ Mars, that's right. 
+ Unfortunately, strictly speaking, that chute that just exploded was the chute that we we're planning on taking to Mars. 
+ I believe it was that very day we had another test article, strapped it in, put it up, dropped it and boom it blows up again. 
+ And we're back to the hotel, all hands on deck, so we can start to try and pull apart this puzzle of why are we blowing up our parachutes. 
+ We're ripping airbags, we're exploding parachutes. 
+ There's not a single thing I can do about that. 
+ That's in the hands of capable engineers. 
+ It's their job to go off and solve the problems. 
+ And all you can do is hope. 
+ We are scrambling to find the time and the brainpower to do these redesigns of things that we thought we'd be able to fly again. 
+ It didn't take long to discover the problem. The rovers were bigger and heavier than expected, and had outgrown the old Pathfinder landing system. 
+ Once we realized how big the rover had to be to do the job that we had agreed to have it do, everything had to change. 
+ We needed a new lander. 
+ We needed new airbags. 
+ We needed new parachutes. 
+ And that, so that busted our schedule and ah, busted our budget. 
+ We had ten pounds of stuff in a five pound bag. 
+ And so things were changing right and left and and we started to realize, ah, we've got a tiger by the tail. 
+ We've got a very short development time. 
+ And we've really got to make this work. 
+ Meanwhile the scientists had to decide where on Mars they should send the rovers to investigate whether it ever had the water necessary for life. One possibility was a flat plain called Meridiani Planum where orbiters detected a mineral that could have formed in water. 
+ The Meridiani site was not a sure thing by any means. 
+ The main thing that it had going for it, was that it was smooth and flat and the winds weren't very high. 
+ And so it looked like a safe place to land and a safe place to drive around. 
+ A more exciting target was Gusev crater which appeared to be a dried up lakebed. 
+ Gusev is a big crater, 160 kilometers in diameter and there's a dry river bed flowing into it. 
+ Now there's no water in that river now. 
+ There hasn't been for billions of years but it's, it's a big hole in the ground with a dry river flowing into it. 
+ There has to have been a lake there. 
+ The downside to Gusev was wind. 
+ Side winds could make our system swing in the breeze. 
+ And if we lit our rockets up when we were swinging we could really start moving ourselves sideways and tear the bags apart. 
+ In Gusev crater they'd have to counteract the wind with steering rockets. And they'd need extra high performance from the airbags and parachutes. After more than a year of intensive work, the landing team was back at the vacuum chamber. The airbags had been completely redesigned to handle the worst case scenarios on Mars. But first they had to do it on earth. 
+ That looks good. 
+ Thank you, very, very much! 
+ This is awesome! 
+ This is awesome. 
+ I mean, that's perfect! 
+ There's not a tear. 
+ Sacrificial layers of vectran, a high tech synthetic, absorbed the impact from the rocks. 
+ This is a glorious pass... 
+ It worked like a bullet proof vest protecting a double inner bladder holding the air. 
+ We're talking about 100% margin. 
+ Nine months later, the airbags were ready for Mars. By then the team believed they'd also solved the parachute problem... But they still had to prove it. 
+ After our parachute failures in Boise we needed a way of testing more rapidly and in more controlled environments. 
+ We turned to the world's largest wind tunnel. 
+ It's a huge 8 story tall, 120 foot wide test section. 
+ We have a big post that sits up in the middle and it holds our parachute canister like the one we would use going to Mars. 
+ They'd spent months designing and building a new set of high performance parachutes and there was no time for any more setbacks. 
+ This test is the big deal. 
+ You know, if we have a failure here that's gonna start a measure of desperation that we never want to find ourselves in, so... 
+ With the fans blowing at up to 100 miles an hour, a parachute inflates with the same force it would experience at supersonic speed in the thin atmosphere of Mars. 
+ 3, 2, 1 fire! 
+ Come on, come on! 
+ That's... 
+ Strong oscillation on the strut... 
+ What is that, what is that? 
+ It's called squidding in the parachute community. 
+ This was the first time I'd ever seen it. 
+ This was the first time a lot of folks had ever seen it. 
+ We were dumbfounded as to what to do. 
+ I know... this is super super super mega-bummer. 
+ Just when we thought we were there, just about to cross the finish line, out of nowhere this thing comes. 
+ It certainly was the worst feelings I'd had thus far in the project. 
+ When this thing wouldn't inflate there were dozens of possibilities of what it might be and we didn't know what it was. 
+ In fact when we were staring at that thing moving around I kind of thought I might be staring at the end of this project because if we didn't find the solution for this, we weren't going to Mars. 
+ When the parachute failed to open, it looked like the mission might be over. Supersonic chute problems can be nightmares to unravel. Fortunately, this puzzle had a simple solution. The vent hole at the top of the chute was a little too big. When they got it right, they were back in business. 
+ What we discovered quite rapidly was that this parachute, has plenty of reserve strength and good inflation characteristics, and this is the parachute we're gonna take to Mars. 
+ By January, 2003, the parachutes were qualified for flight... Just 5 months before launch. For the landing team, the biggest issues were now behind them. But each problem solved was a reminder of how fine the line was between success and failure. 
+ Each time we would hit a problem you know, we'd find a solution, but you never know when you're going to hit that one that's going to end it all. 
+ Any day now there may be a test failure, something goes wrong and you go, all right, we're done. 
+ You know, that was scary. 
+ The rovers, science instruments, and spacecraft had all gone through a grueling regimen of testing, and re-testing... A relentless search for anything and everything that could possibly go wrong. It was understood that a failed mission would be worse than no mission at all. 
+ Having had two missions before us fail the view that I think existed in NASA headquarters and in retrospect it makes a lot of sense to me now, it made less sense at the time, was that it would be better to simply not fly the things than to take an unacceptable level of risk. 
+ Four months before launch, the entire operation moved to Kennedy space center in Florida. 
+ Everything changed when we got to Florida. 
+ There's this do or die sense about what you're doing. 
+ When we put the rovers together we put them together and took them apart multiple times. 
+ When you get to Florida you put it all together for the last time. 
+ And every fastener that gets torqued down, every connector that gets mated, that's it. 
+ You do that, even that simple task wrong and you've got a problem when you get to Mars that you can never fix. 
+ Spirit was set to launch first, but with just a few weeks to go, they hit a snag. 
+ You knew something was going to be the last big problem. 
+ You don't know what it's going to be. 
+ But our last big problem was a real big one. 
+ It involved the electrical circuits that trigger pyros, the explosive fasteners that release dozens of secured parts during and after landing. The circuits had all been tested with live pyros, but late in the game they discovered that the next time they tried to use them, on Mars, they might not work. 
+ It turns out that the way the electronics were designed there was a chance that some of these tests would have irreparably damaged components inside the rover. 
+ And the problem was our schedule was now so tight, we were so close to the end we couldn't even get inside the rover to see if those components were OK or not. 
+ The rover is ready to go to the launch pad. 
+ It would take weeks to take the thing apart. 
+ And it would blow our schedule. 
+ We wouldn't be able to launch. 
+ This could threaten the whole mission. 
+ I mean the rovers could end up in the air and space museum over this. 
+ OK, if we're not able to launch these things now it may not make sense to ever fly them. 
+ The only way to tell if any tests had damaged the rovers was to find all the pyros ever fired and check them for short circuits. 
+ And so there was this treasure hunt, and people were going in bags and shelves and pulling things apart, and gradually piece by piece they were found... 
+ The last one, the critical one that we needed to prove that we were really OK was found yesterday. 
+ You know, 3 days before launch and we're still sweating these resistors. 
+ It was awful! 
+ The deadline had arrived. To hit their targets on Mars, each rover would have to launch in its own three week window, one after the other. 
+ If we didn't get off in that three week stretch of time we weren't going to have a chance to launch again for 26 months. 
+ So we had to launch in that launch window. 
+ They'd get two chances each day over a span of 40 minutes and anything from weather to rocket problems could force them to scrub and lose a day of the window. After 5 days of bad weather, Spirit was ready to go. 
+ A very, very, very large fraction of launches succeed. 
+ But the success rate is not 100% and there's a chance that you're going to have a bad day and everything that you worked for just "poof" is gone. 
+ Adam Steltzner everyone's excited, everyone's hot and sweaty. 
+ Everyone's a little nervous. 
+ NSC reports spacecraft go... 
+ Spacecraft is go. 
+ 20 seconds. 
+ Adam Steltzner and there's this moment where you realize, that's it. 
+ You know pencils down, it's over, it's going to Mars. 
+ 9, 8, 7, 6 green-board... 5, 4, 3, 2, 1! 
+ Engines start... 
+ And lift off of the delta ii rocket carrying the Spirit from earth to planet Mars! 
+ Yeahhhhh, get gone! 
+ Beautiful! 
+ Come on baby, come on baby! 
+ Keep going! 
+ Come on man! 
+ We're approaching mach one... 
+ We've exceed supersonic speed and the engine positions look good. 
+ Awesome! 
+ Cha-ching! 
+ Onboard video system working perfectly sending back an immaculate image. 
+ We're now past an altitude of 4 nautical miles with a downrange distance 15... 
+ Opportunity was up next. A series of problems with the rocket had eaten up most of the launch window, and it was close to now-or-never. 
+ This is it... 
+ It was night, we're out on the beach. 
+ We're ready to go. 
+ 20 seconds! 
+ We get into the final count... 
+ T-minus 10, 9, 8... 
+ You know, you're into the 10, 9, 8, 7 part of it and you're just about to go and at 7 seconds to go they called a hold. 
+ We're going into recycle... 
+ And the clock is stopped... 
+ They halted the countdown seven seconds before liftoff because of a problem with the rocket, and then you can't go. 
+ 7 seconds! 
+ You know, this thing is a bomb poised to explode... 
+ And as soon as they scrubbed at t-minus 7 seconds I thought "oh man, that's it." 
+ NSC reports spacecraft go. 
+ But they managed to pull it back... 
+ Spacecraft is go. 
+ And 40 minutes later, off we went. 
+ Engine position looks good... 
+ Recovering nicely from the liftoff transients... 
+ It was just emotionally overwhelming in a way that I never anticipated. 
+ And the solid rocket motors are increasing their thrust... 
+ We had put so much of ourselves into those things. 
+ For so many years. 
+ And then you put it on top of a rocket and you launch it and it is gone. 
+ Main engine chamber pressures holding steady and the vernier engines are continuing to burn well.. 
+ It's as gone as anything you've ever done is going to be. 
+ And it sounds strange to say, it felt strange at the time but it was really hard to say goodbye. 
+ And we're now past mach one, the vehicle is now traveling faster than the speed of sound... 
+ After a seven month journey from earth, Spirit was about to hit the top of the martian atmosphere at 12,000 miles an hour. Six minutes later it would be on the ground. 
+ Flight director Jason Willis reporting that all systems are go for entry, descent and landing... 
+ With a radio delay of almost 10 minutes each way, there could be no help from earth. Each step was preprogrammed in Spirit's computer. 
+ Landing on Mars there really is nothing you can do. 
+ You know, they call it the control room but the one thing we don't have is any control. 
+ The EDL team was about to find out whether the system that worked on earth would work on Mars. 
+ You can't fully test the landing system here on earth. 
+ It's all been analysis, pen and paper, computer simulations. 
+ Piece part tests. 
+ But you string it all together only once in the skies above Mars. 
+ There were many things that could kill us in the process of landing. 
+ A gust of wind at the wrong moment, a sharp pointy rock. 
+ You can do everything right and Mars can still kill you. 
+ Atmosphere entry, 5,4,3... 
+ And so as we go we're looking for certain signs from the spacecraft. 
+ The vehicle has now hit the top of the martian atmosphere. 
+ We are now at an altitude of 73 miles moving at a speed of 12,192 miles per hour. 
+ You're following what's happening. 
+ You're hoping you got it all right. 
+ You're hoping it's all going to work. 
+ Parachute deployed... 
+ You get signals from the spacecraft that it's executing all of its functions all the way down to impacting the surface. 
+ Signal indicates we are bouncing on the surface of Mars. 
+ This is a very good sign. 
+ We saw a radio signal. 
+ The thing was bouncing on the surface. 
+ Hang on everybody, please be quiet. 
+ We don't see a signal at the moment... 
+ No signal at the moment. 
+ But then it went silent. 
+ Please stand by, stand by. 
+ And there was a significant stretch of time in which there was no signal from the vehicle. 
+ Deep space network tracking stations are still searching for the primary signal. 
+ That was a very, very tense period. 
+ And we wait... 
+ As if the space craft's dead. 
+ And then we get the signal and the room erupts. 
+ It actually worked! 
+ In a few hours pictures started coming down. Spirit was an international celebrity. 
+ Ohh, yes! 
+ Opportunity would be arriving in three weeks. And for a while, everything was perfect on Mars. 
+ Everything worked, everything worked. 
+ All the hardware worked, all our operations processes worked. 
+ The rover did what we asked it to do. 
+ Everything's going great and then 18 days into the mission it all just stopped. 
+ I'm not seeing anything from our displays you're not seeing any signal at this time? 
+ That's a negative. 
+ 18 days in, silence, nothing from the vehicle. 
+ Not a clue about what had happened, just silence. 
+ So we've got a problem. 
+ Normally, Spirit would talk to JPL through the deep space network, once or twice a day. Instructions went up from earth and data came back from Mars... Until it stopped for two long days, and then... 
+ Flight, station reports that they're seeing signal at 143536... 
+ A few garbled signals from Spirit... The first clues to what might be going on. 
+ What became clear over a period of a day or two was that for unknown reasons the computer on board was crashing and rebooting over and over and over again. 
+ And it was doing it through the night. 
+ Which means the computer is coming up and it's sucking power out of the batteries. 
+ At night you've got no sun on the solar arrays you're just pulling in the battery down. 
+ And you can only survive that for a few days before the vehicle is done. 
+ And so we were in a death spiral. 
+ Storm clouds were gathering everywhere at JPL that night. Spirit was not the only one in danger. With Opportunity still a few days away, the EDL team had been poring over data from Spirit's landing to see if everything had gone according to plan. 
+ We saw something we didn't expect. 
+ We saw something wrong. 
+ The lander had taken longer than expected to descend on its bridle. Spirit got away with it, but Opportunity might not be as lucky. 
+ OK, this is obviously something that will have to be investigated to determine what has happened here. 
+ We were working literally full team 24/7 doing tests in the vacuum chamber trying to understand what had happened. 
+ In the end we couldn't. 
+ The buzzer went off and we ran out of time. 
+ All they could do was open the chute a bit earlier to buy some extra time on the way down. That would mean inflating it higher up, at higher velocity, putting even more stress on the parachute. 
+ We're talking 48 hours before landing about changing the parachute deployment parameters so we'll deploy high enough that we won't smack into the ground too hard. 
+ That was a little nerve-wracking. 
+ I have to admit, I did not sleep very well last night because this is exactly what going on in my mind, you know, how can we have, what if we have 2 disasters on our hands? 
+ I mean all, all this wonderful excitement and suddenly we would lose everything! 
+ They uplinked new instructions to Opportunity, now less than 24 hours away, and hoped for the best. 
+ We're thinking there's a problem with the software... 
+ In mission control had finally detected a pattern in the scattered signals coming down from Spirit. 
+ The rover is sending us only real time data. 
+ In other words it's telling us this is what's happening to me now. 
+ This is what's happening to me now. 
+ This is what's happening to me now. 
+ It's telling us nothing about what had happened before. 
+ A bug in the memory software could be forcing Spirit into this endless cycle of crashing and rebooting. So they came up with a command that would bypass the memory altogether. 
+ Flight, mission, you're go... 
+ Copy your go mission, Ace you're clear to command. 
+ Copy flight, radiation on my mark, 3, 2, 1 mark. 
+ This was a guess, this was an inspired guess and nothing more. 
+ Maybe this will help... 
+ Flight Ace, we have locked on telemetry, 145414... And it worked! 
+ Copy that. 
+ Like a well-oiled machine! 
+ With a software patch, Spirit would soon be back to normal. 
+ We have partial control of the vehicle! 
+ We have got a way of talking to the vehicle now so that it responds appropriately. 
+ It has regained its sanity. 
+ And that's a good feeling. 
+ Now it was Opportunity's moment of truth. 
+ We start clicking through the, the events... touching the top of the atmosphere, opening up our parachute, all the way down to the surface. 
+ We don't hear from the spacecraft, and then we do. 
+ To EDL! 
+ I would like it very much much if we could go together to the press conference. 
+ For Spirit the first landing when the team had gone down to watch the press conference we'd been barred because it was at full capacity. 
+ This time I said no, we're going to go down together. 
+ We got to the theater and there were security and they said, I'm sorry, can't let you in. 
+ We're full, you can't come in. 
+ And I said I'm sorry and we just walked in. 
+ This was my first big show. 
+ E-d-l, e-d-l! 
+ My first real experience in the big game. 
+ And um, you'll never forget your first one. 
+ To the Mars exploration rover team, the best in the world, no doubt about it. 
+ Spirit and Opportunity were finally on Mars but now they had to produce, and there wasn't much time. The mission plan was for just 90 sols... 90 martian days. Dust on the solar panels was the biggest threat, but there are many ways to die on Mars. 
+ You never know when these things are going to drop dead. 
+ You know, they could die tomorrow. 
+ They could be dead right now and we just haven't gotten the downlink that shows it yet. 
+ Very nicely from the looks of it. 
+ The rover teams at JPL approached each sol as if it might be the last. 
+ We were impressed very early with the idea that the rovers were under a death sentence. 
+ We knew that there was a kind of clock that was counting down, and that at the end of 90 sols, like that was all the time that we could count on that we could get. 
+ And we didn't even know if we'd get all that. 
+ 
+ 
+ 
+ The objective was to learn whether Mars ever had the water necessary for life. It's been a frozen desert for billions of years, but the surface is scarred with ancient river channels and deltas. What was it like billions of years ago? 
+ How much water was there? 
+ What was its chemistry? 
+ Suppose you were a microbe, would you have liked that place or not? 
+ If so, why? 
+ They sent Spirit to Gusev crater in the Southern hemisphere because it looked like a dried up lakebed, and they hoped to find evidence in the rocks to prove it. On the ground though, there was nothing but volcanic rubble. 
+ I wouldn't have wanted to admit it at the time, but the Spirit landing site initially was a crushing disappointment. 
+ We went there looking for layered sedimentary rocks laid down billions of years ago in a martian lake and instead we got lava as far as the eye could see. 
+ And every damn rock was like every other damn rock. 
+ They were just all the same. 
+ And the thought was, well, we can go to an impact crater. 
+ And the impact will have punched through the lava and down into the good stuff that lies underneath. 
+ And we spend 60 sols driving to an impact crater and we look inside and it's full of lava. 
+ We hoped for something a little more spectacular than this. 
+ I'm gonna be surprised if we decide to drive down into the crater. 
+ We might, but I don't know. 
+ It really was a bitter disappointment. 
+ And the Spirit team got a little disheartened after a while. 
+ Opportunity got off to a better start... Touching down near the equator in a place called Meridiani Planum, bouncing for quarter mile, and scoring an interplanetary hole-in-one. At JPL they waited for the first pictures. 
+ Look at this! 
+ We open our eyes and there's this astounding outcrop of layered bedrock right in front of the vehicle. 
+ That outcrop in the distance is just is out of this world. 
+ I can't wait to get there... 
+ It was like nothing anyone had ever seen. 
+ Everybody had their idea of what Mars looked like... 
+ And it's like what the hell is that? 
+ It was just alien! 
+ This is an unusual martian rock, at least compared to what we've seen everywhere else. 
+ The fact that these rocks are layered says that one possible origin for these is that they were laid down in liquid water. 
+ We do not know what's going on here, but the beauty of it is, we have preserved in front of us a record that will answer that, and we have on our rover a toolkit of gizmos that will tell us that answer. 
+ The rovers carry the toolkit of a high tech field geologist. There's a suite of instruments on the end the arm to identify rocks and minerals. They see the world in three dimensions with four pairs of stereo cameras. There's a high resolution camera for color panoramas, stitched together from individual frames. Filters enhance details invisible to human eyes... And a spectrometer scans for minerals that may have formed in water. They have black and white stereo-vision for navigation and planning... And below the deck, fisheye cameras see Mars at ground level, looking backward and forward. Opportunity headed for the outcrop, and soon made some startling discoveries. 
+ It was like being inside this bizarre martian mystery novel, where every sol or two you get a new clue handed to you. 
+ First, tiny spheres the size of bb's, littering the ground and embedded in the rock like blueberries in a muffin. 
+ It was such a surprise. 
+ I mean, what the heck were those things? 
+ They turned out to be hematite, the mineral seen from orbit that drew them here in the first place. On earth it forms spheres like these in water-soaked rocks. Then they found sulfur-rich minerals that can only form in contact with water. And finally, petrified ripples created by flowing water, frozen in time as sand turned to stone. It all pointed to a time billions of years ago when water, actually sulfuric acid, soaked the ground and sometimes flowed across the surface. 
+ It was a new Mars! 
+ There wasn't a single one of us who expected what we found. 
+ Anybody who tells you so is lying. 
+ Almost everything was a surprise. 
+ We were giddy, we were incredulous. 
+ We were sleep deprived beyond words. 
+ It was so tiring. 
+ But we were just running adrenaline. 
+ And it was just so much fun. 
+ It was the most fun I've ever had as a scientist, it was just fabulous. 
+ Opportunity's team declared victory and moved on to a new target nearby... While Spirit was still marooned in the wasteland of Gusev crater. 
+ They were on different sides of the planet. 
+ They were two very different sites and they had two incredibly different experiences. 
+ It was tough on the Spirit guys. 
+ And for a long time the Opportunity team was the happy team and the Spirit team was not so happy. 
+ You know, I'd tell them, well, you can switch to Opportunity and they'd say no, no, I'm not gonna. 
+ Because they had gotten their heart set on Spirit succeeding. 
+ Opportunity was certainly the lucky rover. 
+ But for me I worked on Spirit, and Spirit is my favorite rover, because Spirit had to work for everything she ever got in her life. 
+ Squyres knew that Spirit had to move, and the hills on the horizon looked like the only chance to salvage the mission. 
+ The Columbia hills are two and a half kilometers away. 
+ The vehicle was designed to go 600 meters over its lifetime, OK? 
+ That's four times the designed requirement. 
+ That's a long, long distance. 
+ We didn't know if the vehicle could do it. 
+ The engineers were skeptical. 
+ I remember he said that. 
+ This is where we're going. 
+ What do you mean, you're going to drive up on those hills? 
+ This is going to be a lot more than 90 days! 
+ Good luck. 
+ We're probably going to die on the way there. 
+ He said no, we're going to go. 
+ I said OK. 
+ You're driving. 
+ You've got the keys. 
+ Good luck. 
+ We're 100 sols into our 90 sol mission. 
+ The warranty has expired. 
+ Our only chance of getting to something new was to push the vehicle beyond anything it had ever been designed to handle. 
+ Otherwise it was gonna be just lava until the end of the mission. 
+ While Spirit trekked to the Columbia hills, Opportunity faced a new challenge. 
+ Endurance crater scared the hell out of me the first time I saw it. 
+ We pulled up to the lip of that thing, and there were vertical cliffs in places. 
+ You know, it's the kind of place where if we screwed up, you know a little rover could fall off a cliff and die. 
+ But the exposed bedrock down below was an irresistible target. 
+ Oh my god, it's like a whole new mission! 
+ Deeper rocks offer a chance to look farther back in martian history. 
+ We didn't bring a drill rig to Mars, but Mars has dug these wonderful holes for us in the form of impact craters, and they are our window into the subsurface. 
+ We all wanted to go in. 
+ I mean we're standing on the lip of the most magnificent thing anyone's ever seen on Mars, with a rover that we all believe in our hearts can do it. 
+ Everybody wanted to go into the crater, but you want to do it right. 
+ Driving in was not the issue. The question was whether Opportunity could get back out, because the rovers were never expected climb. 
+ We never had to test it to its limits before. 
+ All we had to do was test to the requirements. 
+ We had to convince our management here and at NASA headquarters that we weren't going to damage this vehicle or get stuck. 
+ Frankly, if we can't climb pretty reliably up these rocks at 25 degrees, we're not going in this crater. 
+ Everybody had to approve that decision. 
+ If we did screw up, I didn't want somebody popping out of the woodwork and saying, well, you didn't ask me. 
+ If you'd have asked me I would have said you can't go in. 
+ No, I wanted to make sure that we were all holding hands when we jumped off the cliff together. 
+ 15 up, 10 down. 
+ Okay. 
+ First, they ran some tests. 
+ And in fact, the thing climbed beautifully. 
+ I was stunned by how well this thing could climb steep, steep slopes, as long as they were rocky. 
+ 30, 32 degrees, boop, boop, boop, right up it, it was amazing. 
+ In June, 2004, NASA gave the go-ahead to enter endurance crater. Opportunity's fate was now in the hands of the drivers... The privileged few at JPL who actually operate the rovers, translating directions from the scientists into commands a robot can understand. They spend their days immersed in a virtual Mars environment created by the rovers' own cameras. 
+ It's one of the just amazing things about this, is the sense that you get of being there. 
+ If you were standing at that spot on Mars right now, this is what you would see. 
+ We built a vehicle that had intentionally human like capabilities. 
+ They're about the height of a person, they have 20/20 vision, and you develop an almost tactile sense of what it's like to touch Mars. 
+ We are no longer working with a remote robot. 
+ We are immersed inside it. 
+ We find ourselves on Mars. 
+ It can take as long as 20 minutes for radio signals from earth to reach Mars, so they can't be driven in real time. 
+ You really are programming the rover. 
+ It's not a joystick. 
+ It's OK, you know, go 10 meters forward, turn 5 degrees, you know, check for obstacles, measure your progress... 
+ They don't know how the drive worked out until pictures come back the next day. The rover's safety depends on those guys doing their job right. OK the person who's running the pancam camera is not going to drive the rover off the cliff or get it stuck in a sand dune. That's the rover drivers. 
+ Nobody has more anxiety everyday about what's being done to the rovers. 
+ It's the feeling that I sequenced all the commands that are going to move this rover today, and if something goes wrong, this is on me. 
+ Spirit had been slogging for eight weeks across a lava field to the base of the Columbia hills. There might be a payoff on the upper slopes. But getting there would be a monumental challenge. Spirit's solar panels, her only source of power, were getting dusty, producing just half as much energy as they used to. And she was about to face her first winter on Mars. 
+ We never expected to survive a winter, period. 
+ We got to the base of the Columbia hills 156 days into what was supposed to be a 90 day mission. 
+ The seasons were changing. 
+ Spirit is in the Southern hemisphere of Mars. 
+ And what that means is in the winter the sun is going to go low in the northern sky. 
+ And it's going to get lower and lower and lower. 
+ And as it gets lower the amount of power that we're going to get from solar arrays is going to get less and less and less unless we can do something. 
+ It would help if they could tilt the solar panels toward the sun to get more power. 
+ Well, we didn't build a tilt mechanism into the rover. 
+ The only way to tilt them towards the sun is to tilt the whole rover towards the sun. 
+ But the beauty of it was, now we had a hill. 
+ If they followed a route that kept the panels tilted toward the sun, Spirit might be able to survive the winter and climb the mountain at the same time. They'd have to stay the course for at least 7 months. Mars takes two earth years to orbit the sun, so martian winters are twice as long. But now they had a chance. 
+ It started to dawn on us that we maybe had more life in this thing than we had thought. 
+ Opportunity spent her first martian winter on a sunny slope inside endurance crater. Sampling rocks down the crater wall added greater depth of time to the water story at Meridiani. Salty, acidic water soaked the ground for hundreds of thousands if not millions of years. When summer returned it was time to move on to something new... But it was a long way from endurance crater to anything much different. The most obvious target was six kilometers, almost 4 miles to the south; a huge impact crater called Victoria. Deeper than endurance, it was a chance to look even farther back in time. 
+ We thought wow, could we get there? 
+ Six kilometers to the south... 
+ Remember, that's six times the designed distance capability of the rover. 
+ It looked like easy driving though, so they decided to put the pedal down and head to Victoria crater. Spirit had been climbing the Columbia hills for six months, surviving that first winter with solar panels tilted toward the sun. By now though, they were so dusty she would soon be unable to store enough power to survive the frigid martian nights. 
+ The power went down and down and down. 
+ And so Spirit was arguably getting close to the end. 
+ And then one wonderful day a gust of wind hit the vehicle, cleaned the dust off the solar arrays and all of a sudden we had a brand new rover again. 
+ It was just pure dumb luck. 
+ Spirit sent back this picture of her own deck just before the cleanup and this one just after. 
+ It's a new lease on life. 
+ We've got more power than we can use. 
+ I mean we have to shut the vehicle down during the afternoon to keep it from overheating. 
+ It's producing so much power. 
+ It was, it was just astonishing. 
+ We were waking up the vehicle at night and taking pictures of the stars, the moons of Mars. 
+ I mean we, we did amazing things! 
+ We're stargazing. 
+ We're explorers on another world looking up and looking at the stars at night. 
+ It added a whole new dimension to our experience. 
+ It gave us a sense of what it's like at night on Mars. 
+ With power to spare Spirit now had a shot at reaching the summit called husband hill. 
+ Everybody who worked on Spirit wanted that accomplishment. 
+ It wasn't so much about finding the liquid water anymore, now it was about climbing that hill. 
+ Spirit had become a mountain climber and this was a chance to do something no climber had ever done before. Spirit could claim the first ascent of a peak on another planet. While Spirit climbed, Opportunity ran into trouble on what was supposed to be an easy drive Victoria crater. 
+ It was just these gentle sloping dunes literally all the way to the horizon. 
+ There wasn't a rock or a hazard to be seen anywhere. 
+ And we figured oh gosh, you could drive blind in this area it was so safe. 
+ We were using a driving technique that I think could be charitably described as bombing along at top speed with our eyes closed. 
+ Flight, mobility... Go ahead mobility. 
+ Up on screen number three is the trajectory that the rover believes it drove... 
+ On sol 446, things suddenly came to a halt. Pictures from the previous sol popped up in mission control, and Opportunity's wheels were buried to the hubs in deep sand. 
+ The wheels broke through the surface and we did 50 meters worth of wheel turns, thinking we were happily progressing across the Meridiani Planum surface, and instead we were just digging slowly down and down into this, into the sand. 
+ The wheels look like they're about 80% under the ground there... 
+ It was a potential death trap, and it took some time to figure out what to do next. 
+ The first rule in a situation like that is don't do anything dumb. 
+ We shouldn't have gotten into this mess in the first place, but let's not make it worse by, by guessing how to get out of it. 
+ At JPL they built a martian sand dune trying different recipes of powdery Clay and sand to get the right consistency. Then they brought in the test rover and spent two weeks trying to come up with an escape plan. 
+ After two and a half weeks they found out the optimal technique was to just put it in reverse and gun it. 
+ Um, you know, there's, there's no place you go to look this stuff up. 
+ You just try things until you find what works best. 
+ On a Mars rover, "gunning it" happens in slow motion. 
+ We had to do 192 meters worth of wheel turns on Mars to get the vehicle to move one meter. 
+ It took days and days and days. 
+ You know, you'd do four meters, 8 meters worth of turns and you'd come in the next morning and it went that far. 
+ On sol 484 Opportunity finally broke free of the trap. The ordeal in the dune they called purgatory was Opportunity's first brush with death. It would not be the last. In September 2005, after more than a year of climbing, Spirit reached the summit called husband hill. 
+ She stands there at the top of that hill that she's conquered now on another planet and she looks at the whole world around her. 
+ I love her for bringing us that. 
+ More than anything else I think I felt, gosh, aren't we lucky to do what we do. 
+ You know, we just climbed a mountain on Mars! 
+ Damn! 
+ From the summit they chose the next target... A low mesa called home plate with a solar friendly hillside just beyond it for the next winter. 165 sols later Spirit had passed home plate, and with winter closing in, was headed for McCool hill. 
+ The way we had spent the last winter was climbing the north facing slope of husband hill. 
+ And so we figure we'll head for McCool hill and keep the solar rays tilted towards the sun and pull the same trick that we pulled last winter. 
+ What happened though was... The right front wheel quit. 
+ The right front wheel just stopped turning. 
+ That came at a really bad time because we were trying to get onto the slopes of the McCool hill and without that wheel functioning properly we can't climb. 
+ At JPL, they experimented with 5-wheel driving. They found it easier to drive backwards, dragging the dead wheel. But it tended to pull the rover off course, complicating the drives. 
+ Each day we only had an hour to an hour and a half of power and we had to write these incredibly complicated sequences of you know, sometimes 400 commands just to try to drive 5 meters. 
+ You know when you go to the grocery store and you get the shopping cart with the one stuck wheel and you try to get that down the aisle? 
+ Driving Spirit at this point is a lot like trying to do that... 
+ Only your shopping cart is 300 million miles away and you have to drive it with a keyboard. 
+ We're learning to drive all over again. 
+ The seasons are changing. 
+ The power is getting less and less daily. 
+ Everybody's starting to get nervous, and then we get stuck. 
+ We got into this, it was kind of like quicksand and we couldn't get out of it. 
+ So we were thinking, oh my god, are we going to be stuck here and is the rover going to die here? 
+ We were really in a race against the clock because we had something like three weeks before Spirit just wasn't going to have enough energy to survive the night. 
+ And people were talking about her like she was the walking dead. 
+ Narrator within a week they got Spirit out of the trap, but by then it was too late to reach McCool hill. 
+ Now at this point I'm starting to realize that my, my dreams of operating this vehicle and keeping it moving and doing new science and new places all winter long... That's dead. 
+ Forget about this stuff hundreds of meters away. 
+ We're never going to make it. 
+ What have we got that's next to us? 
+ They settled for a spot nearby where they could get at least a minimal tilt toward the sun. 
+ And that was it. 
+ And there we sat for seven months, but we survived. 
+ With the return of summer, Spirit was moving again, driving backwards, dragging the dead wheel, leaving a trench behind. 
+ We're driving along one day, in this little valley, we look at the pictures of the trench that were dug that day, and there's this one spot where the soil is practically as bright as white snow. 
+ That got our attention. 
+ It turns out this stuff is more than 90% pure silica. 
+ Not quartz. 
+ It's not beach sand. 
+ This is amorphous silica. 
+ It's like opal. 
+ All of a sudden we realize we've just come across something completely new and different that we had never seen before. 
+ On earth, this kind of silica forms in hot Springs or volcanic steam vents. 
+ And the thing that's cool about that is that you can go to hydrothermal systems on earth and they're teeming with microbial life. 
+ Now I don't know if there was microbial life here. 
+ We didn't, you know, bring fossil detection instruments with us, but this is the kind of environment that, that could have been quite appropriate for some Hardy types of microbes. 
+ And that makes it a pretty important place. 
+ 1200 days into her 90 day mission Spirit made her biggest discovery and chances are, it would not have happened without the broken wheel. In September 2006, after almost 2 years on the plains of Meridiani, Opportunity reached the rim of Victoria crater. The bowl is a half-mile across, five times the size of endurance. 
+ The view when we first pulled up to the rim, it was just like nothing we had ever seen before. 
+ It was like coming onto the Grand Canyon. 
+ You know it's there but it doesn't really prepare you for the enormity of what you're about to see. 
+ Millions of years of martian history could be exposed in these rock faces, but to read it, they needed to get close. Opportunity set off on a scouting mission that would last almost a year... A daring drive along the sheer edge of the crater wall. 
+ We're literally you know, tip-toeing a hundreds of millions of dollars vehicle along the top of a cliff on another planet. 
+ If you can drive right out to the tip of one of those promontories, right to the edge, you can shoot across with your camera at the next promontory over, which might be only 30, 40, 50 meters away, and you'll see this wonderful cliff exposed there. 
+ But in order to get that view you've got to go right to the edge.. 
+ OK, we're right there on the edge of the cliff. 
+ And this is what'll happens if we're not careful with the rover... 
+ And our job is to not do that and make sure that we stay up on this side of the cliff. 
+ I love this! 
+ Along the way, the Mars reconnaissance orbiter took a picture from 200 miles up... Showing the tracks of Opportunity's daring drive. 
+ To me that image represents one of the finest accomplishments in the history of planetary robotics. 
+ To have been able to pull off that drive, time after time with the scientists saying, oh, get closer, get closer, we've got to get closer! 
+ It was an incredible, incredible drive. 
+ After seven months, they'd seen enough from the rim and were ready to go inside. The best way in appeared to be the spot where they first approached the crater. So Opportunity headed back where she came from 200 sols before and into the path of a dangerous storm. Weather is not usually a problem on Mars... With one large exception. Once every three years or so, there's a massive dust storm. 
+ Our first summer on Mars it didn't happen. 
+ And our second summer on Mars it didn't happen. 
+ But our third summer on Mars it happened. 
+ And it blew up into a global storm, blanketed the entire planet. 
+ From where Opportunity sat on Meridiani Planum, you looked up and you couldn't tell where the sun was in the sky. 
+ The amount of direct sunlight that was reaching the solar panels was less than 1% of what it is on a clear day. 
+ At JPL they shut down all but the most essential systems on the rover to conserve power. 
+ They were never designed to survive a dust storm. 
+ The rovers are solar powered. 
+ They need the sunlight to survive. 
+ So each day we would turn things off reducing the amount of power. 
+ But you know you can't turn everything off because it's all about keeping the rover warm. 
+ One of the things that keeps the vehicle warm is running the computer inside. 
+ And so there was this delicate balancing act between running the computer enough to keep it warm, but not running it so much that you draw the batteries down too much. 
+ And we were just right on the edge of, of ah, catastrophe. 
+ On the other side of Mars the dust was not as heavy and for once, Spirit had fewer problems... But at Victoria crater, Opportunity was in serious trouble. Soon the power would be so low that the rover would automatically shut down until there was enough sunlight to recharge the batteries. Within a few days, that could be fatal. 
+ It's like sitting at someone's deathbed, you know, and waiting and waiting and wondering is it, is it going to survive, is it going to come back? 
+ Is it going to be able to talk to us again? 
+ And it got, it was very agonizing, and it got to the point where you couldn't even take measurements to figure out how bad it was. 
+ All you could do is just sort of sit there. 
+ We just ran out of things to try. 
+ Just about everyone had given up hope, but then the sky began to clear, and the six-week ordeal finally came to an end. Still the lucky rover, a gust of wind cleared Opportunity's solar panels, and she went back to work. In Gusev crater, Spirit survived the storm, but when the dust settled, she got buried, and winter was coming once again. 
+ We needed to find a place for Spirit to try to survive its third winter on Mars. 
+ And at this point the rover is so dirty from the dust storm that a 12 degree tilt is not going to cut it. 
+ We need a 30 degree slope. 
+ And this is a rover that can't climb 30 degree slopes. 
+ The only option at this point was to drive across home plate to the north rim where Spirit could back off the edge to tilt her solar panels toward the sun. 
+ We had about 40 days to get there, and of course with the power situation already getting low we couldn't drive everyday, and with that broken wheel we couldn't get far on every day of those drives. 
+ So we really had to make the most of that time. 
+ So we started driving across the top of home plate to get to this parking spot. 
+ And we drove right into a sand trap. 
+ They call it Tartarus, the lowest level of hell, a micro-crater full of sand too deep for Spirit to handle with five wheels. 
+ We really got into a fix there. 
+ The two back wheels were off the ground. 
+ So they're not working at all. 
+ The right front wheel is dead. 
+ So a six wheel vehicle now actually only has three wheels that are doing us any good whatsoever. 
+ It really began to look like we might not make it. 
+ We weren't pointed anywhere near the sun. 
+ We were absolute certain death in that configuration if we could not get out of there. 
+ There was one last escape route to try, but it was right at the edge of home plate. The slightest miscalculation on the way out could send Spirit over the edge. 
+ We had tried every single trick we had. 
+ And if that drive didn't work the mission was probably over. 
+ We Sequenced it and we sent it up to the rover and a lot of us got no sleep that night. 
+ Sol 1388, I will always remember it. 
+ That was maybe the most crucial drive that Spirit ever did. 
+ And it worked. 
+ We got out of Tartarus, and we got across home plate, eased our way down onto that 30 degree slope, and because of that, we have a fighting chance of actually making it through our third winter on Mars. 
+ These rovers are pretty old now. 
+ They're getting kind of arthritic. 
+ They don't see quite as well anymore because the cameras are getting more and more coated with dust, so that their vision is getting a little fuzzy. 
+ They've been through so much. 
+ You know, I mean, the perils that they have been through and that we've kind of suffered through with them... 
+ It's like any kind of relationship with somebody. 
+ As you go through many things over the years the, the relationship deepens. 
+ We feel so close to these vehicles. 
+ They are our bodies; They are the way that we go to Mars, and we're people who grew up dreaming about the possibility that one day we might walk on other worlds. 
+ We can see ourselves in the rovers. 
+ They've lasted so long it gives you a sense that they're determined. 
+ Determination in a, in a hunk of metal but that's the way it feels. 
+ And then above all they move through the scene with the ability to do what a human would do. 
+ To stop, look around, say, that looks interesting. 
+ Let's go there. 
+ In September 2008, after 700 sols at Victoria crater, Opportunity embarked on what looked like an impossible journey... Seven miles across the plains to an even bigger crater called Endeavour. 
+ It looked crazy. 
+ But, but what were we going to do? 
+ We finished up at Victoria crater. 
+ We come out and for miles in every direction it's more of the same stuff. 
+ Endeavour crater looked impossibly far away. 
+ But it was the only goal that I felt was worthy of that rover and so we set off. 
+ Straddling home plate, tilted toward the sun, Spirit survived her third winter on Mars. Still coated with dust, her solar panels produced a fraction of the power they once did... But it was time to move. Spirit was on the north side of home plate. The scientists wanted to explore the area to the south. The problem for the rover drivers was how to get where the scientists wanted to go. The shortest route was straight across home plate. But with her broken wheel, Spirit couldn't climb back up the bank. They tried the east side, but ran into soft ground and had to turn back. They had to settle for the long way around, through unknown terrain. On sol 1886, they were driving south along the West Side of home plate. 
+ It looked the same as terrain we had driven over hundreds of times before. 
+ But Mars is full of surprises. What looked like solid ground was just a thin crust. 
+ And the wheels started spinning in this very fluffy soft stuff and we just couldn't get any traction. 
+ We were driving a wounded vehicle through very treacherous terrain, and, we knew it. 
+ This was the kind of trap that we knew might be out there waiting for us. 
+ That's why we didn't want to go down there in the first place. 
+ But it was the only way to get where we wanted to go. 
+ Trying to escape, they dug in deeper. Then it got worse. 
+ One day we were looking carefully at the terrain models when we discovered that there was a rock underneath the vehicle. 
+ This is pretty much your nightmare scenario for this rover design because you can get to a point where you're kind of hung up on something and all you wheels are kind of flailing and you're unable to ever touch the ground. 
+ Each time we would get sort of stuck there was always a concern, hey, this could be it. 
+ But ah, this one was looking worse than most. 
+ It was bad enough that they had to run some tests before sending any more drive commands to Spirit. Just as they had done when Opportunity got stuck, they tried to replicate Spirit's predicament on Mars. They brought in the test rover, and began looking for a way out. The rock underneath was the biggest concern. The microscopic camera at the end of the arm can't focus beyond two-and-a-half inches, but it was the only way to see under the rover. Even then, they couldn't tell if they were looking at a rock that could hang up the rover or just a loose stone... Or even if they were in contact with it. It was clear, though, that if they dug in any deeper, they would be. And they did sink deeper every time they turned the wheels. There was no obvious way out, and everyone knew it. 
+ Well there is a lot of stress. 
+ People are having a hard time we all are. 
+ If there's a way of getting the rover out we're going to find it. 
+ It is however a very, very difficult situation. 
+ Months later, Spirit was still stuck. Another winter was closing in, and the rover was in a dangerous position, with solar panels tilted away from the sun. 
+ We were running out of time; after all of our testing we came up with a plan that we thought would work and we were ready to try it out on Mars. 
+ They planned to back out with a turn that might help Spirit clear the rock... But then another wheel seized up. 
+ The right front wheel had already failed, and with two dead wheels that thing's not going to move. 
+ That was it. 
+ And when we lost the second wheel we were done. 
+ In march 2010, Spirit did not call home for a scheduled communication session. 
+ Starved for power, the rover likely went into hibernation mode... 
+ No survival heaters, no communication... 
+ Just waiting for the summer sun to recharge its batteries. 
+ Even then, we still had a lot of hope for her, and we still believed that she was going to come out of it. 
+ By September 2010, spring had returned to Gusev crater, and with it, the possibility that Spirit would wake up and call home. 
+ We're involved in a very extensive recovery effort sending commands to the rover in the hope of eliciting some sort of response. 
+ They sent up more than 1000 commands over the next ten months. 
+ The command is radiating. 
+ It will take four-and-a-half minutes and then once that's done we'll repeat this five more times. 
+ They monitored Spirit's channels on the deep space network... Listening for any hint of a signal. 
+ There's a possible signal we're trying to acquire. 
+ Copy that. 
+ At times, they thought they had something. 
+ Hey John we... 
+ Spirit had pulled things out of the fire so many times, I don't think anybody truly believed that she wouldn't get out of this one too. 
+ Not this time. By the spring of 2011, Spirit had been silent over a year. 
+ I've been missing her for a long time, and it's tough to kind of put a finality to that, and say, "okay, that last time you heard from her is the last time you are ever going to hear from her." 
+ People are holding out hope but I think the reality is, is people have to start to accept that Spirit's time on Mars may be done. 
+ They listened intermittently for another six months, but the mission was over. Her final resting place next to home plate is a hard-fought five miles from the landing site on the far side of the Columbia hills. 
+ I always felt that the one honorable way to lose our rover would be we just wore it out. 
+ And that's what happened with Spirit. 
+ We just beat it up to the point where it couldn't work anymore. 
+ Which meant that we had squeezed everything out of our creation that we possibly could have. 
+ So that's an honorable death. 
+ And then the other thing that made it tolerable was we had to go back to work and keep operating Opportunity the next day. 
+ We still had a living rover. 
+ Spirit's mission was over, but Opportunity was still crawling across the plains of Meridiani. In early 2011 she was spotted at the rim of a small crater called Santa Maria, 17 miles from her original landing site with miles to go in her three year journey to Endeavour crater. It was a long three years, day after day after day after day. The only thing to break the monotony was an occasional meteorite. 
+ I think some of the most haunting images from the rovers has got to be Opportunity's look backwards toward the place we had come from. 
+ There's this sense of vastness of Mars. 
+ The sense of being a long way from home. 
+ This poor rover is so far from where it had come, and yet had so far to go to its next destination. 
+ Like a captain's log, Opportunity's camera recorded the long voyage to Endeavour crater. 
+ It was very reminiscent of what you might imagine if there's a sailor, sailing ship that's been at sea for a long period of time, and we're driving across this flat ocean, and off in the distance rising like an island out of that ocean you can see the rim of endeavor crater. 
+ It got closer and closer and closer every day. 
+ And it felt like coming ashore. 
+ When we got to the rim of the crater everything changed. 
+ It was like a new landing site. 
+ It was like a new mission. 
+ It was a breakthrough for us. 
+ It was really a breakthrough. 
+ Now we're seeing completely different geochemistry, completely different geology. 
+ The most exciting thing was that we found very, very concentrated deposits of clay minerals. 
+ And clays tell a story about water completely different from the one that we had seen before. 
+ The clays tell a story about water you could drink. 
+ Water that's neutral in its ph. 
+ Water that would be much more suitable for not just the existence of life but for the birth of life. 
+ Fresh water says that life may have had a chance on Mars long ago. Ancient hot springs tell a similar story. Spirit and Opportunity set out to prove that Mars is worth exploring, despite the ever present risk of failure. 
+ The discoveries that water had been on the surface meant that we were going back. 
+ And the images, the vistas, changed the way we think about Mars. 
+ Spirit and Opportunity were the first rovers that carried cameras to another planet. 
+ When your perspective is constantly changing, you are exploring as a human being would explore. 
+ And this was our first view of what that looks like. 
+ That revolution in exploration has raised the expectations about what kinds of things we should be doing that we need to provide the arms, the legs, the eyes to explore these places that we go to, It's now been over a decade and we have put other missions on the surface of Mars and we are working on putting additional missions on the surface of Mars. 
+ And we're really doing all of that because of Spirit and Opportunity. 
+ As they sit on Mars today they're primitive compared to the spacecraft that are being built now. 
+ And when human eyes next see them they will be ancient. 
+ I really hope that whoever sees them next will look at them with an understanding eye. 
+ Because I can imagine, I can just imagine somebody walks up to these things and sees them with the exposed wiring and the tape around things and they're going to look at that and they're going to think, "wow, these guys must have been in a hurry." 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

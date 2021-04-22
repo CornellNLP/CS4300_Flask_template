@@ -1,0 +1,689 @@
+Transcripts - Forever Dreaming :: 01x22 - No Good Deed - Person of Interest 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x22 - No Good Deed https://transcripts.foreverdreaming.org/viewtopic.php?f=195&t=12071 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/13/12 00:12 ] 
+ 
+ 
+ Post subject:  
+ 01x22 - No Good Deed 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ You are being watched. 
+ The government has a secret system-- 
+ A machine that spies on you every hour of every day. 
+ I know, because I built it. 
+ I designed the machine to detect acts of terror, but it sees everything... 
+ Violent crimes involving ordinary people, people like you, crimes the government considered irrelevant. 
+ They wouldn't act, so I decided I would. 
+ But I needed a partner-- 
+ Someone with the skills to intervene. 
+ Hunted by the authorities, we work in secret. 
+ You will never find us. 
+ But victim or perpetrator, if your number's up, we'll find you. 
+ Thought you would have turned this thing off by now. 
+ We turn it over tomorrow. 
+ I'm keeping it online as long as possible. 
+ The world has been spinning for 5 billion years without your machine, Harold. 
+ I'm sure it will be fine for one more night. 
+ [Sighs] 
+ Honestly, I'll be glad to be rid of the thing. 
+ This "thing" has already saved countless lives. 
+ You mean countless relevant lives. 
+ We had to draw the line somewhere. 
+ Everyone is relevant to someone. 
+ You would know that if you had anyone in your life you cared about. 
+ [Sighs] I'm sorry. 
+ What you've built here is incredible. 
+ And no one else will ever get a chance to tell you that. 
+ And I don't envy the decisions you've had to make, but I worry about you. 
+ Seven years, you've been watching other people's lives, their plans, their relationships. 
+ Maybe it's time for you to invest a little time on your own. 
+ Who says I haven't? 
+ I would never hear the end of it. 
+ [Laughs] 
+ [Indistinct radio chatter] 
+ [Phone rings] 
+ Hello, Lionel. 
+ You ready to bust some dirty cops? 
+ Simmons wants me to meet the HR Brass next week. 
+ Then call me next week. I'm busy with research. 
+ Research? 
+ [Laughs] 
+ You mean following your boss again. 
+ You tailed him for weeks. 
+ You couldn't even find out where he lives. 
+ Yeah, well, unless you got an address, I'd say that we're both striking out, huh? 
+ [Cell phone beeps] 
+ [Static, garbled voice] 
+ [Phone rings] 
+ Finch? 
+ We need to meet, Mr. Reese. 
+ We've just received another number. 
+ We never had this conversation, but I wanted to thank you personally for your work on the Dubai report. 
+ If you hadn't flagged Carlson-- 
+ Carlson, sir? 
+ He was the key to the whole thing. 
+ You saved our asses, son. Thank you, sir. 
+ Henry Peck, 33 years old, never married, lives alone in Turtle Bay. 
+ Peck works as a chartered financial analyst, which is a fancy way of saying he picks stocks for a small financial firm, Decker North and Associates. 
+ Are you following me? 
+ Financial analyst. It's riveting. 
+ Well, they can't all be babies and mafia dons. 
+ So far, the most unusual thing about Henry Peck is that he has better-than-average security habits. 
+ I haven't been able to hack his voicemail, his email, or any online accounts. 
+ Secretive, solitary... 
+ He's just like you, Finch. 
+ So how'd you get his number? 
+ Well, John, there's this machine... 
+ Yeah, but you didn't get it here. 
+ No... 
+ It's much more subtle than that. 
+ And it's time I knew how the machine communicates with you. 
+ Why? 
+ Not to be blunt, but wouldn't you want me to keep doing this if something ever happened to you? 
+ If something ever happens, I have... 
+ A contingency. 
+ Well, sooner or later, you're gonna need to let the cat out of the bag, Finch. 
+ Curiosity kills cats, Mr. Reese. 
+ Well, Finch, so far the biggest threat to Peck is a paper cut. 
+ Any luck getting more info on him? 
+ It's gonna take more than luck. 
+ The firm's firewall is even better than Peck's. 
+ Yeah, I've got line of sight on his office, but I can't get any signals from his wi-fi or his cell. 
+ He works in the IQZ telecom building. 
+ Financial firms like to co-locate with internet hubs so they can get their trades in a few picoseconds faster. 
+ If you're not getting a signal, it's probably just interference from IQZ's antennas. 
+ Couldn't bluejack him, Finch, so I went old school... Wireless bug. 
+ Alicia, it's Henry Peck... Uh, again. 
+ Listen, I really need to talk to you, so please just give me a call and we'll find a place to meet, okay? 
+ Alicia... So who's Alicia? An ex-girlfriend? 
+ Or someone he wishes was a girlfriend? 
+ Mr. Peck! You forgot to wipe your phone. 
+ He has to wipe his phone's memory? 
+ It's become common practice for executes traveling overseas, but that's the first time I've heard of it here. 
+ Sorry, I guess I'm just a little distracted today. 
+ Well, you work too hard. 
+ I want to know what goes on in Peck's office, and since we can't get signals out, I'll have to charm my way in. 
+ May I help you? 
+ Yes, um... 
+ John Rooney, assets. 
+ I have a meeting with... 
+ Thomas Brewster, CFA. 
+ Tom Brewster. 
+ I'm a tad early. 
+ [Typing on keyboard] 
+ We just lost the feed from our bug. 
+ I don't have a record of that meeting, and I'm afraid nobody's allowed back without an appointment. 
+ Perhaps you should reschedule. 
+ Perhaps I should. 
+ I'm surprised, Mr. Reese. 
+ That nice young lady seemed somehow impervious to your charms. 
+ That nice young lady had a .45 pointed at me under her desk. 
+ There's a guard and a spin lock on the main door. 
+ This isn't a financial firm. It's a SCIF. 
+ Sensitive compartmented information facility. 
+ Secret government installation designed to protect classified data. 
+ Peck's no financial analyst either. 
+ He's a NOC, some kind of spy. 
+ And you thought he didn't have a life. 
+ So how do we spy on a spy? 
+ I believe I've found a way in, Mr. Reese. 
+ The security in Peck's office blocks wireless signals, but what about good old-fashioned wires? 
+ And since every office runs on caffeine, all we have to do is hide a camera and transceiver inside a shiny new coffeemaker, wire it to send data out through the electrical system, then wait for them to plug it in. 
+ Let me play that for you again. 
+ Got a signal, Finch. 
+ [Indistinct, garbled voice] 
+ That's the voice of Hassan Ben Amir. 
+ I listened to him every day when I was at Fort Meade. 
+ Hassan is a major player, funding terror throughout the Middle East, and if he's calling New York, we need to pay attention. 
+ Now, if you'll look at these intercepts... 
+ Peck's an intelligence analyst, and from the sound of it, a damn good one. 
+ That's why they're in a telecom building. 
+ They can Jack into the feeds. 
+ It's an NSA listening station. 
+ I guess we'd better listen. 
+ All right, Finch, Peck just got home. 
+ Time to see what our spy does at night. 
+ So far... Not much. 
+ Not everyone is a social butterfly, Mr. Reese. 
+ For some of us, human interaction is difficult. 
+ Not calling it "human interaction" might help. 
+ Works around the clock, no sign of friends or family... 
+ Poor guy doesn't seem to have much of a life. 
+ Well, we can hardly fault him for that, seeing as everyone thinks we're dead. 
+ [Knock at door] 
+ Mr. Peck. Are you there? 
+ Mr. Peck? 
+ Mr. Chen? 
+ Your landlord called with a complaint. 
+ You mind if we have a look around, Mr. Peck? 
+ What's this about? 
+ I was wondering the same thing. 
+ Well, apparently your smoke detector was malfunctioning today. 
+ When Mr. chen entered the apartment to fix it... 
+ He saw these. 
+ Adderall, felony weight. 
+ What? No, that's not mine. 
+ We're sure they'll give you a chance to explain it down at the station. Let's go. 
+ Hold on. I'd rather have the chance to explain it right here. 
+ Well, Finch, I think Peck's life just got a little more interesting. 
+ [High-pitched feedback] 
+ Finch? 
+ Feedback from the bug. 
+ Something else must be on the channel. 
+ Trying to clean it... 
+ It's the same signal. 
+ There's another bug. Someone else is listening. 
+ Yeah, and I think I've got eyes on him. 
+ I think those drugs were planted, Finch. 
+ I think Peck's being set up. 
+ Question is, why? 
+ [Phone rings] 
+ You ever buy 20 copies of the same magazine, Carter? 
+ What? 
+ Never mind. 
+ Do you have news? 
+ Peck made bail about an hour ago. 
+ I got everything I could on Henry Peck, which isn't much. 
+ Only one charge on his record, and Peck had that expunged. 
+ Does he have a history of drug abuse? 
+ Not even close. It was a speeding ticket. 
+ He fought to get a speeding ticket off his record? 
+ It was "the principle of the thing." 
+ At least, that's what Peck said in his meticulous, 78-page brief he sent the judge. 
+ Wow. 
+ Got to love a man who doesn't know when to quit. 
+ Thanks, Carter. 
+ Yep. 
+ Well, Peck's no addict. Somebody planted those drugs. 
+ I visited the bodega that's down the street from Peck's office... 
+ And chatted up their wireless network, downloading this video of someone breaking into his apartment. 
+ I'm pretty sure that's the same guy I saw last night. 
+ Whoever he is, he's well-trained. 
+ Someone's targeting Peck. We need to figure out why. 
+ And until we figure out who's after him... 
+ I'll keep an eye on Peck. 
+ Henry, we need to talk. 
+ We know about the arrest and drug problem. 
+ There is no drug problem. 
+ Under executive order 13526, your security clearance is suspended, pending investigation. 
+ You're hereby placed on administrative leave, effective immediately. 
+ Please, sir, you can't just-- 
+ I need you out, Henry. 
+ As of this moment, you can't work for the NSA. 
+ In the seven years I've worked here, the strongest drug I've taken is aspirin. 
+ There's something else going on here. 
+ I'm being set up. 
+ If you're alleging some greater conspiracy here, I can add that to your file, but it might make you seem unstable. 
+ Question authority and they call you crazy. 
+ Peck's being forced out. 
+ I don't know about you, Mr. Reese, but I'd very much like to know why. 
+ I'm sorry to keep calling, but it's really important. 
+ Please, I just need to speak to Ted Gibbons, my-- 
+ Hello? 
+ Recognize that name, Finch? 
+ Theodore Gibbons, deputy director of the NSA. 
+ He's going over his boss' head, way over. 
+ Whatever Peck's into, it's big. 
+ "Out of the country"? Really? 
+ Because some guy at headquarters just told me he was in a meeting. Please. 
+ Now, all I did was ask questions. 
+ Any decent analyst wou-- 
+ Hello? 
+ Hello? 
+ Someone is destroying Peck's life for asking questions. 
+ About what? 
+ Finch, the security camera over Peck's door, was it working last night? 
+ Yes. Why? 
+ Because someone's in his apartment. 
+ [Pills crunching] 
+ What the hell? 
+ [Grunting] 
+ Mr. Reese, is everything o-- 
+ [Crashing sounds] 
+ I'll take that as a no. 
+ [Glass shattering] 
+ [Car door slamming shut, tires squealing] 
+ Finch, I know a government trained assassin when I see one. 
+ They're not just after Peck's job. 
+ Someone in Washington wants him dead. 
+ Then we need to protect him, Mr. Reese. 
+ He can't have gotten far. 
+ I'll use the bug to track him down. 
+ [Phone beeping] 
+ Hello? 
+ Hi, Ted Gibbons please. 
+ Hello? 
+ Deputy director Gibbons, my name is Henry Peck. 
+ I work for you. 
+ This is my daughter's cell phone. 
+ How did you get this number? 
+ I'm sorry to bother you, sir, but someone just tried to kill me. 
+ What? 
+ Now, three weeks ago, you called me off the record to congratulate me on a report that I submitted that led to the high-level arrest of a man named Carlson, but I never heard of a Carlson. 
+ His name was in your report. 
+ But I didn't put it there. 
+ Someone slipped this name into my report, and that one name was the key to stopping a major terrorist attack. 
+ All I did was ask questions. 
+ I have been arrested, I have lost my job, and they're trying to execute me, and I just want to know why. 
+ Don't ever call me again. 
+ [Click, dial tone] 
+ Everything okay, Finch? 
+ I know who wants Peck dead and I know why. 
+ I know what he's been asking questions about. 
+ They want him dead because of me. 
+ Henry Peck doesn't know it, but he's been asking about the machine. 
+ No. 
+ [Clears throat] 
+ Is something wrong, Alicia? 
+ You mean other than being a part of an ongoing conspiracy to spy on millions of Americans? 
+ Yes, but it's all for a good cause. 
+ [Glass clinking] 
+ Day after tomorrow, freight train out of Des Moines. 
+ The last six cars, the manifest will list the contents as decommissioned computer parts. 
+ What about things on your end? 
+ The facility is designed to the specifications you gave us, and it's discreet, where we're putting it. 
+ No one's going to go looking. 
+ Any other problem? 
+ Dissemination. 
+ We have a protocol in place. 
+ If the machine identifies a suspect, the name will find its way to the right people... 
+ With no way to trace the intel back to the source. 
+ There can't be. Otherwise... 
+ We'll all wind up someplace where no one's going to go looking. 
+ Eight people in the world know it exists. 
+ We need to keep it that way. 
+ Seven, Nathan. 
+ Seven people, unless you told someone. 
+ [Chuckles] 
+ Come on, Alicia, you know I'm terrible at math. 
+ The people on your end... 
+ You sure about them? 
+ Making sure no one ever finds out about the machine is our problem. 
+ We'll take care of it. 
+ We've known each other a long time, Alicia. 
+ Something's got you rattled. 
+ I'm fine, Nathan. 
+ I'll be happier when this thing is settled and I can go back to my day job. 
+ And what's that exactly? 
+ Classified. 
+ [Inhales] 
+ You can buy me that drink now. 
+ 
+ 
+ 
+ [Phone rings] 
+ Yeah, Carter? 
+ One of Peck's neighbors called 911, said they saw two men fighting in his apartment. 
+ Is everything okay? 
+ The situation has been resolved. 
+ We're fine now, Detective. 
+ Thank you. 
+ Doesn't sound resolved to me. 
+ So Peck asks about your machine, and now someone's trying to kill him. 
+ Something you want to tell me, Finch? 
+ As with all computer systems, the big problem is human error. 
+ Strictly speaking, the machine is not legal. 
+ I always knew that certain measures would be taken to protect it, but... 
+ But as I found out myself, the people I've entrusted it to are more... 
+ Ruthless than I anticipated. 
+ [Phone rings] 
+ Hello? 
+ Is this Peck? 
+ Alicia Corwin? 
+ Corwin? 
+ That's the Alicia he's trying to meet? 
+ She worked for the National Security Council. 
+ Miss Corwin, are you there? 
+ You've been looking for me? 
+ Can we meet? 
+ No. 
+ Two months ago, a report I wrote was changed when it went through your office, but your office has been shut down for more than a year. 
+ Please, I just want to know what's going on. 
+ I just want my life back. 
+ Sibilance. 
+ Okay. 
+ Is there anything else you can tell me? 
+ Run. 
+ We need to stop him, Mr. Reese. 
+ From learning more about the machine, about Sibilance, whatever that is. 
+ We need to treat this like an outbreak. 
+ Peck is infected-- 
+ With an idea, but infected all the same. 
+ Anybody he talks to can wind up dead, and everything that Peck uncovers makes it that much more impossible for us to save his life. 
+ So let's just get him to a safe house. 
+ It's not that simple. 
+ He'll want to know who we are, and knowing that would put him closer to finding out about the machine. 
+ [Feedback] 
+ Whatever we do to save Peck, it must be without him knowing that we exist. 
+ Mr. Reese, are you even listening? 
+ Well, now we have a bigger problem. 
+ Peck found the bug, and he just gave us the slip. 
+ Peck's cashed out his bank accounts. 
+ His credit cards are popping up at cheap hotels and liquor stores all over the city. 
+ He's probably handing them out to the homeless. 
+ The NSA certainly taught him how to scatter a digital footprint. 
+ Finch, are you getting anything off Peck's phone? 
+ Unfortunately, they taught him how to brick a cell phone as well. 
+ The flash memory is unrecoverable. 
+ What can you tell us about the people hunting him? 
+ An elite squad, probably a three-man team. 
+ The guy I fought had a handgun chambered for rifle ammunition, so it shreds Kevlar. 
+ Only one unit I know gave those as standard issue... 
+ Intelligence Support Activity, an obscure army unit that does black-ops so dark, technically, they don't exist. 
+ Guess we better find Peck first. 
+ They'll hunt him like I would, start with his needs... 
+ Sleep, a place to hide, and a way to get information. 
+ Cash-only hotels with internet access. 
+ [Phone dialing number] 
+ There's been a complication. 
+ The target's still in play. 
+ That's not a complication. 
+ That's failure. 
+ He has assistance. 
+ Who? 
+ Unknown. One of ours, I think, or at least he used to be. 
+ We've lost the element of surprise and the ability to make it look like an accident. 
+ What's the mandate? 
+ Take the gloves off. 
+ Get it done. 
+ I've got a hit, Mr. Reese, a youth hostel in hell's kitchen. 
+ I can't be certain he's still there, but Peck definitely used their computer. 
+ He wasn't able to dig up anything on Sibilance, but he had good luck finding a pinout to hack the card reader at his office. 
+ I believe Mr. Peck is planning to break into the NSA. 
+ [Door opening] 
+ He's in. 
+ So am I. 
+ Then I'd very much appreciate it if you would stop Peck from getting any more information that'll get him killed. 
+ Correct me if I'm wrong, but if I take those reports, he's gonna know I exist. 
+ I recognize this is a challenging situation, but you have to avoid direct contact. 
+ Peck! 
+ [Grunting, gunfire] 
+ [Dramatic music] 
+ ♪ ♪ 
+ You're right, Mr. Reese. It's a three-man team. 
+ Two and half. 
+ [Sustained gunfire] 
+ Hey, hey! 
+ [Glass breaking, tires squealing] 
+ Hey, I just broke in that building, okay? 
+ You gonna arrest me? 
+ What the hell's the matter with you? 
+ Hey, don't lose those. That's evidence. 
+ You're gonna want that when I confess. 
+ Relax, pal. Soon as I read you your rights, you can tell us everything. 
+ Get your head down. 
+ [Car door shutting] 
+ [Sirens wailing] 
+ Finch? 
+ You're not gonna like this. 
+ Everything's in place. 
+ Point-to-point transit will take ten days. 
+ Hope nothing goes wrong in the rest of the world in ten days. 
+ Wait. 
+ Do we have a contingency? 
+ A contingency? 
+ Alicia seemed... Nervous. 
+ Now, what do we do if the government decides to abuse this thing? 
+ They're your contacts, Nathan. 
+ They're just people. 
+ The power that this thing represents-- 
+ I mean, who would you trust it with? 
+ Besides you? No one. 
+ Which is why the machine has been coded in such a way that it cannot be abused. It cannot even be accessed. 
+ It upgrades itself, maintains itself, patches itself. 
+ After tonight, no one can alter it. Ever. 
+ I used to be a software engineer, Harold. 
+ Remember, back before I became your corporate beard? 
+ Any system can be compromised, given enough time. 
+ We need an off switch, a back door, and this is our last chance to build one. 
+ You are a talented engineer, Nathan, so you should remember... 
+ Any exploit is a total exploit. 
+ The tiniest crack becomes a flood. 
+ If we build a back door into this machine and someone else finds out about it, that would be... Very bad. 
+ We need to trust the machine, exactly as we built it, and then let it go. 
+ [Machine powering down] 
+ Car three to central. 
+ Suspect in custody. 
+ Subject's name is Peck, Henry L. 
+ We've got a BOLO on that guy. 
+ Take him to Detective Carter at the eighth. 
+ Please just listen. They've taken my job, ruined my life. 
+ Now I know why. This is the proof. 
+ These are six reports I wrote for the NSA, and six covert actions based on those reports. 
+ In each case, a single name gets added to what I wrote, and each time, that name turns out to be the key to stopping a major terrorist attack. 
+ Six for six. 
+ The only way to be that accurate is with illegal surveillance on a massive scale. 
+ Then there's this, "Sibilance" is an internal audit of the NSA intranet. It's totally routine-- 
+ Until they find signals hidden just beyond the Shannon limit. 
+ It should just be static, but there was data. 
+ Someone is sneaking just as much data out as the NSA is taking in. 
+ To scan through all that, you need an organization ten times our size. 
+ It's more than any human-- 
+ Oh, my God, they actually built it. 
+ After 9/11, the government wanted a computer system-- 
+ A machine-- 
+ That could watch everyone and everything, catch terrorists before they strike. 
+ They tried with trailblazer, TIA, stellar wind. They-- they all failed. 
+ But if I'm right, then someone really built the damn thing, and it's watching us right now. 
+ Okay, you want a soda or something? 
+ You just questioned my suspect? 
+ Questioned your suspect? 
+ Guy's in there talking a blue streak all by himself. 
+ Should be wearing a tinfoil hat. 
+ Gets arrested yesterday for drugs, tonight he throws a bottle at a cop-- 
+ This guy's out of his mind. 
+ We need to get you out of here, Henry. 
+ Who are you? 
+ [David Bowie's  I'm Afraid Of Americans] 
+ ♪ Johnny's in America ♪ 
+♪ no tricks at the wheel ♪ 
+ I suppose we can count our blessings Detective Fusco isn't the inquisitive type. 
+ But Peck's in more danger than ever. 
+ Seriously, who the hell are you? 
+ All Henry Peck did was ask questions. 
+ He deserves a normal life, and if we have any hope of giving it to him, we have to destroy all that evidence and stop him from getting any more. 
+ [Engine revving] 
+ Yes, my name is Henry Peck. 
+ I'm an analyst-- 
+ Who did you just call? 
+ The office of Special Counsel. 
+ It's the agency that protects whistleblowers. 
+ Oh, I really wish you hadn't let him do that, Mr. Reese. 
+ The people who know about the machine, one of them works for the office of Special Counsel. 
+ [Phone clatters] 
+ What are you doing? 
+ Our own government is spying on us and they want to kill me to cover it up. 
+ I have to tell someone! 
+ The people you called aren't who you think they are. 
+ There's no one to tell. No one is safe. 
+ He just called us. 
+ I'm sending their last known coordinates. 
+ That's all I need. 
+ ♪ Johnny's in America ♪ 
+♪ I'm afraid of Americans ♪ 
+♪ I'm afraid of the world ♪ 
+ [Gunshot] 
+ Get down. 
+ ♪ I'm afraid I can't help it ♪ 
+♪ I'm afraid I can't ♪ 
+♪ I'm afraid of Americans ♪ 
+♪ I'm afraid of the words ♪ 
+♪ I'm afraid I can't help it ♪ 
+♪ I'm afraid I can't ♪ 
+♪ I'm afraid of Americans ♪ 
+ [Grunting] 
+ [Knife slicing] [Groans] 
+ Do you know why you were ordered to kill him? 
+ Never asked. 
+ Okay, Peck, let's get you out of-- 
+ [Exhales heavily] 
+ This isn't over, Finch. 
+ The man wrote 78 pages to fight a speeding ticket. 
+ I know. He's not gonna give up. 
+ And neither are the people who know about the machine. 
+ So what the hell are we gonna do? 
+ A good friend once showed me that, even with an intractable problem, one can still find a way to do the right thing. 
+ [Sighs] 
+ [Mechanical chirping] 
+ [Suspenseful music] 
+ ♪ ♪ 
+ [Typing] 
+ Your predecessors failed, and now Peck's reaching out to the press. 
+ He's meeting a reporter tomorrow. 
+ I want you to silence them both. 
+ We'll be there. 
+ [Chair scraping on ground] 
+ You're not the reporter. 
+ No. No, I'm not. Oh, she's quite safe. 
+ Right now, my associate is dealing with the assassins who were sent to kill you both. 
+ The answer to your question is yes. 
+ It exists. 
+ And it's watching us right now. 
+ I'm telling you this because you remind me a little of myself. 
+ And I know that, if I were you, I would keep asking until I knew the truth. 
+ So now you do. 
+ Now stop asking the question. 
+ Where is it? 
+ How does it work? I mean, the servers alone-- 
+ I know how you feel. 
+ Your need to understand. 
+ But believe me, Mr. Peck, this is a mystery you do not want to solve. 
+ Knowing the answer has cost me something I value more than my own life. 
+ Clean passport, plane tickets, a bank card to a well-funded account in your new name. 
+ Please, Mr. Peck, for your own sake-- and quite frankly, for mine-- 
+ Go and live your life. Find some secrets of your own. 
+ And if you really need a mystery, I recommend the human heart. 
+ How do you know all this? 
+ Because I built it. 
+ Carter. 
+ Yeah? 
+ That guy Peck who pulled the disappearing act, we just pulled his prints off a burnt-out cab with a john doe next to it. 
+ What about Peck? Any idea where he is now? 
+ He's in the wind. 
+ A bunch of paper burned up in that cab. 
+ All we could make out was this. 
+ [Phone rings] 
+ Hey, this HR deal's a lock. 
+ We get three days to prepare. 
+ Now we gonna do this or not? 
+ We'll be ready. 
+ I'll call you as soon as I'm done here. 
+ Yeah, right. 
+ Like you'll ever be done spying on Mr. Glasses. 
+ Next time I see you, I just might have his address. 
+ John, your order's ready. 
+ And you're here every day? 
+ Hello, Finch. 
+ Can I help you? 
+ Sorry to bother you. 
+ Detective Stills. 
+ Someone reported a disturbance at this address. 
+ Really? I'm the only one here. 
+ Probably just an old lady who saw a shadow or a kid playing a joke. 
+ We just have to check everything out. 
+ Do you want help with these? 
+ Uh, sure. Thanks. 
+ There must be about 50 copies here. 
+ You a collector? 
+ Uh, kind of. 
+ They send me extras when it's one of mine. 
+ You draw the covers. 
+ Yeah. A bit old-fashioned, I know. 
+ Everything's going digital. Print is dying. 
+ But, uh, every time I think I'll never work again, another magazine or newspaper calls, so... 
+ Guess I have a guardian angel. 
+ Who's this? 
+ Um, that's Harold, my fiance. 
+ Looks like a nice guy. 
+ Yeah. 
+ He's a very nice guy. 
+ I never really thought that I'd meet anyone who got me. 
+ You know, spending all your time alone, drawing, isn't exactly the best way to find someone. 
+ [Chuckles] But Harold found me. 
+ I was painting in the park one day, and... There was this man, eating an ice cream cone in January. 
+ And he smiled at me. 
+ He asked me if I wanted one. 
+ Does he live here with you? 
+ No, he doesn't. 
+ Um, he used to. 
+ I lost him two years ago. 
+ There was an accident. 
+ I'm sorry. 
+ Good location. 
+ Clear line of sight, but enough obstructions and distance to avoid being seen. 
+ I built an app that alerts me if I ever get within 100 meters of her. 
+ I've never regretted building the machine. 
+ But I didn't fully realize the personal cost. 
+ I'm good with computers. 
+ People-- Well, people other than Grace-- have always been a mystery to me. 
+ I failed to recognize the lengths to which they would go to protect the machine, to control it. 
+ By the time I realized it, it was too late... 
+ For me. 
+ But not for her. 
+ You see, Mr. Reese, if knowing about the machine is like a virus, that makes me patient zero. 
+ Simply being near me was putting her life in danger. 
+ I'm sorry. 
+ I was lucky. 
+ I had four years of... 
+ Happiness. 
+ Some people only get four days. 
+ Please, Mr. Peck, for your own sake-- and quite frankly, for mine-- 
+ Go live your life. 
+ Find some secrets of your own. 
+ ♪ God is an American ♪ 
+ And if you really need a mystery, I recommend the human heart. 
+ How do you know all this? 
+ ♪ God is an American ♪ 
+ Because I built it. 
+ ♪ God is an American ♪ 
+♪ God is an American ♪ 
+ Stay tuned for scenes from our next episode. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

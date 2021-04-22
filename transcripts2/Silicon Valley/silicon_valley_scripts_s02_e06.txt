@@ -1,0 +1,610 @@
+Transcripts - Forever Dreaming :: 02x06 - Homicide - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x06 - Homicide https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=26849 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/18/15 10:32 ] 
+ 
+ 
+ Post subject:  
+ 02x06 - Homicide 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ (applause) 
+ Pardon me, is that seat taken? 
+ (laughs) Oh, Gavin. 
+ Man : Classic Gavin. 
+ Let's hope this sucks. 
+ Oh, good. Monica made it just in time. 
+ Carla, looks like you won't be the only woman in the house for a change. 
+ Christ. One thing worse than being the only woman in a company is being one of only two. 
+ Why's that? 
+ Everybody puts this super-weird pressure on you to be friends. 
+ It's creepy. 
+ Hey, did I miss it? 
+ No. 
+ Good. 
+ Monica, I'd like to introduce you to Carla. 
+ Carla, Monica. 
+ Monica, Carla. 
+ What's up? 
+ Nice to meet you. 
+ I knew you two would hit it off. 
+ Hey. Monica? 
+ It's starting. 
+ Announcer : Tonight, for the first time ever, streaming live in 4K resolution over the internet, UFC Fight Night, powered by Nucleus! 
+ No networks. No more middleman. No bullshit. 
+ We're bringing the fights straight to the fans. 
+ We're cutting the cord forever with UFC Fight Pass, powered by Nucleus. 
+ Tonight, you'll get ultimate fighting at the ultimate resolution. 
+ Nucleus puts 4K UHD video in a lossless compression chokehold and forces the competition to tap out. 
+ (grunts) 
+ (glass shattering) 
+ Oh! (laughs) 
+ What a Douchebag He sure likes to break stuff. 
+ Announcer : We are live in Las Vegas. 
+ The picture looks amazing. 
+ Announcer : Man, Joe, this is a fight we've been looking forward to for a long, long time. 
+ Are we getting a contact high off Erlich, or is the edge starting to warble? 
+ No, I see it. Are they converting down to 24 frames? 
+ Announcer : The defense so far. Wow! 
+ The jerkiness is not a Nucleus issue, right? 
+ I mean, it's not going out to the world like that, is it? 
+ I think it looks great. 
+ You see that frame judder as the camera pans? 
+ The picture's so blocky. It looks like Minecraft. 
+ It doesn't make sense, it's supposed to be totally lossless. 
+ Let me dump their bit stream to disk and take a look. 
+ She's really smart. 
+ But not afraid to be bawdy. 
+ Oh, my God. 
+ They are so f*cked. 
+ Yeah, this is bad. 
+ (crowd cheering) 
+ Announcer : Attack with the left! 
+ He's hurt! He's down! 
+ He's hit! Oh! 
+ It's frozen. 
+ It's frozen. 
+ Announcer : It is all over! 
+ Unbelievable! 
+ I have never, in all my years of watching fighting, seen a finishing combination more ferocious! 
+ What a spectacular finish by Molina! 
+ We're being told that the Nucleus live stream-- 
+ f*ck! 
+ ...may have cut out during that exchange. 
+ If that is true, what a travesty. 
+ Gavin : f*ck! 
+ (theme song plays) 
+ Gavin Belson just sh1t everyone's pants. 
+ He sure did. The encoding is totally underpowered to cover up their defects. 
+ Nucleus just can't keep up with 4K live stream yet. 
+ Hey. Could Pied Piper handle live 4K video? 
+ I could deploy a live video stream that would be way better than theirs right now. 
+ Jump on it. Now. Like, do our own live stream. 
+ Partner with someone like Gavin did. 
+ Look at you two. 
+ Hold on. Live streaming's not really our primary business here. 
+ Yeah, but beating Nucleus is. The blogs would go nuts. 
+ We're built for it on my end. 
+ If it's just me hosting seeds and manifests, I'm good on my end. 
+ I'm prepared to brag about it and release publicity. 
+ Well, peer-to-peer delivery is good to go here. Let me know. 
+ Oh, Carla, do you want to show Monica your work station? 
+ No, thanks. 
+ (laughs) 
+ Okay, but Hooli had a deal with UFC that would stream a fight. 
+ What do we even do? Don't really have a lot of time here. 
+ That's real. 
+ We could find an event that's already in motion. 
+ Can I make a suggestion? There is a nesting pair of California condors on the closed-circuit feed at the Natural History Museum. 
+ There's an egg in the nest right now. It's very compelling. 
+ Why don't we just live stream me killing you? 
+ I wouldn't be so dismissive. There was a live stream of an eagle's nest last year that went viral, and was getting millions of hits. 
+ And I don't wanna be inflammatory, but next to a condor, an eagle looks like a... common cackling. 
+ f*ck that, Jared. I've got it. 
+ I'm very good friends with Aaron Anderson. 
+ Double-A? The guy who owns Homicide Energy Drink? 
+ Uh, is Homicide the extra douchey energy drink? 
+ It sure is. There's a bunch of stunts and crazy sh1t on here. 
+ The video player quality is terrible. It's a perfect candidate. 
+ And Double-A loves me. He'd definitely hook us up. 
+ How do you know him? 
+ From college. He was a sophomore when I was a senior. 
+ He and his roommates used to live down the hall. 
+ I used to party in their room all the time. 
+ Uh, kind of a mentor-mentee sort of thing. 
+ Coming from a manatee sort of thing. 
+ You look like a ferret that gave up on himself six months ago, Gilfoyle. 
+ I'm going to ping Double-A. 
+ Wait... 
+ What if he says yes? You know? 
+ Are we really gonna drop everything to do this? 
+ What if we don't get it right? 
+ I mean, it could hurt us just like it hurt them. 
+ sh1t. I don't know. 
+ This is critical, Richard. Maybe we should SWOT this decision. 
+ I don't know what that is, but no. 
+ SWOT analysis. 
+ No. 
+ S-W-O-T? No? 
+ Holy cow. 
+ Did he really just say "holy cow"? 
+ I've had a board ready for just such an occasion. 
+ I've booby-trapped the house with corporate resources. 
+ SWOT is a way of evaluating a decision. 
+ And you just break it down into "strengths," 
+ "weaknesses," "opportunities," and "threats." 
+ You're f*cking joking. 
+ Not at all. 
+ You can SWOT a concept, a department, or a new initiative. 
+ You can even SWOT a person, although you have to be careful. 
+ They might SWOT you back. 
+ I wanna SWOT you. 
+ Well, you can. 
+ Because now you have the tools. 
+ Okay. Um, shout them out and I'll tack them up. 
+ Jared, I'm really sorry, but I... I have to go. 
+ You know, would it make more sense if I worked something up and then I got back to you guys? 
+ And... okay, great. I'm on it. 
+ "People love condors." 
+ "Strengths." 
+ Man : On top of the roof, Blaine is gonna launch off this ramp. 
+ It's pretty gnarly. 
+ Everything goes right, he'll fly over this street and land on this 15-story building here. 
+ We've got 27 cameras, a couple in the car. 
+ Feed a live edit back here to the data center. 
+ We put everything through your incredible compression, Richard, and up onto the web. 
+ So, what do you think, Richard? 
+ I think this is awesome, Double-A. 
+ I mean, it is incredible. 
+ You really have built a giant monument to awesomeness. 
+ I think my aid in helping you achieve this is what inspired me to start my own incubator. 
+ Uh, so, Richard, you ready for this? 
+ Oh, yeah. I think so. Yeah, uh... 
+ Double-A, we are psyched. 
+ And, uh, we can do whatever you need. 
+ Okay, thanks Kool-Aid. 
+ Kool-Aid? What's that? Are you Kool-Aid? 
+ Yeah, it's just a term of endearment. 
+ You know, nickname, I used to rock it back in the day 'cause I was cool and supportive. 
+ Yeah. Oh, hey, guys, this is Gina, she's one of our event managers. 
+ Hey, uh, Gina, can you take Dinesh and Gilfoyle to the data center, please? 
+ Sure. You wanna follow me? 
+ Only if we get hats, Gina. 
+ You can just take mine. 
+ Did you see that? She gave me her hat. 
+ Pretend you've seen a woman before. 
+ Are those Homicide drinks for free? 
+ Yeah. Knock yourself out. 
+ Homicide! 
+ Is there any way that it could be maybe more like just... 
+ You and me talking, and not Erlich? 
+ What do you mean? Aren't you guys friends? I thought you go way back. 
+ We do. But... 
+ To be honest, I could never stand the guy. 
+ I mean, just hearing his voice again is giving me PTSD. 
+ Right. But you just called him cool. 
+ No, I called him Kool-Aid. We all did. 
+ Right. 
+ Because he's like the Kool-Aid pitcher from the ads. 
+ As in, every f*cking time we were hanging out without him, he'd come smashing through a wall. 
+ But you still hung out with him. 
+ Yeah, 'cause we were 19, and he had weed and beer. 
+ But even drunk and high I couldn't take it. 
+ I mean, it's like he's f*cking allergic to letting other people talk. 
+ It's like he's always gotta say something. You know? 
+ Erlich : Hey, Richard. 
+ Homicide! 
+ (laughs) 
+ So, Dinesh, I have a question. You're obviously Pakistani, but the name Dinesh is Indian, isn't it? 
+ Yeah. Wow, that's... exactly right. 
+ You know, most people, ignorant people, don't even know those are two separate countries. 
+ And they don't care either. 
+ How do you know about my name? 
+ I'm an Army brat. My dad was stationed in Karachi when I was a kid. 
+ It was a beautiful place. Full of beautiful people. 
+ Kind of like this room, right? 
+ (laughs) Oh, hold on a sec. I'll be right back. 
+ Oh, don't take too long. 
+ Ew. 
+ This is awesome. I don't know if it's what's in this, but I have, like, all these killer lines coming to me. 
+ I'm on f*cking fire right now. Oh! She likes me, right? 
+ Yeah, she's totally into you. 
+ Just not as into you as she is into that guy's mouth. 
+ He's definitely gonna f*ck her later, and she's not gonna think of you while it's happening. 
+ Goddamn it. f*ck. 
+ Now I'm just shaking. What do they put in this sh1t? 
+ Milk thistle? 
+ Hey, guys! Come out here! 
+ Juliet calls. 
+ Guys, this is Blaine. He's the guy doing the stunt. 
+ Blaine, these are the genius coders who are helping us with the live stream. 
+ They're rock stars. 
+ Okay. 
+ So this is the car you're jumping? 
+ Yes, it is. 
+ And that's what your ramp's gonna look like? 
+ Yeah. 
+ Cool. Well, have you... 
+ Yeah, and because I know that you're gonna ask, yes, I've done this before. And yes, it's f*cking dangerous. 
+ Listen, I got a lot of work to do to get this right. 
+ Okay? 
+ Okay. 
+ Hey, you see what I saw? 
+ Yes, uh, he's got the velocity calculated wrong. 
+ It's for a flat plane. 
+ He doesn't account for the curve in the ramp. 
+ Exactly. He's probably used to doing straight ramps. 
+ I mean, the chart says he's gonna launch at 81 miles per hour, but it's going to be more like-- - Under 70. 
+ The downforce is ridiculous. 
+ He's gonna lose speed and hit the side of that wall. 
+ And die. So we should probably... 
+ Okay. All right. 
+ Hey, uh, Blaine? 
+ One small thing. 
+ Blaine : No. 
+ I'm gonna stop you right there, Glasses. 
+ 'Cause I told you once already, and I was very clear. 
+ I am too f*cking busy to deal with you. 
+ Okay? I'm just being cool here. 
+ All right? 
+ What do we do here? 
+ This is a tough one. 
+ So, Richard, in terms of a player window, what do you see? 
+ Well, um, I think it's pretty straightforward. 
+ I'll handle this, Richard. 
+ You don't have to. 
+ The whole reason we're doing this, friend, is for branding value. 
+ So we're gonna need a banner that says "Powered by Pied Piper" underneath the video window. 
+ It doesn't have to be too big, but you don't want it to be too small either. 
+ Although, there's nothing small about Homicide, Double-A. 
+ At least as far as I can tell. 
+ Also, if it's, if it's possible-- 
+ Let me stop you right there, Richard. We're gonna need to have our logos on the car, Blaine's suit, his helmet. 
+ If he wants to get a Flash tattoo or something on his neck, that's on him. 
+ Actually, um, in all honesty, Erlich just pretty much said exactly what I was gonna say. 
+ Uh-huh. Um, so, Richard... 
+ Yes? 
+ Yeah? 
+ Do you think you can make the preview window full resolution? 
+ Um, yes... 
+ Richard can give you whatever you need. 
+ But as far as the video player goes... 
+ Guys, I'm sorry. I just remembered that I've got somewhere... else to be. 
+ All right. Well, Double-A, I'll see you soon. 
+ I'm just gonna grab a shirt and we'll check you later. 
+ What the f*ck, dude? Hey, I love your tech. 
+ But come back tomorrow without Kool-Aid, or don't come back at all. 
+ Honestly. 
+ Richard, what's going on? 
+ What do you mean? 
+ I'm catching kind of a vibe. 
+ A weird vibe with you and Double-A. 
+ Right. That. Well... 
+ I'm not gonna sugarcoat it, Richard. 
+ I don't think he likes you. 
+ I mean, he literally rolled his eyes at you. 
+ Why don't you just trust me on this one. 
+ Let Kool-Aid do the talking tomorrow. 
+ Take this stuff. I'm gonna grab a couple more drinks and another hat. 
+ I'm gonna get a box. 
+ 
+ 
+ 
+ Gavin : This is a total f*cking disaster. 
+ If my engineers had just told me they weren't ready, I never would have pushed for this live stream. 
+ Even worse, now I hear those little Pied Piper fuckers are doing their own live stream with Homicide. 
+ The energy drink? 
+ Yes. 
+ Meanwhile, I've demanded to see internal testing from every facet of the Nucleus platform. 
+ So I can see for myself where I stand. 
+ Because all I hear from everybody is good news. 
+ Have I just surrounded myself with sycophants, who are just telling me whatever I want to hear, regardless of the truth? 
+ No. 
+ Thank you, Denpok. 
+ I really needed to hear that. 
+ This might be morbid, but the cold hard fact is that if Blaine dies on our live stream, this could be good for us. 
+ I mean, we'd get a lot more traffic. 
+ Well, and it would probably lead to calls for regulations in the stunt industry. 
+ So, in the long term, we're saving lives. 
+ Although, there is the moral problem with letting him die. 
+ Though he did tell us to shut up. 
+ And his name is Blaine. 
+ And Gina is super hot. 
+ And this would make her single. 
+ She'd probably need consoling, so... there's an opportunity. 
+ Opportunity. 
+ Dinesh : Should we SWOT this? 
+ ♪ 
+ Bereaved women do tend to act out sexually. 
+ Yeah, so that's a strength. 
+ Hey, Kool-Aid! 
+ Yeah! 
+ And? So? 
+ And? 
+ It wasn't meant to be a flattering nickname. 
+ It was an insult. 
+ I'm not sure I agree with that. 
+ I mean, the dancing pitcher breaks through walls to give tasty beverages to kids in need. 
+ Why would you infer from this that Double-A doesn't like me? 
+ Well, um, I wasn't inferring anything. 
+ He told me to my face that he doesn't like you. 
+ But why wouldn't he like me? 
+ Well, uh, you have a tendency sometimes to-- 
+ Why on earth wouldn't he like me? 
+ Because, Erlich, you tend to not let-- 
+ I was his mentor. You know? 
+ You know, there's no remote possibility-- 
+ Because you don't let people talk! 
+ It just happened. 
+ Um... and he told me that if you came tomorrow that he would pull the plug on the whole live stream. 
+ (sighs) 
+ I see. 
+ Sorry. 
+ Are you done talking now? 
+ Yes. 
+ Do Dinesh and Gilfoyle know about this? 
+ Uh, no, I came straight to you. 
+ What about Jared? 
+ No. 
+ Okay, here's what you need to do. 
+ You need to go in tomorrow, and you need to do that live stream. 
+ Put my feelings aside, you know, don't quit on account of me. 
+ I wasn't gonna... I wasn't gonna quit. 
+ There is something you should know, though. 
+ Aaron Anderson wasn't very well liked in college. 
+ In fact, people used to call him "Double-Asshole." 
+ So watch out for that guy. 
+ Are you sure you're okay with this? 
+ Yes, Richard. It's time for me to be the bigger man. 
+ The cooler man. 
+ I am Kool-Aid, after all. 
+ Ladies and gentlemen, for the last 90 minutes you have had an opportunity to explore a standard HooliPhone upgraded with a brand-new operating system called Nucleus. Thank you all for being here, Aln, Lisa, Josh, Yana, Katie, Ramón. 
+ I'd like to get everyone's first impressions. 
+ Who'd like to jump in? Anyone? 
+ How about you, Ramón? It's just stupid. 
+ Man : Okay, so Ramón feels the phone is stupid. 
+ Could you elaborate, Ramón? 
+ Stupid how? Please, be as specific as possible, Ramón. 
+ Well, it's slow. 
+ The apps keep quitting on me. 
+ I tried to watch a movie, and it kept freezing up. 
+ And when I'm typing, like, there's a delay. 
+ Then all the letters pop up at once. 
+ You took a good phone and you made it all, like, shitty. 
+ Keep in mind, I didn't design the phone. It pissed me off. 
+ Man : I appreciate your honesty, Ramón. 
+ That's just one guy's opinion. 
+ Who else feels this product is stupid? 
+ Allen, Lisa, Josh, Yana, Katie. 
+ And did it piss off anyone else? 
+ Allen, Lisa, Josh, Yana, Katie. 
+ Okay. 
+ Christina, how bad is this? Be honest. 
+ Is this Windows Vista bad? 
+ It's not iPhone 4 bad, is it? 
+ (sighs) 
+ f*ck. Don't tell me this is Zune bad. 
+ I'm sorry, Gavin. It's Apple Maps bad. 
+ And who else felt this product is messed up? 
+ Allen, Lisa, Josh, Yana... 
+ Gavin : f*ck! 
+ I'm sorry for the disturbance, Allen, Lisa, Josh, Yana. 
+ So I can definitely get you full res on the preview window. 
+ Aw, sweet. 
+ Cool. I'll get right on that. 
+ You see how much smoother this all runs without Erlich hanging around? 
+ Right, yeah. 
+ Hey, did you ever send me the mockup for the logo placement of the player window? 
+ Seriously, you should think about dropping that guy. 
+ But what do I know? I just built a billion-dollar company. 
+ Yeah. Yeah, okay. But, uh, about the mockup for the logo placement... 
+ Oh, hey. I gotta go Skype with my European distributor. Keep cranking it, okay? 
+ Sure, uh, will do. 
+ Excuse me. 
+ That's not the final graphic for the live stream, is it? 
+ Yep. Double-A signed off on it. 
+ Just that? There's nothing else? 
+ Nope. 
+ ♪ 
+ Hm... 
+ Blaine doesn't die, but he is horribly incapacitated. 
+ And then while he's in the hospital, he gets a flesh-eating virus, and then he dies. 
+ Well, obviously... his incessant suffering will be a strength. 
+ But our ability to enjoy it is an opportunity. 
+ What if before he dies... 
+ Gina catches the virus? 
+ And then she spreads it from her v*g1n* to your pen1s. 
+ Wait, so in this scenario, I get to have s*x with Gina? That's an opportunity. 
+ Okay, how about this? 
+ I'm listening. 
+ We let Blaine die, but then he's not around to stop someone else from committinsome huge fucked-up act of evil? 
+ The "Kill Hitler" scenario. 
+ Right. 
+ (knocking on door) 
+ Hey, guys? You guys busy? 
+ Uh... 
+ Cool. 
+ Um... I got something I gotta say. 
+ Listen. I know that I was really rude to both of you yesterday. 
+ It's just, um... when I got a stunt coming up, I'm a bundle of nerves, and sometimes I can take that out on other people. 
+ Even with all the support that I get from Gina and our kids. 
+ Okay... I don't know why. 
+ But... and then again, I'm a guy who needs to risk his life jumping over stuff. 
+ So, what's that all about, right? (laughs) 
+ You know, actually just an hour ago I spotted an error in my math. 
+ Would have had me smeared across the side of that building. 
+ Uh... Anyway, now I'm just totally rambling. 
+ Typical Blaine. 
+ What I wanted to say was that I'm sorry. 
+ Are we cool? 
+ Yeah, we're cool. Thanks for stopping by. 
+ Yeah, you should go quickly, 'cause we have work to do. 
+ What's this? 
+ What is that? 
+ "Let Blaine die"? 
+ Oh. sh1t. We write in code... we write in code. 
+ This is compression... 
+ "Strengths. 
+ Blaine's last moment is realizing face is gone"? 
+ "Weaknesses Blaine dies super fast." 
+ Yeah, you really shouldn't be looking at that. That's all proprietary. 
+ "Opportunities: f*ck Gina"? 
+ Would you believe that was here when we came in? 
+ Double-A? Can I talk to you for a second? 
+ Uh, yeah. Leave me alone for a sec. What's up? 
+ Well, okay, uh, I just saw a version of the player window that apparently you approved of that says Powered by Homicide on it? 
+ Oh. Yeah, it does. 
+ Right. Well, there's no Pied Piper logo. 
+ Like anywhere. So what's up with that? 
+ Oh, well... 
+ Homicide is an energy drink, and "power" means energy. 
+ So that's kind of confusing to the consumer, so I think we're gonna keep it the way it is. 
+ Uh, the whole point of doing this was so that we could get our name out there. Remember? 
+ I tell you what. Let's see how it goes this time, the next time we'll work something out. 
+ Uh, no. No. We can't see how it goes this time. 
+ There is no next time. Okay? 
+ We are racing to get our platform ready for CES. 
+ And we took time away from doing that to do this so we could get PR value. 
+ If no one sees the logo, then there's no PR value at all. 
+ Oh, man. I'm sorry. But you get it. 
+ No, I don't get it. 
+ Okay, look, you have to put our logo in the viewer. That's it. Period. 
+ Mm... actually, I don't have to do a damn thing. 
+ Yeah, you do. 
+ No, I don't. 
+ Okay, then neither do I. 
+ Richard, don't be an asshole like your buddy Kool-Aid. Okay? 
+ Just finish the build, okay? 
+ You know what, Double-A? 
+ Erlich was right. 
+ You are an asshole. 
+ In fact, you're a double-asshole! 
+ (silence) 
+ (Richard clears throat) 
+ What did you call me? 
+ I... I called you a double-assle. 
+ 'Cause, you know, you're being an asshole. 
+ Double-A, double-asshole. You know? 
+ You're twice the asshole. Twice-hole. Double-asshole. 
+ Oh. Ew. Is that a colostomy bag? 
+ Do you have any idea what it's like to be ten years old and carry your own sh1t around in a bag? 
+ To have two assholes? 
+ I didn't know... 
+ Hey, Richard? We should go. 
+ Blaine : "Opportunities: urinate on Blaine's grave"? 
+ "Grief threesome with Gina and Blaine's hot mom, question mark"? 
+ What the f*ck?! 
+ I didn't... 
+ Gilfoyle : Richard! 
+ But I mean, you were being an asshole. 
+ Okay, good luck. 
+ (laughing) To his face? 
+ You called him that to his face?! 
+ How could you not mention the colostomy bag? 
+ Because it's a very private and personal matter! (laughs) 
+ It's not a laughing matter! But you called him double-asshole first. 
+ Remember? In college? 
+ Yeah, but not to his face. 
+ Never to his face! Not even I'm not that f*cking cruel! 
+ But you are! 
+ I'm actually not. 
+ You tore double-asshole a third asshole! 
+ (laughs) Triple-A! 
+ (laughing) 
+ Yeah, that was all my fault somehow? 
+ (Erlich laughing) 
+ Yeah, that was a big wank. 
+ Since we're already set up for a live stream, might I make a suggestion? 
+ Wow. It looks even better than I thought it would. 
+ ♪ 
+ Dinesh : Is that a still image? 
+ It's not frozen, is it? 
+ No, it's live. It's just not moving very much because it's a f*cking egg. 
+ But think of the wonderful things going on inside that egg. 
+ The resolution in your imagination is infinite. 
+ Oh, hey, we're up to 17 views. 
+ Okay, well, this isn't the PR coup that we'd envisioned. 
+ But, uh, Nucleus f*cked up way worse. 
+ At least we can go back to work knowing that we're the only middle-out compression that actually functions. 
+ New Zealand Sauvignon Blanc? Steel-aged. 
+ Drinks great during the day. 
+ I can move, so you guys can stand next to each other. 
+ Jared! Dude, no. 
+ God, no! 
+ (phone vibrating) 
+ Russ, hey. 
+ Good job, my man! f*cking live stream looks amazing! 
+ It does? 
+ Yeah, Homicide must be stoked! 
+ Homicide? What? 
+ Russ : I love the new name. It's kick-ass. 
+ I always thought Pied Piper was kind of a limp-dick name. 
+ EndFrame is way cooler. EndFrame? What? 
+ (tires screeching) 
+ Man : Three, two, one! 
+ He made it. Farewell, sweet Gina. 
+ "Powered by EndFrame." Who the f*ck is EndFrame? 
+ Why is their f*cking logo on this live stream? 
+ EndFrame isn't you guys? 
+ Oh, f*ck! 
+ EndFrame is those guys that brain-raped us at Branston Ventures. 
+ "EndFrame is a compression company specializing in middle-out compression technology." 
+ Those pricks! They stole my algorithm! 
+ I know guys at the FBI we could call. Were you f*cking hacked? 
+ Uh... actually, no. 
+ Well, how did they get it then? 
+ I'm sorry? 
+ How did they get it then, Richard? 
+ How did they get it? Well, we kinda found ourselves in their conference room, and accidentally sketched out our key components to our algorithm's data model on their whiteboards. 
+ Russ : You f*cking... 
+ Russ? 
+ He hung up. 
+ I'd file this one under "Weakness," Jared. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

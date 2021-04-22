@@ -1,0 +1,138 @@
+
+
+
+
+
+#title {
+/* streamOn */
+
+position: absolute;
+width: 355px;
+height: 113px;
+left: 543px;
+top: 185px;
+
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 112px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.02em;
+
+color: #000000;
+
+
+
+
+}
+
+#title1 {
+  /* streamOn */
+
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 112px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.02em;
+
+color: #5680E9;
+
+
+}
+
+#query {
+  /* Group 5 */
+
+position: absolute;
+width: 727px;
+height: 79px;
+left: 357px;
+top: 298px;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 727px;
+height: 51px;
+left: 357px;
+top: 326px;
+
+background: #F7F3F3;
+border: 4px solid #D8CFCF;
+box-sizing: border-box;
+border-radius: 25px;
+
+
+/* TV Show * */
+
+position: absolute;
+width: 131px;
+height: 28px;
+left: 384px;
+top: 298px;
+
+font-family: Lucida Grande;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+letter-spacing: -0.02em;
+
+color: #8A8A8A;
+}
+
+
+#not {
+  /* Group 2 */
+
+position: absolute;
+width: 363px;
+height: 79px;
+left: 136px;
+top: 393px;
+
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 363px;
+height: 51px;
+left: 136px;
+top: 421px;
+
+background: #F7F3F3;
+border: 4px solid #D8CFCF;
+box-sizing: border-box;
+border-radius: 25px;
+
+
+/* not */
+
+position: absolute;
+width: 50px;
+height: 28px;
+left: 149px;
+top: 393px;
+
+font-family: Lucida Grande;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+letter-spacing: -0.02em;
+
+color: #8A8A8A;
+
+
+}
+
+
+

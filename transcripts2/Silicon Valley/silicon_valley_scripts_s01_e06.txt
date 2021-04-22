@@ -1,0 +1,261 @@
+Transcripts - Forever Dreaming :: 01x06 - Third Party Insourcing - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x06 - Third Party Insourcing https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=26841 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/12/14 13:26 ] 
+ 
+ 
+ Post subject:  
+ 01x06 - Third Party Insourcing 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Kidney function, liver function, testosterone... I don't know how you did it, but you have essentially aged 40 years in the last seven weeks. 
+ Wow. Really? 
+ We had a meth addict in here this morning who was biologically younger than you are, and he's 58. 
+ MySpace guy. 
+ So what is going on? 
+ Uh... It's this cloud service configuration, I've been stuck on it for over a week. 
+ Wow. 
+ I'm a good programmer. I mean, it's the only thing I am good at. 
+ I mean, last year, I threw a Frisbee and it chipped my tooth. 
+ That's more of a dental issue. 
+ Yup, OK, I... 
+ The point is, I learned Ruby on Rails over a weekend when I was 17. 
+ I should be able to learn cloud, I have to. 
+ Can I give you my professional opinion, as your doctor? 
+ You should have taken that ten million dollars from Gavin Belson, OK? 
+ But regrets will kill ya so try not to dwell on it. 
+ I tried to tell you. 
+ [techno music playing] 
+ Outside help? No, we're not getting any outside help. 
+ It's a week until TechCrunch, Richard. We can't wait any longer. 
+ Richard, look at the board. 
+ OK, cloud architecture is just a giant turd that is clogging up our pipes. 
+ We have to call in a plumber to fix it. 
+ OK, I hate that metaphor, but Erlich is right. 
+ Gilfoyle and I finished the distribution services days ago and we're just sitting around waiting for you. 
+ I can solve it. 
+ Richard, you're a f*cking rock star, OK? 
+ You just don't know cloud, this tiny, little, shitty area, which is becoming super important, and in many ways is the future of computing. 
+ That sort of went south on me, but you understand what I'm saying. 
+ I've already talked to Peter Gregory about insourcing a consultant. 
+ I've made contact with a programmer whose cloud architecture is supposed to be insane. They call him The Carver. 
+ The Carver? That Black Hat guy who apparently hacked into the Bank of America and took down their entire system, that The Carver? 
+ We should get him if we can. 
+ [sighs] 
+ OK, we can talk to the guy, but, I mean, he's really gonna have to sell me. 
+ Jared : Six months ago, these guys had 35 million and Series B Financing. 
+ Now The Carver's here doing teardown. 
+ He's basically moving their carcass to the cloud. 
+ Erlich : Don't touch anything. Failure is contagious. 
+ I think that's him. 
+ [tapping keyboard] 
+ Excuse me, Mr. Carver? 
+ [snickers] Yeah, uh, people refer to me as The Carver, but no one actually calls me that, it's what people call a screen name. 
+ You know. I'm Kevin. 
+ OK, Kevin, um, we're from Pied Piper, we spoke earlier. 
+ Yeah, so you guys are f*cked, huh? 
+ No. No, we're not f*cked. 
+ Yes, we are totally f*cked. 
+ We have a live demo in one week and our cloud is in the shitter. 
+ That's accurate. 
+ Wait, are you Richard? 
+ Yes, I am. 
+ Yeah, your algorithm is solid. It's a really good schema. 
+ OK, thanks. 
+ I did think you'd be younger. What are you, 25? 
+ Twenty-six. 
+ Yikes. 
+ Uh, so I have a Model U.N. thing on Monday, but maybe I could burn through your gig over the weekend. 
+ Mmm. You think you can do our whole job in two days? 
+ I know I can do it in two days. 
+ I pound Mello Yello, Oreos and Adderall and I don't sleep until I'm done. 
+ OK. 
+ [scoffs] 
+ But you know what? I also have an offer to do some migration at Gittawonk this weekend. 
+ It's... It's kind of chill, and frankly, their tech's a little stronger. 
+ Whoa. What? What? 
+ You think Gittawonk's tech is stronger than ours? 
+ I'm sorry, I don't remember reading in PandoDaily that Gavin Belson and Peter Gregory were fighting over Gittawonk. 
+ No one offered ten million dollars to acquire Gittawonk. 
+ Yeah, I agree with Richard, you should come work for us. 
+ What... No... 
+ What's it gonna take, a blow-job? 
+ Because Richard will suck the dick right off of your pelvis. 
+ [laughs] 
+ Now you make me laugh, shaggy man. 
+ All right, I'm in. 
+ I'll see you guys Friday. 
+ [tapping keyboard] 
+ Richard : OK. 
+ [whispering] Well done. 
+ [whispering] Yeah. 
+ Excuse me. Hi, um, would you guys be interested in buying some candy so you can send my church group to camp? 
+ Nope. 
+ Erlich : Hundred bucks says there's no church. 
+ Whole thing's a scam, little scumbags. 
+ They're just children. 
+ Looks like Gilfoyle and his lady Satanist are back from the airport. 
+ Can you imagine what kind of shit-show this one's gonna be? 
+ He says that she has an Amy Winehouse vibe. 
+ What does that mean? All tatted-up and nowhere to go. 
+ Hooked on OxyContin? 
+ Decomposing? 
+ Oh. Oh, OK, that was dark. 
+ Gentlemen, this is Tara. 
+ Hi. 
+ Tara, this is the fellas: Jared, Dinesh, Erlich and Richard. 
+ It's Erlich. 
+ It's great to finally meet you guys. 
+ Hi. 
+ [Tara giggles] 
+ Gilfoyle : All right. 
+ Jesus, where did he get Amy Winehouse from? 
+ I mean, I'd have s*x with that if you hose the Gilfoyle off of her. 
+ It's weird having a girl in the house. There's a very strange energy. 
+ Hm. 
+ Hello... Kevin. 
+ [chuckles] OK, Richard, I just need you to approve Kevin's fee. 
+ I got Erlich to sign and you sign right there. 
+ Twenty thousand dollars for two days. 
+ You know who else thought my price was too high? Bitraptor. 
+ Who? 
+ Exactly. 
+ Great. Peter Gregory is on his way out of town so I'm gonna hustle out there and get him to co-sign these and the check and I'll be back as soon as I can. 
+ Thank you. 
+ You OK over there? You have any questions...? 
+ Yeah, one question. 
+ Cool. Shoot. 
+ Why do you keep your lips pressed so tight together when you're not talking? 
+ 'Cause they're like white. 
+ It looks uncomfortable. 
+ [scoffs] 
+ [rapid tapping on keyboard] 
+ [tapping on keyboard] 
+ [mouthing silently] 
+ Hey, guys. 
+ Hey, Kevin, um, so how did you bypass Bank of America's network security? 
+ I want details. 
+ My lawyers told me I'm not allowed to discuss it. 
+ Totally get it. That's baller. 
+ Gilfoyle : Hey, babe? 
+ Hmm. 
+ You're up. 
+ [whispering indistinctly] 
+ [Tara] All right, I'm gonna go have a shower. 
+ Gilfoyle : Mm-hm. 
+ Uh, what was that? 
+ What? 
+ Tara just whispered something to you and then she looked at me in a weird way. 
+ No, she didn't. 
+ Yeah, she did. 
+ What's up? 
+ Do you know what compersion is? 
+ It's when someone takes pleasure in seeing their loved one gratified by another person. 
+ Sexually. It's the opposite of jealousy. 
+ It sounds like it's the opposite of normal. Why are you telling me about this thing? 
+ [clears throat] As shocking as this is... 
+ Tara is attracted to you. 
+ Come again? 
+ Yeah, freaked me out too, at first. 
+ I don't like the "at first" part at all. 
+ What are you saying? 
+ Since I abide by the maxim, "Do what thou wilt, that is the whole of the law"... if you want to f*ck my girlfriend, I'm OK with it. 
+ Jesus Christ, man, I could barely stand next to you when you're in your towel. 
+ I don't want to have a threesome with you. 
+ I'm not talking about a threesome. 
+ Listen, I don't even have to be in the room, unless that's better for you. 
+ OK, no, I don't... 
+ Right, so we're all settled then. 
+ Yep. 
+ Do you need parking validation? 
+ No, I used Lyft. 
+ So I'll Lyft it back. 
+ Why don't I have Peter's car take you home. 
+ He's not using it, we're shipping off to Arallon tomorrow. 
+ Arallon? 
+ Yeah, the island Peter's building. 
+ What's the... the red line? 
+ That's the International Date Line. 
+ The island's built right on it so the western half can celebrate the first new years on Earth, then the next day, they walk over to the eastern half and celebrate the last new years on Earth. 
+ But if you can walk, why does he need the car on the island? 
+ Peter's not really big on walking. 
+ So I'll just have the guys pull it up front for you. 
+ Great. 
+ [chuckles quietly] 
+ Driverless car. 
+ [beep] 
+ [computer voice] Select destination. 
+ Hi. Um... I'm going to 5230 
+ Newell Road, Palo Alto... 
+ [computer beeps] 
+ [computer voice] Route guidance calibrated. Distance to destination: four point six miles. Buckle up, please. 
+ [beep] 
+ OK. 
+ [computer voice] Enjoy your ride. 
+ [Jared chuckles] 
+ You? 
+ Tara wants to have s*x with you? You sure? 
+ Yeah, Gilfoyle just told me, to my face. 
+ He told you that Tara wants to copulate with someone else in the house other than him and that someone is you, Dinesh? 
+ Yeah, that's... 
+ You know, you seem confused by this but for a different reason than I am. 
+ Don't you think it's weird that Tara wants some strange and she chooses you over me, the logical person in the house? 
+ OK, I see where we are ending up on this. Thank you for your time. 
+ Wait, are you sure that she didn't ask Gilfoyle for a danish and maybe you misheard her? 
+ You're probably right, she just wanted to f*ck a danish. 
+ Wait, you just built all the indexes on the fly? 
+ Yeah, of course. 
+ OK, well... Well, then what's that? 
+ The key value store. 
+ Tuples. 
+ Speak English. 
+ [scoffs] 
+ You're kind of doing that lip thing again there, buddy. 
+ No, I'm not. 
+ Stop looking at my lips. 
+ [beeping] 
+ [computer voice] Destination override. New destination. 
+ One Gregory Drive. Arallon. 
+ Distance to destination: 4,126 miles. 
+ Enjoy your ride. Um, what's happening? I'm sorry, what... Mr. Car? Hey. Tara and I are going to a Satanic baptism. You wanna come? Stu Burns decided to walk the left-hand path with us. The database administrator for Yahoo is becoming a Satanist? We're everywhere. Hey, Erlich, are you coming? Dinesh is. He is? [ringtone] This is Monica. Hi Monica, it's Jared. Uh, quick question... Jared, I can't talk right now. One of our assistants has been confusing the eastern, western time zones of Arallon on work orders. Now a bunch of important things are happening a day early. Peter is going to be furious when he finds out. He's going to make that noise. [cell phone beeping] Oh, sh1t, that's him on the other line. I gotta go. Oh wait Monica. It just... 
+ 
+ Hi, Peter. [deep guttural sound] Hello, Monica? Um, car? Mr. Car? Uh, excuse me. Arallon is an island, so how are we...? Oh, no, no! No. Stop. Let me out. Mmm. Um... Uh, that's not good. Oh, no! No! Excuse me please! Please honk. Please honk. [door shutting] No, no, no, no. No, no, no. No, no. Please. Please. Oh, no, that's not good. OK, Donald, stay calm. [loud metallic thud] [computer voice] 103 hours to destination. Entering sleep mode. What? No! Enjoy your ride. OK, stay calm. Stay calm. Wait, my phone. No bars. No bars. No bars. No bars. [screams] [ship horn blares] [ominous music] We bring thy garden, o mighty Lucifer, the fragrances which abound therein, vapors of... [whispering] What the f*ck are we doing here? Look at these f*cking people. Through this, the black flame of Satan thou walkest in Hell. The gates are flung wide and thy passage is heralded by the deathless cries of his guardian beasts. Breathe of his breath, o brother of the night and nourish his waning brain. From the despair... I just figured it out. It all makes sense. Figured what out? Why Tara might be in to you more than me. She's attracted to ugliness. [whispering] Oh, f*ck you. [whispering] No, think about it. This is the life that she chooses, right? She's attracted to unattractiveness. Look at all these ugly people and Gilfoyle and now you. That's ridiculous. I'm way more attractive than you are. No, you're not. Way better looking. By no metric could you possibly be considered more attractive than me. You're saying that every woman in the entire world would think you're more attractive than I am? Yes. Unless they're completely f*cked up. Damn it. You doing OK there? Yep, yeah. Fine, just, you know, it's big orchestration stuff, a lot of moving parts. Nothing you need to worry about. You just focus on the cloud. I'm here if you need me. You know what? Uh... I know it's not what we hired you for, but I am actually having a little trouble with the data replication in the persistence layer. Move over. Uh-huh. [exhales deeply] Oh, Christ. I'm much more handsome than you are. No, my face is completely symmetrical. You know what my nickname was when I was a kid? What? Pakistani Denzel. You look nothing like him. Denzel Washington has a beautiful smile. You look ridiculous. Hail Satan, it is done. All : Hail Satan. Erlich : Hail Satan, it is... it's done. Well, thanks for coming, everyone. Brother Jason was kind enough to furnish this week's food. It's Chick-fil-A. I know, they're on the Christian right, but darned if that chicken isn't good. I think the Dark Lord would understand. Also... [groans] a reminder. If you parked in the Sav-On parking lot, they do tow. Well, I didn't know if you wanted original Oreos or Double Stuf so I went a little nutty and I got both. How's it, um... Kevin : f*ck. f*ck. Kevin? Hello? [quietly whimpering] f*ck. What are you doing down here? I did it again, I did it again. Did what? I did it again. [Kevin mumbling] No. What is this? Did you overwrite the data schema? Why would you do this? You don't ever do this! That's exactly what they said when I was working at BofA. Working at BofA? I thought you hacked in. Kevin : No. [gasping] I was a consultant at the retail banking services. I crashed their entire system. It took a team of seven engineers more than a week to comb through all the code and find my mistake. And the only way that I ever avoided being sued was by agreeing to never tell anyone that I worked there. Oh, f*ck. Oh, f*ck, what?! I just told you. Now I could get in trouble. Trouble? You just skull-fucked my whole system. I am going to punch you in the f*cking... We don't like sacrifice goats or anything. We're not like the Order of the Golden Dawners, you know. Erlich : Yeah. [Tara chuckles] Richard, are you OK? Um... Mmm... Dinesh, uh, we may have a slight problem. The Carver just carved up our entire platform. What the f*ck? Yeah, the database layers, the application layers, even the chef scripts are f*cked. The little fucker must have hacked into the DDL tables like he did with BofA. He didn't hack into BofA's. He was consulting there at the time, when he took down the system by accident. Kevin : Oh, you told them too? What the f*ck? Richard, why would you let that little fetus access the DDL? Because I thought that fetus was better than me and so did you and everybody and you just, you pressured me into hiring him... Yes, Richard, for the cloud, to deploy the cloud. So that you could do what you do best and concentrate on everything else which the fetus just f*cked up. You need to drag this little sh1t stain... You hear that? [Kevin whimpers] Out from under this table and have him go through every single line of code with you to unfuck it while it's still unfuckable. I should not have eaten all of that Satanist chicken. OK, and with this one here, did you delete it or just move it? Hello? Kevin. Maybe. I don't know. What? What does that mean? What's wrong with you, man? I can't focus. I'm out of Adderall. Where's that Jared guy? He was getting my refill. That's actually a really good question. I don't know where he is. [Jared singing softly] The Carver's Adderall prescription. I hope that's not a problem. [phone beeps] Dead battery. That's a problem. I need to lay down. What? No! [forced chuckle] You said you could code for 48 hours straight. That's like your thing. Yeah, how the f*ck do you think I do that? Adderall. Well, we don't have any. It's really bright in here. Who takes Adderall anymore. Kevin : Half the kids in Palo Alto. Hey. Any of you guys currently on Adderall and, uh, you know, want to make 50 dollars? [exhales] Oh, boy. What do you mean, it's not Adderall? It's Adderall! I know what Adderall looks like. It's not Adderall. [sighs] Uh, excuse me. Caleb? There's been some kind of mistake. What you sold me was not actually Adderall. So maybe we could... Do you think you could get me some real Adderall? Yeah, yeah, of course. Um... I could do that or, um, I can give you some of this. Ow! OK, I'm gonna... You're gonna do what, bitch? Call the cops on me? Tell them you got the wrong illegal drugs from a kid? You dumb piece of sh1t. Get the f*ck out of here. Uh, you... Run! All right, I'm running. Mm-hm. Keep running! Stupid... [groans] Richard, what's wrong? Have you been crying? Hey! Which one was it? It was church candy, wasn't it? You just brought piss to a sh1t fight, you little c**t! Ow! [groans] [Caleb] No, no, no! Now you get in your f*cking house and you get me five Adderall or I'll slit your f*cking throat! You understand? I'll kill your mother! I'll rape your father! I'll curb-stomp that little face so hard that your teeth will go flying, you little sh1t! Now go! Go! Go! Go! Get me five Adderall, right now! OK! I'm sorry! I'm sorry! Hi. Tara. Hello. Hi. First of all... So, um... I have thought about it. A lot. To be honest, elements of this arrangement still trouble me. However, I have not had a lot of sexual experiences. So I feel it may be foolish to turn this down. So as long as Gilfoyle is not in the room and I can verify that the door is locked... then I have concluded that... yes... I would love to have sexual relations with you... Tara. Yeah. Uh, what are you talking about? Gilfoyle told me. I know you want to have s*x with me. Gilfoyle? Would you come in here for a second? Um... Hm? Um [snickers]... Did you tell Dinesh that I want to have s*x with him? No. Oh, wait, yeah, I totally did. I forgot about that. I was really high. I was just f*cking with him. Did he believe me? Uh... Did you just present yourself to my woman? Uh... [stammers] Oh, this is outstanding. Oh, my God, that is so mean of you! Look at how cute he is. He's adorable. You're adorable. Don't call me ador... It's very emasculating. What kind of f*cking idiot listens to what Gilfoyle has to say? OK, Tara, here's what it is. If you can tell me to my face that you seriously find Dinesh more attractive than me, then and only then will I concede defeat. What? And our regression test is... done. Yes. It's clear, we all test out. The system's stable again. Thank God. Now we can move on to the next module and I can forget you ever existed. Can you do me a favor? Don't tell anyone I cratered this bad. I won't tell anyone I hired you if you won't tell anyone you worked here. Oh, the BofA deal. Got it. [blows cheeks] Well, I'm gonna call my mom and have her pick me up. Your mom? Oh, by the way, you owe me 20 thousand dollars. What a dick. You have to talk to Jared about that. Where is Jared? [loud rumbling] [groans] [approaching humming sound] Excuse me. Can you help me? [computer voice] Obstacle averted. Resuming operations. Please be careful. Please be careful. Please be careful. [Jared singing] [voice trembles] [screams] [ship horn blares] 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 

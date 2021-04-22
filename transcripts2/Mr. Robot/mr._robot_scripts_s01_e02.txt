@@ -1,0 +1,851 @@
+Transcripts - Forever Dreaming :: 01x02 - eps1.1_ones-and-zer0es.mpeg - Mr. Robot 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x02 - eps1.1_ones-and-zer0es.mpeg https://transcripts.foreverdreaming.org/viewtopic.php?f=303&t=19248 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 07/02/15 05:47 ] 
+ 
+ 
+ Post subject:  
+ 01x02 - eps1.1_ones-and-zer0es.mpeg 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Tyrell 
+  "Give a man a gun and he can rob a bank, but give a man a bank, and he can rob the world." 
+ It's a bit of a silly expression, actually.  
+ A little reductive, but still... I like it,  
+ for the same reason most people hate it,  
+ because to me it means that power belongs to the people that take it. 
+ Nothing to do with their hard work, strong ambitions, or rightful qualifications, no.  
+ The actual will to take is often the only thing that's necessary.  
+ I'm sorry to bring you in like this.  
+ Technically what we're doing might be considered illegal,  
+ which is why I'm surrounded by eleven of our most annoying lawyers.  
+ Elliot Alderson...  
+ I want to offer you a position here at Evil Corp.  
+ I want you to head our cybersecurity division.  
+ Except I can't officially offer you anything since  
+ we have this non-compete with your employer, Allsafe.  
+ But if you do this of your own accord...  
+ when you do this... you'll be a multi-millionaire within the next five years.  
+ What do you say?  
+ Elliot 
+ Can I... Can I think about it?  
+ Tyrell 
+ Gentlemen, I need the room.  
+ [indistinct whispering]  
+ [Annoyed] Yes, thank you.  
+ Yes, yes.  
+ You know, Evil Corp has just named me interim CTO.  
+ It won't be long until it's official.  
+ I will be the youngest executive this company has ever seen.  
+ I should track down these hackers  
+ out there just to thank them. In a way, it's kind of, um...  
+ What's the word in English? Serendipitous?  
+ Right? [laughing] You know, by the end of the quarter, we're going to revamp our entire network  
+ and consolidate our security protocols.  
+ We're going to handle everything internally, which means all of our vendors, including Allsafe, will be cut loose. 
+ And it's no secret that once Allsafe loses us as a client, they'll be fini.  
+ And when that happens, I want you to be where you belong here with me.  
+ This is an important choice you're making, Elliot.  
+ I just wanted you to know all the facts before  
+ you made your final decision.  
+ Elliot 
+ [Nervously] 
+ I think I'm happy where I am.  
+ [somber orchestral music] [Beethoven's Symphony No. 7 in A Major, Op. 92 playing] ♪ ♪  
+ Tyrell  
+ Well, I thought I'd ask.  
+ ♪ ♪ ♪ ♪ [music continues faintly inside car] ♪ ♪  
+ Mr. Sutherland 
+ Call this number if you need to get in touch with Mr. Wellick.  
+ You can call me Mr. X. [laughs] 
+ Come on, you've never seen JFK?  
+ Oliver Stone movie?  
+ Sir, I gotta be honest.  
+ That's embarrassing.  
+ Do yourself a favor and watch it. 
+ And pay, for Christ's sake.  
+ Anyway, you can call me Mr. Sutherland for now.  
+ Don't hesitate to reach me when you're ready.  
+ We're always close by.  
+ Vera  
+ I'm gonna set a date right now… 
+ Shayla  
+ No, we're not.  
+ Vera 
+ For later. 
+ Shayla   
+ I gotta go, thank you very much.  
+ Vera  
+ You gonna have me up?  
+ Shayla 
+ No.  
+ Vera 
+ Gonna have me up? 
+ Shayla 
+ No, stop. 
+ Vera 
+ I'm coming up. 
+ Shayla 
+ No, you're not coming up. Another time. Okay, I gotta go.  
+ Vera 
+ Come on.  
+ Elliot 
+ Everything all right?  
+ Shayla 
+ Yeah, he's just a creeper. 
+ I hate it when your employers can't take a hint. [thumping bass from car]  
+ Hey, is your radiator messed up? 
+ Because it's like 3,000 degrees in my apartment.  
+ Hey, are you okay?  
+ You seem off.  
+ Elliot 
+ While we're here, you mind if I re-up? 
+ Shayla 
+ A little early to re-up, don't you think?  
+ Elliot 
+ I'm deviating from the schedule a little.  
+ Shayla 
+ Whoa, never thought I'd see the day,  
+ Mr. Stricty Pants, but okie dokie.  
+ Oh, yeah. sh1t, I'm out of the other ones. 
+ Elliot 
+ No, just the morphine. It's good.  
+ Shayla 
+ Uh, no, you made me promise never to give  
+ you these unless I had your Subs.  
+ Elliot 
+ Shayla.  
+ Shayla 
+ No, Elliot. Promises matter, okay?  
+ I take this sh1t to heart. 
+ Oh, my God.  
+ Fine, but you have to promise me you won't do a lot until I get your withdrawal meds, okay?  
+ I'll go see Fernando later or something. No, you have to say it. 
+ Elliot 
+ I promise.  
+ [snorting]  
+ Elliot V.O. 
+ Hey, man. What, you think I forgot about you?  
+ Trust me, I need you now more than ever.  
+ We gotta get to work.  
+ Hacking Tyrell Wellick, you'd think it'd be tricky,  but it wasn't... Evil Corp's corporate mail servers,  
+ they haven't patched anything since Shellshock.  
+ He doesn't even use two-step verification. 
+ His password was just his wife's maiden name and Sweden's independence date, 6-6.  
+ One six away from the obvious, but still, this is bad noob practice.  
+ These emails... His life... it's nice, happy, perfect.  
+ This doesn't make sense.  
+ Did he know I was going to hack him?  
+ Did he let me? I'm gonna need to wipe everything.  
+ [beep] [drilling] [microwave beeps] 
+ Elliot V.O. 
+ I know, I know, taking more than I should. 
+ I'm breaking my rule, but come on, it's an off week. [ 
+ soft clanking] [liquid trickling] [clanking continues]  
+ Elliot to Flipper 
+ Come on.  
+ Yo. My man, you gotta...  
+ You gotta deuce it out over here, all right?  
+ Yo, you gotta do your business up in here, all right? 
+ Hey... You got this.  
+ You got this. [sniffs] [indistinct chatter, phone ringing] 
+ News announcer  
+ Terry Colby, the chief technology officer of...  
+ Elliot V.O. 
+ Terry Colby's arrest is on everyone's mind.  
+ Screen. Might as well be the same thing nowadays. How do I go back to work after this? 
+ How can I focus on anything?  
+ And when's Mr. Robot going to contact me again? What's he waiting for?  
+ Did I just destroy a man's life for no reason?  
+ Gideon 
+ I'm gonna talk to HR about a salary bump for you.  
+ Elliot 
+ Oh, please.  
+ Gideon 
+ No, please. Take the raise.  
+ It's not gonna be much,  
+ but it's the best I can do right now.  
+ Elliot... You saved the company. Now... Why didn't you tell me about the DAT file?  
+ You could've come in here at any time before the meeting to say you found something, but you didn't. I gotta be honest. I found that kind of curious.  
+ Elliot 
+ Yeah, I didn't know what I had. Could've easily been a junk file. 
+ Gideon 
+ C'mon... You're never sure about anything unless there's something to be sure about.  
+ Elliot 
+ Maybe you don't know me that well. 
+ Gideon 
+ Regardless, I still need you to stay on it, now more than ever.  
+ I mean, who knows what these fsociety hackers are going to do next.  
+ Elliot V.O. 
+ What did he just say?  
+ Elliot 
+ What did you just say?  
+ Gideon 
+ The ones working with Colby. Who knows how deep these data dumps are going to get, and Evil Corp is-- 
+ Elliot 
+ What're you talking about?  
+ Gideon 
+ There's a twist.  
+ You're usually the one a step ahead of me. They hit the mother lode during the breach. 
+ Potentially terabytes worth of emails and files. They're threatening to dump everything unless the FBI frees Colby. They released the video this morning.  
+ Hello, Evil Corp. We are fsociety. Over the years, we have been watching you. Your financial abuse of the poor; your corruption of governments; your cover-ups of the murder of innocent, ordinary citizens, all for the sake of a profit. This is why we at fsociety have decided you must die. We are malicious and hostile. We do not compromise. We are relentless. We will not stop until every tentacle of your evil monstrosity is sliced off at the nerve. But we are also not without mercy. Our latest hack was our last warning. Meet our demands, and we will consider not destroying you. First, release our leader Terry Colby from your illegitimate prison immediately. Second, release all the people of the world from your even more illegitimate prisons of debt. Third, dissolve your corporation and donate all your assets to charities around the world. This proposal is non-negotiable. The people are realizing they don't have freedom of choice so long as you exist. The people are waking up, no longer accepting your economic slavery. Meet these demands, or we will kill you.  
+ Consider yourself warned. [sustained beep]  
+ Elliot 
+ Play it again.  
+ Cisco 
+ Yo, yo, yo, yo, my album just dropped. Yo, please buy my CD.  
+ Only cost you 20 likes.  
+ Yo, it'll give you the feels, y'all, I swear.  
+ The CD's free. All's I ask is you Tweet. Help my social media outreach.  
+ Ollie  
+ You know, be like, "I want to set up this meeting. It's like a very, like a..." Oh, Elliot!  
+ Ollie  
+ Hey, congrats, man. AllSafe is all over the internet today because of you.  
+ Dude, we should celebrate. We have this Groupon for four at Morton's on Thursday.  
+ This other couple we were going with totally with bailed.  
+ Why don't you come with? Their steaks are badass. It's $29.95...  
+ Angela  
+ I'm not sure that Elliot would like that.  
+ Elliot 
+ Yeah, okay.  
+ Ollie 
+ Yeah?  
+ Okay. Awesome, man.  
+ And, hey, why don't we make it a double date? I heard that you had a girlfriend.  
+ Angela 
+ Ollie, you weren't supposed to say anything.  
+ Ollie  
+ Babe, it's cool. Elliot's okay with it.  
+ Elliot 
+ Yeah, okay, sure. I... gotta to go. 
+ Um, my neighbor's complaining about the dog barking again.  
+ Angela  
+ Since when does he have a dog?  
+ Cisco  
+ Yo, yo, yo, yo, yo.  
+ You look like a beautiful couple.  
+ Yo, my album just dropped, you like rap, hip-hop?  
+ Yo, this sh1t is deep, lyrical, poetic.  
+ Yo, your girl will like this, my man, I swear.  
+ Ollie 
+ Come on, bro, you've been outside our building for two weeks now.  
+ All right, you know, I'll take it, if you leave us alone.  
+ Thank you, thank you, man, thank you.  
+ And I'll tweet, but only if I like it, all right?  
+ I only have 48 followers, but it's growing.  
+ Cisco 
+ No doubt, no doubt.  
+ Ollie 
+ Some tastemakers in there so… 
+ Cisco  
+ I feel you, I feel you. 
+ Ollie 
+ Yeah.  
+ Cisco 
+ All right. 
+ Yo, I appreciate it, man, really. You guys have a good day.  
+ Ollie 
+ Yeah, you too.  
+ Cisco 
+ Thank you so much. Check track two out.  
+ Ollie 
+ Track two. 
+ Cisco  
+ All right, man.  
+ Elliot V.O. 
+ This was never part of the plan.  
+ Data dumps?  
+ Releasing Terry Colby?  
+ None of this makes sense.  
+ Need to cut off all ties with fsociety.  
+ Need to disconnect. 
+ We need to call in sick and lie low for a...  
+ [dog whining] [shower running] [door shuts] 
+ Darlene 
+ Dude! Jesus Christ! I am naked, asshole! Don't stare at me!  
+ Elliot 
+ Why the hell are you in my shower?  
+ Darlene 
+ Well, I was waiting for you.  
+ You were supposed to come last night. 
+ Did you forget?  
+ Elliot 
+ Come? Where?  
+ Darlene 
+ It's fine, everyone's coming later. [Darlene sighs] I'm stealing your clothes.  
+ My dress has cum stains on it. [laughs] Jesus, I am just messing with you. 
+ My stuff is just in the wash. 'm gonna borrow this for the time being.  
+ Oh, by the way, your dog shat on your bed. You gotta walk that thing. 
+ Elliot [to Shayla] 
+ Hey, please take Flipper for a while.  
+ She probably needs a walk or something.  
+ She keeps sh1tting everywhere.  
+ Shayla 
+ Of course she needs a walk, Elliot. She's a friggin' dog.  
+ Darlene 
+ Yo, I want to stop and get some froyo before we go. [hip hop music playing over headphones]  
+ Elliot 
+ Uh, I'll be back later.  
+ I owe you.  
+ Shayla 
+ Yeah, big time.  
+ Elliot 
+ How do you know where I live?  
+ Darlene 
+ Why wouldn't I know where you live? 
+ Elliot 
+ I don't know. I don't know where you live. 
+ Darlene 
+ Well, I don't live anywhere at the present.  
+ The douche I was dating proposed to me, can you believe?  
+ I mean, what an asshole.  
+ Anyways, we got into this huge fight, and...  
+ Elliot V.O. 
+ What the hell am I doing?  
+ This chick is out of her mind batshit crazy.  
+ I gotta go back, tell Gideon everything.  
+ He'll understand, right? 
+ He'll know what to do.  
+ Darlene 
+ It's whatevs. He'll take me back.  
+ He's just gotta get over this whole "love is forever" bullshit. 
+ I'll do my disappearing act for a minute,  
+ and then he'll come to his senses.  
+ Announcer Stand clear of the closing door.  
+ Darlene 
+ You know, it's our thing. Quick! [indistinct announcer over intercom]  
+ [Darlene pushes Elliot into a different subway car] 
+ Elliot V.O 
+ Can she see them, too?  
+ Darlene 
+ What? I like to stay on my toes. Speaking of, that's, like, one of the most annoying things...  
+ Elliot V.O 
+ But what if Tyrell finds out?  
+ What will he do? sh1t, there's basically no scenario in which I'm not getting killed or going to jail.  
+ Darlene 
+ Because I wanted a turtle,and he was like, "No..."  
+ Darlene 
+ I might need to crash with you for a  
+ couple of nights. That's cool, right?  
+ Seriously?  
+ Fine! I'll crash at Mobley's. Don't love dogs anyway.  
+ Especially ones that sh1t in your bed. I mean, how do you live like that, honestly? 
+ How do you go to sleep when you know that there's… 
+ Elliot V.O.  
+ For all we know, I could be walking into a trap right now. We could be dead the second I walk through that door. 
+ Darlene 
+ Come on, kid. We got big things in store. Big things. [clapping]  
+ Darlene 
+ Man of the hour. Take a curtsy.  
+ Mr. Robot 
+ Goddamn ducks. [three gunshots] 
+ Mobley 
+ Hey, hey, man!  
+ What's...  
+ [Mobley touches Elliot and he moves back. He doesn’t want to be touched] 
+ Oh. sh1t, sorry, sorry, dude.  
+ Um, okay. Anyway, just, awesome work, man. Really awesome.  
+ Romero 
+ Right on, man. Right on. Real cool.  
+ Darlene 
+ Great. So now that we're all done going down on each other, can we please hear the plan? Where are we at with Steel Mountain?  
+ Mr. Robot 
+ If I'm not mistaken, these lines aren't 100% safe yet, and we still haven't made the Colby project disappear.  
+ Darlene 
+ Seriously? It's been weeks. Any links or traces would have been owned by now.  
+ Mobley 
+ The lines are clean, Boss, I swear.  
+ Darlene 
+ Thank you.  
+ Mobley 
+ I mean, um... if it makes you feel better, Romero and I can check...  
+ Mr. Robot 
+ Great! Make me feel great. I'm gonna hang back over here, collect my thoughts.  
+ Darlene [groans]  
+ UGGH!  
+ Elliot 
+ What's her deal? 
+ Mr. Robot 
+ Ah, she's a complicated woman. Most malware coders are. Am I right?  
+ Elliot 
+ She showed up at my apartment. Why does she know where I live? 
+ Mr. Robot 
+ Let's not focus on her. That'll be like entering a bad K-hole you'll never wake up from. Instead,  
+ I need you to focus on the next phase of our project. Comet, the natural gas plant up around Albany? We're gonna blow it up.  
+ Elliot 
+ Why would you blow... Comet plant's right next to Steel Mountain.  
+ Mr. Robot 
+ Which, as you know, is the off-site and  
+ data storage facility for every corporation in the S&P, including everyone's favorite...  
+ Elliot 
+ Evil Corp.  
+ Mr. Robot [snaps fingers]  
+ Bingo!  
+ Elliot 
+ You're gonna destroy their tape backups.  
+ They're gonna be looking out for something like that.They've been on high alert ever since the hack.  
+ Mr. Robot 
+ From what I heard, they've caught their hacker. Haven't they?  
+ Elliot 
+ No, they haven't. Tyrell Wellick knows.  
+ Mr. Robot 
+ What they want him to know! He's a corporate robot just like the rest of them.  
+ Besides, the entire company is gonna be reeling from all the data dumps we've got in store for them...  
+ and man, do we have some goodies.  Some good old-fashioned executive racism, sexism, fascism.  
+ Trust me, we are gonna "ism" so much all over them they won't be able to see straight.  
+ And asking for Colby's release as ransom was genius.  
+ That'll only make his spotlight bigger, keeping it off us.  
+ That neat little ditty was Trenton's idea.  
+ She may look innocent, but I'd be careful.  
+ She's got some Allah Akbar in her.  
+ And while all that's going on, you will use your AllSafe security clearance to hack the Comet PLC. 
+ Increase the pressure, causing a gas pipeline explosion making Steel Mountain go kablooey along with Evil Corp's soul.  
+ Elliot [Almost whispering] 
+ They know about all this? 
+ Mr. Robot 
+ You're the first. 
+ Elliot 
+ Workers? Anyone living around the plant... They all die? 
+ Mr. Robot 
+ We'll give them a head start. Sound some alarms. They'll be fine.  
+ Elliot 
+ You're blowing up a gas pipeline.  
+ Mr. Robot 
+ The world is a dangerous place, Elliot!  
+ Not because of those who do evil, but because of those who look on and do nothing.  
+ This is war. People will die.  
+ C'est la mort.  
+ And once we blow up the pipeline,  
+ Darlene's worm will kick into high gear at the U.S. data center which you helped us to install, thank you very much. The redundant backups at their eastern data center in China... the Dark Army is covering us on that. 
+ Elliot 
+ Dark Army? Why, man? They got no code. They hack for anyone terrorists, North Korea, Iran, Russia...  
+ Mr. Robot 
+ Which means they hate U.S. capitalism just as much as anyone. 
+ Last but not least. Steel Mountain. The hacker's dilemma.  
+ What to do when a bunch of data you want to destroy is completely off the grid? [explosion noise]  
+ Elliot 
+ I'm not killing anyone.  
+ Mr. Robot 
+ Tell me one thing, Elliot. Are you a one or a zero?  
+ That's the question you have to ask yourself.  
+ Are you a yes or a no? Are you going to act or not?  
+ Elliot 
+ Yo... you've been staring at a computer screen way too long, homie. Life's not that binary. 
+ Mr. Robot 
+ Isn't it? Sure, there are grays... but when you come right down to it,  
+ at its core, beneath every choice, there's either a one or a zero.  
+ You either do something or you don't.  
+ You walk out that door, you've decided to do nothing, to say no, which means you do not come back.  
+ You leave, you are no longer a part of this.  
+ You become a zero.  
+ If you stay, if you want to change the world, you become a yes. You become a one.  
+ So, I'll ask you again are you a one or a zero?  
+ Elliot 
+ An innocent man is in prison because of what I did.  
+ Mr. Robot 
+ Come on, let's not kid ourselves!  
+ This has nothing to do with Colby.  
+ This isn't even about my revolution.  
+ This is more than that for you.  
+ This is about how those bastards slowly killed your father and how you wished he'd done something about it. But he didn't.  
+ Because he was a zero, just like you're being right now. 
+ Elliot 
+ f*ck you. 
+ Darlene 
+ Disappearing again?  
+ Elliot 
+ I'm not killing anyone. Leave me out of this.  
+ Darlene 
+ You don't get to disappear from this.  
+ We can do it with or without you, but you're a part of it either way!  
+ Yeah, even your stupid hoodie can't protect you, bitch!  
+ Elliot V.O. 
+ This was a mistake. 
+ I've gotta turn them in.  
+ Should I turn them in?  
+ Will I get into trouble? sh1t, she's right. I'm culpable now.  
+ No, we're culpable. You're in this with me, so start thinking of solutions now. 
+ [muffled electronic music]  
+ Elliot [knocking on door]   
+ Shayla? 
+ Yo, Shayla.  
+ Vera 
+ Yo, bro. 
+ Can I help you with something? 
+ Elliot 
+ I, uh... just need to talk to Shayla.  
+ Vera 
+ Oh, your girl.  
+ She in the tub.  
+ Elliot [knocking on door]  
+ Shayla. 
+ Vera 
+ Yo, she'll be out in a minute. Can sit and wait if you want.  
+ Elliot 
+ I think we should check on her, to make sure she's all right.  
+ Vera [laughs]  
+ You a funny dude.  
+ I like you.  
+ Don't be rude.  
+ Sit down and chill.  
+ No, that's right.  
+ You only do this. 
+ Only n---a I know that take withdrawal meds while he using.  
+ That's smart. Probably even convinced yourself you ain't an addict. [laughs]  
+ Oh, sh1t. Forgot to introduce myself. I'm Fernan… 
+ Elliot V.O.  
+ Fernando Vera, Shayla's supplier. One of the worst human beings 
+ I've ever hacked. His password? "eatadick6969."  
+ Aside from the massive amounts of money he spends on p0rn and webcams, he does all his drug transactions through emails, IMs, Twitter.  
+ The fact that the cops haven't caught him yet is beyond me.  
+ If they had half a brain cell, they'd be able to crack his gang's simplistic code, if it can even be called that.  
+ After only a couple of hours of timing his tweets with related news articles, I figured out that  
+ "biscuit" and "clickety" clearly referenced guns.  
+ "Food," "sea shells" or "gas" for bullets. 
+ And the ultimate "rock to sleep early." 
+ I haven't made the direct connection to a hit yet, but the math of guns plus bullets usually adds up to one thing.  
+ I've thought about turning him in, but he's Shayla's only supplier.  
+ I take him down, I lose my drugs, and with everything going on right now, I can't have that.  
+ Vera 
+ You get that, though? [inhales] [laughs]  
+ Anyway, bro, I ain't nothing to worry about.  
+ Just making a drop for you. What's your name, anyway? 
+ Elliot 
+ Elliot.  
+ Vera 
+ What it mean? What, you ain't never Googled it?  
+ Man, you gotta do that.  
+ The meaning of a person's name is important, bro.  
+ Elliot looking to the bathroom worried about Shayla. She didn’t answer is she… 
+ Vera 
+ Yo, she good! She good.  
+ Trust me.  
+ Took care of that sh1t myself.  
+ You remind me of me when I was younger, depressed and sullen.  
+ Matter of fact, tried to kill myself, a couple of times.  
+ Never could get that sh1t right.  
+ Biology wasn't my strong suit.  
+ I hated myself, man. Still do.  
+ Thought that sh1t was a weakness for a long time.  
+ Then I realized that sh1t was my power.  
+ People walk around, act like they know what hate means. 
+ Nah, no one does, until you hate yourself. 
+ I mean... truly hate yourself. That's power.  
+ You ain't scared of me, are you?  
+ That's good. Means I didn't waste my time making friends with you. [chuckles]  
+ You don't really need these, do you?  
+ Man of your courage can last through a little withdrawal.  
+ Ya know, you the only reason why I met Shayla. 
+  I'm the only n---a in town carrying everything, including your precious Suboxone.  
+ So, in a weird way, I should be thanking you.  
+ You brought her to me.  
+ Your star orbiting with mine, gravitationally, brought me the love of my life,  
+ Elliot. I mean, this, us?  
+ Being here? This has... beautiful meaning.  
+ But make no mistake, that girl in there... is mine.  
+ I don't know what I'd do without her.  
+ Now, I don't know what kind of arrangement you had with her before, but now that we friends...  
+ I trust you respect this boundary.  
+ Feel me? [chuckles]  
+ A dude earlier today gave me that same look.  
+ Only thing I gotta say is, there's a smart time to be scared, bro...  
+ And a stupid time.  
+ [Vera leaves the apartment]  
+ 
+ 
+ 
+ Elliot 
+ Shayla?  
+ The bathroom door is locked 
+ Elliot V.O.  
+ The lock pick. Every hacker's favorite sport.  
+ The perfect system to crack, mostly because unlike virtual systems, when you break it, you can feel it.  
+ You can see it.  
+ You can hear it. [metal clatters]  
+ Elliot 
+ Shayla.  
+ Hey. Wake up.  
+ Elliot 
+ Shayla 
+ Shayla 
+ Mm. What happened? 
+ Elliot 
+ You okay?  
+ Shayla 
+ Why am I in the tub? 
+ Elliot 
+ Why was that asshole here?  
+ Shayla 
+ I don't know, um... I told him I needed your pills.  
+ He came over.  
+ We smoked a little.  
+ Elliot 
+ You remember having s*x with him?  
+ Shayla 
+ What? No.  
+ Elliot V.O. 
+ But he definitely does. 
+ Elliot 
+ Okay, let's go.  
+ Get your purse and make sure you have your I-- 
+ Shayla 
+ Stop. I'm not going anywhere, okay?  
+ Elliot 
+ What do you mean?  
+ Shayla 
+ Oh, he's just gonna get away with it. 
+ Elliot 
+ You can't go back to him.  
+ Hey, I don't need the pills.  
+ Just find someone else. 
+ Shayla 
+ I can't.  
+ He gives me a really good deal on the split.  
+ I make good money.  
+ Elliot V.O. 
+ There it is again, the invisible hand at work, controlling us, even if it pushes us past our threshold of pain.  
+ Elliot 
+ It's not gonna stop.  
+ What if he does it again?  
+ Shayla 
+ Promise me you won't do anything? 
+ I'm serious, Elliot.  
+ There's nothing to be done here. It's not like I have a choice.  
+ Hey... Would you mind sleeping here tonight? 
+ Elliot V.O.  
+ Choices. Maybe Mr. Robot's right.  
+ That's what this is all about, the yesses and nos of life. 
+ But do we decide them or do they decide us?  
+ Fernando Vera. I get rid of him 
+ I get rid of my drug dealer's supplier.  
+ I get rid of the morphine. 
+ And the pain I've been holding in comes rushing out.  
+ Sure, I can try to find another dealer, but like Vera said, no one on the streets deals Suboxone.  
+ I could go back to digitally counterfeiting scripts, but pharmas spend a lot of dough protecting their wares.  
+ Most places only take paper scripts. 
+ Continuously getting legit refills isn't realistic, and neither is being a junkie. 
+ So I quit cold turkey or let Vera exist. 
+ I know what you're thinking.  
+ The answer's too obvious.  
+ Vera may have been groping Shayla before, but he's graduated to rape.  
+ Just like Shayla, he's left me no choice.  
+ He can't be allowed to exist anymore. 
+ THERAPIST OFFICE WAITING ROOM 
+ Krista 
+ Perhaps we should start with how you're feeling.  
+ Elliot 
+ Not good.  
+ Krista 
+ What's not good right now?  
+ Everything.  
+ Humor me with some specifics. 
+ Elliot 
+ How do we know if we're in control?  
+ That we're not just making the best of what comes at us, and that's it.  
+ Trying to constantly pick between two options.  
+ Like your two paintings in the waiting room. Or... Coke and Pepsi.  
+ McDonald's or Burger King?  
+ Hyundai or Honda? Hmm. It's all part of the same blur, right?  
+ Just out of focus enough.  
+ It's the illusion of choice. 
+ Half of us can't even pick our own... our cable, gas, electric.  
+ The water we drink, our health insurance.  
+ Even if we did, would it matter?  
+ You know, if our only option is Blue Cross or Blue Shield, what the f*ck is the difference? 
+ [indistinct radio chatter]  
+ In fact, aren't they... aren't they the same?  
+ No, man... our choices are prepaid for us, long time ago.  
+ Krista 
+ I'm sorry you feel you have no control.  
+ Elliot 
+ Thought I was doing something good.  
+ I was a part of this... project. Thought I was going to be a part of something special.  
+ Krista 
+ And now?  
+ Elliot 
+ Now... It turned out to be a mistake, like everything else. What's the point, right?  
+ Might as well, just... you do nothing. Might as well do nothing.  
+ Krista 
+ You've brought up this issue before, this issue of not feeling like you're in control.  
+ Do you remember?  
+ When we spoke about your father.  
+ You talked about how he chose to do nothing when he was battling his cancer.  
+ You told him he could have fought the company that caused it.  
+ He could have told people about it.  
+ He could have sought better care than what he was getting.  
+ Instead, he did nothing.  
+ Maybe your father felt the same way as you do now.  
+ After all, like you said, what's the point? 
+ Elliot 
+ It's different.  
+ Krista 
+ What's different is you've found options, Elliot.  
+ That's the power you have.  
+ That's the control you own.  
+ You don't have to just take what life gives you. 
+ Come on. 
+ Tell me what is going on with you.  
+ I cannot help you if you keep me in the dark. 
+ Elliot 
+ Shut up! Shut up!  
+ Krista 
+ You've got bags under your eyes.  
+ You're yelling.  
+ You're jittery. 
+ For the last month, 
+ I have seen you slip into old patterns, old behaviors.  
+ What is going on? 
+ Elliot writing on a CD. His latest hack 
+ [metal pipes clanking quietly] [thud]  
+ [clanking continues] [cell phone vibrates] [line ringing] [stops ringing]  
+ Angela 
+ He's still not answering.  
+ Ollie 
+ Well, we'll just have to ask him tomorrow.  
+ Every time I try to play it or rip it, it just freezes up my computer and spits it back out again.  
+ Angela 
+ He's not okay.  
+ He was acting so out of it at work today.  
+ Ollie [Distracted. DM’ing with Stella B.] 
+ Um... Are you saying something, babe?  
+ Angela 
+ Something's wrong. Should I go over there?  
+ And just... Check in on him?  
+ Uh... come on. That's ridiculous.  
+ You know he's always been a weirdo, right? 
+ Ollie 
+ I'm really worried about him.  
+ Um... My Arizona buddy Fred hit me up.  
+ He wants to grab a drink. 
+ Shouldn't take too long.  
+ Angela 
+ Okay. 
+ [line ringing] [shower running] [line ringing] [shower water running] [stops ringing]  
+ Someone watching Angela through the webcam. 
+ It’s the guy that was selling CD’s. 
+ CONEY ISLAND  
+ Kids skateboarding 
+ Nice one, bro. Nice. [hip-hop plays] ♪ ♪ [indistinct chatter] ♪ ♪  
+ Mr. Robot  
+ "Deep passions, longing...  
+ The two of them had never felt such a love, such closeness, such a connection."  
+ Elliot 
+ Found a way to do it without— 
+ Mr. Robot 
+ Shh! Sit down. 
+ Elliot 
+ I know how to take out the backups without blowing up the pipeline.  
+ Mr. Robot 
+ You know, Elliot, I really feel like we resolved this thing between us.  
+ Didn't you walk away? 
+ Elliot 
+ I did.  
+ Mr. Robot 
+ Didn't I say that if you walked away, you were no longer a part of this?  
+ Elliot 
+ I have a real plan-- 
+ Mr. Robot 
+ If you want me to let you back in, there's an understanding we have to come to, a debt you have to pay, because,  
+ remember, you walked away.  
+ Elliot 
+ I thought you didn't believe in debts.  
+ Mr. Robot 
+ Not true. I believe in debts. I believe in erasing them.  
+ Elliot 
+ What do you want?  
+ Mr. Robot [exhales]  
+ I want you to tell me about your father.  
+ Elliot 
+ You're not gonna get into my head, man. 
+ Your David Koresh sh1t isn't gonna work on me.  
+ Mr. Robot 
+ Tell me how he died.  
+ Elliot 
+ Why, man? Something tells me you already looked that sh1t up anyway.  
+ Mr. Robot 
+ I wanna hear it from you.  
+ Elliot 
+ So I do this... we go back to the arcade, discuss the plan with the rest of them?  
+ I don't know what you want me to say.  
+ We were close. Very close.  
+ He was my best friend. Worked at Evil Corp his whole life.  
+ He was one of the best computer engineers they had.  
+ And out of the blue, he got fired. No one knew why. Then one day he told me. 
+ He had leukemia.  
+ Made me swear to never tell anyone, especially my mom. So I didn't. A few months go by... he got sicker and sicker.  
+ Finally, I got so worried... told my mom.  
+ When he found out, he got pissed.  
+ Started yelling. I remember I tried to hug him, tell him I'm sorry, and... kept shoving me away  
+ and shoved me so hard I fell backwards out the window. 
+ I fell, and I broke my arm.  
+ Never spoke to me after that.  
+ Couldn't even look at me.  
+ Even the night he died. We good?  
+ He lets Mr. Robot touch him 
+ Mr. Robot [sighs]  
+ I understand what it's like to lose a parent.  
+ It's heartbreaking.  
+ Did you ever think he was right?  
+ Elliot 
+ About what?  
+ Hurting you that day?  
+ For what you did to him?  
+ You ever think you deserved it? 
+ Elliot 
+ I didn't do anything to him. I was trying to help him.  
+ Mr. Robot 
+ For betraying his trust. 
+ Elliot 
+ I was eight years ol— 
+ Mr. Robot pushes Elliot off the rail. 
+ Mr. Robot 
+ You didn't commit to the sacred pact you'd formed. 
+ This script was corrected and submitted by Coda. 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

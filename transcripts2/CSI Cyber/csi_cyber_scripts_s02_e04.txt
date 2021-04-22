@@ -1,0 +1,854 @@
+Transcripts - Forever Dreaming :: 02x04 - Red Crone - CSI: Cyber 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 02x04 - Red Crone https://transcripts.foreverdreaming.org/viewtopic.php?f=224&t=23359 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 10/26/15 15:06 ] 
+ 
+ 
+ Post subject:  
+ 02x04 - Red Crone 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ (panting) 
+ And the evil witch peered inside the oven and that's when Gretel pushed her in and locked the door. 
+ And then Hansel and Gretel were free. 
+ No, Dad, you're telling it wrong. 
+ Excuse me? 
+ Gretel locked the oven. 
+ The evil witch screamed! 
+ The flames melted her face off. 
+ Her bones were sticking out. 
+ And her guts were hanging. 
+ And then... she died. 
+ Michelle. 
+ (laughs) 
+ Really? What? 
+ That's the way Grandpa tells it. 
+ Grandpa and I are gonna have to have a little chat. 
+ Will you ask him something for me? 
+ Sure. What do you want me to ask him? 
+ Is he mad at me? 
+ Why-why would he be mad at you? 
+ I don't know. 
+ He hasn't come over in a while. 
+ Um... 
+ Grandpa's sick. 
+ What kind of sick? 
+ The kind of sick that... it just, it makes it hard for him to do the things that he used to. 
+ We should bring him Mom's chicken soup. 
+ That'll make him better. 
+ I couldn't get anything off this phone, Agent Pierce. 
+ We need Daniel Krumitz. 
+ Krumitz :  Sausage, onions.  olives, jalapenos. 
+ What? What do you mean you can only do eight toppings? 
+ Well that policy's unacceptable, Lloyd. 
+ Daniel Krumitz? 
+ Uh... 
+ I got to call you back, Lloyd. 
+ Yeah. 
+ Oh, shoot. 
+ Agent Rosalyn Pierce. 
+ Richmond Field Office. 
+ FBI Violent Crime Squad. 
+ You're... you're Daniel Krumitz? 
+ Yes. Yes. Yes, I am. 
+ (clears throat) 
+ Krummy. No, Krumitz. 
+ Yeah. 
+ Uh, there are two kids missing in Richmond, Virginia, and I need your help. 
+ I hear you have the best hands in the FBI. 
+ Ready? 
+ Whoa, whoa, wait a minute. Remind me why we're doing this again? 
+ Because in social settings, first impressions are often formed in as little as a tenth of a second. 
+ Okay. So we're gonna count to three. 
+ One, two... three. 
+ Lose the tie. Too formal. 
+ You look lovely. 
+ Thanks. 
+ No tie, okay, all right. 
+ You're nervous? 
+ Just a little bit. 
+ I haven't had a first date since... 
+ Watergate. (laughs) 
+ Do you have an opening line? 
+ I do. Um... It's very nice to meet you. 
+ You look even more beautiful than your-your profile picture. 
+ A little on the nose. 
+ Okay, I can work on that. Uh, you? 
+ What about your opening line? 
+ (inhales) Haven't thought about it. 
+ Uh, Director Silver, this shrimp cocktail's delicious. but, shellfish aside, I'd like to talk about a little extra funding for Cyber to catch Python. 
+ Yeah. I-I think shrimp cocktail's a little too soon. 
+ You know, I'd wait till he had a few drinks in him before you bring up our most notorious hacker. 
+ (chuckles) Hmm. 
+ Ryan : Those two are leaving in different elevators. They never used to do that. 
+ They are dating. 
+ Really, two black hats dating-- doesn't that violate the deal they had with the FBI? 
+ Well, technically. 
+ But look at it from their side. 
+ Everyone they know is a black hat. 
+ I've cut them off from all their friends. 
+ They only have each other. 
+ So what are you gonna do, let 'em off the hook? 
+ Everyone deserves to get laid. 
+ As far as breaking rules, we'll cross that bridge if we get to it. 
+ I'm not sure they're gonna make it. 
+ Nelven is a very improbable match. They're too alike. 
+ Nelven? 
+ Nelven. 
+ Nelson, Raven, Nelven? 
+ Oh, you're doing the, uh, the Brangelina, Bennifer thing. 
+ The Kimye thing. 
+ Now who, uh, who's that? 
+ Pierce : It's like surgery. 
+ You really do have the magic touch. 
+ Shh. 
+ Just listen. 
+ I don't hear anything. 
+ Well, it's probably too subtle for your untrained ear... but she's talking to me. 
+ The missing boys are 12 and ten. 
+ This phone is our strongest lead. 
+ We found it submerged in a fountain about three hours ago. 
+ AMBER Alerts and bolos have been a dead end. 
+ There. Let's see what we've got. 
+ Looks like I have some image files. 
+ Whoa, whoa. 
+ What the hell was that? 
+ Jacob and Luke Sullivan. 
+ 12 and ten years old. 
+ Agent Pierce, what time did the boys go missing? 
+ So, neighbor saw them come home at 3:00, mom got home at 4:00 and they were gone. 
+ Any sign of forced entry? 
+ No. Local PD checked with friends and relatives. 
+ No one's seen or heard from them. 
+ This is the image I pulled off of Luke Sullivan's phone. 
+ She's called Red Crone. 
+ She's an Internet horror meme that's gone viral in the last six months. 
+ Apparently kids are obsessed with her. 
+ So the crone is an archetype in folklore-- an old woman with supernatural powers. 
+ Every culture has one. 
+ Well, this picture is actually a digital steganography exploit. 
+ Someone hid malicious code inside the pixels of the JPEG. 
+ Luke's phone was infected with malware Now the boys are gone. 
+ Where'd the JPEG come from? 
+ I ran an image search and it led me to a forum for Red Crone. 
+ Ryan : Looks like the content is user-generated by fans. 
+ Do we know who created the Red Crone? 
+ Well, there is no single author. 
+ Someone took the folklore character and added one detail, then other fans added more details, until she became a viral sensation. 
+ Her entire mythology's user-generated. 
+ Krumitz, scroll down to earlier posts, around 3:00 p.m. 
+ Wait, stop. 
+ Go back. 
+ That's them. That's Jacob and Luke. 
+ This is it. We're finally going to meet Red Crone. 
+ We're the chosen ones. 
+ We're all packed. We know the way. 
+ I guess this is good-bye. 
+ Red Crone, if you're listening... see you soon. 
+ Look how excited they are. 
+ These really think they're going to meet a real person. 
+ Yeah, but the Red Crone is fictional. 
+ We need to be worried about who those boys are really gonna go meet. 
+ (woman shrieking) 
+ ♪ CSI Cyber 2x04 ♪ 
+Red Crone 
+Original Air Date on October 25, 2015 
+ ♪ I know you've deceived me, now here's a surprise ♪ 
+♪ I know that you have, 'cause there's magic in my eyes ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ I can see for miles and miles ♪ 
+♪ And miles... ♪ 
+♪ Oh, yeah. ♪ 
+ (panting) 
+ Hey, where are you at with the malware on Luke's phone? 
+ When Luke saved this creepy photo to his phone,  an executable downloaded an app without him even knowing. 
+ Ramirez :  What does the app do? 
+ I don't know yet. Downloading it now. 
+ Huh, looks like Jacob and Luke were heavy users of the Red Crone fan site. 
+ Oh, check this out. 
+ Yeah. 
+ There's a huge spike of activity in Richmond over the last month. 
+ Lots of posts of sightings of Red Crone. 
+ A cemetery... flour mill, an abandoned hotel. 
+ (computer beeps) 
+ Oh! 
+ Here we go. 
+ The app is done loading. 
+ Let's see. 
+ Oh, it's an app called Eye Of Red Crone. 
+ It's just a viewfinder. 
+ Makes everything black and white, adds a horror effect. 
+ It's a camera filter. 
+ Like the ones on Instagram. 
+ Yeah, but there's no button for taking photos. 
+ So the malware forced Luke's phone to download an app that's a camera filter? 
+ Why have a camera filter if you can't take a photo? 
+ Red Crone, if you're listening, see you soon. 
+ It just doesn't make sense. 
+ I... this doesn't sound like my boys. 
+ They wouldn't just run away like this. 
+ And where are they going? 
+ We're not sure, but we're gonna find out. 
+ Have your boys ever mentioned Red Crone before? 
+ No. I mean, I don't know. 
+ They're... they're always talking about this character and that from their... their games and their apps. 
+ We shouldn't have gotten them those phones. 
+ Mrs. Sullivan, You didn't do anything wrong. 
+ All right? 
+ I have a ten-year-old myself, a daughter. And her mom and I are having the same conversation right now. Half the kids in her class have cell phones. 
+ We're going to find your boys. 
+ Avery, look at that. 
+ Could be a map or directions or something. Uh, Mrs. Sullivan, do you have a printer? 
+ Uh, yes, it's over there. 
+ (phone buzzes) 
+ Excuse me, this is my husband. 
+ Karen : Hi. Do you have any news? 
+ (Karen continues conversing, indistinctly) 
+ Karen : Yeah. Can I come out there? 
+ Karen : Okay. Yeah, they're here. 
+ (phone ringing, Karen continues talking) 
+ Hello? 
+ Y-Yes? 
+ Wha... He what? 
+ Yes, I-I... I understand your slots are limited. Uh... 
+ I will do that. Thank you. 
+ Is everything all right? 
+ My dad. 
+ I lined up the best clinic, the best doctors, and he doesn't show up for his first radiation treatment. 
+ Elijah, I'm so sorry. 
+ It's... 
+ This was the last thing on the printer cache. 
+ It doesn't look like a map, it looks like an invitation. 
+ Yeah. 
+ "You've been chosen. 
+ Enter the wilderness if you dare." 
+ Well, if the boys were headed into the "wilderness," why did they find Luke's phone at a fountain in Richmond? (sighs) 
+ Well, this is the last known location of Jacob and Luke. 
+ According to cell tower data, both their phones dropped off the network right here around 6:00 p.m. 
+ So Luke's phone was recovered... from the fountain. 
+ Right? What... what about Jacob's? 
+ Oh, Agent Pierce and her team searched the entire area-- they never found it. 
+ Russell : Pull up a photo of Luke's phone. 
+ Are you gonna... 
+ Yeah. Yep, yep, yep. O... Kay. 
+ Okay, let me, uh... 
+ All right. 
+ Don't get that wet, don't get that wet. 
+ You're such a worrywart, you know that? 
+ I won't. 
+ Looks like Luke's phone collided with the cement... right there. 
+ You know, it's too hard to tell from these crime scene photos if there was a struggle. 
+ Well, according to Luke's call history, he tried to call his mom seconds before his phone went dead. 
+ But the call never went through. 
+ Okay, so what... what do we know? 
+ Luke and Jacob left their house, travelled three miles to get to this spot, and then... something happened. 
+ Somebody wanted to take those boys offline. 
+ And it worked. 
+ ♪ ♪ 
+ When is a viewfinder not a viewfinder? 
+ Raven : Just got a text from Elijah. 
+ Elijah wants us to figure out who sent the invitation to the boys. 
+ The printer cache said it was printed directly off the Red Crone fan site. 
+ (tapping keyboard) 
+ Oh, it just keeps auto-focusing like crazy. 
+ Raven : That's what cameras do. 
+ Yeah, but it's not a camera, remember? 
+ (electronic chime) 
+ It's like it's searching for something. 
+ Oh, here we go-- I think I found it. 
+ A link of the invitation was sent directly to Jacob in the comments section by someone with the handle: Crone805. 
+ "To fulfill your destiny, you must view the world through my eyes." 
+ Okay, hold on. 
+ "View the world through my eyes." 
+ And the app's called Eye of Red Crone? 
+ Mm-hmm. 
+ Eye of Red Crone. 
+ That's it! Nelson... 
+ Okay, I think we're supposed to hold up the viewfinder to the invitation. 
+ All right. 
+ (wings flapping, echoing scream) 
+ Nelson (chuckles) : Snap! Look... 
+ It's not a viewfinder. 
+ It's a decoder. 
+ What do you got, Krummy? 
+ Nelson said our target preprogrammed this decoder app with certain trigger images. 
+ Now, the decoder constantly searches for these images until it finds one, and when it does, it decodes a secret message. 
+ Does the trigger image have to be on a piece of paper, like the invitation? 
+ No, no. It can be anything. 
+ It can be a drawing, a symbol, an object-- pretty much... any two-dimensional or three-dimensional object in the real world. 
+ Russell : So when Jacob and Luke launched this app at their house and then focused on the invitation here, Mm-hmm. they came up with... the riddle. 
+ Russell/Krumitz/Ryan : Whoa. 
+ "If you're truly a chosen one, go to where the serpents feed. Stand with your feet at the water's edge, and they will show you the way." 
+ So... serpent. 
+ Right? 
+ This is Serpent Ridge Fountain. 
+ This is a famous landmark. 
+ This is why the boys came here. 
+ If the app is telling Jacob and Luke where to go... 
+ Russell : Right. the next trigger image should be... right here. 
+ Ryan : Here, Krumitz, try this. 
+ Krumitz : Elijah, nothing's happening. 
+ No. 
+ The trigger image isn't here. 
+ Pull up the fan site. 
+ Search the Red Crone mythology for key words. 
+ Chosen one. 
+ Water's edge. 
+ Serpent. 
+ Okay, the chosen ones are the children who Red Crone invites to join her in her mansion in the woods. 
+ Water's edge refers to the lake Red Crone and her children would go to to watch the sunset. 
+ All right, wait a minute. 
+ Sunset. 
+ You know, maybe it has to be sunset for the decoder to work. 
+ Change the internal clock on the tablet so that it thinks it's sunset. 
+ It's now 6:03 p.m. 
+ Guys, it's working! 
+ "Touch my hand if you have the courage to be invisible. No cheating." 
+ (beep) It puts the tablet in airplane mode. 
+ Clever. Makes the kids untraceable. 
+ Invisible to anybody who wants to find them. 
+ That's also why Jacob's phone went off the network with Luke's. 
+ What about Luke's phone? 
+ Why did it end up in the fountain? 
+ Well, Luke tried to call his mother moments before the phone died. 
+ He wouldn't be able to do that in airplane mode. 
+ A phone not in airplane mode is cheating. 
+ So Luke was breaking the rules. 
+ Maybe the boys argued about it. 
+ What are you doing? 
+ Calling Mom. I want to go home. 
+ No. That's cheating! 
+ Okay, there's... there's another page. 
+ Check this out. 
+ "Follow the blackbird to where the bodies lie. If you listen closely, a young blood cries." 
+ "Bodies lie." "Young blood cries." 
+ Mundo : Wait a minute. 
+ Wait a minute. Look at that. 
+ It always points the same direction. 
+ It's a compass. The blackbird tells the boys what direction to go, and... 
+ I guess the riddle tells them where to stop. 
+ This is a virtual treasure hunt. 
+ But the prize at the end isn't treasure. 
+ It's a trap. 
+ Ryan : Elijah! 
+ Krumitz : "Follow the blackbird to where the bodies lie. 
+ If you listen closely, a young blood cries." 
+ This is it-- where... where the bodies lie. 
+ Russell : First a fountain, now a cemetery. 
+ These kids are being lured with this treasure hunt. 
+ Willingly lured. 
+ They're "legend tripping." 
+ (birds cawing) 
+ They think they're on a ghost hunt to prove an urban legend is real. 
+ What do we know about Crone805? 
+ Raven said he's behind all the posts about Red Crone sightings in Richmond. 
+ He anonymized his handle using a VPN. 
+ A virtual private network that's untraceable, right? 
+ So at least we know our target is text-savvy. 
+ Savvy-ish. 
+ He didn't write the exploit that put malware on Luke's phone-- Russian hackers have been selling it on the Deep Web for a hundred bucks. 
+ Well, that means he's a script kiddie, not a true black hat. 
+ Krumitz, let's search this side, see if we can find that trigger image. 
+ Look at this. 
+ I was looking at the art that our target posted on this... this fan site. 
+ I mean, it's disturbing, yes, but it's... clearly done with a sophisticated hand. 
+ I think maybe we're looking for an artist. 
+ An artist and a predator. 
+ Likely male. 
+ He's trolling the sites, searching for local kids who are obsessed with Red Crone. 
+ Selected Jacob and Luke... and tricked them into becoming his... unknowing victims. 
+ A problem, this... this fan site is a virtual attractive nuisance. 
+ It has hidden hazards that... that are attracting these kids. 
+ Anyplace with unsupervised kids is a... magnet for pedophiles. 
+ ♪ ♪ 
+ (phone vibrating) 
+ (phone continues vibrating) 
+ Hello? 
+ I-I can't. 
+ I-It's my day off. 
+ No, I have plans today. 
+ Okay. 
+ Okay, fine. 
+ (sighs): Yeah, I'll-I'll be there. 
+ (sighs heavily) 
+ (birds cawing) 
+ Mundo : Krumitz! 
+ The riddle said something about "young blood." 
+ Look at the numbers on that grave. 
+ It's the grave of a child. 
+ Ooh. 
+ Avery? 
+ We found it. 
+ "Along with your blood, it's your soul I crave. Leave a token of your loyalty to prove you're brave." 
+ Token of loyalty. 
+ Guys, we got blood. 
+ Russell : Where? 
+ Ryan : Ooh, looks fresh. 
+ Ooh. Okay. 
+ This is a... hyperspectral lens. 
+ Can measure the oxygen level in blood. 
+ Can tell you within a five-minute window how long blood... has been outside of the body. 
+ (shutter clicks) 
+ (burbling) 
+ (rapid beeping) 
+ His blood's less than an hour old. 
+ All right, that means Jacob and Luke can't be that far ahead. 
+ Ryan : Elijah, look, a blood trail. 
+ (shutter clicks) 
+ There's some blood. Here. 
+ (whimpering) It's okay. It's okay. 
+ I'm not gonna hurt you. 
+ My name's Avery. What's your name? 
+ (crying and gasping) 
+ Timmy. Elijah, call the paramedics. 
+ Timmy? 
+ Timmy, okay, I'm gonna put some pressure on this, okay? 
+ I'm gonna hold your hand up, I'm gonna get you to a doctor, Timmy. 
+ No. No, I have to keep going! I need to make it to the end! 
+ Yeah, settle down, settle down. 
+ I'm gonna stay right here with you. 
+ It's okay. Where are you going? 
+ To go meet Red Crone? 
+ Timmy, what makes you think Red Crone is real? 
+ People talk about her online. 
+ They've seen her. 
+ And she sent me a present. 
+ A present? 
+ An app... on my phone. 
+ It popped up like magic. 
+ She chose me. 
+ Have you seen any other kids on this treasure hunt? 
+ No. 
+ Has anyone else spoken to you about Red Crone? 
+ No. I have to keep going. 
+ No, no, no. I'm the Chosen One. I'm the... 
+ Honey, shh, shh, shh, shh, shh, shh. 
+ Honey, honey, okay. Shh, shh. Let's get... 
+ (crying) 
+ 
+ 
+ 
+ (garbled radio transmission) 
+ I'm worried, D.B. 
+ Timmy was invested to that legend to the point of delusion. 
+ They're not just fans, they're fanatics. 
+ We need to shut this site down. 
+ The riddle is asking them to leave a token of their loyalty. 
+ If they have to prove their devotion at each step, they'll grow more and more indoctrinated along the way. 
+ He's brainwashing them. 
+ And if they're required to physically hurt themselves this early on, imagine what they'll be required to do when they reach the end. 
+ I found additional blood at the gravestone. 
+ It was dried. 
+ If it belongs to either Jacob or Luke, then they're further ahead than we thought. 
+ How much further? 
+ Eight hours. 
+ Eight hours?! Who knows how many steps there are to this treasure hunt? 
+ We don't have time to play this sick game. 
+ We have to skip to the end now. 
+ This app is sophisticated. 
+ And it puts phones in airplane mode, killing GPS and cell reception. 
+ Yeah, but the game and internal compass keeps running. 
+ No clues as to Jacob and Luke's location on FriendAgenda. 
+ Raven, who's Henry? 
+ I... I'm sorry. Did you go through my phone? 
+ No. 
+ Did you hack it? 
+ No, I just seen a text pop up on your screen. 
+ Oh, okay, so you did go through my phone. 
+ No, it was unlocked. It right in front of me. 
+ Thought it was Elijah texting again. 
+ Okay, well, that text is private, Nelson. 
+ It's none of your business. 
+ Oh, yeah? 'Cause the last time I checked, we was all up in each other's business. 
+ (door creaks open) 
+ (man coughing) 
+ When I was analyzing the code for the app, I found a bunch of leftover dead code. 
+ I mean, our target built his treasure hunt off the framework of another app. 
+ So Avery was right. 
+ He is just a script kiddie. 
+ He found an app that had all the functionalities he wanted-- a game called Panda Pavilion. 
+ Then wrote code on top of it. 
+ Look at what happens when I activate the paths to the dead code. 
+ Did you contact the developers of Panda Pavilion? 
+ Yup, but get this. 
+ They only sold 34 downloads because there was a competing app that was way more popular. 
+ So basically, our target knocked off a cheap and unpopular knock-off. 
+ Which is good for us. 
+ Our target has to be one of the 34 people who downloaded that app. 
+ He had to pay for it somehow. 
+ Well, maybe that's where he made a mistake. 
+ He could have used his personal credit cards. 
+ That should get us his name and address. 
+ Yeah, you're right. 
+ I'm on it. 
+ Krumitz : I imaged Oliver Crispin's computer. 
+ Found a ton of media files, but no child pornography. 
+ Look where he keeps his supplies. 
+ He's left-handed-- a common trait among pedophiles. 
+ These children-- their images, their eyes-- they're almost too innocent. 
+ Mundo : They're all wearing nightgowns. 
+ It's creepy. 
+ That's part of the mythology. 
+ The fire in the orphanage happened in the middle of the night. 
+ Look at this perspective. 
+ Oliver is viewing the world through the child's eyes. 
+ It's a subconscious attempt to identify with their innocence. 
+ He's a non-contact pedophile. 
+ Non-contact? 
+ It's likely he's never physically acted on his urges. 
+ He's been able to suppress them for a long time using his art and his fantasies as an outlet. 
+ Then what's the point of the treasure hunt? 
+ Clearly, he's luring Luke and Jacob to do something. 
+ No, he's planning to act. 
+ To lose his virginity, so to speak. 
+ He has fixated on this moment for a long time. 
+ The treasure hunt is his foreplay. 
+ It's sick. 
+ Guys like this should be put down like dogs. 
+ Hey, guys? 
+ Oliver's a court illustrator, and I just found this e-mail. 
+ "Preliminary hearing has been moved to Courtroom B." 3:00 p.m. 
+ 3:35. He's in court right now. Go. 
+ Okay, everyone, let's call it a day. 
+ Court's adjourned until 9:00 a.m. tomorrow. 
+ FBI. 
+ Woman : Oh. 
+ FBI. 
+ Oh. Oh, sorry. 
+ Hey! 
+ Elevator. 
+ Easy, man. 
+ FBI. 
+ (door creaks open) 
+ Raven, our target's on the move. 
+ Put out a BOLO, and an APB on his car. 
+ Are we tracking his cell phone? 
+ His cell plan was recently canceled. 
+ If he has a phone, it's a burner. 
+ Look, Elijah, Krumitz sent me what he imaged from Oliver's home computer. 
+ I found photos of five trigger images for his treasure hunt. 
+ I analyzed the metadata and pulled GPS coordinates for all of them. 
+ Raven : Okay, we mapped them out. 
+ The boys are headed to Stony Creek State Park. 
+ Mundo : Guys, that's a pretty big park. 
+ Nelson : Yeah, I know but we're stuck. The decoder doesn't work on the last trigger image. 
+ It should be giving us a blackbird and riddle that leads to the final location where the target's meeting the kids, but it's not working. 
+ What's the image? 
+ It's an eye carved in a tree. 
+ We have the GPS coordinates, but that's as far as we can get you. 
+ All right, send the coordinates. We'll just have to go there and figure things out on the ground. 
+ (siren blaring) 
+ All right, this is the spot. 
+ We're looking for this image carved into a tree. 
+ Take those, pass them around. 
+ (overlapping chatter) 
+ What? 
+ The cracks in the bark, and look at the carving. 
+ See that white right there? That's fungus. 
+ This tree has oak wilt. 
+ It's rotting from the inside out. 
+ All right, we're looking for a... a tree with a lot of dead leaves on it. 
+ Got anything? 
+ Right there, that's it. 
+ It's got dead leaves. 
+ (indistinct radio communication) 
+ Man : Yeah, over there. 
+ Man : Down this gulley? 
+ Man 2 : Well, go ahead check it out. 
+ Man 3 : Check your perimeter. 
+ Hey, guys? 
+ Man : Come on, guys! Over here! 
+ It's one of their hats. 
+ The boys have been here. 
+ (sighs) Okay. 
+ Man : Tell them to come back! 
+ Krumitz, here! Here! Here. 
+ (panting) 
+ Man : Keep your eyes open! It's in this area! 
+ Ryan : You got it! 
+ "Welcome to the wilderness. You're almost there. I can sense your soul around me. Come to my playground if you dare." 
+ Nelson? 
+ All right, Avery, I'm here. 
+ I see your location on the satellite. 
+ The new compass heading is one-nine-five. 
+ Do you see any structures on that path? 
+ Uh... Looks like an abandoned schoolhouse. 
+ I'm sending the coordinates now. 
+ Let's get this son of a bitch. 
+ New coordinates. SWAT on me. 
+ Man : Copy that. 
+ Man 2 : Bring 'em in. 
+ (sighs) 
+ (breathing loudly) 
+ (exhales loudly) 
+ All right, go! 
+ Go! 
+ Man (over radio) : We're a half mile out on that. 
+ (breathing loudly) 
+ Woman (over radio) : ...location, guys. Location. 
+ (crying) 
+ (indistinct chatter) 
+ (indistinct chatter) 
+ (gasps) 
+ Go! go! 
+ (indistinct shouting) 
+ Man : Clear! 
+ FBI! FBI! Clear! 
+ Clear! Clear! 
+ (knocking) 
+ (door creaks open) 
+ Jacob, Luke. 
+ Hi. 
+ Hi. 
+ Red Crone is waiting for you. 
+ What the hell happened? They should be here. 
+ Nelson, are there any other structures along the current heading? 
+ No, the schoolhouse is the only one for the next 18 miles. 
+ Expand the search area in all directions. 
+ Look for any structures within a five-mile radius of the trigger image. 
+ Cross-reference property records. 
+ Look for something, anything, that can be our target's hideout. 
+ D.B., Krumitz, we missed something. 
+ Go back to the trigger image, decode it again. 
+ Anything? 
+ I'm getting the same thing, Avery. 
+ Something is not right. 
+ We missed something. 
+ Maybe it's the riddle, or maybe we're looking at this wrong. 
+ Maybe we just need to slow down here, you know, and-and think like a kid, okay? 
+ We need to think like a kid. 
+ Man : Keep your eyes open. 
+ Wait a minute. I have an idea. 
+ Look at that. 
+ Krumitz : Holy crap. 
+ It just changed. 
+ Russell : "Welcome to the wilderness, be afraid of the night. I can sense your soul around me. Search the woods for red light." 
+ Avery... there are two riddles, one for adults and one for kids, depending on the-the tilt of the tablet. 
+ The decoder's using the tablet's gyroscope to distinguish between an adult perspective and a kid's. 
+ Nelson : That's why I couldn't get it to work. 
+ I had the decoder at the wrong angle. 
+ Oliver did this on his last trigger image as a safeguard. 
+ To throw adults off his trail. 
+ Mundo : To throw law enforcement off the trail. 
+ Avery : What is the new compass heading? 
+ Two-seven-zero. 
+ 75 degrees off the old heading. 
+ It's an old theater. 
+ Used to be part of a resort that closed down in the '70s. 
+ Send me the coordinates. 
+ (trilling) 
+ It's about a half hour away. 
+ Elijah! 
+ Elijah! Wait for backup! 
+ (engine starts) 
+ Come on, move out! 
+ (creaking) 
+ (door creaking) 
+ Elijah! 
+ Wait for backup! (panting) 
+ Oliver Crispin, FBI. 
+ Keep your hands where I can see them. 
+ (grunting) 
+ Where are the kids? 
+ (grunting, panting) 
+ Jacob, Luke, you okay? 
+ Did he hurt you? 
+ No. 
+ My name's Elijah. I'm here to help. 
+ Stay right where you are. Be right back. 
+ Crispin : It was just a game. 
+ I just wanted to scare them. I wasn't gonna hurt them. 
+ They wanted to play. They wanted it! 
+ (grunts) 
+ They wanted it! 
+ (grunting, panting) 
+ (panting) 
+ What did you say? 
+ They wanted it. 
+ (grunts) 
+ In the bathroom. 
+ (grunts) 
+ You son of a bitch. 
+ Elijah! Where are the boys? 
+ There. 
+ Okay. It's-it's okay, it's okay. You're gonna be okay. 
+ You're safe. It's okay. 
+ I'm Agent Avery Ryan. I'm here to take you home. 
+ (boys crying) 
+ (distant siren whooping) 
+ (indistinct radio communication) 
+ Man (over radio) : Hey, uh, I'm gonna be here another 15. 
+ Do me a favor. 
+ Then I'm gonna show you something really cool. 
+ Cut it in half. 
+ There you go. Nice. 
+ All right, I'm gonna put this here and... 
+ I asked you to cut this in half. 
+ What's wrong with you? 
+ You're supposed to cut it in half-- is there something wrong... 
+ Woman : Jacob! with your scissors? What... 
+ Luke! 
+ Mom! Mom! 
+ Dad! Dad! 
+ (crying) 
+ Jacob : I'm so glad you're here. 
+ (indistinct radio communication) 
+ Agent Pierce? 
+ It's Daniel Krumitz. 
+ (chuckles) I got good news. 
+ The boys are safe. We caught the guy. 
+ Yeah. Yeah. 
+ No, no, no. You don't have to... 
+ Dinner? 
+ Me? 
+ This is Daniel Krumitz. You know that, right? 
+ (chuckles) 
+ I do have the magic touch. (chuckles) 
+ Pizza sounds great. 
+ Krumitz. 
+ You crossed a line tonight. 
+ You didn't wait for backup. You put yourself in danger. 
+ (scoffing) 
+ You're going through something, Elijah. I get that. 
+ But working out your aggression on the job is not an option. 
+ That's not what happened here tonight. 
+ I made sure that those kids were safe. 
+ And our target, he got what he deserved. 
+ You've been throwing a lot of punches lately. 
+ I always follow protocol. 
+ In this case, you didn't. 
+ I'm taking you out of the field. 
+ You what? 
+ Avery, come on. Just until you get your head straight. 
+ Elijah, this is not you. 
+ (crickets chirping) 
+ If you came here to lecture me about not making that appointment, you can save your breath. 
+ Chicken soup. 
+ From Michelle. 
+ You look like hell. 
+ So do you. 
+ Least I got an excuse. 
+ Avery took me out of the field today. 
+ (exhales) 
+ I guess stubbornness runs in the family. 
+ (chuckles) 
+ Fourth grade. Joey Baumgarten. 
+ Remember? 
+ Yeah. 
+ Pushed me off my bike, punched me in the face, let the air out of my tires. 
+ You pushed your bike all the way home crying. 
+ Do you remember what you said to me? 
+ Oh... 
+ You said, "Son, you take as much time as you need. But when you're ready, you're gonna fight Joey, and you're gonna win." 
+ Two days later, you drove me to the park. 
+ I found Joey. 
+ And I won. 
+ Dad, you got cancer. 
+ Now, you and I both... need to come to terms with that in our own way. 
+ So take as much time as you need. 
+ But when you're ready... we're gonna fight. 
+ And we're gonna win. 
+ (sighs) 
+ (keys clacking) 
+ Hey. 
+ About earlier... 
+ I'm sorry. 
+ Who you text is your business. 
+ He's my study partner. 
+ Henry. 
+ Study partner? 
+ Oh, uh, a'ight. (chuckles) 
+ Study partner. 
+ No, Nelson. We-we actually study together. 
+ For our GED. 
+ Isn't that for people who didn't finish high school? 
+ Well, I faked my high school diploma a few years back. 
+ Didn't matter when I was hacking, but... now it's, um... 
+ White hat rubbing off on you? 
+ Yeah. Something like that. 
+ It's just something that I need to do for... for me. 
+ Right. 
+ And I'd appreciate it if you could, uh, keep it on the D.L. 
+ Oh, girl. (scoffs) 
+ You know me, I'm the king of keeping things on the D.L. 
+ Oh, you're the king, huh? 
+ Nelson :  You know I'm the king. 
+ I've come to bid you good night. 
+ I'd say "sleep tight," but I know that's easier said than done these days. 
+ Come on, that's it? No meditation exercise? 
+ No stinky insomnia tea? 
+ You're giving up on me? 
+ Yep. 
+ Did you reschedule your big date? 
+ Oh, yeah. Uh, no, not exactly. 
+ Apparently the good old-fashioned excuse "I had to work" is no longer believable. 
+ (laughs) Oh... What about you? When's your next shrimp cocktail with Director Silver? 
+ I tried to reschedule a sit-down, but apparently he's still mad at me for not taking the deputy director job. 
+ Aw. Well, we're a couple of sad sacks, aren't we? 
+ Mmm. 
+ Look at those two. 
+ They're not even trying to hide it anymore. (laughs) 
+ You know, I've been, uh... I've been thinking about this whole Nelven thing. I think we can do better. 
+ How 'bout... It's, uh, Brody Nelson and-and Raven Ramirez, right? 
+ What about... 
+ Relson? 
+ (laughs) No, no. Okay, okay, okay. 
+ Wait, wait. 
+ (chuckles) No, no. Ramelson? 
+ (laughing): No. 
+ Bromirez. 
+ Braven. Braven. 
+ Braven. Oh, that... that's good. Braven. 
+ Night, Braven! 
+ They can't hear you. 
+ I hope not. 
+ (laughs) 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
+ 
+ 

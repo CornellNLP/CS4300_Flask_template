@@ -1,0 +1,147 @@
+Transcripts - Forever Dreaming :: 01x07 - Proof of Concept - Silicon Valley 
+ 
+ 
+ Transcripts - Forever Dreaming https://transcripts.foreverdreaming.org/ 
+ 
+ 
+ 
+ 
+ 
+ 01x07 - Proof of Concept https://transcripts.foreverdreaming.org/viewtopic.php?f=631&t=26842 
+ Page  1  of  1 
+ 
+ 
+ 
+ 
+ 
+ Author:  
+ bunniefuu  [ 05/19/14 21:44 ] 
+ 
+ 
+ Post subject:  
+ 01x07 - Proof of Concept 
+ 
+ 
+ 
+ 
+ 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ The core compression algorithm is optimal. 
+ All the test cases ran optimal. 
+ The Weissman score is optimal. 
+ Looks like Nucleus is optimal. 
+ Good. Good. 
+ Congratulations, guys. 
+ Oh yeah. 
+ Oh, dog. 
+ Richard, the ingestion engine is ready for testing. Have you seen Richard? 
+ He's in there, having a little trouble with his personal ingestion engine. 
+ Still? It's been an hour. He's gotta get this done. 
+ Oh, he's got his laptop in there, on top of his lap. 
+ Hey, Richard. 
+ Richard : Don't talk to me while I'm in the bathroom please. 
+ Well, snap it off, we gotta go. 
+ Richard : I know. Just don't talk to me while I'm in here. It's weird. 
+ Oh, my God. Jared's been back from that island for a whole day and he didn't get any toilet paper? 
+ Are you serious? Is Jared out there? 
+ I thought you didn't want me to talk to you while you were in the bathroom. Make up your mind. 
+ Richard : You know what? Just get away from the door, please. 
+ Friday, the pool cleaner comes. 
+ Do you understand? 
+ Yes. 
+ And tomorrow is trash day so make sure all the cans are out front. 
+ Yes. 
+ Now, you are under no circumstances to order any movie on demand, adult or otherwise. 
+ Yes. 
+ OK, has anything that I've just said confused you? 
+ Yes. 
+ Goddamn it! 
+ Jesus, Cher. Are you bringing your whole closet? 
+ I'm a pro, Dinesh. I won't apologize for it. 
+ I dress according to the moods that I sense in the room. 
+ As such, I must have options. 
+ We all packed and ready to go? 
+ Erlich : We can take my car but gas is on the company. 
+ Richard : Hello? Did everyone leave? 
+ No. 
+ Richard : What? Oh. Whoa, whoa... 
+ [techno music playing] 
+ Gilfoyle : I don't know how you read your screen in the car. 
+ It makes me sick as a dog. 
+ Richard : I'm OK as long as I don't think about it. 
+ Besides, the presentation is tomorrow. 
+ Gilfoyle : So if you just don't think about it it really doesn't bother you to be staring at the screen when the car's moving and turning and you're all queasy... 
+ Oh, God! [vomiting] 
+ Erlich : Gilfoyle. 
+ Gilfoyle : See, I knew it bothered you. 
+ f*cking liar. 
+ [Richard retching] 
+ Jared : So I'm a little behind, being stuck on that island for four days, but I think I'm on top of everything. 
+ OK, give me your IDs and I'll go register us... 
+ There you are. Got your credentials and wristbands for the walkthrough at 4:00 today. 
+ Uh, walkthrough? 
+ Yeah, basically, it's a sound check for the competition. 
+ Uh, yeah, we didn't know about that. 
+ Did I not tell you about the walkthrough? 
+ I am so sorry. 
+ That's why I'm here. Peter's on safari with Lorne Michaels and Kanye West until next week so I can put all of my attention on you guys for once. 
+ I am so sorry. I thought that I talked to you guys about the walk... 
+ Gentlemen, welcome to the big show. 
+ TechCrunch motherfucking Disrupt. 
+ OK, guys, this place is a vortex of distraction Normally in the tech world it's two percent women. 
+ Guys, these next three days, 15 percent. 
+ It's a goddamn meat market. 
+ Monica : I need you to focus. 
+ How we do here is the entire future of your company. 
+ Don't screw it all up now. 
+ We have to knock them dead in the preliminaries tomorrow so we can move on to the finals on Friday. 
+ I have a question. The program says that Dan Melcher is judging our round. 
+ Is there any way to get him removed? 
+ Not unless there's a conflict of interest. 
+ Well, there may be. I did have sexual intercourse with his wife. 
+ What? It was three years ago. 
+ So one of the guys judging us wants to f*cking kill you? 
+ Maybe. I don't know if he found out. 
+ Either way, Richard, you may have to present instead of me so be prepared. 
+ What, me? Present? No. 
+ We may be fine. We may be totally fine. 
+ We also may be totally f*cked. 
+ I'll let you know either way. 
+ I'm gonna go network. Don't approach me. 
+ I don't want to present. 
+ Besides, I'm not even done with the demo. 
+ OK, Richard, you need to go to the hotel right now and finish. 
+ Oh, you already checked us into the hotel? 
+ Yeah. Yeah. 
+ Richard : OK, I'm gonna do this module by module. 
+ Dinesh, you built the edge video player so I'm gonna start with you first. OK? 
+ OK, you guys set up the booth, OK? 
+ Um... I think it's this way. 
+ You think? 
+ A few flyers, that's all we have? 
+ Yeah, I think it is. 
+ [electronic voice] Hello, what's your name? 
+ Visit us at microdrone.com... Jared : Oh, wow, Microdrone. They just closed $17 million in seed funding. [clattering] Hi. Hello. Excuse me. Pied Piper? You guys are competing in the StartUp Battlefield, right? Everyone has been talking about your compression rate. I mean, it is supposed to be sick. Yeah. Anyway, you must be great with Java and I just cannot seem to figure out this stupid bug. Do you mind? I'll be back. Thank you. If we integrate one module every two hours we should be in great shape... Richard, follow me. Follow me. Follow me. All right. See you at the hotel. See you. Very soon, I hope. Hey, man. Just wanted to say good luck. OK, thanks. But what's with all the... Sorry. I just can't be seen talking to you, you know? Hooli people all over the place. I don't know, man, I'm just really into this whole rest and vest life, you know, way more than I thought I would be. I just don't want to rock the boat. Oh, hey, did I tell you? I'm getting a boat. Wow. And a boat guy to take care of it. You have to have a boat guy. Oh yeah, you've gotta have a boat guy... if you have a boat. [nervous chuckle] Hey, um, you know that girl, right? Sherry, I think her name was. She said you guys went to school together. Uh, OK, yeah. I saw her at the Valleywag party last night, which was crazy, by the way, dude, there must've been like 12 girls there. Holy sh1t. [chuckles] Nuts. Anyway, she said you guys went out a couple times and then she dumped you and you became obsessed with her. What? What? She said I was obsessed? She said obsessed. Uh, that's bullshit, 'cause I think we went out two times. Uh, it was nothing so how could I be obsessed? That's... No, you're going down! Nucleus is gonna crush Wide Diaper. You never shoulda said no to my man, Gavin Belson. OK. [mouthing] Seeded quite a few new companies. Spinder. It's like Tinder but for spinsters. Elderly women looking for s*x. There's this girl who's walking around, saying that I'm obsessed with her. Now that just really pisses me off That's fascinating. Let's just forget about it, OK? Yeah. I mean it's... It's just so f*cked up, right? I mean, I barely remember her. And it's just so insulting to have someone walking around spreading lies about you. Right? I wonder who she's working with. Like I wonder who she's here with because if she's telling her coworkers, then that's a whole 'nother group of people I gotta worry about. Richard, you don't have to worry about anything except for Pied Pier right now. Yeah, I know. Because we have less than 24 hours 'til the preliminaries. No one's worrying, that's the thing. Perfect. Perfect. OK, her. She used the word "obsessed", Dinesh. "Obsessed." Richard, I don't care. Neither do I. That's the entire point. I'm just gonna check her Instagram real quick. Because if she's posting comments about me being obsessed... I mean, I can't just ignore that. Would you be interested in a device that links to your smartphone and lets you know, even before it happens, whether you're having a panic attack or a heart attack? Yeah, yeah. OK, here's how Panic-A-Tech works. You wear this on your finger all day and it tracks your vitals. Or if that's too embarrassing, there's also a Bluetooth suppository and that goes right where you think it goes. And that comes with a retrieval kit. Was he like, "Bro, you're my bro," or was he like, "I wanna shoot you in the face and watch you bleed out all over the stage 'cause you f*cked my wife, you cocksuck." Right in the middle. It was like: Huh. What happened? How's it going at the hotel? Weird. He switched to meta-data extraction and now wants to see you. Meta-data? Already? Makes no sense. He seems very distracted. OK, guys, since we're kind of playing from behind here I put together a little secret weapon. I... I went through the entire list of conference participants and I found images and I found bios and I printed them out so we have them all in one place. Why did you do that? Uh, OK. Who's this guy? Watch. He is... [phone beeps] Rick Smith, co-founder of Crosscut Ventures. How did you...? ID-Keen. It's this facial recognition app that Monica put on our phones. You just point it at anybody, tells you who they are and how important they are to the conference. [phones beeping] [snickers] You're not showing up at all. Yeah, maybe I'm not getting a... No, I'm getting a signal. OK. Um, well... Ooh, Jared, Jared, recycling's over there. Hey, so what's the deal? Does the judge know or not? I don't know, Monica. He's toying with me. Or maybe he's not. I can't f*cking figure it out. Erlich, you need to stop this. His wife is here. Grow a pair and talk to her, find out for sure. Why don't you grow a pair and I'll talk to her. Hmph. What? Hey. Do you happen to know Java? Are you kidding? It's like my specialty. Will you help me? Oh, it would be my honor. [door opens] Yes? Oh, sorry. Um, I must not have the right room. I'm looking for Dan Melcher. Yeah, that's us. Oh, it is? OK. I was looking to speak with his wife. That's me. I'm, well, his new wife, we just got married. Oh, congratulations. Uh, what happened with Madelyn? You're a friend of Dan's? Yeah. We've... We have a common interest...s. Uh, many common interests. Yeah. Well, she was a nightmare. Pills, in and out of rehab. Had all of these disgusting affairs. You know, the divorce nearly killed Dan. Really? Disgusting affairs. Well, I... I feel terrible. No, it's fine. He's put it behind him. All of it? I mean, every aspect of it? Mm-hmm. Well, that is... That is great to hear. What if she's spreading this lie to everyone at this conference? I mean, honestly, Gilfoyle... Richard, stop talking about this or I have to punch you in the face. f*ck. It is huge. Uh... Very, very huge. Man : Check, one-two two, tsetse fly, tsetse fly. Hey, how's the demo coming? Um, we're getting there. Uh, definitely... Getting there. Gentlemen, I bring good tidings. Turns out that Melcher is divorced, remarried and has put the previously relationship behind him completely. Problem solved. That's great. It sure is, Richard, it sure as hell is. [snickers] Look at these poor fuckers. They don't even know what's about to hit 'em. The hammer of God. I am so sorry! I am so sorry. I thought you guys were gonna come get me and... and I'm sorry. Wait, Jared, what are you doing here? What? Who's watching the booth? Yeah. I thought that maybe Monica could... She's not in the company. We need her here. That's the thing. All right, everybody, this run-through is for essential personnel only, essential only. Oh. We need someone in the booth is the thing. Right. You're essential to the booth. Right. All right, each team will have six minutes for presentation and demo, at which point the judges will ask a few questions... Uh, do you mind if I break in here, just one question. Uh, are the judges allowed to send us through to the finals immediately after we present or do we have to wait until everyone else has gone? Well, I'm just saying what everybody's thinking. 
+ 
+ electronic voice : Hello, what's your name? Visit us at microdrone.com Uh, excuse me, no thank you. ...a free video of you at TechCrunch Disrupt. Uh, no thank you. Nathan. Are you Nathan Zimmerman, CEO of Flingual? I... I... Whoever's doing this, no thank you. Yeah, I think we got a dead zone, an audio dead zone right here. Listen to this. Hear that? Compared to... OK, here's what I want, as soon as the music comes up... Music? I want you to hit me with a spotlight, bam! And a hard spot. Better yet, do you have those spotlights that... [makes droning noise] come up from the ground, like in Pride Fighting. Uh... I can check. OK, so two of those, one on each side and then one in the center so that it casts my shadow behind me, like a giant looking over his own shoulder. [humming] Erlich : Do you have any wind machines. I'm gonna need two of those... Are you humming to yourself? Was... was I? Uh, you know, honestly, I may have found the perfect woman. Whoa. What? Who? Who? She's in the booth right next to us, Charlotte. She's not even physically my type, she has blonde hair and these stupid pink streaks and doesn't seem to be dominant at all. However, I think I'm in love. Whoa. [chuckles] She invited me to her room to watch  Cloud Atlas  later tonight. Oh yeah, that means she wants you to lay her. Is that definitive? I mean, nobody can watch more than like a minute of that film. So what's the deal? I mean, is she hot? Yeah, I mean, she's attractive, but almost every woman is attractive. It was her mind. She wrote this Java method that was the most beautiful thing I've ever seen in my life. Elegant, tight. There's just something so hot about a woman that can code like that. You know, I just want to... crawl in her frontal lobe and... [snickering] What's up? You know I wrote that code, right? No, this code was on her system. A banged up 15-inch MacBook Pro with shitty stickers on it? Everyone here has a beat up 15-inch MacBook Pro... With a 1.3 chip and only two gigs of RAM? She doesn't know Java. I wrote that code. You said you were in love with her mind. Oh f*ck. You realize what's going on, right? Uh... It's not her you're sexually attracted to, it's my code. Shut the... That is the most disgusting f*cking thing I've ever h... Just face it, Dinesh, you're gay for my code, you're code gay. No! No, I'm into her. Her, OK? f*ck your code! You'd like to f*ck my code, wouldn't you? Hey, would you like to m*st*rb*t* to the subroutine I just wrote? No! It's... I'm... I'm... And then I'll sort of close right here in the center with a confidence and poise that, well, they probably won't have seen up until this point. And then at that point we've got some photos that we're gonna throw up on the big screen. Photos? Yeah, you know, just a few. Gandhi, MLK, me as an inquisitive child. Richard, could you please. Oh, yes, sorry. I'll just plug it in here. [computer chimes] No! Don't! Don't! Richard : Oh, shi... [Sherry] What the f*ck!? Richard : sh1t. Oh, she's here. Mmm. Oh, sh1t, it's frozen. It's frozen. Erlich : That is not me, obviously. He's obsessed with me. I'm sorry. [ominous music on TV] Hey, what's wrong? I'm just a little nervous 'cause you're so beautiful. Oh? Random question... So you didn't write any of that Java code? Uh-uh. But I write all of our tweets and we have like a couple hundred followers. Couple hundred... Oh, let me move this. Oh, that's the code your friend wrote. Yeah, it is. It's really good, huh? It's fine. I don't care about it. Mm, there we go. Oh, fu... [gasps] Come on, focus, focus. Richard's not gonna finish, is he? He'll finish, Gilfoyle, he has to. Are you OK? Yeah, I'm fine. I knew it. You couldn't do it. Please shut up. Shut up. Why is it that every time I'm about to have s*x with a lady... he's all up in there somehow? Finally, just us. Guys, this round is on me. Hey, Jared. There you guys go. To Pied Piper. Hmm? To Pied Piper. Here, here. Yeah, drink it up. But it's not gonna change who you are. Monica, can I speak to you for a minute? Yeah. Richard : No, Sherry, it has to be now! Oh, sh1t. OK, look, we need to talk. You keep telling people I'm obsessed with you. Richard, why don't you just take a step back... It's not true... No, no, no, let me finish. OK, did I put your picture up on the big screen in the auditorium? Yes. But that's because I was showing you to my friends to prove a point that I'm not obsessed with you. Richard, I'm gonna go now. No, I'm not obsessed with you, Sherry! I'm... I'm not. That guy Richard I was telling you about just totally freaked out on me. Yeah, the obsessed guy. Where are you? Jared : You've been doing this ever since we arrived at the conference. Which elevators? You really think that you can come between me and Richard Hendricks? We're partners, OK, and I've devoted every second of my waking life for the past two months to him, OK? I am devoted to him and to the precious thing that we're building together! I'm his partner. I can tell when he's vomiting... What? No. because he's nervous or when he's vomiting Never mind, Kate, I'm fine. ...because he's sick or when he's vomiting because he had cilantro, which he loves but he shouldn't have because it makes him... I had no idea that you felt this way. I mean it, I am so sorry. I mean, I'm obsessed with her... Richard, can I talk to you for a second? Uh, OK. I owe you an apology. I was way off base. Well, yeah, you were. He cleared it all up for me. Richard : Jared? Really? Yeah. He's your partner, right? Yeah, he is. One of many. Probably too many. How could I not have seen this? Obviously you're not obsessed with me. Richard, it's none of my business, but be safe. OK? OK. Of course I'm safe. I backup my whole system like five times a day. So... uh, Jared, hey, thank you. For what? Uh, you know, everything. I feel like we don't appreciate you enough, so thank you. [gasps] Are you... are you crying? Are you crying? [sobs quietly] Uh, don't do that. Don't cry. Oh, sh1t. I gotta get back to work. I... I need to focus here. We should all go. All right, I'm taking care of this one. But when we win this f*ckin' thing, Richard, you're buying the next round. Yeah. Oh... no. We're with the conference, is there any sort of discount...? Kind of break you can...? Hm-mm. No. All right. Hello again. Oh, hi. You know, that was really sweet of you to be so concerned about Dan. He really has been through hell. Well, it's the least I could do. So how did you know Madelyn again? Oh, uh, long story. Yeah? I have to admit, I'm curious. You know what, keep it open. [exhales deeply] Have you ever cared too much? [dramatic music] People, are you ready? Are you ready for the ultimate tech startup competition? Let me hear it: Disrupt! [mild applause] Man : Disrupt. Hello. My name is Saeed Jobrani. I am the CEO of ImmediBug. And we're here to revolutionize the way you report bugs on your mobile platform. Happin! will revolutionize location-based mobile news aggregation as you know it. We're making the world a better place, through paxos algorithms for consensus protocols. And we're making the world a better place through software defined data centers for cloud computing. A better place through canonical data models to communicate between endpoints. A better place through scalable, fault-tolerant distributed databases with asset transactions. And we are truly local mobile social. And we're completely So-Mo-Lo. And we're Mo-Lo-So. We're Lo-Mo-So, bro. We were So-Lo-Mo but now we're Mo-Lo-So. No, Mo-So-Lo. No... [vomiting] You want me to get a water or something? Yeah, drink this. Here. So we're all good? We're all great. I killed it. Our Weissman score on all tests: 2.89. Right at the theoretical limit. Yeah, all the edge modules are humming. Uh, even on mobile. They can throw anything at us. Great. Well, good luck. I'm gonna go find my seat. Um, except 3D video. What? 3D video's still a little hinky. Erlich better steer them away from that just to be safe. Where the hell is Erlich? He wasn't with you guys this morning? Rather than heating an entire room, HumanHeater is a microwave technology that can heat the surface of a person's skin instead, potentially saving millions in heating costs and helping the environment, thereby making the world a better place. Man : Judges. Uh... OK, so, you want to heat people with microwaves, is that right? That can't be safe. That's a great question and trust me, it is very, very safe. I've been working on it for 15 years. I don't trust you and it can't be safe. And even if it was, I don't think you could ever sell the public on this. Thank you. I think when people see the savings on their utility bill and when they see how it saves the environment, they will be sold. Microwaves? Are you kidding me? Man, they are brutal. All right, let's light this candle. Where the hell have you been? Uh, there's been some developments. You know how I f*cked Melcher's old wife? I f*cked his new wife, too. What? Uh, don't worry, he's not gonna find out. I left way before he got back last night and then I didn't go back this morning until 20 minutes after he had left. You went back? How many times did you f*ck this woman? The old wife or the new wife? The new wife. Last night or this morning? Erlich, what are you thinking? This is kind of the big day today. Relax, he's not gonna find out. She's not gonna tell him. How the f*ck do you know that? Because she'd have to be crazy to tell him and I asked her point blank if she was crazy and she swore to me, no, she's not crazy. Pied Piper, you're up. Let's do it. The microwaves only penetrate the top layer of skin cells. I don't believe you. It can't be safe. Thank you. I've been testing it on these guys all winter and they're fine. Let me just demonstrate it to assure you... No! No! No! Please! No one is ever going to buy one of these. Ever. That was HumanHeater. Next up, Executive Chairman and Chief Visionary Erlich Bachman presenting Pied Piper. [applause] [dramatic music] Since the dawn of time, mankind hath sought to make things smaller, but until now, no man... [screaming] Dan : You son of a bitch! [blows landing] Jesus Christ! Everyone remain calm. Stay in your seats! Everything is under control! [commotion continues] Lights? I think he knows. [rap music playing] 
+  Transcripts Topic Print  
+ 
+ 
+ 
+ 
+ Page  1  of  1 
+ All times are UTC - 5 hours  
+ 
+ 
+ 
+ 
+ 
+ 
+ © Copyright Forever Dreaming. All rights reserved. http://foreverdreaming.org 
+ 
+ 
+ 
