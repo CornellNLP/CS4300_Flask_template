@@ -10,6 +10,7 @@ from nltk.tokenize import TreebankWordTokenizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
+import ast
 
 with open("finalData2.json", "r") as f:
   data = json.load(f)
@@ -58,9 +59,65 @@ def main():
         #print("///////")
     print("")
 
-def get_top(restaurant):
-  #get the restaurant name
-  return get_ranked_restaurants(restaurant, cos_sim_matrix)
+def get_top(restaurant, max_price, cuisine, ambiance, n):
+  price_preference = True
+  cuisine_preference = True
+  ambiance_preference = True
+  if max_price == "":
+    price_preference = False
+  if cuisine == "":
+    cuisine_preference = False
+  if ambiance == "":
+    ambiance_preference = False
+  recs = []
+  ranked = get_ranked_restaurants(restaurant, cos_sim_matrix)
+  for restaurant_info in ranked: # restaurant_info = (name, sim score)
+    if len(recs) == n: # if have enough top places, stop finding more
+      break
+    name = restaurant_info[0] # name of restaurant
+    price = int(data["BOSTON"][name]["price"]) # price preference
+    # no filtering
+    if (not price_preference) and (not cuisine_preference) and (not ambiance_preference):
+      recs.append(name)
+    else:
+      cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
+      ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
+      if ambiances is None:
+        ambiances = {}
+      elif len(ambiances) == 0:
+        ambiances = {}
+      else:
+        ambiances = ast.literal_eval(ambiances)
+
+      price_match = False
+      cuisine_match = False
+      ambiance_match = False #False
+
+      if price_preference: # if there is a price preference
+        if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
+          price_match = True
+      else: # no price preference
+        price_match = True
+
+      if cuisine_preference: # if there is a cuisine preference
+        if cuisine in cuisines:
+            cuisine_match = True
+      else: # no cuisine preference
+        cuisine_match = True
+      if ambiance_preference: # if there is a ambiance preference
+        if ambiances:
+          if ambiances[ambiance]:
+            ambiance_match = True
+      else: # no cuisine preference
+        ambiance_match = True
+
+      if ambiance_match and cuisine_match and price_match:
+        recs.append(name)
+  return recs
+
+# def get_top(restaurant):
+#   #get the restaurant name
+#   return get_ranked_restaurants(restaurant, cos_sim_matrix)
 
 # def get_restaurant_to_index():
 #   return restaurant_to_index

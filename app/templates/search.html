@@ -11,12 +11,59 @@
         <p>Student Name: Becky Borrazzo: rgb226, Lucy Wang: ljw222, Maya Tiwari: mot23, Reetu Parikh: rsp99, Sahar
             Sami: ss2698 </p>
     </div>
-    <form>
+    <form method="get">
         <div>
             <div class="form_group">
-                <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
+                <label class="form_label" for="fav_name">Name of favorite restaurant (required):</label>
                 <input type="text" name="fav_name" id="fav_name" required>
             </div>
+            <div class="form_group">
+                <label for="max_price">Maximum price point:</label>
+                <select name="max_price" id="max_price">
+                    <option value=""></option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="cuisine">Cuisine:</label>
+                <select name="cuisine" id="cuisine">
+                    <option value=""></option>
+                    <!-- <option value="American">American</option> -->
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Seafood">Seafood</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Halal">Halal</option>
+                    <option value="Greek">Greek</option>
+
+                    <!-- <option value="bakery">Bakeries</option>
+                    <option value="deli">Delis</option>
+                    <option value="fast_food">Fast Food</option>
+                    <option value="bar">Bars</option>
+                    <option value="steakhouse">Steakhouses</option> -->
+                </select>
+            </div>
+            <div class="form_group">
+                <label for="ambiance">Ambiance:</label>
+                <select name="ambiance" id="ambiance">
+                    <option value=""></option>
+                    <option value="romantic">Romantic</option>
+                    <option value="intimate">Intimate</option>
+                    <option value="classy">Classy</option>
+                    <option value="hipster">Hipster</option>
+                    <option value="touristy">Touristy</option>
+                    <option value="trendy">Trendy</option>
+                    <option value="upscale">Upscale</option>
+                    <option value="casual">Casual</option>
+                </select>
+            </div>
+
+
             <!-- <div class="form_group">
                 <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
                 <input type="text" name="fav_name" id="fav_name" required>
