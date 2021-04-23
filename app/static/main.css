@@ -24,6 +24,10 @@ display:inline-block;
 margin-bottom:0;
 }
 }
+.datalist {
+position: absolute;
+font-family: sans-serif;
+  }
 .topcorner{
 position:absolute;
 top:2%;

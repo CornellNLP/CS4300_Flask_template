@@ -24,11 +24,17 @@
                     name="search"
                     class="form-control"
                     placeholder="Your Input"
+                    list="movie-list"
                 />
+                <button type="submit" class="btn btn-info">Go!</button>
+                
+                <datalist id="movie-list">
+                {% for result in movies %}
+                    <option value="{{result}}">
+                {% endfor %}
+                </datalist>
             </div>
-            <button type="submit" class="btn btn-info">Go!</button>
-            <br /><br />
-
+            <br />
             <div class="form-group">
                 <p>Allergies: </p>
                 <input
@@ -37,9 +43,17 @@
                     name="search2"
                     class="form-control"
                     placeholder="Your Input"
+                    list="allergy-list"
                 />
-            <br /><br />
-            <p>Ex: "shellfish allergy", "cucumber", "nut allergy, gluten allergy" </p>
+                <br />
+                <datalist id="allergy-list">
+                {% for result in allergies %}
+                    <option value="{{result}}">
+                {% endfor %}
+                </datalist>
+                <br />
+                <p>Ex: "shellfish allergy", "cucumber", "nut allergy, gluten allergy" </p>
+            </div>
         </form>
         <!-- <form class="form-inline global-search">
         {% if data %}

@@ -9,6 +9,11 @@ from scripts.search import run_search, get_recipe, get_closest
 project_name = "Screen to Table"
 net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(klw242), Elizabeth Healy(eah255)"
 
+with open('./data/recipe_data/allergy_dict.json') as f:
+    allergy_dict = json.load(f)
+with open('./data/movie_script_list.txt') as f:
+    titles = [line.rstrip('\n ') for line in f.readlines()]
+
 
 @irsystem.route('/', methods=['GET'])
 def home():
@@ -17,15 +22,16 @@ def home():
     #print("alergies: ", allergies)
 
     if not query:
-        return render_template('search.html', name=project_name, netid=net_id)
+        return render_template('search.html',allergies=list(allergy_dict.keys()),
+        movies=titles, name=project_name, netid=net_id)
     else:
         return redirect(url_for('irsystem.results', query=query, allergies=allergies))
 
 
 @irsystem.route('/results')
 def results():
-    query = request.args.get("query")
-    allergies = request.args.get("allergies")
+    query = request.args.get("query").strip()
+    allergies = request.args.get("allergies").strip()
     print("Allergies: ", allergies)
 
     data = run_search(query, allergies)

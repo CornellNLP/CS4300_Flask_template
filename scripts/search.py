@@ -33,7 +33,7 @@ with open('./data/movie_recipe_mat_top2.csv') as f:
 with open('./data/average_reviews.json') as f:
     reviews = json.load(f)
 with open('./data/movie_script_list.txt') as f:
-        titles = f.readlines()
+    titles = f.readlines()
 
 
 def movie_to_index_maker(m_dict):
