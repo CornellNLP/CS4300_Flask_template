@@ -39,7 +39,8 @@ def query():
       data = top_restaurants
     # restaurant_query is not in the data
     else:
-      output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
+      output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
+      #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
     app.logger.critical("output_message") # from ta
     app.logger.critical(output_message) # from ta
     app.logger.critical("data") # from ta
