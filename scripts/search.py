@@ -20,6 +20,7 @@ with open('./data/movie_food_words_from_wordnets_top2.json') as f:
     movie_list = json.load(f)
 with open('./data/recipe_data/allergy_dict.json') as f:
     allergy_dict = json.load(f)
+
 with open('./data/recipe_data/clean_recipes.csv') as f:
     csvreader = csv.DictReader(f, delimiter=';')
     recipes = []

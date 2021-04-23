@@ -13,6 +13,8 @@ with open('./data/recipe_data/allergy_dict.json') as f:
     allergy_dict = json.load(f)
 with open('./data/movie_script_list.txt') as f:
     titles = [line.rstrip('\n ') for line in f.readlines()]
+with open('./data/recipe_data/review_keywords.json') as f:
+    review_keywords = json.load(f)
 
 
 @irsystem.route('/', methods=['GET'])
@@ -32,7 +34,6 @@ def home():
 def results():
     query = request.args.get("query").strip()
     allergies = request.args.get("allergies").strip()
-    print("Allergies: ", allergies)
 
     data = run_search(query, allergies)
 
@@ -46,6 +47,10 @@ def results():
 def recipe():
     idx = int(request.args.get("idx"))
     r = get_recipe(idx)
+    if r["RecipeID"] in review_keywords:
+        r["ReviewWords"] = ', '.join(review_keywords[r["RecipeID"]]).rstrip(', ')
+    else:
+        r["ReviewWords"]="No reviews"
     # r['Ingredients'] = r['Ingredients']
     # r['Directions'] = r['Directions']
     # ingredients = ",".split(r['Ingredients'])

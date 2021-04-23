@@ -73,6 +73,10 @@
                     <h3></h3>
                     <ol id="steps"></ol>
                 </div>
+                <div id="reviews">
+                    <h3></h3>
+                    <p id="reviews"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -97,6 +101,12 @@
             recipeData["Directions"].split("**").forEach((d) => {
                 steps.append("li").text(d);
             });
+            let reviews = d3.select("#reviews");
+            reviews.selectAll("li").remove();
+            reviews.select("h3").text("Review Buzzwords");
+            reviews.select("#reviews").text(
+                `${recipeData["ReviewWords"]}`
+            );
         };
 
         d3.selectAll(".recipe-button").each(function () {
