@@ -4,7 +4,7 @@ from flask import *
 import string
 from rankings import get_top, restaurant_to_index
 import logging # from ta
-
+from rankings import filterRestaurants, getCosineRestaurants
 app = Flask(__name__, template_folder='app/templates')
 
 gunicorn_logger = logging.getLogger('gunicorn.error') # from ta
@@ -40,6 +40,10 @@ def query():
     # restaurant_query is not in the data
     else:
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
+      review_query = request.args.get('review')
+      #filter the restaurants that are relevant to the user's search
+      rel_restaurants = filterRestaurants(price_query, cuisine_query)
+      cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
     app.logger.critical("output_message") # from ta
     app.logger.critical(output_message) # from ta
