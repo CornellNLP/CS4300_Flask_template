@@ -53,10 +53,10 @@ def get_ranked_restaurants(in_restaurant, sim_matrix):
 
 def main():
   #get the restaurant name
-  top_restaurants = get_ranked_restaurants("Boloco", cos_sim_matrix)
+  top_restaurants = get_top("Boloco", "high", "Chinese", [], 5, .5, .5)
   print(len(top_restaurants))
   for restaurant in top_restaurants[:3]:
-    name = restaurant[0]
+    name = restaurant
     print("RESTAURANT: ", name)
     #for rev in small_data[name]['reviews'][0]:
         #print(rev['text'])
@@ -81,6 +81,7 @@ def getJaccard(input_ambiances, all_rests_ambiances):
     intersection = len(input_amb.intersection(rest_ambiance))
     union = len(set(input_ambiances + rest_ambiance))
     jaccard_ambiances.append(intersection/union)
+  return jaccard_ambiances
 
 def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance_weight):
   price_preference = True
@@ -103,17 +104,17 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
   for rest in ranked:
     ranked_names.append(rest[0])
     ranked_cossims.append(rest[1])
-    restaurant_ambiances.append(data["BOSTON"][rest]["ambience"])
+    restaurant_ambiances.append(data["BOSTON"][rest[0]]["ambience"])
   
-  # not sure what ambiance is (string or list) - turn into a list
-  user_and_rest_ambiances = ambiance + data["BOSTON"][restaurant]["ambience"]
-
-  jaccard_list = getJaccard(user_and_rest_ambiances, restaurant_ambiances)
+  user_and_rest_ambiances = list(set(ambiance + data["BOSTON"][restaurant]["ambience"]))
+  jaccard_list = []
+  if len(user_and_rest_ambiances) != 0:
+    jaccard_list = getJaccard(user_and_rest_ambiances, restaurant_ambiances)
 
   weighted_rankings = []
   weighted_name_ranks = []
 
-  if user_and_rest_ambiances == "":
+  if len(user_and_rest_ambiances) == 0:
     ambiance_preference = False
     weighted_name_ranks = ranked
   else:
@@ -123,6 +124,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
     for i in range(len(ranked_names)):
       weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
     weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
+  # print(weighted_name_ranks[0:10])
 
   for restaurant_info in weighted_name_ranks: # restaurant_info = (name, weighted sim score)
     if len(recs) == n: # if have enough top places, stop finding more
@@ -135,13 +137,6 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
       recs.append(name)
     else:
       cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
-      # ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
-      # if ambiances is None:
-      #   ambiances = {}
-      # elif len(ambiances) == 0:
-      #   ambiances = {}  
-      # else:
-      #   ambiances = ast.literal_eval(ambiances)
 
       price_match = False
       cuisine_match = False
@@ -159,16 +154,9 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
       else: # no cuisine preference
         cuisine_match = True
 
-      # if user_and_rest_ambiances: # if there is a ambiance preference
-      #   if ambiances:
-      #     if ambiances[ambiance]:
-      #       ambiance_match = True
-      # else: # no ambiance preference
-      #   ambiance_match = True
-
-      # if ambiance_match and cuisine_match and price_match:
       if cuisine_match and price_match:
         recs.append(name)
+
   return recs
 
 # def get_top(restaurant):
