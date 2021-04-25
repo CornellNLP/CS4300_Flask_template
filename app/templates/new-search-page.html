@@ -179,7 +179,7 @@
         <script>
 
             // create map
-            var map = L.map('leaflet-map').setView([40.75, -73.98], 12);
+            var map = L.map('leaflet-map').setView([40.7128, -74.0060], 10);
 
             const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -190,15 +190,19 @@
 
                 // shape file
                 var shapeData = await d3.json('/static/shapeData.json');
+                var currParam = 'people_positive';
 
-                // color with positive cases
-                var maxPositive = d3.max(shapeData["features"], function(d) { return d['properties']['%_positive']; })
-                maxPositive = Math.max(maxPositive, 0.2);
-                var colorScale = d3.scaleSequential(d3.interpolateReds).domain([0, maxPositive])
+                // color scale with max stats
+                // positive cases: [0, 327]
+                // 1 dose: [0.22, 0.76]
+                // 2 doses: [0.14, 0.6]
+                var posCaseScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 300]);
+                var vacScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 0.80]);
+                var fullVacScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 0.80]);
 
                 function style(feature) {
                     return {
-                        fillColor: colorScale(feature.properties['%_positive']),
+                        fillColor: posCaseScale(feature.properties['people_positive']),
                         weight: 2,
                         opacity: 1,
                         color: 'white',
@@ -229,12 +233,12 @@
                 var legend = L.control({position: 'bottomleft'});
                 legend.onAdd = function (map) {
                     var div = L.DomUtil.create('div', 'legend'),
-                        grades = [0, 0.04, 0.08, 0.12, 0.16, 0.20],
-                        labels = ['0-4%', '4-8%', '8-12%', '12-16%', '16-20%', '20%'];
+                        grades = [0, 100, 200, 300, 400],
+                        labels = ['0-100', '100-200', '200-300', '300-400', '400'];
 
                     for (var i = 0; i < grades.length; i++) {
                         div.innerHTML +=
-                            '<i style="background:' + rgbToHex(colorScale(grades[i]).toString()) + '"></i> ' +
+                            '<i style="background:' + rgbToHex(posCaseScale(grades[i]).toString()) + '"></i> ' +
                             labels[i] + (labels[i+1] ?  '<br>' : '+');
                     }
 

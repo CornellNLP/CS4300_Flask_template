@@ -23,19 +23,13 @@ columnDict = {
     '%_at_least_1': 5, 
     '%_full_vax': 6
 }
-columns = ['%_positive', '%_full_vax']
+columns = ['people_positive', '%_at_least_1', '%_full_vax']
 
-# Filter for manhattan and populate relevant data
 featuresL = []
 result = {"type":"FeatureCollection", "features": featuresL}
 for geom in shapeData['features']:
     modzcta = geom['properties']['modzcta']
-    isManhattan = False
-    for zipCode in geom['properties']['zcta'].split(", "):
-        # zip code of manhattan is below 10300
-        if int(zipCode) < 10300:
-            isManhattan = True
-    if isManhattan and modzcta in covidDict:
+    if modzcta in covidDict:
         row = covidDict[modzcta]
         for c in columns:
             geom['properties'][c] = row[columnDict[c]]
