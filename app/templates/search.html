@@ -1,103 +1,138 @@
 <html>
 
+<style>
+body {
+    margin: 0;
+}
+
+/* footer styling */
+footer {
+    background-color: rgb(3, 152, 158);
+    padding: 10px;
+}
+
+footer p{
+    color: #e5fcf5;
+    text-align: center;
+}
+
+/* form styling */
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.form_group{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+label {
+    width: 300px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+select {
+    width: 100px;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    background-color: #7D6B91;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+
+</style>
+
 <head>
     <!-- <link rel="stylesheet" href="/static/bootstrap.min.css"> -->
     <link rel="stylesheet" href="/static/main.css">
 </head>
 
 <body>
-    <div class="topcorner">
-        <p>Project Name: Favorite Restaurant Generator </p>
-        <p>Student Name: Becky Borrazzo: rgb226, Lucy Wang: ljw222, Maya Tiwari: mot23, Reetu Parikh: rsp99, Sahar
-            Sami: ss2698 </p>
-    </div>
-    <form method="get">
-        <div>
-            <div class="form_group">
-                <label class="form_label" for="fav_name">Name of favorite restaurant (required):</label>
-                <input type="text" name="fav_name" id="fav_name" required>
-            </div>
-            <div class="form_group">
-                <label for="max_price">Maximum price point:</label>
-                <select name="max_price" id="max_price">
-                    <option value=""></option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-            </div>
-            <div class="form_group">
-                <label for="cuisine">Cuisine:</label>
-                <select name="cuisine" id="cuisine">
-                    <option value=""></option>
-                    <!-- <option value="American">American</option> -->
-                    <option value="Italian">Italian</option>
-                    <option value="Mexican">Mexican</option>
-                    <option value="Indian">Indian</option>
-                    <option value="Japanese">Japanese</option>
-                    <option value="Seafood">Seafood</option>
-                    <option value="Vietnamese">Vietnamese</option>
-                    <option value="Thai">Thai</option>
-                    <option value="Halal">Halal</option>
-                    <option value="Greek">Greek</option>
-
-                    <!-- <option value="bakery">Bakeries</option>
-                    <option value="deli">Delis</option>
-                    <option value="fast_food">Fast Food</option>
-                    <option value="bar">Bars</option>
-                    <option value="steakhouse">Steakhouses</option> -->
-                </select>
-            </div>
-            <div class="form_group">
-                <label for="ambiance">Ambiance:</label>
-                <select name="ambiance" id="ambiance">
-                    <option value=""></option>
-                    <option value="romantic">Romantic</option>
-                    <option value="intimate">Intimate</option>
-                    <option value="classy">Classy</option>
-                    <option value="hipster">Hipster</option>
-                    <option value="touristy">Touristy</option>
-                    <option value="trendy">Trendy</option>
-                    <option value="upscale">Upscale</option>
-                    <option value="casual">Casual</option>
-                </select>
-            </div>
-
-
-            <!-- <div class="form_group">
-                <label class="form_label" for="fav_name">Name of favorite restaurant:</label>
-                <input type="text" name="fav_name" id="fav_name" required>
-            </div>
-            <div class="form_group">
-                <label class="form_label" for="fav_city">City of favorite restaurant:</label>
-                <input type="text" name="fav_city" id="fav_city" required>
-            </div> -->
-            <!-- <div class="form_group">
-                <p class="checkbox_label">Top favorite things about above restaurant:</p>
-                <div class="checkboxes">
-                    <input type="checkbox" id="reason1" name="reason1" value="ambiance">
-                    <label for="reason1">Ambiance</label><br>
-                    <input type="checkbox" id="reason2" name="reason2" value="friendliness">
-                    <label for="reason2">Friendliness of staff</label><br>
-                    <input type="checkbox" id="reason3" name="reason3" value="cleanliness">
-                    <label for="reason3">Cleanliness of space</label><br>
+    <img src="BostonEats.png" alt="boston eats logo">
+    <div class="form_div">
+        <form method="get">
+            <div>
+                <div class="form_group">
+                    <label class="form_label" for="fav_name">Name of favorite restaurant (required):</label>
+                    <input type="text" name="fav_name" id="fav_name" required>
                 </div>
-            </div> -->
-            <!-- <div class="form_group">
-                <label class="form_label" for="new_city">New city:</label>
-                <input type="text" name="new_city" id="new_city" required>
-            </div> -->
+                <div class="form_group">
+                    <label for="max_price">Maximum price point:</label>
+                    <select name="max_price" id="max_price">
+                        <option value=""></option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="cuisine">Cuisine:</label>
+                    <select name="cuisine" id="cuisine">
+                        <option value=""></option>
+                        <!-- <option value="American">American</option> -->
+                        <option value="Italian">Italian</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Seafood">Seafood</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Halal">Halal</option>
+                        <option value="Greek">Greek</option>
 
-            <button type="submit">Find your new favorite restaurant in Boston!</button>
-        </div>
-    </form>
-    <form class="form-inline global-search">
+                        <!-- <option value="bakery">Bakeries</option>
+                        <option value="deli">Delis</option>
+                        <option value="fast_food">Fast Food</option>
+                        <option value="bar">Bars</option>
+                        <option value="steakhouse">Steakhouses</option> -->
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="ambiance">Ambiance:</label>
+                    <select name="ambiance" id="ambiance">
+                        <option value=""></option>
+                        <option value="romantic">Romantic</option>
+                        <option value="intimate">Intimate</option>
+                        <option value="classy">Classy</option>
+                        <option value="hipster">Hipster</option>
+                        <option value="touristy">Touristy</option>
+                        <option value="trendy">Trendy</option>
+                        <option value="upscale">Upscale</option>
+                        <option value="casual">Casual</option>
+                    </select>
+                </div>
+
+                <button type="submit">Find your new favorite restaurant in Boston!</button>
+            </div>
+        </form>
+    </div>
+    <!-- <form class="form-inline global-search"> -->
+    <div class="result_div">
         <h1>{{output_message}}</h1>
         {% for d in data %}
         <br>
         <p>{{d}}</p>
+        <p>{{data[d]['address']}}</p>
+        <p>{{data[d]['star rating']}}</p>
+        <p>{{data[d]['categories']}}</p>
+        <img src={{data[d].photos[0]}} height="150px">
         {% endfor %}
-    </form>
+    </div>
+
+    <footer>
+        <p>Project Name: Favorite Restaurant Generator </p>
+        <p>Student Name: Becky Borrazzo: rgb226, Lucy Wang: ljw222, Maya Tiwari: mot23, Reetu Parikh: rsp99, Sahar Sami: ss2698 </p>
+    </footer>
 </body>
 
 </html>
