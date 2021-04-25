@@ -59,7 +59,26 @@ def main():
         #print("///////")
     print("")
 
-def get_top(restaurant, max_price, cuisine, ambiance, n):
+def getJaccard(input_ambiances, all_rests_ambiances):
+  """Returns a list of the size number of restuarants that indicates the jaccard 
+  sim between the inputted restuarants ambiances and the existing restaurants'
+  Returns a list of size number of restuarants total, where entry
+  i is the jaccard sim between the inputted restuarants ambiances and the 
+  restaurants' ambiances from the dataset
+  Params: {
+    input_ambiances: list
+    all_rests_ambiances: list of lists
+  }
+  Returns: list
+  """
+  jaccard_ambiances = []
+  input_amb = set(input_ambiances)
+  for rest_ambiance in all_rests_ambiances:
+    intersection = len(input_amb.intersection(rest_ambiance))
+    union = len(set(input_ambiances + rest_ambiance))
+    jaccard_ambiances.append(intersection/union)
+
+def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance_weight):
   price_preference = True
   cuisine_preference = True
   ambiance_preference = True
@@ -67,31 +86,62 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
     price_preference = False
   if cuisine == "":
     cuisine_preference = False
-  if ambiance == "":
-    ambiance_preference = False
+
   recs = []
   ranked = get_ranked_restaurants(restaurant, cos_sim_matrix)
-  for restaurant_info in ranked: # restaurant_info = (name, sim score)
+
+  # split up ranked into a list of names and list of similarity scores
+  ranked_names = []
+  ranked_cossims = []
+  # going to be used for jaccard (all restaurants' ambiances)
+  restaurant_ambiances = []
+
+  for rest in ranked:
+    ranked_names.append(rest[0])
+    ranked_cossims.append(rest[1])
+    restaurant_ambiances.append(data["BOSTON"][rest]["ambience"])
+  
+  # not sure what ambiance is (string or list) - turn into a list
+  user_and_rest_ambiances = ambiance + data["BOSTON"][restaurant]["ambience"]
+
+  jaccard_list = getJaccard(user_and_rest_ambiances, restaurant_ambiances)
+
+  weighted_rankings = []
+  weighted_name_ranks = []
+
+  if user_and_rest_ambiances == "":
+    ambiance_preference = False
+    weighted_name_ranks = ranked
+  else:
+    weighted_cossim = [el * review_weight for el in ranked_cossims]
+    weighted_jaccard = [el * ambiance_weight for el in jaccard_list]
+    weighted_rankings = [x + y for x, y in zip(weighted_cossim, weighted_jaccard)]
+    for i in range(len(ranked_names)):
+      weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
+    weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
+
+  for restaurant_info in weighted_name_ranks: # restaurant_info = (name, weighted sim score)
     if len(recs) == n: # if have enough top places, stop finding more
       break
     name = restaurant_info[0] # name of restaurant
     price = int(data["BOSTON"][name]["price"]) # price preference
+  
     # no filtering
     if (not price_preference) and (not cuisine_preference) and (not ambiance_preference):
       recs.append(name)
     else:
       cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
-      ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
-      if ambiances is None:
-        ambiances = {}
-      elif len(ambiances) == 0:
-        ambiances = {}
-      else:
-        ambiances = ast.literal_eval(ambiances)
+      # ambiances = data["BOSTON"][name]["ambience"] # array of tagged cuisines
+      # if ambiances is None:
+      #   ambiances = {}
+      # elif len(ambiances) == 0:
+      #   ambiances = {}  
+      # else:
+      #   ambiances = ast.literal_eval(ambiances)
 
       price_match = False
       cuisine_match = False
-      ambiance_match = False #False
+      # ambiance_match = False 
 
       if price_preference: # if there is a price preference
         if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
@@ -104,14 +154,16 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
             cuisine_match = True
       else: # no cuisine preference
         cuisine_match = True
-      if ambiance_preference: # if there is a ambiance preference
-        if ambiances:
-          if ambiances[ambiance]:
-            ambiance_match = True
-      else: # no cuisine preference
-        ambiance_match = True
 
-      if ambiance_match and cuisine_match and price_match:
+      # if user_and_rest_ambiances: # if there is a ambiance preference
+      #   if ambiances:
+      #     if ambiances[ambiance]:
+      #       ambiance_match = True
+      # else: # no ambiance preference
+      #   ambiance_match = True
+
+      # if ambiance_match and cuisine_match and price_match:
+      if cuisine_match and price_match:
         recs.append(name)
   return recs
 
