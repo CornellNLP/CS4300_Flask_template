@@ -96,6 +96,10 @@
         {% for d in data %}
         <br>
         <p>{{d}}</p>
+        <p>{{data[d]['address']}}</p>
+        <p>{{data[d]['star rating']}}</p>
+        <p>{{data[d]['categories']}}</p>
+        <img src={{data[d].photos[0]}} height="150px">
         {% endfor %}
     </form>
 </body>

@@ -11,6 +11,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
 import ast
+from bs4 import BeautifulSoup
+import requests
+import lxml
+import cchardet
 
 with open("finalData2.json", "r") as f:
   data = json.load(f)
@@ -86,8 +90,6 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
         ambiances = {}
       elif len(ambiances) == 0:
         ambiances = {}
-      else:
-        ambiances = ast.literal_eval(ambiances)
 
       price_match = False
       cuisine_match = False
@@ -106,7 +108,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
         cuisine_match = True
       if ambiance_preference: # if there is a ambiance preference
         if ambiances:
-          if ambiances[ambiance]:
+          if ambiance in ambiances:
             ambiance_match = True
       else: # no cuisine preference
         ambiance_match = True
@@ -121,5 +123,47 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
 
 # def get_restaurant_to_index():
 #   return restaurant_to_index
+
+def web_scraping(restaurants):
+  full_info = dict()
+  requests_session = requests.Session()
+  for r in restaurants:
+    info = dict()
+    bus_id = small_data[r]['id']
+    page = requests_session.get(f"https://www.yelp.com/biz/{bus_id}")
+    print("request made") 
+    soup = BeautifulSoup(page.content, 'lxml')
+    photos = soup.findAll('img', {"class": "photo-header-media-image__373c0__2Qf5H"})
+    image_srcs = []
+    for i, p in enumerate(photos):
+      src = p.attrs['src']
+      image_srcs.append(src)
+    info['photos'] = image_srcs
+    # search the title of the webpage for address
+    possible_addresses = soup.findAll('title', {"data-rh": "true"})
+    if len(possible_addresses) == 0:
+      info['address'] = "No address found"
+    else:
+      address = "No address found"
+      for p in possible_addresses:
+        if p.get_text() != "":
+          address = p.get_text()
+          for piece in address.split('- '):
+            if "Boston" in piece:
+              address = piece
+      info['address'] = address
+    rating_text = soup.findAll('div', {"class": re.compile("i-stars--large")})[0].attrs['aria-label']
+    number = float(rating_text.split(' ')[0])
+    info['star rating'] = number
+    info['categories'] = small_data[r]['categories']
+    full_info[r] = info
+    print("restaurant scraped")
+  return full_info
+
+
+      
+    
+
+
 if __name__ == '__main__':
   main()
