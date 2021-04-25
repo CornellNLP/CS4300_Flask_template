@@ -33,6 +33,7 @@ a:focus {
 .tm-color-white { color: white; }
 .tm-color-primary {	color: #d22c2c; }
 .tm-color-dark {	color: #6e1b09; }
+.tm-color-grey {	color: #5d5f5c; }
 .tm-bg-primary { background: #F07249; }
 .tm-bg-gray { background: #F4F4F4; }
 .tm-bg-white { background: white; }

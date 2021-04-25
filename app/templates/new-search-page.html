@@ -131,7 +131,11 @@
                 </div>
             </div>
 
-
+            <!-- Variable in JS to store info -->
+            <script>
+                var resultLatLon = {}; 
+                var count = 1;
+            </script>
             <!-- Search Results -->
             {% if exists %}
             <div class="tm-section tm-position-relative">
@@ -139,6 +143,16 @@
                     <div class="text-center">
                         <h2>Search Results</h2>
                         {% for d in data.name %}
+                        <!-- Get location and info in JS -->
+                        <script>
+                            // TODO: add category
+                            resultLatLon[count] = {
+                                'lat': '{{data.geolocation[d][0]}}',
+                                'lon': '{{data.geolocation[d][1]}}',
+                                'name': '{{data.name[d]}}',
+                            };
+                            count += 1;
+                        </script>
                         <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
                             <div class="collapsible">
                                 <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
@@ -302,6 +316,39 @@
                 };
 
                 infoHeader.addTo(map);
+
+                // Populate results on map
+                var markers = L.layerGroup();
+                // get customized icon color
+                var icon = new L.Icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                // check if there are results
+                if (!(resultLatLon && Object.keys(resultLatLon).length === 0 && resultLatLon.constructor === Object)){
+                    // clear layer
+                    markers.clearLayers();
+                    // loop backward to make top results on the front
+                    for (var i = count-1; i > 0; i--){
+                        value = resultLatLon[i];
+                        // Todo: add descriptions
+                        var msg = "<b>" + (i).toString() + '. ' + value['name'] + "</b><br><i class='tm-color-grey'>" + 'TODO: descriptions' +'</i>';
+                        var marker = L.marker([Number(value['lat']), value['lon']], {icon:icon, opacity: 0.9, riseOnHover: true}).bindPopup(msg).addTo(markers);
+                        marker.on('mouseover',function(ev) {
+                            ev.target.openPopup();
+                        });
+                        // set view according to the best result
+                        if (i === 1){
+                            map.setView([Number(value['lat']), value['lon']], 17);
+                            marker.setZIndexOffset(100);
+                        }
+                    }
+                    markers.addTo(map);
+                }
 
                 // UI Functions
                 var btns = document.getElementsByClassName('heatmap-btn');
