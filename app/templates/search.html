@@ -13,38 +13,81 @@
   <div class="card">
     <div class="container">
       <form class="form-inline global-search">
+
         <div class="col">
           <h1 style="font-size: 55px; font-family:Futura; color:forestgreen">
-            Take a hike!
-          </h1>
+            Take a hike! </h1>
           <p>Hiking trail recommender for the Finger Lakes area</p>
         </div>
 
-
-        <br><br>
-
         <div class="col">
+          <h4>KEYWORDS</h4>
           <input id="input" type="text" name="search" class="form-control"
             placeholder="Easy hiking trail with scenic waterfall view">
 
-          <div id="toggles">
-            <div>
-              <input id="accessible" type="checkbox" name="requireAccessible" />
-              <label for="accessible">Accessible</label>
+          <div id="toggles" class="display-row">
+            <div class="display-row">
+              <div id="difficulty-toggle" class="col">
+                <h4>DIFFICULTY</h4>
+                <label for="difficulty"></label>
+                <select name="difficulty" id="difficulty-input" class="form-control">
+                  <option value="easy">Easy</option>
+                  <option value="moderate">Moderate</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <input id="freeentry" type="checkbox" name="requireFreeEntry" />
-              <label for="freeentry">Free Entry</label>
-            </div>
-            <div>
-              <input id="parking" type="checkbox" name="requireEntryFee" />
-              <label for="parking">Parking</label>
+
+            <div id="access-toggle" class="col">
+              <h4>ACCESSIBILITY</h4>
+              <div class="toggle">
+                <input type="checkbox" id="accessible" name="requireAccessible" />
+                <label for="accessible"></label>
+
+                <input type="checkbox" id="freeentry" name="requireFreeentry" />
+                <label for="freeentry"></label>
+
+                <input type="checkbox" id="parking" name="requireParking" />
+                <label for="parking"></label>
+              </div>
             </div>
           </div>
         </div>
+        <div id="activity-toggle" class="col">
+          <h4>ACTIVITY TYPE</h4>
+          <div class="toggle">
+            <input type="checkbox" id="walk" name="requireWalk" />
+            <label for="walk"></label>
+            <input type="checkbox" id="hike" name="requireHike" />
+            <label for="hike"></label>
+            <input type="checkbox" id="run" name="requireRun" />
+            <label for="run"></label>
+            <input type="checkbox" id="bike" name="requireBike" />
+            <label for="bike"></label>
+            <input type="checkbox" id="horse" name="requireHorse" />
+            <label for="horse"></label>
+            <input type="checkbox" id="swim" name="requireSwim" />
+            <label for="swim"></label>
+            <input type="checkbox" id="ski" name="requireSki" />
+            <label for="ski"></label>
+            <input type="checkbox" id="snowshoe" name="requireSnowshoe" />
+            <label for="snowshoe"></label>
+          </div>
+        </div>
+
+        <div class="slidecontainer">
+          <h4>LENGTH</h4>
+          <div id="range" class="display-row">
+            <p> 0 mi</p>
+            <p> 100 mi</p>
+          </div>
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+
         <button type="submit" class="btn btn-info"> Go! </button>
-      </form>
     </div>
+    </form>
+  </div>
   </div>
 
   <h1 class="form-inline global-search">{{output_message}}</h1>
@@ -62,7 +105,7 @@
           <p id="name"><b>{{d.name}}</b></p>
           <div class="display-row">
             <p id="length">{{d.length}} mi distance</p>
-            <p id="difficulty">{{d.difficulty}}</p>
+            <p id="difficulty-display">{{d.difficulty}}</p>
           </div>
           <div id="activity-types" class="display-row">
             {% for activity in d.activity_types %}

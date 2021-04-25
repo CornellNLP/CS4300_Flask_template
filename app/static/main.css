@@ -16,6 +16,12 @@
        padding-top: 10%;
        padding-bottom: 15px;
    }
+
+   h4 {
+       font-size: 80%;
+       text-align: start;
+       margin: 10px 10px 10px 0px;
+   }
    .global-search {
        text-align:center;
        padding:10px;
@@ -23,9 +29,11 @@
    /* .global-search .form-control {
        width:200px;
    } */
+
+   
    .global-search * {
        display:inline-block;
-       margin-bottom:0;
+       /* margin-bottom:0; */
    }
    }
    .topcorner{
@@ -46,13 +54,13 @@
 .card {
     margin: auto;
    border-radius: 10px;
-   width: 60%;
+   width: 50%;
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
    transition: 0.3s;
  }
 
  .container {
-   padding: 2px 16px;
+   padding: 2px 60px;
    width:100%;
  }
 
@@ -66,8 +74,12 @@
     flex-direction: row;
 }
 
-#toggles, .access-btn {
-    margin: 10px;
+#keyword-input, .access-btn {
+    margin: 15px;
+}
+
+.toggle{
+    align-items: start;
 }
 
  .result {
@@ -82,7 +94,7 @@
      font-size: 150%;
  }
 
- #difficulty {
+ #difficulty-display {
      color: white;
      background-color: forestgreen;
      font-weight: light;
@@ -117,8 +129,6 @@
      padding:3 5 3 5;
      margin-right: 3px;
      text-align: center;
-
-
  }
 
  .trail-img { 
@@ -136,3 +146,251 @@
     width: 300px; height:200px;
     object-fit:cover
  }
+
+#difficulty-input {
+    width: 200px;
+    margin:0px;
+}
+
+#access-toggle {
+    /* width: 50%; */
+    /* justify-content: flex-end; */
+    margin-left: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+}
+
+label {
+    margin-right: 20px;
+}
+
+/* walk */
+input[type=checkbox][id=walk] + label {
+    background-image: url(walk-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=walk]:checked + label {
+    background-image: url(walk-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* hike */
+input[type=checkbox][id=hike] + label {
+    background-image: url(hike-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=hike]:checked + label {
+    background-image: url(hike-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* run */
+input[type=checkbox][id=run] + label {
+    background-image: url(run-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=run]:checked + label {
+    background-image: url(run-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* bike */
+input[type=checkbox][id=bike] + label {
+    background-image: url(bike-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=bike]:checked + label {
+    background-image: url(bike-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* swim */
+input[type=checkbox][id=swim] + label {
+    background-image: url(swim-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=swim]:checked + label {
+    background-image: url(swim-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* horse */
+input[type=checkbox][id=horse] + label {
+    background-image: url(horse-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=horse]:checked + label {
+    background-image: url(horse-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* skiing */
+input[type=checkbox][id=ski] + label {
+    background-image: url(ski-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=ski]:checked + label {
+    background-image: url(ski-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* snowshoe */
+input[type=checkbox][id=snowshoe] + label {
+    background-image: url(snowshoe-inactive.svg);
+    height: 45px;
+    width: 36px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=snowshoe]:checked + label {
+    background-image: url(snowshoe-active.svg);
+    height: 45px;
+    width: 36px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* accessible */
+input[type=checkbox][id=accessible] + label {
+    background-image: url(accessible-inactive.svg);
+    height: 45px;
+    width: 36px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=accessible]:checked + label {
+    background-image: url(accessible-active.svg);
+    height: 45px;
+    width: 36px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* entry fee */
+input[type=checkbox][id=freeentry] + label {
+    background-image: url(entryfee-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=freeentry]:checked + label {
+    background-image: url(entryfee-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/* parking */
+input[type=checkbox][id=parking] + label {
+    background-image: url(parking-inactive.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox][id=parking]:checked + label {
+    background-image: url(parking-active.svg);
+    height: 45px;
+    width: 35px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    margin: 20px 0px 20px 0px;
+    text-align: start;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  } 
+
+  #range {
+    display: flex;
+    justify-content: space-between;
+  }
