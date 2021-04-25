@@ -1,4 +1,7 @@
-@media (min-width: 1200px) {
+footer {
+    color: red
+}
+/* @media (min-width: 1200px) {
     .container {
         max-width: 970px;
     }
@@ -55,3 +58,7 @@
     width: 300px;
     text-align: right;
 }
+
+body{
+    color: red;
+} */
