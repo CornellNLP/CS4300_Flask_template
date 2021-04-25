@@ -1,0 +1,320 @@
+<!-- Template adapted from Tooplate 2095 Level https://www.tooplate.com/view/2095-level -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Covid Search Engine</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/static/main.css">                                   <!-- Templatemo style -->
+
+    <!--Leaflet library for heatmap-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+</head>
+
+    <body>
+        <div class="tm-main-content" id="top">
+            <!-- <div class="tm-top-bar-bg"></div> used for fixing the nav bar-->
+            <div class="tm-top-bar" id="tm-top-bar">
+                <!-- Top Navbar -->
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <!-- Image edited from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.valamis.com%2Fcompany%2Fnews%2Fvalamis-operations-during-the-covid-19-coronavirus&psig=AOvVaw2snEKOY2GFlJ2xjz8Jf__N&ust=1619404195893000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCKjI5_CsmPACFQAAAAAdAAAAABAD -->
+                                <img src="/static/logo.jpg" alt="Site logo">
+                                COVID Seach Engine
+                            </a>
+                            <!-- Adjust the height of tm-top-bar if need more rows-->
+                            <p>[About this App] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>   
+                        </nav> 
+                    </div>
+                </div>
+            </div>
+            <div class="tm-section tm-bg-img" id="tm-section-1">
+                <div class="tm-bg-transparent ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+                            <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                                <form action="#result-dest" method="get" class="tm-search-form tm-section-pad-2">
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                            <input name="search_loc" type="text" class="form-control" id="search_loc" placeholder="Address">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-star fa-2x tm-form-element-icon"></i>
+                                            <input name="search_int" type="text" class="form-control" id="search_int" placeholder="Point of Interest">
+                                        </div>
+                                    </div>
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-100">
+                                            <i class="fa fa-car fa-2x tm-form-element-icon"></i>
+                                            <input name="search_rad" type="number" class="form-control" id="search_rad" placeholder="Distance">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-100">                                           
+                                            <select name="search_rat" class="form-control tm-select" id="search_rad">
+                                                <option value="">Min Rating</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            <i class="fa  fa-thumbs-up fa-2x tm-form-element-icon"></i>
+                                        </div>
+                                        <div class="form-group tm-form-element">
+                                            <button type="submit" class="btn btn-primary tm-btn-search">Search</button>
+                                        </div>
+                                      </div>
+                                      <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
+                                          <p class="tm-margin-b-0">[Examples and more instructions] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                      </div>
+                                </form>
+                            </div>                        
+                        </div>      
+                    </div>
+                </div>                  
+            </div>
+            
+            <div class="tm-section-2" id="result-dest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="tm-section-title">Lorem ipsum dolor sit amet</h2>
+                            <p class="tm-color-white tm-section-subtitle">Lorem ipsum dolor sit amet</p>
+                        </div>                
+                    </div>
+                </div>        
+            </div>
+            
+
+            
+            <div class="tm-section tm-section-pad tm-bg-img tm-position-relative" id="tm-section-6">
+                <!-- The svg element is part of the background of the previous section -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
+                    <polygon fill="#f07249" points="0,0  100,0  50,60"></polygon>                   
+                </svg>
+                <div class="container ie-h-align-center-fix">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div id="leaflet-map"></div>        
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
+                            <div class="tm-bg-white tm-p-4">
+                                <p>[Cases Prediction in NYC]</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            </div>                            
+                        </div>
+                    </div>        
+                </div>
+            </div>
+
+            <div class="tm-section tm-position-relative">
+                <div class="container tm-pb-4">
+                    <div class="text-center">
+                        <!-- Search Results -->
+                        {% if exists %}
+                        <h2>Search Results</h2>
+                        {% for d in data.name %}
+                        <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
+                            <div class="collapsible">
+                                <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
+                                <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
+                                <p>TODO: Descriptions</p>
+                                <p>
+                                    <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
+                                    <span class="distance">{{data.duration[d]}} away</span>
+                                </p>
+                                <p>
+                                    <span>Rating: {{data.rating[d]}}</span>
+                                    <span>Positive Cases: {{data.positive_cases[d]}}</span>
+                                    <span class="text-uppercase tm-color-primary tm-font-semibold">Recommendation Score / Risk Level</span>
+                                </p>
+                                <p>Click to see reviews</p>
+                            </div>
+                            <div class="collapsible-content">
+                              <p>TODO: Add reviews</p>
+                            </div> 
+                        </article>
+                        {% endfor %}
+                        {% endif %}
+                       
+                    </div>        
+                </div>
+            </div>
+            
+            <footer class="tm-bg-dark-blue">
+                <div class="container">
+                    <div class="row">
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
+                        Copyright &copy; <span class="tm-current-year">2018</span> Your Company
+                        
+                        - Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-color-primary tm-font-normal" target="_parent">Tooplate</a></p>        
+                    </div>
+                </div>                
+            </footer>
+        </div>
+        
+        <!-- load JS files -->
+        <script src="/static/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="/static/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+        <script src="/static/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+        <script src="/static/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>               <!-- D3 for handling data-->
+        <script>
+
+            // create map
+            var map = L.map('leaflet-map').setView([40.75, -73.98], 12);
+
+            const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd'
+            }).addTo(map);
+
+            const requestData = async _ => {
+
+                // shape file
+                var shapeData = await d3.json('/static/shapeData.json');
+
+                // color with positive cases
+                var maxPositive = d3.max(shapeData["features"], function(d) { return d['properties']['%_positive']; })
+                maxPositive = Math.max(maxPositive, 0.2);
+                var colorScale = d3.scaleSequential(d3.interpolateReds).domain([0, maxPositive])
+
+                function style(feature) {
+                    return {
+                        fillColor: colorScale(feature.properties['%_positive']),
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        dashArray: '3',
+                        fillOpacity: 0.7
+                    };
+                }
+
+                // add shape file to map
+                L.geoJson(shapeData, {style: style}).addTo(map);
+
+                // add color legend
+                // first need to convert the colors in rgb into hex
+                function rgbToHex(rgb){
+                    rgb = rgb.substr(4).split(")")[0].split(', ');
+                    var r = (+rgb[0]).toString(16)
+                    var g = (+rgb[1]).toString(16)
+                    var b = (+rgb[2]).toString(16)
+                    if (r.length == 1)
+                        r = "0" + r;
+                    if (g.length == 1)
+                        g = "0" + g;
+                    if (b.length == 1)
+                        b = "0" + b;
+                    return "#" + r + g + b;
+                }
+
+                var legend = L.control({position: 'bottomleft'});
+                legend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 0.04, 0.08, 0.12, 0.16, 0.20],
+                        labels = ['0-4%', '4-8%', '8-12%', '12-16%', '16-20%', '20%'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(colorScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
+
+                legend.addTo(map);
+
+                // add info header
+                var infoHeader = L.control();
+
+                infoHeader.onAdd = function (map) {
+                    this._div = L.DomUtil.create('div', 'info'); 
+                    this._div.innerHTML = '<h4>Percentage of Positive Test Cases Over the Last Week</h4>';
+                    return this._div;
+                };
+
+                infoHeader.addTo(map);
+                }
+
+                requestData();
+
+                function setPageNav(){
+                if($(window).width() > 991) {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 79
+                    });   
+                }
+                else {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 65
+                    });   
+                }
+            }
+
+       
+            $(document).ready(function(){
+
+                $(window).on("scroll", function() {
+                    if($(window).scrollTop() > 100) {
+                        $(".tm-top-bar").addClass("active");
+                    } else {
+                        //remove the background property so it comes transparent again (defined in your css)
+                       $(".tm-top-bar").removeClass("active");
+                    }
+                });      
+                
+                setPageNav();
+
+                $(window).resize(function() {
+                  setPageNav();
+                });
+
+                // Close navbar after clicked
+                $('.nav-link').click(function(){
+                    $('#mainNav').removeClass('show');
+                });
+
+                // Update the current year in copyright
+                $('.tm-current-year').text(new Date().getFullYear());                           
+            });
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("expanded");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+
+        </script>             
+
+</body>
+</html>
