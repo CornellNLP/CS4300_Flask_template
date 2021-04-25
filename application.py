@@ -3,7 +3,10 @@ from app import app, socketio
 from flask import *
 import string
 from rankings import get_top, restaurant_to_index
-# import logging # from ta
+
+import logging # from ta
+# from rankings import filterRestaurants, getCosineRestaurants, web_scraping
+from rankings import get_top, web_scraping
 
 app = Flask(__name__, template_folder='app/templates')
 
@@ -35,15 +38,23 @@ def query():
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
       top_restaurants = get_top(restaurant_query, price_query, cuisine_query, ambiance_query, 3)
+      app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
-      data = top_restaurants
+      # data = top_restaurants
+      data = web_scraping(top_restaurants)
+
     # restaurant_query is not in the data
     else:
-      output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
-    # app.logger.critical("output_message") # from ta
-    # app.logger.critical(output_message) # from ta
-    # app.logger.critical("data") # from ta
-    # app.logger.critical(data) # from ta
+      output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
+      review_query = request.args.get('review')
+      #filter the restaurants that are relevant to the user's search
+      rel_restaurants = filterRestaurants(price_query, cuisine_query)
+      cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
+      #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
+    app.logger.critical("output_message") # from ta
+    app.logger.critical(output_message) # from ta
+    app.logger.critical("data") # from ta
+    app.logger.critical(data) # from ta
   return render_template('search.html', output_message=output_message, data=data)
 
 if __name__ == "__main__":

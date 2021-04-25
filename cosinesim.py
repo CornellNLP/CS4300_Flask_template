@@ -65,8 +65,15 @@ else:
 
 print("after building reviews")
 
-tfidf_mat = tfidf_vec.fit_transform(reviews).toarray()
-
+#save the tfidf numpy matrix
+if Path("tfidfmat.npy").exists():
+  #with open("tfidfmat.json") as fp:
+  tfidf_mat = np.array(np.load('tfidfmat.npy'))
+else:
+  tfidf_mat = tfidf_vec.fit_transform(reviews).toarray()
+  #with open("tfidfmat.json", 'w') as fp3:
+    #json.dump(tfidf_mat, fp3, indent=2)
+  np.save('tfidfmat.npy', tfidf_mat)
 print(tfidf_mat.shape)
 
 print("after build tf idf matrix")
@@ -104,6 +111,7 @@ def build_movie_sims_cos(num_reviews, cos_sim, input_doc_mat, norms):
 print("before build norms")
 
 norms = np.linalg.norm(tfidf_mat, axis=1)
+np.save('norms', norms)
 
 print("after build norms")
 cos_sim = np.zeros((len(reviews), len(reviews)), dtype=np.float16)
