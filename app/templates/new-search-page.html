@@ -112,7 +112,14 @@
                 <div class="container ie-h-align-center-fix">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div id="leaflet-map"></div>        
+                            <div id="leaflet-map"></div> 
+                            <br>
+                            <p>Select Parameter to Plot on the Heatmap</p>
+                            <div class="btn-group">
+                                <button class='heatmap-btn selected' value="people_positive">Positive Cases</button>
+                                <button class='heatmap-btn' value="%_full_vax">Fully Vaccined</button>
+                                <button class='heatmap-btn' value="%_at_least_1">At Least One Dose</button>
+                              </div>       
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
                             <div class="tm-bg-white tm-p-4">
@@ -124,11 +131,12 @@
                 </div>
             </div>
 
+
+            <!-- Search Results -->
+            {% if exists %}
             <div class="tm-section tm-position-relative">
                 <div class="container tm-pb-4">
                     <div class="text-center">
-                        <!-- Search Results -->
-                        {% if exists %}
                         <h2>Search Results</h2>
                         {% for d in data.name %}
                         <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
@@ -152,11 +160,10 @@
                             </div> 
                         </article>
                         {% endfor %}
-                        {% endif %}
-                       
                     </div>        
                 </div>
             </div>
+            {% endif %}
             
             <footer class="tm-bg-dark-blue">
                 <div class="container">
@@ -179,7 +186,7 @@
         <script>
 
             // create map
-            var map = L.map('leaflet-map').setView([40.7128, -74.0060], 10);
+            var map = L.map('leaflet-map').setView([40.7128, -74.0060], 11);
 
             const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -202,7 +209,7 @@
 
                 function style(feature) {
                     return {
-                        fillColor: posCaseScale(feature.properties['people_positive']),
+                        fillColor: posCaseScale(feature.properties[currParam]),
                         weight: 2,
                         opacity: 1,
                         color: 'white',
@@ -212,7 +219,7 @@
                 }
 
                 // add shape file to map
-                L.geoJson(shapeData, {style: style}).addTo(map);
+                geoJsonLayer = L.geoJson(shapeData, {style: style}).addTo(map);
 
                 // add color legend
                 // first need to convert the colors in rgb into hex
@@ -230,8 +237,9 @@
                     return "#" + r + g + b;
                 }
 
-                var legend = L.control({position: 'bottomleft'});
-                legend.onAdd = function (map) {
+                // Legned is mostly static. So we can create 3 legends and switch when needed.
+                var posCaseLegend = L.control({position: 'bottomleft'});
+                posCaseLegend.onAdd = function (map) {
                     var div = L.DomUtil.create('div', 'legend'),
                         grades = [0, 100, 200, 300, 400],
                         labels = ['0-100', '100-200', '200-300', '300-400', '400'];
@@ -245,19 +253,94 @@
                     return div;
                 };
 
-                legend.addTo(map);
+                posCaseLegend.addTo(map);
+
+                var vacLegend = L.control({position: 'bottomleft'});
+                vacLegend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 0.2, 0.4, 0.6, 0.8],
+                        labels = ['0-20%', '20-40%', '40-60%', '60-80%', '80%'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(vacScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
+
+                var fullVacLegend = L.control({position: 'bottomleft'});
+                fullVacLegend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 0.2, 0.4, 0.6, 0.8],
+                        labels = ['0-20%', '20-40%', '40-60%', '60-80%', '80%'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(fullVacScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
 
                 // add info header
+                // TODO: Add info of hovered region if needed
                 var infoHeader = L.control();
 
                 infoHeader.onAdd = function (map) {
                     this._div = L.DomUtil.create('div', 'info'); 
-                    this._div.innerHTML = '<h4>Percentage of Positive Test Cases Over the Last Week</h4>';
+                    this._div.innerHTML = '<h4>Positive Test Cases Over the Last Week</h4>';
                     return this._div;
                 };
 
+                infoHeader.update = function (props) {
+                    if (currParam == "people_positive"){ this._div.innerHTML = '<h4>Positive Test Cases Over the Last Week</h4>'; }
+                    else if (currParam == "%_at_least_1"){ this._div.innerHTML = '<h4>Percentage of Population with At Lease One Dose of Vaccination</h4>'; }
+                    else { this._div.innerHTML = '<h4>Percentage of Population Fully Vaccinated</h4>'; }
+                };
+
                 infoHeader.addTo(map);
+
+                // UI Functions
+                var btns = document.getElementsByClassName('heatmap-btn');
+            
+                for (i=0; i < btns.length; i++){
+                    btns[i].addEventListener("click", function () {
+                        for (var j=0; j < btns.length; j++){
+                            btns[j].classList.remove("selected");
+                        }
+                        this.classList.toggle("selected");
+                        currParam = this.value;
+                        // update heatmap
+                        L.geoJson(shapeData, {style: style});
+                        var scale;
+                        var leg;
+                        if (currParam == "people_positive"){ 
+                            scale = posCaseScale; 
+                            leg = posCaseLegend;
+                        }
+                        else if (currParam == "%_at_least_1"){ 
+                            scale = vacScale; 
+                            leg = vacLegend;
+                        }
+                        else { 
+                            scale = fullVacScale; 
+                            leg = fullVacLegend;
+                        }
+                        geoJsonLayer.eachLayer(layer => {
+                            layer.setStyle({ fillColor: scale(layer["feature"]["properties"][currParam]) });
+                        });  
+                        // update header and legend
+                        infoHeader.update(); 
+                        posCaseLegend.remove();
+                        vacLegend.remove();
+                        fullVacLegend.remove();
+                        leg.addTo(map);                         
+                    });
                 }
+            }
 
                 requestData();
 
@@ -292,15 +375,7 @@
 
                 $(window).resize(function() {
                   setPageNav();
-                });
-
-                // Close navbar after clicked
-                $('.nav-link').click(function(){
-                    $('#mainNav').removeClass('show');
-                });
-
-                // Update the current year in copyright
-                $('.tm-current-year').text(new Date().getFullYear());                           
+                });    
             });
 
             var coll = document.getElementsByClassName("collapsible");

@@ -506,6 +506,36 @@ video {
 	font-size: 1rem;
 }
 
+.btn-group button {
+	background-color: white;
+	border: 1px solid #393a3c;
+	color: #5d5f5c; 
+	padding: 10px 24px; 
+	margin: 0 10px;
+	cursor: pointer; 
+	float:left;
+  }
+  
+  
+  /* Clear floats (clearfix hack) */
+.btn-group:after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+.btn-group button:hover {
+	background-color: #f07249;
+	border: 1px solid #f07249;
+	color: white;
+  }
+
+.btn-group .selected {
+	background-color: #d22c2c;
+	border: 1px solid #d22c2c;
+	color: white;
+  }
+
 @media screen and (max-width: 991px) {
 	.tm-top-bar.active, .tm-top-bar, .tm-top-bar-bg { height: 65px; }
 	.tm-top-bar.active .navbar-expand-lg .navbar-nav .nav-link,
