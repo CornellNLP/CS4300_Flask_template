@@ -53,8 +53,8 @@ def get_ranked_restaurants(in_restaurant, sim_matrix):
 
 def main():
   #get the restaurant name
-  top_restaurants = get_top("Boloco", "high", "Chinese", [], 5, .5, .5)
-  print(len(top_restaurants))
+  top_restaurants = get_top("Boloco", "", "", [], 5, .5, .5)
+  # print(len(top_restaurants))
   for restaurant in top_restaurants[:3]:
     name = restaurant
     print("RESTAURANT: ", name)
@@ -84,6 +84,19 @@ def getJaccard(input_ambiances, all_rests_ambiances):
   return jaccard_ambiances
 
 def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance_weight):
+  """Returns a list of the top 3 restuarants that match the inputted restaurant 
+  and preferences indicated
+  Params: {
+    restaurant: string
+    max_price: string
+    cuisine: string
+    ambiance: string list
+    n: int
+    review_weight: float
+    ambiance_weight: float
+  }
+  Returns: list
+  """
   price_preference = True
   cuisine_preference = True
   ambiance_preference = True
@@ -143,7 +156,10 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
       # ambiance_match = False 
 
       if price_preference: # if there is a price preference
-        if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
+        low = (max_price == "low") and (price == 1 or price ==2)
+        medium = (max_price == "medium") and (price == 3)
+        high = (max_price == "high") and (price == 4 or price == 5)
+        if low or medium or high:
           price_match = True
       else: # no price preference
         price_match = True
@@ -154,7 +170,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
       else: # no cuisine preference
         cuisine_match = True
 
-      if cuisine_match and price_match:
+      if cuisine_match and price_match and restaurant not in name:
         recs.append(name)
 
   return recs
