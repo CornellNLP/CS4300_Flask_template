@@ -50,18 +50,17 @@ def get_ranked_restaurants(in_restaurant, sim_matrix):
   rest_lst = sorted(rest_lst, key=lambda x: -x[1])
   return rest_lst
 
-
-def main():
-  #get the restaurant name
-  top_restaurants = get_ranked_restaurants("Boloco", cos_sim_matrix)
-  print(len(top_restaurants))
-  for restaurant in top_restaurants[:3]:
-    name = restaurant[0]
-    print("RESTAURANT: ", name)
-    #for rev in small_data[name]['reviews'][0]:
-        #print(rev['text'])
-        #print("///////")
-    print("")
+# def main():
+#   #get the restaurant name
+#   top_restaurants = get_ranked_restaurants("Boloco", cos_sim_matrix)
+#   print(len(top_restaurants))
+#   for restaurant in top_restaurants[:3]:
+#     name = restaurant[0]
+#     print("RESTAURANT: ", name)
+#     #for rev in small_data[name]['reviews'][0]:
+#         #print(rev['text'])
+#         #print("///////")
+#     print("")
 
 def get_top(restaurant, max_price, cuisine, ambiance, n):
   price_preference = True
@@ -124,14 +123,20 @@ def get_top(restaurant, max_price, cuisine, ambiance, n):
 # def get_restaurant_to_index():
 #   return restaurant_to_index
 
-def web_scraping(restaurants):
+def get_reviews(restaurant):
+  reviews = []
+  for review in data["BOSTON"][restaurant]["reviews"]:
+    reviews.append(review["text"])
+  return reviews
+
+def web_scraping(restaurants, input_index):
   full_info = dict()
   requests_session = requests.Session()
   for r in restaurants:
     info = dict()
     bus_id = small_data[r]['id']
     page = requests_session.get(f"https://www.yelp.com/biz/{bus_id}")
-    print("request made") 
+    print("request made")
     soup = BeautifulSoup(page.content, 'lxml')
     photos = soup.findAll('img', {"class": "photo-header-media-image__373c0__2Qf5H"})
     image_srcs = []
@@ -153,17 +158,15 @@ def web_scraping(restaurants):
               address = piece
       info['address'] = address
     rating_text = soup.findAll('div', {"class": re.compile("i-stars--large")})[0].attrs['aria-label']
-    number = float(rating_text.split(' ')[0])
+    number = round(float(rating_text.split(' ')[0]))
     info['star rating'] = number
     info['categories'] = small_data[r]['categories']
     full_info[r] = info
+    info['reviews'] = get_reviews(r)
+    info['id'] = bus_id
+    info['sim_score'] = cos_sim_matrix[input_index][restaurant_to_index[r]]
     print("restaurant scraped")
   return full_info
-
-
-      
-    
-
 
 if __name__ == '__main__':
   main()
