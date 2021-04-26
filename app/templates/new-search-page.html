@@ -10,9 +10,9 @@
 
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="/static/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="/static/main.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="./static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="./static/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="./static/main.css">                                   <!-- Templatemo style -->
 
     <!--Leaflet library for heatmap-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -35,7 +35,7 @@
                         <nav class="navbar">
                             <a class="navbar-brand mr-auto" href="#">
                                 <!-- Image edited from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.valamis.com%2Fcompany%2Fnews%2Fvalamis-operations-during-the-covid-19-coronavirus&psig=AOvVaw2snEKOY2GFlJ2xjz8Jf__N&ust=1619404195893000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCKjI5_CsmPACFQAAAAAdAAAAABAD -->
-                                <img src="/static/logo.jpg" alt="Site logo">
+                                <img src="./static/logo.jpg" alt="Site logo">
                                 COVID Seach Engine
                             </a>
                             <!-- Adjust the height of tm-top-bar if need more rows-->
@@ -219,10 +219,10 @@
         </div>
         
         <!-- load JS files -->
-        <script src="/static/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-        <script src="/static/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
-        <script src="/static/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
-        <script src="/static/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script src="./static/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="./static/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+        <script src="./static/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+        <script src="./static/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
         <script src="https://d3js.org/d3.v5.min.js"></script>               <!-- D3 for handling data-->
         <script>
 
@@ -237,7 +237,7 @@
             const requestData = async _ => {
 
                 // shape file
-                var shapeData = await d3.json('/static/shapeData.json');
+                var shapeData = await d3.json('./static/shapeData.json');
                 var currParam = 'people_positive';
 
                 // color scale with max stats
