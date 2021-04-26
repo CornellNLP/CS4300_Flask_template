@@ -20,7 +20,7 @@ footer p{
 form {
     width: 50%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .form_group{
@@ -41,12 +41,85 @@ select {
 button {
     padding: 10px;
     color: white;
-    background-color: #7D6B91;
+    background-color: #C6878F;
     border-radius: 10px;
     border: none;
     font-weight: bold;
     margin-left: 300px;
     margin-top: 10px;
+}
+
+/* output styling */
+h1 {
+    font-size: 26px;
+    margin: 30px;
+}
+
+.rec_info {
+    margin: 30px;
+    border: 1px solid #B79D94;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.restaurant_name {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    color: #16425B;
+}
+
+.summary p {
+    margin: 0;
+}
+
+.review_pic {
+    display: flex;
+    margin-top: 20px;
+}
+
+.review_pic img {
+    margin: auto;
+    padding-right: 10;
+    padding-top: 10;
+    padding-bottom: 10;
+}
+
+.review_info p {
+    margin-top: 15px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.review_info {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.review_label {
+    margin-top: 0 !important;
+    font-style: normal !important;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4A5899;
+    margin-bottom: -10px !important;
+}
+
+.stars {
+    display: flex;
+}
+
+.categories {
+    display: flex;
+}
+
+.categories_label {
+    font-style: normal !important;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4A5899;
+    padding-right: 5px;
 }
 
 
@@ -116,16 +189,39 @@ button {
             </div>
         </form>
     </div>
-    <!-- <form class="form-inline global-search"> -->
     <div class="result_div">
-        <h1>{{output_message}}</h1>
+        <h1 id="output_message">{{output_message}}</h1>
         {% for d in data %}
-        <br>
-        <p>{{d}}</p>
-        <p>{{data[d]['address']}}</p>
-        <p>{{data[d]['star rating']}}</p>
-        <p>{{data[d]['categories']}}</p>
-        <img src={{data[d].photos[0]}} height="150px">
+        <div class="rec_info">
+            <div class="summary">
+                <a class="restaurant_name" href="https://www.yelp.com/biz/{{data[d]['id']}}">{{d}}</a>
+                <p>{{data[d]['sim_score']}}</p>
+
+                <div class="categories">
+                    <p class="categories_label">Categories: </p>
+                    <p>{{data[d]['categories']}}</p>
+                </div>
+                <!-- <p>Categories: {{data[d]['categories']}}</p> -->
+                <p>{{data[d]['address']}}</p>
+                <div class="stars">
+                    {% for star in range(data[d]['star rating']) %}
+                    <p>★</p>
+                    {% endfor %}
+                    {% for star in range(5 - data[d]['star rating']) %}
+                    <p>☆</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="review_pic">
+                <img src={{data[d].photos[0]}} height="175px">
+                <div class="review_info">
+                    <p class="review_label">Reviews:</p>
+                    {% for r in data[d]['reviews'] %}
+                    <p>"{{r}}"</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </div>
 
