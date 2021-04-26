@@ -66,7 +66,7 @@
                                             <input name="search_rad" type="number" class="form-control" id="search_rad" placeholder="Distance">
                                         </div>
                                         <div class="form-group tm-form-element tm-form-element-100">                                           
-                                            <select name="search_rat" class="form-control tm-select" id="search_rad">
+                                            <select name="search_rat" class="form-control tm-select" id="search_rat">
                                                 <option value="">Min Rating</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
@@ -85,6 +85,20 @@
                                           <p class="tm-margin-b-0">[Examples and more instructions] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                       </div>
                                 </form>
+                                <script>
+                                    // Fill inputs with url
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    const inputs = {
+                                        'search_loc': urlParams.get('search_loc'),
+                                        'search_int': urlParams.get('search_int'),
+                                        'search_rad': urlParams.get('search_rad'),
+                                        'search_rat': urlParams.get('search_rat'),
+                                    };
+                                    if (inputs['search_loc']) {document.getElementById('search_loc').value = inputs['search_loc'];}
+                                    if (inputs['search_int']) {document.getElementById('search_int').value = inputs['search_int'];}
+                                    if (inputs['search_rad']) {document.getElementById('search_rad').value = inputs['search_rad'];}
+                                    if (inputs['search_rat']) {document.getElementById('search_rat').value = inputs['search_rat'];}
+                                </script>
                             </div>                        
                         </div>      
                     </div>
@@ -330,7 +344,6 @@
                     else if (currParam == "%_at_least_1"){ this._div.innerHTML = '<h4>Percentage of At Lease One Dose of Vaccination</h4>'; }
                     else { this._div.innerHTML = '<h4>Percentage of Fully Vaccinated</h4>'; }
                     if (data){
-                        console.log(data)
                         this._div.innerHTML += 'Positive Cases Nearby: '+ data['people_positive'] + '<br>' + 'Percetange Vaccined: ' + data['%_full_vax'] + '<br>' +
                         'Rec Score: ' + data['score'] + '<br>' +
                         'Avg Rec Score: ' + data['avg_score']
