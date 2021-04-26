@@ -95,8 +95,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
-                            <h2 class="tm-section-title">Lorem ipsum dolor sit amet</h2>
-                            <p class="tm-color-white tm-section-subtitle">Lorem ipsum dolor sit amet</p>
+                            <h2 class="tm-section-title" id='mapHeader'>Explore COVID-19 Data in Your Neighborhood</h2>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText1'>[instructions or example usage line 1]</p>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText2'>[instructions or example usage line 2]</p>
                         </div>                
                     </div>
                 </div>        
@@ -111,15 +112,14 @@
                 </svg>
                 <div class="container ie-h-align-center-fix">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div id="leaflet-map"></div> 
-                            <br>
-                            <p>Select Parameter to Plot on the Heatmap</p>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> 
+                            <p style="margin: 10px 10px">Select Parameter to Plot on the Heatmap</p>
                             <div class="btn-group">
                                 <button class='heatmap-btn selected' value="people_positive">Positive Cases</button>
                                 <button class='heatmap-btn' value="%_full_vax">Fully Vaccined</button>
                                 <button class='heatmap-btn' value="%_at_least_1">At Least One Dose</button>
-                              </div>       
+                            </div>       
+                            <div id="leaflet-map"></div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
                             <div class="tm-bg-white tm-p-4">
@@ -217,9 +217,9 @@
                 // positive cases: [0, 327]
                 // 1 dose: [0.22, 0.76]
                 // 2 doses: [0.14, 0.6]
-                var posCaseScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 300]);
-                var vacScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 0.80]);
-                var fullVacScale = d3.scaleSequential(d3.interpolateOrRd).domain([0, 0.80]);
+                var posCaseScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 400]);
+                var vacScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 1]);
+                var fullVacScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 1]);
 
                 function style(feature) {
                     return {
@@ -321,13 +321,14 @@
                 var markers = L.layerGroup();
                 // get customized icon color
                 var icon = new L.Icon({
-                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
                     iconSize: [25, 41],
                     iconAnchor: [12, 41],
                     popupAnchor: [1, -34],
                     shadowSize: [41, 41]
                 });
+
                 // check if there are results
                 if (!(resultLatLon && Object.keys(resultLatLon).length === 0 && resultLatLon.constructor === Object)){
                     // clear layer
@@ -337,7 +338,7 @@
                         value = resultLatLon[i];
                         // Todo: add descriptions
                         var msg = "<b>" + (i).toString() + '. ' + value['name'] + "</b><br><i class='tm-color-grey'>" + 'TODO: descriptions' +'</i>';
-                        var marker = L.marker([Number(value['lat']), value['lon']], {icon:icon, opacity: 0.9, riseOnHover: true}).bindPopup(msg).addTo(markers);
+                        var marker = L.marker([Number(value['lat']), value['lon']], {icon:icon, riseOnHover: true}).bindPopup(msg).addTo(markers);
                         marker.on('mouseover',function(ev) {
                             ev.target.openPopup();
                         });
@@ -348,6 +349,12 @@
                         }
                     }
                     markers.addTo(map);
+
+                    // change headers
+                    document.getElementById('mapHeader').innerHTML = "Showing [Category] Near [Location Name]";
+                    document.getElementById('mapText1').innerHTML='<b>Scroll Down to See the Ranked List</b>'
+                    document.getElementById('mapText2').innerHTML='Looking for other locations? TODO: add modified search'
+                    
                 }
 
                 // UI Functions

@@ -274,9 +274,8 @@ select.tm-select::-ms-expand { display: none; }
 }
 
 .tm-section-subtitle {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 300;
-	margin-bottom: 25px;
 }
 
 .tm-section-subtitle-2 { font-size: 1.8rem; }
@@ -507,6 +506,10 @@ video {
 	font-size: 1rem;
 }
 
+.btn-group{
+	margin-bottom: 25px;
+}
+
 .btn-group button {
 	background-color: white;
 	border: 1px solid #393a3c;
@@ -515,8 +518,7 @@ video {
 	margin: 0 10px;
 	cursor: pointer; 
 	float:left;
-  }
-  
+}
   
   /* Clear floats (clearfix hack) */
 .btn-group:after {
