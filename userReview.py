@@ -3,6 +3,13 @@ from cosinesim import getwords, build_vectorizer
 
 data = rankings.data
 
+#load the vectorizer
+with open('vectorizer.pickle') as v:
+  tfidf_vec = pickle.load(v)
+
+index_to_vocab = {i:v for i, v in enumerate(tfidf_vec.get_feature_names())} #from class
+vocab_to_index = {v: i for i, v in index_to_vocab.items()}
+
 def filterRestaurants(price_query, cuisine_query):
   """Returns a new list containing the indices of only restaurants that match the
   user's cuisine and price preferences
@@ -57,12 +64,9 @@ def computeCosine(review, filter_restaurants, tfidf_mat):
   }
   Returns: np.ndarray
   """
-
-  tfidf_vec = build_vectorizer()
-  index_to_vocab = {i:v for i, v in enumerate(tfidf_vec.get_feature_names())} #from class
-  vocab_to_index = {v: i for i, v in index_to_vocab.items()}
   all_words = getwords(review)
   stem_text = [stemmer.stem(t.lower()) for t in all_words if bool(re.match(r"^[a-zA-Z]+$", t))]
+  """
   #create a dic with keys = each word in the review and values = tf of that word
   tf_dic = {}
   for word in stem_text:
@@ -84,6 +88,9 @@ def computeCosine(review, filter_restaurants, tfidf_mat):
     review_vector[word_index] = tf/idf
   
   #compute the norm of the review
+  """
+  #convert reviews to a vector
+  review_vector = tfidf_vec.transform(stem_text).toarray()
   review_norm = np.linalg.norm(review_vector)
   
   #calculate the cos similarities between new review and other restaurants
