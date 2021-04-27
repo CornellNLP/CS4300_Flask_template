@@ -3,6 +3,7 @@ from app import app, socketio
 from flask import *
 import string
 from rankings import get_top, restaurant_to_index, get_reviews, web_scraping
+from userReview import filterRestaurants, computeCosine
 
 app = Flask(__name__, template_folder='app/templates')
 
@@ -50,8 +51,14 @@ def query():
 
     # restaurant_query is not in the data
     else:
-      output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
-      review_query = request.args.get('review')
+      #output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
+      review_query = request.args.get('user_review')
+      rel_restaurants = filterRestaurants(price_query, cuisine_query)
+      cosine_sim_restaurants = computeCosine(review_query, rel_restaurants)
+      top_restaurants = get_top("", price_query, cuisine_query, ambiances_query, 3, review_weight, ambiance_weight, True, cosine_sim_restaurants)
+      app.logger.critical("got restaurants")
+      output_message = "Your search: " + restaurant_query
+      data = web_scraping(top_restaurants, 0, True, cosine_sim_restaurants)
       #filter the restaurants that are relevant to the user's search
       # rel_restaurants = filterRestaurants(price_query, cuisine_query)
       # cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
