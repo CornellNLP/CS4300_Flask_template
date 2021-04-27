@@ -228,7 +228,7 @@ def get_reviews(restaurant):
     reviews.append(review["text"])
   return reviews
 
-def web_scraping(restaurants, input_index):
+def web_scraping(restaurants, input_index, user_review, user_matrix):
   full_info = dict()
   requests_session = requests.Session()
   for r in restaurants:
@@ -270,13 +270,19 @@ def web_scraping(restaurants, input_index):
     info['id'] = bus_id
     # get sim score of resturaunt by averaging sim scores of reviews
     info['sim_score'] = 0
-    orig_reviews = review_idx_for_restaurant[r] # list of review ids
-    new_reviews = review_idx_for_restaurant[index_to_restaurant[input_index]]
-    for i in orig_reviews:
-      for j in new_reviews:
-        info['sim_score'] += cos_sim_matrix[i][j]
-    info['sim_score'] = info['sim_score'] / 4
-    # cos_sim_matrix[input_index][restaurant_to_index[r]]
+    if not user_review:
+      orig_reviews = review_idx_for_restaurant[r] # list of review ids
+      new_reviews = review_idx_for_restaurant[index_to_restaurant[input_index]]
+      for i in orig_reviews:
+        for j in new_reviews:
+          info['sim_score'] += cos_sim_matrix[i][j]
+      info['sim_score'] = info['sim_score'] / 4
+      # cos_sim_matrix[input_index][restaurant_to_index[r]]
+    else:
+      orig_reviews = review_idx_for_restaurant[r]
+      for i in orig_reviews:
+        info['sim_score'] += user_matrix[i]
+      info['sim_score'] = info['sim_score'] / 4
     print("restaurant scraped")
   return full_info
 
