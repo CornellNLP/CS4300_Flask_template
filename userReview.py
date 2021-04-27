@@ -108,10 +108,12 @@ def computeCosine(review, filter_restaurants):
   #create tf idf matrix
   tfidf_mat = tfidf_vec.fit_transform(reviews_list).toarray()
   print(tfidf_mat.shape)
+  print(np.sum(tfidf_mat))
   #convert review to a vector
   reviews = []
   reviews.append(" ".join(stem_text))
   review_vector = tfidf_vec.transform(reviews).toarray()
+  print(review_vector.shape)
   print(np.sum(review_vector))
   review_norm = np.linalg.norm(review_vector)
   
@@ -126,9 +128,10 @@ def computeCosine(review, filter_restaurants):
     #print(review_ids)
     for rev in review_ids:
       cos_sim = get_cos_sim(rev, review_vector, review_norm, tfidf_mat)
-      cos_similarities[rev] = res_index
+      cos_similarities[rev] = cos_sim
   #print(np.sum(cos_similarities))
   #print(cos_similarities.shape)
+  #print(cos_similarities)
   return cos_similarities
 
 

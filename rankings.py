@@ -169,6 +169,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
   if len(user_and_rest_ambiances) == 0:
     ambiance_preference = False
     weighted_cossim = [el for el in ranked_cossims]
+    print(weighted_cossim)
     weighted_rankings = [x for x in weighted_cossim]
     for i in range(len(ranked_names)):
       weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
@@ -180,6 +181,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
     for i in range(len(ranked_names)):
       weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
   weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
+  #print(weighted_name_ranks)
   # print(weighted_name_ranks[0:10])
 
   for restaurant_info in weighted_name_ranks: # restaurant_info = (name, weighted sim score)
@@ -191,7 +193,8 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
 
     # no filtering
     if (not price_preference) and (not cuisine_preference) and (not ambiance_preference):
-      recs.append(name)
+      recs.append((name, ranking))
+      print(recs)
     else:
       cuisines = data["BOSTON"][name]["categories"] # array of tagged cuisines
 
