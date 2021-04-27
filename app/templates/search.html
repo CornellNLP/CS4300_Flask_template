@@ -82,7 +82,7 @@ h1 {
 }
 
 .restaurant_name {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     margin-top: 10px;
     font-weight: 900;
     font-size: 24px;
@@ -139,7 +139,19 @@ h1 {
     padding-right: 5px;
 }
 
+.name_div {
+    display: flex;
+    align-items: center;
+}
 
+.name_div p {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #16425B;
+    padding-left: 5px;
+}
 </style>
 
 <head>
@@ -229,9 +241,10 @@ h1 {
         {% for d in data %}
         <div class="rec_info">
             <div class="summary">
-                <a class="restaurant_name" href="https://www.yelp.com/biz/{{data[d]['id']}}">{{d}}</a>
-                <p>Cosine Similarity (need to change!): {{data[d]['sim_score']}}</p>
-
+                <div class="name_div">
+                    <a class="restaurant_name" href="https://www.yelp.com/biz/{{data[d]['id']}}">{{d}}</a>
+                    <p>({{data[d]['sim_score']}}% Match)</p>
+                </div>
                 <div class="categories">
                     <p class="categories_label">Categories: </p>
                     <p>{{data[d]['categories']}}</p>

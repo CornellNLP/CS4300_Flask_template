@@ -23,8 +23,6 @@ def query():
   for ambiance_input in ambiance_inputs:
     if request.args.get(ambiance_input) != None:
       ambiances_query.append(request.args.get(ambiance_input))
-  print("ambiances_query:")
-  print(ambiances_query)
 
   if request.args.get('weightRange') == None:
     ambiance_weight = 0.5
@@ -43,10 +41,12 @@ def query():
     restaurant_query = string.capwords(restaurant_query)
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
-      top_restaurants = get_top(restaurant_query, price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight)
+      top_tuple = get_top(restaurant_query, price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight)
+      top_restaurants = [x[0] for x in top_tuple]
+      top_sim_scores = [x[1] for x in top_tuple]
       app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
-      data = web_scraping(top_restaurants, restaurant_to_index[restaurant_query])
+      data = web_scraping(top_restaurants, top_sim_scores, restaurant_to_index[restaurant_query])
 
     # restaurant_query is not in the data
     else:

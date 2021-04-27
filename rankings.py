@@ -143,6 +143,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
     if len(recs) == n: # if have enough top places, stop finding more
       break
     name = restaurant_info[0] # name of restaurant
+    ranking = restaurant_info[1]
     price = int(data["BOSTON"][name]["price"]) # price preference
 
     # no filtering
@@ -171,16 +172,8 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
         cuisine_match = True
 
       if cuisine_match and price_match and restaurant not in name:
-        recs.append(name)
-
+        recs.append((name, ranking))
   return recs
-
-# def get_top(restaurant):
-#   #get the restaurant name
-#   return get_ranked_restaurants(restaurant, cos_sim_matrix)
-
-# def get_restaurant_to_index():
-#   return restaurant_to_index
 
 def get_reviews(restaurant):
   reviews = []
@@ -188,10 +181,12 @@ def get_reviews(restaurant):
     reviews.append(review["text"])
   return reviews
 
-def web_scraping(restaurants, input_index):
+def web_scraping(restaurants, sim_scores, input_index):
   full_info = dict()
   requests_session = requests.Session()
-  for r in restaurants:
+  for i in range(len(restaurants)):
+    r = restaurants[i]
+    sim_score = round(sim_scores[i] * 100, 2)
     info = dict()
     bus_id = small_data[r]['id']
     page = requests_session.get(f"https://www.yelp.com/biz/{bus_id}")
@@ -229,14 +224,13 @@ def web_scraping(restaurants, input_index):
     info['reviews'] = get_reviews(r)
     info['id'] = bus_id
     # get sim score of resturaunt by averaging sim scores of reviews
-    info['sim_score'] = 0
-    orig_reviews = review_idx_for_restaurant[r] # list of review ids
-    new_reviews = review_idx_for_restaurant[index_to_restaurant[input_index]]
-    for i in orig_reviews:
-      for j in new_reviews:
-        info['sim_score'] += cos_sim_matrix[i][j]
-    info['sim_score'] = info['sim_score'] / 4
-    # cos_sim_matrix[input_index][restaurant_to_index[r]]
+    info['sim_score'] = sim_score
+    # orig_reviews = review_idx_for_restaurant[r] # list of review ids
+    # new_reviews = review_idx_for_restaurant[index_to_restaurant[input_index]]
+    # for i in orig_reviews:
+    #   for j in new_reviews:
+    #     info['sim_score'] += cos_sim_matrix[i][j]
+    # info['sim_score'] = info['sim_score'] / 4
     print("restaurant scraped")
   return full_info
 
