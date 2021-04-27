@@ -34,6 +34,16 @@ label {
     padding-right: 10px;
 }
 
+#ambianceLabel {
+    width: 300px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#slider_div {
+    margin-left: 150px;
+}
+
 select {
     width: 100px;
 }
@@ -47,6 +57,15 @@ button {
     font-weight: bold;
     margin-left: 300px;
     margin-top: 10px;
+}
+
+textarea {
+    width: 250px;
+    height: 100px;
+}
+
+.fav_name_input{
+    width: 250px;
 }
 
 /* output styling */
@@ -82,8 +101,6 @@ h1 {
 .review_pic img {
     margin: auto;
     padding-right: 10;
-    padding-top: 10;
-    padding-bottom: 10;
 }
 
 .review_info p {
@@ -137,7 +154,11 @@ h1 {
             <div>
                 <div class="form_group">
                     <label class="form_label" for="fav_name">Name of favorite restaurant (required):</label>
-                    <input type="text" name="fav_name" id="fav_name" required>
+                    <input type="text" name="fav_name" id="fav_name" class="fav_name_input" required>
+                </div>
+                <div class="form_group">
+                    <label class="form_label" for="user_review">User Review (need to show/hide):</label>
+                    <textarea name="user_review" id="user_review"></textarea>
                 </div>
                 <div class="form_group">
                     <label for="max_price">Maximum price point:</label>
@@ -171,18 +192,32 @@ h1 {
                     </select>
                 </div>
                 <div class="form_group">
-                    <label for="ambiance">Ambiance:</label>
-                    <select name="ambiance" id="ambiance">
-                        <option value=""></option>
-                        <option value="romantic">Romantic</option>
-                        <option value="intimate">Intimate</option>
-                        <option value="classy">Classy</option>
-                        <option value="hipster">Hipster</option>
-                        <option value="touristy">Touristy</option>
-                        <option value="trendy">Trendy</option>
-                        <option value="upscale">Upscale</option>
-                        <option value="casual">Casual</option>
-                    </select>
+                    <p id="ambianceLabel">Ambiance:</p>
+                    <div class="checkbox_div">
+                        <input type="checkbox" id="ambiance1" name="ambiance1" value="romantic">
+                        <label for="ambiance1">Romantic</label><br>
+                        <input type="checkbox" id="ambiance2" name="ambiance2" value="intimate">
+                        <label for="ambiance2">Intimate</label><br>
+                        <input type="checkbox" id="ambiance3" name="ambiance3" value="classy">
+                        <label for="ambiance3">Classy</label><br>
+                        <input type="checkbox" id="ambiance4" name="ambiance4" value="hipster">
+                        <label for="ambiance4">Hipster</label><br>
+                    </div>
+                    <div class="checkbox_div">
+                        <input type="checkbox" id="ambiance5" name="ambiance5" value="touristy">
+                        <label for="ambiance5">Touristy</label><br>
+                        <input type="checkbox" id="ambiance6" name="ambiance6" value="trendy">
+                        <label for="ambiance6">Trendy</label><br>
+                        <input type="checkbox" id="ambiance7" name="ambiance7" value="upscale">
+                        <label for="ambiance7">Upscale</label><br>
+                        <input type="checkbox" id="ambiance8" name="ambiance8" value="casual">
+                        <label for="ambiance8">Casual</label><br>
+                    </div>
+                </div>
+                <div class="form_group" id="slider_div">
+                    <p>Ambiance Weight</p>
+                    <input type="range" min="0" max="100" value="50" class="slider" name="weightRange" id="weightRange">
+                    <p>Review Weight</p>
                 </div>
 
                 <button type="submit">Find your new favorite restaurant in Boston!</button>
@@ -195,13 +230,12 @@ h1 {
         <div class="rec_info">
             <div class="summary">
                 <a class="restaurant_name" href="https://www.yelp.com/biz/{{data[d]['id']}}">{{d}}</a>
-                <p>{{data[d]['sim_score']}}</p>
+                <p>Cosine Similarity (need to change!): {{data[d]['sim_score']}}</p>
 
                 <div class="categories">
                     <p class="categories_label">Categories: </p>
                     <p>{{data[d]['categories']}}</p>
                 </div>
-                <!-- <p>Categories: {{data[d]['categories']}}</p> -->
                 <p>{{data[d]['address']}}</p>
                 <div class="stars">
                     {% for star in range(data[d]['star rating']) %}
@@ -213,7 +247,7 @@ h1 {
                 </div>
             </div>
             <div class="review_pic">
-                <img src={{data[d].photos[0]}} height="175px">
+                <img src={{data[d].photos[0]}} width="250px">
                 <div class="review_info">
                     <p class="review_label">Reviews:</p>
                     {% for r in data[d]['reviews'] %}

@@ -84,7 +84,7 @@ def getJaccard(input_ambiances, all_rests_ambiances):
   return jaccard_ambiances
 
 def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance_weight):
-  """Returns a list of the top 3 restuarants that match the inputted restaurant 
+  """Returns a list of the top n restuarants that match the inputted restaurant
   and preferences indicated
   Params: {
     restaurant: string
@@ -223,7 +223,15 @@ def web_scraping(restaurants, input_index):
     full_info[r] = info
     info['reviews'] = get_reviews(r)
     info['id'] = bus_id
-    info['sim_score'] = cos_sim_matrix[input_index][restaurant_to_index[r]]
+    # get sim score of resturaunt by averaging sim scores of reviews
+    info['sim_score'] = 0
+    orig_reviews = review_idx_for_restaurant[r] # list of review ids
+    new_reviews = review_idx_for_restaurant[index_to_restaurant[input_index]]
+    for i in orig_reviews:
+      for j in new_reviews:
+        info['sim_score'] += cos_sim_matrix[i][j]
+    info['sim_score'] = info['sim_score'] / 4
+    # cos_sim_matrix[input_index][restaurant_to_index[r]]
     print("restaurant scraped")
   return full_info
 
