@@ -12,10 +12,12 @@
    html {
     scroll-behavior: smooth;
   }
+  
    body {
-       padding-top: 10%;
+       padding-top: 4%;
        padding-bottom: 15px;
-   }
+       background-color:  #D2E8D9;
+       }
 
    a, a:hover {
        color: inherit; 
@@ -40,6 +42,7 @@
        display:inline-block;
        /* margin-bottom:0; */
    }
+
    }
    .topcorner{
        position:absolute;
@@ -60,12 +63,13 @@
     margin: auto;
    border-radius: 10px;
    width: 50%;
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
    transition: 0.3s;
+   background-color:white;
  }
 
  .container {
-   padding: 2px 60px;
+   padding: 5px 60px;
    width:100%;
  }
 
@@ -87,6 +91,10 @@
     align-items: start;
 }
 
+#toggles {
+    margin: 15px 0px 15px 0px;
+}
+
  .result {
      margin-top:10px;
  }
@@ -97,23 +105,20 @@
  }
 
  #name {
+     width: 80%;
      margin-top:10px;
      font-size: 150%;
+     vertical-align: baseline;
  }
 
- #difficulty-display {
-     color: white;
-     background-color: forestgreen;
-     font-weight: light;
-     border-radius: 5px;
-     padding-right: 5px;
-     width:150px;
-     text-align: center;
- }
 
 #length {
-    width: 80%;
+    /* width: 80%; */
+    display: inline-block;
     color:gray;
+    padding: auto;
+    vertical-align: baseline;
+    /* padding: 13px 0px; */
 }
 
  #review {
@@ -124,30 +129,41 @@
  }
 
  #attributes, #activity-type {
-    margin-right: 4px;
+    margin-right: 5px;
  }
 
  #activity-type {
      width: 25px;
+     padding: 8px 0px;
  }
 
- #attribute {
-     border: 1px forestgreen solid;
-     border-radius: 5px;
-     color: forestgreen;
-     font-size: 70%;
-     font-weight: light;
-     padding:3 5 3 5;
+.activity-types {
+    /* width: 80%; */
+    display: flex;
+    justify-self: flex-end;
+}
+
+#difficulty-display, #attribute {
+     border: 1px #6FCF97 solid;
+     border-radius: 50px;
+     color: #6FCF97;
+     font-size: 80%;
+     padding:3 7 3 7;
      margin-right: 3px;
      text-align: center;
+     margin-top: 8px;
+     height: 25px;
  }
+
+ #difficulty-display {
+    color: white;
+    background-color: #6FCF97;
+}
 
  .trail-img { 
     width: 100%; 
-    height:150px;
+    height:180px;
     object-fit:cover;
-     /* max-width: 100%; */
-     /* max-height: 200px; */
      border-radius: 10px 10px 0 0;
      overflow: hidden;
      justify-content: flex-end;
@@ -367,7 +383,7 @@ input[type=checkbox][id=parking]:checked + label {
 
 .slidecontainer {
     width: 100%; /* Width of the outside container */
-    margin: 20px 0px 20px 0px;
+    margin: 15px 0px 15px 0px;
     text-align: start;
   }
   
@@ -404,5 +420,9 @@ input[type=checkbox][id=parking]:checked + label {
   #range {
     display: flex;
     justify-content: space-between;
+  }
+
+  .background-img {
+      position: absolute;
   }
 

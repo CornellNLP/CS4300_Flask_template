@@ -36,7 +36,7 @@ def search():
 		rankings = get_rankings_by_query(query)
 		# Convert rankings into displayable results
 		results = [Result(ranking) for ranking in rankings]
-		output_message = "Your search: " + query
+		output_message = '"' + query + '"'
 		data = results
 
 	# Render new outputs

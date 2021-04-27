@@ -6,10 +6,10 @@
 </head>
 
 <body>
-  <div class="topcorner">
+  <!-- <div class="topcorner">
     <p>Project Name: {{ name }}</p>
     <p>Student Name: ({{ netid }})</p>
-  </div>
+  </div> -->
   <div class="card">
     <div class="container">
       <form class="form-inline global-search">
@@ -90,7 +90,7 @@
   </div>
   </div>
 
-  <h1 class="form-inline global-search">{{output_message}}</h1>
+  <h3 class="form-inline global-search">{{output_message}}</h3>
   <form class="">
     {% if data %}
     {% for d in data %}
@@ -98,24 +98,28 @@
     <a href={{d.url}}>
       <div class="card result">
         <div class="trail-imgs">
-          <img src="static/placeholder.jpg" alt="Hiking Trail" class="trail-img" />
+          <img src="static/waterfall.jpg" alt="Hiking Trail" class="trail-img" />
         </div>
         <div class="container col" id="results">
           <div class="trail-info">
-            <p id="name"><b>{{d.name}}</b></p>
-            <div class="display-row">
-              <p id="length">{{d.length}} mi distance</p>
-              <p id="difficulty-display">{{d.difficulty}}</p>
+            <div class="display-row vert-align">
+              <p id="name"><b>{{d.name}}</b></p>
             </div>
-            <div id="attributes" class="display-row">
+            <p id="length">{{d.length}} mi distance</p>
+            <div class="activity-types">
+              <p id="difficulty-display">{{d.difficulty}}</p>
               {% for activity in d.activity_types %}
               <img src={{activity}} alt="activity icon" id="activity-type" />
               {% endfor %}
-              {% for attribute in d.attributes %}
-              <p id="attribute">{{ attribute }}</p>
-              {% endfor %}
+              <div id="attributes" class="display-row">
+                {% for attribute in d.attributes %}
+                <p id="attribute">{{ attribute }}</p>
+                {% endfor %}
+              </div>
             </div>
+
             <p id="review">"{{ d.review }}"</p>
+
             <!-- <p>{{d.description}}</p> -->
 
           </div>
