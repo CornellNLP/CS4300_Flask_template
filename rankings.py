@@ -219,7 +219,12 @@ def web_scraping(restaurants, input_index):
     rating_text = soup.findAll('div', {"class": re.compile("i-stars--large")})[0].attrs['aria-label']
     number = round(float(rating_text.split(' ')[0]))
     info['star rating'] = number
-    info['categories'] = small_data[r]['categories']
+    # get rid of word 'Restaurants' in categories list
+    categories_string = small_data[r]['categories']
+    categories_list = categories_string.split(', ')
+    categories_list = [word for word in categories_list if word not in ['Restaurants']]
+    info['categories'] = ', '.join(map(str, categories_list))
+
     full_info[r] = info
     info['reviews'] = get_reviews(r)
     info['id'] = bus_id
