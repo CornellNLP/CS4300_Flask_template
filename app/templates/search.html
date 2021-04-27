@@ -18,6 +18,8 @@
           <h1 style="font-size: 55px; font-family:Futura; color:forestgreen">
             Take a hike! </h1>
           <p>Hiking trail recommender for the Finger Lakes area</p>
+          <p id="netid"> {{ netid }}</p>
+          </p>
         </div>
 
         <div class="col">
@@ -31,6 +33,7 @@
                 <h4>DIFFICULTY</h4>
                 <label for="difficulty"></label>
                 <select name="difficulty" id="difficulty-input" class="form-control">
+                  <option disabled selected value>Select Difficulty</option>
                   <option value="easy">Easy</option>
                   <option value="moderate">Moderate</option>
                   <option value="hard">Hard</option>
@@ -119,13 +122,11 @@
             </div>
 
             <p id="review">"{{ d.review }}"</p>
-
             <!-- <p>{{d.description}}</p> -->
 
           </div>
         </div>
     </a>
-
     </div>
     {% endfor %}
     {% endif %}

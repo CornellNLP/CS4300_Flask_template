@@ -5,11 +5,11 @@ from app.irsystem.models.search import *
 from app.irsystem.models.result import Result
 
 project_name = "Hiking Trail Recommender"
-net_id = "Ryan Richardson: rrr225 " + \
-		 "Alicia Wang: axw5 " + \
-		 "Alicia Chen: ac2596 " + \
-		 "Cesar Ferreyra-Mansilla: crf85 " + \
-		 "Renee Hoh: rch294 "
+net_id = "Ryan Richardson (rrr225) " + \
+		 "Alicia Wang (axw5) " + \
+		 "Alicia Chen (ac2596) " + \
+		 "Cesar Ferreyra-Mansilla (crf85) " + \
+		 "Renee Hoh (rch294)"
 
 @irsystem.route('/', methods=['GET'])
 def search():
