@@ -42,7 +42,7 @@ def query():
     restaurant_query = string.capwords(restaurant_query)
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
-      top_tuple = get_top(restaurant_query, price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight)
+      top_tuple = get_top(restaurant_query, price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight, False, None)
       top_restaurants = [x[0] for x in top_tuple]
       top_sim_scores = [x[1] for x in top_tuple]
       app.logger.critical("got restaurants")
@@ -54,11 +54,16 @@ def query():
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
       review_query = request.args.get('user_review')
       rel_restaurants = filterRestaurants(price_query, cuisine_query)
+
       cosine_sim_restaurants = computeCosine(review_query, rel_restaurants)
-      top_restaurants = get_top("", price_query, cuisine_query, ambiances_query, 3, review_weight, ambiance_weight, True, cosine_sim_restaurants)
+      top_tuple = get_top("", price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight, True, cosine_sim_restaurants)
+      print(top_tuple)
+      top_restaurants = [x[0] for x in top_tuple]
+      print(top_restaurants)
+      top_sim_scores = [x[1] for x in top_tuple]
       app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
-      data = web_scraping(top_restaurants, 0, True, cosine_sim_restaurants)
+      data = web_scraping(top_restaurants, top_sim_scores, 0)
       #filter the restaurants that are relevant to the user's search
       # rel_restaurants = filterRestaurants(price_query, cuisine_query)
       # cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)

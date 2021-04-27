@@ -168,14 +168,18 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
 
   if len(user_and_rest_ambiances) == 0:
     ambiance_preference = False
-    weighted_name_ranks = ranked
+    weighted_cossim = [el for el in ranked_cossims]
+    weighted_rankings = [x for x in weighted_cossim]
+    for i in range(len(ranked_names)):
+      weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
+    #weighted_name_ranks = ranked
   else:
     weighted_cossim = [el * review_weight for el in ranked_cossims]
     weighted_jaccard = [el * ambiance_weight for el in jaccard_list]
     weighted_rankings = [x + y for x, y in zip(weighted_cossim, weighted_jaccard)]
     for i in range(len(ranked_names)):
       weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
-    weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
+  weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
   # print(weighted_name_ranks[0:10])
 
   for restaurant_info in weighted_name_ranks: # restaurant_info = (name, weighted sim score)
@@ -270,6 +274,7 @@ def web_scraping(restaurants, sim_scores, input_index):
     #     info['sim_score'] += cos_sim_matrix[i][j]
     # info['sim_score'] = info['sim_score'] / 4
     # info['sim_score'] = 0
-    if not user_review:
-      orig_reviews = review_idx_for_restaurant[r] # list of review ids
-  main()
+    #if not user_review:
+      #orig_reviews = review_idx_for_restaurant[r] # list of review ids
+  #main()
+  return full_info
