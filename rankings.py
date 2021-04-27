@@ -29,7 +29,6 @@ def getwords(sent):
 with open('vectorizer.pickle', 'rb') as v:
   tfidf_vec = pickle.load(v)
 
-tfidf_mat = np.array(np.load('tfidfmat.npy'))
 
 with open("finalData2.json", "r") as f:
   data = json.load(f)
@@ -65,7 +64,7 @@ def get_ranked_restaurants(in_restaurant, sim_matrix, user_review):
     review_sims = sim_matrix
   restaurant_sims = [np.mean(arr) for arr in np.split(review_sims, review_splitter)]
   rest_lst = [(index_to_restaurant[i], s) for i,s in enumerate(restaurant_sims)]
-  rest_lst = rest_lst[:rest_idx] + rest_lst[rest_idx+1:]
+  #rest_lst = rest_lst[:rest_idx] + rest_lst[rest_idx+1:]
   rest_lst = sorted(rest_lst, key=lambda x: -x[1])
   return rest_lst
   #rest_idx = restaurant_to_index[in_restaurant]
@@ -136,11 +135,13 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
     cuisine_preference = False
 
   recs = []
+  print(type(ambiance))
+  print(ambiance)
   if not user_review:
     ranked = get_ranked_restaurants(restaurant, cos_sim_matrix, False)
   #rankings for user review
   else:
-    ranked = get_ranked_restaurants("", user_sim_matrix, True)
+    ranked = get_ranked_restaurants("", user_matrix, True)
 
   # split up ranked into a list of names and list of similarity scores
   ranked_names = []
@@ -154,7 +155,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
     restaurant_ambiances.append(data["BOSTON"][rest[0]]["ambience"])
 
   if not user_review:
-    user_and_rest_ambiances = list(set(ambiance + data["BOSTON"][restaurant]["ambience"]))
+    user_and_rest_ambiances = list(set(ambiance + (data["BOSTON"][restaurant]["ambience"])))
   else:
     user_and_rest_ambiances = list(ambiance)
 
@@ -211,6 +212,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
       if cuisine_match and price_match and restaurant not in name:
         recs.append(name)
 
+  print(type(recs))
   return recs
 
 # def get_top(restaurant):

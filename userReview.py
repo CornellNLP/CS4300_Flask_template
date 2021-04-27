@@ -1,7 +1,25 @@
 import rankings
-from cosinesim import getwords, build_vectorizer
+from nltk.stem import PorterStemmer
+import pickle
+import json
+import re
+import numpy as np
 
 data = rankings.data
+def getwords(sent):
+  return [w.lower() for w in word_splitter.findall(sent)]
+stemmer = PorterStemmer()
+
+word_splitter = re.compile(r"""
+    (\w+)
+    """, re.VERBOSE)
+
+small_data = data['BOSTON']
+
+index_to_restaurant = {i: v for i, v in enumerate(small_data.keys())}
+
+restaurant_to_index = {v: i for i, v in index_to_restaurant.items()}
+
 
 #index_to_vocab = {i:v for i, v in enumerate(tfidf_vec.get_feature_names())} #from class
 #vocab_to_index = {v: i for i, v in index_to_vocab.items()}
@@ -76,8 +94,8 @@ def computeCosine(review, filter_restaurants):
   review_norm = np.linalg.norm(review_vector)
   
   #calculate the cos similarities between new review and other restaurants
-  cos_similarities = np.zeros(len(reviewslist2.json) 
-  for res_index in restaurants:
+  cos_similarities = np.zeros(len(reviews_list))
+  for res_index in filter_restaurants:
     res_name = rankings.index_to_restaurant[res_index]
     #get the reviews corresponding to that restaurant
     review_ids = rankings.review_idx_for_restaurant[res_name]
