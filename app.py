@@ -34,16 +34,17 @@ def query():
     restaurant_query = string.capwords(restaurant_query)
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
-      top_restaurants = get_top(restaurant_query, price_query, cuisine_query, ambiance_query, 3)
+      top_restaurants = get_top(restaurant_query, price_query, cuisine_query, ambiance_query, 3, False, None)
       output_message = "Your search: " + restaurant_query
       data = top_restaurants
     # restaurant_query is not in the data
     else:
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
-      review_query = request.args.get('review')
+      review_query = request.args.get('user_review')
       #filter the restaurants that are relevant to the user's search
       rel_restaurants = filterRestaurants(price_query, cuisine_query)
       cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
+      top_restaurants = get_top("", price_query, cusine_query, ambiance_query, 3, True, cosine_sim_restaurants)
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
     app.logger.critical("output_message") # from ta
     app.logger.critical(output_message) # from ta
