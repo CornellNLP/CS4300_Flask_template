@@ -1,11 +1,10 @@
-from app import app, socketio
+# from app import app, socketio
 # import socketio
 from flask import *
 import string
 from rankings import get_top, restaurant_to_index
 import logging # from ta
-# from rankings import filterRestaurants, getCosineRestaurants, web_scraping
-from rankings import get_top, web_scraping
+from rankings import filterRestaurants, getCosineRestaurants
 app = Flask(__name__, template_folder='app/templates')
 
 gunicorn_logger = logging.getLogger('gunicorn.error') # from ta
@@ -36,11 +35,8 @@ def query():
     # if restaurant_query is in the data
     if restaurant_query in restaurant_to_index.keys():
       top_restaurants = get_top(restaurant_query, price_query, cuisine_query, ambiance_query, 3)
-      app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
-      # data = top_restaurants
-      data = web_scraping(top_restaurants)
-      
+      data = top_restaurants
     # restaurant_query is not in the data
     else:
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"

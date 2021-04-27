@@ -11,6 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem import PorterStemmer
 import re
 from pathlib import Path
+import pickle
 
 with open("finalData2.json", "r") as f:
     data = json.load(f)
@@ -74,7 +75,10 @@ else:
   #with open("tfidfmat.json", 'w') as fp3:
     #json.dump(tfidf_mat, fp3, indent=2)
   np.save('tfidfmat.npy', tfidf_mat)
+with open('vectorizer', 'w') as v:
+  pickle.dump(tfidf_vec, v)
 print(tfidf_mat.shape)
+
 
 print("after build tf idf matrix")
 
