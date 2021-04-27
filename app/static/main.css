@@ -29,7 +29,10 @@ a:focus {
 .tm-fa-6x { font-size: 6em; }
 .tm-margin-b-0 { margin-bottom: 0; }
 .tm-margin-b-20 { margin-bottom: 20px; }
-.tm-p-4 { padding: 2rem!important; }
+.tm-p-4 { 
+	padding-left: 2rem!important; 
+	padding-right: 2rem!important; 
+}
 .tm-color-white { color: white; }
 .tm-color-primary {	color: #d22c2c; }
 .tm-color-dark {	color: #6e1b09; }
@@ -55,7 +58,7 @@ a:focus {
 
 a.tm-color-primary:hover,
 a.tm-color-primary:active {
-	color: #d22c2c;
+	color: #6e1b09;
 }
 
 .tm-font-light { font-weight: 300; }
@@ -550,7 +553,13 @@ video {
   }
 
 footer a:hover{
-	color:#6e1b09;
+	color:#f07249 !important;
+}
+
+#casePlot{
+    max-width: 100%;
+    max-height: 100%;
+	margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 991px) {

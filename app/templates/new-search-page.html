@@ -109,9 +109,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
-                            <h2 class="tm-section-title" id='mapHeader'>Explore COVID-19 Data in Your Neighborhood</h2>
-                            <p class="tm-color-white tm-section-subtitle" id='mapText1'>[instructions or example usage line 1]</p>
-                            <p class="tm-color-white tm-section-subtitle" id='mapText2'>[instructions or example usage line 2]</p>
+                            <h2 class="tm-section-title" id='mapHeader'>Get COVID-19 Information with Our App</h2>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText1'><i class="fa fa-compass" style="padding: 0 10px;"></i>Explore Low-Risk Neighborhoods on the Heatmap</p>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText2'><i class="fa fa-file-code-o" style="padding: 0 10px;"></i>Learn Future Trends of COVID Cases in NYC</p>
                         </div>                
                     </div>
                 </div>        
@@ -137,8 +137,10 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
                             <div class="tm-bg-white tm-p-4">
-                                <p>[Cases Prediction in NYC]</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <p style="margin-bottom: 0.5rem;"> It’s undeniable that the pandemic influences the population socially and studying its movement can help with citizen's judgement. This app employs machine learning(Bollinger Bands) to obtain volatility analysis on the trend and fluctuation of COVID data in NYC.</p>
+                                <p style="margin-bottom: 0;"><a href="https://github.com/nychealth/coronavirus-data" class="tm-color-primary tm-font-normal">Data</a> includes historical daily COVID cases for New York City up to the end of 04/17/21</p>
+                                <img src="./static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
+                                <p style="margin-bottom: 0;">When the daily cases break out of the upper bound of the 20-day moving average(red signals), we expect it to continue the upward trend. When the number of cases breaks out of the lower bound of moving average(green signals), we expect the cases to decrease in the near future. For the most recent data (on the very right side), 4 consecutive green signals indicate case drops and a lower risk level for NYC.</p>
                             </div>                            
                         </div>
                     </div>        
