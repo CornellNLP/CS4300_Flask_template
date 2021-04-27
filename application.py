@@ -53,8 +53,8 @@ def query():
       output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
       review_query = request.args.get('review')
       #filter the restaurants that are relevant to the user's search
-      rel_restaurants = filterRestaurants(price_query, cuisine_query)
-      cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
+      # rel_restaurants = filterRestaurants(price_query, cuisine_query)
+      # cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
   return render_template('search.html', output_message=output_message, data=data)
 
