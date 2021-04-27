@@ -17,6 +17,11 @@
        padding-bottom: 15px;
    }
 
+   a, a:hover {
+       color: inherit; 
+       text-decoration: none;
+   }
+
    h4 {
        font-size: 80%;
        text-align: start;
@@ -83,10 +88,12 @@
 }
 
  .result {
-     /* display: flex;
-     flex-direction: column; */
-     /* padding: 10px; */
      margin-top:10px;
+ }
+
+ .result:hover {
+    transform: scale(1.01);
+    /* box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06); */
  }
 
  #name {
@@ -116,15 +123,19 @@
      font-style: italic;
  }
 
- #activity-types {
-    margin-right: 3px;
+ #attributes, #activity-type {
+    margin-right: 4px;
  }
 
  #activity-type {
+     width: 25px;
+ }
+
+ #attribute {
      border: 1px forestgreen solid;
      border-radius: 5px;
      color: forestgreen;
-     font-size: 80%;
+     font-size: 70%;
      font-weight: light;
      padding:3 5 3 5;
      margin-right: 3px;
@@ -394,3 +405,4 @@ input[type=checkbox][id=parking]:checked + label {
     display: flex;
     justify-content: space-between;
   }
+

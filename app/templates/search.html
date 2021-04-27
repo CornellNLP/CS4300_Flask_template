@@ -95,27 +95,32 @@
     {% if data %}
     {% for d in data %}
     <br>
-    <div class="card result">
-      <div class="trail-imgs">
-        <img src="static/placeholder.jpg" alt="Hiking Trail" class="trail-img" />
-      </div>
-      <div class="container col" id="results">
-        <div class="trail-info">
-
-          <p id="name"><b>{{d.name}}</b></p>
-          <div class="display-row">
-            <p id="length">{{d.length}} mi distance</p>
-            <p id="difficulty-display">{{d.difficulty}}</p>
-          </div>
-          <div id="activity-types" class="display-row">
-            {% for activity in d.activity_types %}
-            <p id="activity-type">{{ activity }}</p>
-            {% endfor %}
-          </div>
-          <p id="review">"{{ d.review }}"</p>
-          <!-- <p>{{d.description}}</p> -->
+    <a href={{d.url}}>
+      <div class="card result">
+        <div class="trail-imgs">
+          <img src="static/placeholder.jpg" alt="Hiking Trail" class="trail-img" />
         </div>
-      </div>
+        <div class="container col" id="results">
+          <div class="trail-info">
+            <p id="name"><b>{{d.name}}</b></p>
+            <div class="display-row">
+              <p id="length">{{d.length}} mi distance</p>
+              <p id="difficulty-display">{{d.difficulty}}</p>
+            </div>
+            <div id="attributes" class="display-row">
+              {% for activity in d.activity_types %}
+              <img src={{activity}} alt="activity icon" id="activity-type" />
+              {% endfor %}
+              {% for attribute in d.attributes %}
+              <p id="attribute">{{ attribute }}</p>
+              {% endfor %}
+            </div>
+            <p id="review">"{{ d.review }}"</p>
+            <!-- <p>{{d.description}}</p> -->
+
+          </div>
+        </div>
+    </a>
 
     </div>
     {% endfor %}
