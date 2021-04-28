@@ -213,8 +213,8 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
 
       if price_preference: # if there is a price preference
         low = (max_price == "low") and (price == 1 or price ==2)
-        medium = (max_price == "medium") and (price == 3)
-        high = (max_price == "high") and (price == 4 or price == 5)
+        medium = (max_price == "medium") and (price == 2 or price == 3)
+        high = (max_price == "high") and (price == 3 or price == 4 or price == 5)
         if low or medium or high:
           price_match = True
       else: # no price preference

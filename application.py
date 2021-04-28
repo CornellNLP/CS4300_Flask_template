@@ -12,6 +12,7 @@ app = Flask(__name__, template_folder='app/templates')
 def query():
   data = []
   output_message = ''
+  filter_message = ''
 
   restaurant_query = request.args.get('fav_name')
   price_query = request.args.get('max_price')
@@ -48,6 +49,7 @@ def query():
       app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
       data = web_scraping(top_restaurants, top_sim_scores, restaurant_to_index[restaurant_query])
+      # create filtering message
 
     # restaurant_query is not in the data
     else:
