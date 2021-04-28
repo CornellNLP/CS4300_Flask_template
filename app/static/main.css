@@ -179,6 +179,10 @@ p {
 	padding: 0.6rem 0.75rem;
 }
 
+.form-text {
+	display: block !important;
+}
+
 .form-control:focus {
 	border-color: #F07249;
 	box-shadow: 0 0 0 0.2rem rgba(238,80,87,.25);
