@@ -157,12 +157,14 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
   if not user_review:
     user_and_rest_ambiances = list(set(ambiance + (data["BOSTON"][restaurant]["ambience"])))
   else:
-    user_and_rest_ambiances = list(ambiance)
+    user_and_rest_ambiances = ambiance
 
+  print(user_and_rest_ambiances)
   jaccard_list = []
   if len(user_and_rest_ambiances) != 0:
     jaccard_list = getJaccard(user_and_rest_ambiances, restaurant_ambiances)
 
+  print(len(jaccard_list))
   weighted_rankings = []
   weighted_name_ranks = []
 
@@ -177,13 +179,20 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
   else:
     weighted_cossim = [el * review_weight for el in ranked_cossims]
     weighted_jaccard = [el * ambiance_weight for el in jaccard_list]
+    print("Start new")
+    print(len(weighted_cossim))
+    print(len(weighted_jaccard))
     weighted_rankings = [x + y for x, y in zip(weighted_cossim, weighted_jaccard)]
+    print("before for")
     for i in range(len(ranked_names)):
       weighted_name_ranks.append((ranked_names[i], weighted_rankings[i]))
   weighted_name_ranks = sorted(weighted_name_ranks, key=lambda x: -x[1])
   #print(weighted_name_ranks)
+  #print(weighted_name_ranks)
   # print(weighted_name_ranks[0:10])
 
+  print(price_preference)
+  print(cuisine_preference)
   for restaurant_info in weighted_name_ranks: # restaurant_info = (name, weighted sim score)
     if len(recs) == n: # if have enough top places, stop finding more
       break
@@ -216,9 +225,12 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
             cuisine_match = True
       else: # no cuisine preference
         cuisine_match = True
-
-      if cuisine_match and price_match and restaurant not in name:
-        recs.append((name, ranking))
+      if user_review:
+        if cuisine_match and price_match:
+          recs.append((name, ranking))
+      else:
+        if cuisine_match and price_match and restaurant not in name:
+          recs.append((name, ranking))
   return recs
 
 def get_reviews(restaurant):
