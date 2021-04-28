@@ -12,7 +12,7 @@ manhattan_modzcta = list(set(final_data['modzcta']))
 project_name = "COVID-19 Search Engine"
 net_id = "Hogun Lee hl928, Sijin Li sl2624, Irena Gao ijg24, Doreen Gui dg497, Evian Liu yl2867"
 
-def get_results(address, category, radius=100):
+def get_results(address, category, radius):
     """
     This function extracts a list of location results using Google Map API
     Input: string location, string category, (optional) int radius
@@ -87,12 +87,16 @@ def map_covid_vax(map_result):
         mapping_pos = dict(final_data[['modzcta', 'people_positive']].values)
         mapping_vax = dict(final_data[['modzcta', '%_full_vax']].values)
         mapping_percent_pos = dict(final_data[['modzcta', '%_positive']].values)
+        mapping_risk = dict(final_data[['modzcta', "n_risk"]].values)
+        mapping_risk_level = dict(final_data[['modzcta', "risk_level"]].values)
     
         # merge information onto candidate results by zipcode
         map_result = map_result[map_result.zip_code.astype(int).isin(manhattan_modzcta)] # limit zipcode range for nyc
         map_result['positive_cases'] = map_result.zip_code.astype(int).map(mapping_pos)
         map_result['percent_positive'] = map_result.zip_code.astype(int).map(mapping_percent_pos)
         map_result['full_vax'] = map_result.zip_code.astype(int).map(mapping_vax)
+        map_result['risk'] = map_result.zip_code.astype(int).map(mapping_risk)
+        map_result['risk_level'] = map_result.zip_code.astype(int).map(mapping_risk_level)
     
     return map_result
 
@@ -110,18 +114,17 @@ def rank_results(data, min_rating=0.0):
     """
     # normalize columns
     if not data.empty:
-        n_full_vax = (data.full_vax-data.full_vax.mean())/data.full_vax.std()
-        n_percent_positive = (data.percent_positive-data.percent_positive.mean())/data.percent_positive.std()
         if data.rating.isnull().values.any():
             new_rating = data.rating.fillna(2.5)
-            n_rating = (new_rating-new_rating.mean())/new_rating.std()
+            n_rating = 0 if round(new_rating.std(),4)==0 else (new_rating-new_rating.mean())/new_rating.std()
         else:
-            n_rating = (data.rating-data.rating.mean())/data.rating.std()
-        n_distance = (data.distance-data.distance.mean())/data.distance.std()
-
+            n_rating = 0 if round(data.rating.std(),4)==0 else (data.rating-data.rating.mean())/data.rating.std()
+        n_distance = 0 if round(data.distance.std(),4)==0 else (data.distance-data.distance.mean())/data.distance.std()
+        
         # compute weighted score
-        data['score'] = n_full_vax*15.0 - n_percent_positive*7.0 + n_rating*5.0 - n_distance*5.0
+        data['score'] = 2*data['risk'] + n_rating - n_distance
         data['score'] = round(data['score'], 4)
+        # print(data['score'])
 
         # sort by score
         data = data.sort_values(by='score', ascending=False, na_position='last')
@@ -142,7 +145,7 @@ def get_covid_data(address, category, radius, min_rating):
     # json_data = ranked_data.to_json(orient="columns")
     # Need to see the orientation of the dataframe
     # return json_data
-    result = get_results(address, category, radius=100)
+    result = get_results(address, category, radius)
     mapped_result = map_covid_vax(result)
     ranked_result = rank_results(mapped_result, min_rating=0.0)
 
@@ -156,7 +159,10 @@ def search():
     query_int = request.args.get('search_int')
     query_loc = request.args.get('search_loc')
     query_rad = request.args.get('search_rad')
-    if not query_int and not query_loc and not query_rad:
+    query_cat = request.args.getlist('search_cat')
+    print("see cat query")
+    print(query_cat)
+    if not query_int and not query_loc and not query_rad and not query_cat:
         data = []
         output_message = ''
         exists = False
@@ -164,8 +170,6 @@ def search():
         output_message = "Your search was point of interest: " + query_int + ", location: " + query_loc + ", radius: " + query_rad
         exists = True
         data = get_covid_data(query_loc, query_int, query_rad, 2.0)
-    print("see data")
-    print(data)
 
     return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists)
 

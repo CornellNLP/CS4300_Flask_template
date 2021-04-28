@@ -566,6 +566,27 @@ footer a:hover{
 	margin-bottom: 1rem;
 }
 
+#search_key {
+width: 352px;
+  height: 70px;
+  overflow-y: scroll;
+  left: 697px;
+  top: 428px;
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 9px;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+
+  color: #ffffff;
+  background-color: transparent;
+}
+
 @media screen and (max-width: 991px) {
 	.tm-top-bar.active, .tm-top-bar, .tm-top-bar-bg { height: 65px; }
 	.tm-top-bar.active .navbar-expand-lg .navbar-nav .nav-link,
