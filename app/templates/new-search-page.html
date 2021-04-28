@@ -1,0 +1,516 @@
+<!-- Template adapted from Tooplate 2095 Level https://www.tooplate.com/view/2095-level -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Covid Search Engine</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="./static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="./static/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="./static/main.css">                                   <!-- Templatemo style -->
+
+    <!--Leaflet library for heatmap-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+</head>
+
+    <body>
+        <div class="tm-main-content" id="top">
+            <!-- <div class="tm-top-bar-bg"></div> used for fixing the nav bar-->
+            <div class="tm-top-bar" id="tm-top-bar">
+                <!-- Top Navbar -->
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <!-- Image edited from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.valamis.com%2Fcompany%2Fnews%2Fvalamis-operations-during-the-covid-19-coronavirus&psig=AOvVaw2snEKOY2GFlJ2xjz8Jf__N&ust=1619404195893000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCKjI5_CsmPACFQAAAAAdAAAAABAD -->
+                                <img src="./static/logo.jpg" alt="Site logo">
+                                COVID Seach Engine
+                            </a>
+                            <!-- Adjust the height of tm-top-bar if need more rows-->
+                            <p>[About this App] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>   
+                        </nav> 
+                    </div>
+                </div>
+            </div>
+            <div class="tm-section tm-bg-img" id="tm-section-1">
+                <div class="tm-bg-transparent ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+                            <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                                <form action="#result-dest" method="get" class="tm-search-form tm-section-pad-2">
+                                    <div class="form-group">
+                                        Input in an address (ex. 16 Post Side Lane) or keyword (ex. restaurant):
+                                    </div>
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                            <input name="search_loc" type="text" class="form-control" id="search_loc" placeholder="Address">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-key fa-2x tm-form-element-icon"></i>
+                                            <input name="search_key" type="text" class="form-control" id="search_loc" placeholder="Keyword">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-star fa-2x tm-form-element-icon"></i>
+                                            <input name="search_int" type="text" class="form-control" id="search_int" placeholder="Point of Interest">
+                                        </div>
+                                    </div>
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-100">
+                                            <i class="fa fa-car fa-2x tm-form-element-icon"></i>
+                                            <input name="search_rad" type="number" class="form-control" id="search_rad" placeholder="Distance">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-100">                                           
+                                            <select name="search_rat" class="form-control tm-select" id="search_rat">
+                                                <option value="">Min Rating</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            <i class="fa  fa-thumbs-up fa-2x tm-form-element-icon"></i>
+                                        </div>
+                                        <div class="form-group tm-form-element">
+                                            <button type="submit" class="btn btn-primary tm-btn-search">Search</button>
+                                        </div>
+                                      </div>
+                                      <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
+                                          <p class="tm-margin-b-0">[Examples and more instructions] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                      </div>
+                                </form>
+                                <script>
+                                    // Fill inputs with url
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    const inputs = {
+                                        'search_loc': urlParams.get('search_loc'),
+                                        'search_int': urlParams.get('search_int'),
+                                        'search_rad': urlParams.get('search_rad'),
+                                        'search_rat': urlParams.get('search_rat'),
+                                    };
+                                    if (inputs['search_loc']) {document.getElementById('search_loc').value = inputs['search_loc'];}
+                                    if (inputs['search_int']) {document.getElementById('search_int').value = inputs['search_int'];}
+                                    if (inputs['search_rad']) {document.getElementById('search_rad').value = inputs['search_rad'];}
+                                    if (inputs['search_rat']) {document.getElementById('search_rat').value = inputs['search_rat'];}
+                                </script>
+                            </div>                        
+                        </div>      
+                    </div>
+                </div>                  
+            </div>
+            
+            <div class="tm-section-2" id="result-dest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="tm-section-title" id='mapHeader'>Get COVID-19 Information with Our App</h2>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText1'><i class="fa fa-compass" style="padding: 0 10px;"></i>Explore Low-Risk Neighborhoods on the Heatmap</p>
+                            <p class="tm-color-white tm-section-subtitle" id='mapText2'><i class="fa fa-file-code-o" style="padding: 0 10px;"></i>Learn Future Trends of COVID Cases in NYC</p>
+                        </div>                
+                    </div>
+                </div>        
+            </div>
+            
+
+            
+            <div class="tm-section tm-section-pad tm-bg-img tm-position-relative" id="tm-section-6">
+                <!-- The svg element is part of the background of the previous section -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
+                    <polygon fill="#f07249" points="0,0  100,0  50,60"></polygon>                   
+                </svg>
+                <div class="container ie-h-align-center-fix">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> 
+                            <p style="margin: 10px 10px">Select Parameter to Plot on the Heatmap</p>
+                            <div class="btn-group">
+                                <button class='heatmap-btn selected' value="people_positive">Positive Cases</button>
+                                <button class='heatmap-btn' value="%_full_vax">Fully Vaccined</button>
+                                <button class='heatmap-btn' value="%_at_least_1">At Least One Dose</button>
+                            </div>       
+                            <div id="leaflet-map"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
+                            <div class="tm-bg-white tm-p-4">
+                                <p style="margin-bottom: 0.5rem;"> It’s undeniable that the pandemic influences the population socially and studying its movement can help with citizen's judgement. This app employs machine learning(Bollinger Bands) to obtain volatility analysis on the trend and fluctuation of COVID data in NYC.</p>
+                                <p style="margin-bottom: 0;"><a href="https://github.com/nychealth/coronavirus-data" class="tm-color-primary tm-font-normal">Data</a> includes historical daily COVID cases for New York City up to the end of 04/17/21</p>
+                                <img src="./static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
+                                <p style="margin-bottom: 0;">When the daily cases break out of the upper bound of the 20-day moving average(red signals), we expect it to continue the upward trend. When the number of cases breaks out of the lower bound of moving average(green signals), we expect the cases to decrease in the near future. For the most recent data (on the very right side), 4 consecutive green signals indicate case drops and a lower risk level for NYC.</p>
+                            </div>                            
+                        </div>
+                    </div>        
+                </div>
+            </div>
+
+            <!-- Variable in JS to store info -->
+            <script>
+                var resultLatLon = {}; 
+                var count = 0;
+                var exists = false;
+                var hasResults = false;
+            </script>
+            <!-- Search Results -->
+            <!-- Check length of data to make sure the results are not empty -->
+            {% if exists %} 
+                <script>exists = true;</script>
+                {% if data.name|length>0 %}  
+                    <script>hasResults = true;</script>          
+                    <div class="tm-section tm-position-relative">
+                        <div class="container tm-pb-4">
+                            <div class="text-center">
+                                <h2 id="resultHeader">Search Results</h2>
+                                {% for d in data.name %}
+                                <!-- Get location and info in JS -->
+                                <script>
+                                    count += 1;
+                                    // TODO: add category
+                                    resultLatLon[count] = {
+                                        'lat': '{{data.geolocation[d][0]}}',
+                                        'lon': '{{data.geolocation[d][1]}}',
+                                        'name': '{{data.name[d]}}',
+                                        '%_full_vax': "{{'%0.1f'| format(100*data.full_vax[d]|float)}}%",
+                                        'people_positive': '{{data.positive_cases[d]}}',
+                                        'score': '{{data.score[d]}}',
+                                        // TODO: add avg rec score if needed
+                                    };                                    
+                                </script>
+                                <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
+                                    <div class="collapsible">
+                                        <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
+                                        <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
+                                        <p>TODO: Descriptions</p>
+                                        <p>
+                                            <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
+                                            <span>{{data.duration[d]}} away</span>
+                                            <span>Rating: {{data.rating[d]}}</span>
+                                        </p>
+                                        <p>
+                                            <span>Positive Cases: {{data.positive_cases[d]}}</span>
+                                            <span>Fully Vaccined: {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
+                                            <span class="text-uppercase tm-color-primary tm-font-semibold">Recommendation Score / Risk Level</span>
+                                        </p>
+                                        <p>Click to see reviews</p>
+                                    </div>
+                                    <div class="collapsible-content">
+                                    <p>TODO: Add reviews</p>
+                                    </div> 
+                                </article>
+                                {% endfor %}
+                            </div>        
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            
+            <footer class="tm-bg-dark-blue tm-section-pad-2 ">
+                <div class="container">
+                    <div class="row">
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white tm-media-1">
+                        CS/INFO 4300 Class Project </p>
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white tm-media-1">Group Members: {{ netid }}</p>
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white tm-media-1">Template Adapted From: <a rel="nofollow" href="https://www.tooplate.com" class="tm-color-primary tm-font-normal" target="_parent">Tooplate</a></p>
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white tm-media-1">Image Source: <a href="https://unsplash.com/@jacobybrandon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="tm-color-primary tm-font-normal">Brandon Jacoby</a> on <a href="https://unsplash.com/s/photos/nyc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="tm-color-primary tm-font-normal">Unsplash</a></p>
+                    </div>
+                </div>                
+            </footer>
+        </div>
+        
+        <!-- load JS files -->
+        <script src="./static/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="./static/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+        <script src="./static/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+        <script src="./static/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>               <!-- D3 for handling data-->
+        <script>
+
+            // create map
+            var map = L.map('leaflet-map').setView([40.7128, -74.0060], 11);
+
+            const CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd'
+            }).addTo(map);
+
+            const requestData = async _ => {
+
+                // shape file
+                var shapeData = await d3.json('./static/shapeData.json');
+                var currParam = 'people_positive';
+
+                // color scale with max stats
+                // positive cases: [0, 327]
+                // 1 dose: [0.22, 0.76]
+                // 2 doses: [0.14, 0.6]
+                var posCaseScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 400]);
+                var vacScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 1]);
+                var fullVacScale = d3.scaleSequential(d3.interpolateOranges).domain([0, 1]);
+
+                function style(feature) {
+                    return {
+                        fillColor: posCaseScale(feature.properties[currParam]),
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        dashArray: '3',
+                        fillOpacity: 0.7
+                    };
+                }
+
+                // add shape file to map
+                geoJsonLayer = L.geoJson(shapeData, {style: style}).addTo(map);
+
+                // add color legend
+                // first need to convert the colors in rgb into hex
+                function rgbToHex(rgb){
+                    rgb = rgb.substr(4).split(")")[0].split(', ');
+                    var r = (+rgb[0]).toString(16)
+                    var g = (+rgb[1]).toString(16)
+                    var b = (+rgb[2]).toString(16)
+                    if (r.length == 1)
+                        r = "0" + r;
+                    if (g.length == 1)
+                        g = "0" + g;
+                    if (b.length == 1)
+                        b = "0" + b;
+                    return "#" + r + g + b;
+                }
+
+                // Legned is mostly static. So we can create 3 legends and switch when needed.
+                var posCaseLegend = L.control({position: 'bottomleft'});
+                posCaseLegend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 100, 200, 300, 400],
+                        labels = ['0-100', '100-200', '200-300', '300-400', '400'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(posCaseScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
+
+                posCaseLegend.addTo(map);
+
+                var vacLegend = L.control({position: 'bottomleft'});
+                vacLegend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 0.2, 0.4, 0.6, 0.8],
+                        labels = ['0-20%', '20-40%', '40-60%', '60-80%', '80%'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(vacScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
+
+                var fullVacLegend = L.control({position: 'bottomleft'});
+                fullVacLegend.onAdd = function (map) {
+                    var div = L.DomUtil.create('div', 'legend'),
+                        grades = [0, 0.2, 0.4, 0.6, 0.8],
+                        labels = ['0-20%', '20-40%', '40-60%', '60-80%', '80%'];
+
+                    for (var i = 0; i < grades.length; i++) {
+                        div.innerHTML +=
+                            '<i style="background:' + rgbToHex(fullVacScale(grades[i]).toString()) + '"></i> ' +
+                            labels[i] + (labels[i+1] ?  '<br>' : '+');
+                    }
+
+                    return div;
+                };
+
+                // add info header
+                // TODO: Add info of hovered region if needed
+                var infoHeader = L.control();
+
+                infoHeader.onAdd = function (map) {
+                    this._div = L.DomUtil.create('div', 'info'); 
+                    this._div.innerHTML = '<h4>Positive Test Cases Over the Last Week</h4>';
+                    if (hasResults){
+                        this._div.innerHTML += 'Hover over a marker to see more info'
+                    }
+                    return this._div;
+                };
+
+                infoHeader.update = function (data) {
+                    if (currParam == "people_positive"){ this._div.innerHTML = '<h4>Positive Test Cases Over the Last Week</h4>'; }
+                    else if (currParam == "%_at_least_1"){ this._div.innerHTML = '<h4>Percentage of At Lease One Dose of Vaccination</h4>'; }
+                    else { this._div.innerHTML = '<h4>Percentage of Fully Vaccinated</h4>'; }
+                    if (data){
+                        this._div.innerHTML += 'Positive Cases Nearby: '+ data['people_positive'] + '<br>' + 'Percetange Vaccined: ' + data['%_full_vax'] + '<br>' +
+                        'Rec Score: ' + data['score'] + '<br>' +
+                        'Avg Rec Score: ' + data['avg_score']
+                    }
+                    else if (hasResults){
+                        this._div.innerHTML += 'Hover over a marker to see more info'
+                    }
+                };
+
+                infoHeader.addTo(map);
+
+                // Populate results on map
+                var markers = L.layerGroup();
+                // get customized icon color
+                var icon = new L.Icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+
+                if (hasResults){
+                    // clear layer
+                    markers.clearLayers();
+                    console.log(resultLatLon)
+                    // loop backward to make top results on the front
+                    for (var i = count; i > 0; i--){
+                        value = resultLatLon[i];
+                        // Todo: add descriptions
+                        var msg = "<b>" + (i).toString() + '. ' + value['name'] + "</b><br><i class='tm-color-grey'>" + 'TODO: descriptions' +'</i>';
+                        var marker = L.marker([Number(value['lat']), value['lon']], {icon:icon, riseOnHover: true}).bindPopup(msg).addTo(markers);
+                        marker.on('mouseover',function(ev) {
+                            ev.target.openPopup();
+                            infoHeader.update({
+                                'people_positive':value['people_positive'],
+                                '%_full_vax': value['%_full_vax'],
+                                'score': value['score'],
+                                'avg_score': 'TODO: avg score of the area',
+                            })
+                        });
+                        marker.on('mouseout', function(){
+                            infoHeader.update();
+                        })
+                        // set view according to the best result
+                        if (i === 1){
+                            map.setView([Number(value['lat']), value['lon']], 17);
+                            marker.setZIndexOffset(100);
+                        }
+                    }
+                    markers.addTo(map);
+                    
+                }
+
+                if (exists){
+                    // change headers
+                    document.getElementById('mapHeader').innerHTML = "Showing [Category] Near [Location Name]";
+                    if (hasResults && count >= 3){
+                        document.getElementById('mapText1').innerHTML='<b>Scroll Down to See the Ranked List</b>'
+                    }
+                    else {
+                        document.getElementById('mapText1').innerHTML='<b>[TODO: modify query] <a href="#" class="tm-color-white tm-font-normal"> Try again with a larger radius.</a></b>'
+                    }
+                    document.getElementById('mapText2').innerHTML='Looking for another location? TODO: <a href="#" class="tm-color-white tm-font-normal">Add modified search</a>'
+                }
+
+                // UI Functions
+                var btns = document.getElementsByClassName('heatmap-btn');
+            
+                for (i=0; i < btns.length; i++){
+                    btns[i].addEventListener("click", function () {
+                        for (var j=0; j < btns.length; j++){
+                            btns[j].classList.remove("selected");
+                        }
+                        this.classList.toggle("selected");
+                        currParam = this.value;
+                        // update heatmap
+                        L.geoJson(shapeData, {style: style});
+                        var scale;
+                        var leg;
+                        if (currParam == "people_positive"){ 
+                            scale = posCaseScale; 
+                            leg = posCaseLegend;
+                        }
+                        else if (currParam == "%_at_least_1"){ 
+                            scale = vacScale; 
+                            leg = vacLegend;
+                        }
+                        else { 
+                            scale = fullVacScale; 
+                            leg = fullVacLegend;
+                        }
+                        geoJsonLayer.eachLayer(layer => {
+                            layer.setStyle({ fillColor: scale(layer["feature"]["properties"][currParam]) });
+                        });  
+                        // update header and legend
+                        infoHeader.update(); 
+                        posCaseLegend.remove();
+                        vacLegend.remove();
+                        fullVacLegend.remove();
+                        leg.addTo(map);                         
+                    });
+                }
+            }
+
+                requestData();
+
+                function setPageNav(){
+                if($(window).width() > 991) {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 79
+                    });   
+                }
+                else {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 65
+                    });   
+                }
+            }
+
+       
+            $(document).ready(function(){
+
+                $(window).on("scroll", function() {
+                    if($(window).scrollTop() > 100) {
+                        $(".tm-top-bar").addClass("active");
+                    } else {
+                        //remove the background property so it comes transparent again (defined in your css)
+                       $(".tm-top-bar").removeClass("active");
+                    }
+                });      
+                
+                setPageNav();
+
+                $(window).resize(function() {
+                  setPageNav();
+                });    
+            });
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("expanded");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+
+        </script>             
+
+</body>
+</html>

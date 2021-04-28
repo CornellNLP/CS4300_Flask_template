@@ -163,10 +163,11 @@ def search():
     else:
         output_message = "Your search was point of interest: " + query_int + ", location: " + query_loc + ", radius: " + query_rad
         exists = True
-        # Todo: get data from scripts
         data = get_covid_data(query_loc, query_int, query_rad, 2.0)
+    print("see data")
+    print(data)
 
-    return render_template('search.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists)
+    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists)
 
 
 
