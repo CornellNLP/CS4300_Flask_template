@@ -45,6 +45,11 @@ index_to_restaurant = {i: v for i, v in enumerate(small_data.keys())}
 
 restaurant_to_index = {v: i for i, v in index_to_restaurant.items()}
 
+def showpage():
+  restaurant_list = list(restaurant_to_index.keys())
+  restaurant_list = json.dumps(restaurant_list)
+  return render_template("./app/templates/search.html",restaurant_list=restaurant_list)
+
 #sims cos load
 
 review_splitter = [ids[0] for ids in review_idx_for_restaurant.values()][1:]
