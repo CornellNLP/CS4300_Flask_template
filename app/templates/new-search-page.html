@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +23,13 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Selectize -->
+    <script type="text/javascript" src="../static/selectize.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/selectize.css" />
+    <script type="text/javascript" src="../static/script.js"></script>
 
 </head>
 
@@ -58,13 +66,32 @@
                                             <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
                                             <input name="search_loc" type="text" class="form-control" id="search_loc" placeholder="Address">
                                         </div>
-                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
-                                            <i class="fa fa-key fa-2x tm-form-element-icon"></i>
-                                            <input name="search_key" type="text" class="form-control" id="search_loc" placeholder="Keyword">
-                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100" >
+                                            <select placeholder="Categories" class="form-control" id="search_cat" name="search_cat">
+                                                {% if query_cat %}
+                                                {% for c in query_cat %}
+                                                    <option value="{{c}}" selected="selected">{{c}}</option>
+                                                {% endfor %}
+                                                {% endif %}
+                                            </select> 
+                                            <script>
+                                                $("select#search_cat").selectize({
+                                                    plugins: ["remove_button"],
+                                                    delimiter: ",",
+                                                    maxItems: 5,
+                                                    persist: false,
+                                                    create: function (input) {
+                                                    return {
+                                                        value: input,
+                                                        text: input,
+                                                    };
+                                                    },
+                                                });
+                                            </script>
+                                        </div> 
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
                                             <i class="fa fa-star fa-2x tm-form-element-icon"></i>
-                                            <input name="search_int" type="text" class="form-control" id="search_int" placeholder="Point of Interest">
+                                            <input name="search_int" type="select-multiple" class="form-control" id="search_int" placeholder="Point of Interest">
                                         </div>
                                     </div>
                                     <div class="form-row tm-search-form-row">
@@ -509,6 +536,19 @@
                     }
                 });
             }
+
+            $(document).ready(function () {
+                $('select#keywords').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function(input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+       });
 
         </script>             
 
