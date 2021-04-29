@@ -1,14 +1,38 @@
 import rankings
-from cosinesim import getwords, build_vectorizer
+from nltk.stem import PorterStemmer
+import pickle
+import json
+import re
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 data = rankings.data
+def getwords(sent):
+  return [w.lower() for w in word_splitter.findall(sent)]
+stemmer = PorterStemmer()
+def build_vectorizer():
+  """Returns a TfidfVectorizer object with certain preprocessing properties.
+  
+  Params: {max_n_terms: Integer,
+            max_prop_docs: Float,
+            min_n_docs: Integer}
+  Returns: TfidfVectorizer
+  """
+  return TfidfVectorizer(stop_words = 'english', min_df = 2)
 
-#load the vectorizer
-with open('vectorizer.pickle') as v:
-  tfidf_vec = pickle.load(v)
+word_splitter = re.compile(r"""
+    (\w+)
+    """, re.VERBOSE)
 
-index_to_vocab = {i:v for i, v in enumerate(tfidf_vec.get_feature_names())} #from class
-vocab_to_index = {v: i for i, v in index_to_vocab.items()}
+small_data = data['BOSTON']
+
+index_to_restaurant = {i: v for i, v in enumerate(small_data.keys())}
+
+restaurant_to_index = {v: i for i, v in index_to_restaurant.items()}
+
+
+#index_to_vocab = {i:v for i, v in enumerate(tfidf_vec.get_feature_names())} #from class
+#vocab_to_index = {v: i for i, v in index_to_vocab.items()}
 
 def filterRestaurants(price_query, cuisine_query):
   """Returns a new list containing the indices of only restaurants that match the
@@ -20,16 +44,22 @@ def filterRestaurants(price_query, cuisine_query):
             }
   Returns: list
   """
+  restaurants = data["BOSTON"]
+  new_restaurant_indices = []
+  for res in restaurants:
+    new_restaurant_indices.append(restaurant_to_index[res])
+  return new_restaurant_indices
+  """
   new_restaurant_indices = [] #list keeping track of all the indices of filtered restaurants
   restaurants = data["BOSTON"]
   for name in restaurants:
-    price = int(name["price"])
-    cuisine = name["categories"]
-    if ((max_price == "low") and (price <= 1)) or ((max_price == "medium") and (price <= 3)) or ((max_price == "high") and (price <= 5)):
-      if cuisine_query in cuisine:
-        new_restaurant_indices.append(rankings.restaurant_to_index[name]) #add index to list of filtered restaurants
-  return new_restaurants_indices
-
+    price = int(restaurants[name]["price"])
+    cuisine = restaurants[name]["categories"]
+    if(price_query != "":
+    if ((price_query == "low") and (price <= 2)) or ((price_query == "medium") and (price <= 3 and price > 1)) or ((price_query == "high") and (price <= 5 and price > 3)):
+      new_restaurant_indices.append(restaurant_to_index[name]) #add index to list of filtered restaurants
+  return new_restaurant_indices
+  """
 def get_cos_sim(old_review_index, new_review_vector, new_review_norm, input_doc_mat):
   """Returns the cosine similarity of two restaurants.
   
@@ -48,12 +78,12 @@ def get_cos_sim(old_review_index, new_review_vector, new_review_norm, input_doc_
   #get dot product of the vectors
   dot = np.dot(new_review_vector, old_review_vector)
   #get norms of both vectors
-  old_review_norm = np.linalg.norm(mov2_vector)
+  old_review_norm = np.linalg.norm(old_review_vector)
   denom = new_review_norm * old_review_norm
   return dot/denom
 
 
-def computeCosine(review, filter_restaurants, tfidf_mat):
+def computeCosine(review, filter_restaurants):
   """Returns a matrix of size 1 x number of reviews total, where entry
   matrix[i] is the cosine similarity between the new review and review [i]
   Params: {
@@ -64,48 +94,48 @@ def computeCosine(review, filter_restaurants, tfidf_mat):
   }
   Returns: np.ndarray
   """
+  #load the vectorizer (unfitted)
+  #with open('vectorizer.pickle', 'rb') as v:
+    #tfidf_vec = pickle.load(v)
+  tfidf_vec = build_vectorizer()
+  
+  with open('reviewslist2.json', 'r') as f:
+    reviews_list = json.load(f)
+
   all_words = getwords(review)
   stem_text = [stemmer.stem(t.lower()) for t in all_words if bool(re.match(r"^[a-zA-Z]+$", t))]
-  """
-  #create a dic with keys = each word in the review and values = tf of that word
-  tf_dic = {}
-  for word in stem_text:
-    if word in tf_dic:
-      tf_dic[word] += 1
-    else:
-      tf_dic[word] = 1
-
-  vocab_size = len(vocab_to_index.get_feature_names())
-  df = np.sum(tfidf_mat,axis=0) #how to get the doc frequencies of each word?
-  
-  #initialize the tfidf vector and the norm for this review
-  review_vector = np.zeros(vocab_size)
-  #build the tf-idf vector for the new review
-  for word in tf_dic:
-    word_index = vocab_to_index[word]
-    idf = 1/df[word_index]
-    tf = tf_dic[word]
-    review_vector[word_index] = tf/idf
-  
-  #compute the norm of the review
-  """
-  #convert reviews to a vector
-  review_vector = tfidf_vec.transform(stem_text).toarray()
+ 
+  #create tf idf matrix
+  tfidf_mat = tfidf_vec.fit_transform(reviews_list).toarray()
+  print(tfidf_mat.shape)
+  print(np.sum(tfidf_mat))
+  #convert review to a vector
+  reviews = []
+  reviews.append(" ".join(stem_text))
+  review_vector = tfidf_vec.transform(reviews).toarray()
+  print(review_vector.shape)
+  print(np.sum(review_vector))
   review_norm = np.linalg.norm(review_vector)
   
   #calculate the cos similarities between new review and other restaurants
-  cos_similarities = np.zeros(len(data["BOSTON"])*2) #initialize an np array to
-                                              #size=number of reviews (2 per restaurant)
-  for res_index in restaurants:
+  cos_similarities = np.zeros(len(reviews_list))
+  print(len(reviews_list))
+  for res_index in filter_restaurants:
     res_name = rankings.index_to_restaurant[res_index]
     #get the reviews corresponding to that restaurant
     review_ids = rankings.review_idx_for_restaurant[res_name]
+    #print("hello")
+    #print(review_ids)
     for rev in review_ids:
-      cos_sim = get_cos_sim(rev_index, review_vector, review_norm, tfidf_mat)
-      cos_similarities[rev_index] = res_index
+      cos_sim = get_cos_sim(rev, review_vector, review_norm, tfidf_mat)
+      cos_similarities[rev] = cos_sim
+  #print(np.sum(cos_similarities))
+  #print(cos_similarities.shape)
+  #print(cos_similarities)
   return cos_similarities
 
-def getCosineRestaurants(review, filter_restaurants):
+
+#def getCosineRestaurants(review, filter_restaurants):
   """Returns a np array where np[i] is the cosine similarity between the new
   review and restaurant i
   Params: {
@@ -113,7 +143,7 @@ def getCosineRestaurants(review, filter_restaurants):
     filter_restaurants: list (of only the relevant restaurants/ones that fit the query)
   }
   """
-  tfidf_mat = np.array(np.load('tfidfmat.npy'))
+  """
   #compute the cosine similarities between new review and the relevant old reviews
   review_cosines = computeCosine(review, filter_restaurants, tfidf_mat)
 
@@ -129,3 +159,4 @@ def getCosineRestaurants(review, filter_restaurants):
     restaurant_cosines[res] = avg
 
   return restaurant_cosines
+"""
