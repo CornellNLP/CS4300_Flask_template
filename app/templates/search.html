@@ -163,11 +163,18 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <!-- Javascript -->
-    <script>
+   <!-- Javascript -->
+    <script type="text/javascript">
+        console.log("hi");
         // need to get all names of restaurants from dict in rankings.py
-        var restaurant = JSON.parse("{{ restaurant_list }}");
-        console.log(restaurant);
+        var restaurants_string = "{{ restaurant_list }}";
+        var restaurants_string_cleaned = restaurants_string.replaceAll("&#39;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.replaceAll("&#34;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.replaceAll("amp;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.substring(1, restaurants_string_cleaned.length - 1)
+        var restaurants = restaurants_string_cleaned.split(", ");
+
+        console.log(restaurants);
 
         $(function () {
             // var restaurants = ["The Halal Guys", "Boloco", "Taco Bell", "Taco e"];
@@ -175,11 +182,30 @@
                 source: restaurants,
             });
         });
-      });
     </script>
   </head>
 
   <body>
+    <!-- Javascript
+    <script type="text/javascript">
+        console.log("hi");
+        // need to get all names of restaurants from dict in rankings.py
+        var restaurants_string = "{{ restaurant_list }}";
+        var restaurants_string_cleaned = restaurants_string.replaceAll("&#39;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.replaceAll("&#34;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.replaceAll("amp;", "");
+        var restaurants_string_cleaned = restaurants_string_cleaned.substring(1, restaurants_string_cleaned.length - 1)
+        var restaurants = restaurants_string_cleaned.split(", ");
+
+        console.log(restaurants);
+
+        $(function () {
+            // var restaurants = ["The Halal Guys", "Boloco", "Taco Bell", "Taco e"];
+            $("#fav_name").autocomplete({
+                source: restaurants,
+            });
+        });
+    </script> -->
     <img
       src="{{url_for('static', filename='BostonEats.png')}}"
       alt="boston eats logo"
