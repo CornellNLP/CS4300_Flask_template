@@ -144,6 +144,9 @@ def rank_results(data, search_option, min_rating=0.0):
         data['score'] = round(data['score'], 4)
         # print(data['score'])
 
+        # TODO: REPLACE WITH ACTUAL PRICE LEVEL
+        data['price_level'] = 3
+
         # sort by score
         data = data.sort_values(by='score', ascending=False, na_position='last')
         data = data[data.rating >= min_rating]     # drop results below min_rating if specified
@@ -170,6 +173,11 @@ def get_covid_data(category, search_option, location, radius, min_rating):
     mapped_result = map_covid_vax(result)
     ranked_result = rank_results(mapped_result, search_option, min_rating=0.0)
 
+    # Cap first letter and replace underscore with space
+    for idx in ranked_result['types'].keys():
+        for t_idx in range(len(ranked_result['types'][idx])):
+            ranked_result['types'][idx][t_idx] = (ranked_result['types'][idx][t_idx].replace("_", " ")).capitalize()
+    
     json_data = ranked_result.to_json(orient="columns")
 
     return json.loads(json_data)

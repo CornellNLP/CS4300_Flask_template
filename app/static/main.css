@@ -489,7 +489,7 @@ video {
 
 .collapsible span { padding: 0 5px; }
 
-.collapsible .risk-color {padding: 0 5px 0 0;}
+.collapsible .less-pad {padding: 0 5px 0 0;}
   
   /* content collapsed. hidden by default */
 .collapsible-content {

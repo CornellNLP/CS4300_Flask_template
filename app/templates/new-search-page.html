@@ -209,23 +209,34 @@
                                         '%_full_vax': "{{'%0.1f'| format(100*data.full_vax[d]|float)}}%",
                                         'people_positive': '{{data.positive_cases[d]}}',
                                         'risk_level': '{{data.risk_level[d]}}',
-                                    };                                    
+                                        'types': '{% for type in data.types[d] %}{{type}}, {% endfor %}',
+                                        'price_level': "$".repeat(Number('{{data.price_level[d]}}')),
+                                    };                                  
                                 </script>
                                 <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
                                     <div class="collapsible">
                                         <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
                                         <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
-                                        <p>TODO: Descriptions</p>
+                                        <p>
+                                            {% for type in data.types[d] %}
+                                                <span class='less-pad'>{{type}},</span>
+                                            {% endfor %}
+                                            <span class='less-pad' id='price-{{d}}'>
+                                                <script>
+                                                    document.getElementById('price-{{d}}').innerHTML = "$".repeat(Number('{{data.price_level[d]}}'))
+                                                    </script>
+                                            </span>
+                                        </p>
                                         <p>
                                             <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
                                             <span>{{data.duration[d]}} away</span>
-                                            <span>Rating: {{data.rating[d]}}</span>
+                                            <span>Google Rating: {{data.rating[d]}}/5</span>
                                         </p>
                                         <p>
                                             <span>Positive Cases: {{data.positive_cases[d]}}</span>
                                             <span>Fully Vaccined: {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
                                             <span class="text-uppercase tm-font-semibold">Risk Level:</span> 
-                                            <span class="text-uppercase risk-color tm-font-semibold"> {{data.risk_level[d]}} </span>
+                                            <span class="text-uppercase risk-color less-pad tm-font-semibold"> {{data.risk_level[d]}} </span>
                                         </p>
                                         <p>Click to see reviews</p>
                                     </div>
@@ -407,8 +418,7 @@
                     // loop backward to make top results on the front
                     for (var i = count; i > 0; i--){
                         value = resultLatLon[i];
-                        // Todo: add descriptions
-                        var msg = "<b>" + (i).toString() + '. ' + value['name'] + "</b><br><i class='tm-color-grey'>" + 'TODO: descriptions' +'</i>';
+                        var msg = "<b>" + (i).toString() + '. ' + value['name'] + "</b><br><i class='tm-color-grey'>" + value['types'] + value['price_level'] +'</i>';
                         var marker = L.marker([Number(value['lat']), value['lon']], {icon:icon, riseOnHover: true}).bindPopup(msg).addTo(markers);
                         marker.on('mouseover',function(ev) {
                             ev.target.openPopup();
