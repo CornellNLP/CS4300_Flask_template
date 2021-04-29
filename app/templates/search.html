@@ -163,7 +163,8 @@
     <!-- Javascript -->
     <script>
         // need to get all names of restaurants from dict in rankings.py
-        var restaurant = tojson("{{ restaurant_list }}");
+        var restaurant = JSON.parse("{{ restaurant_list }}");
+        console.log(restaurant);
 
         $(function () {
             // var restaurants = ["The Halal Guys", "Boloco", "Taco Bell", "Taco e"];

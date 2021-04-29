@@ -45,6 +45,8 @@ index_to_restaurant = {i: v for i, v in enumerate(small_data.keys())}
 
 restaurant_to_index = {v: i for i, v in index_to_restaurant.items()}
 
+restaurant_list = list(restaurant_to_index.keys())
+
 def showpage():
   restaurant_list = list(restaurant_to_index.keys())
   restaurant_list = json.dumps(restaurant_list)

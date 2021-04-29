@@ -2,7 +2,7 @@ from app import app, socketio
 # import socketio
 from flask import *
 import string
-from rankings import get_top, restaurant_to_index, get_reviews, web_scraping
+from rankings import get_top, restaurant_to_index, get_reviews, web_scraping, restaurant_list
 from userReview import filterRestaurants, computeCosine
 
 app = Flask(__name__, template_folder='app/templates')
@@ -71,7 +71,7 @@ def query():
       # rel_restaurants = filterRestaurants(price_query, cuisine_query)
       # cosine_sim_restaurants = getCosineRestaurants(review_query, rel_restaurants)
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please try another restaurant"
-  return render_template('search.html', output_message=output_message, data=data)
+  return render_template('search.html', output_message=output_message, data=data, restaurant_list=restaurant_list)
 
 if __name__ == "__main__":
   print("Flask app running at http://0.0.0.0:5000")
