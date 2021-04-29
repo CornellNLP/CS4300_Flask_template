@@ -85,8 +85,8 @@
                                         Enter the maximum distance away (at least 100, for ex. 400)
                                     </div> -->
                                     <div class="form-row tm-search-form-row">
-                                        <div class="form-group tm-form-element tm-form-element-100" >
-                                            <select placeholder="Categories (hotel, restaurant, etc...)" class="form-control" id="search_cat" name="search_cat">
+                                        <div class="form-group tm-form-element tm-form-element-100" id="search_cat_container">
+                                            <select placeholder="Categories (hotel, restaurant, etc...)" id="search_cat" name="search_cat">
                                             </select> 
                                             <script>
                                                 $("select#search_cat").selectize({
@@ -523,7 +523,7 @@
 
                 $(window).resize(function() {
                   setPageNav();
-                });    
+                });  
             });
 
             var coll = document.getElementsByClassName("collapsible");

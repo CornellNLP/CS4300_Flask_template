@@ -1245,6 +1245,7 @@
 	
 			var $wrapper;
 			var $control;
+			var $icon;
 			var $control_input;
 			var $dropdown;
 			var $dropdown_content;
@@ -1260,7 +1261,8 @@
 			classes           = $input.attr('class') || '';
 	
 			$wrapper          = $('<div>').addClass(settings.wrapperClass).addClass(classes).addClass(inputMode);
-			$control          = $('<div>').addClass(settings.inputClass).addClass('items').appendTo($wrapper);
+			$icon 			= $('<i>').addClass('fa fa-cutlery fa-2x tm-form-element-icon tm-fa-top').appendTo($wrapper);
+			$control          = $('<div id="selectize-control-div">').addClass(settings.inputClass).addClass('items').appendTo($wrapper);
 			$control_input    = $('<input type="text" autocomplete="off" />').appendTo($control).attr('tabindex', $input.is(':disabled') ? '-1' : self.tabIndex);
 			$dropdown_parent  = $(settings.dropdownParent || $wrapper);
 			$dropdown         = $('<div>').addClass(settings.dropdownClass).addClass(inputMode).hide().appendTo($dropdown_parent);

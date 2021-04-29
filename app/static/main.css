@@ -27,6 +27,7 @@ a:focus {
 .tm-position-relative { position: relative; }
 .tm-flex-align-center { align-items: center; }
 .tm-fa-6x { font-size: 6em; }
+.tm-fa-top {z-index: 100;}
 .tm-margin-b-0 { margin-bottom: 0; }
 .tm-margin-b-20 { margin-bottom: 20px; }
 .tm-lh-0 { line-height: 1; }
@@ -257,6 +258,7 @@ select.tm-select::-ms-expand { display: none; }
 .tm-search-form .tm-form-element-3 { width: 50%; }
 .tm-search-form-row { width: 900px; }
 .tm-btn-search { width: 100%; }
+#search_cat_container { font-size: 0.8rem;}
 
 /* https://css-tricks.com/creating-non-rectangular-headers/ */
 .tm-section-down-arrow {
