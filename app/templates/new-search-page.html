@@ -59,7 +59,7 @@
                             <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
                                 <form action="#result-dest" method="get" class="tm-search-form tm-section-pad-2">
                                     <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                        <p class="tm-lh-0">Enter your specific address and radius to find nearby places (e.g. “20 W 34th St” or “20 W 34th St, New York, NY 10001”)</p>
+                                        <p class="tm-lh-0">1a) Enter your specific address to find nearby places (e.g. “20 W 34th St” or “20 W 34th St, New York, NY 10001”) and the maximum distance away (at least 100, for ex. 400)</p>
                                     </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="separator">OR</div>
                                     <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                        <p class="tm-lh-0">Enter the name of your desired place (e.g. "McDonalds")</p>
+                                        <p class="tm-lh-0">1b) Enter the name of your desired place (e.g. "McDonalds")</p>
                                     </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
@@ -81,12 +81,10 @@
                                             <input name="search_key" type="text" class="form-control" id="search_key" placeholder="Keyword">
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group inputdesc">
-                                        Enter the maximum distance away (at least 100, for ex. 400)
-                                    </div> -->
+                                    <p class="tm-lh-0">2) Enter your desired categories, separated by comma, (hotel, restaurant, etc...) and minimum Google Maps rating</p>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-100" id="search_cat_container">
-                                            <select placeholder="Categories (hotel, restaurant, etc...)" id="search_cat" name="search_cat">
+                                            <select placeholder="Categories" id="search_cat" name="search_cat">
                                             </select> 
                                             <script>
                                                 $("select#search_cat").selectize({
@@ -103,9 +101,6 @@
                                                 });
                                             </script>
                                         </div> 
-                                        <!-- <div class="form-group inputdesc">
-                                            Enter your desired minimum Google Maps rating
-                                        </div> -->
                                         <div class="form-group tm-form-element tm-form-element-100">                                           
                                             <select name="search_rat" class="form-control tm-select" id="search_rat">
                                                 <option value="">Min Rating</option>
