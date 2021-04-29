@@ -47,7 +47,7 @@
                                 COVID Seach Engine
                             </a>
                             <!-- Adjust the height of tm-top-bar if need more rows-->
-                            <p>During times of pandemic, we should be able to make safe choices on which places to visit based on the computed risk levels. This application helps users in NYC to figure out whether a place they want to visit is safe enough. It also recommends locations based on their customized search that takes minimum rating and distance into consideration.</p>   
+                            <p class="about">During times of pandemic, we should be able to make safe choices on which places to visit based on the computed risk levels. This application helps users in NYC to figure out whether a place they want to visit is safe enough. It also recommends locations based on their customized search that takes minimum rating and distance into consideration.</p>   
                         </nav> 
                     </div>
                 </div>
@@ -58,8 +58,11 @@
                         <div class="row">
                             <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
                                 <form action="#result-dest" method="get" class="tm-search-form tm-section-pad-2">
-                                    <div class="form-group">
-                                        Input in an address (ex. 16 Post Side Lane) or keyword (ex. restaurant):
+                                    <div class="form-group inputdesc">
+                                        Enter your specific address to find nearby places (e.g. “20 W 34th St” or “20 W 34th St, New York, NY 10001”)
+                                    </div>
+                                    <div class="form-group inputdesc">
+                                        <b>OR</b> enter the name of your desired place (e.g. "McDonalds")
                                     </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
@@ -71,7 +74,7 @@
                                             <input name="search_key" type="text" class="form-control" id="search_key" placeholder="Keyword">
                                         </div>
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100" >
-                                            <select placeholder="Categories" class="form-control" id="search_cat" name="search_cat">
+                                            <select placeholder="Categories (hotel, restaurant, etc...)" class="form-control" id="search_cat" name="search_cat">
                                             </select> 
                                             <script>
                                                 $("select#search_cat").selectize({
@@ -89,10 +92,16 @@
                                             </script>
                                         </div> 
                                     </div>
+                                    <div class="form-group inputdesc">
+                                        Enter the maximum distance away (at least 100, for ex. 400)
+                                    </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-100">
                                             <i class="fa fa-car fa-2x tm-form-element-icon"></i>
-                                            <input name="search_rad" type="number" class="form-control" id="search_rad" placeholder="Distance">
+                                            <input name="search_rad" type="number" class="form-control" id="search_rad" placeholder="Distance (in meters)">
+                                        </div>
+                                        <div class="form-group inputdesc">
+                                            Enter your desired minimum Google Maps rating
                                         </div>
                                         <div class="form-group tm-form-element tm-form-element-100">                                           
                                             <select name="search_rat" class="form-control tm-select" id="search_rat">

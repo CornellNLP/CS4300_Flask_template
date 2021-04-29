@@ -109,6 +109,10 @@ p {
 	background: #F07249;	
 }
 
+.inputdesc {
+	text-align: center;
+}
+
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link { padding: 50px 35px; }
 
 .tm-top-bar {
@@ -119,7 +123,7 @@ p {
     padding: 0;
     z-index: 10000;
     transition: all 0.2s ease-in-out;
-    height: 119px;
+    height: 125px;
     background: white;
 }
 
