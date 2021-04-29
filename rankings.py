@@ -133,6 +133,7 @@ def get_top(restaurant, max_price, cuisine, ambiance, n, review_weight, ambiance
   }
   Returns: list
   """
+  print(ambiance_weight, review_weight)
   price_preference = True
   cuisine_preference = True
   ambiance_preference = True
