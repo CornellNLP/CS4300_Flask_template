@@ -66,13 +66,12 @@
                                             <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
                                             <input name="search_loc" type="text" class="form-control" id="search_loc" placeholder="Address">
                                         </div>
+                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
+                                            <i class="fa fa-star fa-2x tm-form-element-icon"></i>
+                                            <input name="search_key" type="text" class="form-control" id="search_key" placeholder="Keyword">
+                                        </div>
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100" >
                                             <select placeholder="Categories" class="form-control" id="search_cat" name="search_cat">
-                                                {% if query_cat %}
-                                                {% for c in query_cat %}
-                                                    <option value="{{c}}" selected="selected">{{c}}</option>
-                                                {% endfor %}
-                                                {% endif %}
                                             </select> 
                                             <script>
                                                 $("select#search_cat").selectize({
@@ -89,10 +88,6 @@
                                                 });
                                             </script>
                                         </div> 
-                                        <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
-                                            <i class="fa fa-star fa-2x tm-form-element-icon"></i>
-                                            <input name="search_int" type="select-multiple" class="form-control" id="search_int" placeholder="Point of Interest">
-                                        </div>
                                     </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-100">
@@ -124,12 +119,12 @@
                                     const urlParams = new URLSearchParams(window.location.search);
                                     const inputs = {
                                         'search_loc': urlParams.get('search_loc'),
-                                        'search_int': urlParams.get('search_int'),
+                                        'search_cat': urlParams.get('search_cat'),
                                         'search_rad': urlParams.get('search_rad'),
                                         'search_rat': urlParams.get('search_rat'),
                                     };
                                     if (inputs['search_loc']) {document.getElementById('search_loc').value = inputs['search_loc'];}
-                                    if (inputs['search_int']) {document.getElementById('search_int').value = inputs['search_int'];}
+                                    if (inputs['search_cat']) {document.getElementById('search_cat').value = inputs['search_cat'];}
                                     if (inputs['search_rad']) {document.getElementById('search_rad').value = inputs['search_rad'];}
                                     if (inputs['search_rat']) {document.getElementById('search_rat').value = inputs['search_rat'];}
                                 </script>
