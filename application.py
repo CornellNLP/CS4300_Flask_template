@@ -30,7 +30,7 @@ def query():
     ambiance_weight = 0.5
     review_weight = 0.5
   else:
-    ambiance_weight = float(request.args.get('weightRange')) / 100
+    ambiance_weight = 1 - (float(request.args.get('weightRange')) / 100)
     review_weight = 1 - ambiance_weight
 
   if cuisine_query == None:
@@ -56,13 +56,13 @@ def query():
       #output_message = "Your search " + restaurant_query + " is not in the dataset. Please enter its information"
       review_query = request.args.get('user_review')
       rel_restaurants = filterRestaurants(price_query, cuisine_query)
-      print("here")
-      print(len(rel_restaurants))
+      # print("here")
+      # print(len(rel_restaurants))
       cosine_sim_restaurants = computeCosine(review_query, rel_restaurants)
       top_tuple = get_top("", price_query, cuisine_query, ambiances_query, 5, review_weight, ambiance_weight, True, cosine_sim_restaurants)
-      print(top_tuple)
+      # print(top_tuple)
       top_restaurants = [x[0] for x in top_tuple]
-      print(top_restaurants)
+      # print(top_restaurants)
       top_sim_scores = [x[1] for x in top_tuple]
       app.logger.critical("got restaurants")
       output_message = "Your search: " + restaurant_query
