@@ -64,7 +64,7 @@ def get_results_exact_address(address, category, radius):
             {'Name 1': 'REPLACE ME WITH ACTUAL REVIEWS'},
             {'Name 2': 'PLACEHOLDER FOR TESTING'}
         ]
-        
+
         res_list.append(res)
     return pd.DataFrame(res_list)
 
@@ -91,6 +91,12 @@ def get_results_keyword(query, category):
         address = place['formatted_address']
         if within_nyc(address) and business_status == "OPERATIONAL":
             res = update_restult_fields(place, "keyword")
+            # TODO: REPLACE WITH ACTUAL PRICE LEVEL
+            res['price_level'] = np.random.randint(1,4)
+            res['reviews'] = [
+                {'Name 1': 'REPLACE ME WITH ACTUAL REVIEWS'},
+                {'Name 2': 'PLACEHOLDER FOR TESTING'}
+            ]
             res_list.append(res)
             # updated_places.append(place)
     return pd.DataFrame(res_list)
@@ -208,7 +214,7 @@ def search():
         exists = True
         data = get_covid_data(query_cat[0], search_option, query_loc, query_rad, 2.0)
 
-    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists)
+    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists, search_option=search_option)
 
 
 

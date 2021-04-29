@@ -126,6 +126,7 @@
                                         'search_cat': urlParams.get('search_cat'),
                                         'search_rad': urlParams.get('search_rad'),
                                         'search_rat': urlParams.get('search_rat'),
+                                        'search_key': urlParams.get('search_key'),
                                     };
                                     if (inputs['search_loc']) {document.getElementById('search_loc').value = inputs['search_loc'];}
                                     if (inputs['search_cat']) {document.getElementById('search_cat').value = inputs['search_cat'];}
@@ -193,7 +194,10 @@
             {% if exists %} 
                 <script>exists = true;</script>
                 {% if data.name|length>0 %}  
-                    <script>hasResults = true;</script>          
+                    <script>
+                        hasResults = true;
+                        searchOption = '{{search_option}}'
+                    </script>          
                     <div class="tm-section tm-position-relative">
                         <div class="container tm-pb-4">
                             <div class="text-center">
@@ -447,14 +451,19 @@
 
                 if (exists){
                     // change headers
-                    document.getElementById('mapHeader').innerHTML = "Showing [Category] Near [Location Name]";
+                    if (searchOption==="keyword"){
+                        document.getElementById('mapHeader').innerHTML = "Showing Results for "+ inputs['search_key'];
+                    }
+                    else{
+                        document.getElementById('mapHeader').innerHTML = "Showing "+ inputs['search_cat'] + " near " + inputs['search_loc'];
+                    }
                     if (hasResults && count >= 3){
-                        document.getElementById('mapText1').innerHTML='<b>Scroll Down to See the Ranked List</b>'
+                        document.getElementById('mapText1').innerHTML='<b>Explore results on the interactive map</b>'
                     }
                     else {
                         document.getElementById('mapText1').innerHTML='<b>[TODO: modify query] <a href="#" class="tm-color-white tm-font-normal"> Try again with a larger radius.</a></b>'
                     }
-                    document.getElementById('mapText2').innerHTML='Looking for another location? TODO: <a href="#" class="tm-color-white tm-font-normal">Add modified search</a>'
+                    document.getElementById('mapText2').innerHTML='<b>Scroll Down to See the Ranked List</b>'
                 }
 
                 // UI Functions
