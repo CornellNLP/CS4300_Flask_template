@@ -7,3 +7,4 @@ vagrant/a4keypair.pem
 .idea/
 *.iml
 .vscode/
+.ipynb_checkpoints/
