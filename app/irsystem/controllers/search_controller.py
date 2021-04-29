@@ -199,6 +199,7 @@ def search():
     query_rad = request.args.get('search_rad')
     query_cat = request.args.getlist('search_cat')
     query_loc = ""
+    search_option = ""
     if request.args.get('search_loc') == "":
         query_loc = request.args.get('search_key')
         search_option="keyword"

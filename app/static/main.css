@@ -498,6 +498,41 @@ video {
 	overflow: hidden;
   } 
 
+.tooltipDiv {
+    position: relative;
+    display: inline-block;
+}
+
+#mapText3{
+	border-bottom: 1px solid white;
+}
+
+.tooltipDiv:hover p{ 
+	font-weight: bold; 
+	cursor: pointer;
+}
+
+.tooltiptext{
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #5d5f5c;
+    padding: 5px 5px;
+    border-radius: 6px;
+	border: 2px solid #6e1b09;
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 150%;
+    text-align: left;
+    font: 1vw/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.tooltipDiv:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 .legend {
     padding: 6px 8px;
     font: 12px Arial, Helvetica, sans-serif;
