@@ -57,6 +57,14 @@ def get_results_exact_address(address, category, radius):
         else:
             input_distance = None
         res = update_restult_fields(place, "exact_address", input_distance=input_distance)
+        
+        # TODO: REPLACE WITH ACTUAL PRICE LEVEL
+        res['price_level'] = np.random.randint(1,4)
+        res['reviews'] = [
+            {'Name 1': 'REPLACE ME WITH ACTUAL REVIEWS'},
+            {'Name 2': 'PLACEHOLDER FOR TESTING'}
+        ]
+        
         res_list.append(res)
     return pd.DataFrame(res_list)
 
@@ -143,9 +151,6 @@ def rank_results(data, search_option, min_rating=0.0):
         data['score'] = 2*data['risk'] + n_rating - n_distance
         data['score'] = round(data['score'], 4)
         # print(data['score'])
-
-        # TODO: REPLACE WITH ACTUAL PRICE LEVEL
-        data['price_level'] = 3
 
         # sort by score
         data = data.sort_values(by='score', ascending=False, na_position='last')

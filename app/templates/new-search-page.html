@@ -211,7 +211,7 @@
                                         'risk_level': '{{data.risk_level[d]}}',
                                         'types': '{% for type in data.types[d] %}{{type}}, {% endfor %}',
                                         'price_level': "$".repeat(Number('{{data.price_level[d]}}')),
-                                    };                                  
+                                    };                               
                                 </script>
                                 <article class="col-sm-12 col-md-8 col-lg-8 col-xl-8 tm-article">                            
                                     <div class="collapsible">
@@ -238,10 +238,14 @@
                                             <span class="text-uppercase tm-font-semibold">Risk Level:</span> 
                                             <span class="text-uppercase risk-color less-pad tm-font-semibold"> {{data.risk_level[d]}} </span>
                                         </p>
-                                        <p>Click to see reviews</p>
+                                        <p class="collapsible-msg">Click to see reviews</p>
                                     </div>
                                     <div class="collapsible-content">
-                                    <p>TODO: Add reviews</p>
+                                    {% for review in data.reviews[d] %}
+                                        {% for user, content in review.items() %}
+                                        <p>{{user}}: {{content}}</p>
+                                        {% endfor %}
+                                    {% endfor %}
                                     </div> 
                                 </article>
                                 {% endfor %}
@@ -552,8 +556,10 @@
                     var content = this.nextElementSibling;
                     if (content.style.display === "block") {
                         content.style.display = "none";
+                        this.getElementsByClassName('collapsible-msg')[0].innerHTML = "Click to see reviews";
                     } else {
                         content.style.display = "block";
+                        this.getElementsByClassName('collapsible-msg')[0].innerHTML = "Click to hide reviews";
                     }
                 });
                 
