@@ -14,7 +14,7 @@
   }
   
    body {
-       padding-top: 4%;
+       padding-top: 5%;
        padding-bottom: 15px;
        background-color:  #D2E8D9;
        }
@@ -57,11 +57,12 @@
    }
    .btn{
        background-color: forestgreen;
-       border: none
+       border: none;
+       margin-top: 10px;
    }
-   .step-links a{
+   /* .step-links a{
        color: #4285F4;
-   }
+   } */
 
 .card {
     margin: auto;
@@ -73,7 +74,7 @@
  }
 
  .container {
-   padding: 5px 60px;
+   padding: 10px 60px;
    width:100%;
  }
 
@@ -96,11 +97,11 @@
 }
 
 #toggles {
-    margin: 15px 0px 15px 0px;
+    margin: 5px 0px 0px 0px;
 }
 
  .result {
-     margin-top:10px;
+     /* margin-top:10px; */
  }
 
  .result:hover {
@@ -120,16 +121,17 @@
     /* width: 80%; */
     display: inline-block;
     color:gray;
-    padding: auto;
+    /* padding: auto; */
     vertical-align: baseline;
     /* padding: 13px 0px; */
 }
 
  #review {
      /* font-weight: bold; */
-     margin-top:10px;
+     /* margin-top:10px; */
      font-size: 90%;
      font-style: italic;
+     /* margin-bottom: 15px; */
  }
 
  #attributes, #activity-type {
@@ -201,7 +203,7 @@ label {
 /* walk */
 input[type=checkbox][id=walk] + label {
     background-image: url(walk-inactive.svg);
-    height: 45px;
+    height: 44px;
     width: 35px;
     display:inline-block;
     padding: 0 0 0 0px;
@@ -209,7 +211,7 @@ input[type=checkbox][id=walk] + label {
 
 input[type=checkbox][id=walk]:checked + label {
     background-image: url(walk-active.svg);
-    height: 45px;
+    height: 44px;
     width: 35px;
     display:inline-block;
     padding: 0 0 0 0px;
@@ -252,7 +254,7 @@ input[type=checkbox][id=run]:checked + label {
 /* bike */
 input[type=checkbox][id=bike] + label {
     background-image: url(bike-inactive.svg);
-    height: 45px;
+    height: 44px;
     width: 35px;
     display:inline-block;
     padding: 0 0 0 0px;
@@ -387,7 +389,7 @@ input[type=checkbox][id=parking]:checked + label {
 
 .slidecontainer {
     width: 100%; /* Width of the outside container */
-    margin: 15px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
     text-align: start;
   }
   

@@ -35,7 +35,7 @@ class Result:
                 self.activity_types.append(activities[attribute[9:]])
             else:
                 self.attributes.append(attribute)
-        self.attributes = self.attributes[:5]
+        self.attributes = self.attributes[:3]
         self.description = ith_trails['Description']
         self.reviews = []
         for review in ith_trails["Reviews"]:

@@ -19,7 +19,6 @@
             Take a hike! </h1>
           <p>Hiking trail recommender for the Finger Lakes area</p>
           <p id="netid"> {{ netid }}</p>
-          </p>
         </div>
 
         <div class="col">
@@ -79,15 +78,15 @@
         </div>
 
         <div class="slidecontainer">
-          <h4>LENGTH</h4>
+          <h4>MAXIMUM DISTANCE</h4>
           <div id="range" class="display-row">
             <p> 0 mi</p>
-            <p> 100 mi</p>
+            <p> 20 mi</p>
           </div>
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
 
-        <button type="submit" class="btn btn-info"> Go! </button>
+        <button type="submit" class="btn btn-info"> Find my next hike! </button>
     </div>
     </form>
   </div>
@@ -109,6 +108,7 @@
               <p id="name"><b>{{d.name}}</b></p>
             </div>
             <p id="length">{{d.length}} mi distance</p>
+            <p id="review">"{{ d.review }}"</p>
             <div class="activity-types">
               <p id="difficulty-display">{{d.difficulty}}</p>
               {% for activity in d.activity_types %}
@@ -121,7 +121,7 @@
               </div>
             </div>
 
-            <p id="review">"{{ d.review }}"</p>
+
             <!-- <p>{{d.description}}</p> -->
 
           </div>
