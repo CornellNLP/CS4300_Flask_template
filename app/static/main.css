@@ -514,7 +514,7 @@ video {
 
 .tooltiptext{
     visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.95);
     color: #5d5f5c;
     padding: 5px 5px;
     border-radius: 6px;
@@ -526,6 +526,10 @@ video {
     width: 150%;
     text-align: left;
     font: 1vw/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.calc {
+	width: 125%;
 }
 
 .tooltipDiv:hover .tooltiptext {

@@ -59,7 +59,7 @@
                             <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
                                 <form action="#result-dest" method="get" class="tm-search-form tm-section-pad-2">
                                     <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                        <p class="tm-lh-0">1a) Enter the exact address to find nearby places (e.g. “20 W 34th St” or “20 W 34th St, New York, NY 10001”) and the raidus of search (at least 100)</p>
+                                        <p class="tm-lh-0">1a) Enter the exact address to find nearby places (e.g. “20 W 34th St” or “20 W 34th St, New York, NY 10001”) and the radius of search (at least 100)</p>
                                     </div>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-3 tm-form-element-100">
@@ -81,7 +81,7 @@
                                             <input name="search_key" type="text" class="form-control" id="search_key" placeholder="Keyword">
                                         </div>
                                     </div>
-                                    <p class="tm-lh-0">2) Enter your desired categories, FINISHING TYPING OR ADDING MORE CATEGORIES BY COMMA, (e.g. "hotel, restaurant,") and min Google rating</p>
+                                    <p class="tm-lh-0">2) Enter your desired categorie(s), separating by comma or by pressing "Enter" (e.g. "hotel, restaurant,") and min. required Google rating</p>
                                     <div class="form-row tm-search-form-row">
                                         <div class="form-group tm-form-element tm-form-element-100" id="search_cat_container">
                                             <select placeholder="Categories" id="search_cat" name="search_cat">
@@ -148,10 +148,10 @@
                             <p class="tm-color-white tm-section-subtitle" id='mapText1'><i class="fa fa-compass" style="padding: 0 10px;"></i>Explore Low-Risk Neighborhoods on the Heatmap</p>
                             <p class="tm-color-white tm-section-subtitle" id='mapText2'><i class="fa fa-file-code-o" style="padding: 0 10px;"></i>Learn Future Trends of COVID Cases in NYC</p>
                             <div class="tooltipDiv">
-                                <p class="tm-color-white tm-section-subtitle" id='mapText3'><i class="fa fa-question" style="padding: 0 10px;"></i>How is NYC doing now? Hover me</p>
-                                <span class="tooltiptext">The percentage of fully vaccinated population for all neighborhoods in NYC ranges from 14.2% to 59.7%, with an average of 25.0%. <br>
-                                The percentage of positive cases for all neighborhoods in NYC ranges from 1.3% to 12.0%, with an average of 5.7%. <br>
-                                The percentage of fully vaccinated population for all neighborhoods in NYC ranges from 2 to 327, with an average of 93.
+                                <p class="tm-color-white tm-section-subtitle" id='mapText3'><i class="fa fa-question" style="padding: 0 10px;"></i>How is NYC doing now? Hover over me</p>
+                                <span class="tooltiptext">The percentage of fully vaccinated population for all neighborhoods in NYC ranges from <b>14.2% to 59.7%</b>, with an average of <b>25.0%</b>. <br><br>
+                                The percentage of positive cases for all neighborhoods in NYC ranges from <b>1.3%</b> to <b>12.0%</b>, with an average of <b>5.7%</b>. <br><br>
+                                The number of fully vaccinated population for all neighborhoods in NYC ranges from <b>2</b> to <b>327</b>, with an average of <b>93</b>.
                                 </span>
                             </div>
                         </div>                
@@ -172,14 +172,14 @@
                             <p style="margin: 10px 10px">Select Parameter to Plot on the Heatmap</p>
                             <div class="btn-group">
                                 <button class='heatmap-btn selected' value="people_positive">Positive Cases</button>
-                                <button class='heatmap-btn' value="%_full_vax">Fully Vaccined</button>
+                                <button class='heatmap-btn' value="%_full_vax">Fully Vaccinated</button>
                                 <button class='heatmap-btn' value="%_at_least_1">At Least One Dose</button>
                             </div>       
                             <div id="leaflet-map"></div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-0">
                             <div class="tm-bg-white tm-p-4">
-                                <p style="margin-bottom: 0.5rem;"> It’s undeniable that the pandemic influences the population socially and studying its movement can help with citizen's judgement. This app employs machine learning(Bollinger Bands) to obtain volatility analysis on the trend and fluctuation of COVID data in NYC.</p>
+                                <p style="margin-bottom: 0.5rem;"> It’s undeniable that the pandemic influences the population socially and studying its movement can help with citizen's judgement. This app employs machine learning (Bollinger Bands) to obtain volatility analysis on the trend and fluctuation of COVID data in NYC.</p>
                                 <p style="margin-bottom: 0;"><a href="https://github.com/nychealth/coronavirus-data" class="tm-color-primary tm-font-normal">Data</a> includes historical daily COVID cases for New York City up to the end of 04/17/21</p>
                                 <img src="./static/plot.png" alt="Case Prediction Based on Machine Learning" id="casePlot">
                                 <p style="margin-bottom: 0;">When the daily cases break out of the upper bound of the 20-day moving average(red signals), we expect it to continue the upward trend. When the number of cases breaks out of the lower bound of moving average(green signals), we expect the cases to decrease in the near future. For the most recent data (on the very right side), 4 consecutive green signals indicate case drops and a lower risk level for NYC.</p>
@@ -209,6 +209,12 @@
                         <div class="container tm-pb-4">
                             <div class="text-center">
                                 <h2 id="resultHeader">Search Results</h2>
+                                <div class="tooltipDiv">
+                                    <p class="tm-color-black tm-section-subtitle" id='mapText3'><i class="fa fa-question" style="padding: 0 10px;"></i>How were our calculations made? Hover over me</p>
+                                    <span class="tooltiptext calc"><b>Price level</b> is computed as number of dollar signs ($):<br> 0 - free, 1 - inexpensive, 2 - moderate, 3 - expensive, 4 - very expensive<br><br>
+                                        <b>Risk score</b> is an integrated value of normalized percent positive cases and percent fully vaccinated populations. All risk scores of NYC neighborhoods are quantized into 5 levels, from "Very Low Risk" to "Very High Risk".<br><br><b>Very Low Risk</b> falls within the top 0-20% of the neighborhoods in NYC.<br><b>Low Risk</b> falls within the top 20-40% of the neighborhoods in NYC.<br><b>Medium Risk</b> falls within the top 40-60%.<br><b>High Risk</b> falls within the top 60-80%.<br><b>Very High Risk</b> falls within the top 80-100%.
+                                    </span>
+                                </div>
                                 {% for d in data.name %}
                                 <!-- Get location and info in JS -->
                                 <script>
@@ -228,7 +234,7 @@
                                     <div class="collapsible">
                                         <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
                                         <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
-                                        <p>
+                                        <p>Categories: 
                                             {% for type in data.types[d] %}
                                                 <span class='less-pad'>{{type}},</span>
                                             {% endfor %}
@@ -245,7 +251,7 @@
                                         </p>
                                         <p>
                                             <span>Positive Cases: {{data.positive_cases[d]}}</span>
-                                            <span>Fully Vaccined: {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
+                                            <span>Fully Vaccinated: {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
                                             <span class="text-uppercase tm-font-semibold">Risk Level:</span> 
                                             <span class="text-uppercase risk-color less-pad tm-font-semibold"> {{data.risk_level[d]}} </span>
                                         </p>
@@ -405,7 +411,7 @@
                     else if (currParam == "%_at_least_1"){ this._div.innerHTML = '<h4>Percentage of At Lease One Dose of Vaccination</h4>'; }
                     else { this._div.innerHTML = '<h4>Percentage of Fully Vaccinated</h4>'; }
                     if (data){
-                        this._div.innerHTML += 'Positive Cases Nearby: '+ data['people_positive'] + '<br>' + 'Percetange Vaccined: ' + data['%_full_vax'] + '<br>' +
+                        this._div.innerHTML += 'Positive Cases Nearby: '+ data['people_positive'] + '<br>' + 'Percentage Vaccinated: ' + data['%_full_vax'] + '<br>' +
                         'Risk Level: ' + data['risk_level']
                     }
                     else if (hasResults){
