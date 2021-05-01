@@ -521,13 +521,19 @@ video {
 
 .collapsible span { padding: 0 5px; }
 
+.collapsible-msg {
+	margin-top: 5%;
+}
+
 .collapsible .less-pad {padding: 0 5px 0 0;}
   
   /* content collapsed. hidden by default */
 .collapsible-content {
-	padding: 0 18px;
+	/* padding: 0 18px; */
 	display: none;
 	overflow: hidden;
+	max-width: 95%;
+	margin-left: 2%;
   } 
 
 .tooltipDiv {

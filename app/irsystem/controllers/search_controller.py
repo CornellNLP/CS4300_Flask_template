@@ -60,10 +60,7 @@ def get_results_exact_address(address, category, radius):
         
         # TODO: REPLACE WITH ACTUAL PRICE LEVEL
         res['price_level'] = np.random.randint(1,4)
-        res['reviews'] = [
-            {'Name 1': 'REPLACE ME WITH ACTUAL REVIEWS'},
-            {'Name 2': 'PLACEHOLDER FOR TESTING'}
-        ]
+        res['reviews'] = []
 
         res_list.append(res)
     return pd.DataFrame(res_list)
@@ -93,10 +90,7 @@ def get_results_keyword(query, category):
             res = update_restult_fields(place, "keyword")
             # TODO: REPLACE WITH ACTUAL PRICE LEVEL
             res['price_level'] = np.random.randint(1,4)
-            res['reviews'] = [
-                {'Name 1': 'REPLACE ME WITH ACTUAL REVIEWS'},
-                {'Name 2': 'PLACEHOLDER FOR TESTING'}
-            ]
+            res['reviews'] = []
             res_list.append(res)
             # updated_places.append(place)
     return pd.DataFrame(res_list)
@@ -183,6 +177,7 @@ def get_covid_data(category, search_option, location, radius, min_rating):
         result = get_results_keyword(location, category)
     mapped_result = map_covid_vax(result)
     ranked_result = rank_results(mapped_result, search_option, min_rating=0.0)
+    final_result = add_reviews(ranked_result)
 
     # Cap first letter and replace underscore with space
     for idx in ranked_result['types'].keys():
@@ -200,24 +195,24 @@ def search():
     query_cat = request.args.getlist('search_cat')
     query_loc = ""
     search_option = ""
+    error = ""
+    data = []
+    output_message = ""
+    exists = False
     if request.args.get('search_loc') == "":
         query_loc = request.args.get('search_key')
         search_option="keyword"
     elif request.args.get('search_key') == "":
         query_loc = request.args.get('search_loc')
         search_option="exact_address"
-    if not query_loc and not query_rad:
-        data = []
-        output_message = ''
-        exists = False
     else:
+        error = "Only input a specific address (e.g. 20 W 34th St) OR a keyword (e.g. McDonalds)!"
+    if not error:
         output_message = "Your search was point of interest: , location: " + query_loc + ", radius: " + query_rad
         exists = True
         data = get_covid_data(query_cat[0], search_option, query_loc, query_rad, 2.0)
-    print("here's da data")
-    print(data)
 
-    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists, search_option=search_option)
+    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists, search_option=search_option, error=error)
 
 
 

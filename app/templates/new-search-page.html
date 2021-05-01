@@ -119,6 +119,9 @@
                                             <button type="submit" class="btn btn-primary tm-btn-search">Search</button>
                                         </div>
                                       </div>
+                                      {% if error %}
+                                        <p style="color: #ff0033; font-weight: 650; margin-left: 25%;">{{error}}</p>
+                                      {% endif %}
                                 </form>
                                 <script>
                                     // Fill inputs with url
@@ -200,7 +203,7 @@
             </script>
             <!-- Search Results -->
             <!-- Check length of data to make sure the results are not empty -->
-            {% if exists %} 
+            {% if exists and error=="" %} 
                 <script>exists = true;</script>
                 {% if data.name|length>0 %}  
                     <script>
@@ -260,17 +263,18 @@
                                             <!-- <span>Google Rating: {{data.rating[d]}}/5</span> -->
                                         </p>
                                         <p>
-                                            <span><span class="text-uppercase tm-font-semibold">Positive Cases:</span> {{data.positive_cases[d]}}</span>
-                                            <span><span class="text-uppercase tm-font-semibold">Fully Vaccinated:</span> {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
-                                            <span class="text-uppercase tm-font-semibold">Risk Level:</span> 
+                                            <span><span class="tm-font-semibold">Positive Cases:</span> {{data.positive_cases[d]}}</span>
+                                            <span><span class="tm-font-semibold">Fully Vaccinated:</span> {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
+                                            <span class="tm-font-semibold">Risk Level:</span> 
                                             <span class="text-uppercase risk-color less-pad tm-font-semibold"> {{data.risk_level[d]}} </span>
                                         </p>
-                                        <p class="collapsible-msg">Click to see reviews</p>
+                                        <p class="collapsible-msg text-uppercase" style="color: #fd7e14; font-weight: 550;">CLICK TO SEE REVIEWS</p>
                                     </div>
                                     <div class="collapsible-content">
+                                    <hr style="width: 50%;">
                                     {% for review in data.reviews[d] %}
                                         {% for user, content in review.items() %}
-                                        <p>{{user}}: {{content}}</p>
+                                        <p><span style="font-weight: 600">{{user}}:</span> "{{content}}"</p>
                                         {% endfor %}
                                     {% endfor %}
                                     </div> 
@@ -564,11 +568,11 @@
 
                 // dict of risks and colors
                 riskDict = {
-                    "VERY LOW RISK": "#2D2DA1",
-                    "LOW RISK": "#5D5F5C",
-                    "MEDIAN RISK": "#F07249",
-                    "HIGH RISK":"#D22C2C",
-                    "VERY HIGH RISK": "#6B1B09"
+                    "VERY LOW RISK": "#008000",
+                    "LOW RISK": "#90ee90",
+                    "MEDIAN RISK": "#e5e619",
+                    "HIGH RISK":"#FF8C00",
+                    "VERY HIGH RISK": "#FF0000"
                 };
 
                 riskLevels = document.getElementsByClassName("risk-color");

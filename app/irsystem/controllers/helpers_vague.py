@@ -1,5 +1,6 @@
 import numpy as np
 import googlemaps
+import pandas as pd
 
 gmaps = googlemaps.Client(key='AIzaSyC5iZcLzCj7VONadthvLMekcGCVWo-VmKw')
 
@@ -52,7 +53,21 @@ def update_restult_fields(place, search_function, input_distance=None):
     res['geolocation'] = tuple(place['geometry']['location'].values())
     res['search_method'] = search_function
     res['rating'] = place['rating'] if 'rating' in place else None
-    res['types'] = place['types'] if 'types' in place else None
+    res['price_level'] = place['price_level'] if 'price_level' in place else None
+    res['place_id'] = place['place_id']
+
+    if 'types' in place:
+        res['types'] = []
+        types = place['types']
+        for desc in types:
+            if desc == 'establishment' or desc == 'point_of_interest':
+                continue
+            else:
+                res['types'].append(desc)
+        if (res['types'] == []):
+            res['types'] = None
+    else:
+        res['types'] = None
     
     if search_function == "keyword":
         res['address'] = place['formatted_address']
@@ -167,3 +182,18 @@ def edit_distance(query, message):
     
     return edit_matrix(query, message)[len(query),len(message)]
 
+def add_reviews(ranked_result):
+    results = ranked_result.to_dict('records')
+    for res in results:
+        place_id = res['place_id']
+        place_details = gmaps.place(place_id)['result']
+        # res['zip_code'] = place_details['address_components'][-1]['short_name']
+        # res['reviews'] = []
+        if 'reviews' in place_details:
+            reviews = place_details['reviews']
+            for review in reviews:
+                review_text = {}
+                reviewer = review['author_name']
+                review_text[reviewer] = review['text']
+                res['reviews'].append(review_text)
+    return pd.DataFrame(results)
