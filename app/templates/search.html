@@ -1,61 +1,102 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/static/bootstrap.min.css" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <!-- <link rel="stylesheet" href="/static/style.css" /> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css" />
         <link rel="stylesheet" href="/static/main.css" />
         <title>Screen To Table</title>
     </head>
 
-    <body>
-        <div class="topcorner">
+    <body
+        class="override"
+        style="
+            background-image: url('../static/screen_bg.jpg');
+            background-size: cover; /* <------ */
+            background-repeat: no-repeat;
+            background-position: center center;
+        "
+    >
+        <div class="wrapper">
+            <!-- <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
-        </div>
-        <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family: Futura; color: #4285f4">
-                Screen to Table
-            </h1>
+        </div> -->
+            <form class="form-inline global-search">
+                <h1 class="title">screen to table</h1>
 
-            <br /><br />
+                <br /><br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row align-items-end">
+                                <div class="col-md-7 p-0">
+                                    <div class="form-group">
+                                        <input
+                                            id="input"
+                                            type="text"
+                                            name="search"
+                                            class="form-control"
+                                            placeholder="Find a recipe pairing for a movie"
+                                            list="movie-list"
+                                        />
 
-            <div class="form-group">
-                <input
-                    id="input"
-                    type="text"
-                    name="search"
-                    class="form-control"
-                    placeholder="Your Input"
-                    list="movie-list"
-                />
-                <button type="submit" class="btn btn-info">Go!</button>
-                
-                <datalist id="movie-list">
-                {% for result in movies %}
-                    <option value="{{result}}">
-                {% endfor %}
-                </datalist>
-            </div>
-            <br />
-            <div class="form-group">
-                <p>Allergies: </p>
-                <input
-                    id="input"
-                    type="text"
-                    name="search2"
-                    class="form-control"
-                    placeholder="Your Input"
-                    list="allergy-list"
-                />
-                <br />
-                <datalist id="allergy-list">
-                {% for result in allergies %}
-                    <option value="{{result}}">
-                {% endfor %}
-                </datalist>
-                <br />
-                <p>Ex: "shellfish allergy", "cucumber", "nut allergy, gluten allergy" </p>
-            </div>
-        </form>
-        <!-- <form class="form-inline global-search">
+                                        <datalist id="movie-list">
+                                            {% for result in movies %}
+                                            <option value="{{result}}">
+                                                {% endfor %}
+                                            </option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-0">
+                                    <div class="form-group">
+                                        <p>Allergies:</p>
+                                        <input
+                                            id="input"
+                                            type="text"
+                                            name="search2"
+                                            class="form-control"
+                                            placeholder="Ex: 'shellfish allergy', 'cucumber', 'nut allergy', gluten allergy'"
+                                            list="allergy-list"
+                                        />
+                                        <br />
+                                        <datalist id="allergy-list">
+                                            {% for result in allergies %}
+                                            <option value="{{result}}">
+                                                {% endfor %}
+                                            </option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 p-0">
+                                    <button type="submit" class="btn btn-info">
+                                        Go!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- <form class="form-inline global-search">
         {% if data %}
         <h1>{{output_message}}</h1>
         {% for d in data %}
@@ -64,5 +105,14 @@
         {% endfor %}
         {% endif %}
     </form> -->
+            <div class="push"></div>
+        </div>
     </body>
+
+    <div class="footer">
+        <p>
+            Made with &hearts; Elizabeth Healy (eah55), Shivank Nayak (sn532),
+            Kassie Wang (klw242), Daniel Ye (dzy3), Olivia Zhu (oz28)
+        </p>
+    </div>
 </html>

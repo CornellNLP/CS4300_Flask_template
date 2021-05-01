@@ -1,8 +1,14 @@
 body {
-    background-color: #eee;
+    font-family: "Playfair Display", serif;
+    background-color: #fff;
+}
+
+.bootstrap-override {
+    font-family: "Playfair Display", serif;
 }
 
 .card-block {
+    font-family: "Playfair Display", serif;
     font-size: 1em;
     position: relative;
     margin: 0;
@@ -12,6 +18,7 @@ body {
     box-shadow: none;
 }
 .card {
+    font-family: "Playfair Display", serif;
     font-size: 1em;
     overflow: hidden;
     padding: 5;
@@ -37,12 +44,18 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 .get-rating {
+    font-family: "Playfair Display", serif;
     font-size: 3em;
     font-weight: 700;
 }
 
 .btn {
     margin-top: auto;
+}
+
+.title {
+    font-family: "Parisienne", cursive;
+    font-size: "50px";
+    padding: 10px;
 }
