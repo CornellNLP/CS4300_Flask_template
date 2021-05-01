@@ -205,10 +205,10 @@ def search():
     elif request.args.get('search_key') == "":
         query_loc = request.args.get('search_loc')
         search_option="exact_address"
-    else:
+    elif request.args.get('search_key') != None and request.args.get('search_loc') != None:
         error = "Only input a specific address (e.g. 20 W 34th St) OR a keyword (e.g. McDonalds)!"
-    if not error:
-        output_message = "Your search was point of interest: , location: " + query_loc + ", radius: " + query_rad
+    if error == "" and query_loc != "":
+        output_message = "Your search was location: " + query_loc + "categories: " + query_cat[0] + ", radius: " + query_rad
         exists = True
         data = get_covid_data(query_cat[0], search_option, query_loc, query_rad, 2.0)
 
