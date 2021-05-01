@@ -214,6 +214,8 @@ def search():
         output_message = "Your search was point of interest: , location: " + query_loc + ", radius: " + query_rad
         exists = True
         data = get_covid_data(query_cat[0], search_option, query_loc, query_rad, 2.0)
+    print("here's da data")
+    print(data)
 
     return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists, search_option=search_option)
 

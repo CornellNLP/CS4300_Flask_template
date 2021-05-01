@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../static/selectize.css" />
     <script type="text/javascript" src="../static/script.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
     <body>
@@ -234,24 +236,32 @@
                                     <div class="collapsible">
                                         <!-- <i class="fa tm-fa-6x fa-legal tm-color-primary tm-margin-b-20"></i> -->
                                         <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
-                                        <p>Categories: 
-                                            {% for type in data.types[d] %}
-                                                <span class='less-pad'>{{type}},</span>
-                                            {% endfor %}
+                                        <span>{{data.rating[d]}}/5<br>
+                                            <div class="star-ratings-css"><span id="starRating"></span>
+                                                <div class="star-ratings-css-top" style="width: '{{data.rating[d]}}''%'"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                                <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                            </div>
+                                        </span>
+                                        <p>
                                             <span class='less-pad' id='price-{{d}}'>
                                                 <script>
                                                     document.getElementById('price-{{d}}').innerHTML = "$".repeat(Number('{{data.price_level[d]}}'))
-                                                    </script>
-                                            </span>
+                                                </script>
+                                            </span> •  
+                                            {% for type in data.types[d] %}
+                                                <span class='less-pad'>{{type}},</span>
+                                            {% endfor %}
                                         </p>
                                         <p>
                                             <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
-                                            <span>{{data.duration[d]}} away</span>
-                                            <span>Google Rating: {{data.rating[d]}}/5</span>
+                                            {% if data.duration[d] %}
+                                                <span>{{data.duration[d]}} away</span>
+                                            {% endif %}
+                                            <!-- <span>Google Rating: {{data.rating[d]}}/5</span> -->
                                         </p>
                                         <p>
-                                            <span>Positive Cases: {{data.positive_cases[d]}}</span>
-                                            <span>Fully Vaccinated: {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
+                                            <span><span class="text-uppercase tm-font-semibold">Positive Cases:</span> {{data.positive_cases[d]}}</span>
+                                            <span><span class="text-uppercase tm-font-semibold">Fully Vaccinated:</span> {{'%0.1f'| format(100*data.full_vax[d]|float)}}%</span>
                                             <span class="text-uppercase tm-font-semibold">Risk Level:</span> 
                                             <span class="text-uppercase risk-color less-pad tm-font-semibold"> {{data.risk_level[d]}} </span>
                                         </p>
@@ -292,7 +302,8 @@
         <script src="./static/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
         <script src="https://d3js.org/d3.v5.min.js"></script>               <!-- D3 for handling data-->
         <script>
-
+            var width = '{{ data.rating[d] }}';
+            document.getElementById("starRating").innerHTML = width;
             // create map
             var map = L.map('leaflet-map').setView([40.7128, -74.0060], 11);
 
