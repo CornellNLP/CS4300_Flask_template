@@ -20,7 +20,6 @@
         />
 
         <script src="https://d3js.org/d3.v6.min.js"></script>
-        <link rel="stylesheet" href="/static/style.css" />
         <link rel="stylesheet" href="/static/main.css" />
         <title>Screen To Table</title>
     </head>
@@ -34,69 +33,71 @@
             background-position: center center;
         "
     >
-        <div class="wrapper">
-            <!-- <div class="topcorner">
-            <p>Project Name: {{ name }}</p>
-            <p>Student Name: ({{ netid }})</p>
-        </div> -->
-            <form class="form-inline global-search">
-                <h1 class="title">screen to table</h1>
+        <div class="justify-content-center">
+            <div class="container col-md-6">
+                <div>
+                    <h1 class="title text-center">screen to table</h1>
+                </div>
+                <form class="form-inline">
+                    <br /><br />
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row align-items-end">
+                                    <div class="col-md-6 p-0">
+                                        <div class="form-group">
+                                            <input
+                                                id="input"
+                                                type="text"
+                                                name="search"
+                                                class="form-control"
+                                                placeholder="Find a recipe pairing for a movie"
+                                                list="movie-list"
+                                            />
 
-                <br /><br />
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row align-items-end">
-                                <div class="col-md-7 p-0">
-                                    <div class="form-group">
-                                        <input
-                                            id="input"
-                                            type="text"
-                                            name="search"
-                                            class="form-control"
-                                            placeholder="Find a recipe pairing for a movie"
-                                            list="movie-list"
-                                        />
-
-                                        <datalist id="movie-list">
-                                            {% for result in movies %}
-                                            <option value="{{result}}">
-                                                {% endfor %}
-                                            </option>
-                                        </datalist>
+                                            <datalist id="movie-list">
+                                                {% for result in movies %}
+                                                <option value="{{result}}">
+                                                    {% endfor %}
+                                                </option>
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 p-0">
-                                    <div class="form-group">
-                                        <p>Allergies:</p>
-                                        <input
-                                            id="input"
-                                            type="text"
-                                            name="search2"
-                                            class="form-control"
-                                            placeholder="Ex: 'shellfish allergy', 'cucumber', 'nut allergy', gluten allergy'"
-                                            list="allergy-list"
-                                        />
-                                        <br />
-                                        <datalist id="allergy-list">
-                                            {% for result in allergies %}
-                                            <option value="{{result}}">
-                                                {% endfor %}
-                                            </option>
-                                        </datalist>
+                                    <div class="col-md-5 p-0">
+                                        <div class="form-group">
+                                            <p>Allergies:</p>
+                                            <input
+                                                id="input"
+                                                type="text"
+                                                name="search2"
+                                                class="form-control"
+                                                placeholder="Ex: 'shellfish allergy', 'cucumber', 'nut allergy', gluten allergy'"
+                                                list="allergy-list"
+                                            />
+                                            <br />
+                                            <datalist id="allergy-list">
+                                                {% for result in allergies %}
+                                                <option value="{{result}}">
+                                                    {% endfor %}
+                                                </option>
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-1 p-0">
-                                    <button type="submit" class="btn btn-info">
-                                        Go!
-                                    </button>
+                                    <div class="col-md-1 p-0">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-info"
+                                        >
+                                            Go!
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-            <!-- <form class="form-inline global-search">
+                </form>
+
+                <!-- <form class="form-inline global-search">
         {% if data %}
         <h1>{{output_message}}</h1>
         {% for d in data %}
@@ -105,7 +106,8 @@
         {% endfor %}
         {% endif %}
     </form> -->
-            <div class="push"></div>
+                <div class="push"></div>
+            </div>
         </div>
     </body>
 

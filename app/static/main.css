@@ -27,7 +27,11 @@
 
 html body .override {
     font-family: "Playfair Display", serif;
-    background-color: white;
+}
+
+input,
+p {
+    font-family: "Playfair Display", serif;
 }
 
 .bootstrap-override {
@@ -46,13 +50,18 @@ html body .override {
     background-color: #4285f4;
     border: none;
 }
+
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+
 .step-links a {
     color: #4285f4;
 }
 .title {
     font-family: "Parisienne", cursive;
-    font-size: 50px;
-    padding: 10px;
+    font-size: 3.5em;
+    padding: 1vh;
 }
 
 html,
@@ -68,10 +77,6 @@ body {
 .footer,
 .push {
     height: 142px; /* .push must be the same height as .footer */
-}
-
-* {
-    background-color: white;
 }
 
 body {
