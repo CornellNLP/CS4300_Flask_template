@@ -29,7 +29,10 @@ html body .override {
     font-family: "Playfair Display", serif;
 }
 
+label,
 input,
+button,
+footer,
 p {
     font-family: "Playfair Display", serif;
 }
@@ -64,6 +67,10 @@ p {
     padding: 1vh;
 }
 
+input {
+    width: 100%;
+}
+
 html,
 body {
     height: 100%;
@@ -76,9 +83,16 @@ body {
 }
 .footer,
 .push {
-    height: 142px; /* .push must be the same height as .footer */
+    height: 142px;
+    justify-content: center; /* .push must be the same height as .footer */
 }
 
 body {
     background-image: url("../static/screen_bg.jpg");
+}
+
+footer {
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
 }
