@@ -8,6 +8,8 @@ import scripts.sim as sim
 from scripts.search import run_search, get_recipe, get_closest
 project_name = "Screen to Table"
 net_id = "Olivia Zhu(oz28), Daniel Ye(dzy3), Shivank Nayak(sn532), Kassie Wang(klw242), Elizabeth Healy(eah255)"
+v_1 = "link to v1"
+v_2 = "link to v2"
 
 with open('./data/recipe_data/allergy_dict.json') as f:
     allergy_dict = json.load(f)
@@ -24,8 +26,8 @@ def home():
     #print("alergies: ", allergies)
 
     if not query:
-        return render_template('search.html',allergies=list(allergy_dict.keys()),
-        movies=titles, name=project_name, netid=net_id)
+        return render_template('search.html',allergy_lst=list(allergy_dict.keys()),
+        movies=titles, name=project_name, netid=net_id, v1=v_1, v2=v_2)
     else:
         return redirect(url_for('irsystem.results', query=query, allergies=allergies))
 
@@ -40,7 +42,8 @@ def results():
     if data == None:
         return "Did you mean " + get_closest(query)
     else:
-        return render_template('results.html', res=data)
+        return render_template('results.html', res=data, movies=titles,
+        allergy_lst=list(allergy_dict.keys()))
 
 
 @irsystem.route('/recipe')

@@ -17,9 +17,24 @@
 <body>
     <form class="form-inline global-search">
         <div class="form-group">
-            <input id="input" type="text" name="query" class="form-control" placeholder="Your Input" />
+            <input id="input" type="text" name="query" class="form-control" placeholder="Movie"
+            list="movie-list" oninput="hideList(this)" onclick="hideList(this)" />
+            <datalist id="movie-list">
+            {% for result in movies %}
+                <option value="{{result}}">
+            {% endfor %}
+            </datalist>
+            <button type="submit" class="btn btn-info">Go!</button>
         </div>
-        <button type="submit" class="btn btn-info">Go!</button>
+        <div class="form-group">
+            <input id="input" type="text" name="allergies" class="form-control" placeholder="Your Allergies"
+            list="allergy-list"/>
+            <datalist id="allergy-list">
+            {% for result in allergy_lst %}
+                <option value="{{result}}">
+            {% endfor %}
+            </datalist>
+        </div>
     </form>
 
     <div class="d-md-flex h-md-100">
@@ -62,20 +77,23 @@
 
         <div class="col-md-7 py-3 h-md-100">
             <div class="preview">
-                <h1 id="title">No Recipe Selected</h1>
-                <p id="author"></p>
-                <div id="ingredients">
-                    <h3></h3>
-                    <ul id="ingredients"></ul>
-                </div>
-
-                <div id="steps">
-                    <h3></h3>
-                    <ol id="steps"></ol>
-                </div>
-                <div id="reviews">
-                    <h3></h3>
-                    <p id="reviews"></p>
+                <div class="preview2">
+                    <h1 id="title">No Recipe Selected</h1>
+                    <p id="author"></p>
+                    <div id="ingredients">
+                        <h3></h3>
+                        <ul id="ingredients"></ul>
+                    </div>
+                    <br />
+                    <div id="steps">
+                        <h3></h3>
+                        <ol id="steps"></ol>
+                    </div>
+                    <br />
+                    <div id="reviews">
+                        <h3></h3>
+                        <p id="reviews"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,7 +117,8 @@
             steps.selectAll("li").remove();
             steps.select("h3").text("Directions");
             recipeData["Directions"].split("**").forEach((d) => {
-                steps.append("li").text(d);
+                if(d){
+                steps.append("li").text(d);}
             });
             let reviews = d3.select("#reviews");
             reviews.selectAll("li").remove();
@@ -132,3 +151,13 @@
 </body>
 
 </html>
+<script>
+    function hideList(input) {
+        var datalist = document.querySelector("datalist");
+        if (input.value.length<1) {
+            datalist.id = "";    		
+        } else {
+            datalist.id = "movie-list";
+        }
+    }
+</script>

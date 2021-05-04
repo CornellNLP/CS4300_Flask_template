@@ -11,6 +11,12 @@ text-align:center;
 body {
 padding-top: 15%;
 padding-bottom: 15px;
+background-color: #eeeeee;
+font-family: Arial;
+background-image: url("possible_background2.gif");
+background-repeat:no-repeat;
+background-size:cover;
+
 }
 .global-search {
 text-align:center;
@@ -31,12 +37,12 @@ font-family: sans-serif;
 .topcorner{
 position:absolute;
 top:2%;
-right:2%;
+left:2%;
 }
 .btn{
-background-color: #4285F4;
+background-color: #2ca4bc;
 border: none
 }
 .step-links a{
-color: #4285F4;
+color: #2ca4bc;
 }

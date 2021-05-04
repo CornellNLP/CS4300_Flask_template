@@ -1,5 +1,8 @@
 body {
     background-color: #eee;
+    background-image: url("possible_background2.gif");
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 .card-block {
@@ -19,6 +22,16 @@ body {
     border-radius: 0.28571429rem;
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top: 20px;
+}
+
+.preview{
+    border: none;
+    border-radius: 0.28571429rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+.preview2{
+    padding:2%
 }
 
 .squareimg-container {

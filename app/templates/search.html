@@ -9,50 +9,54 @@
         <div class="topcorner">
             <p>Project Name: {{ name }}</p>
             <p>Student Name: ({{ netid }})</p>
+            <p>v1: ({{ v1 }})</p>
+            <p>v1: ({{ v2 }})</p>
         </div>
+        <br /><br />
+        <br />
         <form class="form-inline global-search">
-            <h1 style="font-size: 55px; font-family: Futura; color: #4285f4">
+            <h1 style="font-size: 55px; font-family: Futura; color: #2ca4bc;">
+            <!-- -webkit-text-stroke-width: 1.5px; -webkit-text-stroke-color: black;">-->
                 Screen to Table
             </h1>
 
             <br /><br />
-
+            <br /><br />
             <div class="form-group">
                 <input
                     id="input"
                     type="text"
                     name="search"
                     class="form-control"
-                    placeholder="Your Input"
+                    placeholder="Pick a movie"
                     list="movie-list"
+                    oninput="hideList(this)"
+                    onclick="hideList(this)"
                 />
                 <button type="submit" class="btn btn-info">Go!</button>
-                
-                <datalist id="movie-list">
-                {% for result in movies %}
-                    <option value="{{result}}">
-                {% endfor %}
-                </datalist>
-            </div>
-            <br />
-            <div class="form-group">
-                <p>Allergies: </p>
+                <br /><br />
+                <!-- <p>Allergies: </p>-->
                 <input
                     id="input"
                     type="text"
                     name="search2"
                     class="form-control"
-                    placeholder="Your Input"
+                    placeholder="Your allergies"
                     list="allergy-list"
+                    style = "width: 550px"
                 />
                 <br />
-                <datalist id="allergy-list">
-                {% for result in allergies %}
+                <p>Ex: "shellfish allergy", "cucumber", "nut allergy, gluten allergy" </p>
+                <datalist id="movie-list">
+                {% for result in movies %}
                     <option value="{{result}}">
                 {% endfor %}
                 </datalist>
-                <br />
-                <p>Ex: "shellfish allergy", "cucumber", "nut allergy, gluten allergy" </p>
+                <datalist id="allergy-list">
+                {% for result in allergy_lst %}
+                    <option value="{{result}}">
+                {% endfor %}
+                </datalist>
             </div>
         </form>
         <!-- <form class="form-inline global-search">
@@ -66,3 +70,13 @@
     </form> -->
     </body>
 </html>
+<script>
+    function hideList(input) {
+        var datalist = document.querySelector("datalist");
+        if (input.value.length<1) {
+            datalist.id = "";    		
+        } else {
+            datalist.id = "movie-list";
+        }
+    }
+</script>
