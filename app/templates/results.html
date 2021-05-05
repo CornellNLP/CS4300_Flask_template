@@ -45,9 +45,9 @@
                         <div
                             class="col-md-7 px-3"
                             style="
-                                background-image: url('../static/tabletop.jpg');
-                                background-size: cover;
-                                background-repeat: no-repeat;
+                                /* background-image: url('../static/tabletop.jpg');*/
+                                /* background-size: cover; */
+                                /* background-repeat: no-repeat; */
                                 /* background-position: center center; */
                             "
                         >
@@ -55,11 +55,12 @@
                                 <h4>{{recipe['Recipe Name']}}</h4>
                                 <div class="py-1">
                                     <div>
-                                        <span class="get-rating"
-                                            >{{rating}}</span
-                                        ><span class="font-weight-bold"
-                                            >/5</span
-                                        >
+                                      {% if rating != "n/a" %}
+                                        <span class="get-rating">{{rating}}</span>
+                                        <span class="font-weight-bold">/5</span>
+                                      {% else %}
+                                        <span>No review data.</span>
+                                      {% endif %}
                                     </div>
                                 </div>
                                 <br />
@@ -93,6 +94,7 @@
             </div>
 
             <div class="col-md-7 py-3 h-md-100">
+              <div class="container preview flex">
                 <div class="preview">
                     <h1 id="title">No Recipe Selected</h1>
                     <p id="author"></p>
@@ -100,16 +102,18 @@
                         <h3></h3>
                         <ul id="ingredients"></ul>
                     </div>
-
+                    <br>
                     <div id="steps">
                         <h3></h3>
-                        <ol id="steps"></ol>
+                        <ol id="steps" type="1"></ol>
                     </div>
+                    <br>
                     <div id="reviews">
                         <h3></h3>
                         <p id="reviews"></p>
                     </div>
                 </div>
+              </div>
             </div>
         </div>
         <script>
@@ -125,13 +129,15 @@
                 ingredients.selectAll("li").remove();
                 ingredients.select("h3").text("Ingredients");
                 recipeData["Ingredients"].split(",").forEach((d) => {
-                    ingredients.append("li").text(d);
+                    ingredients.select("ul").append("li").text(d);
                 });
                 let steps = d3.select("#steps");
                 steps.selectAll("li").remove();
                 steps.select("h3").text("Directions");
                 recipeData["Directions"].split("**").forEach((d) => {
-                    steps.append("li").text(d);
+                  if (d) {
+                    steps.select("ol").append("li").text(d);
+                  }
                 });
                 let reviews = d3.select("#reviews");
                 reviews.selectAll("li").remove();

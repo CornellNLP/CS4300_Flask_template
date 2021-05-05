@@ -50,12 +50,15 @@
                                         placeholder="Find a recipe pairing for a movie"
                                         list="movie-list"
                                         style="width: 75%"
+                                        oninput="hideList(this)"
+                                        onclick="hideList(this)"
+                                        autocomplete="off"
                                     />
 
                                     <datalist id="movie-list">
                                         {% for result in movies %}
                                         <option value="{{result}}">
-                                            {% endfor %}
+                                        {% endfor %}
                                         </option>
                                     </datalist>
                                 </div>
@@ -105,7 +108,7 @@
     </body>
 
     <footer>
-        Made with &hearts; Elizabeth Healy (eah55), Shivank Nayak (sn532),
+        Made with &hearts; by Elizabeth Healy (eah55), Shivank Nayak (sn532),
         Kassie Wang (klw242), Daniel Ye (dzy3), Olivia Zhu (oz28)
     </footer>
     <!-- <div class="footer">
@@ -114,4 +117,14 @@
             Kassie Wang (klw242), Daniel Ye (dzy3), Olivia Zhu (oz28)
         </p>
     </div> -->
+    <script>
+    function hideList(input) {
+        var datalist = document.querySelector("datalist");
+        if (input.value.length<1) {
+            datalist.id = "";
+        } else {
+            datalist.id = "movie-list";
+        }
+    }
+    </script>
 </html>

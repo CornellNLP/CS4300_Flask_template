@@ -1,9 +1,15 @@
 body {
     font-family: "Playfair Display", serif;
+
 }
 
-.bootstrap-override {
+#bootstrap-override {
     font-family: "Playfair Display", serif;
+    background-image: url('../static/tabletop.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .card-block {
@@ -57,4 +63,26 @@ body {
     font-family: "Parisienne", cursive;
     font-size: "50px";
     padding: 10px;
+}
+
+div.preview {
+  padding: 2%;
+  background-color:white;
+
+}
+
+div.preview.container.flex {
+  height: auto;
+  min-height: 100vh;
+  /* max-height: 100%; */
+  border: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  margin-top:20px;
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
+  /* margin-bottom:20px; */
+  /* padding-bottom:20px; */
+  overflow-y: auto;
+  /* position: fixed; */
 }
