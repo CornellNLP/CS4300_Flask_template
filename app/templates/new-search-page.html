@@ -33,6 +33,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- <style>
+        .star-ratings-css-top {
+            width: 30*{{data}};
+        }
+    </style> -->
 </head>
 
     <body>
@@ -231,7 +236,7 @@
                                         '%_full_vax': "{{'%0.1f'| format(100*data.full_vax[d]|float)}}%",
                                         'people_positive': '{{data.positive_cases[d]}}',
                                         'risk_level': '{{data.risk_level[d]}}',
-                                        'types': '{% for type in data.types[d] %}{{type}}, {% endfor %}',
+                                        'types': '{% if data.types[d] %}, {% for type in data.types[d] %}{{type}}, {% endfor %}, {% endif %}',
                                         'price_level': "$".repeat(Number('{{data.price_level[d]}}')),
                                     };                               
                                 </script>
@@ -241,20 +246,27 @@
                                         <h3 class="tm-color-primary tm-article-title-1">{{data.name[d]}}</h3>
                                         <span>{{data.rating[d]}}/5<br>
                                             <div class="star-ratings-css"><span id="starRating"></span>
-                                                <div class="star-ratings-css-top" style="width: '{{data.rating[d]}}''%'"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                                <div class="star-ratings-css-top" id="star-ratings-css-top-{{d}}"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                                                 <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                                             </div>
+                                            <script>
+                                                document.getElementById('star-ratings-css-top-{{d}}').style.width="{{data.rating[d]}}"*35+'px';
+                                            </script>
                                         </span>
-                                        <p>
+                                        {% if data.types[d] and data.price_level[d] %}
+                                        <p style="color: #989898">
                                             <span class='less-pad' id='price-{{d}}'>
                                                 <script>
                                                     document.getElementById('price-{{d}}').innerHTML = "$".repeat(Number('{{data.price_level[d]}}'))
                                                 </script>
-                                            </span> •  
-                                            {% for type in data.types[d] %}
-                                                <span class='less-pad'>{{type}},</span>
-                                            {% endfor %}
+                                            </span> •
+                                            {% if data.types[d] %}
+                                                {% for type in data.types[d] %}
+                                                    <span class='less-pad'>{{type}},</span>
+                                                {% endfor %}
+                                            {% endif %}
                                         </p>
+                                        {% endif %}
                                         <p>
                                             <span>{{data.address[d]}}, {{data.zip_code[d]}}</span>
                                             {% if data.duration[d] %}
@@ -481,7 +493,7 @@
                         document.getElementById('mapHeader').innerHTML = "Showing Results for "+ inputs['search_key'];
                     }
                     else{
-                        document.getElementById('mapHeader').innerHTML = "Showing "+ inputs['search_cat'] + " near " + inputs['search_loc'];
+                        document.getElementById('mapHeader').innerHTML = "Showing "+ inputs['search_cat'] + "s" + " near " + inputs['search_loc'];
                     }
                     if (hasResults && count >= 3){
                         document.getElementById('mapText1').innerHTML='<b>Explore results on the interactive map</b>'
@@ -570,7 +582,7 @@
                 riskDict = {
                     "VERY LOW RISK": "#008000",
                     "LOW RISK": "#90ee90",
-                    "MEDIAN RISK": "#e5e619",
+                    "MEDIUM RISK": "#e5e619",
                     "HIGH RISK":"#FF8C00",
                     "VERY HIGH RISK": "#FF0000"
                 };

@@ -22,18 +22,24 @@ def get_types_synonyms():
 
     return built_in_categories, synonyms
 
-def match_category(query):
+class categoryMismatch(Exception): 
+    '''exception for not finding any category match'''
+    pass
+
+def match_category(queries):
     '''
     Match an input category with built-in google maps type
     If no match, use "point_of_interest" as the matching category
     Return: (edit distance, category)
     '''
     built_in_categories, synonyms = get_types_synonyms()
-    match = edit_distance_search(query, built_in_categories, synonyms)
-    if not match:
-        # if no match, set edit distance to infinite (1000 here), and default category match to point_of_interest
-        match = (1000, 'point_of_interest')
-    return match
+    matches = []
+    for query in queries:
+        match = edit_distance_search(query, built_in_categories, synonyms)
+        if match: matches.append(match)
+    if len(matches) == 0:
+        raise categoryMismatch
+    return matches
 
 def update_restult_fields(place, search_function, input_distance=None):
     '''update information fields for one place result'''
@@ -197,3 +203,87 @@ def add_reviews(ranked_result):
                 review_text[reviewer] = review['text']
                 res['reviews'].append(review_text)
     return pd.DataFrame(results)
+
+def pre_get_results_keyword(query, category):
+    '''
+    Get result list using places searching method.
+    Input: string query input [query] like "mcdonalds" or "art museum", string [category]
+    Output: list of place results 
+    '''
+    # match input category with one of the built-in categories, if no match change it to "point_of_interest"
+    def within_nyc(address):
+        city = address.split(", ")[-3]
+        return (city == "New York")
+
+    # latitude, longitude for the center of manhattan 
+    nyc_latlog = (40.758896, -73.985130)
+    places_results = gmaps.places(query=query,location=nyc_latlog, radius=30000)["results"]
+
+    res_list = []
+    for i, place in enumerate(places_results):
+        business_status = place['business_status'] if 'business_status' in place else "OPERATIONAL"
+        address = place['formatted_address']
+        if within_nyc(address) and business_status == "OPERATIONAL":
+            res = update_restult_fields(place, "keyword")
+            res_list.append(res)
+            # updated_places.append(place)
+    return pd.DataFrame(res_list)
+
+def pre_get_results_exact_address(address, category, radius):
+    '''
+    Get result list using place nearby searching method.
+    Input: string formatted address [address], int radius [radius] in meters, string [category]
+    Output: list of place results
+    '''
+     # Geocoding an address
+    geocode_result = gmaps.geocode(address)
+    # {"sublocality_level_1": "Manhattan", "locality": "New York", "administrative_area_level_1": "NY"})
+    
+    origin = geocode_result[0]['geometry']['location']
+
+    # Search nearby open places in a specified category within a radius
+    # places_result = gmaps.places_nearby(location=origin, radius=radius, type=category, open_now=True)['results']
+    places_result = gmaps.places_nearby(location=origin, radius=radius, type=category)['results']
+
+
+    # get a list of destination geocodes and compute distances to origin
+    geocodes = [tuple(place['geometry']['location'].values()) for place in places_result]
+    res_list = []
+    if geocodes != []:
+        distances = gmaps.distance_matrix(origins=origin, destinations=geocodes)['rows'][0]['elements']
+    
+    res_list = []
+    for i, place in enumerate(places_result):
+        business_status = place['business_status'] if 'business_status' in place else "OPERATIONAL"
+        if business_status != "OPERATIONAL":
+            continue
+        if distances:
+            input_distance = distances[i]
+        else:
+            input_distance = None
+        res = update_restult_fields(place, "exact_address", input_distance=input_distance)
+        res_list.append(res)
+    return pd.DataFrame(res_list)
+
+def merge_postings(data, categories):
+    sim_list = []
+    for res in data.index:
+        sim_score = 0;
+        if data["types"][res] != None:
+            A = sorted(data["types"][res])
+            B = sorted(categories)
+            i = 0
+            j = 0
+            while i < len(A) and j < len(B):
+                if A[i].lower() == B[j].lower():
+                    i += 1
+                    j += 1
+                    sim_score += 1
+                else:
+                    if A[i] < B[j]:
+                        i += 1
+                    else:
+                        j += 1
+        sim_list.append(sim_score)
+    data['sim_categories'] = sim_list
+    return data

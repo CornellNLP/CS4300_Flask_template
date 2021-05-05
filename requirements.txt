@@ -19,6 +19,7 @@ Flask-SocketIO==4.2.1
 Flask-SQLAlchemy==2.4.1
 Flask-WTF==0.14.3
 gevent==1.4.0
+gmplot==1.4.1
 greenlet==0.4.15
 googlemaps==4.4.5
 gunicorn==20.0.4

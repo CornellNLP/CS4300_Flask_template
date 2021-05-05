@@ -10,90 +10,34 @@ from app.irsystem.controllers.helpers_vague import *
 final_data = pd.read_csv("app/static/final_data.csv")
 nyc_modzcta = list(set(final_data['modzcta']))
 
-n_full_vax = (final_data['%_full_vax'] - final_data['%_full_vax'].mean()) / final_data['%_full_vax'].std()
-n_percent_positive = (final_data['%_positive'] - final_data['%_positive'].mean()) / final_data['%_positive'].std()
+n_full_vax = final_data['%_full_vax'] / final_data['%_full_vax'].max()
+n_percent_positive = final_data['%_positive'] / final_data['%_positive'].max()
 
 # updated finaldata with normalization and risk levels computed
 final_data["n_risk"] = n_full_vax - n_percent_positive  # risk is % full vax - % positive
-risk_labels_5 = ['Very High Risk', 'High Risk', 'Median Risk', 'Low Risk', 'Very Low Risk']
+risk_labels_5 = ['Very High Risk', 'High Risk', 'Medium Risk', 'Low Risk', 'Very Low Risk']
 final_data['risk_level'] = pd.qcut(final_data["n_risk"], q=[0, .2, .4, .6, .8, 1], labels=risk_labels_5)
 
 project_name = "COVID-19 Search Engine"
 net_id = "Hogun Lee hl928, Sijin Li sl2624, Irena Gao ijg24, Doreen Gui dg497, Evian Liu yl2867"
 
-def get_results_exact_address(address, category, radius):
-    '''
-    Get result list using place nearby searching method.
-    Input: string formatted address [address], int radius [radius] in meters, string [category]
-    Output: list of place results
-    '''
-    # match input category with one of the built-in categories, if no match change it to "point_of_interest"
-    category = match_category(category)[1]
+def get_results_exact_address(address, category_queries, radius):
+    category_matches = match_category(category_queries)
+    results = pre_get_results_exact_address(address, category_matches[0], radius)
+    for category in category_matches[1:]:
+        results = results.append(pre_get_results_exact_address(address, category, radius))
+    results.drop_duplicates(subset=["geolocation"], inplace=True)
+    results_with_sim = merge_postings(results, [cat[1] for cat in category_matches])
+    return results_with_sim
 
-     # Geocoding an address
-    geocode_result = gmaps.geocode(address)
-    # {"sublocality_level_1": "Manhattan", "locality": "New York", "administrative_area_level_1": "NY"})
-    
-    origin = geocode_result[0]['geometry']['location']
-
-    # Search nearby open places in a specified category within a radius
-    # places_result = gmaps.places_nearby(location=origin, radius=radius, type=category, open_now=True)['results']
-    places_result = gmaps.places_nearby(location=origin, radius=radius, type=category)['results']
-
-
-    # get a list of destination geocodes and compute distances to origin
-    geocodes = [tuple(place['geometry']['location'].values()) for place in places_result]
-    res_list = []
-    if geocodes != []:
-        distances = gmaps.distance_matrix(origins=origin, destinations=geocodes)['rows'][0]['elements']
-    
-    res_list = []
-    for i, place in enumerate(places_result):
-        business_status = place['business_status'] if 'business_status' in place else "OPERATIONAL"
-        if business_status != "OPERATIONAL":
-            continue
-        if distances:
-            input_distance = distances[i]
-        else:
-            input_distance = None
-        res = update_restult_fields(place, "exact_address", input_distance=input_distance)
-        
-        # TODO: REPLACE WITH ACTUAL PRICE LEVEL
-        res['price_level'] = np.random.randint(1,4)
-        res['reviews'] = []
-
-        res_list.append(res)
-    return pd.DataFrame(res_list)
-
-def get_results_keyword(query, category):
-    '''
-    Get result list using places searching method.
-    Input: string query input [query] like "mcdonalds" or "art museum", string [category]
-    Output: list of place results 
-    '''
-    # match input category with one of the built-in categories, if no match change it to "point_of_interest"
-    category = match_category(category)[1]
-
-    def within_nyc(address):
-        city = address.split(", ")[-3]
-        return (city == "New York")
-
-    # latitude, longitude for the center of manhattan 
-    nyc_latlog = (40.758896, -73.985130)
-    places_results = gmaps.places(query=query,location=nyc_latlog, radius=30000)["results"]
-
-    res_list = []
-    for i, place in enumerate(places_results):
-        business_status = place['business_status'] if 'business_status' in place else "OPERATIONAL"
-        address = place['formatted_address']
-        if within_nyc(address) and business_status == "OPERATIONAL":
-            res = update_restult_fields(place, "keyword")
-            # TODO: REPLACE WITH ACTUAL PRICE LEVEL
-            res['price_level'] = np.random.randint(1,4)
-            res['reviews'] = []
-            res_list.append(res)
-            # updated_places.append(place)
-    return pd.DataFrame(res_list)
+def get_results_keyword(keyword, category_queries):
+    category_matches = match_category(category_queries)
+    results = pre_get_results_keyword(keyword, category_matches[0])
+    for category in category_matches[1:]:
+        results = results.append(pre_get_results_keyword(keyword, category))
+    results.drop_duplicates(subset=["geolocation"], inplace=True)
+    results_with_sim = merge_postings(results, [cat[1] for cat in category_matches])
+    return results_with_sim
 
 def map_covid_vax(map_result):
     """
@@ -112,6 +56,7 @@ def map_covid_vax(map_result):
         mapping_percent_pos = dict(final_data[['modzcta', '%_positive']].values)
         mapping_risk = dict(final_data[['modzcta', "n_risk"]].values)
         mapping_risk_level = dict(final_data[['modzcta', "risk_level"]].values)
+        mapping_neighborhood = dict(final_data[['modzcta', 'modzcta_name']].values)
     
         # merge information onto candidate results by zipcode
         map_result = map_result[map_result.zip_code.astype(int).isin(nyc_modzcta)] # limit zipcode range for nyc
@@ -120,6 +65,7 @@ def map_covid_vax(map_result):
         map_result['full_vax'] = map_result.zip_code.astype(int).map(mapping_vax)
         map_result['risk'] = map_result.zip_code.astype(int).map(mapping_risk)
         map_result['risk_level'] = map_result.zip_code.astype(int).map(mapping_risk_level)
+        map_result['neighborhood'] = map_result.zip_code.astype(int).map(mapping_neighborhood)
     
     return map_result
 
@@ -139,16 +85,18 @@ def rank_results(data, search_option, min_rating=0.0):
     if not data.empty:
         if data.rating.isnull().values.any():
             new_rating = data.rating.fillna(2.5)
-            n_rating = 0 if round(new_rating.std(),4)==0 else (new_rating-new_rating.mean())/new_rating.std()
+            n_rating = new_rating / new_rating.max()
         else:
-            n_rating = 0 if round(data.rating.std(),4)==0 else (data.rating-data.rating.mean())/data.rating.std()
+            n_rating = 0 if data.rating.max() <= 0 else data.rating / data.rating.max()
+
         if search_option == "exact_address":
-            n_distance = 0 if round(data.distance.std(),4)==0 else (data.distance-data.distance.mean())/data.distance.std()
+            n_distance = 0 if data.distance.max() <= 0 else data.distance / data.distance.max()
         elif search_option == "keyword":
             n_distance = 0
 
         # compute weighted score
-        data['score'] = 2*data['risk'] + n_rating - n_distance
+        n_sim_categories = 0 if data['sim_categories'].max() <= 0 else data['sim_categories']/data['sim_categories'].max()
+        data['score'] = 2*data['risk'] + n_sim_categories + 0.5*(n_rating - n_distance) 
         data['score'] = round(data['score'], 4)
         # print(data['score'])
 
@@ -156,7 +104,7 @@ def rank_results(data, search_option, min_rating=0.0):
         data = data.sort_values(by='score', ascending=False, na_position='last')
         data = data[data.rating >= min_rating]     # drop results below min_rating if specified
 
-    return data
+    return data.head(10)
 
 def get_covid_data(category, search_option, location, radius, min_rating):
     """
@@ -171,6 +119,8 @@ def get_covid_data(category, search_option, location, radius, min_rating):
     # json_data = ranked_data.to_json(orient="columns")
     # Need to see the orientation of the dataframe
     # return json_data
+    if len(category) == 0: 
+        category = 'point_of_interest'
     if search_option == "exact_address" and len(location) > 0:
         result = get_results_exact_address(location, category, radius)
     elif search_option == "keyword" and len(location) > 0:
@@ -180,9 +130,9 @@ def get_covid_data(category, search_option, location, radius, min_rating):
     final_result = add_reviews(ranked_result)
 
     # Cap first letter and replace underscore with space
-    for idx in ranked_result['types'].keys():
-        for t_idx in range(len(ranked_result['types'][idx])):
-            ranked_result['types'][idx][t_idx] = (ranked_result['types'][idx][t_idx].replace("_", " ")).capitalize()
+    # for idx in ranked_result['types'].keys():
+    #     for t_idx in range(len(ranked_result['types'][idx])):
+    #         ranked_result['types'][idx][t_idx] = (ranked_result['types'][idx][t_idx].replace("_", " ")).capitalize()
     
     json_data = ranked_result.to_json(orient="columns")
 
@@ -193,11 +143,11 @@ def get_covid_data(category, search_option, location, radius, min_rating):
 def search():
     query_rad = request.args.get('search_rad')
     query_cat = request.args.getlist('search_cat')
+    query_rat = request.args.get('search_rat')
     query_loc = ""
     search_option = ""
     error = ""
     data = []
-    output_message = ""
     exists = False
     if request.args.get('search_loc') == "":
         query_loc = request.args.get('search_key')
@@ -208,11 +158,14 @@ def search():
     elif request.args.get('search_key') != None and request.args.get('search_loc') != None:
         error = "Only input a specific address (e.g. 20 W 34th St) OR a keyword (e.g. McDonalds)!"
     if error == "" and query_loc != "":
-        output_message = "Your search was location: " + query_loc + "categories: " + query_cat[0] + ", radius: " + query_rad
         exists = True
-        data = get_covid_data(query_cat[0], search_option, query_loc, query_rad, 2.0)
+        try:
+            data = get_covid_data(query_cat, search_option, query_loc, query_rad, query_rat)
+        except categoryMismatch:
+            error = "There is no match with the categories you entered, please enter at least one valid category. \n"
+            error += "Examples include 'museum','movie theater','bar','restaurant','shopping mall','gym' and so on."
 
-    return render_template('new-search-page.html', name=project_name, netid=net_id, output_message=output_message, data=data, exists=exists, search_option=search_option, error=error)
+    return render_template('new-search-page.html', name=project_name, netid=net_id, data=data, exists=exists, search_option=search_option, error=error)
 
 
 
