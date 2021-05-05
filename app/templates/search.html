@@ -128,3 +128,13 @@
     }
     </script>
 </html>
+<script>
+    function hideList(input) {
+        var datalist = document.querySelector("datalist");
+        if (input.value.length<1) {
+            datalist.id = "";    		
+        } else {
+            datalist.id = "movie-list";
+        }
+    }
+</script>

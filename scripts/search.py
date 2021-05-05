@@ -35,6 +35,8 @@ with open('./data/average_reviews.json') as f:
     reviews = json.load(f)
 with open('./data/movie_script_list.txt') as f:
     titles = f.readlines()
+with open('./data/movie_food_quotes.json') as f:
+    quotes = json.load(f)
 
 
 def movie_to_index_maker(m_dict):
@@ -101,16 +103,24 @@ def validate_query(query):
 def run_search(query, allergies):
     data = mat_search(query, movie_recipe_mat, movie_to_index, recipes,
      allergies, allergy_dict)
-
     if data == None:
         return data
-
     res = []
     for d in data:
         idx = int(d[0])
         rating = round(d[2],1) if d[2] else "n/a"
         r = recipes[idx]
-        res.append((idx, r, rating))
+        movie_quotes = quotes[query]
+        food_words = r["Recipe Name"].lower().split()
+        word_quotes = dict()
+        for fw in food_words:
+            if fw in movie_quotes:
+                word_quotes[fw] = (movie_quotes[fw])
+            if fw[:-1] in movie_quotes:
+                word_quotes[fw] = (movie_quotes[fw[:-1]])
+        print(r["Recipe Name"])
+        print(word_quotes)
+        res.append((idx, r, rating, word_quotes))
     return res
 
 

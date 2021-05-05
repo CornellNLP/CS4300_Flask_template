@@ -31,7 +31,23 @@
         <h1 class="title">screen to table</h1>
         <!-- <form class="form-inline global-search">
         <div class="form-group">
-            <input id="input" type="text" name="query" class="form-control" placeholder="Your Input" />
+            <input id="input" type="text" name="query" class="form-control" placeholder="Movie"
+            list="movie-list" oninput="hideList(this)" onclick="hideList(this)" />
+            <datalist id="movie-list">
+            {% for result in movies %}
+                <option value="{{result}}">
+            {% endfor %}
+            </datalist>
+            <button type="submit" class="btn btn-info">Go!</button>
+        </div>
+        <div class="form-group">
+            <input id="input" type="text" name="allergies" class="form-control" placeholder="Your Allergies"
+            list="allergy-list"/>
+            <datalist id="allergy-list">
+            {% for result in allergy_lst %}
+                <option value="{{result}}">
+            {% endfor %}
+            </datalist>
         </div>
         <button type="submit" class="btn btn-info">Go!</button>
     </form> -->
