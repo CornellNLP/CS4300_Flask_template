@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 (For Mac users, you may encounter an `ERROR: Failed building wheel for greenlet`. This can be fixed with `xcode-select --install`.)
 
-An aside note: In the above example, we created a virtualenv for a python3 environment. You will have python3.7.6 installed by default as we have used that version for assignments. This is what we will use for the application as well.
+An aside note: In the above example, we created a virtualenv for a python3 environment. You will have python3.7.10 installed by default as we have used that version for assignments. This is what we will use for the application as well.
 
 **NOTE:** While you should be able to install these requirements in the virtualenv you used for the assignments, we advise using a fresh virtualenv so you can be sure that your virtualenv's installed packages and your repository's `requirements.txt` match exactly.
 This will be important when you add new dependencies.
